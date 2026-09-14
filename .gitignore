@@ -1,0 +1,10 @@
+# Python caches
+__pycache__/
+*.pyc
+
+# Local data cache
+backend/data/*.json
+
+# OS specific files
+.DS_Store
+Thumbs.db
