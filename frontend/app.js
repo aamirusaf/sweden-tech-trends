@@ -15,8 +15,11 @@ const CATEGORY_COLORS = {
 const charts = [];
 const KNOWN_SKILLS_KEY = 'techTrends.knownSkills';
 
-let allSkills = [];   // flat list: [{ name, value, category }]
-let coursesData = {}; // { skillName: [{ title, platform, url }] }
+let allSkills = [];       // flat list: [{ name, value, category }]
+let coursesData = {};     // { skillName: [{ title, platform, url }] }
+let jobPostingsData = {}; // { skillName: [{ headline, employer, location, url, published }] }
+let trendsBySkill = {};   // { skillName: { previousValue, previousDate } }
+let selectedSkill = null;
 let knownSkills = new Set(loadKnownSkills());
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,10 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             return response.json();
         }),
-        fetch('../backend/data/courses.json').then(response => response.ok ? response.json() : {})
+        fetch('../backend/data/courses.json').then(response => response.ok ? response.json() : {}),
+        fetch('../backend/data/job_postings.json').then(response => response.ok ? response.json() : { postings: {} }),
+        fetch('../backend/data/history.json').then(response => response.ok ? response.json() : { snapshots: [] })
     ])
-        .then(([jsonData, courses]) => {
+        .then(([jsonData, courses, jobPostings, history]) => {
             coursesData = courses;
+            jobPostingsData = jobPostings.postings || {};
+            trendsBySkill = computeTrends(history);
 
             // Update the UI timestamp string
             document.getElementById('timestamp').innerText = `Last updated: ${jsonData.last_updated}`;
@@ -46,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             renderSkillPicker();
             renderSkillGapResults();
+            renderJobPostings();
         })
         .catch(error => {
             console.error('Error loading dynamic metrics:', error);
@@ -63,6 +71,32 @@ function loadKnownSkills() {
 
 function saveKnownSkills() {
     localStorage.setItem(KNOWN_SKILLS_KEY, JSON.stringify([...knownSkills]));
+}
+
+function computeTrends(history) {
+    const snapshots = [...(history.snapshots || [])].sort((a, b) => a.date.localeCompare(b.date));
+    if (snapshots.length < 2) return {};
+
+    const previous = snapshots[snapshots.length - 2];
+    const trends = {};
+    Object.values(previous.data).flat().forEach(skill => {
+        trends[skill.name] = { previousValue: skill.value, previousDate: previous.date };
+    });
+    return trends;
+}
+
+function trendLabel(skillName, currentValue) {
+    const trend = trendsBySkill[skillName];
+    if (!trend || !trend.previousValue) return null;
+
+    const change = Math.round(((currentValue - trend.previousValue) / trend.previousValue) * 100);
+    if (change === 0) return { text: `flat since ${trend.previousDate}`, className: 'trend-flat' };
+
+    const arrow = change > 0 ? '▲' : '▼';
+    return {
+        text: `${arrow} ${Math.abs(change)}% since ${trend.previousDate}`,
+        className: change > 0 ? 'trend-up' : 'trend-down'
+    };
 }
 
 function categoryColor(categoryKey) {
@@ -134,7 +168,8 @@ function renderSkillGapResults() {
 
     gaps.forEach((skill, index) => {
         const item = document.createElement('div');
-        item.className = 'skill-gap-item';
+        item.className = 'skill-gap-item skill-gap-item-clickable';
+        item.addEventListener('click', () => showJobPostings(skill.name));
 
         const header = document.createElement('div');
         header.className = 'skill-gap-item-header';
@@ -157,6 +192,14 @@ function renderSkillGapResults() {
 
         header.append(rank, swatch, name, count);
 
+        const trend = trendLabel(skill.name, skill.value);
+        if (trend) {
+            const trendBadge = document.createElement('span');
+            trendBadge.className = `skill-gap-trend ${trend.className}`;
+            trendBadge.textContent = trend.text;
+            header.append(trendBadge);
+        }
+
         const courseLinks = document.createElement('div');
         courseLinks.className = 'skill-gap-courses';
         const courses = coursesData[skill.name] || [];
@@ -175,6 +218,56 @@ function renderSkillGapResults() {
 
         item.append(header, courseLinks);
         container.appendChild(item);
+    });
+}
+
+function showJobPostings(skillName) {
+    selectedSkill = skillName;
+    renderJobPostings();
+}
+
+function renderJobPostings() {
+    const container = document.getElementById('jobPostings');
+    const title = document.getElementById('jobPostingsTitle');
+    if (!container) return;
+    container.innerHTML = '';
+
+    if (!selectedSkill) {
+        const hint = document.createElement('p');
+        hint.className = 'skill-gap-empty';
+        hint.textContent = 'Click a skill to see live job postings.';
+        container.appendChild(hint);
+        return;
+    }
+
+    if (title) title.textContent = `Job Postings — ${selectedSkill}`;
+
+    const postings = jobPostingsData[selectedSkill] || [];
+    if (!postings.length) {
+        const empty = document.createElement('p');
+        empty.className = 'skill-gap-empty';
+        empty.textContent = `No sample postings available for ${selectedSkill} right now.`;
+        container.appendChild(empty);
+        return;
+    }
+
+    postings.forEach(posting => {
+        const card = document.createElement('a');
+        card.className = 'job-posting-card';
+        card.href = posting.url || '#';
+        card.target = '_blank';
+        card.rel = 'noopener noreferrer';
+
+        const headline = document.createElement('div');
+        headline.className = 'job-posting-headline';
+        headline.textContent = posting.headline || 'Untitled role';
+
+        const meta = document.createElement('div');
+        meta.className = 'job-posting-meta';
+        meta.textContent = [posting.employer, posting.location].filter(Boolean).join(' · ');
+
+        card.append(headline, meta);
+        container.appendChild(card);
     });
 }
 
@@ -221,11 +314,18 @@ function createChart(canvasId, categoryData, categoryKey) {
             layout: {
                 padding: { right: 12 }
             },
+            onClick: (_evt, elements) => {
+                if (elements.length) showJobPostings(labels[elements[0].index]);
+            },
+            onHover: (evt, elements) => {
+                evt.native.target.style.cursor = elements.length ? 'pointer' : 'default';
+            },
             plugins: {
                 legend: { display: false },
                 tooltip: {
                     callbacks: {
-                        label: (item) => `${item.formattedValue} job postings`
+                        label: (item) => `${item.formattedValue} job postings`,
+                        afterLabel: (item) => trendLabel(item.label, item.raw)?.text || ''
                     }
                 }
             },

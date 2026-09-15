@@ -189,6 +189,16 @@ canvas {
     padding: 0.875rem 1rem;
 }
 
+.skill-gap-item-clickable {
+    cursor: pointer;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.skill-gap-item-clickable:hover {
+    border-color: var(--text-muted);
+    background-color: var(--page-plane);
+}
+
 .skill-gap-item-header {
     display: flex;
     align-items: center;
@@ -216,6 +226,24 @@ canvas {
     padding: 0.1875rem 0.625rem;
 }
 
+.skill-gap-trend {
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.trend-up {
+    color: #1baf7a;
+}
+
+.trend-down {
+    color: #d95926;
+}
+
+.trend-flat {
+    color: var(--text-muted);
+}
+
 .skill-gap-courses {
     display: flex;
     flex-wrap: wrap;
@@ -239,4 +267,35 @@ canvas {
     text-align: center;
     color: var(--text-secondary);
     padding: 1.5rem 0;
+}
+
+.job-postings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.job-posting-card {
+    display: block;
+    border: 1px solid var(--border-hairline);
+    border-radius: 10px;
+    padding: 0.875rem 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.job-posting-card:hover {
+    border-color: var(--text-muted);
+    background-color: var(--page-plane);
+}
+
+.job-posting-headline {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.job-posting-meta {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
 }
