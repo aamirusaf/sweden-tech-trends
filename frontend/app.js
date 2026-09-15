@@ -15,12 +15,24 @@ const CATEGORY_COLORS = {
 const charts = [];
 const KNOWN_SKILLS_KEY = 'techTrends.knownSkills';
 
-let allSkills = [];       // flat list: [{ name, value, category }]
+const LOCATION_LABELS = {
+    'Sweden': '🇸🇪 All of Sweden'
+};
+
+let rawCategoryData = {}; // { category: [{ name, value, by_location }] }
+let allSkills = [];       // flat list: [{ name, category, by_location }]
 let coursesData = {};     // { skillName: [{ title, platform, url }] }
-let jobPostingsData = {}; // { skillName: [{ headline, employer, location, url, published }] }
+let jobPostingsData = {}; // { skillName: { location: [{ headline, employer, location, url, published }] } }
+let coOccurrenceData = {}; // { skillName: [{ name, count, percent }] }
 let trendsBySkill = {};   // { skillName: { previousValue, previousDate } }
+let locationOptions = ['Sweden'];
+let selectedLocation = 'Sweden';
 let selectedSkill = null;
 let knownSkills = new Set(loadKnownSkills());
+
+function skillValue(skill, location = selectedLocation) {
+    return (skill.by_location && skill.by_location[location]) ?? skill.value ?? 0;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     Promise.all([
@@ -32,25 +44,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }),
         fetch('../backend/data/courses.json').then(response => response.ok ? response.json() : {}),
         fetch('../backend/data/job_postings.json').then(response => response.ok ? response.json() : { postings: {} }),
-        fetch('../backend/data/history.json').then(response => response.ok ? response.json() : { snapshots: [] })
+        fetch('../backend/data/history.json').then(response => response.ok ? response.json() : { snapshots: [] }),
+        fetch('../backend/data/co_occurrence.json').then(response => response.ok ? response.json() : { co_occurrence: {} })
     ])
-        .then(([jsonData, courses, jobPostings, history]) => {
+        .then(([jsonData, courses, jobPostings, history, coOccurrence]) => {
             coursesData = courses;
             jobPostingsData = jobPostings.postings || {};
+            coOccurrenceData = coOccurrence.co_occurrence || {};
             trendsBySkill = computeTrends(history);
 
             // Update the UI timestamp string
             document.getElementById('timestamp').innerText = `Last updated: ${jsonData.last_updated}`;
 
-            // Build individual metrics charts safely
-            charts.push(createChart('languagesChart', jsonData.data['Languages'], 'Languages'));
-            charts.push(createChart('cloudChart', jsonData.data['Cloud & Infra'], 'Cloud & Infra'));
-            charts.push(createChart('dataChart', jsonData.data['Data & AI'], 'Data & AI'));
-
+            rawCategoryData = jsonData.data;
             allSkills = Object.entries(jsonData.data).flatMap(([category, skills]) =>
                 skills.map(skill => ({ ...skill, category }))
             );
 
+            const sampleSkill = allSkills.find(skill => skill.by_location);
+            if (sampleSkill) locationOptions = Object.keys(sampleSkill.by_location);
+
+            renderLocationFilter();
+            renderCharts();
             renderSkillPicker();
             renderSkillGapResults();
             renderJobPostings();
@@ -86,6 +101,10 @@ function computeTrends(history) {
 }
 
 function trendLabel(skillName, currentValue) {
+    // history.json only tracks nationwide numbers, so a % change while filtered
+    // to a city would be misleading — only show it on the "All of Sweden" view.
+    if (selectedLocation !== 'Sweden') return null;
+
     const trend = trendsBySkill[skillName];
     if (!trend || !trend.previousValue) return null;
 
@@ -101,6 +120,40 @@ function trendLabel(skillName, currentValue) {
 
 function categoryColor(categoryKey) {
     return CATEGORY_COLORS[categoryKey][isDarkMode() ? 'dark' : 'light'];
+}
+
+function renderLocationFilter() {
+    const container = document.getElementById('locationFilter');
+    if (!container) return;
+    container.innerHTML = '';
+
+    locationOptions.forEach(location => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'location-pill' + (location === selectedLocation ? ' location-pill-active' : '');
+        button.textContent = LOCATION_LABELS[location] || location;
+        button.addEventListener('click', () => {
+            if (location === selectedLocation) return;
+            selectedLocation = location;
+            renderLocationFilter();
+            renderCharts();
+            renderSkillGapResults();
+            renderJobPostings();
+        });
+        container.appendChild(button);
+    });
+}
+
+function renderCharts() {
+    charts.forEach(chart => chart && chart.destroy());
+    charts.length = 0;
+
+    const buildCategoryData = (categoryKey) =>
+        (rawCategoryData[categoryKey] || []).map(skill => ({ name: skill.name, value: skillValue(skill) }));
+
+    charts.push(createChart('languagesChart', buildCategoryData('Languages'), 'Languages'));
+    charts.push(createChart('cloudChart', buildCategoryData('Cloud & Infra'), 'Cloud & Infra'));
+    charts.push(createChart('dataChart', buildCategoryData('Data & AI'), 'Data & AI'));
 }
 
 function renderSkillPicker() {
@@ -154,7 +207,7 @@ function renderSkillGapResults() {
 
     const gaps = allSkills
         .filter(skill => !knownSkills.has(skill.name))
-        .sort((a, b) => b.value - a.value);
+        .sort((a, b) => skillValue(b) - skillValue(a));
 
     if (gaps.length === 0) {
         const empty = document.createElement('p');
@@ -186,13 +239,15 @@ function renderSkillGapResults() {
         name.className = 'skill-gap-name';
         name.textContent = skill.name;
 
+        const value = skillValue(skill);
+
         const count = document.createElement('span');
         count.className = 'skill-gap-count';
-        count.textContent = `${skill.value} postings`;
+        count.textContent = `${value} postings`;
 
         header.append(rank, swatch, name, count);
 
-        const trend = trendLabel(skill.name, skill.value);
+        const trend = trendLabel(skill.name, value);
         if (trend) {
             const trendBadge = document.createElement('span');
             trendBadge.className = `skill-gap-trend ${trend.className}`;
@@ -240,13 +295,34 @@ function renderJobPostings() {
         return;
     }
 
-    if (title) title.textContent = `Job Postings — ${selectedSkill}`;
+    const locationSuffix = selectedLocation === 'Sweden' ? '' : ` · ${selectedLocation}`;
+    if (title) title.textContent = `Job Postings — ${selectedSkill}${locationSuffix}`;
 
-    const postings = jobPostingsData[selectedSkill] || [];
+    const coOccurring = coOccurrenceData[selectedSkill] || [];
+    if (coOccurring.length) {
+        const row = document.createElement('div');
+        row.className = 'co-occurrence-row';
+
+        const label = document.createElement('span');
+        label.className = 'co-occurrence-label';
+        label.textContent = 'Also seen with:';
+        row.appendChild(label);
+
+        coOccurring.forEach(entry => {
+            const chip = document.createElement('span');
+            chip.className = 'co-occurrence-chip';
+            chip.textContent = `${entry.name} · ${entry.percent}%`;
+            row.appendChild(chip);
+        });
+
+        container.appendChild(row);
+    }
+
+    const postings = (jobPostingsData[selectedSkill] && jobPostingsData[selectedSkill][selectedLocation]) || [];
     if (!postings.length) {
         const empty = document.createElement('p');
         empty.className = 'skill-gap-empty';
-        empty.textContent = `No sample postings available for ${selectedSkill} right now.`;
+        empty.textContent = `No sample postings available for ${selectedSkill}${locationSuffix} right now.`;
         container.appendChild(empty);
         return;
     }

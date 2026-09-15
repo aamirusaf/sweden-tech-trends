@@ -6,6 +6,7 @@ __pycache__/
 backend/data/tech_trends.json
 backend/data/job_postings.json
 backend/data/history.json
+backend/data/co_occurrence.json
 
 # OS specific files
 .DS_Store
