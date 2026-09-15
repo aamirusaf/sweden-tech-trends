@@ -1,0 +1,70 @@
+{
+    "JavaScript": [
+        { "title": "JavaScript Algorithms and Data Structures", "platform": "freeCodeCamp", "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" },
+        { "title": "JavaScript Guide", "platform": "MDN Web Docs", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" }
+    ],
+    "TypeScript": [
+        { "title": "TypeScript Handbook", "platform": "typescriptlang.org", "url": "https://www.typescriptlang.org/docs/handbook/intro.html" },
+        { "title": "Learn TypeScript", "platform": "Codecademy", "url": "https://www.codecademy.com/learn/learn-typescript" }
+    ],
+    "Python": [
+        { "title": "The Python Tutorial", "platform": "python.org", "url": "https://docs.python.org/3/tutorial/" },
+        { "title": "Python for Everybody", "platform": "Coursera", "url": "https://www.coursera.org/specializations/python" }
+    ],
+    "Java": [
+        { "title": "Learning the Java Language", "platform": "Oracle", "url": "https://docs.oracle.com/javase/tutorial/java/index.html" },
+        { "title": "Java Programming Masterclass", "platform": "Codecademy", "url": "https://www.codecademy.com/learn/learn-java" }
+    ],
+    "C#": [
+        { "title": "Tour of C#", "platform": "Microsoft Learn", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/" },
+        { "title": "C# for Beginners", "platform": "Microsoft Learn", "url": "https://learn.microsoft.com/en-us/shows/csharp-for-beginners/" }
+    ],
+    "Go": [
+        { "title": "A Tour of Go", "platform": "go.dev", "url": "https://go.dev/tour/" },
+        { "title": "Go by Example", "platform": "gobyexample.com", "url": "https://gobyexample.com/" }
+    ],
+    "Rust": [
+        { "title": "The Rust Programming Language", "platform": "doc.rust-lang.org", "url": "https://doc.rust-lang.org/book/" },
+        { "title": "Rustlings", "platform": "GitHub", "url": "https://github.com/rust-lang/rustlings" }
+    ],
+    "AWS": [
+        { "title": "AWS Cloud Practitioner Essentials", "platform": "AWS Skill Builder", "url": "https://skillbuilder.aws/" },
+        { "title": "AWS Getting Started Resource Center", "platform": "AWS", "url": "https://aws.amazon.com/getting-started/" }
+    ],
+    "Azure": [
+        { "title": "Azure Fundamentals (AZ-900)", "platform": "Microsoft Learn", "url": "https://learn.microsoft.com/en-us/training/paths/az-900-describe-cloud-concepts/" },
+        { "title": "Microsoft Azure Documentation", "platform": "Microsoft Learn", "url": "https://learn.microsoft.com/en-us/azure/" }
+    ],
+    "Docker": [
+        { "title": "Docker Get Started Guide", "platform": "Docker Docs", "url": "https://docs.docker.com/get-started/" },
+        { "title": "Docker Curriculum", "platform": "docker-curriculum.com", "url": "https://docker-curriculum.com/" }
+    ],
+    "Kubernetes": [
+        { "title": "Kubernetes Basics", "platform": "kubernetes.io", "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/" },
+        { "title": "Introduction to Kubernetes", "platform": "edX / Linux Foundation", "url": "https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-kubernetes" }
+    ],
+    "Terraform": [
+        { "title": "Terraform Get Started", "platform": "HashiCorp Developer", "url": "https://developer.hashicorp.com/terraform/tutorials" },
+        { "title": "Terraform Documentation", "platform": "HashiCorp Developer", "url": "https://developer.hashicorp.com/terraform/docs" }
+    ],
+    "PostgreSQL": [
+        { "title": "PostgreSQL Tutorial", "platform": "postgresql.org", "url": "https://www.postgresql.org/docs/current/tutorial.html" },
+        { "title": "PostgreSQL Exercises", "platform": "pgexercises.com", "url": "https://pgexercises.com/" }
+    ],
+    "SQL": [
+        { "title": "Intro to SQL", "platform": "Khan Academy", "url": "https://www.khanacademy.org/computing/computer-programming/sql" },
+        { "title": "SQL Tutorial", "platform": "Mode Analytics", "url": "https://mode.com/sql-tutorial/" }
+    ],
+    "Apache Kafka": [
+        { "title": "Kafka Quickstart", "platform": "kafka.apache.org", "url": "https://kafka.apache.org/quickstart" },
+        { "title": "Apache Kafka 101", "platform": "Confluent Developer", "url": "https://developer.confluent.io/courses/apache-kafka/events/" }
+    ],
+    "PyTorch": [
+        { "title": "PyTorch Tutorials", "platform": "pytorch.org", "url": "https://pytorch.org/tutorials/" },
+        { "title": "Learn the Basics", "platform": "pytorch.org", "url": "https://pytorch.org/tutorials/beginner/basics/intro.html" }
+    ],
+    "TensorFlow": [
+        { "title": "TensorFlow Tutorials", "platform": "tensorflow.org", "url": "https://www.tensorflow.org/tutorials" },
+        { "title": "Machine Learning Crash Course", "platform": "Google Developers", "url": "https://developers.google.com/machine-learning/crash-course" }
+    ]
+}
