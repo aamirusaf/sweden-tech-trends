@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweden Tech Stack Trends</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <p class="eyebrow">🇸🇪 Sweden Tech Market</p>
+        <h1>Tech Stack Demand Dashboard</h1>
+        <p class="subtitle">Live job posting volume aggregated directly from Arbetsförmedlingen</p>
+        <div id="timestamp" class="timestamp">Loading data updates…</div>
+    </header>
+
+    <main class="dashboard-container">
+        <!-- Chart Cards -->
+        <div class="chart-card">
+            <h3>Most Demanded Programming Languages</h3>
+            <div class="chart-wrapper">
+                <canvas id="languagesChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <h3>Cloud & Infrastructure Skills</h3>
+            <div class="chart-wrapper">
+                <canvas id="cloudChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <h3>Data & AI Frameworks</h3>
+            <div class="chart-wrapper">
+                <canvas id="dataChart"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>

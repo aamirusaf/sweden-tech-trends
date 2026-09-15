@@ -1,0 +1,114 @@
+:root {
+    color-scheme: light;
+    --page-plane: #f9f9f7;
+    --surface: #fcfcfb;
+    --text-primary: #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted: #898781;
+    --border-hairline: rgba(11, 11, 11, 0.10);
+    --gridline: #e1e0d9;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+        --page-plane: #0d0d0d;
+        --surface: #1a1a19;
+        --text-primary: #ffffff;
+        --text-secondary: #c3c2b7;
+        --text-muted: #898781;
+        --border-hairline: rgba(255, 255, 255, 0.10);
+        --gridline: #2c2c2a;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--page-plane);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 3rem 1.5rem 4rem;
+}
+
+header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 3rem;
+}
+
+.eyebrow {
+    margin: 0 0 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+h1 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.timestamp {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.375rem 0.875rem;
+    border: 1px solid var(--border-hairline);
+    border-radius: 999px;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
+}
+
+.chart-card {
+    min-width: 0; /* grid items default to min-width:auto, which sizes to the canvas's
+                     content width and creates a circular resize loop with Chart.js */
+    background-color: var(--surface);
+    border: 1px solid var(--border-hairline);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.chart-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.18);
+}
+
+.chart-card h3 {
+    margin: 0 0 1.25rem;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--gridline);
+}
+
+.chart-wrapper {
+    position: relative;
+    height: 320px;
+}
+
+canvas {
+    display: block;
+}

@@ -31,7 +31,7 @@ def fetch_skill_demand():
             params = {"q": skill, "limit": 0} 
             
             try:
-                response = requests.get(API_URL, params=params, headers={"accept": "application/json"})
+                response = requests.get(API_URL, params=params, headers={"accept": "application/json"}, timeout=10)
                 
                 if response.status_code == 200:
                     data = response.json()
@@ -53,7 +53,8 @@ def fetch_skill_demand():
             time.sleep(0.2)
 
     # Persist the dynamic calculations to the data layer directory
-    output_path = os.path.join("backend", "data", "tech_trends.json")
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    output_path = os.path.join(script_dir, "data", "tech_trends.json")
     
     try:
         with open(output_path, "w", encoding="utf-8") as f:
