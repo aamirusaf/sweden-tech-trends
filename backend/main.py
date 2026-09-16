@@ -43,6 +43,20 @@ def build_skill_matcher(skill_name):
 
 SKILL_MATCHERS = {skill: build_skill_matcher(skill) for skill in ALL_SKILLS}
 
+# The structured "work-place-model" field on postings is effectively always "on-site"
+# regardless of actual policy (checked across hundreds of postings in unrelated job
+# categories) — employers don't seem to fill it in accurately. Fall back to scanning
+# the description text for remote/hybrid language instead. This is a heuristic, not a
+# precise measure (e.g. "no remote work available" would still match), so it's reported
+# to the frontend as "mentions remote/hybrid", not "is remote".
+REMOTE_HYBRID_PATTERN = re.compile(
+    r"\b(remote|distans(?:arbete)?|hemifr[åa]n|hybrid(?:arbete)?|work[\s-]from[\s-]home)\b",
+    re.IGNORECASE
+)
+
+# Don't report a remote-work percentage from a handful of postings
+MIN_SAMPLE_FOR_REMOTE_BADGE = 3
+
 # How many dated snapshots to keep in history.json before dropping the oldest
 MAX_HISTORY_SNAPSHOTS = 52
 
@@ -63,6 +77,7 @@ def fetch_skill_demand():
     postings_by_skill = {}
     co_occurrence_counts = {skill: {} for skill in ALL_SKILLS}
     co_occurrence_samples = {skill: 0 for skill in ALL_SKILLS}
+    remote_mention_counts = {skill: {"remote_or_hybrid": 0, "sampled": 0} for skill in ALL_SKILLS}
 
     print("🚀 Fetching live technology metrics from Arbetsförmedlingen API...")
 
@@ -108,7 +123,9 @@ def fetch_skill_demand():
                         ]
 
                         if location == "Sweden":
-                            scan_skill_co_occurrence(skill, hits, co_occurrence_counts, co_occurrence_samples)
+                            analyze_nationwide_sample(
+                                skill, hits, co_occurrence_counts, co_occurrence_samples, remote_mention_counts
+                            )
 
                         print(f"✅ {skill} ({location}): found {total_ads} job posts.")
                     else:
@@ -128,6 +145,7 @@ def fetch_skill_demand():
             postings_by_skill[skill] = postings_by_location
 
     co_occurrence = summarize_co_occurrence(co_occurrence_counts, co_occurrence_samples)
+    remote_work = summarize_remote_work(remote_mention_counts)
 
     # Persist the dynamic calculations to the data layer directory
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -147,7 +165,11 @@ def fetch_skill_demand():
             )
         with open(co_occurrence_path, "w", encoding="utf-8") as f:
             json.dump(
-                {"last_updated": results["last_updated"], "co_occurrence": co_occurrence},
+                {
+                    "last_updated": results["last_updated"],
+                    "co_occurrence": co_occurrence,
+                    "remote_work": remote_work
+                },
                 f, indent=4, ensure_ascii=False
             )
         update_history(history_path, results["data"])
@@ -156,17 +178,21 @@ def fetch_skill_demand():
         print("❌ Error: Directory 'backend/data/' does not exist. Run setup structure command first.")
 
 
-def scan_skill_co_occurrence(skill, hits, co_occurrence_counts, co_occurrence_samples):
-    """Scan a skill's nationwide sample postings for mentions of other tracked skills."""
+def analyze_nationwide_sample(skill, hits, co_occurrence_counts, co_occurrence_samples, remote_mention_counts):
+    """Scan a skill's nationwide sample postings once for both co-occurring skills
+    and remote/hybrid language, since both read the same description text."""
     for hit in hits:
         text = (hit.get("description") or {}).get("text") or hit.get("headline") or ""
-        mentioned = {name for name, matcher in SKILL_MATCHERS.items() if matcher.search(text)}
-        if skill not in mentioned:
-            continue
 
-        co_occurrence_samples[skill] += 1
-        for other in mentioned - {skill}:
-            co_occurrence_counts[skill][other] = co_occurrence_counts[skill].get(other, 0) + 1
+        mentioned = {name for name, matcher in SKILL_MATCHERS.items() if matcher.search(text)}
+        if skill in mentioned:
+            co_occurrence_samples[skill] += 1
+            for other in mentioned - {skill}:
+                co_occurrence_counts[skill][other] = co_occurrence_counts[skill].get(other, 0) + 1
+
+        remote_mention_counts[skill]["sampled"] += 1
+        if REMOTE_HYBRID_PATTERN.search(text):
+            remote_mention_counts[skill]["remote_or_hybrid"] += 1
 
 
 def summarize_co_occurrence(co_occurrence_counts, co_occurrence_samples):
@@ -187,6 +213,22 @@ def summarize_co_occurrence(co_occurrence_counts, co_occurrence_samples):
 
         if top:
             summary[skill] = top
+
+    return summary
+
+
+def summarize_remote_work(remote_mention_counts):
+    """Turn remote/hybrid keyword-mention tallies into a % per skill."""
+    summary = {}
+    for skill, counts in remote_mention_counts.items():
+        sample_size = counts["sampled"]
+        if sample_size < MIN_SAMPLE_FOR_REMOTE_BADGE:
+            continue
+
+        summary[skill] = {
+            "percent": round(counts["remote_or_hybrid"] / sample_size * 100),
+            "sample_size": sample_size
+        }
 
     return summary
 

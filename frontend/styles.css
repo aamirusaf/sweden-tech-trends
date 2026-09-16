@@ -331,6 +331,13 @@ canvas {
     color: var(--text-secondary);
 }
 
+.remote-work-badge {
+    margin: 0;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
 .co-occurrence-row {
     display: flex;
     flex-wrap: wrap;

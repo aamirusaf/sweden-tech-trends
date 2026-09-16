@@ -24,6 +24,7 @@ let allSkills = [];       // flat list: [{ name, category, by_location }]
 let coursesData = {};     // { skillName: [{ title, platform, url }] }
 let jobPostingsData = {}; // { skillName: { location: [{ headline, employer, location, url, published }] } }
 let coOccurrenceData = {}; // { skillName: [{ name, count, percent }] }
+let remoteWorkData = {};   // { skillName: { percent, sample_size } }
 let trendsBySkill = {};   // { skillName: { previousValue, previousDate } }
 let locationOptions = ['Sweden'];
 let selectedLocation = 'Sweden';
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             coursesData = courses;
             jobPostingsData = jobPostings.postings || {};
             coOccurrenceData = coOccurrence.co_occurrence || {};
+            remoteWorkData = coOccurrence.remote_work || {};
             trendsBySkill = computeTrends(history);
 
             // Update the UI timestamp string
@@ -297,6 +299,14 @@ function renderJobPostings() {
 
     const locationSuffix = selectedLocation === 'Sweden' ? '' : ` · ${selectedLocation}`;
     if (title) title.textContent = `Job Postings — ${selectedSkill}${locationSuffix}`;
+
+    const remoteInfo = remoteWorkData[selectedSkill];
+    if (remoteInfo) {
+        const remoteBadge = document.createElement('p');
+        remoteBadge.className = 'remote-work-badge';
+        remoteBadge.textContent = `🏠 ${remoteInfo.percent}% of sampled postings mention remote/hybrid work (of ${remoteInfo.sample_size} nationwide)`;
+        container.appendChild(remoteBadge);
+    }
 
     const coOccurring = coOccurrenceData[selectedSkill] || [];
     if (coOccurring.length) {
