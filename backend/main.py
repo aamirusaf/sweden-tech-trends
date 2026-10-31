@@ -3,7 +3,7 @@ import os
 import re
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 import requests
 
 # Base endpoint for the official JobTech Dev / Arbetsförmedlingen search engine
@@ -88,7 +88,7 @@ LOCATIONS = {
 
 def fetch_skill_demand():
     results = {
-        "last_updated": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC"),
+        "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
         "data": {}
     }
     postings_by_skill = {}
@@ -270,7 +270,7 @@ def update_history(history_path, current_data):
     except (FileNotFoundError, json.JSONDecodeError):
         history = {"snapshots": []}
 
-    today = datetime.utcnow().strftime("%Y-%m-%d")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     snapshots = [s for s in history.get("snapshots", []) if s.get("date") != today]
     snapshots.append({"date": today, "data": current_data})
     snapshots.sort(key=lambda s: s["date"])
