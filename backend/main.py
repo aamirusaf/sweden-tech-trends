@@ -1,8 +1,9 @@
 import json
 import os
 import re
+import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 import requests
 
 # Base endpoint for the official JobTech Dev / Arbetsförmedlingen search engine
@@ -28,6 +29,22 @@ CO_OCCURRENCE_TOP_N = 5
 CO_OCCURRENCE_MIN_COUNT = 2
 
 ALL_SKILLS = [skill for skills in TECH_STACKS.values() for skill in skills]
+
+
+def get_with_retries(params, attempts=3):
+    """GET the search API, retrying transient failures (network errors, 429, 5xx)
+    with a short backoff so one blip doesn't fail a whole scheduled run."""
+    for attempt in range(1, attempts + 1):
+        try:
+            response = requests.get(API_URL, params=params, headers={"accept": "application/json"}, timeout=10)
+            if response.status_code != 429 and response.status_code < 500:
+                return response
+            if attempt == attempts:
+                return response
+        except requests.RequestException:
+            if attempt == attempts:
+                raise
+        time.sleep(2 * attempt)
 
 
 def build_skill_matcher(skill_name):
@@ -71,13 +88,15 @@ LOCATIONS = {
 
 def fetch_skill_demand():
     results = {
-        "last_updated": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC"),
+        "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
         "data": {}
     }
     postings_by_skill = {}
     co_occurrence_counts = {skill: {} for skill in ALL_SKILLS}
     co_occurrence_samples = {skill: 0 for skill in ALL_SKILLS}
     remote_mention_counts = {skill: {"remote_or_hybrid": 0, "sampled": 0} for skill in ALL_SKILLS}
+
+    failures = []
 
     print("🚀 Fetching live technology metrics from Arbetsförmedlingen API...")
 
@@ -100,7 +119,7 @@ def fetch_skill_demand():
                     params["municipality"] = municipality_id
 
                 try:
-                    response = requests.get(API_URL, params=params, headers={"accept": "application/json"}, timeout=10)
+                    response = get_with_retries(params)
 
                     if response.status_code == 200:
                         data = response.json()
@@ -130,9 +149,11 @@ def fetch_skill_demand():
                         print(f"✅ {skill} ({location}): found {total_ads} job posts.")
                     else:
                         print(f"⚠️ Failed fetching data for {skill} ({location}). HTTP Status: {response.status_code}")
+                        failures.append(f"{skill} ({location})")
 
                 except Exception as e:
                     print(f"❌ Error communicating with API for {skill} ({location}): {e}")
+                    failures.append(f"{skill} ({location})")
 
                 # Simple rate limiting window compliance
                 time.sleep(0.2)
@@ -143,6 +164,13 @@ def fetch_skill_demand():
                 "by_location": by_location
             })
             postings_by_skill[skill] = postings_by_location
+
+    # A failed request would otherwise be recorded as 0 postings, and that 0 would land in
+    # history.json and skew the trend badges. Keep the previous data files instead and exit
+    # non-zero so a scheduled run shows up as failed rather than committing bad numbers.
+    if failures:
+        print(f"\n❌ {len(failures)} request(s) failed, not writing data files: {', '.join(failures)}")
+        sys.exit(1)
 
     co_occurrence = summarize_co_occurrence(co_occurrence_counts, co_occurrence_samples)
     remote_work = summarize_remote_work(remote_mention_counts)
@@ -242,7 +270,7 @@ def update_history(history_path, current_data):
     except (FileNotFoundError, json.JSONDecodeError):
         history = {"snapshots": []}
 
-    today = datetime.utcnow().strftime("%Y-%m-%d")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     snapshots = [s for s in history.get("snapshots", []) if s.get("date") != today]
     snapshots.append({"date": today, "data": current_data})
     snapshots.sort(key=lambda s: s["date"])
