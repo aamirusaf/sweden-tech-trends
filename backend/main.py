@@ -21,15 +21,19 @@ TECH_STACKS = {
     "Platforms & Data": ["SQL", ".NET", "React", "Microsoft 365", "Active Directory"]
 }
 
-# Words the JobSearch API's free-text query (q) is given for each skill, when the
-# display name alone would match the wrong ads. q treats several words as "any of
-# them", so multi-word names must be quoted to be searched as a phrase.
+# What to send the JobSearch API's free-text query (q) for each skill, when the display
+# name alone would match the wrong ads or miss common spellings. Each entry is searched
+# on its own and the matching ads are combined by id, because q's handling of several
+# words or phrases in one query isn't a reliable "any of these".
 API_QUERIES = {
-    "C": '"C-programmering" "programmering i C" "C/C++" "embedded C" "ANSI C"',
-    "GCP": 'GCP "Google Cloud"',
-    "Microsoft 365": '"Microsoft 365" "Office 365" M365',
-    "Active Directory": '"Active Directory" "Entra ID" "Azure AD"',
+    "C": ['"C-programmering"', '"programmering i C"', '"C/C++"', '"embedded C"', '"ANSI C"'],
+    "GCP": ["GCP", '"Google Cloud"'],
+    "Microsoft 365": ['"Microsoft 365"', '"Office 365"', "M365", "O365"],
+    "Active Directory": ['"Active Directory"', '"Entra ID"', '"Azure AD"'],
 }
+
+# JobSearch returns at most offset 2000 + limit 100 hits for one query.
+MAX_PAGED_HITS = 2100
 
 # How many sample postings to keep per skill/location for the "click a skill to see openings" panel
 POSTINGS_PER_SKILL = 6
@@ -104,6 +108,45 @@ class SkillMatcher:
         return match
 
 
+class ApiError(Exception):
+    pass
+
+
+def search(params):
+    response = get_with_retries(params)
+    if response.status_code != 200:
+        raise ApiError(f"HTTP {response.status_code}")
+    return response.json()
+
+
+def search_skill(skill, municipality_id, sample_size):
+    """Return (number of matching ads, up to sample_size of them, newest first)."""
+    base = {"municipality": municipality_id} if municipality_id else {}
+    queries = API_QUERIES.get(skill)
+    if not queries:
+        data = search({"q": skill, "limit": sample_size, **base})
+        return data.get("total", {}).get("value", 0), data.get("hits", [])
+
+    ads = {}
+    for query in queries:
+        offset, total = 0, None
+        while total is None or (offset < total and offset < MAX_PAGED_HITS):
+            data = search({"q": query, "limit": 100, "offset": offset, **base})
+            total = data.get("total", {}).get("value", 0)
+            if total > MAX_PAGED_HITS and offset == 0:
+                print(f"⚠️ {skill}: {query} has {total} ads, only the first {MAX_PAGED_HITS} are combined")
+            hits = data.get("hits", [])
+            for hit in hits:
+                ads[hit.get("id")] = hit
+            if not hits:
+                break
+            offset += 100
+            time.sleep(0.2)
+        print(f"   {skill}: q={query} -> {total}")
+    newest = sorted(ads.values(), key=lambda hit: hit.get("publication_date") or "", reverse=True)
+    return len(ads), newest[:sample_size]
+
+
 def build_skill_matcher(skill_name):
     if skill_name in SKILL_PATTERNS:
         pattern, flags = SKILL_PATTERNS[skill_name]
@@ -167,48 +210,37 @@ def fetch_skill_demand():
             postings_by_location = {}
 
             for location, municipality_id in LOCATIONS.items():
-                # Query parameter 'q' handles free text matching over titles and descriptions.
+                # The free-text query (q) matches titles and descriptions; see search_skill.
                 # limit>0 still returns the full match count in `total`, plus that many sample ads.
                 # The nationwide ("Sweden") query pulls a bigger sample since it also feeds the
                 # skill co-occurrence scan below; city queries only need enough for the postings list.
                 sample_size = CO_OCCURRENCE_SAMPLE_SIZE if location == "Sweden" else POSTINGS_PER_SKILL
-                params = {"q": API_QUERIES.get(skill, skill), "limit": sample_size}
-                if municipality_id:
-                    params["municipality"] = municipality_id
-
                 try:
-                    response = get_with_retries(params)
+                    total_ads, hits = search_skill(skill, municipality_id, sample_size)
+                    by_location[location] = total_ads
+                    postings_by_location[location] = [
+                        {
+                            "headline": hit.get("headline"),
+                            "employer": (hit.get("employer") or {}).get("name"),
+                            "location": (hit.get("workplace_address") or {}).get("municipality")
+                                or (hit.get("workplace_address") or {}).get("region")
+                                or "Sweden",
+                            "url": hit.get("webpage_url"),
+                            "published": (hit.get("publication_date") or "")[:10]
+                        }
+                        for hit in hits[:POSTINGS_PER_SKILL]
+                    ]
 
-                    if response.status_code == 200:
-                        data = response.json()
-                        # Extract the total hits found on the live platform
-                        total_ads = data.get("total", {}).get("value", 0)
-                        hits = data.get("hits", [])
+                    if location == "Sweden":
+                        analyze_nationwide_sample(
+                            skill, hits, co_occurrence_counts, co_occurrence_samples, remote_mention_counts
+                        )
 
-                        by_location[location] = total_ads
-                        postings_by_location[location] = [
-                            {
-                                "headline": hit.get("headline"),
-                                "employer": (hit.get("employer") or {}).get("name"),
-                                "location": (hit.get("workplace_address") or {}).get("municipality")
-                                    or (hit.get("workplace_address") or {}).get("region")
-                                    or "Sweden",
-                                "url": hit.get("webpage_url"),
-                                "published": (hit.get("publication_date") or "")[:10]
-                            }
-                            for hit in hits[:POSTINGS_PER_SKILL]
-                        ]
+                    print(f"✅ {skill} ({location}): found {total_ads} job posts.")
 
-                        if location == "Sweden":
-                            analyze_nationwide_sample(
-                                skill, hits, co_occurrence_counts, co_occurrence_samples, remote_mention_counts
-                            )
-
-                        print(f"✅ {skill} ({location}): found {total_ads} job posts.")
-                    else:
-                        print(f"⚠️ Failed fetching data for {skill} ({location}). HTTP Status: {response.status_code}")
-                        failures.append(f"{skill} ({location})")
-
+                except ApiError as e:
+                    print(f"⚠️ Failed fetching data for {skill} ({location}). {e}")
+                    failures.append(f"{skill} ({location})")
                 except Exception as e:
                     print(f"❌ Error communicating with API for {skill} ({location}): {e}")
                     failures.append(f"{skill} ({location})")
