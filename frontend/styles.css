@@ -108,7 +108,7 @@ h1 {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
     gap: 1.5rem;
 }
 
@@ -144,11 +144,64 @@ canvas {
     display: block;
 }
 
+.history-section {
+    max-width: 1200px;
+    margin: 1.5rem auto 0;
+}
+
+.history-filter {
+    justify-content: flex-start;
+    margin: 0 0 1rem;
+}
+
+.history-chart-wrapper {
+    height: 380px;
+}
+
+.history-table-toggle {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.history-table-toggle summary {
+    cursor: pointer;
+}
+
+.history-table-scroll {
+    overflow-x: auto;
+    margin-top: 0.75rem;
+}
+
+.history-table {
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.history-table th,
+.history-table td {
+    padding: 0.25rem 0.75rem;
+    text-align: right;
+    border-bottom: 1px solid var(--gridline);
+    color: var(--text-primary);
+}
+
+.history-table th:first-child,
+.history-table td:first-child {
+    text-align: left;
+}
+
+.history-table th {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
 .skill-gap-grid {
     max-width: 1200px;
     margin: 1.5rem auto 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
     gap: 1.5rem;
 }
 
@@ -232,6 +285,7 @@ canvas {
 
 .skill-gap-item-header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 0.625rem;
     margin-bottom: 0.5rem;
@@ -360,4 +414,13 @@ canvas {
     background-color: var(--page-plane);
     border-radius: 999px;
     padding: 0.1875rem 0.625rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
 }
