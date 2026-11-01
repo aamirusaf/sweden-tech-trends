@@ -45,7 +45,7 @@ CANDIDATES = {
     "Rust": r"\bRust\b", "Kotlin": wb("kotlin"), "Swift": r"\bSwift\b", "PHP": wb("php"), "Ruby": wb("ruby"),
     "Scala": wb("scala"), "R": r"(?<=[,/(]\s)R\b|\bR(?=\s*[,/)])", "MATLAB": wb("matlab"), "Bash/Shell": wb("bash", "shell scripting"),
     "PowerShell": wb("powershell"), "Perl": wb("perl"), "Dart": wb("dart"), "Elixir": wb("elixir"), "Haskell": wb("haskell"),
-    "COBOL": wb("cobol"), "ABAP": wb("abap"), "VHDL/Verilog": wb("vhdl", "verilog", "systemverilog"), "Embedded C": wb("embedded c", "inbyggda system", "embedded"),
+    "COBOL": wb("cobol"), "ABAP": wb("abap"), "VHDL/Verilog": wb("vhdl", "verilog", "systemverilog"), "Embedded systems": wb("embedded c", "inbyggda system", "embedded"),
     # web / frameworks
     "React": wb("react", "react\\.js", "reactjs"), "Angular": wb("angular"), "Vue": wb("vue", "vue\\.js", "vuejs"), "Node.js": wb("node\\.js", "nodejs", "node"),
     ".NET": r"\.net\b|\bdotnet\b|asp\.net", "Spring": wb("spring", "spring boot"), "Django": wb("django"), "Flask": wb("flask"), "FastAPI": wb("fastapi"),
@@ -67,7 +67,7 @@ CANDIDATES = {
     "PyTorch": wb("pytorch"), "TensorFlow": wb("tensorflow"), "Pandas": wb("pandas"), "Data engineering": wb("data engineering", "data engineer"),
     # practices / security / other
     "Agile/Scrum": wb("agile", "agil", "agilt", "scrum", "kanban"), "Jira": wb("jira"), "Confluence": wb("confluence"), "TDD/Testing": wb("tdd", "unit test", "enhetstest", "testautomatisering", "test automation"),
-    "Selenium": wb("selenium"), "Cypress": wb("cypress"), "Playwright": wb("playwright"), "Cybersecurity": wb("cybersäkerhet", "cyber security", "cybersecurity", "informationssäkerhet", "it-säkerhet", "säkerhetsskydd"),
+    "Selenium": wb("selenium"), "Cypress": wb("cypress"), "Playwright": wb("playwright"), "Cybersecurity": wb("cybersäkerhet", "cyber security", "cybersecurity", "informationssäkerhet", "it-säkerhet"),
     "ISO 27001": wb("iso 27001", "iso27001"), "SIEM/SOC": wb("siem", "security operations center", "splunk", "sentinel"), "Figma": wb("figma"), "UX": wb("ux", "ui/ux", "ux/ui"),
     "Unity/Unreal": wb("unity", "unreal"), "Qt": wb("qt"), "AUTOSAR": wb("autosar"), "PLC": wb("plc"), "IoT": wb("iot"),
 }
@@ -110,15 +110,12 @@ def cmd_live(args):
 
     tags, text_hits, n, n_tagged = Counter(), Counter(), 0, 0
     seen = set()
-    # JobSearch caps offset at 2000; slice by occupation group to reach every ad.
-    groups = get({"occupation-field": DATA_IT_FIELD, "limit": 0, "stats": "occupation-group", "stats.limit": 50})
-    group_ids = [g["concept_id"] for s in groups.get("stats", []) for g in s.get("values", [])]
-    print("Occupation groups:", [(g["term"], g["count"]) for s in groups.get("stats", []) for g in s.get("values", [])], flush=True)
-    slices = [{"occupation-group": gid} for gid in group_ids] or [{}]
-    for sl in slices:
+    # JobSearch caps offset at 2000, so read newest-first and oldest-first; together
+    # they cover up to ~4,200 ads, and duplicates are skipped by id.
+    for sort in ("pubdate-desc", "pubdate-asc"):
         offset = 0
-        while offset <= 2000:
-            page = get({"occupation-field": DATA_IT_FIELD, "limit": 100, "offset": offset, **sl})
+        while offset <= 2000 and len(seen) < total:
+            page = get({"occupation-field": DATA_IT_FIELD, "limit": 100, "offset": offset, "sort": sort})
             hits = page.get("hits", [])
             if not hits:
                 break
@@ -162,8 +159,8 @@ def ad_field(ad):
 
 def cmd_hist(args):
     name = DEFAULT_FILE_FOR.get(args.name, args.name)
-    enriched, text_hits, fields = Counter(), Counter(), Counter()
-    n = n_kw = 0
+    enriched, text_hits, fields, tags = Counter(), Counter(), Counter(), Counter()
+    n = n_kw = n_tagged = 0
     with tempfile.TemporaryDirectory() as tmp:
         path = download(name, tmp)
         for i, ad in enumerate(iter_ads(path)):
@@ -180,10 +177,13 @@ def cmd_hist(args):
             if kw:
                 n_kw += 1
             enriched.update(set(k.lower() for k in kw if isinstance(k, str)))
+            labels = skill_labels(ad)
+            n_tagged += bool(labels)
+            tags.update(labels)
             text_hits.update(match_text(ad_text(ad)))
     print("Top fields:", fields.most_common(25), flush=True)
     print(f"{name}: {n} Data/IT ads, {n_kw} with enriched skills", flush=True)
-    json.dump({"source": f"hist-{name}", "it_ads": n, "with_enriched": n_kw, "enriched": enriched.most_common(300),
+    json.dump({"source": f"hist-{name}", "it_ads": n, "with_enriched": n_kw, "tagged": n_tagged, "tags": tags.most_common(200), "enriched": enriched.most_common(300),
                "text": text_hits.most_common()}, open(args.out, "w"), ensure_ascii=False, indent=1)
 
 
@@ -193,6 +193,7 @@ def cmd_report(args):
         print("=" * 70)
         print(d["source"], {k: v for k, v in d.items() if isinstance(v, int)})
         base = d.get("scanned") or d.get("it_ads") or 1
+        print("ads with employer skill tags:", d.get("tagged"))
         for key in ("tags", "enriched", "text"):
             if key in d:
                 print(f"--- {key} (top 60, % of IT ads)")
