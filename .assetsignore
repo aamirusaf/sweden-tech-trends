@@ -6,5 +6,6 @@
 wrangler.jsonc
 README.md
 backend/main.py
+backend/backfill_historical.py
 backend/requirements.txt
 **/__pycache__
