@@ -60,6 +60,24 @@ updated JSON in `backend/data/` back to `main`. Cloudflare redeploys on that
 push. `history.json` is committed too, so each run adds a new weekly
 snapshot to the existing history.
 
+## Long-term history
+
+`backend/data/history.csv` is the permanent record and is never trimmed. Each
+run adds one row per skill and location:
+
+```
+date,category,skill,location,postings
+2026-10-31,Languages,Python,Stockholm,237
+```
+
+It grows by about 68 rows a week (roughly 150 KB a year), shows clean diffs in
+git, and loads directly in Excel or pandas
+(`pd.read_csv("backend/data/history.csv", parse_dates=["date"])`). It is also
+published with the site at `/backend/data/history.csv`.
+
+`history.json` holds only the most recent 52 snapshots, which is all the
+dashboard needs for its trend badges.
+
 If any API request fails after retries, the script exits with an error and
 leaves the previous data files untouched, so a bad run never records zeros in
 the history.

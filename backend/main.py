@@ -1,3 +1,4 @@
+import csv
 import json
 import os
 import re
@@ -74,8 +75,12 @@ REMOTE_HYBRID_PATTERN = re.compile(
 # Don't report a remote-work percentage from a handful of postings
 MIN_SAMPLE_FOR_REMOTE_BADGE = 3
 
-# How many dated snapshots to keep in history.json before dropping the oldest
+# How many dated snapshots to keep in history.json before dropping the oldest.
+# history.json is only the recent window the dashboard reads; the full long-term
+# record is history.csv, which is never trimmed.
 MAX_HISTORY_SNAPSHOTS = 52
+
+HISTORY_CSV_FIELDS = ["date", "category", "skill", "location", "postings"]
 
 # Locations to break demand down by, mapped to JobTech taxonomy municipality concept IDs.
 # "Sweden" (None) means no municipality filter, i.e. the nationwide total.
@@ -181,6 +186,7 @@ def fetch_skill_demand():
     trends_path = os.path.join(data_dir, "tech_trends.json")
     postings_path = os.path.join(data_dir, "job_postings.json")
     history_path = os.path.join(data_dir, "history.json")
+    history_csv_path = os.path.join(data_dir, "history.csv")
     co_occurrence_path = os.path.join(data_dir, "co_occurrence.json")
 
     try:
@@ -200,7 +206,12 @@ def fetch_skill_demand():
                 },
                 f, indent=4, ensure_ascii=False
             )
+        # Seed the CSV archive from history.json the first time, before history.json
+        # gets today's snapshot (and before it can drop old ones past its cap).
+        if not os.path.exists(history_csv_path):
+            seed_history_csv(history_csv_path, history_path)
         update_history(history_path, results["data"])
+        append_history_csv(history_csv_path, today_utc(), results["data"])
         print(f"\n🎉 Successfully compiled metrics files saved to: {data_dir}")
     except FileNotFoundError:
         print("❌ Error: Directory 'backend/data/' does not exist. Run setup structure command first.")
@@ -270,7 +281,7 @@ def update_history(history_path, current_data):
     except (FileNotFoundError, json.JSONDecodeError):
         history = {"snapshots": []}
 
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    today = today_utc()
     snapshots = [s for s in history.get("snapshots", []) if s.get("date") != today]
     snapshots.append({"date": today, "data": current_data})
     snapshots.sort(key=lambda s: s["date"])
@@ -279,6 +290,67 @@ def update_history(history_path, current_data):
 
     with open(history_path, "w", encoding="utf-8") as f:
         json.dump(history, f, indent=4, ensure_ascii=False)
+
+def today_utc():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+
+def snapshot_to_rows(date, data):
+    """Flatten one snapshot ({category: [{name, by_location}]}) into long-format CSV rows."""
+    rows = []
+    for category, skills in data.items():
+        for skill in skills:
+            for location, postings in (skill.get("by_location") or {}).items():
+                rows.append({
+                    "date": date,
+                    "category": category,
+                    "skill": skill["name"],
+                    "location": location,
+                    "postings": postings,
+                })
+    return rows
+
+
+def append_history_csv(csv_path, date, data):
+    """Add one dated snapshot to history.csv, the permanent long-term record.
+
+    Rows for the same date are replaced, so re-running the script on the same day
+    doesn't duplicate them. Unlike history.json, nothing is ever trimmed. Rows stay
+    sorted by date, with each date's rows in a stable order, so git diffs only show
+    the newly added week."""
+    write_history_csv(csv_path, read_history_csv(csv_path), {date: snapshot_to_rows(date, data)})
+
+
+def seed_history_csv(csv_path, history_path):
+    """Create history.csv from every snapshot already in history.json."""
+    try:
+        with open(history_path, "r", encoding="utf-8") as f:
+            snapshots = json.load(f).get("snapshots", [])
+    except (FileNotFoundError, json.JSONDecodeError):
+        snapshots = []
+    new_rows = {s["date"]: snapshot_to_rows(s["date"], s["data"]) for s in snapshots}
+    write_history_csv(csv_path, read_history_csv(csv_path), new_rows)
+
+
+def read_history_csv(csv_path):
+    try:
+        with open(csv_path, "r", encoding="utf-8", newline="") as f:
+            return list(csv.DictReader(f))
+    except FileNotFoundError:
+        return []
+
+
+def write_history_csv(csv_path, existing_rows, new_rows_by_date):
+    rows = [r for r in existing_rows if r["date"] not in new_rows_by_date]
+    for date_rows in new_rows_by_date.values():
+        rows.extend(date_rows)
+    rows.sort(key=lambda r: r["date"])  # stable sort keeps each date's row order
+
+    with open(csv_path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=HISTORY_CSV_FIELDS, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
+
 
 if __name__ == "__main__":
     fetch_skill_demand()
