@@ -10,11 +10,25 @@ import requests
 # Base endpoint for the official JobTech Dev / Arbetsförmedlingen search engine
 API_URL = "https://jobsearch.api.jobtechdev.se/search"
 
-# Target technology segments to query against Swedish active postings
+# The 20 technologies the dashboard tracks. Chosen from the data, not by hand: they are
+# the 20 concrete tools mentioned most often in Data/IT job ads, both in the live ads
+# and in every IT ad published in 2025 (see backend/discover_skills.py, which can be
+# re-run to check whether the list still holds). Broad themes such as "AI", "agile" or
+# "cybersecurity" rank high too but aren't tools, so they're left out on purpose.
 TECH_STACKS = {
-    "Languages": ["JavaScript", "TypeScript", "Python", "Java", "C#", "Go", "Rust"],
-    "Cloud & Infra": ["AWS", "Azure", "Docker", "Kubernetes", "Terraform"],
-    "Data & AI": ["PostgreSQL", "SQL", "Apache Kafka", "PyTorch", "TensorFlow"]
+    "Languages": ["Python", "Java", "C#", "C++", "C", "JavaScript", "TypeScript"],
+    "Cloud & Infra": ["Azure", "AWS", "GCP", "Kubernetes", "Docker", "Terraform", "Linux", "Git"],
+    "Platforms & Data": ["SQL", ".NET", "React", "Microsoft 365", "Active Directory"]
+}
+
+# Words the JobSearch API's free-text query (q) is given for each skill, when the
+# display name alone would match the wrong ads. q treats several words as "any of
+# them", so multi-word names must be quoted to be searched as a phrase.
+API_QUERIES = {
+    "C": '"C-programmering" "programmering i C" "C/C++" "embedded C" "ANSI C"',
+    "GCP": 'GCP "Google Cloud"',
+    "Microsoft 365": '"Microsoft 365" "Office 365" M365',
+    "Active Directory": '"Active Directory" "Entra ID" "Azure AD"',
 }
 
 # How many sample postings to keep per skill/location for the "click a skill to see openings" panel
@@ -48,15 +62,54 @@ def get_with_retries(params, attempts=3):
         time.sleep(2 * attempt)
 
 
+# How each skill is recognised in ad text. Shared by this script (co-occurrence) and
+# backfill_historical.py (the 20-year history), so both count a skill the same way.
+# Skills not listed use a case-insensitive whole-word match on their name.
+SKILL_PATTERNS = {
+    "Java": (r"\bjava\b(?!\s*script)", re.IGNORECASE),
+    "JavaScript": (r"\bjavascript\b|(?<![.\w])JS\b", re.IGNORECASE),
+    "C#": (r"(?<![\w])C#|\bC sharp\b", re.IGNORECASE),
+    "C++": (r"(?<![\w])C\+\+", re.IGNORECASE),
+    # A capital "C" next to a comma, slash, bracket or "och/and/or/eller", as in
+    # "C, C++ och Python" or "C/C++". Driving-licence lists ("B, C, CE") look the same,
+    # so the ad must also talk about programming (see CONTEXT_REQUIRED below).
+    "C": (r"(?<![\w#+./-])C(?![\w#+-])(?=\s*[,/&)]|\s+(?:och|and|or|eller)\b)|(?<=[,/(]\s)C(?![\w#+-])|(?<=[,/(])C(?![\w#+-])", 0),
+    "GCP": (r"\bGCP\b|\bgoogle cloud\b", re.IGNORECASE),
+    "AWS": (r"\baws\b|\bamazon web services\b", re.IGNORECASE),
+    "Kubernetes": (r"\bkubernetes\b|\bk8s\b", re.IGNORECASE),
+    "Git": (r"\bgit(?:hub|lab)?\b", re.IGNORECASE),
+    ".NET": (r"(?<![\w])\.NET\b|\bdotnet\b", re.IGNORECASE),
+    # Case-sensitive: "react" is also an everyday English verb.
+    "React": (r"\bReact(?:\.js|JS)?\b", 0),
+    "Microsoft 365": (r"\b(?:microsoft|office)\s?365\b|\b[MO]365\b", re.IGNORECASE),
+    "Active Directory": (r"\bactive directory\b|\bentra id\b|\bmicrosoft entra\b|\bazure ad\b", re.IGNORECASE),
+}
+
+PROGRAMMING_CONTEXT = re.compile(
+    r"programmer|programming|utvecklare|developer|mjukvara|software|embedded|inbyggda|firmware|C\+\+",
+    re.IGNORECASE,
+)
+CONTEXT_REQUIRED = {"C": PROGRAMMING_CONTEXT}
+
+
+class SkillMatcher:
+    def __init__(self, pattern, flags, context=None):
+        self.pattern = re.compile(pattern, flags)
+        self.context = context
+
+    def search(self, text):
+        match = self.pattern.search(text)
+        if match and self.context is not None and not self.context.search(text):
+            return None
+        return match
+
+
 def build_skill_matcher(skill_name):
-    # Alphanumeric names ("Python", "SQL") get word-boundary matching so "SQL" doesn't
-    # false-positive inside "PostgreSQL". Names with symbols ("C#") fall back to a plain
-    # case-insensitive substring search since \b doesn't apply cleanly around "#".
-    if re.fullmatch(r"[A-Za-z0-9]+", skill_name):
-        pattern = r"\b" + re.escape(skill_name) + r"\b"
+    if skill_name in SKILL_PATTERNS:
+        pattern, flags = SKILL_PATTERNS[skill_name]
     else:
-        pattern = re.escape(skill_name)
-    return re.compile(pattern, re.IGNORECASE)
+        pattern, flags = r"\b" + re.escape(skill_name) + r"\b", re.IGNORECASE
+    return SkillMatcher(pattern, flags, CONTEXT_REQUIRED.get(skill_name))
 
 
 SKILL_MATCHERS = {skill: build_skill_matcher(skill) for skill in ALL_SKILLS}
@@ -119,7 +172,7 @@ def fetch_skill_demand():
                 # The nationwide ("Sweden") query pulls a bigger sample since it also feeds the
                 # skill co-occurrence scan below; city queries only need enough for the postings list.
                 sample_size = CO_OCCURRENCE_SAMPLE_SIZE if location == "Sweden" else POSTINGS_PER_SKILL
-                params = {"q": skill, "limit": sample_size}
+                params = {"q": API_QUERIES.get(skill, skill), "limit": sample_size}
                 if municipality_id:
                     params["municipality"] = municipality_id
 

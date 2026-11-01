@@ -9,7 +9,7 @@ if (window.Chart) {
 const CATEGORY_COLORS = {
     'Languages':     { light: '#2a78d6', dark: '#3987e5' },
     'Cloud & Infra': { light: '#eb6834', dark: '#d95926' },
-    'Data & AI':     { light: '#1baf7a', dark: '#199e70' }
+    'Platforms & Data': { light: '#1baf7a', dark: '#199e70' }
 };
 
 const charts = [];
@@ -134,8 +134,12 @@ function trendLabel(skillName, currentValue) {
     };
 }
 
+// A category missing from CATEGORY_COLORS (e.g. data files written before the skill
+// list changed) gets a neutral color instead of breaking the page.
+const FALLBACK_COLOR = { light: '#6b7280', dark: '#9ca3af' };
+
 function categoryColor(categoryKey) {
-    return CATEGORY_COLORS[categoryKey][isDarkMode() ? 'dark' : 'light'];
+    return (CATEGORY_COLORS[categoryKey] || FALLBACK_COLOR)[isDarkMode() ? 'dark' : 'light'];
 }
 
 function renderLocationFilter() {
@@ -170,7 +174,7 @@ function renderCharts() {
 
     charts.push(createChart('languagesChart', buildCategoryData('Languages'), 'Languages'));
     charts.push(createChart('cloudChart', buildCategoryData('Cloud & Infra'), 'Cloud & Infra'));
-    charts.push(createChart('dataChart', buildCategoryData('Data & AI'), 'Data & AI'));
+    charts.push(createChart('dataChart', buildCategoryData('Platforms & Data'), 'Platforms & Data'));
 }
 
 function renderSkillPicker() {
@@ -388,7 +392,7 @@ function createChart(canvasId, categoryData, categoryKey) {
 
     const ctx = canvas.getContext('2d');
     const theme = chartTheme();
-    const barColor = CATEGORY_COLORS[categoryKey][isDarkMode() ? 'dark' : 'light'];
+    const barColor = categoryColor(categoryKey);
 
     // Sort items descending based on active job volume count
     const sorted = [...categoryData].sort((a, b) => b.value - a.value);
@@ -611,7 +615,7 @@ if (window.matchMedia) {
                 CATEGORY_COLORS[key].light === chart.data.datasets[0].backgroundColor ||
                 CATEGORY_COLORS[key].dark === chart.data.datasets[0].backgroundColor
             );
-            chart.data.datasets[0].backgroundColor = CATEGORY_COLORS[categoryKey][isDarkMode() ? 'dark' : 'light'];
+            chart.data.datasets[0].backgroundColor = categoryColor(categoryKey);
             chart.options.scales.x.grid.color = theme.grid;
             chart.options.scales.x.border.color = theme.axis;
             chart.options.scales.x.ticks.color = theme.ink;

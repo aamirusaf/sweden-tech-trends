@@ -1,10 +1,10 @@
-name: Discover top skills (one-off analysis)
+name: Discover top skills
 
-# Temporary: runs on pushes to the analysis branch only, never on main.
+# Run by hand from the Actions tab (e.g. once a year) to check whether the 20 skills
+# in backend/main.py are still the most-mentioned ones in Data/IT job ads. Read the
+# ranking in each job's log; nothing is committed.
 on:
-  push:
-    branches: [claude/project-thread-c1oxez]
-    paths: [backend/discover_skills.py, .github/workflows/discover-skills.yml]
+  workflow_dispatch:
 
 jobs:
   scan:
@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        source: [live, "2026-Q3", "2016"]
+        source: [live, "2025", "2026-Q3"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

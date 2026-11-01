@@ -33,7 +33,7 @@ from datetime import datetime, timezone
 from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from main import TECH_STACKS, LOCATIONS  # noqa: E402  (keep the skill list in one place)
+from main import TECH_STACKS, LOCATIONS, build_skill_matcher  # noqa: E402  (keep the skill list in one place)
 
 BASE_URL = "https://data.jobtechdev.se/annonser/historiska/"
 
@@ -63,25 +63,8 @@ CATEGORY_OF = {skill: category for category, skills in TECH_STACKS.items() for s
 # --- skill matching ---------------------------------------------------------
 
 def build_matchers():
-    """Same rules as main.build_skill_matcher, except "Go". As a plain word it matches
-    ordinary English ("go-to", "Go ahead"), which is noise across millions of
-    full-text ads. So match "Golang", or a capitalised "Go" that sits in a list of
-    technologies: next to a comma, slash, "&", bracket, "och/and/or/eller", or at
-    the end of a line."""
-    matchers = {}
-    for skill in CATEGORY_OF:
-        if skill == "Go":
-            matchers[skill] = re.compile(
-                r"\b[Gg]olang\b"
-                r"|(?<=[,/&(]\s)Go\b|(?<=[,/&(])Go\b"
-                r"|\bGo(?=\s*[,/&)]|\s+(?:och|and|or|eller)\b|\s*$)",
-                re.MULTILINE,
-            )
-        elif re.fullmatch(r"[A-Za-z0-9]+", skill):
-            matchers[skill] = re.compile(r"\b" + re.escape(skill) + r"\b", re.IGNORECASE)
-        else:
-            matchers[skill] = re.compile(re.escape(skill), re.IGNORECASE)
-    return matchers
+    """Same matching rules as the weekly script (main.SKILL_PATTERNS)."""
+    return {skill: build_skill_matcher(skill) for skill in CATEGORY_OF}
 
 
 # --- reading one ad defensively ----------------------------------------------
