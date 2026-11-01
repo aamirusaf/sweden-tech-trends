@@ -30,6 +30,17 @@ let locationOptions = ['Sweden'];
 let selectedLocation = 'Sweden';
 let selectedSkill = null;
 let knownSkills = new Set(loadKnownSkills());
+let historicalYearly = {}; // { location: { year: { total, skills: { skillName: ads } } } }
+let selectedHistoryCategory = 'Languages';
+let historyChart = null;
+
+// Categorical palette for the history lines, assigned in fixed order by each skill's
+// position within its category (so a skill keeps its color across location changes).
+// Light/dark steps of the same eight hues; validated for adjacent-pair CVD separation.
+const SERIES_COLORS = {
+    light: ['#2a78d6', '#eb6834', '#1baf7a', '#eda100', '#e87ba4', '#008300', '#6250d6', '#e34948'],
+    dark:  ['#3987e5', '#d95926', '#199e70', '#c98500', '#d55181', '#008300', '#9085e9', '#e66767']
+};
 
 function skillValue(skill, location = selectedLocation) {
     return (skill.by_location && skill.by_location[location]) ?? skill.value ?? 0;
@@ -46,9 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('../backend/data/courses.json').then(response => response.ok ? response.json() : {}),
         fetch('../backend/data/job_postings.json').then(response => response.ok ? response.json() : { postings: {} }),
         fetch('../backend/data/history.json').then(response => response.ok ? response.json() : { snapshots: [] }),
-        fetch('../backend/data/co_occurrence.json').then(response => response.ok ? response.json() : { co_occurrence: {} })
+        fetch('../backend/data/co_occurrence.json').then(response => response.ok ? response.json() : { co_occurrence: {} }),
+        fetch('../backend/data/historical_monthly.csv').then(response => response.ok ? response.text() : '').catch(() => '')
     ])
-        .then(([jsonData, courses, jobPostings, history, coOccurrence]) => {
+        .then(([jsonData, courses, jobPostings, history, coOccurrence, historicalCsv]) => {
+            historicalYearly = aggregateHistoricalByYear(historicalCsv);
             coursesData = courses;
             jobPostingsData = jobPostings.postings || {};
             coOccurrenceData = coOccurrence.co_occurrence || {};
@@ -71,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderSkillPicker();
             renderSkillGapResults();
             renderJobPostings();
+            renderHistory();
         })
         .catch(error => {
             console.error('Error loading dynamic metrics:', error);
@@ -141,6 +155,7 @@ function renderLocationFilter() {
             renderCharts();
             renderSkillGapResults();
             renderJobPostings();
+            renderHistory();
         });
         container.appendChild(button);
     });
@@ -432,6 +447,160 @@ function createChart(canvasId, categoryData, categoryKey) {
     });
 }
 
+// --- Long-term history (historical_monthly.csv) -------------------------------
+
+function aggregateHistoricalByYear(csvText) {
+    // CSV columns: month,category,skill,location,ads,total_ads. Values are plain
+    // (no quoted commas), so a simple split is enough.
+    const byLocation = {};
+    const lines = (csvText || '').trim().split('\n');
+    if (lines.length < 2) return byLocation;
+
+    const seenTotals = new Set();
+    for (const line of lines.slice(1)) {
+        const [month, , skill, location, ads, totalAds] = line.split(',');
+        if (!month || !location) continue;
+        const year = month.slice(0, 4);
+        const yearEntry = ((byLocation[location] ??= {})[year] ??= { total: 0, skills: {} });
+        yearEntry.skills[skill] = (yearEntry.skills[skill] || 0) + Number(ads);
+        // total_ads repeats on every skill row for a month/location; count it once
+        const totalKey = `${month}|${location}`;
+        if (!seenTotals.has(totalKey)) {
+            seenTotals.add(totalKey);
+            yearEntry.total += Number(totalAds);
+        }
+    }
+    return byLocation;
+}
+
+function renderHistory() {
+    const section = document.querySelector('.history-section');
+    const canvas = document.getElementById('historyChart');
+    if (!section || !canvas) return;
+
+    const yearly = historicalYearly[selectedLocation];
+    if (!yearly || !Object.keys(rawCategoryData).length) {
+        section.hidden = true;
+        return;
+    }
+    section.hidden = false;
+
+    renderHistoryCategoryFilter();
+
+    const years = Object.keys(yearly).sort();
+    const skills = (rawCategoryData[selectedHistoryCategory] || []).map(skill => skill.name);
+    const palette = SERIES_COLORS[isDarkMode() ? 'dark' : 'light'];
+    const theme = chartTheme();
+
+    const datasets = skills.map((skill, index) => ({
+        label: skill,
+        data: years.map(year => {
+            const { total, skills: counts } = yearly[year];
+            return total ? +(100 * (counts[skill] || 0) / total).toFixed(3) : null;
+        }),
+        borderColor: palette[index % palette.length],
+        backgroundColor: palette[index % palette.length],
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHoverRadius: 5,
+        pointHoverBorderWidth: 2,
+        pointHoverBorderColor: getComputedStyle(document.documentElement).getPropertyValue('--surface').trim() || '#fff',
+        tension: 0.25
+    }));
+
+    if (historyChart) historyChart.destroy();
+    historyChart = new Chart(canvas.getContext('2d'), {
+        type: 'line',
+        data: { labels: years, datasets },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: 'index', intersect: false },
+            plugins: {
+                legend: {
+                    position: 'top',
+                    align: 'start',
+                    labels: { color: theme.ink, usePointStyle: true, pointStyle: 'line', boxWidth: 24 }
+                },
+                tooltip: {
+                    itemSort: (a, b) => b.raw - a.raw,
+                    callbacks: {
+                        title: (items) => items[0].label === '2026' ? '2026 (Jan–Oct)' : items[0].label,
+                        label: (item) => ` ${item.raw.toFixed(2)}%  ${item.dataset.label}`
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    grid: { display: false },
+                    border: { color: theme.axis },
+                    ticks: { color: theme.ink, maxRotation: 0, autoSkipPadding: 12 }
+                },
+                y: {
+                    beginAtZero: true,
+                    grid: { color: theme.grid },
+                    border: { display: false },
+                    ticks: { color: theme.ink, callback: (value) => `${value}%` },
+                    title: { display: true, text: 'Share of all ads', color: theme.ink }
+                }
+            }
+        }
+    });
+
+    renderHistoryTable(years, datasets);
+}
+
+function renderHistoryCategoryFilter() {
+    const container = document.getElementById('historyCategoryFilter');
+    if (!container) return;
+    container.innerHTML = '';
+
+    Object.keys(rawCategoryData).forEach(category => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'location-pill' + (category === selectedHistoryCategory ? ' location-pill-active' : '');
+        button.setAttribute('aria-pressed', String(category === selectedHistoryCategory));
+        button.textContent = category;
+        button.addEventListener('click', () => {
+            if (category === selectedHistoryCategory) return;
+            selectedHistoryCategory = category;
+            renderHistory();
+        });
+        container.appendChild(button);
+    });
+}
+
+function renderHistoryTable(years, datasets) {
+    const table = document.getElementById('historyTable');
+    if (!table) return;
+    table.innerHTML = '';
+
+    const caption = document.createElement('caption');
+    caption.className = 'visually-hidden';
+    caption.textContent = `Share of job ads (%) by year, ${selectedHistoryCategory}, ${LOCATION_LABELS[selectedLocation] || selectedLocation}`;
+    table.appendChild(caption);
+
+    const headRow = table.createTHead().insertRow();
+    ['Skill', ...years].forEach(text => {
+        const th = document.createElement('th');
+        th.scope = 'col';
+        th.textContent = text;
+        headRow.appendChild(th);
+    });
+
+    const body = table.createTBody();
+    datasets.forEach(dataset => {
+        const row = body.insertRow();
+        const th = document.createElement('th');
+        th.scope = 'row';
+        th.textContent = dataset.label;
+        row.appendChild(th);
+        dataset.data.forEach(value => {
+            row.insertCell().textContent = value == null ? '–' : `${value.toFixed(2)}%`;
+        });
+    });
+}
+
 // React to the viewer switching OS-level light/dark mode without a page reload
 if (window.matchMedia) {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
@@ -450,5 +619,6 @@ if (window.matchMedia) {
             chart.options.scales.y.ticks.color = theme.ink;
             chart.update();
         });
+        renderHistory();
     });
 }

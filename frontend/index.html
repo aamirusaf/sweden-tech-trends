@@ -39,6 +39,23 @@
         </div>
     </main>
 
+    <section class="history-section">
+        <div class="chart-card">
+            <h3>Demand over time, 2006–2026</h3>
+            <p class="section-hint">Share of all job ads published each year that mention the skill, from Arbetsförmedlingen's Historical Ads. Follows the location filter above. 2026 covers January–October.</p>
+            <div id="historyCategoryFilter" class="location-filter history-filter" role="group" aria-label="Skill category"></div>
+            <div class="chart-wrapper history-chart-wrapper">
+                <canvas id="historyChart" role="img" aria-label="Line chart of yearly share of job ads mentioning each skill"></canvas>
+            </div>
+            <details class="history-table-toggle">
+                <summary>Show as table</summary>
+                <div class="history-table-scroll">
+                    <table id="historyTable" class="history-table"></table>
+                </div>
+            </details>
+        </div>
+    </section>
+
     <section class="skill-gap-grid">
         <div class="chart-card">
             <h3>Which skills do you already know?</h3>
