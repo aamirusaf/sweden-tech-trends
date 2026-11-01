@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers static-assets config. The whole repo root is uploaded so the
+  // dashboard in frontend/ can fetch ../backend/data/*.json (they must be siblings).
+  // The name must match the Worker created in the Cloudflare dashboard.
+  "name": "sweden-tech-trends",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "."
+  }
+}

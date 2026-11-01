@@ -1,0 +1,10 @@
+# Files in the repo root that should not be published by Cloudflare
+.git
+.github
+.gitignore
+.assetsignore
+wrangler.jsonc
+README.md
+backend/main.py
+backend/requirements.txt
+**/__pycache__

@@ -43,19 +43,21 @@ Then open `http://localhost:8000/frontend/`.
 
 ## Hosting and automatic updates
 
-The site is static, so it is hosted on [Cloudflare Pages](https://pages.cloudflare.com/)
-straight from this repository, with no build step:
+The site is static and is hosted on Cloudflare (Workers static assets), deployed
+from this repository on every push to `main`:
 
-- **Build command:** none
-- **Build output directory:** `/` (the repository root, so `frontend/` and
-  `backend/data/` are served as siblings)
+- `wrangler.jsonc` publishes the repository root, so `frontend/` and
+  `backend/data/` are served as siblings. `.assetsignore` keeps the source,
+  README and git files out of the published site.
 - `_redirects` sends the site root `/` to `/frontend/`.
+- In the Cloudflare dashboard the deploy command should be the default
+  `npx wrangler deploy` with no extra flags, so it uses `wrangler.jsonc`.
 
 The data is refreshed by the **Update job market data** GitHub Action
 (`.github/workflows/update-data.yml`). It runs every Monday at 05:00 UTC (and can
 be run by hand from the Actions tab), runs `backend/main.py`, and commits the
-updated JSON in `backend/data/` back to `main`. Cloudflare Pages redeploys on
-that push. `history.json` is committed too, so each run adds a new weekly
+updated JSON in `backend/data/` back to `main`. Cloudflare redeploys on that
+push. `history.json` is committed too, so each run adds a new weekly
 snapshot to the existing history.
 
 If any API request fails after retries, the script exits with an error and
