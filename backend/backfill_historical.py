@@ -29,6 +29,7 @@ import time
 import unicodedata
 import urllib.request
 import zipfile
+from datetime import datetime, timezone
 from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -42,6 +43,8 @@ DEFAULT_FILE_FOR = {
     "2018": "2018_municipality_patched.zip",
     "2019": "2019_municipality_patched.zip",
 }
+
+MIN_YEAR = 2006
 
 OUTPUT_FIELDS = ["month", "category", "skill", "location", "ads", "total_ads"]
 
@@ -101,10 +104,15 @@ def ad_text(ad):
     return "\n".join(parts)
 
 
+def valid_month(month):
+    """Ads occasionally carry nonsense dates (e.g. year 2099); keep 2006 to this year."""
+    return MIN_YEAR <= int(month[:4]) <= datetime.now(timezone.utc).year
+
+
 def ad_month(ad):
-    for key in ("publication_date", "publicationDate", "published", "application_deadline"):
+    for key in ("publication_date", "publicationDate", "published"):
         value = ad.get(key)
-        if isinstance(value, str) and re.match(r"\d{4}-\d{2}", value):
+        if isinstance(value, str) and re.match(r"\d{4}-\d{2}", value) and valid_month(value[:7]):
             return value[:7]
     return None
 
@@ -171,7 +179,12 @@ def iter_ads(zip_path):
                     try:
                         yield json.loads(line)
                     except json.JSONDecodeError:
-                        yield None
+                        # Some files (e.g. the 2018/2019 municipality-patched ones) are a
+                        # JSON array with one ad per line: "[{...},", "{...},", "{...}]".
+                        try:
+                            yield json.loads(line.lstrip(b"[").rstrip(b",").rstrip(b"]").rstrip(b","))
+                        except json.JSONDecodeError:
+                            yield None
 
 
 def count_file(zip_path):
@@ -220,7 +233,9 @@ def count_file(zip_path):
             print(f"  {stats['lines']:,} lines...", flush=True)
 
     print("Stats:", dict(stats), flush=True)
-    ads = max(stats["lines"] - stats["unparseable"] - stats["duplicates"], 1)
+    # Unparseable lines count against the file: a format this script can't read must
+    # fail the job, not quietly produce an almost-empty year.
+    ads = max(stats["lines"] - stats["duplicates"], 1)
     if stats["counted"] / ads < MIN_PARSED_SHARE:
         sys.exit(f"Only {stats['counted']}/{ads} ads had a publication date; schema not recognised.")
     if (stats["counted"] - stats["no_text"]) / max(stats["counted"], 1) < MIN_PARSED_SHARE:
@@ -292,7 +307,7 @@ def cmd_merge(args):
     new_months = {r["month"] for r in rows}
     if os.path.exists(args.out):
         with open(args.out, encoding="utf-8", newline="") as f:
-            kept = [r for r in csv.DictReader(f) if r["month"] not in new_months and r["skill"] in CATEGORY_OF]
+            kept = [r for r in csv.DictReader(f) if r["month"] not in new_months and r["skill"] in CATEGORY_OF and valid_month(r["month"])]
     rows.extend(kept)
     write_rows(args.out, rows)
     months = sorted({r["month"] for r in rows})
