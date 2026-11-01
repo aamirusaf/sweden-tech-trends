@@ -1,21 +1,21 @@
 {
-    "last_updated": "2026-10-31 19:57:16 UTC",
+    "last_updated": "2026-11-01 18:39:12 UTC",
     "co_occurrence": {
         "JavaScript": [
             {
                 "name": "TypeScript",
-                "count": 14,
-                "percent": 70
+                "count": 13,
+                "percent": 65
             },
             {
                 "name": "Azure",
-                "count": 4,
-                "percent": 20
+                "count": 5,
+                "percent": 25
             },
             {
-                "name": "Java",
-                "count": 3,
-                "percent": 15
+                "name": "SQL",
+                "count": 4,
+                "percent": 20
             },
             {
                 "name": "Python",
@@ -23,16 +23,16 @@
                 "percent": 15
             },
             {
-                "name": "SQL",
-                "count": 3,
-                "percent": 15
+                "name": "C#",
+                "count": 2,
+                "percent": 10
             }
         ],
         "TypeScript": [
             {
                 "name": "JavaScript",
-                "count": 13,
-                "percent": 65
+                "count": 12,
+                "percent": 60
             },
             {
                 "name": "Azure",
@@ -40,19 +40,19 @@
                 "percent": 45
             },
             {
-                "name": "SQL",
-                "count": 6,
-                "percent": 30
-            },
-            {
                 "name": "C#",
                 "count": 5,
                 "percent": 25
             },
             {
-                "name": "Python",
+                "name": "SQL",
                 "count": 5,
                 "percent": 25
+            },
+            {
+                "name": "Docker",
+                "count": 4,
+                "percent": 20
             }
         ],
         "Python": [
@@ -62,14 +62,14 @@
                 "percent": 25
             },
             {
-                "name": "SQL",
+                "name": "Docker",
                 "count": 5,
                 "percent": 25
             },
             {
-                "name": "Docker",
-                "count": 4,
-                "percent": 20
+                "name": "SQL",
+                "count": 5,
+                "percent": 25
             },
             {
                 "name": "Java",
@@ -77,7 +77,7 @@
                 "percent": 15
             },
             {
-                "name": "C#",
+                "name": "Kubernetes",
                 "count": 3,
                 "percent": 15
             }
@@ -85,23 +85,23 @@
         "Java": [
             {
                 "name": "AWS",
-                "count": 12,
-                "percent": 60
+                "count": 13,
+                "percent": 65
             },
             {
                 "name": "Kubernetes",
-                "count": 9,
-                "percent": 45
+                "count": 10,
+                "percent": 50
             },
             {
                 "name": "Docker",
-                "count": 9,
-                "percent": 45
+                "count": 10,
+                "percent": 50
             },
             {
                 "name": "Azure",
-                "count": 7,
-                "percent": 35
+                "count": 8,
+                "percent": 40
             },
             {
                 "name": "SQL",
@@ -112,13 +112,13 @@
         "C#": [
             {
                 "name": "Azure",
-                "count": 10,
-                "percent": 50
+                "count": 11,
+                "percent": 55
             },
             {
                 "name": "SQL",
-                "count": 9,
-                "percent": 45
+                "count": 10,
+                "percent": 50
             },
             {
                 "name": "Python",
@@ -126,39 +126,39 @@
                 "percent": 30
             },
             {
-                "name": "TypeScript",
-                "count": 5,
-                "percent": 25
+                "name": "Docker",
+                "count": 4,
+                "percent": 20
             },
             {
-                "name": "Docker",
+                "name": "TypeScript",
                 "count": 4,
                 "percent": 20
             }
         ],
         "Go": [
             {
-                "name": "Kubernetes",
-                "count": 11,
-                "percent": 55
+                "name": "Python",
+                "count": 13,
+                "percent": 65
             },
             {
-                "name": "Python",
-                "count": 11,
-                "percent": 55
+                "name": "Kubernetes",
+                "count": 12,
+                "percent": 60
             },
             {
                 "name": "Docker",
-                "count": 7,
-                "percent": 35
+                "count": 8,
+                "percent": 40
             },
             {
                 "name": "Azure",
-                "count": 5,
-                "percent": 25
+                "count": 6,
+                "percent": 30
             },
             {
-                "name": "Java",
+                "name": "AWS",
                 "count": 5,
                 "percent": 25
             }
@@ -166,13 +166,13 @@
         "Rust": [
             {
                 "name": "Python",
-                "count": 13,
-                "percent": 65
+                "count": 12,
+                "percent": 60
             },
             {
                 "name": "AWS",
-                "count": 6,
-                "percent": 30
+                "count": 7,
+                "percent": 35
             },
             {
                 "name": "Azure",
@@ -192,27 +192,27 @@
         ],
         "AWS": [
             {
+                "name": "Kubernetes",
+                "count": 8,
+                "percent": 40
+            },
+            {
                 "name": "Python",
                 "count": 8,
                 "percent": 40
             },
             {
                 "name": "Java",
-                "count": 8,
-                "percent": 40
-            },
-            {
-                "name": "Kubernetes",
-                "count": 7,
-                "percent": 35
-            },
-            {
-                "name": "Docker",
                 "count": 7,
                 "percent": 35
             },
             {
                 "name": "Terraform",
+                "count": 6,
+                "percent": 30
+            },
+            {
+                "name": "Docker",
                 "count": 6,
                 "percent": 30
             }
@@ -246,27 +246,27 @@
         ],
         "Docker": [
             {
-                "name": "Python",
-                "count": 14,
-                "percent": 70
-            },
-            {
                 "name": "Kubernetes",
                 "count": 14,
                 "percent": 70
             },
             {
-                "name": "Azure",
-                "count": 10,
-                "percent": 50
+                "name": "Python",
+                "count": 14,
+                "percent": 70
             },
             {
-                "name": "AWS",
-                "count": 8,
-                "percent": 40
+                "name": "Azure",
+                "count": 9,
+                "percent": 45
             },
             {
                 "name": "Terraform",
+                "count": 7,
+                "percent": 35
+            },
+            {
+                "name": "AWS",
                 "count": 7,
                 "percent": 35
             }
@@ -274,28 +274,28 @@
         "Kubernetes": [
             {
                 "name": "Docker",
-                "count": 9,
-                "percent": 45
-            },
-            {
-                "name": "Azure",
                 "count": 8,
                 "percent": 40
             },
             {
                 "name": "Java",
+                "count": 7,
+                "percent": 35
+            },
+            {
+                "name": "Azure",
                 "count": 6,
                 "percent": 30
             },
             {
-                "name": "Terraform",
+                "name": "Python",
                 "count": 6,
                 "percent": 30
             },
             {
-                "name": "Go",
-                "count": 5,
-                "percent": 25
+                "name": "AWS",
+                "count": 4,
+                "percent": 20
             }
         ],
         "Terraform": [
@@ -305,19 +305,19 @@
                 "percent": 65
             },
             {
-                "name": "Azure",
-                "count": 12,
-                "percent": 60
-            },
-            {
                 "name": "AWS",
                 "count": 11,
                 "percent": 55
             },
             {
+                "name": "Azure",
+                "count": 11,
+                "percent": 55
+            },
+            {
                 "name": "Kubernetes",
-                "count": 9,
-                "percent": 45
+                "count": 10,
+                "percent": 50
             },
             {
                 "name": "Docker",
@@ -386,12 +386,12 @@
                 "percent": 100
             },
             {
-                "name": "Kubernetes",
+                "name": "Docker",
                 "count": 2,
                 "percent": 100
             },
             {
-                "name": "Docker",
+                "name": "Kubernetes",
                 "count": 2,
                 "percent": 100
             }
@@ -404,8 +404,8 @@
             },
             {
                 "name": "TensorFlow",
-                "count": 16,
-                "percent": 80
+                "count": 14,
+                "percent": 70
             },
             {
                 "name": "Docker",
@@ -413,41 +413,41 @@
                 "percent": 40
             },
             {
-                "name": "SQL",
-                "count": 4,
-                "percent": 20
+                "name": "AWS",
+                "count": 5,
+                "percent": 25
             },
             {
-                "name": "AWS",
-                "count": 4,
-                "percent": 20
+                "name": "Azure",
+                "count": 5,
+                "percent": 25
             }
         ],
         "TensorFlow": [
             {
                 "name": "PyTorch",
-                "count": 16,
+                "count": 14,
                 "percent": 100
             },
             {
                 "name": "Python",
-                "count": 15,
-                "percent": 94
+                "count": 13,
+                "percent": 93
             },
             {
                 "name": "Docker",
-                "count": 7,
-                "percent": 44
+                "count": 6,
+                "percent": 43
             },
             {
                 "name": "AWS",
                 "count": 4,
-                "percent": 25
+                "percent": 29
             },
             {
-                "name": "Kubernetes",
+                "name": "SQL",
                 "count": 3,
-                "percent": 19
+                "percent": 21
             }
         ]
     },
@@ -461,7 +461,7 @@
             "sample_size": 20
         },
         "Python": {
-            "percent": 15,
+            "percent": 20,
             "sample_size": 20
         },
         "Java": {
@@ -473,7 +473,7 @@
             "sample_size": 20
         },
         "Go": {
-            "percent": 15,
+            "percent": 25,
             "sample_size": 20
         },
         "Rust": {
@@ -481,11 +481,11 @@
             "sample_size": 20
         },
         "AWS": {
-            "percent": 40,
+            "percent": 35,
             "sample_size": 20
         },
         "Azure": {
-            "percent": 55,
+            "percent": 50,
             "sample_size": 20
         },
         "Docker": {
@@ -493,11 +493,11 @@
             "sample_size": 20
         },
         "Kubernetes": {
-            "percent": 20,
+            "percent": 15,
             "sample_size": 20
         },
         "Terraform": {
-            "percent": 35,
+            "percent": 40,
             "sample_size": 20
         },
         "PostgreSQL": {
@@ -513,12 +513,12 @@
             "sample_size": 20
         },
         "PyTorch": {
-            "percent": 10,
+            "percent": 15,
             "sample_size": 20
         },
         "TensorFlow": {
-            "percent": 12,
-            "sample_size": 16
+            "percent": 14,
+            "sample_size": 14
         }
     }
 }

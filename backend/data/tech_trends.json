@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-10-31 19:57:16 UTC",
+    "last_updated": "2026-11-01 18:39:12 UTC",
     "data": {
         "Languages": [
             {
                 "name": "JavaScript",
-                "value": 162,
+                "value": 158,
                 "by_location": {
-                    "Sweden": 162,
+                    "Sweden": 158,
                     "Stockholm": 61,
                     "Göteborg": 21,
                     "Malmö": 8
@@ -14,61 +14,61 @@
             },
             {
                 "name": "TypeScript",
-                "value": 201,
+                "value": 193,
                 "by_location": {
-                    "Sweden": 201,
-                    "Stockholm": 95,
-                    "Göteborg": 32,
+                    "Sweden": 193,
+                    "Stockholm": 93,
+                    "Göteborg": 31,
                     "Malmö": 9
                 }
             },
             {
                 "name": "Python",
-                "value": 708,
+                "value": 682,
                 "by_location": {
-                    "Sweden": 708,
-                    "Stockholm": 237,
-                    "Göteborg": 148,
-                    "Malmö": 30
+                    "Sweden": 682,
+                    "Stockholm": 231,
+                    "Göteborg": 140,
+                    "Malmö": 29
                 }
             },
             {
                 "name": "Java",
-                "value": 302,
+                "value": 289,
                 "by_location": {
-                    "Sweden": 302,
-                    "Stockholm": 104,
-                    "Göteborg": 66,
+                    "Sweden": 289,
+                    "Stockholm": 100,
+                    "Göteborg": 64,
                     "Malmö": 19
                 }
             },
             {
                 "name": "C#",
-                "value": 239,
+                "value": 227,
                 "by_location": {
-                    "Sweden": 239,
-                    "Stockholm": 61,
-                    "Göteborg": 57,
+                    "Sweden": 227,
+                    "Stockholm": 62,
+                    "Göteborg": 54,
                     "Malmö": 9
                 }
             },
             {
                 "name": "Go",
-                "value": 202,
+                "value": 184,
                 "by_location": {
-                    "Sweden": 202,
-                    "Stockholm": 87,
+                    "Sweden": 184,
+                    "Stockholm": 78,
                     "Göteborg": 30,
                     "Malmö": 8
                 }
             },
             {
                 "name": "Rust",
-                "value": 27,
+                "value": 26,
                 "by_location": {
-                    "Sweden": 27,
+                    "Sweden": 26,
                     "Stockholm": 8,
-                    "Göteborg": 7,
+                    "Göteborg": 6,
                     "Malmö": 2
                 }
             }
@@ -76,49 +76,49 @@
         "Cloud & Infra": [
             {
                 "name": "AWS",
-                "value": 274,
+                "value": 260,
                 "by_location": {
-                    "Sweden": 274,
-                    "Stockholm": 116,
+                    "Sweden": 260,
+                    "Stockholm": 112,
                     "Göteborg": 68,
                     "Malmö": 14
                 }
             },
             {
                 "name": "Azure",
-                "value": 499,
+                "value": 478,
                 "by_location": {
-                    "Sweden": 499,
-                    "Stockholm": 188,
-                    "Göteborg": 103,
-                    "Malmö": 26
+                    "Sweden": 478,
+                    "Stockholm": 182,
+                    "Göteborg": 102,
+                    "Malmö": 24
                 }
             },
             {
                 "name": "Docker",
-                "value": 236,
+                "value": 227,
                 "by_location": {
-                    "Sweden": 236,
+                    "Sweden": 227,
                     "Stockholm": 85,
-                    "Göteborg": 45,
+                    "Göteborg": 43,
                     "Malmö": 9
                 }
             },
             {
                 "name": "Kubernetes",
-                "value": 301,
+                "value": 290,
                 "by_location": {
-                    "Sweden": 301,
-                    "Stockholm": 120,
-                    "Göteborg": 65,
+                    "Sweden": 290,
+                    "Stockholm": 119,
+                    "Göteborg": 63,
                     "Malmö": 14
                 }
             },
             {
                 "name": "Terraform",
-                "value": 135,
+                "value": 133,
                 "by_location": {
-                    "Sweden": 135,
+                    "Sweden": 133,
                     "Stockholm": 65,
                     "Göteborg": 18,
                     "Malmö": 4
@@ -128,9 +128,9 @@
         "Data & AI": [
             {
                 "name": "PostgreSQL",
-                "value": 80,
+                "value": 79,
                 "by_location": {
-                    "Sweden": 80,
+                    "Sweden": 79,
                     "Stockholm": 34,
                     "Göteborg": 16,
                     "Malmö": 3
@@ -138,40 +138,40 @@
             },
             {
                 "name": "SQL",
-                "value": 333,
+                "value": 324,
                 "by_location": {
-                    "Sweden": 333,
-                    "Stockholm": 126,
+                    "Sweden": 324,
+                    "Stockholm": 123,
                     "Göteborg": 46,
                     "Malmö": 19
                 }
             },
             {
                 "name": "Apache Kafka",
-                "value": 77,
+                "value": 71,
                 "by_location": {
-                    "Sweden": 77,
-                    "Stockholm": 31,
-                    "Göteborg": 16,
+                    "Sweden": 71,
+                    "Stockholm": 28,
+                    "Göteborg": 17,
                     "Malmö": 5
                 }
             },
             {
                 "name": "PyTorch",
-                "value": 25,
+                "value": 22,
                 "by_location": {
-                    "Sweden": 25,
-                    "Stockholm": 10,
+                    "Sweden": 22,
+                    "Stockholm": 8,
                     "Göteborg": 3,
                     "Malmö": 3
                 }
             },
             {
                 "name": "TensorFlow",
-                "value": 16,
+                "value": 14,
                 "by_location": {
-                    "Sweden": 16,
-                    "Stockholm": 6,
+                    "Sweden": 14,
+                    "Stockholm": 4,
                     "Göteborg": 1,
                     "Malmö": 3
                 }
