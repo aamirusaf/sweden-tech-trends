@@ -78,6 +78,29 @@ published with the site at `/backend/data/history.csv`.
 `history.json` holds only the most recent 52 snapshots, which is all the
 dashboard needs for its trend badges.
 
+## Historical backfill (2006 onwards)
+
+`backend/data/historical_monthly.csv` covers the years before this project started
+collecting. It is built from Arbetsförmedlingen's
+[Historical Ads](https://jobtechdev.se/en/components/historical-ads) dataset by
+`backend/backfill_historical.py`, run through the **Backfill historical data**
+GitHub Action (Actions tab → Run workflow). It is not part of the weekly update.
+
+```
+month,category,skill,location,ads,total_ads
+2015-03,Languages,Python,Stockholm,412,9873
+```
+
+- `ads` is the number of ads **published that month** that mention the skill in
+  the headline or description. `total_ads` is all ads published that month in
+  that location, so `ads / total_ads` gives a share you can compare across years.
+- This is a different measure from `history.csv`, which counts ads that are
+  *active* on the day of each weekly run, using the live search API. Don't plot
+  the two as one line.
+- Skill matching uses the same rules as `main.py`, with one exception. "Go" only
+  counts as "Golang" or as a capitalised "Go" in a list of technologies, because
+  the plain word is common English.
+
 If any API request fails after retries, the script exits with an error and
 leaves the previous data files untouched, so a bad run never records zeros in
 the history.
