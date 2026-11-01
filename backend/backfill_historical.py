@@ -37,9 +37,10 @@ from main import TECH_STACKS, LOCATIONS  # noqa: E402  (keep the skill list in o
 BASE_URL = "https://data.jobtechdev.se/annonser/historiska/"
 
 # 2018 and 2019 have re-published files with corrected municipality data.
+# These two are named "<name>.zip" on the server, not "<name>.jsonl.zip".
 DEFAULT_FILE_FOR = {
-    "2018": "2018_municipality_patched",
-    "2019": "2019_municipality_patched",
+    "2018": "2018_municipality_patched.zip",
+    "2019": "2019_municipality_patched.zip",
 }
 
 OUTPUT_FIELDS = ["month", "category", "skill", "location", "ads", "total_ads"]
@@ -137,8 +138,9 @@ def ad_city(ad):
 # --- count ---------------------------------------------------------------------
 
 def download(name, dest_dir, attempts=4):
-    url = f"{BASE_URL}{name}.jsonl.zip"
-    path = os.path.join(dest_dir, f"{name}.jsonl.zip")
+    filename = name if name.endswith(".zip") else f"{name}.jsonl.zip"
+    url = f"{BASE_URL}{filename}"
+    path = os.path.join(dest_dir, filename)
     for attempt in range(1, attempts + 1):
         print(f"Downloading {url} (attempt {attempt})", flush=True)
         try:
@@ -149,7 +151,7 @@ def download(name, dest_dir, attempts=4):
             break
         except (OSError, zipfile.BadZipFile) as e:
             print(f"Download failed: {e}", flush=True)
-            if attempt == attempts:
+            if attempt == attempts or getattr(e, "code", None) == 404:
                 raise
             time.sleep(30 * attempt)
     print(f"Downloaded {os.path.getsize(path) / 1e6:.0f} MB", flush=True)
