@@ -10,12 +10,30 @@ import requests
 # Base endpoint for the official JobTech Dev / Arbetsförmedlingen search engine
 API_URL = "https://jobsearch.api.jobtechdev.se/search"
 
-# Target technology segments to query against Swedish active postings
+# The 20 technologies the dashboard tracks. Chosen from the data, not by hand: they are
+# the 20 concrete tools mentioned most often in Data/IT job ads, both in the live ads
+# and in every IT ad published in 2025 (see backend/discover_skills.py, which can be
+# re-run to check whether the list still holds). Broad themes such as "AI", "agile" or
+# "cybersecurity" rank high too but aren't tools, so they're left out on purpose.
 TECH_STACKS = {
-    "Languages": ["JavaScript", "TypeScript", "Python", "Java", "C#", "Go", "Rust"],
-    "Cloud & Infra": ["AWS", "Azure", "Docker", "Kubernetes", "Terraform"],
-    "Data & AI": ["PostgreSQL", "SQL", "Apache Kafka", "PyTorch", "TensorFlow"]
+    "Languages": ["Python", "Java", "C#", "C++", "C", "JavaScript", "TypeScript"],
+    "Cloud & Infra": ["Azure", "AWS", "GCP", "Kubernetes", "Docker", "Terraform", "Linux", "Git"],
+    "Platforms & Data": ["SQL", ".NET", "React", "Microsoft 365", "Active Directory"]
 }
+
+# What to send the JobSearch API's free-text query (q) for each skill, when the display
+# name alone would match the wrong ads or miss common spellings. Each entry is searched
+# on its own and the matching ads are combined by id, because q's handling of several
+# words or phrases in one query isn't a reliable "any of these".
+API_QUERIES = {
+    "C": ['"C-programmering"', '"programmering i C"', '"C/C++"', '"embedded C"', '"ANSI C"'],
+    "GCP": ["GCP", '"Google Cloud"'],
+    "Microsoft 365": ['"Microsoft 365"', '"Office 365"', "M365", "O365"],
+    "Active Directory": ['"Active Directory"', '"Entra ID"', '"Azure AD"'],
+}
+
+# JobSearch returns at most offset 2000 + limit 100 hits for one query.
+MAX_PAGED_HITS = 2100
 
 # How many sample postings to keep per skill/location for the "click a skill to see openings" panel
 POSTINGS_PER_SKILL = 6
@@ -48,15 +66,93 @@ def get_with_retries(params, attempts=3):
         time.sleep(2 * attempt)
 
 
+# How each skill is recognised in ad text. Shared by this script (co-occurrence) and
+# backfill_historical.py (the 20-year history), so both count a skill the same way.
+# Skills not listed use a case-insensitive whole-word match on their name.
+SKILL_PATTERNS = {
+    "Java": (r"\bjava\b(?!\s*script)", re.IGNORECASE),
+    "JavaScript": (r"\bjavascript\b|(?<![.\w])JS\b", re.IGNORECASE),
+    "C#": (r"(?<![\w])C#|\bC sharp\b", re.IGNORECASE),
+    "C++": (r"(?<![\w])C\+\+", re.IGNORECASE),
+    # A capital "C" next to a comma, slash, bracket or "och/and/or/eller", as in
+    # "C, C++ och Python" or "C/C++". Driving-licence lists ("B, C, CE") look the same,
+    # so the ad must also talk about programming (see CONTEXT_REQUIRED below).
+    "C": (r"(?<![\w#+./-])C(?![\w#+-])(?=\s*[,/&)]|\s+(?:och|and|or|eller)\b)|(?<=[,/(]\s)C(?![\w#+-])|(?<=[,/(])C(?![\w#+-])", 0),
+    "GCP": (r"\bGCP\b|\bgoogle cloud\b", re.IGNORECASE),
+    "AWS": (r"\baws\b|\bamazon web services\b", re.IGNORECASE),
+    "Kubernetes": (r"\bkubernetes\b|\bk8s\b", re.IGNORECASE),
+    "Git": (r"\bgit(?:hub|lab)?\b", re.IGNORECASE),
+    ".NET": (r"(?<![\w])\.NET\b|\bdotnet\b", re.IGNORECASE),
+    # Case-sensitive: "react" is also an everyday English verb.
+    "React": (r"\bReact(?:\.js|JS)?\b", 0),
+    "Microsoft 365": (r"\b(?:microsoft|office)\s?365\b|\b[MO]365\b", re.IGNORECASE),
+    "Active Directory": (r"\bactive directory\b|\bentra id\b|\bmicrosoft entra\b|\bazure ad\b", re.IGNORECASE),
+}
+
+PROGRAMMING_CONTEXT = re.compile(
+    r"programmer|programming|utvecklare|developer|mjukvara|software|embedded|inbyggda|firmware|C\+\+",
+    re.IGNORECASE,
+)
+CONTEXT_REQUIRED = {"C": PROGRAMMING_CONTEXT}
+
+
+class SkillMatcher:
+    def __init__(self, pattern, flags, context=None):
+        self.pattern = re.compile(pattern, flags)
+        self.context = context
+
+    def search(self, text):
+        match = self.pattern.search(text)
+        if match and self.context is not None and not self.context.search(text):
+            return None
+        return match
+
+
+class ApiError(Exception):
+    pass
+
+
+def search(params):
+    response = get_with_retries(params)
+    if response.status_code != 200:
+        raise ApiError(f"HTTP {response.status_code}")
+    return response.json()
+
+
+def search_skill(skill, municipality_id, sample_size):
+    """Return (number of matching ads, up to sample_size of them, newest first)."""
+    base = {"municipality": municipality_id} if municipality_id else {}
+    queries = API_QUERIES.get(skill)
+    if not queries:
+        data = search({"q": skill, "limit": sample_size, **base})
+        return data.get("total", {}).get("value", 0), data.get("hits", [])
+
+    ads = {}
+    for query in queries:
+        offset, total = 0, None
+        while total is None or (offset < total and offset < MAX_PAGED_HITS):
+            data = search({"q": query, "limit": 100, "offset": offset, **base})
+            total = data.get("total", {}).get("value", 0)
+            if total > MAX_PAGED_HITS and offset == 0:
+                print(f"⚠️ {skill}: {query} has {total} ads, only the first {MAX_PAGED_HITS} are combined")
+            hits = data.get("hits", [])
+            for hit in hits:
+                ads[hit.get("id")] = hit
+            if not hits:
+                break
+            offset += 100
+            time.sleep(0.2)
+        print(f"   {skill}: q={query} -> {total}")
+    newest = sorted(ads.values(), key=lambda hit: hit.get("publication_date") or "", reverse=True)
+    return len(ads), newest[:sample_size]
+
+
 def build_skill_matcher(skill_name):
-    # Alphanumeric names ("Python", "SQL") get word-boundary matching so "SQL" doesn't
-    # false-positive inside "PostgreSQL". Names with symbols ("C#") fall back to a plain
-    # case-insensitive substring search since \b doesn't apply cleanly around "#".
-    if re.fullmatch(r"[A-Za-z0-9]+", skill_name):
-        pattern = r"\b" + re.escape(skill_name) + r"\b"
+    if skill_name in SKILL_PATTERNS:
+        pattern, flags = SKILL_PATTERNS[skill_name]
     else:
-        pattern = re.escape(skill_name)
-    return re.compile(pattern, re.IGNORECASE)
+        pattern, flags = r"\b" + re.escape(skill_name) + r"\b", re.IGNORECASE
+    return SkillMatcher(pattern, flags, CONTEXT_REQUIRED.get(skill_name))
 
 
 SKILL_MATCHERS = {skill: build_skill_matcher(skill) for skill in ALL_SKILLS}
@@ -114,48 +210,37 @@ def fetch_skill_demand():
             postings_by_location = {}
 
             for location, municipality_id in LOCATIONS.items():
-                # Query parameter 'q' handles free text matching over titles and descriptions.
+                # The free-text query (q) matches titles and descriptions; see search_skill.
                 # limit>0 still returns the full match count in `total`, plus that many sample ads.
                 # The nationwide ("Sweden") query pulls a bigger sample since it also feeds the
                 # skill co-occurrence scan below; city queries only need enough for the postings list.
                 sample_size = CO_OCCURRENCE_SAMPLE_SIZE if location == "Sweden" else POSTINGS_PER_SKILL
-                params = {"q": skill, "limit": sample_size}
-                if municipality_id:
-                    params["municipality"] = municipality_id
-
                 try:
-                    response = get_with_retries(params)
+                    total_ads, hits = search_skill(skill, municipality_id, sample_size)
+                    by_location[location] = total_ads
+                    postings_by_location[location] = [
+                        {
+                            "headline": hit.get("headline"),
+                            "employer": (hit.get("employer") or {}).get("name"),
+                            "location": (hit.get("workplace_address") or {}).get("municipality")
+                                or (hit.get("workplace_address") or {}).get("region")
+                                or "Sweden",
+                            "url": hit.get("webpage_url"),
+                            "published": (hit.get("publication_date") or "")[:10]
+                        }
+                        for hit in hits[:POSTINGS_PER_SKILL]
+                    ]
 
-                    if response.status_code == 200:
-                        data = response.json()
-                        # Extract the total hits found on the live platform
-                        total_ads = data.get("total", {}).get("value", 0)
-                        hits = data.get("hits", [])
+                    if location == "Sweden":
+                        analyze_nationwide_sample(
+                            skill, hits, co_occurrence_counts, co_occurrence_samples, remote_mention_counts
+                        )
 
-                        by_location[location] = total_ads
-                        postings_by_location[location] = [
-                            {
-                                "headline": hit.get("headline"),
-                                "employer": (hit.get("employer") or {}).get("name"),
-                                "location": (hit.get("workplace_address") or {}).get("municipality")
-                                    or (hit.get("workplace_address") or {}).get("region")
-                                    or "Sweden",
-                                "url": hit.get("webpage_url"),
-                                "published": (hit.get("publication_date") or "")[:10]
-                            }
-                            for hit in hits[:POSTINGS_PER_SKILL]
-                        ]
+                    print(f"✅ {skill} ({location}): found {total_ads} job posts.")
 
-                        if location == "Sweden":
-                            analyze_nationwide_sample(
-                                skill, hits, co_occurrence_counts, co_occurrence_samples, remote_mention_counts
-                            )
-
-                        print(f"✅ {skill} ({location}): found {total_ads} job posts.")
-                    else:
-                        print(f"⚠️ Failed fetching data for {skill} ({location}). HTTP Status: {response.status_code}")
-                        failures.append(f"{skill} ({location})")
-
+                except ApiError as e:
+                    print(f"⚠️ Failed fetching data for {skill} ({location}). {e}")
+                    failures.append(f"{skill} ({location})")
                 except Exception as e:
                     print(f"❌ Error communicating with API for {skill} ({location}): {e}")
                     failures.append(f"{skill} ({location})")
