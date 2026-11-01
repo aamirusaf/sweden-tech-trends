@@ -9791,210 +9791,1638 @@ month,category,skill,location,ads,total_ads
 2017-12,Data & AI,TensorFlow,Stockholm,0,9981
 2017-12,Data & AI,TensorFlow,Göteborg,1,5052
 2017-12,Data & AI,TensorFlow,Malmö,0,1981
-2018-12,Languages,JavaScript,Sweden,0,1
-2018-12,Languages,TypeScript,Sweden,0,1
-2018-12,Languages,Python,Sweden,0,1
-2018-12,Languages,Java,Sweden,0,1
-2018-12,Languages,C#,Sweden,0,1
-2018-12,Languages,Go,Sweden,0,1
-2018-12,Languages,Rust,Sweden,0,1
-2018-12,Cloud & Infra,AWS,Sweden,0,1
-2018-12,Cloud & Infra,Azure,Sweden,0,1
-2018-12,Cloud & Infra,Docker,Sweden,0,1
-2018-12,Cloud & Infra,Kubernetes,Sweden,0,1
-2018-12,Cloud & Infra,Terraform,Sweden,0,1
-2018-12,Data & AI,PostgreSQL,Sweden,0,1
-2018-12,Data & AI,SQL,Sweden,0,1
-2018-12,Data & AI,Apache Kafka,Sweden,0,1
-2018-12,Data & AI,PyTorch,Sweden,0,1
-2018-12,Data & AI,TensorFlow,Sweden,0,1
-2019-10,Languages,JavaScript,Sweden,0,10
-2019-10,Languages,JavaScript,Stockholm,0,2
-2019-10,Languages,JavaScript,Göteborg,0,5
-2019-10,Languages,TypeScript,Sweden,0,10
-2019-10,Languages,TypeScript,Stockholm,0,2
-2019-10,Languages,TypeScript,Göteborg,0,5
-2019-10,Languages,Python,Sweden,0,10
-2019-10,Languages,Python,Stockholm,0,2
-2019-10,Languages,Python,Göteborg,0,5
-2019-10,Languages,Java,Sweden,2,10
-2019-10,Languages,Java,Stockholm,0,2
-2019-10,Languages,Java,Göteborg,2,5
-2019-10,Languages,C#,Sweden,0,10
-2019-10,Languages,C#,Stockholm,0,2
-2019-10,Languages,C#,Göteborg,0,5
-2019-10,Languages,Go,Sweden,0,10
-2019-10,Languages,Go,Stockholm,0,2
-2019-10,Languages,Go,Göteborg,0,5
-2019-10,Languages,Rust,Sweden,0,10
-2019-10,Languages,Rust,Stockholm,0,2
-2019-10,Languages,Rust,Göteborg,0,5
-2019-10,Cloud & Infra,AWS,Sweden,0,10
-2019-10,Cloud & Infra,AWS,Stockholm,0,2
-2019-10,Cloud & Infra,AWS,Göteborg,0,5
-2019-10,Cloud & Infra,Azure,Sweden,0,10
-2019-10,Cloud & Infra,Azure,Stockholm,0,2
-2019-10,Cloud & Infra,Azure,Göteborg,0,5
-2019-10,Cloud & Infra,Docker,Sweden,0,10
-2019-10,Cloud & Infra,Docker,Stockholm,0,2
-2019-10,Cloud & Infra,Docker,Göteborg,0,5
-2019-10,Cloud & Infra,Kubernetes,Sweden,0,10
-2019-10,Cloud & Infra,Kubernetes,Stockholm,0,2
-2019-10,Cloud & Infra,Kubernetes,Göteborg,0,5
-2019-10,Cloud & Infra,Terraform,Sweden,0,10
-2019-10,Cloud & Infra,Terraform,Stockholm,0,2
-2019-10,Cloud & Infra,Terraform,Göteborg,0,5
-2019-10,Data & AI,PostgreSQL,Sweden,0,10
-2019-10,Data & AI,PostgreSQL,Stockholm,0,2
-2019-10,Data & AI,PostgreSQL,Göteborg,0,5
-2019-10,Data & AI,SQL,Sweden,0,10
-2019-10,Data & AI,SQL,Stockholm,0,2
-2019-10,Data & AI,SQL,Göteborg,0,5
-2019-10,Data & AI,Apache Kafka,Sweden,0,10
-2019-10,Data & AI,Apache Kafka,Stockholm,0,2
-2019-10,Data & AI,Apache Kafka,Göteborg,0,5
-2019-10,Data & AI,PyTorch,Sweden,0,10
-2019-10,Data & AI,PyTorch,Stockholm,0,2
-2019-10,Data & AI,PyTorch,Göteborg,0,5
-2019-10,Data & AI,TensorFlow,Sweden,0,10
-2019-10,Data & AI,TensorFlow,Stockholm,0,2
-2019-10,Data & AI,TensorFlow,Göteborg,0,5
-2019-11,Languages,JavaScript,Sweden,0,21
-2019-11,Languages,JavaScript,Stockholm,0,3
-2019-11,Languages,JavaScript,Göteborg,0,1
-2019-11,Languages,JavaScript,Malmö,0,2
-2019-11,Languages,TypeScript,Sweden,0,21
-2019-11,Languages,TypeScript,Stockholm,0,3
-2019-11,Languages,TypeScript,Göteborg,0,1
-2019-11,Languages,TypeScript,Malmö,0,2
-2019-11,Languages,Python,Sweden,0,21
-2019-11,Languages,Python,Stockholm,0,3
-2019-11,Languages,Python,Göteborg,0,1
-2019-11,Languages,Python,Malmö,0,2
-2019-11,Languages,Java,Sweden,1,21
-2019-11,Languages,Java,Stockholm,1,3
-2019-11,Languages,Java,Göteborg,0,1
-2019-11,Languages,Java,Malmö,0,2
-2019-11,Languages,C#,Sweden,0,21
-2019-11,Languages,C#,Stockholm,0,3
-2019-11,Languages,C#,Göteborg,0,1
-2019-11,Languages,C#,Malmö,0,2
-2019-11,Languages,Go,Sweden,0,21
-2019-11,Languages,Go,Stockholm,0,3
-2019-11,Languages,Go,Göteborg,0,1
-2019-11,Languages,Go,Malmö,0,2
-2019-11,Languages,Rust,Sweden,0,21
-2019-11,Languages,Rust,Stockholm,0,3
-2019-11,Languages,Rust,Göteborg,0,1
-2019-11,Languages,Rust,Malmö,0,2
-2019-11,Cloud & Infra,AWS,Sweden,0,21
-2019-11,Cloud & Infra,AWS,Stockholm,0,3
-2019-11,Cloud & Infra,AWS,Göteborg,0,1
-2019-11,Cloud & Infra,AWS,Malmö,0,2
-2019-11,Cloud & Infra,Azure,Sweden,0,21
-2019-11,Cloud & Infra,Azure,Stockholm,0,3
-2019-11,Cloud & Infra,Azure,Göteborg,0,1
-2019-11,Cloud & Infra,Azure,Malmö,0,2
-2019-11,Cloud & Infra,Docker,Sweden,0,21
-2019-11,Cloud & Infra,Docker,Stockholm,0,3
-2019-11,Cloud & Infra,Docker,Göteborg,0,1
-2019-11,Cloud & Infra,Docker,Malmö,0,2
-2019-11,Cloud & Infra,Kubernetes,Sweden,0,21
-2019-11,Cloud & Infra,Kubernetes,Stockholm,0,3
-2019-11,Cloud & Infra,Kubernetes,Göteborg,0,1
-2019-11,Cloud & Infra,Kubernetes,Malmö,0,2
-2019-11,Cloud & Infra,Terraform,Sweden,0,21
-2019-11,Cloud & Infra,Terraform,Stockholm,0,3
-2019-11,Cloud & Infra,Terraform,Göteborg,0,1
-2019-11,Cloud & Infra,Terraform,Malmö,0,2
-2019-11,Data & AI,PostgreSQL,Sweden,0,21
-2019-11,Data & AI,PostgreSQL,Stockholm,0,3
-2019-11,Data & AI,PostgreSQL,Göteborg,0,1
-2019-11,Data & AI,PostgreSQL,Malmö,0,2
-2019-11,Data & AI,SQL,Sweden,0,21
-2019-11,Data & AI,SQL,Stockholm,0,3
-2019-11,Data & AI,SQL,Göteborg,0,1
-2019-11,Data & AI,SQL,Malmö,0,2
-2019-11,Data & AI,Apache Kafka,Sweden,0,21
-2019-11,Data & AI,Apache Kafka,Stockholm,0,3
-2019-11,Data & AI,Apache Kafka,Göteborg,0,1
-2019-11,Data & AI,Apache Kafka,Malmö,0,2
-2019-11,Data & AI,PyTorch,Sweden,0,21
-2019-11,Data & AI,PyTorch,Stockholm,0,3
-2019-11,Data & AI,PyTorch,Göteborg,0,1
-2019-11,Data & AI,PyTorch,Malmö,0,2
-2019-11,Data & AI,TensorFlow,Sweden,0,21
-2019-11,Data & AI,TensorFlow,Stockholm,0,3
-2019-11,Data & AI,TensorFlow,Göteborg,0,1
-2019-11,Data & AI,TensorFlow,Malmö,0,2
-2019-12,Languages,JavaScript,Sweden,5,87
-2019-12,Languages,JavaScript,Stockholm,4,17
-2019-12,Languages,JavaScript,Göteborg,1,8
-2019-12,Languages,JavaScript,Malmö,0,2
-2019-12,Languages,TypeScript,Sweden,1,87
-2019-12,Languages,TypeScript,Stockholm,1,17
-2019-12,Languages,TypeScript,Göteborg,0,8
-2019-12,Languages,TypeScript,Malmö,0,2
-2019-12,Languages,Python,Sweden,3,87
-2019-12,Languages,Python,Stockholm,1,17
-2019-12,Languages,Python,Göteborg,2,8
-2019-12,Languages,Python,Malmö,0,2
-2019-12,Languages,Java,Sweden,5,87
-2019-12,Languages,Java,Stockholm,3,17
-2019-12,Languages,Java,Göteborg,2,8
-2019-12,Languages,Java,Malmö,0,2
-2019-12,Languages,C#,Sweden,3,87
-2019-12,Languages,C#,Stockholm,1,17
-2019-12,Languages,C#,Göteborg,2,8
-2019-12,Languages,C#,Malmö,0,2
-2019-12,Languages,Go,Sweden,0,87
-2019-12,Languages,Go,Stockholm,0,17
-2019-12,Languages,Go,Göteborg,0,8
-2019-12,Languages,Go,Malmö,0,2
-2019-12,Languages,Rust,Sweden,0,87
-2019-12,Languages,Rust,Stockholm,0,17
-2019-12,Languages,Rust,Göteborg,0,8
-2019-12,Languages,Rust,Malmö,0,2
-2019-12,Cloud & Infra,AWS,Sweden,0,87
-2019-12,Cloud & Infra,AWS,Stockholm,0,17
-2019-12,Cloud & Infra,AWS,Göteborg,0,8
-2019-12,Cloud & Infra,AWS,Malmö,0,2
-2019-12,Cloud & Infra,Azure,Sweden,0,87
-2019-12,Cloud & Infra,Azure,Stockholm,0,17
-2019-12,Cloud & Infra,Azure,Göteborg,0,8
-2019-12,Cloud & Infra,Azure,Malmö,0,2
-2019-12,Cloud & Infra,Docker,Sweden,0,87
-2019-12,Cloud & Infra,Docker,Stockholm,0,17
-2019-12,Cloud & Infra,Docker,Göteborg,0,8
-2019-12,Cloud & Infra,Docker,Malmö,0,2
-2019-12,Cloud & Infra,Kubernetes,Sweden,0,87
-2019-12,Cloud & Infra,Kubernetes,Stockholm,0,17
-2019-12,Cloud & Infra,Kubernetes,Göteborg,0,8
-2019-12,Cloud & Infra,Kubernetes,Malmö,0,2
-2019-12,Cloud & Infra,Terraform,Sweden,0,87
-2019-12,Cloud & Infra,Terraform,Stockholm,0,17
-2019-12,Cloud & Infra,Terraform,Göteborg,0,8
-2019-12,Cloud & Infra,Terraform,Malmö,0,2
-2019-12,Data & AI,PostgreSQL,Sweden,0,87
-2019-12,Data & AI,PostgreSQL,Stockholm,0,17
-2019-12,Data & AI,PostgreSQL,Göteborg,0,8
-2019-12,Data & AI,PostgreSQL,Malmö,0,2
-2019-12,Data & AI,SQL,Sweden,1,87
-2019-12,Data & AI,SQL,Stockholm,0,17
-2019-12,Data & AI,SQL,Göteborg,1,8
-2019-12,Data & AI,SQL,Malmö,0,2
-2019-12,Data & AI,Apache Kafka,Sweden,0,87
-2019-12,Data & AI,Apache Kafka,Stockholm,0,17
-2019-12,Data & AI,Apache Kafka,Göteborg,0,8
-2019-12,Data & AI,Apache Kafka,Malmö,0,2
-2019-12,Data & AI,PyTorch,Sweden,0,87
-2019-12,Data & AI,PyTorch,Stockholm,0,17
-2019-12,Data & AI,PyTorch,Göteborg,0,8
-2019-12,Data & AI,PyTorch,Malmö,0,2
-2019-12,Data & AI,TensorFlow,Sweden,0,87
-2019-12,Data & AI,TensorFlow,Stockholm,0,17
-2019-12,Data & AI,TensorFlow,Göteborg,0,8
-2019-12,Data & AI,TensorFlow,Malmö,0,2
+2018-01,Languages,JavaScript,Sweden,453,59364
+2018-01,Languages,JavaScript,Stockholm,162,14625
+2018-01,Languages,JavaScript,Göteborg,80,5948
+2018-01,Languages,JavaScript,Malmö,37,2478
+2018-01,Languages,TypeScript,Sweden,34,59364
+2018-01,Languages,TypeScript,Stockholm,20,14625
+2018-01,Languages,TypeScript,Göteborg,5,5948
+2018-01,Languages,TypeScript,Malmö,2,2478
+2018-01,Languages,Python,Sweden,302,59364
+2018-01,Languages,Python,Stockholm,87,14625
+2018-01,Languages,Python,Göteborg,87,5948
+2018-01,Languages,Python,Malmö,17,2478
+2018-01,Languages,Java,Sweden,529,59364
+2018-01,Languages,Java,Stockholm,180,14625
+2018-01,Languages,Java,Göteborg,109,5948
+2018-01,Languages,Java,Malmö,34,2478
+2018-01,Languages,C#,Sweden,391,59364
+2018-01,Languages,C#,Stockholm,104,14625
+2018-01,Languages,C#,Göteborg,90,5948
+2018-01,Languages,C#,Malmö,20,2478
+2018-01,Languages,Go,Sweden,12,59364
+2018-01,Languages,Go,Stockholm,3,14625
+2018-01,Languages,Go,Göteborg,3,5948
+2018-01,Languages,Go,Malmö,3,2478
+2018-01,Languages,Rust,Sweden,1,59364
+2018-01,Languages,Rust,Stockholm,1,14625
+2018-01,Languages,Rust,Göteborg,0,5948
+2018-01,Languages,Rust,Malmö,0,2478
+2018-01,Cloud & Infra,AWS,Sweden,83,59364
+2018-01,Cloud & Infra,AWS,Stockholm,35,14625
+2018-01,Cloud & Infra,AWS,Göteborg,20,5948
+2018-01,Cloud & Infra,AWS,Malmö,13,2478
+2018-01,Cloud & Infra,Azure,Sweden,150,59364
+2018-01,Cloud & Infra,Azure,Stockholm,65,14625
+2018-01,Cloud & Infra,Azure,Göteborg,35,5948
+2018-01,Cloud & Infra,Azure,Malmö,7,2478
+2018-01,Cloud & Infra,Docker,Sweden,83,59364
+2018-01,Cloud & Infra,Docker,Stockholm,47,14625
+2018-01,Cloud & Infra,Docker,Göteborg,15,5948
+2018-01,Cloud & Infra,Docker,Malmö,11,2478
+2018-01,Cloud & Infra,Kubernetes,Sweden,15,59364
+2018-01,Cloud & Infra,Kubernetes,Stockholm,10,14625
+2018-01,Cloud & Infra,Kubernetes,Göteborg,0,5948
+2018-01,Cloud & Infra,Kubernetes,Malmö,3,2478
+2018-01,Cloud & Infra,Terraform,Sweden,3,59364
+2018-01,Cloud & Infra,Terraform,Stockholm,1,14625
+2018-01,Cloud & Infra,Terraform,Göteborg,2,5948
+2018-01,Cloud & Infra,Terraform,Malmö,0,2478
+2018-01,Data & AI,PostgreSQL,Sweden,52,59364
+2018-01,Data & AI,PostgreSQL,Stockholm,15,14625
+2018-01,Data & AI,PostgreSQL,Göteborg,5,5948
+2018-01,Data & AI,PostgreSQL,Malmö,8,2478
+2018-01,Data & AI,SQL,Sweden,535,59364
+2018-01,Data & AI,SQL,Stockholm,202,14625
+2018-01,Data & AI,SQL,Göteborg,99,5948
+2018-01,Data & AI,SQL,Malmö,24,2478
+2018-01,Data & AI,Apache Kafka,Sweden,1,59364
+2018-01,Data & AI,Apache Kafka,Stockholm,1,14625
+2018-01,Data & AI,Apache Kafka,Göteborg,0,5948
+2018-01,Data & AI,Apache Kafka,Malmö,0,2478
+2018-01,Data & AI,PyTorch,Sweden,2,59364
+2018-01,Data & AI,PyTorch,Stockholm,2,14625
+2018-01,Data & AI,PyTorch,Göteborg,0,5948
+2018-01,Data & AI,PyTorch,Malmö,0,2478
+2018-01,Data & AI,TensorFlow,Sweden,3,59364
+2018-01,Data & AI,TensorFlow,Stockholm,2,14625
+2018-01,Data & AI,TensorFlow,Göteborg,0,5948
+2018-01,Data & AI,TensorFlow,Malmö,0,2478
+2018-02,Languages,JavaScript,Sweden,437,57941
+2018-02,Languages,JavaScript,Stockholm,154,14465
+2018-02,Languages,JavaScript,Göteborg,67,5676
+2018-02,Languages,JavaScript,Malmö,44,2394
+2018-02,Languages,TypeScript,Sweden,42,57941
+2018-02,Languages,TypeScript,Stockholm,19,14465
+2018-02,Languages,TypeScript,Göteborg,10,5676
+2018-02,Languages,TypeScript,Malmö,4,2394
+2018-02,Languages,Python,Sweden,299,57941
+2018-02,Languages,Python,Stockholm,96,14465
+2018-02,Languages,Python,Göteborg,80,5676
+2018-02,Languages,Python,Malmö,17,2394
+2018-02,Languages,Java,Sweden,530,57941
+2018-02,Languages,Java,Stockholm,181,14465
+2018-02,Languages,Java,Göteborg,102,5676
+2018-02,Languages,Java,Malmö,44,2394
+2018-02,Languages,C#,Sweden,415,57941
+2018-02,Languages,C#,Stockholm,119,14465
+2018-02,Languages,C#,Göteborg,92,5676
+2018-02,Languages,C#,Malmö,38,2394
+2018-02,Languages,Go,Sweden,27,57941
+2018-02,Languages,Go,Stockholm,11,14465
+2018-02,Languages,Go,Göteborg,5,5676
+2018-02,Languages,Go,Malmö,2,2394
+2018-02,Languages,Rust,Sweden,1,57941
+2018-02,Languages,Rust,Stockholm,1,14465
+2018-02,Languages,Rust,Göteborg,0,5676
+2018-02,Languages,Rust,Malmö,0,2394
+2018-02,Cloud & Infra,AWS,Sweden,104,57941
+2018-02,Cloud & Infra,AWS,Stockholm,61,14465
+2018-02,Cloud & Infra,AWS,Göteborg,14,5676
+2018-02,Cloud & Infra,AWS,Malmö,11,2394
+2018-02,Cloud & Infra,Azure,Sweden,174,57941
+2018-02,Cloud & Infra,Azure,Stockholm,76,14465
+2018-02,Cloud & Infra,Azure,Göteborg,29,5676
+2018-02,Cloud & Infra,Azure,Malmö,26,2394
+2018-02,Cloud & Infra,Docker,Sweden,79,57941
+2018-02,Cloud & Infra,Docker,Stockholm,42,14465
+2018-02,Cloud & Infra,Docker,Göteborg,8,5676
+2018-02,Cloud & Infra,Docker,Malmö,6,2394
+2018-02,Cloud & Infra,Kubernetes,Sweden,23,57941
+2018-02,Cloud & Infra,Kubernetes,Stockholm,18,14465
+2018-02,Cloud & Infra,Kubernetes,Göteborg,0,5676
+2018-02,Cloud & Infra,Kubernetes,Malmö,2,2394
+2018-02,Cloud & Infra,Terraform,Sweden,4,57941
+2018-02,Cloud & Infra,Terraform,Stockholm,2,14465
+2018-02,Cloud & Infra,Terraform,Göteborg,2,5676
+2018-02,Cloud & Infra,Terraform,Malmö,0,2394
+2018-02,Data & AI,PostgreSQL,Sweden,32,57941
+2018-02,Data & AI,PostgreSQL,Stockholm,9,14465
+2018-02,Data & AI,PostgreSQL,Göteborg,6,5676
+2018-02,Data & AI,PostgreSQL,Malmö,3,2394
+2018-02,Data & AI,SQL,Sweden,556,57941
+2018-02,Data & AI,SQL,Stockholm,219,14465
+2018-02,Data & AI,SQL,Göteborg,88,5676
+2018-02,Data & AI,SQL,Malmö,44,2394
+2018-02,Data & AI,Apache Kafka,Sweden,1,57941
+2018-02,Data & AI,Apache Kafka,Stockholm,1,14465
+2018-02,Data & AI,Apache Kafka,Göteborg,0,5676
+2018-02,Data & AI,Apache Kafka,Malmö,0,2394
+2018-02,Data & AI,PyTorch,Sweden,0,57941
+2018-02,Data & AI,PyTorch,Stockholm,0,14465
+2018-02,Data & AI,PyTorch,Göteborg,0,5676
+2018-02,Data & AI,PyTorch,Malmö,0,2394
+2018-02,Data & AI,TensorFlow,Sweden,4,57941
+2018-02,Data & AI,TensorFlow,Stockholm,3,14465
+2018-02,Data & AI,TensorFlow,Göteborg,0,5676
+2018-02,Data & AI,TensorFlow,Malmö,0,2394
+2018-03,Languages,JavaScript,Sweden,455,64961
+2018-03,Languages,JavaScript,Stockholm,190,16388
+2018-03,Languages,JavaScript,Göteborg,86,6466
+2018-03,Languages,JavaScript,Malmö,29,2589
+2018-03,Languages,TypeScript,Sweden,49,64961
+2018-03,Languages,TypeScript,Stockholm,24,16388
+2018-03,Languages,TypeScript,Göteborg,13,6466
+2018-03,Languages,TypeScript,Malmö,5,2589
+2018-03,Languages,Python,Sweden,331,64961
+2018-03,Languages,Python,Stockholm,105,16388
+2018-03,Languages,Python,Göteborg,101,6466
+2018-03,Languages,Python,Malmö,20,2589
+2018-03,Languages,Java,Sweden,563,64961
+2018-03,Languages,Java,Stockholm,212,16388
+2018-03,Languages,Java,Göteborg,125,6466
+2018-03,Languages,Java,Malmö,26,2589
+2018-03,Languages,C#,Sweden,408,64961
+2018-03,Languages,C#,Stockholm,134,16388
+2018-03,Languages,C#,Göteborg,89,6466
+2018-03,Languages,C#,Malmö,26,2589
+2018-03,Languages,Go,Sweden,22,64961
+2018-03,Languages,Go,Stockholm,9,16388
+2018-03,Languages,Go,Göteborg,5,6466
+2018-03,Languages,Go,Malmö,2,2589
+2018-03,Languages,Rust,Sweden,1,64961
+2018-03,Languages,Rust,Stockholm,1,16388
+2018-03,Languages,Rust,Göteborg,0,6466
+2018-03,Languages,Rust,Malmö,0,2589
+2018-03,Cloud & Infra,AWS,Sweden,126,64961
+2018-03,Cloud & Infra,AWS,Stockholm,68,16388
+2018-03,Cloud & Infra,AWS,Göteborg,25,6466
+2018-03,Cloud & Infra,AWS,Malmö,8,2589
+2018-03,Cloud & Infra,Azure,Sweden,170,64961
+2018-03,Cloud & Infra,Azure,Stockholm,68,16388
+2018-03,Cloud & Infra,Azure,Göteborg,34,6466
+2018-03,Cloud & Infra,Azure,Malmö,17,2589
+2018-03,Cloud & Infra,Docker,Sweden,90,64961
+2018-03,Cloud & Infra,Docker,Stockholm,40,16388
+2018-03,Cloud & Infra,Docker,Göteborg,20,6466
+2018-03,Cloud & Infra,Docker,Malmö,6,2589
+2018-03,Cloud & Infra,Kubernetes,Sweden,25,64961
+2018-03,Cloud & Infra,Kubernetes,Stockholm,12,16388
+2018-03,Cloud & Infra,Kubernetes,Göteborg,6,6466
+2018-03,Cloud & Infra,Kubernetes,Malmö,2,2589
+2018-03,Cloud & Infra,Terraform,Sweden,5,64961
+2018-03,Cloud & Infra,Terraform,Stockholm,1,16388
+2018-03,Cloud & Infra,Terraform,Göteborg,1,6466
+2018-03,Cloud & Infra,Terraform,Malmö,0,2589
+2018-03,Data & AI,PostgreSQL,Sweden,31,64961
+2018-03,Data & AI,PostgreSQL,Stockholm,14,16388
+2018-03,Data & AI,PostgreSQL,Göteborg,2,6466
+2018-03,Data & AI,PostgreSQL,Malmö,4,2589
+2018-03,Data & AI,SQL,Sweden,551,64961
+2018-03,Data & AI,SQL,Stockholm,221,16388
+2018-03,Data & AI,SQL,Göteborg,90,6466
+2018-03,Data & AI,SQL,Malmö,31,2589
+2018-03,Data & AI,Apache Kafka,Sweden,0,64961
+2018-03,Data & AI,Apache Kafka,Stockholm,0,16388
+2018-03,Data & AI,Apache Kafka,Göteborg,0,6466
+2018-03,Data & AI,Apache Kafka,Malmö,0,2589
+2018-03,Data & AI,PyTorch,Sweden,1,64961
+2018-03,Data & AI,PyTorch,Stockholm,1,16388
+2018-03,Data & AI,PyTorch,Göteborg,0,6466
+2018-03,Data & AI,PyTorch,Malmö,0,2589
+2018-03,Data & AI,TensorFlow,Sweden,4,64961
+2018-03,Data & AI,TensorFlow,Stockholm,1,16388
+2018-03,Data & AI,TensorFlow,Göteborg,1,6466
+2018-03,Data & AI,TensorFlow,Malmö,0,2589
+2018-04,Languages,JavaScript,Sweden,465,63665
+2018-04,Languages,JavaScript,Stockholm,176,15954
+2018-04,Languages,JavaScript,Göteborg,84,6580
+2018-04,Languages,JavaScript,Malmö,37,2575
+2018-04,Languages,TypeScript,Sweden,49,63665
+2018-04,Languages,TypeScript,Stockholm,19,15954
+2018-04,Languages,TypeScript,Göteborg,15,6580
+2018-04,Languages,TypeScript,Malmö,2,2575
+2018-04,Languages,Python,Sweden,287,63665
+2018-04,Languages,Python,Stockholm,84,15954
+2018-04,Languages,Python,Göteborg,91,6580
+2018-04,Languages,Python,Malmö,14,2575
+2018-04,Languages,Java,Sweden,514,63665
+2018-04,Languages,Java,Stockholm,198,15954
+2018-04,Languages,Java,Göteborg,118,6580
+2018-04,Languages,Java,Malmö,28,2575
+2018-04,Languages,C#,Sweden,367,63665
+2018-04,Languages,C#,Stockholm,112,15954
+2018-04,Languages,C#,Göteborg,78,6580
+2018-04,Languages,C#,Malmö,22,2575
+2018-04,Languages,Go,Sweden,22,63665
+2018-04,Languages,Go,Stockholm,11,15954
+2018-04,Languages,Go,Göteborg,6,6580
+2018-04,Languages,Go,Malmö,2,2575
+2018-04,Languages,Rust,Sweden,1,63665
+2018-04,Languages,Rust,Stockholm,1,15954
+2018-04,Languages,Rust,Göteborg,0,6580
+2018-04,Languages,Rust,Malmö,0,2575
+2018-04,Cloud & Infra,AWS,Sweden,137,63665
+2018-04,Cloud & Infra,AWS,Stockholm,69,15954
+2018-04,Cloud & Infra,AWS,Göteborg,34,6580
+2018-04,Cloud & Infra,AWS,Malmö,13,2575
+2018-04,Cloud & Infra,Azure,Sweden,173,63665
+2018-04,Cloud & Infra,Azure,Stockholm,59,15954
+2018-04,Cloud & Infra,Azure,Göteborg,41,6580
+2018-04,Cloud & Infra,Azure,Malmö,12,2575
+2018-04,Cloud & Infra,Docker,Sweden,107,63665
+2018-04,Cloud & Infra,Docker,Stockholm,51,15954
+2018-04,Cloud & Infra,Docker,Göteborg,23,6580
+2018-04,Cloud & Infra,Docker,Malmö,8,2575
+2018-04,Cloud & Infra,Kubernetes,Sweden,27,63665
+2018-04,Cloud & Infra,Kubernetes,Stockholm,16,15954
+2018-04,Cloud & Infra,Kubernetes,Göteborg,2,6580
+2018-04,Cloud & Infra,Kubernetes,Malmö,2,2575
+2018-04,Cloud & Infra,Terraform,Sweden,8,63665
+2018-04,Cloud & Infra,Terraform,Stockholm,3,15954
+2018-04,Cloud & Infra,Terraform,Göteborg,2,6580
+2018-04,Cloud & Infra,Terraform,Malmö,0,2575
+2018-04,Data & AI,PostgreSQL,Sweden,39,63665
+2018-04,Data & AI,PostgreSQL,Stockholm,14,15954
+2018-04,Data & AI,PostgreSQL,Göteborg,7,6580
+2018-04,Data & AI,PostgreSQL,Malmö,5,2575
+2018-04,Data & AI,SQL,Sweden,543,63665
+2018-04,Data & AI,SQL,Stockholm,206,15954
+2018-04,Data & AI,SQL,Göteborg,79,6580
+2018-04,Data & AI,SQL,Malmö,34,2575
+2018-04,Data & AI,Apache Kafka,Sweden,4,63665
+2018-04,Data & AI,Apache Kafka,Stockholm,2,15954
+2018-04,Data & AI,Apache Kafka,Göteborg,2,6580
+2018-04,Data & AI,Apache Kafka,Malmö,0,2575
+2018-04,Data & AI,PyTorch,Sweden,4,63665
+2018-04,Data & AI,PyTorch,Stockholm,3,15954
+2018-04,Data & AI,PyTorch,Göteborg,1,6580
+2018-04,Data & AI,PyTorch,Malmö,0,2575
+2018-04,Data & AI,TensorFlow,Sweden,9,63665
+2018-04,Data & AI,TensorFlow,Stockholm,5,15954
+2018-04,Data & AI,TensorFlow,Göteborg,3,6580
+2018-04,Data & AI,TensorFlow,Malmö,0,2575
+2018-05,Languages,JavaScript,Sweden,450,67723
+2018-05,Languages,JavaScript,Stockholm,182,17538
+2018-05,Languages,JavaScript,Göteborg,76,6521
+2018-05,Languages,JavaScript,Malmö,33,2534
+2018-05,Languages,TypeScript,Sweden,65,67723
+2018-05,Languages,TypeScript,Stockholm,27,17538
+2018-05,Languages,TypeScript,Göteborg,15,6521
+2018-05,Languages,TypeScript,Malmö,3,2534
+2018-05,Languages,Python,Sweden,313,67723
+2018-05,Languages,Python,Stockholm,93,17538
+2018-05,Languages,Python,Göteborg,89,6521
+2018-05,Languages,Python,Malmö,15,2534
+2018-05,Languages,Java,Sweden,559,67723
+2018-05,Languages,Java,Stockholm,241,17538
+2018-05,Languages,Java,Göteborg,105,6521
+2018-05,Languages,Java,Malmö,22,2534
+2018-05,Languages,C#,Sweden,455,67723
+2018-05,Languages,C#,Stockholm,148,17538
+2018-05,Languages,C#,Göteborg,85,6521
+2018-05,Languages,C#,Malmö,30,2534
+2018-05,Languages,Go,Sweden,14,67723
+2018-05,Languages,Go,Stockholm,8,17538
+2018-05,Languages,Go,Göteborg,2,6521
+2018-05,Languages,Go,Malmö,1,2534
+2018-05,Languages,Rust,Sweden,4,67723
+2018-05,Languages,Rust,Stockholm,2,17538
+2018-05,Languages,Rust,Göteborg,2,6521
+2018-05,Languages,Rust,Malmö,0,2534
+2018-05,Cloud & Infra,AWS,Sweden,128,67723
+2018-05,Cloud & Infra,AWS,Stockholm,65,17538
+2018-05,Cloud & Infra,AWS,Göteborg,24,6521
+2018-05,Cloud & Infra,AWS,Malmö,9,2534
+2018-05,Cloud & Infra,Azure,Sweden,223,67723
+2018-05,Cloud & Infra,Azure,Stockholm,94,17538
+2018-05,Cloud & Infra,Azure,Göteborg,36,6521
+2018-05,Cloud & Infra,Azure,Malmö,18,2534
+2018-05,Cloud & Infra,Docker,Sweden,122,67723
+2018-05,Cloud & Infra,Docker,Stockholm,51,17538
+2018-05,Cloud & Infra,Docker,Göteborg,31,6521
+2018-05,Cloud & Infra,Docker,Malmö,3,2534
+2018-05,Cloud & Infra,Kubernetes,Sweden,41,67723
+2018-05,Cloud & Infra,Kubernetes,Stockholm,20,17538
+2018-05,Cloud & Infra,Kubernetes,Göteborg,2,6521
+2018-05,Cloud & Infra,Kubernetes,Malmö,1,2534
+2018-05,Cloud & Infra,Terraform,Sweden,6,67723
+2018-05,Cloud & Infra,Terraform,Stockholm,4,17538
+2018-05,Cloud & Infra,Terraform,Göteborg,0,6521
+2018-05,Cloud & Infra,Terraform,Malmö,0,2534
+2018-05,Data & AI,PostgreSQL,Sweden,55,67723
+2018-05,Data & AI,PostgreSQL,Stockholm,25,17538
+2018-05,Data & AI,PostgreSQL,Göteborg,10,6521
+2018-05,Data & AI,PostgreSQL,Malmö,6,2534
+2018-05,Data & AI,SQL,Sweden,616,67723
+2018-05,Data & AI,SQL,Stockholm,259,17538
+2018-05,Data & AI,SQL,Göteborg,104,6521
+2018-05,Data & AI,SQL,Malmö,44,2534
+2018-05,Data & AI,Apache Kafka,Sweden,2,67723
+2018-05,Data & AI,Apache Kafka,Stockholm,1,17538
+2018-05,Data & AI,Apache Kafka,Göteborg,1,6521
+2018-05,Data & AI,Apache Kafka,Malmö,0,2534
+2018-05,Data & AI,PyTorch,Sweden,2,67723
+2018-05,Data & AI,PyTorch,Stockholm,1,17538
+2018-05,Data & AI,PyTorch,Göteborg,0,6521
+2018-05,Data & AI,PyTorch,Malmö,0,2534
+2018-05,Data & AI,TensorFlow,Sweden,5,67723
+2018-05,Data & AI,TensorFlow,Stockholm,2,17538
+2018-05,Data & AI,TensorFlow,Göteborg,1,6521
+2018-05,Data & AI,TensorFlow,Malmö,0,2534
+2018-06,Languages,JavaScript,Sweden,407,54236
+2018-06,Languages,JavaScript,Stockholm,175,13948
+2018-06,Languages,JavaScript,Göteborg,59,5456
+2018-06,Languages,JavaScript,Malmö,26,2165
+2018-06,Languages,TypeScript,Sweden,70,54236
+2018-06,Languages,TypeScript,Stockholm,43,13948
+2018-06,Languages,TypeScript,Göteborg,7,5456
+2018-06,Languages,TypeScript,Malmö,2,2165
+2018-06,Languages,Python,Sweden,317,54236
+2018-06,Languages,Python,Stockholm,109,13948
+2018-06,Languages,Python,Göteborg,66,5456
+2018-06,Languages,Python,Malmö,10,2165
+2018-06,Languages,Java,Sweden,570,54236
+2018-06,Languages,Java,Stockholm,239,13948
+2018-06,Languages,Java,Göteborg,109,5456
+2018-06,Languages,Java,Malmö,29,2165
+2018-06,Languages,C#,Sweden,408,54236
+2018-06,Languages,C#,Stockholm,112,13948
+2018-06,Languages,C#,Göteborg,69,5456
+2018-06,Languages,C#,Malmö,33,2165
+2018-06,Languages,Go,Sweden,25,54236
+2018-06,Languages,Go,Stockholm,4,13948
+2018-06,Languages,Go,Göteborg,4,5456
+2018-06,Languages,Go,Malmö,0,2165
+2018-06,Languages,Rust,Sweden,0,54236
+2018-06,Languages,Rust,Stockholm,0,13948
+2018-06,Languages,Rust,Göteborg,0,5456
+2018-06,Languages,Rust,Malmö,0,2165
+2018-06,Cloud & Infra,AWS,Sweden,132,54236
+2018-06,Cloud & Infra,AWS,Stockholm,65,13948
+2018-06,Cloud & Infra,AWS,Göteborg,27,5456
+2018-06,Cloud & Infra,AWS,Malmö,8,2165
+2018-06,Cloud & Infra,Azure,Sweden,198,54236
+2018-06,Cloud & Infra,Azure,Stockholm,81,13948
+2018-06,Cloud & Infra,Azure,Göteborg,33,5456
+2018-06,Cloud & Infra,Azure,Malmö,14,2165
+2018-06,Cloud & Infra,Docker,Sweden,121,54236
+2018-06,Cloud & Infra,Docker,Stockholm,60,13948
+2018-06,Cloud & Infra,Docker,Göteborg,29,5456
+2018-06,Cloud & Infra,Docker,Malmö,2,2165
+2018-06,Cloud & Infra,Kubernetes,Sweden,41,54236
+2018-06,Cloud & Infra,Kubernetes,Stockholm,17,13948
+2018-06,Cloud & Infra,Kubernetes,Göteborg,10,5456
+2018-06,Cloud & Infra,Kubernetes,Malmö,1,2165
+2018-06,Cloud & Infra,Terraform,Sweden,9,54236
+2018-06,Cloud & Infra,Terraform,Stockholm,4,13948
+2018-06,Cloud & Infra,Terraform,Göteborg,1,5456
+2018-06,Cloud & Infra,Terraform,Malmö,0,2165
+2018-06,Data & AI,PostgreSQL,Sweden,41,54236
+2018-06,Data & AI,PostgreSQL,Stockholm,16,13948
+2018-06,Data & AI,PostgreSQL,Göteborg,10,5456
+2018-06,Data & AI,PostgreSQL,Malmö,3,2165
+2018-06,Data & AI,SQL,Sweden,523,54236
+2018-06,Data & AI,SQL,Stockholm,227,13948
+2018-06,Data & AI,SQL,Göteborg,59,5456
+2018-06,Data & AI,SQL,Malmö,40,2165
+2018-06,Data & AI,Apache Kafka,Sweden,2,54236
+2018-06,Data & AI,Apache Kafka,Stockholm,0,13948
+2018-06,Data & AI,Apache Kafka,Göteborg,2,5456
+2018-06,Data & AI,Apache Kafka,Malmö,0,2165
+2018-06,Data & AI,PyTorch,Sweden,2,54236
+2018-06,Data & AI,PyTorch,Stockholm,1,13948
+2018-06,Data & AI,PyTorch,Göteborg,0,5456
+2018-06,Data & AI,PyTorch,Malmö,0,2165
+2018-06,Data & AI,TensorFlow,Sweden,8,54236
+2018-06,Data & AI,TensorFlow,Stockholm,3,13948
+2018-06,Data & AI,TensorFlow,Göteborg,2,5456
+2018-06,Data & AI,TensorFlow,Malmö,0,2165
+2018-07,Languages,JavaScript,Sweden,270,39680
+2018-07,Languages,JavaScript,Stockholm,104,10808
+2018-07,Languages,JavaScript,Göteborg,38,4281
+2018-07,Languages,JavaScript,Malmö,19,1831
+2018-07,Languages,TypeScript,Sweden,39,39680
+2018-07,Languages,TypeScript,Stockholm,20,10808
+2018-07,Languages,TypeScript,Göteborg,3,4281
+2018-07,Languages,TypeScript,Malmö,1,1831
+2018-07,Languages,Python,Sweden,253,39680
+2018-07,Languages,Python,Stockholm,82,10808
+2018-07,Languages,Python,Göteborg,71,4281
+2018-07,Languages,Python,Malmö,9,1831
+2018-07,Languages,Java,Sweden,353,39680
+2018-07,Languages,Java,Stockholm,143,10808
+2018-07,Languages,Java,Göteborg,89,4281
+2018-07,Languages,Java,Malmö,14,1831
+2018-07,Languages,C#,Sweden,243,39680
+2018-07,Languages,C#,Stockholm,64,10808
+2018-07,Languages,C#,Göteborg,58,4281
+2018-07,Languages,C#,Malmö,13,1831
+2018-07,Languages,Go,Sweden,30,39680
+2018-07,Languages,Go,Stockholm,10,10808
+2018-07,Languages,Go,Göteborg,3,4281
+2018-07,Languages,Go,Malmö,3,1831
+2018-07,Languages,Rust,Sweden,0,39680
+2018-07,Languages,Rust,Stockholm,0,10808
+2018-07,Languages,Rust,Göteborg,0,4281
+2018-07,Languages,Rust,Malmö,0,1831
+2018-07,Cloud & Infra,AWS,Sweden,105,39680
+2018-07,Cloud & Infra,AWS,Stockholm,45,10808
+2018-07,Cloud & Infra,AWS,Göteborg,24,4281
+2018-07,Cloud & Infra,AWS,Malmö,6,1831
+2018-07,Cloud & Infra,Azure,Sweden,135,39680
+2018-07,Cloud & Infra,Azure,Stockholm,49,10808
+2018-07,Cloud & Infra,Azure,Göteborg,23,4281
+2018-07,Cloud & Infra,Azure,Malmö,9,1831
+2018-07,Cloud & Infra,Docker,Sweden,93,39680
+2018-07,Cloud & Infra,Docker,Stockholm,35,10808
+2018-07,Cloud & Infra,Docker,Göteborg,22,4281
+2018-07,Cloud & Infra,Docker,Malmö,4,1831
+2018-07,Cloud & Infra,Kubernetes,Sweden,45,39680
+2018-07,Cloud & Infra,Kubernetes,Stockholm,17,10808
+2018-07,Cloud & Infra,Kubernetes,Göteborg,13,4281
+2018-07,Cloud & Infra,Kubernetes,Malmö,1,1831
+2018-07,Cloud & Infra,Terraform,Sweden,10,39680
+2018-07,Cloud & Infra,Terraform,Stockholm,5,10808
+2018-07,Cloud & Infra,Terraform,Göteborg,3,4281
+2018-07,Cloud & Infra,Terraform,Malmö,0,1831
+2018-07,Data & AI,PostgreSQL,Sweden,26,39680
+2018-07,Data & AI,PostgreSQL,Stockholm,10,10808
+2018-07,Data & AI,PostgreSQL,Göteborg,3,4281
+2018-07,Data & AI,PostgreSQL,Malmö,3,1831
+2018-07,Data & AI,SQL,Sweden,390,39680
+2018-07,Data & AI,SQL,Stockholm,171,10808
+2018-07,Data & AI,SQL,Göteborg,47,4281
+2018-07,Data & AI,SQL,Malmö,17,1831
+2018-07,Data & AI,Apache Kafka,Sweden,7,39680
+2018-07,Data & AI,Apache Kafka,Stockholm,1,10808
+2018-07,Data & AI,Apache Kafka,Göteborg,6,4281
+2018-07,Data & AI,Apache Kafka,Malmö,0,1831
+2018-07,Data & AI,PyTorch,Sweden,1,39680
+2018-07,Data & AI,PyTorch,Stockholm,1,10808
+2018-07,Data & AI,PyTorch,Göteborg,0,4281
+2018-07,Data & AI,PyTorch,Malmö,0,1831
+2018-07,Data & AI,TensorFlow,Sweden,4,39680
+2018-07,Data & AI,TensorFlow,Stockholm,2,10808
+2018-07,Data & AI,TensorFlow,Göteborg,1,4281
+2018-07,Data & AI,TensorFlow,Malmö,0,1831
+2018-08,Languages,JavaScript,Sweden,405,55751
+2018-08,Languages,JavaScript,Stockholm,154,16403
+2018-08,Languages,JavaScript,Göteborg,59,5412
+2018-08,Languages,JavaScript,Malmö,38,2316
+2018-08,Languages,TypeScript,Sweden,48,55751
+2018-08,Languages,TypeScript,Stockholm,24,16403
+2018-08,Languages,TypeScript,Göteborg,8,5412
+2018-08,Languages,TypeScript,Malmö,2,2316
+2018-08,Languages,Python,Sweden,280,55751
+2018-08,Languages,Python,Stockholm,90,16403
+2018-08,Languages,Python,Göteborg,65,5412
+2018-08,Languages,Python,Malmö,14,2316
+2018-08,Languages,Java,Sweden,448,55751
+2018-08,Languages,Java,Stockholm,175,16403
+2018-08,Languages,Java,Göteborg,86,5412
+2018-08,Languages,Java,Malmö,25,2316
+2018-08,Languages,C#,Sweden,355,55751
+2018-08,Languages,C#,Stockholm,116,16403
+2018-08,Languages,C#,Göteborg,71,5412
+2018-08,Languages,C#,Malmö,21,2316
+2018-08,Languages,Go,Sweden,27,55751
+2018-08,Languages,Go,Stockholm,12,16403
+2018-08,Languages,Go,Göteborg,2,5412
+2018-08,Languages,Go,Malmö,2,2316
+2018-08,Languages,Rust,Sweden,1,55751
+2018-08,Languages,Rust,Stockholm,0,16403
+2018-08,Languages,Rust,Göteborg,0,5412
+2018-08,Languages,Rust,Malmö,0,2316
+2018-08,Cloud & Infra,AWS,Sweden,125,55751
+2018-08,Cloud & Infra,AWS,Stockholm,59,16403
+2018-08,Cloud & Infra,AWS,Göteborg,13,5412
+2018-08,Cloud & Infra,AWS,Malmö,13,2316
+2018-08,Cloud & Infra,Azure,Sweden,161,55751
+2018-08,Cloud & Infra,Azure,Stockholm,66,16403
+2018-08,Cloud & Infra,Azure,Göteborg,30,5412
+2018-08,Cloud & Infra,Azure,Malmö,15,2316
+2018-08,Cloud & Infra,Docker,Sweden,103,55751
+2018-08,Cloud & Infra,Docker,Stockholm,41,16403
+2018-08,Cloud & Infra,Docker,Göteborg,23,5412
+2018-08,Cloud & Infra,Docker,Malmö,7,2316
+2018-08,Cloud & Infra,Kubernetes,Sweden,31,55751
+2018-08,Cloud & Infra,Kubernetes,Stockholm,9,16403
+2018-08,Cloud & Infra,Kubernetes,Göteborg,6,5412
+2018-08,Cloud & Infra,Kubernetes,Malmö,6,2316
+2018-08,Cloud & Infra,Terraform,Sweden,10,55751
+2018-08,Cloud & Infra,Terraform,Stockholm,8,16403
+2018-08,Cloud & Infra,Terraform,Göteborg,0,5412
+2018-08,Cloud & Infra,Terraform,Malmö,0,2316
+2018-08,Data & AI,PostgreSQL,Sweden,43,55751
+2018-08,Data & AI,PostgreSQL,Stockholm,15,16403
+2018-08,Data & AI,PostgreSQL,Göteborg,5,5412
+2018-08,Data & AI,PostgreSQL,Malmö,9,2316
+2018-08,Data & AI,SQL,Sweden,508,55751
+2018-08,Data & AI,SQL,Stockholm,213,16403
+2018-08,Data & AI,SQL,Göteborg,78,5412
+2018-08,Data & AI,SQL,Malmö,43,2316
+2018-08,Data & AI,Apache Kafka,Sweden,0,55751
+2018-08,Data & AI,Apache Kafka,Stockholm,0,16403
+2018-08,Data & AI,Apache Kafka,Göteborg,0,5412
+2018-08,Data & AI,Apache Kafka,Malmö,0,2316
+2018-08,Data & AI,PyTorch,Sweden,2,55751
+2018-08,Data & AI,PyTorch,Stockholm,2,16403
+2018-08,Data & AI,PyTorch,Göteborg,0,5412
+2018-08,Data & AI,PyTorch,Malmö,0,2316
+2018-08,Data & AI,TensorFlow,Sweden,5,55751
+2018-08,Data & AI,TensorFlow,Stockholm,3,16403
+2018-08,Data & AI,TensorFlow,Göteborg,0,5412
+2018-08,Data & AI,TensorFlow,Malmö,0,2316
+2018-09,Languages,JavaScript,Sweden,447,53599
+2018-09,Languages,JavaScript,Stockholm,191,15184
+2018-09,Languages,JavaScript,Göteborg,59,5208
+2018-09,Languages,JavaScript,Malmö,31,2387
+2018-09,Languages,TypeScript,Sweden,60,53599
+2018-09,Languages,TypeScript,Stockholm,27,15184
+2018-09,Languages,TypeScript,Göteborg,7,5208
+2018-09,Languages,TypeScript,Malmö,2,2387
+2018-09,Languages,Python,Sweden,319,53599
+2018-09,Languages,Python,Stockholm,104,15184
+2018-09,Languages,Python,Göteborg,78,5208
+2018-09,Languages,Python,Malmö,24,2387
+2018-09,Languages,Java,Sweden,540,53599
+2018-09,Languages,Java,Stockholm,216,15184
+2018-09,Languages,Java,Göteborg,102,5208
+2018-09,Languages,Java,Malmö,27,2387
+2018-09,Languages,C#,Sweden,459,53599
+2018-09,Languages,C#,Stockholm,141,15184
+2018-09,Languages,C#,Göteborg,83,5208
+2018-09,Languages,C#,Malmö,28,2387
+2018-09,Languages,Go,Sweden,24,53599
+2018-09,Languages,Go,Stockholm,12,15184
+2018-09,Languages,Go,Göteborg,2,5208
+2018-09,Languages,Go,Malmö,4,2387
+2018-09,Languages,Rust,Sweden,1,53599
+2018-09,Languages,Rust,Stockholm,1,15184
+2018-09,Languages,Rust,Göteborg,0,5208
+2018-09,Languages,Rust,Malmö,0,2387
+2018-09,Cloud & Infra,AWS,Sweden,183,53599
+2018-09,Cloud & Infra,AWS,Stockholm,95,15184
+2018-09,Cloud & Infra,AWS,Göteborg,29,5208
+2018-09,Cloud & Infra,AWS,Malmö,14,2387
+2018-09,Cloud & Infra,Azure,Sweden,194,53599
+2018-09,Cloud & Infra,Azure,Stockholm,79,15184
+2018-09,Cloud & Infra,Azure,Göteborg,38,5208
+2018-09,Cloud & Infra,Azure,Malmö,14,2387
+2018-09,Cloud & Infra,Docker,Sweden,134,53599
+2018-09,Cloud & Infra,Docker,Stockholm,58,15184
+2018-09,Cloud & Infra,Docker,Göteborg,25,5208
+2018-09,Cloud & Infra,Docker,Malmö,4,2387
+2018-09,Cloud & Infra,Kubernetes,Sweden,45,53599
+2018-09,Cloud & Infra,Kubernetes,Stockholm,17,15184
+2018-09,Cloud & Infra,Kubernetes,Göteborg,10,5208
+2018-09,Cloud & Infra,Kubernetes,Malmö,0,2387
+2018-09,Cloud & Infra,Terraform,Sweden,8,53599
+2018-09,Cloud & Infra,Terraform,Stockholm,6,15184
+2018-09,Cloud & Infra,Terraform,Göteborg,1,5208
+2018-09,Cloud & Infra,Terraform,Malmö,0,2387
+2018-09,Data & AI,PostgreSQL,Sweden,30,53599
+2018-09,Data & AI,PostgreSQL,Stockholm,18,15184
+2018-09,Data & AI,PostgreSQL,Göteborg,1,5208
+2018-09,Data & AI,PostgreSQL,Malmö,4,2387
+2018-09,Data & AI,SQL,Sweden,534,53599
+2018-09,Data & AI,SQL,Stockholm,206,15184
+2018-09,Data & AI,SQL,Göteborg,88,5208
+2018-09,Data & AI,SQL,Malmö,29,2387
+2018-09,Data & AI,Apache Kafka,Sweden,3,53599
+2018-09,Data & AI,Apache Kafka,Stockholm,1,15184
+2018-09,Data & AI,Apache Kafka,Göteborg,2,5208
+2018-09,Data & AI,Apache Kafka,Malmö,0,2387
+2018-09,Data & AI,PyTorch,Sweden,0,53599
+2018-09,Data & AI,PyTorch,Stockholm,0,15184
+2018-09,Data & AI,PyTorch,Göteborg,0,5208
+2018-09,Data & AI,PyTorch,Malmö,0,2387
+2018-09,Data & AI,TensorFlow,Sweden,3,53599
+2018-09,Data & AI,TensorFlow,Stockholm,0,15184
+2018-09,Data & AI,TensorFlow,Göteborg,0,5208
+2018-09,Data & AI,TensorFlow,Malmö,1,2387
+2018-10,Languages,JavaScript,Sweden,488,61656
+2018-10,Languages,JavaScript,Stockholm,182,16672
+2018-10,Languages,JavaScript,Göteborg,65,6358
+2018-10,Languages,JavaScript,Malmö,41,2668
+2018-10,Languages,TypeScript,Sweden,75,61656
+2018-10,Languages,TypeScript,Stockholm,30,16672
+2018-10,Languages,TypeScript,Göteborg,6,6358
+2018-10,Languages,TypeScript,Malmö,2,2668
+2018-10,Languages,Python,Sweden,413,61656
+2018-10,Languages,Python,Stockholm,120,16672
+2018-10,Languages,Python,Göteborg,107,6358
+2018-10,Languages,Python,Malmö,26,2668
+2018-10,Languages,Java,Sweden,620,61656
+2018-10,Languages,Java,Stockholm,253,16672
+2018-10,Languages,Java,Göteborg,121,6358
+2018-10,Languages,Java,Malmö,37,2668
+2018-10,Languages,C#,Sweden,454,61656
+2018-10,Languages,C#,Stockholm,118,16672
+2018-10,Languages,C#,Göteborg,80,6358
+2018-10,Languages,C#,Malmö,26,2668
+2018-10,Languages,Go,Sweden,35,61656
+2018-10,Languages,Go,Stockholm,17,16672
+2018-10,Languages,Go,Göteborg,4,6358
+2018-10,Languages,Go,Malmö,3,2668
+2018-10,Languages,Rust,Sweden,1,61656
+2018-10,Languages,Rust,Stockholm,1,16672
+2018-10,Languages,Rust,Göteborg,0,6358
+2018-10,Languages,Rust,Malmö,0,2668
+2018-10,Cloud & Infra,AWS,Sweden,183,61656
+2018-10,Cloud & Infra,AWS,Stockholm,68,16672
+2018-10,Cloud & Infra,AWS,Göteborg,35,6358
+2018-10,Cloud & Infra,AWS,Malmö,19,2668
+2018-10,Cloud & Infra,Azure,Sweden,244,61656
+2018-10,Cloud & Infra,Azure,Stockholm,93,16672
+2018-10,Cloud & Infra,Azure,Göteborg,47,6358
+2018-10,Cloud & Infra,Azure,Malmö,22,2668
+2018-10,Cloud & Infra,Docker,Sweden,155,61656
+2018-10,Cloud & Infra,Docker,Stockholm,68,16672
+2018-10,Cloud & Infra,Docker,Göteborg,28,6358
+2018-10,Cloud & Infra,Docker,Malmö,8,2668
+2018-10,Cloud & Infra,Kubernetes,Sweden,70,61656
+2018-10,Cloud & Infra,Kubernetes,Stockholm,27,16672
+2018-10,Cloud & Infra,Kubernetes,Göteborg,17,6358
+2018-10,Cloud & Infra,Kubernetes,Malmö,7,2668
+2018-10,Cloud & Infra,Terraform,Sweden,12,61656
+2018-10,Cloud & Infra,Terraform,Stockholm,6,16672
+2018-10,Cloud & Infra,Terraform,Göteborg,3,6358
+2018-10,Cloud & Infra,Terraform,Malmö,0,2668
+2018-10,Data & AI,PostgreSQL,Sweden,30,61656
+2018-10,Data & AI,PostgreSQL,Stockholm,13,16672
+2018-10,Data & AI,PostgreSQL,Göteborg,1,6358
+2018-10,Data & AI,PostgreSQL,Malmö,3,2668
+2018-10,Data & AI,SQL,Sweden,588,61656
+2018-10,Data & AI,SQL,Stockholm,226,16672
+2018-10,Data & AI,SQL,Göteborg,81,6358
+2018-10,Data & AI,SQL,Malmö,34,2668
+2018-10,Data & AI,Apache Kafka,Sweden,1,61656
+2018-10,Data & AI,Apache Kafka,Stockholm,0,16672
+2018-10,Data & AI,Apache Kafka,Göteborg,1,6358
+2018-10,Data & AI,Apache Kafka,Malmö,0,2668
+2018-10,Data & AI,PyTorch,Sweden,5,61656
+2018-10,Data & AI,PyTorch,Stockholm,3,16672
+2018-10,Data & AI,PyTorch,Göteborg,0,6358
+2018-10,Data & AI,PyTorch,Malmö,1,2668
+2018-10,Data & AI,TensorFlow,Sweden,8,61656
+2018-10,Data & AI,TensorFlow,Stockholm,5,16672
+2018-10,Data & AI,TensorFlow,Göteborg,1,6358
+2018-10,Data & AI,TensorFlow,Malmö,0,2668
+2018-11,Languages,JavaScript,Sweden,464,56585
+2018-11,Languages,JavaScript,Stockholm,211,15922
+2018-11,Languages,JavaScript,Göteborg,64,5575
+2018-11,Languages,JavaScript,Malmö,29,2538
+2018-11,Languages,TypeScript,Sweden,63,56585
+2018-11,Languages,TypeScript,Stockholm,30,15922
+2018-11,Languages,TypeScript,Göteborg,13,5575
+2018-11,Languages,TypeScript,Malmö,3,2538
+2018-11,Languages,Python,Sweden,350,56585
+2018-11,Languages,Python,Stockholm,137,15922
+2018-11,Languages,Python,Göteborg,75,5575
+2018-11,Languages,Python,Malmö,20,2538
+2018-11,Languages,Java,Sweden,591,56585
+2018-11,Languages,Java,Stockholm,248,15922
+2018-11,Languages,Java,Göteborg,107,5575
+2018-11,Languages,Java,Malmö,28,2538
+2018-11,Languages,C#,Sweden,433,56585
+2018-11,Languages,C#,Stockholm,139,15922
+2018-11,Languages,C#,Göteborg,60,5575
+2018-11,Languages,C#,Malmö,29,2538
+2018-11,Languages,Go,Sweden,32,56585
+2018-11,Languages,Go,Stockholm,17,15922
+2018-11,Languages,Go,Göteborg,4,5575
+2018-11,Languages,Go,Malmö,2,2538
+2018-11,Languages,Rust,Sweden,3,56585
+2018-11,Languages,Rust,Stockholm,3,15922
+2018-11,Languages,Rust,Göteborg,0,5575
+2018-11,Languages,Rust,Malmö,0,2538
+2018-11,Cloud & Infra,AWS,Sweden,191,56585
+2018-11,Cloud & Infra,AWS,Stockholm,85,15922
+2018-11,Cloud & Infra,AWS,Göteborg,36,5575
+2018-11,Cloud & Infra,AWS,Malmö,16,2538
+2018-11,Cloud & Infra,Azure,Sweden,205,56585
+2018-11,Cloud & Infra,Azure,Stockholm,92,15922
+2018-11,Cloud & Infra,Azure,Göteborg,46,5575
+2018-11,Cloud & Infra,Azure,Malmö,12,2538
+2018-11,Cloud & Infra,Docker,Sweden,131,56585
+2018-11,Cloud & Infra,Docker,Stockholm,59,15922
+2018-11,Cloud & Infra,Docker,Göteborg,28,5575
+2018-11,Cloud & Infra,Docker,Malmö,7,2538
+2018-11,Cloud & Infra,Kubernetes,Sweden,52,56585
+2018-11,Cloud & Infra,Kubernetes,Stockholm,20,15922
+2018-11,Cloud & Infra,Kubernetes,Göteborg,13,5575
+2018-11,Cloud & Infra,Kubernetes,Malmö,2,2538
+2018-11,Cloud & Infra,Terraform,Sweden,8,56585
+2018-11,Cloud & Infra,Terraform,Stockholm,7,15922
+2018-11,Cloud & Infra,Terraform,Göteborg,1,5575
+2018-11,Cloud & Infra,Terraform,Malmö,0,2538
+2018-11,Data & AI,PostgreSQL,Sweden,39,56585
+2018-11,Data & AI,PostgreSQL,Stockholm,21,15922
+2018-11,Data & AI,PostgreSQL,Göteborg,2,5575
+2018-11,Data & AI,PostgreSQL,Malmö,2,2538
+2018-11,Data & AI,SQL,Sweden,588,56585
+2018-11,Data & AI,SQL,Stockholm,252,15922
+2018-11,Data & AI,SQL,Göteborg,76,5575
+2018-11,Data & AI,SQL,Malmö,31,2538
+2018-11,Data & AI,Apache Kafka,Sweden,1,56585
+2018-11,Data & AI,Apache Kafka,Stockholm,1,15922
+2018-11,Data & AI,Apache Kafka,Göteborg,0,5575
+2018-11,Data & AI,Apache Kafka,Malmö,0,2538
+2018-11,Data & AI,PyTorch,Sweden,0,56585
+2018-11,Data & AI,PyTorch,Stockholm,0,15922
+2018-11,Data & AI,PyTorch,Göteborg,0,5575
+2018-11,Data & AI,PyTorch,Malmö,0,2538
+2018-11,Data & AI,TensorFlow,Sweden,8,56585
+2018-11,Data & AI,TensorFlow,Stockholm,1,15922
+2018-11,Data & AI,TensorFlow,Göteborg,3,5575
+2018-11,Data & AI,TensorFlow,Malmö,0,2538
+2018-12,Languages,JavaScript,Sweden,465,47808
+2018-12,Languages,JavaScript,Stockholm,192,13145
+2018-12,Languages,JavaScript,Göteborg,82,4658
+2018-12,Languages,JavaScript,Malmö,30,1991
+2018-12,Languages,TypeScript,Sweden,83,47808
+2018-12,Languages,TypeScript,Stockholm,37,13145
+2018-12,Languages,TypeScript,Göteborg,16,4658
+2018-12,Languages,TypeScript,Malmö,5,1991
+2018-12,Languages,Python,Sweden,389,47808
+2018-12,Languages,Python,Stockholm,134,13145
+2018-12,Languages,Python,Göteborg,100,4658
+2018-12,Languages,Python,Malmö,16,1991
+2018-12,Languages,Java,Sweden,600,47808
+2018-12,Languages,Java,Stockholm,244,13145
+2018-12,Languages,Java,Göteborg,95,4658
+2018-12,Languages,Java,Malmö,31,1991
+2018-12,Languages,C#,Sweden,485,47808
+2018-12,Languages,C#,Stockholm,149,13145
+2018-12,Languages,C#,Göteborg,72,4658
+2018-12,Languages,C#,Malmö,25,1991
+2018-12,Languages,Go,Sweden,31,47808
+2018-12,Languages,Go,Stockholm,13,13145
+2018-12,Languages,Go,Göteborg,8,4658
+2018-12,Languages,Go,Malmö,2,1991
+2018-12,Languages,Rust,Sweden,5,47808
+2018-12,Languages,Rust,Stockholm,2,13145
+2018-12,Languages,Rust,Göteborg,0,4658
+2018-12,Languages,Rust,Malmö,0,1991
+2018-12,Cloud & Infra,AWS,Sweden,232,47808
+2018-12,Cloud & Infra,AWS,Stockholm,93,13145
+2018-12,Cloud & Infra,AWS,Göteborg,28,4658
+2018-12,Cloud & Infra,AWS,Malmö,19,1991
+2018-12,Cloud & Infra,Azure,Sweden,260,47808
+2018-12,Cloud & Infra,Azure,Stockholm,110,13145
+2018-12,Cloud & Infra,Azure,Göteborg,47,4658
+2018-12,Cloud & Infra,Azure,Malmö,17,1991
+2018-12,Cloud & Infra,Docker,Sweden,135,47808
+2018-12,Cloud & Infra,Docker,Stockholm,67,13145
+2018-12,Cloud & Infra,Docker,Göteborg,29,4658
+2018-12,Cloud & Infra,Docker,Malmö,6,1991
+2018-12,Cloud & Infra,Kubernetes,Sweden,83,47808
+2018-12,Cloud & Infra,Kubernetes,Stockholm,37,13145
+2018-12,Cloud & Infra,Kubernetes,Göteborg,20,4658
+2018-12,Cloud & Infra,Kubernetes,Malmö,8,1991
+2018-12,Cloud & Infra,Terraform,Sweden,11,47808
+2018-12,Cloud & Infra,Terraform,Stockholm,7,13145
+2018-12,Cloud & Infra,Terraform,Göteborg,3,4658
+2018-12,Cloud & Infra,Terraform,Malmö,0,1991
+2018-12,Data & AI,PostgreSQL,Sweden,29,47808
+2018-12,Data & AI,PostgreSQL,Stockholm,16,13145
+2018-12,Data & AI,PostgreSQL,Göteborg,3,4658
+2018-12,Data & AI,PostgreSQL,Malmö,1,1991
+2018-12,Data & AI,SQL,Sweden,557,47808
+2018-12,Data & AI,SQL,Stockholm,218,13145
+2018-12,Data & AI,SQL,Göteborg,83,4658
+2018-12,Data & AI,SQL,Malmö,24,1991
+2018-12,Data & AI,Apache Kafka,Sweden,4,47808
+2018-12,Data & AI,Apache Kafka,Stockholm,4,13145
+2018-12,Data & AI,Apache Kafka,Göteborg,0,4658
+2018-12,Data & AI,Apache Kafka,Malmö,0,1991
+2018-12,Data & AI,PyTorch,Sweden,0,47808
+2018-12,Data & AI,PyTorch,Stockholm,0,13145
+2018-12,Data & AI,PyTorch,Göteborg,0,4658
+2018-12,Data & AI,PyTorch,Malmö,0,1991
+2018-12,Data & AI,TensorFlow,Sweden,15,47808
+2018-12,Data & AI,TensorFlow,Stockholm,7,13145
+2018-12,Data & AI,TensorFlow,Göteborg,4,4658
+2018-12,Data & AI,TensorFlow,Malmö,0,1991
+2019-01,Languages,JavaScript,Sweden,506,59673
+2019-01,Languages,JavaScript,Stockholm,211,15837
+2019-01,Languages,JavaScript,Göteborg,72,5689
+2019-01,Languages,JavaScript,Malmö,35,2693
+2019-01,Languages,TypeScript,Sweden,61,59673
+2019-01,Languages,TypeScript,Stockholm,19,15837
+2019-01,Languages,TypeScript,Göteborg,10,5689
+2019-01,Languages,TypeScript,Malmö,3,2693
+2019-01,Languages,Python,Sweden,403,59673
+2019-01,Languages,Python,Stockholm,131,15837
+2019-01,Languages,Python,Göteborg,88,5689
+2019-01,Languages,Python,Malmö,21,2693
+2019-01,Languages,Java,Sweden,583,59673
+2019-01,Languages,Java,Stockholm,228,15837
+2019-01,Languages,Java,Göteborg,100,5689
+2019-01,Languages,Java,Malmö,30,2693
+2019-01,Languages,C#,Sweden,456,59673
+2019-01,Languages,C#,Stockholm,130,15837
+2019-01,Languages,C#,Göteborg,77,5689
+2019-01,Languages,C#,Malmö,25,2693
+2019-01,Languages,Go,Sweden,25,59673
+2019-01,Languages,Go,Stockholm,13,15837
+2019-01,Languages,Go,Göteborg,5,5689
+2019-01,Languages,Go,Malmö,3,2693
+2019-01,Languages,Rust,Sweden,4,59673
+2019-01,Languages,Rust,Stockholm,1,15837
+2019-01,Languages,Rust,Göteborg,0,5689
+2019-01,Languages,Rust,Malmö,0,2693
+2019-01,Cloud & Infra,AWS,Sweden,250,59673
+2019-01,Cloud & Infra,AWS,Stockholm,142,15837
+2019-01,Cloud & Infra,AWS,Göteborg,28,5689
+2019-01,Cloud & Infra,AWS,Malmö,16,2693
+2019-01,Cloud & Infra,Azure,Sweden,218,59673
+2019-01,Cloud & Infra,Azure,Stockholm,84,15837
+2019-01,Cloud & Infra,Azure,Göteborg,37,5689
+2019-01,Cloud & Infra,Azure,Malmö,18,2693
+2019-01,Cloud & Infra,Docker,Sweden,149,59673
+2019-01,Cloud & Infra,Docker,Stockholm,74,15837
+2019-01,Cloud & Infra,Docker,Göteborg,26,5689
+2019-01,Cloud & Infra,Docker,Malmö,7,2693
+2019-01,Cloud & Infra,Kubernetes,Sweden,79,59673
+2019-01,Cloud & Infra,Kubernetes,Stockholm,36,15837
+2019-01,Cloud & Infra,Kubernetes,Göteborg,13,5689
+2019-01,Cloud & Infra,Kubernetes,Malmö,6,2693
+2019-01,Cloud & Infra,Terraform,Sweden,11,59673
+2019-01,Cloud & Infra,Terraform,Stockholm,9,15837
+2019-01,Cloud & Infra,Terraform,Göteborg,1,5689
+2019-01,Cloud & Infra,Terraform,Malmö,0,2693
+2019-01,Data & AI,PostgreSQL,Sweden,38,59673
+2019-01,Data & AI,PostgreSQL,Stockholm,18,15837
+2019-01,Data & AI,PostgreSQL,Göteborg,6,5689
+2019-01,Data & AI,PostgreSQL,Malmö,4,2693
+2019-01,Data & AI,SQL,Sweden,544,59673
+2019-01,Data & AI,SQL,Stockholm,256,15837
+2019-01,Data & AI,SQL,Göteborg,77,5689
+2019-01,Data & AI,SQL,Malmö,32,2693
+2019-01,Data & AI,Apache Kafka,Sweden,1,59673
+2019-01,Data & AI,Apache Kafka,Stockholm,1,15837
+2019-01,Data & AI,Apache Kafka,Göteborg,0,5689
+2019-01,Data & AI,Apache Kafka,Malmö,0,2693
+2019-01,Data & AI,PyTorch,Sweden,0,59673
+2019-01,Data & AI,PyTorch,Stockholm,0,15837
+2019-01,Data & AI,PyTorch,Göteborg,0,5689
+2019-01,Data & AI,PyTorch,Malmö,0,2693
+2019-01,Data & AI,TensorFlow,Sweden,5,59673
+2019-01,Data & AI,TensorFlow,Stockholm,2,15837
+2019-01,Data & AI,TensorFlow,Göteborg,1,5689
+2019-01,Data & AI,TensorFlow,Malmö,0,2693
+2019-02,Languages,JavaScript,Sweden,435,56558
+2019-02,Languages,JavaScript,Stockholm,173,14484
+2019-02,Languages,JavaScript,Göteborg,67,5222
+2019-02,Languages,JavaScript,Malmö,27,2301
+2019-02,Languages,TypeScript,Sweden,70,56558
+2019-02,Languages,TypeScript,Stockholm,20,14484
+2019-02,Languages,TypeScript,Göteborg,13,5222
+2019-02,Languages,TypeScript,Malmö,7,2301
+2019-02,Languages,Python,Sweden,431,56558
+2019-02,Languages,Python,Stockholm,139,14484
+2019-02,Languages,Python,Göteborg,104,5222
+2019-02,Languages,Python,Malmö,20,2301
+2019-02,Languages,Java,Sweden,524,56558
+2019-02,Languages,Java,Stockholm,187,14484
+2019-02,Languages,Java,Göteborg,107,5222
+2019-02,Languages,Java,Malmö,22,2301
+2019-02,Languages,C#,Sweden,434,56558
+2019-02,Languages,C#,Stockholm,137,14484
+2019-02,Languages,C#,Göteborg,70,5222
+2019-02,Languages,C#,Malmö,25,2301
+2019-02,Languages,Go,Sweden,34,56558
+2019-02,Languages,Go,Stockholm,18,14484
+2019-02,Languages,Go,Göteborg,3,5222
+2019-02,Languages,Go,Malmö,3,2301
+2019-02,Languages,Rust,Sweden,4,56558
+2019-02,Languages,Rust,Stockholm,0,14484
+2019-02,Languages,Rust,Göteborg,1,5222
+2019-02,Languages,Rust,Malmö,1,2301
+2019-02,Cloud & Infra,AWS,Sweden,191,56558
+2019-02,Cloud & Infra,AWS,Stockholm,108,14484
+2019-02,Cloud & Infra,AWS,Göteborg,39,5222
+2019-02,Cloud & Infra,AWS,Malmö,12,2301
+2019-02,Cloud & Infra,Azure,Sweden,195,56558
+2019-02,Cloud & Infra,Azure,Stockholm,69,14484
+2019-02,Cloud & Infra,Azure,Göteborg,45,5222
+2019-02,Cloud & Infra,Azure,Malmö,11,2301
+2019-02,Cloud & Infra,Docker,Sweden,155,56558
+2019-02,Cloud & Infra,Docker,Stockholm,64,14484
+2019-02,Cloud & Infra,Docker,Göteborg,39,5222
+2019-02,Cloud & Infra,Docker,Malmö,6,2301
+2019-02,Cloud & Infra,Kubernetes,Sweden,87,56558
+2019-02,Cloud & Infra,Kubernetes,Stockholm,39,14484
+2019-02,Cloud & Infra,Kubernetes,Göteborg,21,5222
+2019-02,Cloud & Infra,Kubernetes,Malmö,4,2301
+2019-02,Cloud & Infra,Terraform,Sweden,9,56558
+2019-02,Cloud & Infra,Terraform,Stockholm,4,14484
+2019-02,Cloud & Infra,Terraform,Göteborg,2,5222
+2019-02,Cloud & Infra,Terraform,Malmö,1,2301
+2019-02,Data & AI,PostgreSQL,Sweden,40,56558
+2019-02,Data & AI,PostgreSQL,Stockholm,23,14484
+2019-02,Data & AI,PostgreSQL,Göteborg,1,5222
+2019-02,Data & AI,PostgreSQL,Malmö,3,2301
+2019-02,Data & AI,SQL,Sweden,531,56558
+2019-02,Data & AI,SQL,Stockholm,212,14484
+2019-02,Data & AI,SQL,Göteborg,67,5222
+2019-02,Data & AI,SQL,Malmö,29,2301
+2019-02,Data & AI,Apache Kafka,Sweden,4,56558
+2019-02,Data & AI,Apache Kafka,Stockholm,3,14484
+2019-02,Data & AI,Apache Kafka,Göteborg,1,5222
+2019-02,Data & AI,Apache Kafka,Malmö,0,2301
+2019-02,Data & AI,PyTorch,Sweden,3,56558
+2019-02,Data & AI,PyTorch,Stockholm,2,14484
+2019-02,Data & AI,PyTorch,Göteborg,0,5222
+2019-02,Data & AI,PyTorch,Malmö,1,2301
+2019-02,Data & AI,TensorFlow,Sweden,11,56558
+2019-02,Data & AI,TensorFlow,Stockholm,7,14484
+2019-02,Data & AI,TensorFlow,Göteborg,0,5222
+2019-02,Data & AI,TensorFlow,Malmö,0,2301
+2019-03,Languages,JavaScript,Sweden,561,63121
+2019-03,Languages,JavaScript,Stockholm,228,15726
+2019-03,Languages,JavaScript,Göteborg,98,5665
+2019-03,Languages,JavaScript,Malmö,43,2692
+2019-03,Languages,TypeScript,Sweden,89,63121
+2019-03,Languages,TypeScript,Stockholm,35,15726
+2019-03,Languages,TypeScript,Göteborg,19,5665
+2019-03,Languages,TypeScript,Malmö,9,2692
+2019-03,Languages,Python,Sweden,461,63121
+2019-03,Languages,Python,Stockholm,132,15726
+2019-03,Languages,Python,Göteborg,118,5665
+2019-03,Languages,Python,Malmö,26,2692
+2019-03,Languages,Java,Sweden,612,63121
+2019-03,Languages,Java,Stockholm,245,15726
+2019-03,Languages,Java,Göteborg,116,5665
+2019-03,Languages,Java,Malmö,41,2692
+2019-03,Languages,C#,Sweden,463,63121
+2019-03,Languages,C#,Stockholm,151,15726
+2019-03,Languages,C#,Göteborg,85,5665
+2019-03,Languages,C#,Malmö,23,2692
+2019-03,Languages,Go,Sweden,45,63121
+2019-03,Languages,Go,Stockholm,17,15726
+2019-03,Languages,Go,Göteborg,8,5665
+2019-03,Languages,Go,Malmö,4,2692
+2019-03,Languages,Rust,Sweden,5,63121
+2019-03,Languages,Rust,Stockholm,1,15726
+2019-03,Languages,Rust,Göteborg,0,5665
+2019-03,Languages,Rust,Malmö,0,2692
+2019-03,Cloud & Infra,AWS,Sweden,200,63121
+2019-03,Cloud & Infra,AWS,Stockholm,98,15726
+2019-03,Cloud & Infra,AWS,Göteborg,25,5665
+2019-03,Cloud & Infra,AWS,Malmö,16,2692
+2019-03,Cloud & Infra,Azure,Sweden,248,63121
+2019-03,Cloud & Infra,Azure,Stockholm,83,15726
+2019-03,Cloud & Infra,Azure,Göteborg,44,5665
+2019-03,Cloud & Infra,Azure,Malmö,20,2692
+2019-03,Cloud & Infra,Docker,Sweden,157,63121
+2019-03,Cloud & Infra,Docker,Stockholm,71,15726
+2019-03,Cloud & Infra,Docker,Göteborg,30,5665
+2019-03,Cloud & Infra,Docker,Malmö,12,2692
+2019-03,Cloud & Infra,Kubernetes,Sweden,86,63121
+2019-03,Cloud & Infra,Kubernetes,Stockholm,47,15726
+2019-03,Cloud & Infra,Kubernetes,Göteborg,15,5665
+2019-03,Cloud & Infra,Kubernetes,Malmö,5,2692
+2019-03,Cloud & Infra,Terraform,Sweden,8,63121
+2019-03,Cloud & Infra,Terraform,Stockholm,4,15726
+2019-03,Cloud & Infra,Terraform,Göteborg,0,5665
+2019-03,Cloud & Infra,Terraform,Malmö,0,2692
+2019-03,Data & AI,PostgreSQL,Sweden,40,63121
+2019-03,Data & AI,PostgreSQL,Stockholm,20,15726
+2019-03,Data & AI,PostgreSQL,Göteborg,3,5665
+2019-03,Data & AI,PostgreSQL,Malmö,4,2692
+2019-03,Data & AI,SQL,Sweden,566,63121
+2019-03,Data & AI,SQL,Stockholm,240,15726
+2019-03,Data & AI,SQL,Göteborg,76,5665
+2019-03,Data & AI,SQL,Malmö,29,2692
+2019-03,Data & AI,Apache Kafka,Sweden,4,63121
+2019-03,Data & AI,Apache Kafka,Stockholm,1,15726
+2019-03,Data & AI,Apache Kafka,Göteborg,1,5665
+2019-03,Data & AI,Apache Kafka,Malmö,2,2692
+2019-03,Data & AI,PyTorch,Sweden,4,63121
+2019-03,Data & AI,PyTorch,Stockholm,2,15726
+2019-03,Data & AI,PyTorch,Göteborg,1,5665
+2019-03,Data & AI,PyTorch,Malmö,0,2692
+2019-03,Data & AI,TensorFlow,Sweden,7,63121
+2019-03,Data & AI,TensorFlow,Stockholm,2,15726
+2019-03,Data & AI,TensorFlow,Göteborg,2,5665
+2019-03,Data & AI,TensorFlow,Malmö,0,2692
+2019-04,Languages,JavaScript,Sweden,510,63219
+2019-04,Languages,JavaScript,Stockholm,222,16395
+2019-04,Languages,JavaScript,Göteborg,77,5888
+2019-04,Languages,JavaScript,Malmö,31,2685
+2019-04,Languages,TypeScript,Sweden,66,63219
+2019-04,Languages,TypeScript,Stockholm,29,16395
+2019-04,Languages,TypeScript,Göteborg,15,5888
+2019-04,Languages,TypeScript,Malmö,4,2685
+2019-04,Languages,Python,Sweden,415,63219
+2019-04,Languages,Python,Stockholm,134,16395
+2019-04,Languages,Python,Göteborg,86,5888
+2019-04,Languages,Python,Malmö,17,2685
+2019-04,Languages,Java,Sweden,603,63219
+2019-04,Languages,Java,Stockholm,242,16395
+2019-04,Languages,Java,Göteborg,104,5888
+2019-04,Languages,Java,Malmö,24,2685
+2019-04,Languages,C#,Sweden,513,63219
+2019-04,Languages,C#,Stockholm,184,16395
+2019-04,Languages,C#,Göteborg,82,5888
+2019-04,Languages,C#,Malmö,24,2685
+2019-04,Languages,Go,Sweden,38,63219
+2019-04,Languages,Go,Stockholm,17,16395
+2019-04,Languages,Go,Göteborg,7,5888
+2019-04,Languages,Go,Malmö,5,2685
+2019-04,Languages,Rust,Sweden,6,63219
+2019-04,Languages,Rust,Stockholm,4,16395
+2019-04,Languages,Rust,Göteborg,1,5888
+2019-04,Languages,Rust,Malmö,0,2685
+2019-04,Cloud & Infra,AWS,Sweden,235,63219
+2019-04,Cloud & Infra,AWS,Stockholm,97,16395
+2019-04,Cloud & Infra,AWS,Göteborg,49,5888
+2019-04,Cloud & Infra,AWS,Malmö,18,2685
+2019-04,Cloud & Infra,Azure,Sweden,276,63219
+2019-04,Cloud & Infra,Azure,Stockholm,86,16395
+2019-04,Cloud & Infra,Azure,Göteborg,48,5888
+2019-04,Cloud & Infra,Azure,Malmö,24,2685
+2019-04,Cloud & Infra,Docker,Sweden,147,63219
+2019-04,Cloud & Infra,Docker,Stockholm,61,16395
+2019-04,Cloud & Infra,Docker,Göteborg,32,5888
+2019-04,Cloud & Infra,Docker,Malmö,11,2685
+2019-04,Cloud & Infra,Kubernetes,Sweden,78,63219
+2019-04,Cloud & Infra,Kubernetes,Stockholm,36,16395
+2019-04,Cloud & Infra,Kubernetes,Göteborg,11,5888
+2019-04,Cloud & Infra,Kubernetes,Malmö,6,2685
+2019-04,Cloud & Infra,Terraform,Sweden,6,63219
+2019-04,Cloud & Infra,Terraform,Stockholm,4,16395
+2019-04,Cloud & Infra,Terraform,Göteborg,1,5888
+2019-04,Cloud & Infra,Terraform,Malmö,0,2685
+2019-04,Data & AI,PostgreSQL,Sweden,31,63219
+2019-04,Data & AI,PostgreSQL,Stockholm,11,16395
+2019-04,Data & AI,PostgreSQL,Göteborg,2,5888
+2019-04,Data & AI,PostgreSQL,Malmö,2,2685
+2019-04,Data & AI,SQL,Sweden,658,63219
+2019-04,Data & AI,SQL,Stockholm,291,16395
+2019-04,Data & AI,SQL,Göteborg,73,5888
+2019-04,Data & AI,SQL,Malmö,42,2685
+2019-04,Data & AI,Apache Kafka,Sweden,3,63219
+2019-04,Data & AI,Apache Kafka,Stockholm,1,16395
+2019-04,Data & AI,Apache Kafka,Göteborg,2,5888
+2019-04,Data & AI,Apache Kafka,Malmö,0,2685
+2019-04,Data & AI,PyTorch,Sweden,3,63219
+2019-04,Data & AI,PyTorch,Stockholm,2,16395
+2019-04,Data & AI,PyTorch,Göteborg,1,5888
+2019-04,Data & AI,PyTorch,Malmö,0,2685
+2019-04,Data & AI,TensorFlow,Sweden,9,63219
+2019-04,Data & AI,TensorFlow,Stockholm,4,16395
+2019-04,Data & AI,TensorFlow,Göteborg,1,5888
+2019-04,Data & AI,TensorFlow,Malmö,0,2685
+2019-05,Languages,JavaScript,Sweden,538,63228
+2019-05,Languages,JavaScript,Stockholm,199,15738
+2019-05,Languages,JavaScript,Göteborg,109,5941
+2019-05,Languages,JavaScript,Malmö,41,2771
+2019-05,Languages,TypeScript,Sweden,94,63228
+2019-05,Languages,TypeScript,Stockholm,38,15738
+2019-05,Languages,TypeScript,Göteborg,20,5941
+2019-05,Languages,TypeScript,Malmö,5,2771
+2019-05,Languages,Python,Sweden,487,63228
+2019-05,Languages,Python,Stockholm,146,15738
+2019-05,Languages,Python,Göteborg,141,5941
+2019-05,Languages,Python,Malmö,18,2771
+2019-05,Languages,Java,Sweden,670,63228
+2019-05,Languages,Java,Stockholm,243,15738
+2019-05,Languages,Java,Göteborg,154,5941
+2019-05,Languages,Java,Malmö,39,2771
+2019-05,Languages,C#,Sweden,530,63228
+2019-05,Languages,C#,Stockholm,166,15738
+2019-05,Languages,C#,Göteborg,115,5941
+2019-05,Languages,C#,Malmö,31,2771
+2019-05,Languages,Go,Sweden,54,63228
+2019-05,Languages,Go,Stockholm,24,15738
+2019-05,Languages,Go,Göteborg,13,5941
+2019-05,Languages,Go,Malmö,5,2771
+2019-05,Languages,Rust,Sweden,5,63228
+2019-05,Languages,Rust,Stockholm,3,15738
+2019-05,Languages,Rust,Göteborg,0,5941
+2019-05,Languages,Rust,Malmö,0,2771
+2019-05,Cloud & Infra,AWS,Sweden,236,63228
+2019-05,Cloud & Infra,AWS,Stockholm,93,15738
+2019-05,Cloud & Infra,AWS,Göteborg,61,5941
+2019-05,Cloud & Infra,AWS,Malmö,11,2771
+2019-05,Cloud & Infra,Azure,Sweden,299,63228
+2019-05,Cloud & Infra,Azure,Stockholm,94,15738
+2019-05,Cloud & Infra,Azure,Göteborg,86,5941
+2019-05,Cloud & Infra,Azure,Malmö,21,2771
+2019-05,Cloud & Infra,Docker,Sweden,200,63228
+2019-05,Cloud & Infra,Docker,Stockholm,81,15738
+2019-05,Cloud & Infra,Docker,Göteborg,63,5941
+2019-05,Cloud & Infra,Docker,Malmö,13,2771
+2019-05,Cloud & Infra,Kubernetes,Sweden,116,63228
+2019-05,Cloud & Infra,Kubernetes,Stockholm,41,15738
+2019-05,Cloud & Infra,Kubernetes,Göteborg,35,5941
+2019-05,Cloud & Infra,Kubernetes,Malmö,11,2771
+2019-05,Cloud & Infra,Terraform,Sweden,14,63228
+2019-05,Cloud & Infra,Terraform,Stockholm,5,15738
+2019-05,Cloud & Infra,Terraform,Göteborg,4,5941
+2019-05,Cloud & Infra,Terraform,Malmö,2,2771
+2019-05,Data & AI,PostgreSQL,Sweden,32,63228
+2019-05,Data & AI,PostgreSQL,Stockholm,11,15738
+2019-05,Data & AI,PostgreSQL,Göteborg,3,5941
+2019-05,Data & AI,PostgreSQL,Malmö,2,2771
+2019-05,Data & AI,SQL,Sweden,685,63228
+2019-05,Data & AI,SQL,Stockholm,255,15738
+2019-05,Data & AI,SQL,Göteborg,128,5941
+2019-05,Data & AI,SQL,Malmö,44,2771
+2019-05,Data & AI,Apache Kafka,Sweden,4,63228
+2019-05,Data & AI,Apache Kafka,Stockholm,2,15738
+2019-05,Data & AI,Apache Kafka,Göteborg,1,5941
+2019-05,Data & AI,Apache Kafka,Malmö,1,2771
+2019-05,Data & AI,PyTorch,Sweden,0,63228
+2019-05,Data & AI,PyTorch,Stockholm,0,15738
+2019-05,Data & AI,PyTorch,Göteborg,0,5941
+2019-05,Data & AI,PyTorch,Malmö,0,2771
+2019-05,Data & AI,TensorFlow,Sweden,12,63228
+2019-05,Data & AI,TensorFlow,Stockholm,7,15738
+2019-05,Data & AI,TensorFlow,Göteborg,2,5941
+2019-05,Data & AI,TensorFlow,Malmö,1,2771
+2019-06,Languages,JavaScript,Sweden,439,46870
+2019-06,Languages,JavaScript,Stockholm,156,10954
+2019-06,Languages,JavaScript,Göteborg,82,4524
+2019-06,Languages,JavaScript,Malmö,26,2249
+2019-06,Languages,TypeScript,Sweden,75,46870
+2019-06,Languages,TypeScript,Stockholm,19,10954
+2019-06,Languages,TypeScript,Göteborg,15,4524
+2019-06,Languages,TypeScript,Malmö,2,2249
+2019-06,Languages,Python,Sweden,361,46870
+2019-06,Languages,Python,Stockholm,105,10954
+2019-06,Languages,Python,Göteborg,89,4524
+2019-06,Languages,Python,Malmö,20,2249
+2019-06,Languages,Java,Sweden,547,46870
+2019-06,Languages,Java,Stockholm,185,10954
+2019-06,Languages,Java,Göteborg,120,4524
+2019-06,Languages,Java,Malmö,30,2249
+2019-06,Languages,C#,Sweden,454,46870
+2019-06,Languages,C#,Stockholm,125,10954
+2019-06,Languages,C#,Göteborg,94,4524
+2019-06,Languages,C#,Malmö,27,2249
+2019-06,Languages,Go,Sweden,29,46870
+2019-06,Languages,Go,Stockholm,9,10954
+2019-06,Languages,Go,Göteborg,9,4524
+2019-06,Languages,Go,Malmö,2,2249
+2019-06,Languages,Rust,Sweden,4,46870
+2019-06,Languages,Rust,Stockholm,1,10954
+2019-06,Languages,Rust,Göteborg,1,4524
+2019-06,Languages,Rust,Malmö,0,2249
+2019-06,Cloud & Infra,AWS,Sweden,218,46870
+2019-06,Cloud & Infra,AWS,Stockholm,90,10954
+2019-06,Cloud & Infra,AWS,Göteborg,44,4524
+2019-06,Cloud & Infra,AWS,Malmö,21,2249
+2019-06,Cloud & Infra,Azure,Sweden,222,46870
+2019-06,Cloud & Infra,Azure,Stockholm,80,10954
+2019-06,Cloud & Infra,Azure,Göteborg,50,4524
+2019-06,Cloud & Infra,Azure,Malmö,22,2249
+2019-06,Cloud & Infra,Docker,Sweden,164,46870
+2019-06,Cloud & Infra,Docker,Stockholm,65,10954
+2019-06,Cloud & Infra,Docker,Göteborg,36,4524
+2019-06,Cloud & Infra,Docker,Malmö,12,2249
+2019-06,Cloud & Infra,Kubernetes,Sweden,85,46870
+2019-06,Cloud & Infra,Kubernetes,Stockholm,37,10954
+2019-06,Cloud & Infra,Kubernetes,Göteborg,21,4524
+2019-06,Cloud & Infra,Kubernetes,Malmö,8,2249
+2019-06,Cloud & Infra,Terraform,Sweden,7,46870
+2019-06,Cloud & Infra,Terraform,Stockholm,3,10954
+2019-06,Cloud & Infra,Terraform,Göteborg,2,4524
+2019-06,Cloud & Infra,Terraform,Malmö,0,2249
+2019-06,Data & AI,PostgreSQL,Sweden,37,46870
+2019-06,Data & AI,PostgreSQL,Stockholm,7,10954
+2019-06,Data & AI,PostgreSQL,Göteborg,6,4524
+2019-06,Data & AI,PostgreSQL,Malmö,3,2249
+2019-06,Data & AI,SQL,Sweden,479,46870
+2019-06,Data & AI,SQL,Stockholm,181,10954
+2019-06,Data & AI,SQL,Göteborg,63,4524
+2019-06,Data & AI,SQL,Malmö,31,2249
+2019-06,Data & AI,Apache Kafka,Sweden,2,46870
+2019-06,Data & AI,Apache Kafka,Stockholm,1,10954
+2019-06,Data & AI,Apache Kafka,Göteborg,0,4524
+2019-06,Data & AI,Apache Kafka,Malmö,0,2249
+2019-06,Data & AI,PyTorch,Sweden,3,46870
+2019-06,Data & AI,PyTorch,Stockholm,2,10954
+2019-06,Data & AI,PyTorch,Göteborg,0,4524
+2019-06,Data & AI,PyTorch,Malmö,0,2249
+2019-06,Data & AI,TensorFlow,Sweden,15,46870
+2019-06,Data & AI,TensorFlow,Stockholm,4,10954
+2019-06,Data & AI,TensorFlow,Göteborg,1,4524
+2019-06,Data & AI,TensorFlow,Malmö,0,2249
+2019-07,Languages,JavaScript,Sweden,333,36900
+2019-07,Languages,JavaScript,Stockholm,120,9078
+2019-07,Languages,JavaScript,Göteborg,58,3661
+2019-07,Languages,JavaScript,Malmö,41,1792
+2019-07,Languages,TypeScript,Sweden,60,36900
+2019-07,Languages,TypeScript,Stockholm,21,9078
+2019-07,Languages,TypeScript,Göteborg,11,3661
+2019-07,Languages,TypeScript,Malmö,2,1792
+2019-07,Languages,Python,Sweden,294,36900
+2019-07,Languages,Python,Stockholm,81,9078
+2019-07,Languages,Python,Göteborg,80,3661
+2019-07,Languages,Python,Malmö,21,1792
+2019-07,Languages,Java,Sweden,404,36900
+2019-07,Languages,Java,Stockholm,139,9078
+2019-07,Languages,Java,Göteborg,92,3661
+2019-07,Languages,Java,Malmö,33,1792
+2019-07,Languages,C#,Sweden,341,36900
+2019-07,Languages,C#,Stockholm,73,9078
+2019-07,Languages,C#,Göteborg,67,3661
+2019-07,Languages,C#,Malmö,36,1792
+2019-07,Languages,Go,Sweden,27,36900
+2019-07,Languages,Go,Stockholm,7,9078
+2019-07,Languages,Go,Göteborg,7,3661
+2019-07,Languages,Go,Malmö,2,1792
+2019-07,Languages,Rust,Sweden,6,36900
+2019-07,Languages,Rust,Stockholm,0,9078
+2019-07,Languages,Rust,Göteborg,2,3661
+2019-07,Languages,Rust,Malmö,0,1792
+2019-07,Cloud & Infra,AWS,Sweden,169,36900
+2019-07,Cloud & Infra,AWS,Stockholm,70,9078
+2019-07,Cloud & Infra,AWS,Göteborg,41,3661
+2019-07,Cloud & Infra,AWS,Malmö,17,1792
+2019-07,Cloud & Infra,Azure,Sweden,168,36900
+2019-07,Cloud & Infra,Azure,Stockholm,55,9078
+2019-07,Cloud & Infra,Azure,Göteborg,39,3661
+2019-07,Cloud & Infra,Azure,Malmö,18,1792
+2019-07,Cloud & Infra,Docker,Sweden,127,36900
+2019-07,Cloud & Infra,Docker,Stockholm,54,9078
+2019-07,Cloud & Infra,Docker,Göteborg,27,3661
+2019-07,Cloud & Infra,Docker,Malmö,5,1792
+2019-07,Cloud & Infra,Kubernetes,Sweden,62,36900
+2019-07,Cloud & Infra,Kubernetes,Stockholm,29,9078
+2019-07,Cloud & Infra,Kubernetes,Göteborg,13,3661
+2019-07,Cloud & Infra,Kubernetes,Malmö,4,1792
+2019-07,Cloud & Infra,Terraform,Sweden,5,36900
+2019-07,Cloud & Infra,Terraform,Stockholm,2,9078
+2019-07,Cloud & Infra,Terraform,Göteborg,0,3661
+2019-07,Cloud & Infra,Terraform,Malmö,3,1792
+2019-07,Data & AI,PostgreSQL,Sweden,24,36900
+2019-07,Data & AI,PostgreSQL,Stockholm,11,9078
+2019-07,Data & AI,PostgreSQL,Göteborg,1,3661
+2019-07,Data & AI,PostgreSQL,Malmö,2,1792
+2019-07,Data & AI,SQL,Sweden,407,36900
+2019-07,Data & AI,SQL,Stockholm,160,9078
+2019-07,Data & AI,SQL,Göteborg,42,3661
+2019-07,Data & AI,SQL,Malmö,29,1792
+2019-07,Data & AI,Apache Kafka,Sweden,5,36900
+2019-07,Data & AI,Apache Kafka,Stockholm,3,9078
+2019-07,Data & AI,Apache Kafka,Göteborg,0,3661
+2019-07,Data & AI,Apache Kafka,Malmö,0,1792
+2019-07,Data & AI,PyTorch,Sweden,4,36900
+2019-07,Data & AI,PyTorch,Stockholm,2,9078
+2019-07,Data & AI,PyTorch,Göteborg,1,3661
+2019-07,Data & AI,PyTorch,Malmö,0,1792
+2019-07,Data & AI,TensorFlow,Sweden,10,36900
+2019-07,Data & AI,TensorFlow,Stockholm,7,9078
+2019-07,Data & AI,TensorFlow,Göteborg,1,3661
+2019-07,Data & AI,TensorFlow,Malmö,0,1792
+2019-08,Languages,JavaScript,Sweden,361,47923
+2019-08,Languages,JavaScript,Stockholm,161,12627
+2019-08,Languages,JavaScript,Göteborg,49,4644
+2019-08,Languages,JavaScript,Malmö,30,2227
+2019-08,Languages,TypeScript,Sweden,67,47923
+2019-08,Languages,TypeScript,Stockholm,31,12627
+2019-08,Languages,TypeScript,Göteborg,8,4644
+2019-08,Languages,TypeScript,Malmö,6,2227
+2019-08,Languages,Python,Sweden,347,47923
+2019-08,Languages,Python,Stockholm,108,12627
+2019-08,Languages,Python,Göteborg,81,4644
+2019-08,Languages,Python,Malmö,18,2227
+2019-08,Languages,Java,Sweden,454,47923
+2019-08,Languages,Java,Stockholm,183,12627
+2019-08,Languages,Java,Göteborg,97,4644
+2019-08,Languages,Java,Malmö,25,2227
+2019-08,Languages,C#,Sweden,369,47923
+2019-08,Languages,C#,Stockholm,97,12627
+2019-08,Languages,C#,Göteborg,70,4644
+2019-08,Languages,C#,Malmö,24,2227
+2019-08,Languages,Go,Sweden,28,47923
+2019-08,Languages,Go,Stockholm,14,12627
+2019-08,Languages,Go,Göteborg,6,4644
+2019-08,Languages,Go,Malmö,2,2227
+2019-08,Languages,Rust,Sweden,11,47923
+2019-08,Languages,Rust,Stockholm,3,12627
+2019-08,Languages,Rust,Göteborg,2,4644
+2019-08,Languages,Rust,Malmö,0,2227
+2019-08,Cloud & Infra,AWS,Sweden,201,47923
+2019-08,Cloud & Infra,AWS,Stockholm,105,12627
+2019-08,Cloud & Infra,AWS,Göteborg,38,4644
+2019-08,Cloud & Infra,AWS,Malmö,11,2227
+2019-08,Cloud & Infra,Azure,Sweden,218,47923
+2019-08,Cloud & Infra,Azure,Stockholm,94,12627
+2019-08,Cloud & Infra,Azure,Göteborg,38,4644
+2019-08,Cloud & Infra,Azure,Malmö,16,2227
+2019-08,Cloud & Infra,Docker,Sweden,131,47923
+2019-08,Cloud & Infra,Docker,Stockholm,65,12627
+2019-08,Cloud & Infra,Docker,Göteborg,25,4644
+2019-08,Cloud & Infra,Docker,Malmö,9,2227
+2019-08,Cloud & Infra,Kubernetes,Sweden,75,47923
+2019-08,Cloud & Infra,Kubernetes,Stockholm,43,12627
+2019-08,Cloud & Infra,Kubernetes,Göteborg,11,4644
+2019-08,Cloud & Infra,Kubernetes,Malmö,2,2227
+2019-08,Cloud & Infra,Terraform,Sweden,13,47923
+2019-08,Cloud & Infra,Terraform,Stockholm,8,12627
+2019-08,Cloud & Infra,Terraform,Göteborg,2,4644
+2019-08,Cloud & Infra,Terraform,Malmö,1,2227
+2019-08,Data & AI,PostgreSQL,Sweden,27,47923
+2019-08,Data & AI,PostgreSQL,Stockholm,13,12627
+2019-08,Data & AI,PostgreSQL,Göteborg,1,4644
+2019-08,Data & AI,PostgreSQL,Malmö,1,2227
+2019-08,Data & AI,SQL,Sweden,429,47923
+2019-08,Data & AI,SQL,Stockholm,175,12627
+2019-08,Data & AI,SQL,Göteborg,47,4644
+2019-08,Data & AI,SQL,Malmö,30,2227
+2019-08,Data & AI,Apache Kafka,Sweden,8,47923
+2019-08,Data & AI,Apache Kafka,Stockholm,6,12627
+2019-08,Data & AI,Apache Kafka,Göteborg,0,4644
+2019-08,Data & AI,Apache Kafka,Malmö,2,2227
+2019-08,Data & AI,PyTorch,Sweden,3,47923
+2019-08,Data & AI,PyTorch,Stockholm,3,12627
+2019-08,Data & AI,PyTorch,Göteborg,0,4644
+2019-08,Data & AI,PyTorch,Malmö,0,2227
+2019-08,Data & AI,TensorFlow,Sweden,15,47923
+2019-08,Data & AI,TensorFlow,Stockholm,7,12627
+2019-08,Data & AI,TensorFlow,Göteborg,0,4644
+2019-08,Data & AI,TensorFlow,Malmö,1,2227
+2019-09,Languages,JavaScript,Sweden,452,48656
+2019-09,Languages,JavaScript,Stockholm,163,12339
+2019-09,Languages,JavaScript,Göteborg,93,4937
+2019-09,Languages,JavaScript,Malmö,50,2687
+2019-09,Languages,TypeScript,Sweden,81,48656
+2019-09,Languages,TypeScript,Stockholm,21,12339
+2019-09,Languages,TypeScript,Göteborg,21,4937
+2019-09,Languages,TypeScript,Malmö,0,2687
+2019-09,Languages,Python,Sweden,414,48656
+2019-09,Languages,Python,Stockholm,130,12339
+2019-09,Languages,Python,Göteborg,110,4937
+2019-09,Languages,Python,Malmö,26,2687
+2019-09,Languages,Java,Sweden,569,48656
+2019-09,Languages,Java,Stockholm,191,12339
+2019-09,Languages,Java,Göteborg,137,4937
+2019-09,Languages,Java,Malmö,35,2687
+2019-09,Languages,C#,Sweden,448,48656
+2019-09,Languages,C#,Stockholm,110,12339
+2019-09,Languages,C#,Göteborg,80,4937
+2019-09,Languages,C#,Malmö,36,2687
+2019-09,Languages,Go,Sweden,38,48656
+2019-09,Languages,Go,Stockholm,16,12339
+2019-09,Languages,Go,Göteborg,6,4937
+2019-09,Languages,Go,Malmö,2,2687
+2019-09,Languages,Rust,Sweden,12,48656
+2019-09,Languages,Rust,Stockholm,1,12339
+2019-09,Languages,Rust,Göteborg,3,4937
+2019-09,Languages,Rust,Malmö,0,2687
+2019-09,Cloud & Infra,AWS,Sweden,254,48656
+2019-09,Cloud & Infra,AWS,Stockholm,102,12339
+2019-09,Cloud & Infra,AWS,Göteborg,72,4937
+2019-09,Cloud & Infra,AWS,Malmö,19,2687
+2019-09,Cloud & Infra,Azure,Sweden,255,48656
+2019-09,Cloud & Infra,Azure,Stockholm,74,12339
+2019-09,Cloud & Infra,Azure,Göteborg,66,4937
+2019-09,Cloud & Infra,Azure,Malmö,19,2687
+2019-09,Cloud & Infra,Docker,Sweden,204,48656
+2019-09,Cloud & Infra,Docker,Stockholm,74,12339
+2019-09,Cloud & Infra,Docker,Göteborg,51,4937
+2019-09,Cloud & Infra,Docker,Malmö,11,2687
+2019-09,Cloud & Infra,Kubernetes,Sweden,112,48656
+2019-09,Cloud & Infra,Kubernetes,Stockholm,47,12339
+2019-09,Cloud & Infra,Kubernetes,Göteborg,35,4937
+2019-09,Cloud & Infra,Kubernetes,Malmö,6,2687
+2019-09,Cloud & Infra,Terraform,Sweden,9,48656
+2019-09,Cloud & Infra,Terraform,Stockholm,3,12339
+2019-09,Cloud & Infra,Terraform,Göteborg,2,4937
+2019-09,Cloud & Infra,Terraform,Malmö,3,2687
+2019-09,Data & AI,PostgreSQL,Sweden,24,48656
+2019-09,Data & AI,PostgreSQL,Stockholm,8,12339
+2019-09,Data & AI,PostgreSQL,Göteborg,4,4937
+2019-09,Data & AI,PostgreSQL,Malmö,1,2687
+2019-09,Data & AI,SQL,Sweden,464,48656
+2019-09,Data & AI,SQL,Stockholm,174,12339
+2019-09,Data & AI,SQL,Göteborg,65,4937
+2019-09,Data & AI,SQL,Malmö,27,2687
+2019-09,Data & AI,Apache Kafka,Sweden,5,48656
+2019-09,Data & AI,Apache Kafka,Stockholm,1,12339
+2019-09,Data & AI,Apache Kafka,Göteborg,1,4937
+2019-09,Data & AI,Apache Kafka,Malmö,1,2687
+2019-09,Data & AI,PyTorch,Sweden,5,48656
+2019-09,Data & AI,PyTorch,Stockholm,3,12339
+2019-09,Data & AI,PyTorch,Göteborg,1,4937
+2019-09,Data & AI,PyTorch,Malmö,0,2687
+2019-09,Data & AI,TensorFlow,Sweden,13,48656
+2019-09,Data & AI,TensorFlow,Stockholm,6,12339
+2019-09,Data & AI,TensorFlow,Göteborg,3,4937
+2019-09,Data & AI,TensorFlow,Malmö,0,2687
+2019-10,Languages,JavaScript,Sweden,532,56726
+2019-10,Languages,JavaScript,Stockholm,202,14399
+2019-10,Languages,JavaScript,Göteborg,104,5727
+2019-10,Languages,JavaScript,Malmö,47,2756
+2019-10,Languages,TypeScript,Sweden,110,56726
+2019-10,Languages,TypeScript,Stockholm,46,14399
+2019-10,Languages,TypeScript,Göteborg,18,5727
+2019-10,Languages,TypeScript,Malmö,11,2756
+2019-10,Languages,Python,Sweden,502,56726
+2019-10,Languages,Python,Stockholm,161,14399
+2019-10,Languages,Python,Göteborg,142,5727
+2019-10,Languages,Python,Malmö,31,2756
+2019-10,Languages,Java,Sweden,612,56726
+2019-10,Languages,Java,Stockholm,238,14399
+2019-10,Languages,Java,Göteborg,151,5727
+2019-10,Languages,Java,Malmö,38,2756
+2019-10,Languages,C#,Sweden,589,56726
+2019-10,Languages,C#,Stockholm,176,14399
+2019-10,Languages,C#,Göteborg,101,5727
+2019-10,Languages,C#,Malmö,44,2756
+2019-10,Languages,Go,Sweden,60,56726
+2019-10,Languages,Go,Stockholm,29,14399
+2019-10,Languages,Go,Göteborg,10,5727
+2019-10,Languages,Go,Malmö,6,2756
+2019-10,Languages,Rust,Sweden,11,56726
+2019-10,Languages,Rust,Stockholm,7,14399
+2019-10,Languages,Rust,Göteborg,1,5727
+2019-10,Languages,Rust,Malmö,1,2756
+2019-10,Cloud & Infra,AWS,Sweden,280,56726
+2019-10,Cloud & Infra,AWS,Stockholm,121,14399
+2019-10,Cloud & Infra,AWS,Göteborg,67,5727
+2019-10,Cloud & Infra,AWS,Malmö,24,2756
+2019-10,Cloud & Infra,Azure,Sweden,328,56726
+2019-10,Cloud & Infra,Azure,Stockholm,117,14399
+2019-10,Cloud & Infra,Azure,Göteborg,80,5727
+2019-10,Cloud & Infra,Azure,Malmö,31,2756
+2019-10,Cloud & Infra,Docker,Sweden,196,56726
+2019-10,Cloud & Infra,Docker,Stockholm,83,14399
+2019-10,Cloud & Infra,Docker,Göteborg,47,5727
+2019-10,Cloud & Infra,Docker,Malmö,20,2756
+2019-10,Cloud & Infra,Kubernetes,Sweden,129,56726
+2019-10,Cloud & Infra,Kubernetes,Stockholm,58,14399
+2019-10,Cloud & Infra,Kubernetes,Göteborg,33,5727
+2019-10,Cloud & Infra,Kubernetes,Malmö,10,2756
+2019-10,Cloud & Infra,Terraform,Sweden,27,56726
+2019-10,Cloud & Infra,Terraform,Stockholm,14,14399
+2019-10,Cloud & Infra,Terraform,Göteborg,1,5727
+2019-10,Cloud & Infra,Terraform,Malmö,2,2756
+2019-10,Data & AI,PostgreSQL,Sweden,39,56726
+2019-10,Data & AI,PostgreSQL,Stockholm,16,14399
+2019-10,Data & AI,PostgreSQL,Göteborg,5,5727
+2019-10,Data & AI,PostgreSQL,Malmö,6,2756
+2019-10,Data & AI,SQL,Sweden,555,56726
+2019-10,Data & AI,SQL,Stockholm,248,14399
+2019-10,Data & AI,SQL,Göteborg,75,5727
+2019-10,Data & AI,SQL,Malmö,48,2756
+2019-10,Data & AI,Apache Kafka,Sweden,8,56726
+2019-10,Data & AI,Apache Kafka,Stockholm,6,14399
+2019-10,Data & AI,Apache Kafka,Göteborg,0,5727
+2019-10,Data & AI,Apache Kafka,Malmö,1,2756
+2019-10,Data & AI,PyTorch,Sweden,4,56726
+2019-10,Data & AI,PyTorch,Stockholm,4,14399
+2019-10,Data & AI,PyTorch,Göteborg,0,5727
+2019-10,Data & AI,PyTorch,Malmö,0,2756
+2019-10,Data & AI,TensorFlow,Sweden,10,56726
+2019-10,Data & AI,TensorFlow,Stockholm,6,14399
+2019-10,Data & AI,TensorFlow,Göteborg,1,5727
+2019-10,Data & AI,TensorFlow,Malmö,0,2756
+2019-11,Languages,JavaScript,Sweden,510,50482
+2019-11,Languages,JavaScript,Stockholm,209,12610
+2019-11,Languages,JavaScript,Göteborg,76,5134
+2019-11,Languages,JavaScript,Malmö,44,2323
+2019-11,Languages,TypeScript,Sweden,116,50482
+2019-11,Languages,TypeScript,Stockholm,45,12610
+2019-11,Languages,TypeScript,Göteborg,24,5134
+2019-11,Languages,TypeScript,Malmö,7,2323
+2019-11,Languages,Python,Sweden,522,50482
+2019-11,Languages,Python,Stockholm,152,12610
+2019-11,Languages,Python,Göteborg,150,5134
+2019-11,Languages,Python,Malmö,27,2323
+2019-11,Languages,Java,Sweden,597,50482
+2019-11,Languages,Java,Stockholm,244,12610
+2019-11,Languages,Java,Göteborg,103,5134
+2019-11,Languages,Java,Malmö,30,2323
+2019-11,Languages,C#,Sweden,474,50482
+2019-11,Languages,C#,Stockholm,141,12610
+2019-11,Languages,C#,Göteborg,92,5134
+2019-11,Languages,C#,Malmö,36,2323
+2019-11,Languages,Go,Sweden,50,50482
+2019-11,Languages,Go,Stockholm,16,12610
+2019-11,Languages,Go,Göteborg,9,5134
+2019-11,Languages,Go,Malmö,6,2323
+2019-11,Languages,Rust,Sweden,9,50482
+2019-11,Languages,Rust,Stockholm,2,12610
+2019-11,Languages,Rust,Göteborg,2,5134
+2019-11,Languages,Rust,Malmö,0,2323
+2019-11,Cloud & Infra,AWS,Sweden,264,50482
+2019-11,Cloud & Infra,AWS,Stockholm,129,12610
+2019-11,Cloud & Infra,AWS,Göteborg,62,5134
+2019-11,Cloud & Infra,AWS,Malmö,18,2323
+2019-11,Cloud & Infra,Azure,Sweden,338,50482
+2019-11,Cloud & Infra,Azure,Stockholm,136,12610
+2019-11,Cloud & Infra,Azure,Göteborg,74,5134
+2019-11,Cloud & Infra,Azure,Malmö,32,2323
+2019-11,Cloud & Infra,Docker,Sweden,204,50482
+2019-11,Cloud & Infra,Docker,Stockholm,96,12610
+2019-11,Cloud & Infra,Docker,Göteborg,44,5134
+2019-11,Cloud & Infra,Docker,Malmö,11,2323
+2019-11,Cloud & Infra,Kubernetes,Sweden,133,50482
+2019-11,Cloud & Infra,Kubernetes,Stockholm,64,12610
+2019-11,Cloud & Infra,Kubernetes,Göteborg,24,5134
+2019-11,Cloud & Infra,Kubernetes,Malmö,8,2323
+2019-11,Cloud & Infra,Terraform,Sweden,14,50482
+2019-11,Cloud & Infra,Terraform,Stockholm,9,12610
+2019-11,Cloud & Infra,Terraform,Göteborg,3,5134
+2019-11,Cloud & Infra,Terraform,Malmö,0,2323
+2019-11,Data & AI,PostgreSQL,Sweden,50,50482
+2019-11,Data & AI,PostgreSQL,Stockholm,29,12610
+2019-11,Data & AI,PostgreSQL,Göteborg,4,5134
+2019-11,Data & AI,PostgreSQL,Malmö,8,2323
+2019-11,Data & AI,SQL,Sweden,561,50482
+2019-11,Data & AI,SQL,Stockholm,228,12610
+2019-11,Data & AI,SQL,Göteborg,72,5134
+2019-11,Data & AI,SQL,Malmö,43,2323
+2019-11,Data & AI,Apache Kafka,Sweden,3,50482
+2019-11,Data & AI,Apache Kafka,Stockholm,2,12610
+2019-11,Data & AI,Apache Kafka,Göteborg,0,5134
+2019-11,Data & AI,Apache Kafka,Malmö,0,2323
+2019-11,Data & AI,PyTorch,Sweden,10,50482
+2019-11,Data & AI,PyTorch,Stockholm,5,12610
+2019-11,Data & AI,PyTorch,Göteborg,3,5134
+2019-11,Data & AI,PyTorch,Malmö,0,2323
+2019-11,Data & AI,TensorFlow,Sweden,17,50482
+2019-11,Data & AI,TensorFlow,Stockholm,11,12610
+2019-11,Data & AI,TensorFlow,Göteborg,2,5134
+2019-11,Data & AI,TensorFlow,Malmö,0,2323
+2019-12,Languages,JavaScript,Sweden,571,47018
+2019-12,Languages,JavaScript,Stockholm,227,10900
+2019-12,Languages,JavaScript,Göteborg,107,4778
+2019-12,Languages,JavaScript,Malmö,31,1862
+2019-12,Languages,TypeScript,Sweden,133,47018
+2019-12,Languages,TypeScript,Stockholm,54,10900
+2019-12,Languages,TypeScript,Göteborg,17,4778
+2019-12,Languages,TypeScript,Malmö,5,1862
+2019-12,Languages,Python,Sweden,588,47018
+2019-12,Languages,Python,Stockholm,193,10900
+2019-12,Languages,Python,Göteborg,154,4778
+2019-12,Languages,Python,Malmö,27,1862
+2019-12,Languages,Java,Sweden,688,47018
+2019-12,Languages,Java,Stockholm,241,10900
+2019-12,Languages,Java,Göteborg,173,4778
+2019-12,Languages,Java,Malmö,23,1862
+2019-12,Languages,C#,Sweden,554,47018
+2019-12,Languages,C#,Stockholm,146,10900
+2019-12,Languages,C#,Göteborg,120,4778
+2019-12,Languages,C#,Malmö,31,1862
+2019-12,Languages,Go,Sweden,61,47018
+2019-12,Languages,Go,Stockholm,29,10900
+2019-12,Languages,Go,Göteborg,6,4778
+2019-12,Languages,Go,Malmö,10,1862
+2019-12,Languages,Rust,Sweden,6,47018
+2019-12,Languages,Rust,Stockholm,2,10900
+2019-12,Languages,Rust,Göteborg,0,4778
+2019-12,Languages,Rust,Malmö,1,1862
+2019-12,Cloud & Infra,AWS,Sweden,292,47018
+2019-12,Cloud & Infra,AWS,Stockholm,124,10900
+2019-12,Cloud & Infra,AWS,Göteborg,81,4778
+2019-12,Cloud & Infra,AWS,Malmö,18,1862
+2019-12,Cloud & Infra,Azure,Sweden,393,47018
+2019-12,Cloud & Infra,Azure,Stockholm,138,10900
+2019-12,Cloud & Infra,Azure,Göteborg,85,4778
+2019-12,Cloud & Infra,Azure,Malmö,37,1862
+2019-12,Cloud & Infra,Docker,Sweden,230,47018
+2019-12,Cloud & Infra,Docker,Stockholm,109,10900
+2019-12,Cloud & Infra,Docker,Göteborg,58,4778
+2019-12,Cloud & Infra,Docker,Malmö,10,1862
+2019-12,Cloud & Infra,Kubernetes,Sweden,154,47018
+2019-12,Cloud & Infra,Kubernetes,Stockholm,78,10900
+2019-12,Cloud & Infra,Kubernetes,Göteborg,38,4778
+2019-12,Cloud & Infra,Kubernetes,Malmö,3,1862
+2019-12,Cloud & Infra,Terraform,Sweden,18,47018
+2019-12,Cloud & Infra,Terraform,Stockholm,3,10900
+2019-12,Cloud & Infra,Terraform,Göteborg,6,4778
+2019-12,Cloud & Infra,Terraform,Malmö,0,1862
+2019-12,Data & AI,PostgreSQL,Sweden,58,47018
+2019-12,Data & AI,PostgreSQL,Stockholm,31,10900
+2019-12,Data & AI,PostgreSQL,Göteborg,7,4778
+2019-12,Data & AI,PostgreSQL,Malmö,7,1862
+2019-12,Data & AI,SQL,Sweden,598,47018
+2019-12,Data & AI,SQL,Stockholm,216,10900
+2019-12,Data & AI,SQL,Göteborg,83,4778
+2019-12,Data & AI,SQL,Malmö,23,1862
+2019-12,Data & AI,Apache Kafka,Sweden,5,47018
+2019-12,Data & AI,Apache Kafka,Stockholm,0,10900
+2019-12,Data & AI,Apache Kafka,Göteborg,2,4778
+2019-12,Data & AI,Apache Kafka,Malmö,0,1862
+2019-12,Data & AI,PyTorch,Sweden,9,47018
+2019-12,Data & AI,PyTorch,Stockholm,5,10900
+2019-12,Data & AI,PyTorch,Göteborg,4,4778
+2019-12,Data & AI,PyTorch,Malmö,0,1862
+2019-12,Data & AI,TensorFlow,Sweden,20,47018
+2019-12,Data & AI,TensorFlow,Stockholm,11,10900
+2019-12,Data & AI,TensorFlow,Göteborg,5,4778
+2019-12,Data & AI,TensorFlow,Malmö,1,1862
 2020-01,Languages,JavaScript,Sweden,467,55425
 2020-01,Languages,JavaScript,Stockholm,153,10008
 2020-01,Languages,JavaScript,Göteborg,57,4193
@@ -15571,54 +16999,3 @@ month,category,skill,location,ads,total_ads
 2026-10,Data & AI,TensorFlow,Stockholm,0,20
 2026-10,Data & AI,TensorFlow,Göteborg,0,5
 2026-10,Data & AI,TensorFlow,Malmö,0,7
-2051-02,Languages,JavaScript,Sweden,0,1
-2051-02,Languages,JavaScript,Göteborg,0,1
-2051-02,Languages,TypeScript,Sweden,0,1
-2051-02,Languages,TypeScript,Göteborg,0,1
-2051-02,Languages,Python,Sweden,0,1
-2051-02,Languages,Python,Göteborg,0,1
-2051-02,Languages,Java,Sweden,0,1
-2051-02,Languages,Java,Göteborg,0,1
-2051-02,Languages,C#,Sweden,0,1
-2051-02,Languages,C#,Göteborg,0,1
-2051-02,Languages,Go,Sweden,0,1
-2051-02,Languages,Go,Göteborg,0,1
-2051-02,Languages,Rust,Sweden,0,1
-2051-02,Languages,Rust,Göteborg,0,1
-2051-02,Cloud & Infra,AWS,Sweden,0,1
-2051-02,Cloud & Infra,AWS,Göteborg,0,1
-2051-02,Cloud & Infra,Azure,Sweden,0,1
-2051-02,Cloud & Infra,Azure,Göteborg,0,1
-2051-02,Cloud & Infra,Docker,Sweden,0,1
-2051-02,Cloud & Infra,Docker,Göteborg,0,1
-2051-02,Cloud & Infra,Kubernetes,Sweden,0,1
-2051-02,Cloud & Infra,Kubernetes,Göteborg,0,1
-2051-02,Cloud & Infra,Terraform,Sweden,0,1
-2051-02,Cloud & Infra,Terraform,Göteborg,0,1
-2051-02,Data & AI,PostgreSQL,Sweden,0,1
-2051-02,Data & AI,PostgreSQL,Göteborg,0,1
-2051-02,Data & AI,SQL,Sweden,0,1
-2051-02,Data & AI,SQL,Göteborg,0,1
-2051-02,Data & AI,Apache Kafka,Sweden,0,1
-2051-02,Data & AI,Apache Kafka,Göteborg,0,1
-2051-02,Data & AI,PyTorch,Sweden,0,1
-2051-02,Data & AI,PyTorch,Göteborg,0,1
-2051-02,Data & AI,TensorFlow,Sweden,0,1
-2051-02,Data & AI,TensorFlow,Göteborg,0,1
-2099-01,Languages,JavaScript,Sweden,0,2
-2099-01,Languages,TypeScript,Sweden,0,2
-2099-01,Languages,Python,Sweden,0,2
-2099-01,Languages,Java,Sweden,0,2
-2099-01,Languages,C#,Sweden,0,2
-2099-01,Languages,Go,Sweden,0,2
-2099-01,Languages,Rust,Sweden,0,2
-2099-01,Cloud & Infra,AWS,Sweden,0,2
-2099-01,Cloud & Infra,Azure,Sweden,0,2
-2099-01,Cloud & Infra,Docker,Sweden,0,2
-2099-01,Cloud & Infra,Kubernetes,Sweden,0,2
-2099-01,Cloud & Infra,Terraform,Sweden,0,2
-2099-01,Data & AI,PostgreSQL,Sweden,0,2
-2099-01,Data & AI,SQL,Sweden,0,2
-2099-01,Data & AI,Apache Kafka,Sweden,0,2
-2099-01,Data & AI,PyTorch,Sweden,0,2
-2099-01,Data & AI,TensorFlow,Sweden,0,2
