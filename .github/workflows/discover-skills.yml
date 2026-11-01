@@ -1,0 +1,35 @@
+name: Discover top skills (one-off analysis)
+
+# Temporary: runs on pushes to the analysis branch only, never on main.
+on:
+  push:
+    branches: [claude/project-thread-c1oxez]
+    paths: [backend/discover_skills.py, .github/workflows/discover-skills.yml]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        source: [live, "2025", "2026-Q3"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r backend/requirements.txt
+      - name: Scan
+        run: |
+          mkdir -p discovery
+          if [ "${{ matrix.source }}" = live ]; then
+            python backend/discover_skills.py live --out discovery/live.json
+          else
+            python backend/discover_skills.py hist "${{ matrix.source }}" --out "discovery/hist-${{ matrix.source }}.json"
+          fi
+          python backend/discover_skills.py report discovery/*.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: discovery-${{ matrix.source }}
+          path: discovery/
