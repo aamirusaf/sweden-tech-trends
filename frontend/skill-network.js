@@ -264,6 +264,15 @@ function selectNetworkSkill(name) {
     }
 }
 
+// How lenient "match" is: older data files (no missing_allowed) used the strict rule.
+function matchRule() {
+    const missing = skillNetwork.missing_allowed || 0;
+    if (!missing) return ' (they ask for no other tracked skill)';
+    return missing === 1
+        ? ' (you have every tracked skill they ask for, or all but one)'
+        : ` (you lack at most ${missing} of the tracked skills they ask for)`;
+}
+
 function renderNetworkPanel() {
     const panel = document.getElementById('skillNetworkPanel');
     if (!panel) return;
@@ -346,8 +355,8 @@ function renderNetworkPanel() {
     summary.textContent = !bundle.steps.length
         ? `${name} alone covers ${last}% of its ads; the rest ask for a wide mix of other skills.`
         : last >= (skillNetwork.target_percent || 50)
-        ? `Knowing these covers ${last}% of ${name} ads: they ask for no other tracked skill.`
-        : `${name} ads ask for a wide mix of skills; these cover ${last}% of them.`;
+        ? `Knowing these makes you a match for ${last}% of ${name} ads${matchRule()}.`
+        : `${name} ads ask for a wide mix of skills; these make you a match for ${last}% of them${matchRule()}.`;
     panel.appendChild(summary);
 
     const openings = document.createElement('button');
