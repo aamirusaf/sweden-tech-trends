@@ -32,6 +32,10 @@ API_QUERIES = {
     "Active Directory": ['"Active Directory"', '"Entra ID"', '"Azure AD"'],
 }
 
+# The Data/IT occupation field in Arbetsförmedlingen's taxonomy. The dashboard shows
+# each skill as a share of the ads in this field, i.e. of tech jobs, not of all jobs.
+DATA_IT_FIELD = "apaJ_2ja_LuF"
+
 # JobSearch returns at most offset 2000 + limit 100 hits for one query.
 MAX_PAGED_HITS = 2100
 
@@ -119,9 +123,12 @@ def search(params):
     return response.json()
 
 
-def search_skill(skill, municipality_id, sample_size):
-    """Return (number of matching ads, up to sample_size of them, newest first)."""
+def search_skill(skill, municipality_id, sample_size, it_only=False):
+    """Return (number of matching ads, up to sample_size of them, newest first).
+    it_only limits the search to ads in the Data/IT occupation field."""
     base = {"municipality": municipality_id} if municipality_id else {}
+    if it_only:
+        base["occupation-field"] = DATA_IT_FIELD
     queries = API_QUERIES.get(skill)
     if not queries:
         data = search({"q": skill, "limit": sample_size, **base})
@@ -176,7 +183,9 @@ MIN_SAMPLE_FOR_REMOTE_BADGE = 3
 # record is history.csv, which is never trimmed.
 MAX_HISTORY_SNAPSHOTS = 52
 
-HISTORY_CSV_FIELDS = ["date", "category", "skill", "location", "postings"]
+# postings: ads mentioning the skill, all job categories. it_postings / it_total: ads in
+# the Data/IT field mentioning it, and all Data/IT ads (empty before 2026-11-02).
+HISTORY_CSV_FIELDS = ["date", "category", "skill", "location", "postings", "it_postings", "it_total"]
 
 # Locations to break demand down by, mapped to JobTech taxonomy municipality concept IDs.
 # "Sweden" (None) means no municipality filter, i.e. the nationwide total.
@@ -201,22 +210,41 @@ def fetch_skill_demand():
 
     print("🚀 Fetching live technology metrics from Arbetsförmedlingen API...")
 
+    # Total number of live Data/IT ads per location: the denominator for each skill's share.
+    it_totals = {}
+    for location, municipality_id in LOCATIONS.items():
+        params = {"occupation-field": DATA_IT_FIELD, "limit": 0}
+        if municipality_id:
+            params["municipality"] = municipality_id
+        try:
+            it_totals[location] = search(params).get("total", {}).get("value", 0)
+            print(f"📊 Data/IT ads ({location}): {it_totals[location]}")
+        except (ApiError, requests.RequestException) as e:
+            print(f"⚠️ Failed fetching the Data/IT total ({location}). {e}")
+            failures.append(f"Data/IT total ({location})")
+    results["it_totals"] = it_totals
+
     # Iterate through categories and request metrics
     for category, skills in TECH_STACKS.items():
         results["data"][category] = []
 
         for skill in skills:
             by_location = {}
+            it_by_location = {}
             postings_by_location = {}
 
             for location, municipality_id in LOCATIONS.items():
                 # The free-text query (q) matches titles and descriptions; see search_skill.
-                # limit>0 still returns the full match count in `total`, plus that many sample ads.
+                # Two counts per skill: within Data/IT ads (what the dashboard shows, and
+                # where the sample postings come from) and across all ads (kept in
+                # history.csv so the long-term archive continues the earlier measure).
                 # The nationwide ("Sweden") query pulls a bigger sample since it also feeds the
                 # skill co-occurrence scan below; city queries only need enough for the postings list.
                 sample_size = CO_OCCURRENCE_SAMPLE_SIZE if location == "Sweden" else POSTINGS_PER_SKILL
                 try:
-                    total_ads, hits = search_skill(skill, municipality_id, sample_size)
+                    it_ads, hits = search_skill(skill, municipality_id, sample_size, it_only=True)
+                    total_ads, _ = search_skill(skill, municipality_id, 0)
+                    it_by_location[location] = it_ads
                     by_location[location] = total_ads
                     postings_by_location[location] = [
                         {
@@ -236,7 +264,7 @@ def fetch_skill_demand():
                             skill, hits, co_occurrence_counts, co_occurrence_samples, remote_mention_counts
                         )
 
-                    print(f"✅ {skill} ({location}): found {total_ads} job posts.")
+                    print(f"✅ {skill} ({location}): {it_ads} Data/IT ads, {total_ads} ads in all.")
 
                 except ApiError as e:
                     print(f"⚠️ Failed fetching data for {skill} ({location}). {e}")
@@ -251,7 +279,9 @@ def fetch_skill_demand():
             results["data"][category].append({
                 "name": skill,
                 "value": by_location.get("Sweden", 0),
-                "by_location": by_location
+                "by_location": by_location,
+                "it_value": it_by_location.get("Sweden", 0),
+                "it_by_location": it_by_location
             })
             postings_by_skill[skill] = postings_by_location
 
@@ -295,8 +325,8 @@ def fetch_skill_demand():
         # gets today's snapshot (and before it can drop old ones past its cap).
         if not os.path.exists(history_csv_path):
             seed_history_csv(history_csv_path, history_path)
-        update_history(history_path, results["data"])
-        append_history_csv(history_csv_path, today_utc(), results["data"])
+        update_history(history_path, results["data"], results["it_totals"])
+        append_history_csv(history_csv_path, today_utc(), results["data"], results["it_totals"])
         print(f"\n🎉 Successfully compiled metrics files saved to: {data_dir}")
     except FileNotFoundError:
         print("❌ Error: Directory 'backend/data/' does not exist. Run setup structure command first.")
@@ -357,7 +387,7 @@ def summarize_remote_work(remote_mention_counts):
     return summary
 
 
-def update_history(history_path, current_data):
+def update_history(history_path, current_data, it_totals=None):
     """Append today's snapshot to history.json, replacing any snapshot already
     recorded for today so re-running the script the same day doesn't duplicate it."""
     try:
@@ -368,7 +398,7 @@ def update_history(history_path, current_data):
 
     today = today_utc()
     snapshots = [s for s in history.get("snapshots", []) if s.get("date") != today]
-    snapshots.append({"date": today, "data": current_data})
+    snapshots.append({"date": today, "data": current_data, "it_totals": it_totals or {}})
     snapshots.sort(key=lambda s: s["date"])
 
     history["snapshots"] = snapshots[-MAX_HISTORY_SNAPSHOTS:]
@@ -380,11 +410,13 @@ def today_utc():
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 
-def snapshot_to_rows(date, data):
+def snapshot_to_rows(date, data, it_totals=None):
     """Flatten one snapshot ({category: [{name, by_location}]}) into long-format CSV rows."""
+    it_totals = it_totals or {}
     rows = []
     for category, skills in data.items():
         for skill in skills:
+            it_by_location = skill.get("it_by_location") or {}
             for location, postings in (skill.get("by_location") or {}).items():
                 rows.append({
                     "date": date,
@@ -392,18 +424,20 @@ def snapshot_to_rows(date, data):
                     "skill": skill["name"],
                     "location": location,
                     "postings": postings,
+                    "it_postings": it_by_location.get(location, ""),
+                    "it_total": it_totals.get(location, "") if location in it_by_location else "",
                 })
     return rows
 
 
-def append_history_csv(csv_path, date, data):
+def append_history_csv(csv_path, date, data, it_totals=None):
     """Add one dated snapshot to history.csv, the permanent long-term record.
 
     Rows for the same date are replaced, so re-running the script on the same day
     doesn't duplicate them. Unlike history.json, nothing is ever trimmed. Rows stay
     sorted by date, with each date's rows in a stable order, so git diffs only show
     the newly added week."""
-    write_history_csv(csv_path, read_history_csv(csv_path), {date: snapshot_to_rows(date, data)})
+    write_history_csv(csv_path, read_history_csv(csv_path), {date: snapshot_to_rows(date, data, it_totals)})
 
 
 def seed_history_csv(csv_path, history_path):
@@ -413,7 +447,7 @@ def seed_history_csv(csv_path, history_path):
             snapshots = json.load(f).get("snapshots", [])
     except (FileNotFoundError, json.JSONDecodeError):
         snapshots = []
-    new_rows = {s["date"]: snapshot_to_rows(s["date"], s["data"]) for s in snapshots}
+    new_rows = {s["date"]: snapshot_to_rows(s["date"], s["data"], s.get("it_totals")) for s in snapshots}
     write_history_csv(csv_path, read_history_csv(csv_path), new_rows)
 
 
@@ -432,7 +466,7 @@ def write_history_csv(csv_path, existing_rows, new_rows_by_date):
     rows.sort(key=lambda r: r["date"])  # stable sort keeps each date's row order
 
     with open(csv_path, "w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=HISTORY_CSV_FIELDS, lineterminator="\n")
+        writer = csv.DictWriter(f, fieldnames=HISTORY_CSV_FIELDS, lineterminator="\n", restval="")
         writer.writeheader()
         writer.writerows(rows)
 

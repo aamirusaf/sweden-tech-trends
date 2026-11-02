@@ -46,7 +46,17 @@ DEFAULT_FILE_FOR = {
 
 MIN_YEAR = 2006
 
-OUTPUT_FIELDS = ["month", "category", "skill", "location", "ads", "total_ads"]
+# ads / total_ads: across all job ads. it_ads / it_total_ads: only ads in the Data/IT
+# occupation field, which is what the dashboard's history chart shows.
+OUTPUT_FIELDS = ["month", "category", "skill", "location", "ads", "total_ads", "it_ads", "it_total_ads"]
+
+DATA_IT_FIELD = "apaJ_2ja_LuF"
+
+# Files before 2018 don't say which occupation field an ad belongs to, only the old
+# occupation id (occupation.legacy_ams_taxonomy_id). This file lists the old ids that
+# belong to Data/IT. It was built from the 2019-2023 files, where ads carry both the old
+# id and the field, by giving each id the field most of its ads have.
+LEGACY_IT_OCCUPATIONS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "legacy_it_occupations.json")
 
 # Municipality codes (SCB kommunkod) for the cities in LOCATIONS, used alongside
 # the taxonomy concept IDs and the plain names, because older years may only
@@ -126,6 +136,26 @@ def ad_city(ad):
     return None
 
 
+def first(value):
+    return (value[0] if isinstance(value, list) and value else value) or {}
+
+
+def load_legacy_it_occupations():
+    with open(LEGACY_IT_OCCUPATIONS_PATH, encoding="utf-8") as f:
+        return {str(i) for i in json.load(f)["legacy_ams_taxonomy_ids"]}
+
+
+def ad_is_it(ad, legacy_it_ids):
+    """True if the ad is in the Data/IT occupation field. Uses the field when the ad has
+    one, and otherwise the old occupation id."""
+    field = first(ad.get("occupation_field"))
+    if isinstance(field, dict) and (field.get("concept_id") or field.get("label")):
+        return field.get("concept_id") == DATA_IT_FIELD or field.get("label") == "Data/IT"
+    occupation = first(ad.get("occupation"))
+    legacy_id = occupation.get("legacy_ams_taxonomy_id") if isinstance(occupation, dict) else None
+    return legacy_id is not None and str(legacy_id) in legacy_it_ids
+
+
 # --- count ---------------------------------------------------------------------
 
 def download(name, dest_dir, attempts=4):
@@ -172,8 +202,11 @@ def iter_ads(zip_path):
 
 def count_file(zip_path):
     matchers = build_matchers()
+    legacy_it_ids = load_legacy_it_occupations()
     mentions = Counter()   # (month, skill, location) -> ads
     totals = Counter()     # (month, location) -> ads
+    it_mentions = Counter()
+    it_totals = Counter()
     seen_ids = set()
     stats = Counter()
 
@@ -204,13 +237,21 @@ def count_file(zip_path):
             stats["in_tracked_city"] += 1
         stats["counted"] += 1
 
+        is_it = ad_is_it(ad, legacy_it_ids)
+        if is_it:
+            stats["data_it"] += 1
+
         locations = ["Sweden"] + ([city] if city else [])
         for location in locations:
             totals[(month, location)] += 1
+            if is_it:
+                it_totals[(month, location)] += 1
         for skill, matcher in matchers.items():
             if text and matcher.search(text):
                 for location in locations:
                     mentions[(month, skill, location)] += 1
+                    if is_it:
+                        it_mentions[(month, skill, location)] += 1
 
         if stats["lines"] % 200000 == 0:
             print(f"  {stats['lines']:,} lines...", flush=True)
@@ -223,10 +264,16 @@ def count_file(zip_path):
         sys.exit(f"Only {stats['counted']}/{ads} ads had a publication date; schema not recognised.")
     if (stats["counted"] - stats["no_text"]) / max(stats["counted"], 1) < MIN_PARSED_SHARE:
         sys.exit(f"{stats['no_text']}/{stats['counted']} ads had no headline/description text; schema not recognised.")
-    return mentions, totals
+    # The oldest files (2006 and some later years) give no occupation for most ads, so
+    # their Data/IT counts are empty and the chart leaves those years out. Say so in the
+    # log rather than fail: the all-ads counts for those years are still valid.
+    if stats["data_it"] < 0.01 * stats["counted"]:
+        print(f"⚠️ Only {stats['data_it']} of {stats['counted']} ads could be placed in Data/IT; "
+              "this file mostly has no occupation data.", flush=True)
+    return mentions, totals, it_mentions, it_totals
 
 
-def rows_from_counts(mentions, totals):
+def rows_from_counts(mentions, totals, it_mentions, it_totals):
     rows = []
     for (month, location), total in totals.items():
         for skill, category in CATEGORY_OF.items():
@@ -237,6 +284,8 @@ def rows_from_counts(mentions, totals):
                 "location": location,
                 "ads": mentions.get((month, skill, location), 0),
                 "total_ads": total,
+                "it_ads": it_mentions.get((month, skill, location), 0),
+                "it_total_ads": it_totals.get((month, location), 0),
             })
     return rows
 
@@ -247,7 +296,7 @@ def write_rows(path, rows):
     rows.sort(key=lambda r: (r["month"], order[r["skill"]], location_order.get(r["location"], 99)))
     os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
     with open(path, "w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=OUTPUT_FIELDS, lineterminator="\n")
+        writer = csv.DictWriter(f, fieldnames=OUTPUT_FIELDS, lineterminator="\n", restval="")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -255,11 +304,11 @@ def write_rows(path, rows):
 def cmd_count(args):
     name = DEFAULT_FILE_FOR.get(args.name, args.name)
     if args.zip:
-        mentions, totals = count_file(args.zip)
+        counts = count_file(args.zip)
     else:
         with tempfile.TemporaryDirectory() as tmp:
-            mentions, totals = count_file(download(name, tmp))
-    rows = rows_from_counts(mentions, totals)
+            counts = count_file(download(name, tmp))
+    rows = rows_from_counts(*counts)
     write_rows(args.out, rows)
     print(f"Wrote {len(rows)} rows for {name} to {args.out}")
 
@@ -270,17 +319,18 @@ def cmd_merge(args):
     """Combine per-file partial CSVs into the output file. A month can appear in two
     files (an ad published late in December may sit in the next year's file), so
     counts are summed. Months already in the output that no partial covers are kept."""
-    ads = Counter()
-    totals = Counter()
+    sums = {field: Counter() for field in ("ads", "total_ads", "it_ads", "it_total_ads")}
     kept = []
     for path in args.partials:
         with open(path, encoding="utf-8", newline="") as f:
             for row in csv.DictReader(f):
-                ads[(row["month"], row["skill"], row["location"])] += int(row["ads"])
-                totals[(row["month"], row["skill"], row["location"])] += int(row["total_ads"])
+                key = (row["month"], row["skill"], row["location"])
+                for field, counter in sums.items():
+                    counter[key] += int(row.get(field) or 0)
+    totals = sums["total_ads"]
     rows = [
         {"month": month, "category": CATEGORY_OF[skill], "skill": skill, "location": location,
-         "ads": ads[key], "total_ads": totals[key]}
+         **{field: counter[key] for field, counter in sums.items()}}
         for key in totals
         for (month, skill, location) in [key]
         if skill in CATEGORY_OF

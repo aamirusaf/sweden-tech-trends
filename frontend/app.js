@@ -42,8 +42,29 @@ const SERIES_COLORS = {
     dark:  ['#3987e5', '#d95926', '#199e70', '#c98500', '#d55181', '#008300', '#9085e9', '#e66767']
 };
 
-function skillValue(skill, location = selectedLocation) {
+let itTotals = {};         // { location: number of live Data/IT ads }
+
+// Number of live ads mentioning the skill. Counts within Data/IT ads when the data
+// has them; older data files only have the all-ads count.
+function skillCount(skill, location = selectedLocation) {
+    if (skill.it_by_location) return skill.it_by_location[location] ?? 0;
     return (skill.by_location && skill.by_location[location]) ?? skill.value ?? 0;
+}
+
+// Share of live Data/IT ads (in %) that mention the skill, or null without that data.
+function skillShare(skill, location = selectedLocation) {
+    const total = itTotals[location];
+    if (!skill.it_by_location || !total) return null;
+    return +(100 * (skill.it_by_location[location] ?? 0) / total).toFixed(1);
+}
+
+// What the charts and rankings use: the Data/IT share, falling back to the raw count.
+function skillValue(skill, location = selectedLocation) {
+    return skillShare(skill, location) ?? skillCount(skill, location);
+}
+
+function showsShares() {
+    return Object.keys(itTotals).length > 0;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -72,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('timestamp').innerText = `Last updated: ${jsonData.last_updated}`;
 
             rawCategoryData = jsonData.data;
+            itTotals = jsonData.it_totals || {};
             allSkills = Object.entries(jsonData.data).flatMap(([category, skills]) =>
                 skills.map(skill => ({ ...skill, category }))
             );
@@ -111,7 +133,8 @@ function computeTrends(history) {
     const previous = snapshots[snapshots.length - 2];
     const trends = {};
     Object.values(previous.data).flat().forEach(skill => {
-        trends[skill.name] = { previousValue: skill.value, previousDate: previous.date };
+        // Compare like with like: Data/IT counts only, which snapshots have from 2026-11-02.
+        if (skill.it_value) trends[skill.name] = { previousValue: skill.it_value, previousDate: previous.date };
     });
     return trends;
 }
@@ -170,7 +193,7 @@ function renderCharts() {
     charts.length = 0;
 
     const buildCategoryData = (categoryKey) =>
-        (rawCategoryData[categoryKey] || []).map(skill => ({ name: skill.name, value: skillValue(skill) }));
+        (rawCategoryData[categoryKey] || []).map(skill => ({ name: skill.name, value: skillValue(skill), count: skillCount(skill) }));
 
     charts.push(createChart('languagesChart', buildCategoryData('Languages'), 'Languages'));
     charts.push(createChart('cloudChart', buildCategoryData('Cloud & Infra'), 'Cloud & Infra'));
@@ -260,15 +283,17 @@ function renderSkillGapResults() {
         name.className = 'skill-gap-name';
         name.textContent = skill.name;
 
-        const value = skillValue(skill);
+        const share = skillShare(skill);
+        const ads = skillCount(skill);
 
         const count = document.createElement('span');
         count.className = 'skill-gap-count';
-        count.textContent = `${value} postings`;
+        count.textContent = share === null ? `${ads} postings` : `${share}% of IT ads`;
+        count.title = `${ads.toLocaleString()} live ads`;
 
         header.append(rank, swatch, name, count);
 
-        const trend = trendLabel(skill.name, value);
+        const trend = trendLabel(skill.name, ads);
         if (trend) {
             const trendBadge = document.createElement('span');
             trendBadge.className = `skill-gap-trend ${trend.className}`;
@@ -398,13 +423,15 @@ function createChart(canvasId, categoryData, categoryKey) {
     const sorted = [...categoryData].sort((a, b) => b.value - a.value);
     const labels = sorted.map(item => item.name);
     const dataValues = sorted.map(item => item.value);
+    const counts = sorted.map(item => item.count);
+    const shares = showsShares();
 
     return new Chart(ctx, {
         type: 'bar',
         data: {
             labels: labels,
             datasets: [{
-                label: 'Active job postings',
+                label: shares ? 'Share of live Data/IT ads' : 'Active job postings',
                 data: dataValues,
                 backgroundColor: barColor,
                 borderRadius: 4,
@@ -429,8 +456,10 @@ function createChart(canvasId, categoryData, categoryKey) {
                 legend: { display: false },
                 tooltip: {
                     callbacks: {
-                        label: (item) => `${item.formattedValue} job postings`,
-                        afterLabel: (item) => trendLabel(item.label, item.raw)?.text || ''
+                        label: (item) => shares
+                            ? `${item.raw}% of Data/IT ads (${counts[item.dataIndex].toLocaleString()} of ${(itTotals[selectedLocation] || 0).toLocaleString()})`
+                            : `${item.formattedValue} job postings`,
+                        afterLabel: (item) => trendLabel(item.label, counts[item.dataIndex])?.text || ''
                     }
                 }
             },
@@ -439,7 +468,7 @@ function createChart(canvasId, categoryData, categoryKey) {
                     beginAtZero: true,
                     grid: { color: theme.grid },
                     border: { color: theme.axis },
-                    ticks: { color: theme.ink }
+                    ticks: { color: theme.ink, callback: (value) => shares ? `${value}%` : value }
                 },
                 y: {
                     grid: { display: false },
@@ -453,25 +482,33 @@ function createChart(canvasId, categoryData, categoryKey) {
 
 // --- Long-term history (historical_monthly.csv) -------------------------------
 
+const MIN_ADS_PER_YEAR = 500;
+const MIN_IT_SHARE_OF_ALL_ADS = 0.02; // Data/IT is about 5-10% of all ads in years with full data
+
 function aggregateHistoricalByYear(csvText) {
-    // CSV columns: month,category,skill,location,ads,total_ads. Values are plain
-    // (no quoted commas), so a simple split is enough.
+    // CSV columns: month,category,skill,location,ads,total_ads,it_ads,it_total_ads.
+    // Values are plain (no quoted commas), so a simple split is enough. The chart uses
+    // the Data/IT columns when the file has them, and all ads otherwise.
     const byLocation = {};
     const lines = (csvText || '').trim().split('\n');
     if (lines.length < 2) return byLocation;
 
     const seenTotals = new Set();
     for (const line of lines.slice(1)) {
-        const [month, , skill, location, ads, totalAds] = line.split(',');
+        const [month, , skill, location, allAds, allTotal, itAds, itTotal] = line.split(',');
+        const useIt = itTotal !== undefined && itTotal !== '';
+        const ads = useIt ? itAds : allAds;
+        const totalAds = useIt ? itTotal : allTotal;
         if (!month || !location) continue;
         const year = month.slice(0, 4);
-        const yearEntry = ((byLocation[location] ??= {})[year] ??= { total: 0, skills: {} });
+        const yearEntry = ((byLocation[location] ??= {})[year] ??= { total: 0, allTotal: 0, skills: {} });
         yearEntry.skills[skill] = (yearEntry.skills[skill] || 0) + Number(ads);
         // total_ads repeats on every skill row for a month/location; count it once
         const totalKey = `${month}|${location}`;
         if (!seenTotals.has(totalKey)) {
             seenTotals.add(totalKey);
             yearEntry.total += Number(totalAds);
+            yearEntry.allTotal += Number(allTotal);
         }
     }
     return byLocation;
@@ -491,7 +528,12 @@ function renderHistory() {
 
     renderHistoryCategoryFilter();
 
-    const years = Object.keys(yearly).sort();
+    // Ads from 2006-2007 mostly carry no job category, so few of them can be placed in
+    // Data/IT. Years with too few Data/IT ads, or where they are an implausibly small
+    // part of all ads, are left out instead of drawn from a sliver of the data.
+    const years = Object.keys(yearly).sort().filter(year =>
+        yearly[year].total >= MIN_ADS_PER_YEAR &&
+        yearly[year].total >= MIN_IT_SHARE_OF_ALL_ADS * yearly[year].allTotal);
     const skills = (rawCategoryData[selectedHistoryCategory] || []).map(skill => skill.name);
     const palette = SERIES_COLORS[isDarkMode() ? 'dark' : 'light'];
     const theme = chartTheme();

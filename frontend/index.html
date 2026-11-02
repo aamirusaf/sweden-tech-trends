@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweden Tech Stack Trends</title>
+    <title>Skill Matrix</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <p class="eyebrow">🇸🇪 Sweden Tech Market</p>
-        <h1>Tech Stack Demand Dashboard</h1>
-        <p class="subtitle">Live job posting volume aggregated directly from Arbetsförmedlingen</p>
+        <h1>Skill Matrix</h1>
+        <p class="subtitle">What Sweden's tech job ads ask for, and which skills to learn next. Built on Arbetsförmedlingen's live and historical ads.</p>
         <div id="timestamp" class="timestamp">Loading data updates…</div>
         <div id="locationFilter" class="location-filter"></div>
+        <p class="section-hint">Bars show the share of live Data/IT job ads that mention each skill.</p>
     </header>
 
     <main class="dashboard-container">
@@ -41,8 +42,8 @@
 
     <section class="history-section">
         <div class="chart-card">
-            <h3>Demand over time, 2006–2026</h3>
-            <p class="section-hint">Share of all job ads published each year that mention the skill, from Arbetsförmedlingen's Historical Ads. Follows the location filter above. 2026 covers January–October.</p>
+            <h3>Demand over time, 2008–2026</h3>
+            <p class="section-hint">Share of Data/IT job ads published each year that mention the skill, from Arbetsförmedlingen's Historical Ads. Follows the location filter above. Starts in 2008, because older ads mostly have no job category. 2026 covers January–October.</p>
             <div id="historyCategoryFilter" class="location-filter history-filter" role="group" aria-label="Skill category"></div>
             <div class="chart-wrapper history-chart-wrapper">
                 <canvas id="historyChart" role="img" aria-label="Line chart of yearly share of job ads mentioning each skill"></canvas>
@@ -59,7 +60,7 @@
     <section class="skill-gap-grid">
         <div class="chart-card">
             <h3>Which skills do you already know?</h3>
-            <p class="section-hint">Check off what you know. Everything else gets ranked by live job demand, with courses to close the gap.</p>
+            <p class="section-hint">Check off what you know. Everything else gets ranked by how many live Data/IT ads ask for it, with courses to close the gap.</p>
             <div id="skillPicker" class="skill-picker">Loading skills…</div>
         </div>
 
