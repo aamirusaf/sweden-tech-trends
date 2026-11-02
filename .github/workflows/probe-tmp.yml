@@ -4,67 +4,49 @@ on:
     branches: [claude/project-thread-c1oxez]
     paths: [.github/workflows/probe-tmp.yml]
 jobs:
-  probe:
+  taxonomy:
     runs-on: ubuntu-latest
     steps:
-      - name: Map legacy occupation ids to fields
+      - name: Data/IT legacy occupation ids from the taxonomy
         shell: python
         run: |
-          import json, urllib.request, urllib.parse, zipfile, collections, os
-          def ads(name):
-              fn = name if name.endswith(".zip") else name + ".jsonl.zip"
-              if not os.path.exists(fn):
-                  urllib.request.urlretrieve("https://data.jobtechdev.se/annonser/historiska/" + fn, fn)
-              z = zipfile.ZipFile(fn)
-              for m in z.namelist():
-                  if m.endswith("/"): continue
-                  with z.open(m) as f:
-                      for line in f:
-                          line = line.strip().lstrip(b"[").rstrip(b",").rstrip(b"]").rstrip(b",")
-                          if not line: continue
-                          try: yield json.loads(line)
-                          except Exception: pass
-          def first(x):
-              return (x[0] if isinstance(x, list) and x else x) or {}
-          # 1. data-derived map: occupation legacy id -> field label
-          votes = collections.defaultdict(collections.Counter)
-          for name in ["2019_municipality_patched.zip", "2021", "2023"]:
-              for ad in ads(name):
-                  occ, fld = first(ad.get("occupation")), first(ad.get("occupation_field"))
-                  if isinstance(occ, dict) and isinstance(fld, dict) and occ.get("legacy_ams_taxonomy_id") and fld.get("label"):
-                      votes[str(occ["legacy_ams_taxonomy_id"])][fld["label"]] += 1
-              print(name, "ids so far", len(votes), flush=True)
-          data_map = {k: v.most_common(1)[0][0] for k, v in votes.items()}
-          it_ids = {k for k, v in data_map.items() if v == "Data/IT"}
-          print("data map ids", len(data_map), "Data/IT ids", len(it_ids))
-          # 2. taxonomy API map
-          q = '''query { concepts(id: "apaJ_2ja_LuF") { preferred_label narrower(type: "ssyk-level-4") { preferred_label narrower(type: "occupation-name", include_deprecated: true) { id preferred_label deprecated_legacy_id deprecated } } } }'''
-          tax_ids = set()
-          try:
-              url = "https://taxonomy.api.jobtechdev.se/v1/taxonomy/graphql?" + urllib.parse.urlencode({"query": q})
-              d = json.load(urllib.request.urlopen(urllib.request.Request(url, headers={"accept": "application/json"}), timeout=60))
-              for c in d["data"]["concepts"]:
-                  for g in c["narrower"]:
-                      for o in g["narrower"]:
-                          if o.get("deprecated_legacy_id"): tax_ids.add(str(o["deprecated_legacy_id"]))
-              print("taxonomy Data/IT legacy ids", len(tax_ids), "overlap with data map", len(tax_ids & it_ids))
-          except Exception as e:
-              print("taxonomy error", e)
-          # 3. coverage on old years
-          for name in ["2006", "2012", "2016", "2017"]:
-              n = known = it_data = it_tax = 0
-              unknown = collections.Counter()
-              for ad in ads(name):
-                  occ = first(ad.get("occupation"))
-                  lid = str(occ.get("legacy_ams_taxonomy_id")) if isinstance(occ, dict) else None
-                  n += 1
-                  if lid in data_map: known += 1
-                  else: unknown[lid] += 1
-                  it_data += lid in it_ids
-                  it_tax += lid in tax_ids
-              print(f"{name}: ads {n}, id known {known/n:.1%}, Data/IT by data map {it_data} ({it_data/n:.1%}), by taxonomy {it_tax} ({it_tax/n:.1%}), top unknown {unknown.most_common(8)}", flush=True)
-          json.dump(data_map, open("map.json", "w"))
-      - uses: actions/upload-artifact@v4
-        with:
-          name: legacy-map
-          path: map.json
+          import json, urllib.request, urllib.parse
+          q = '''query { concepts(id: "apaJ_2ja_LuF") { narrower(type: "ssyk-level-4") { preferred_label narrower(type: "occupation-name", include_deprecated: true) { preferred_label deprecated_legacy_id } } } }'''
+          url = "https://taxonomy.api.jobtechdev.se/v1/taxonomy/graphql?" + urllib.parse.urlencode({"query": q})
+          d = json.load(urllib.request.urlopen(urllib.request.Request(url, headers={"accept": "application/json"}), timeout=60))
+          out = {}
+          for c in d["data"]["concepts"]:
+              for g in c["narrower"]:
+                  for o in g["narrower"]:
+                      if o.get("deprecated_legacy_id"):
+                          out[str(o["deprecated_legacy_id"])] = o["preferred_label"]
+          print("IDS_JSON", json.dumps(dict(sorted(out.items(), key=lambda kv: int(kv[0]))), ensure_ascii=False))
+  coverage:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        year: ["2007", "2008", "2009", "2010", "2011"]
+    steps:
+      - name: Share of ads with an occupation id in ${{ matrix.year }}
+        shell: python
+        run: |
+          import json, urllib.request, zipfile, collections
+          fn = "${{ matrix.year }}.jsonl.zip"
+          urllib.request.urlretrieve("https://data.jobtechdev.se/annonser/historiska/" + fn, fn)
+          z = zipfile.ZipFile(fn); n = 0; ids = collections.Counter(); months = collections.Counter()
+          for m in z.namelist():
+              if m.endswith("/"): continue
+              with z.open(m) as f:
+                  for line in f:
+                      line = line.strip().lstrip(b"[").rstrip(b",").rstrip(b"]").rstrip(b",")
+                      if not line: continue
+                      try: ad = json.loads(line)
+                      except Exception: continue
+                      n += 1
+                      occ = ad.get("occupation") or {}
+                      occ = occ[0] if isinstance(occ, list) and occ else occ
+                      lid = str((occ or {}).get("legacy_ams_taxonomy_id"))
+                      ids["zero" if lid in ("0", "None", "") else "set"] += 1
+                      if lid not in ("0", "None", ""):
+                          months[(ad.get("publication_date") or "")[:7]] += 1
+          print("${{ matrix.year }}", n, dict(ids), "first months with ids:", sorted(months.items())[:4])
