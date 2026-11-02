@@ -1,0 +1,991 @@
+{
+    "total_ads": 2569,
+    "target_percent": 50,
+    "ads": {
+        "Python": 474,
+        "Java": 281,
+        "C#": 218,
+        "C++": 219,
+        "C": 134,
+        "JavaScript": 149,
+        "TypeScript": 199,
+        "Azure": 462,
+        "AWS": 252,
+        "GCP": 149,
+        "Kubernetes": 308,
+        "Docker": 241,
+        "Terraform": 132,
+        "Linux": 349,
+        "Git": 375,
+        "SQL": 284,
+        ".NET": 179,
+        "React": 206,
+        "Microsoft 365": 184,
+        "Active Directory": 185
+    },
+    "pairs": {
+        "Python": {
+            "Git": 157,
+            "Linux": 148,
+            "Azure": 134,
+            "Kubernetes": 120,
+            "Docker": 112,
+            "AWS": 111,
+            "C++": 101,
+            "SQL": 89,
+            "Java": 80,
+            "Terraform": 74,
+            "GCP": 69,
+            "C": 68,
+            "C#": 68,
+            "TypeScript": 62,
+            "JavaScript": 44,
+            "React": 44,
+            ".NET": 34,
+            "Active Directory": 11,
+            "Microsoft 365": 5
+        },
+        "Java": {
+            "Kubernetes": 103,
+            "Git": 87,
+            "AWS": 83,
+            "Python": 80,
+            "Docker": 76,
+            "Azure": 75,
+            "React": 65,
+            "SQL": 64,
+            "JavaScript": 48,
+            "Linux": 48,
+            "TypeScript": 48,
+            "C#": 47,
+            "GCP": 45,
+            "C++": 44,
+            ".NET": 32,
+            "Terraform": 21,
+            "C": 19,
+            "Active Directory": 5,
+            "Microsoft 365": 1
+        },
+        "C#": {
+            ".NET": 149,
+            "Azure": 117,
+            "SQL": 92,
+            "Git": 68,
+            "Python": 68,
+            "React": 57,
+            "Kubernetes": 51,
+            "Docker": 50,
+            "TypeScript": 50,
+            "Java": 47,
+            "AWS": 45,
+            "C++": 37,
+            "JavaScript": 37,
+            "GCP": 17,
+            "C": 16,
+            "Linux": 14,
+            "Terraform": 13,
+            "Active Directory": 4,
+            "Microsoft 365": 4
+        },
+        "C++": {
+            "C": 116,
+            "Python": 101,
+            "Linux": 94,
+            "Git": 61,
+            "Java": 44,
+            "C#": 37,
+            "Azure": 21,
+            "Docker": 18,
+            "AWS": 14,
+            "Kubernetes": 14,
+            ".NET": 13,
+            "JavaScript": 10,
+            "TypeScript": 10,
+            "GCP": 8,
+            "React": 7,
+            "SQL": 5,
+            "Terraform": 4
+        },
+        "C": {
+            "C++": 116,
+            "Python": 68,
+            "Linux": 66,
+            "Git": 34,
+            "Java": 19,
+            "C#": 16,
+            "Docker": 11,
+            "Azure": 10,
+            ".NET": 7,
+            "AWS": 7,
+            "Kubernetes": 7,
+            "JavaScript": 5,
+            "GCP": 4,
+            "React": 3,
+            "Terraform": 3,
+            "TypeScript": 3,
+            "SQL": 1
+        },
+        "JavaScript": {
+            "TypeScript": 80,
+            "React": 70,
+            "Git": 66,
+            "Java": 48,
+            "Azure": 46,
+            "Python": 44,
+            "SQL": 42,
+            "C#": 37,
+            "Docker": 34,
+            "Kubernetes": 32,
+            ".NET": 28,
+            "AWS": 25,
+            "Linux": 19,
+            "C++": 10,
+            "GCP": 8,
+            "C": 5,
+            "Terraform": 5,
+            "Active Directory": 3,
+            "Microsoft 365": 3
+        },
+        "TypeScript": {
+            "React": 121,
+            "JavaScript": 80,
+            "Git": 78,
+            "Azure": 62,
+            "Python": 62,
+            "Kubernetes": 56,
+            "AWS": 55,
+            "Docker": 51,
+            "C#": 50,
+            "Java": 48,
+            "SQL": 47,
+            ".NET": 44,
+            "GCP": 31,
+            "Linux": 21,
+            "Terraform": 17,
+            "C++": 10,
+            "C": 3,
+            "Microsoft 365": 2,
+            "Active Directory": 1
+        },
+        "Azure": {
+            "AWS": 163,
+            "Git": 154,
+            "Kubernetes": 136,
+            "Python": 134,
+            "C#": 117,
+            "SQL": 117,
+            "Docker": 112,
+            ".NET": 107,
+            "GCP": 99,
+            "React": 81,
+            "Java": 75,
+            "Active Directory": 73,
+            "Terraform": 69,
+            "TypeScript": 62,
+            "Microsoft 365": 56,
+            "Linux": 54,
+            "JavaScript": 46,
+            "C++": 21,
+            "C": 10
+        },
+        "AWS": {
+            "Azure": 163,
+            "Kubernetes": 117,
+            "Python": 111,
+            "Docker": 104,
+            "GCP": 101,
+            "Git": 98,
+            "Java": 83,
+            "Terraform": 67,
+            "React": 57,
+            "TypeScript": 55,
+            "Linux": 51,
+            "SQL": 51,
+            "C#": 45,
+            ".NET": 38,
+            "JavaScript": 25,
+            "C++": 14,
+            "C": 7,
+            "Active Directory": 6,
+            "Microsoft 365": 2
+        },
+        "GCP": {
+            "AWS": 101,
+            "Azure": 99,
+            "Kubernetes": 83,
+            "Python": 69,
+            "Docker": 67,
+            "Terraform": 55,
+            "Git": 52,
+            "Java": 45,
+            "SQL": 40,
+            "React": 39,
+            "TypeScript": 31,
+            "Linux": 26,
+            "C#": 17,
+            ".NET": 15,
+            "C++": 8,
+            "JavaScript": 8,
+            "C": 4,
+            "Active Directory": 2,
+            "Microsoft 365": 1
+        },
+        "Kubernetes": {
+            "Docker": 167,
+            "Azure": 136,
+            "Git": 130,
+            "Python": 120,
+            "AWS": 117,
+            "Java": 103,
+            "Linux": 96,
+            "Terraform": 84,
+            "GCP": 83,
+            "React": 64,
+            "TypeScript": 56,
+            "C#": 51,
+            "SQL": 50,
+            ".NET": 47,
+            "JavaScript": 32,
+            "C++": 14,
+            "Active Directory": 8,
+            "C": 7,
+            "Microsoft 365": 1
+        },
+        "Docker": {
+            "Kubernetes": 167,
+            "Git": 134,
+            "Azure": 112,
+            "Python": 112,
+            "AWS": 104,
+            "Linux": 80,
+            "Java": 76,
+            "GCP": 67,
+            "React": 63,
+            "Terraform": 59,
+            "SQL": 55,
+            "TypeScript": 51,
+            "C#": 50,
+            ".NET": 42,
+            "JavaScript": 34,
+            "C++": 18,
+            "C": 11,
+            "Active Directory": 5,
+            "Microsoft 365": 1
+        },
+        "Terraform": {
+            "Kubernetes": 84,
+            "Git": 78,
+            "Python": 74,
+            "Azure": 69,
+            "AWS": 67,
+            "Docker": 59,
+            "GCP": 55,
+            "Linux": 46,
+            "Java": 21,
+            "SQL": 18,
+            "TypeScript": 17,
+            "React": 16,
+            "C#": 13,
+            "Active Directory": 11,
+            ".NET": 9,
+            "JavaScript": 5,
+            "C++": 4,
+            "C": 3,
+            "Microsoft 365": 2
+        },
+        "Linux": {
+            "Python": 148,
+            "Git": 111,
+            "Kubernetes": 96,
+            "C++": 94,
+            "Docker": 80,
+            "C": 66,
+            "Azure": 54,
+            "AWS": 51,
+            "Java": 48,
+            "Terraform": 46,
+            "SQL": 38,
+            "GCP": 26,
+            "React": 21,
+            "TypeScript": 21,
+            "JavaScript": 19,
+            "Active Directory": 14,
+            "C#": 14,
+            ".NET": 6,
+            "Microsoft 365": 4
+        },
+        "Git": {
+            "Python": 157,
+            "Azure": 154,
+            "Docker": 134,
+            "Kubernetes": 130,
+            "Linux": 111,
+            "AWS": 98,
+            "SQL": 92,
+            "Java": 87,
+            "React": 81,
+            "Terraform": 78,
+            "TypeScript": 78,
+            "C#": 68,
+            "JavaScript": 66,
+            "C++": 61,
+            ".NET": 57,
+            "GCP": 52,
+            "C": 34,
+            "Active Directory": 18,
+            "Microsoft 365": 8
+        },
+        "SQL": {
+            "Azure": 117,
+            "C#": 92,
+            "Git": 92,
+            "Python": 89,
+            ".NET": 85,
+            "Java": 64,
+            "React": 59,
+            "Docker": 55,
+            "AWS": 51,
+            "Kubernetes": 50,
+            "TypeScript": 47,
+            "JavaScript": 42,
+            "GCP": 40,
+            "Linux": 38,
+            "Active Directory": 23,
+            "Terraform": 18,
+            "Microsoft 365": 10,
+            "C++": 5,
+            "C": 1
+        },
+        ".NET": {
+            "C#": 149,
+            "Azure": 107,
+            "SQL": 85,
+            "React": 62,
+            "Git": 57,
+            "Kubernetes": 47,
+            "TypeScript": 44,
+            "Docker": 42,
+            "AWS": 38,
+            "Python": 34,
+            "Java": 32,
+            "JavaScript": 28,
+            "GCP": 15,
+            "C++": 13,
+            "Terraform": 9,
+            "C": 7,
+            "Linux": 6,
+            "Active Directory": 3,
+            "Microsoft 365": 2
+        },
+        "React": {
+            "TypeScript": 121,
+            "Azure": 81,
+            "Git": 81,
+            "JavaScript": 70,
+            "Java": 65,
+            "Kubernetes": 64,
+            "Docker": 63,
+            ".NET": 62,
+            "SQL": 59,
+            "AWS": 57,
+            "C#": 57,
+            "Python": 44,
+            "GCP": 39,
+            "Linux": 21,
+            "Terraform": 16,
+            "C++": 7,
+            "C": 3,
+            "Active Directory": 2,
+            "Microsoft 365": 1
+        },
+        "Microsoft 365": {
+            "Active Directory": 99,
+            "Azure": 56,
+            "SQL": 10,
+            "Git": 8,
+            "Python": 5,
+            "C#": 4,
+            "Linux": 4,
+            "JavaScript": 3,
+            ".NET": 2,
+            "AWS": 2,
+            "Terraform": 2,
+            "TypeScript": 2,
+            "Docker": 1,
+            "GCP": 1,
+            "Java": 1,
+            "Kubernetes": 1,
+            "React": 1
+        },
+        "Active Directory": {
+            "Microsoft 365": 99,
+            "Azure": 73,
+            "SQL": 23,
+            "Git": 18,
+            "Linux": 14,
+            "Python": 11,
+            "Terraform": 11,
+            "Kubernetes": 8,
+            "AWS": 6,
+            "Docker": 5,
+            "Java": 5,
+            "C#": 4,
+            ".NET": 3,
+            "JavaScript": 3,
+            "GCP": 2,
+            "React": 2,
+            "TypeScript": 1
+        }
+    },
+    "bundles": {
+        "Python": {
+            "alone": 11,
+            "steps": [
+                {
+                    "skill": "Linux",
+                    "coverage": 16
+                },
+                {
+                    "skill": "C++",
+                    "coverage": 18
+                },
+                {
+                    "skill": "C",
+                    "coverage": 23
+                },
+                {
+                    "skill": "Git",
+                    "coverage": 28
+                },
+                {
+                    "skill": "Java",
+                    "coverage": 32
+                },
+                {
+                    "skill": "C#",
+                    "coverage": 35
+                }
+            ]
+        },
+        "Java": {
+            "alone": 9,
+            "steps": [
+                {
+                    "skill": "SQL",
+                    "coverage": 10
+                },
+                {
+                    "skill": "Python",
+                    "coverage": 12
+                },
+                {
+                    "skill": "Linux",
+                    "coverage": 14
+                },
+                {
+                    "skill": "Kubernetes",
+                    "coverage": 18
+                },
+                {
+                    "skill": "C++",
+                    "coverage": 21
+                },
+                {
+                    "skill": "C",
+                    "coverage": 25
+                }
+            ]
+        },
+        "C#": {
+            "alone": 0,
+            "steps": [
+                {
+                    "skill": ".NET",
+                    "coverage": 5
+                },
+                {
+                    "skill": "SQL",
+                    "coverage": 9
+                },
+                {
+                    "skill": "Azure",
+                    "coverage": 15
+                },
+                {
+                    "skill": "React",
+                    "coverage": 19
+                },
+                {
+                    "skill": "JavaScript",
+                    "coverage": 23
+                },
+                {
+                    "skill": "TypeScript",
+                    "coverage": 28
+                }
+            ]
+        },
+        "C++": {
+            "alone": 7,
+            "steps": [
+                {
+                    "skill": "C",
+                    "coverage": 15
+                },
+                {
+                    "skill": "Linux",
+                    "coverage": 29
+                },
+                {
+                    "skill": "Python",
+                    "coverage": 44
+                },
+                {
+                    "skill": "Git",
+                    "coverage": 59
+                }
+            ]
+        },
+        "C": {
+            "alone": 4,
+            "steps": [
+                {
+                    "skill": "C++",
+                    "coverage": 17
+                },
+                {
+                    "skill": "Linux",
+                    "coverage": 32
+                },
+                {
+                    "skill": "Python",
+                    "coverage": 50
+                }
+            ]
+        },
+        "JavaScript": {
+            "alone": 7,
+            "steps": [
+                {
+                    "skill": "TypeScript",
+                    "coverage": 9
+                },
+                {
+                    "skill": "React",
+                    "coverage": 13
+                },
+                {
+                    "skill": "Git",
+                    "coverage": 20
+                },
+                {
+                    "skill": "Python",
+                    "coverage": 25
+                },
+                {
+                    "skill": "Java",
+                    "coverage": 30
+                },
+                {
+                    "skill": "SQL",
+                    "coverage": 36
+                }
+            ]
+        },
+        "TypeScript": {
+            "alone": 1,
+            "steps": [
+                {
+                    "skill": "React",
+                    "coverage": 6
+                },
+                {
+                    "skill": "JavaScript",
+                    "coverage": 11
+                },
+                {
+                    "skill": "Git",
+                    "coverage": 17
+                },
+                {
+                    "skill": "Azure",
+                    "coverage": 20
+                },
+                {
+                    "skill": "Python",
+                    "coverage": 23
+                },
+                {
+                    "skill": "AWS",
+                    "coverage": 27
+                }
+            ]
+        },
+        "Azure": {
+            "alone": 11,
+            "steps": [
+                {
+                    "skill": "Active Directory",
+                    "coverage": 13
+                },
+                {
+                    "skill": "Microsoft 365",
+                    "coverage": 21
+                },
+                {
+                    "skill": "SQL",
+                    "coverage": 26
+                },
+                {
+                    "skill": "Python",
+                    "coverage": 28
+                },
+                {
+                    "skill": "AWS",
+                    "coverage": 30
+                },
+                {
+                    "skill": "GCP",
+                    "coverage": 34
+                }
+            ]
+        },
+        "AWS": {
+            "alone": 3,
+            "steps": [
+                {
+                    "skill": "Azure",
+                    "coverage": 5
+                },
+                {
+                    "skill": "GCP",
+                    "coverage": 7
+                },
+                {
+                    "skill": "Python",
+                    "coverage": 9
+                },
+                {
+                    "skill": "Terraform",
+                    "coverage": 11
+                },
+                {
+                    "skill": "Kubernetes",
+                    "coverage": 13
+                },
+                {
+                    "skill": "Git",
+                    "coverage": 18
+                }
+            ]
+        },
+        "GCP": {
+            "alone": 1,
+            "steps": [
+                {
+                    "skill": "SQL",
+                    "coverage": 4
+                },
+                {
+                    "skill": "Azure",
+                    "coverage": 5
+                },
+                {
+                    "skill": "AWS",
+                    "coverage": 9
+                },
+                {
+                    "skill": "Python",
+                    "coverage": 16
+                },
+                {
+                    "skill": "Kubernetes",
+                    "coverage": 17
+                },
+                {
+                    "skill": "TypeScript",
+                    "coverage": 19
+                }
+            ]
+        },
+        "Kubernetes": {
+            "alone": 5,
+            "steps": [
+                {
+                    "skill": "Linux",
+                    "coverage": 8
+                },
+                {
+                    "skill": "Docker",
+                    "coverage": 9
+                },
+                {
+                    "skill": "Python",
+                    "coverage": 13
+                },
+                {
+                    "skill": "Git",
+                    "coverage": 17
+                },
+                {
+                    "skill": "Terraform",
+                    "coverage": 23
+                },
+                {
+                    "skill": "Java",
+                    "coverage": 30
+                }
+            ]
+        },
+        "Docker": {
+            "alone": 0,
+            "steps": [
+                {
+                    "skill": "Kubernetes",
+                    "coverage": 1
+                },
+                {
+                    "skill": "Python",
+                    "coverage": 3
+                },
+                {
+                    "skill": "Linux",
+                    "coverage": 6
+                },
+                {
+                    "skill": "Git",
+                    "coverage": 9
+                },
+                {
+                    "skill": "Terraform",
+                    "coverage": 14
+                },
+                {
+                    "skill": "Java",
+                    "coverage": 19
+                }
+            ]
+        },
+        "Terraform": {
+            "alone": 0,
+            "steps": [
+                {
+                    "skill": "Kubernetes",
+                    "coverage": 1
+                },
+                {
+                    "skill": "Python",
+                    "coverage": 4
+                },
+                {
+                    "skill": "Linux",
+                    "coverage": 5
+                },
+                {
+                    "skill": "Git",
+                    "coverage": 10
+                },
+                {
+                    "skill": "Docker",
+                    "coverage": 19
+                },
+                {
+                    "skill": "AWS",
+                    "coverage": 25
+                }
+            ]
+        },
+        "Linux": {
+            "alone": 18,
+            "steps": [
+                {
+                    "skill": "Python",
+                    "coverage": 24
+                },
+                {
+                    "skill": "C++",
+                    "coverage": 29
+                },
+                {
+                    "skill": "C",
+                    "coverage": 38
+                },
+                {
+                    "skill": "Git",
+                    "coverage": 45
+                },
+                {
+                    "skill": "Kubernetes",
+                    "coverage": 49
+                },
+                {
+                    "skill": "Docker",
+                    "coverage": 54
+                }
+            ]
+        },
+        "Git": {
+            "alone": 3,
+            "steps": [
+                {
+                    "skill": "C++",
+                    "coverage": 4
+                },
+                {
+                    "skill": "Python",
+                    "coverage": 5
+                },
+                {
+                    "skill": "Linux",
+                    "coverage": 8
+                },
+                {
+                    "skill": "C",
+                    "coverage": 14
+                },
+                {
+                    "skill": "Java",
+                    "coverage": 16
+                },
+                {
+                    "skill": "Kubernetes",
+                    "coverage": 19
+                }
+            ]
+        },
+        "SQL": {
+            "alone": 10,
+            "steps": [
+                {
+                    "skill": "Python",
+                    "coverage": 14
+                },
+                {
+                    "skill": "Azure",
+                    "coverage": 19
+                },
+                {
+                    "skill": "Git",
+                    "coverage": 23
+                },
+                {
+                    "skill": ".NET",
+                    "coverage": 25
+                },
+                {
+                    "skill": "C#",
+                    "coverage": 32
+                },
+                {
+                    "skill": "Active Directory",
+                    "coverage": 36
+                }
+            ]
+        },
+        ".NET": {
+            "alone": 2,
+            "steps": [
+                {
+                    "skill": "C#",
+                    "coverage": 7
+                },
+                {
+                    "skill": "SQL",
+                    "coverage": 12
+                },
+                {
+                    "skill": "Azure",
+                    "coverage": 20
+                },
+                {
+                    "skill": "React",
+                    "coverage": 25
+                },
+                {
+                    "skill": "Git",
+                    "coverage": 31
+                },
+                {
+                    "skill": "JavaScript",
+                    "coverage": 35
+                }
+            ]
+        },
+        "React": {
+            "alone": 1,
+            "steps": [
+                {
+                    "skill": "TypeScript",
+                    "coverage": 6
+                },
+                {
+                    "skill": "JavaScript",
+                    "coverage": 10
+                },
+                {
+                    "skill": "Git",
+                    "coverage": 14
+                },
+                {
+                    "skill": "Java",
+                    "coverage": 18
+                },
+                {
+                    "skill": "Python",
+                    "coverage": 21
+                },
+                {
+                    "skill": "SQL",
+                    "coverage": 25
+                }
+            ]
+        },
+        "Microsoft 365": {
+            "alone": 34,
+            "steps": [
+                {
+                    "skill": "Active Directory",
+                    "coverage": 67
+                }
+            ]
+        },
+        "Active Directory": {
+            "alone": 18,
+            "steps": [
+                {
+                    "skill": "Microsoft 365",
+                    "coverage": 51
+                }
+            ]
+        }
+    },
+    "last_updated": "2026-11-02 21:20:25 UTC",
+    "categories": {
+        "Languages": [
+            "Python",
+            "Java",
+            "C#",
+            "C++",
+            "C",
+            "JavaScript",
+            "TypeScript"
+        ],
+        "Cloud & Infra": [
+            "Azure",
+            "AWS",
+            "GCP",
+            "Kubernetes",
+            "Docker",
+            "Terraform",
+            "Linux",
+            "Git"
+        ],
+        "Platforms & Data": [
+            "SQL",
+            ".NET",
+            "React",
+            "Microsoft 365",
+            "Active Directory"
+        ]
+    }
+}
