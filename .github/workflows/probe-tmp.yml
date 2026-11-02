@@ -1,0 +1,49 @@
+name: Probe (temporary)
+on:
+  push:
+    branches: [claude/project-thread-c1oxez]
+    paths: [.github/workflows/probe-tmp.yml]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        year: ["2006", "2012", "2016", "2017", "2018_municipality_patched.zip", "2021"]
+    steps:
+      - name: Probe ${{ matrix.year }}
+        shell: python
+        run: |
+          import json, urllib.request, zipfile, collections, io
+          name = "${{ matrix.year }}"
+          fn = name if name.endswith(".zip") else name + ".jsonl.zip"
+          urllib.request.urlretrieve("https://data.jobtechdev.se/annonser/historiska/" + fn, "f.zip")
+          z = zipfile.ZipFile("f.zip")
+          fields, groups, n = collections.Counter(), collections.Counter(), 0
+          with z.open([m for m in z.namelist() if not m.endswith("/")][0]) as f:
+              for line in f:
+                  line = line.strip().lstrip(b"[").rstrip(b",").rstrip(b"]").rstrip(b",")
+                  if not line:
+                      continue
+                  try:
+                      ad = json.loads(line)
+                  except Exception:
+                      continue
+                  n += 1
+                  if n <= 2:
+                      for k in ("occupation", "occupation_group", "occupation_field", "other_old_legacy_attributes"):
+                          print(k, json.dumps(ad.get(k), ensure_ascii=False)[:400])
+                  of = ad.get("occupation_field")
+                  of = (of[0] if isinstance(of, list) and of else of) or {}
+                  fields[of.get("label") if isinstance(of, dict) else str(of)] += 1
+                  og = ad.get("occupation_group")
+                  og = (og[0] if isinstance(og, list) and og else og) or {}
+                  if isinstance(og, dict):
+                      groups[(og.get("legacy_ams_taxonomy_id"), og.get("label"))] += 1
+                  if n >= 300000:
+                      break
+          print("ads read", n)
+          print("fields", fields.most_common(25))
+          print("groups with data/it-ish labels:")
+          for (gid, label), c in groups.most_common(400):
+              if label and any(w in label.lower() for w in ("system", "mjukvar", "it-", "data", "nätverk", "webb", "spel", "drift", "support", "programm", "test")):
+                  print("  ", gid, label, c)
