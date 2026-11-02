@@ -135,83 +135,83 @@ date,category,skill,location,postings,it_postings,it_total
 2026-11-01,Data & AI,TensorFlow,Stockholm,4,,
 2026-11-01,Data & AI,TensorFlow,Göteborg,1,,
 2026-11-01,Data & AI,TensorFlow,Malmö,3,,
-2026-11-02,Languages,Python,Sweden,677,436,2568
-2026-11-02,Languages,Python,Stockholm,228,155,851
+2026-11-02,Languages,Python,Sweden,677,436,2569
+2026-11-02,Languages,Python,Stockholm,228,155,852
 2026-11-02,Languages,Python,Göteborg,143,108,403
 2026-11-02,Languages,Python,Malmö,30,18,114
-2026-11-02,Languages,Java,Sweden,291,265,2568
-2026-11-02,Languages,Java,Stockholm,103,92,851
+2026-11-02,Languages,Java,Sweden,291,265,2569
+2026-11-02,Languages,Java,Stockholm,103,92,852
 2026-11-02,Languages,Java,Göteborg,64,63,403
 2026-11-02,Languages,Java,Malmö,20,16,114
-2026-11-02,Languages,C#,Sweden,227,207,2568
-2026-11-02,Languages,C#,Stockholm,63,57,851
+2026-11-02,Languages,C#,Sweden,227,207,2569
+2026-11-02,Languages,C#,Stockholm,63,57,852
 2026-11-02,Languages,C#,Göteborg,52,50,403
 2026-11-02,Languages,C#,Malmö,9,9,114
-2026-11-02,Languages,C++,Sweden,271,214,2568
-2026-11-02,Languages,C++,Stockholm,50,47,851
+2026-11-02,Languages,C++,Sweden,271,214,2569
+2026-11-02,Languages,C++,Stockholm,50,47,852
 2026-11-02,Languages,C++,Göteborg,74,65,403
 2026-11-02,Languages,C++,Malmö,7,7,114
-2026-11-02,Languages,C,Sweden,93,70,2568
-2026-11-02,Languages,C,Stockholm,13,12,851
+2026-11-02,Languages,C,Sweden,93,70,2569
+2026-11-02,Languages,C,Stockholm,13,12,852
 2026-11-02,Languages,C,Göteborg,34,26,403
 2026-11-02,Languages,C,Malmö,0,0,114
-2026-11-02,Languages,JavaScript,Sweden,157,141,2568
-2026-11-02,Languages,JavaScript,Stockholm,61,56,851
+2026-11-02,Languages,JavaScript,Sweden,157,141,2569
+2026-11-02,Languages,JavaScript,Stockholm,61,56,852
 2026-11-02,Languages,JavaScript,Göteborg,18,18,403
 2026-11-02,Languages,JavaScript,Malmö,8,8,114
-2026-11-02,Languages,TypeScript,Sweden,201,185,2568
-2026-11-02,Languages,TypeScript,Stockholm,97,87,851
+2026-11-02,Languages,TypeScript,Sweden,201,185,2569
+2026-11-02,Languages,TypeScript,Stockholm,97,87,852
 2026-11-02,Languages,TypeScript,Göteborg,30,30,403
 2026-11-02,Languages,TypeScript,Malmö,10,10,114
-2026-11-02,Cloud & Infra,Azure,Sweden,482,422,2568
-2026-11-02,Cloud & Infra,Azure,Stockholm,182,152,851
+2026-11-02,Cloud & Infra,Azure,Sweden,482,422,2569
+2026-11-02,Cloud & Infra,Azure,Stockholm,182,152,852
 2026-11-02,Cloud & Infra,Azure,Göteborg,102,94,403
 2026-11-02,Cloud & Infra,Azure,Malmö,27,21,114
-2026-11-02,Cloud & Infra,AWS,Sweden,263,236,2568
-2026-11-02,Cloud & Infra,AWS,Stockholm,113,98,851
+2026-11-02,Cloud & Infra,AWS,Sweden,263,236,2569
+2026-11-02,Cloud & Infra,AWS,Stockholm,113,98,852
 2026-11-02,Cloud & Infra,AWS,Göteborg,69,65,403
 2026-11-02,Cloud & Infra,AWS,Malmö,14,11,114
-2026-11-02,Cloud & Infra,GCP,Sweden,178,141,2568
-2026-11-02,Cloud & Infra,GCP,Stockholm,98,75,851
+2026-11-02,Cloud & Infra,GCP,Sweden,178,141,2569
+2026-11-02,Cloud & Infra,GCP,Stockholm,98,75,852
 2026-11-02,Cloud & Infra,GCP,Göteborg,22,18,403
 2026-11-02,Cloud & Infra,GCP,Malmö,8,6,114
-2026-11-02,Cloud & Infra,Kubernetes,Sweden,289,269,2568
-2026-11-02,Cloud & Infra,Kubernetes,Stockholm,115,108,851
+2026-11-02,Cloud & Infra,Kubernetes,Sweden,289,269,2569
+2026-11-02,Cloud & Infra,Kubernetes,Stockholm,115,108,852
 2026-11-02,Cloud & Infra,Kubernetes,Göteborg,64,61,403
 2026-11-02,Cloud & Infra,Kubernetes,Malmö,15,13,114
-2026-11-02,Cloud & Infra,Docker,Sweden,227,210,2568
-2026-11-02,Cloud & Infra,Docker,Stockholm,83,78,851
+2026-11-02,Cloud & Infra,Docker,Sweden,227,210,2569
+2026-11-02,Cloud & Infra,Docker,Stockholm,83,78,852
 2026-11-02,Cloud & Infra,Docker,Göteborg,43,41,403
 2026-11-02,Cloud & Infra,Docker,Malmö,9,8,114
-2026-11-02,Cloud & Infra,Terraform,Sweden,131,111,2568
-2026-11-02,Cloud & Infra,Terraform,Stockholm,64,51,851
+2026-11-02,Cloud & Infra,Terraform,Sweden,131,111,2569
+2026-11-02,Cloud & Infra,Terraform,Stockholm,64,51,852
 2026-11-02,Cloud & Infra,Terraform,Göteborg,18,15,403
 2026-11-02,Cloud & Infra,Terraform,Malmö,4,2,114
-2026-11-02,Cloud & Infra,Linux,Sweden,285,261,2568
-2026-11-02,Cloud & Infra,Linux,Stockholm,96,91,851
+2026-11-02,Cloud & Infra,Linux,Sweden,285,261,2569
+2026-11-02,Cloud & Infra,Linux,Stockholm,96,91,852
 2026-11-02,Cloud & Infra,Linux,Göteborg,55,53,403
 2026-11-02,Cloud & Infra,Linux,Malmö,9,8,114
-2026-11-02,Cloud & Infra,Git,Sweden,240,202,2568
-2026-11-02,Cloud & Infra,Git,Stockholm,71,58,851
+2026-11-02,Cloud & Infra,Git,Sweden,240,202,2569
+2026-11-02,Cloud & Infra,Git,Stockholm,71,58,852
 2026-11-02,Cloud & Infra,Git,Göteborg,56,51,403
 2026-11-02,Cloud & Infra,Git,Malmö,5,5,114
-2026-11-02,Platforms & Data,SQL,Sweden,326,198,2568
-2026-11-02,Platforms & Data,SQL,Stockholm,126,60,851
+2026-11-02,Platforms & Data,SQL,Sweden,326,198,2569
+2026-11-02,Platforms & Data,SQL,Stockholm,126,60,852
 2026-11-02,Platforms & Data,SQL,Göteborg,44,33,403
 2026-11-02,Platforms & Data,SQL,Malmö,20,14,114
-2026-11-02,Platforms & Data,.NET,Sweden,186,168,2568
-2026-11-02,Platforms & Data,.NET,Stockholm,48,42,851
+2026-11-02,Platforms & Data,.NET,Sweden,186,168,2569
+2026-11-02,Platforms & Data,.NET,Stockholm,48,42,852
 2026-11-02,Platforms & Data,.NET,Göteborg,47,43,403
 2026-11-02,Platforms & Data,.NET,Malmö,10,9,114
-2026-11-02,Platforms & Data,React,Sweden,198,185,2568
-2026-11-02,Platforms & Data,React,Stockholm,93,84,851
+2026-11-02,Platforms & Data,React,Sweden,198,185,2569
+2026-11-02,Platforms & Data,React,Stockholm,93,84,852
 2026-11-02,Platforms & Data,React,Göteborg,23,22,403
 2026-11-02,Platforms & Data,React,Malmö,12,12,114
-2026-11-02,Platforms & Data,Microsoft 365,Sweden,403,172,2568
-2026-11-02,Platforms & Data,Microsoft 365,Stockholm,103,59,851
+2026-11-02,Platforms & Data,Microsoft 365,Sweden,403,172,2569
+2026-11-02,Platforms & Data,Microsoft 365,Stockholm,103,59,852
 2026-11-02,Platforms & Data,Microsoft 365,Göteborg,35,17,403
 2026-11-02,Platforms & Data,Microsoft 365,Malmö,16,7,114
-2026-11-02,Platforms & Data,Active Directory,Sweden,191,173,2568
-2026-11-02,Platforms & Data,Active Directory,Stockholm,64,56,851
+2026-11-02,Platforms & Data,Active Directory,Sweden,191,173,2569
+2026-11-02,Platforms & Data,Active Directory,Stockholm,64,56,852
 2026-11-02,Platforms & Data,Active Directory,Göteborg,19,19,403
 2026-11-02,Platforms & Data,Active Directory,Malmö,7,7,114

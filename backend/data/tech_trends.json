@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-11-02 21:20:25 UTC",
+    "last_updated": "2026-11-02 21:35:41 UTC",
     "data": {
         "Languages": [
             {
@@ -349,8 +349,8 @@
         ]
     },
     "it_totals": {
-        "Sweden": 2568,
-        "Stockholm": 851,
+        "Sweden": 2569,
+        "Stockholm": 852,
         "Göteborg": 403,
         "Malmö": 114
     }
