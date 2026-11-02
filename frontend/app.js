@@ -4,6 +4,9 @@
 // every frame -> infinite redraw loop. Rounding to a whole number fixes it.
 if (window.Chart) {
     Chart.defaults.devicePixelRatio = Math.round(window.devicePixelRatio) || 1;
+    Chart.defaults.font.family = getComputedStyle(document.body || document.documentElement).fontFamily || 'Inter, system-ui, sans-serif';
+    Chart.defaults.font.size = 12;
+    Chart.defaults.animation.duration = 500;
 }
 
 const CATEGORY_COLORS = {
@@ -43,6 +46,10 @@ const SERIES_COLORS = {
 };
 
 let itTotals = {};         // { location: number of live Data/IT ads }
+let lastUpdated = '';
+let showAllGaps = false;
+const GAPS_SHOWN = 6;
+const THEME_KEY = 'techTrends.theme';
 
 // Number of live ads mentioning the skill. Counts within Data/IT ads when the data
 // has them; older data files only have the all-ads count.
@@ -80,7 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('../backend/data/history.json').then(response => response.ok ? response.json() : { snapshots: [] }),
         fetch('../backend/data/co_occurrence.json').then(response => response.ok ? response.json() : { co_occurrence: {} }),
         fetch('../backend/data/historical_monthly.csv').then(response => response.ok ? response.text() : '').catch(() => ''),
-        fetch('../backend/data/skill_network.json').then(response => response.ok ? response.json() : null).catch(() => null)
+        fetch('../backend/data/skill_network.json').then(response => response.ok ? response.json() : null).catch(() => null),
+        // Canvas text doesn't re-render when a web font arrives, so wait for Inter first.
+        document.fonts ? document.fonts.load('500 12px Inter').catch(() => null) : null
     ])
         .then(([jsonData, courses, jobPostings, history, coOccurrence, historicalCsv, skillNetworkData]) => {
             historicalYearly = aggregateHistoricalByYear(historicalCsv);
@@ -91,7 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
             trendsBySkill = computeTrends(history);
 
             // Update the UI timestamp string
-            document.getElementById('timestamp').innerText = `Last updated: ${jsonData.last_updated}`;
+            lastUpdated = jsonData.last_updated || '';
+            document.getElementById('timestamp').innerText = `Updated ${formatUpdated(lastUpdated)}`;
+            document.getElementById('timestamp').title = `Last updated: ${lastUpdated}`;
 
             rawCategoryData = jsonData.data;
             itTotals = jsonData.it_totals || {};
@@ -103,6 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (sampleSkill) locationOptions = Object.keys(sampleSkill.by_location);
 
             renderLocationFilter();
+            renderKpis();
+            paintCategoryDots();
             renderCharts();
             renderSkillPicker();
             renderSkillGapResults();
@@ -115,6 +128,54 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('timestamp').innerText = 'Error loading trending data.';
         });
 });
+
+// "2026-11-02 21:35:41 UTC" -> "2 Nov 2026". Falls back to the raw text.
+function formatUpdated(text) {
+    const date = new Date((text || '').replace(' UTC', 'Z').replace(' ', 'T'));
+    if (isNaN(date)) return text;
+    return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+}
+
+function renderKpis() {
+    const container = document.getElementById('kpis');
+    if (!container) return;
+    const locationName = selectedLocation === 'Sweden' ? 'all of Sweden' : selectedLocation;
+
+    const total = itTotals[selectedLocation];
+    const top = [...allSkills].sort((a, b) => skillValue(b) - skillValue(a))[0];
+    const topShare = top ? skillShare(top) : null;
+    const years = Object.keys(historicalYearly.Sweden || {}).filter(year => year >= '2008').sort();
+
+    const kpis = [
+        { label: `Live Data/IT ads, ${locationName}`, value: total ? total.toLocaleString('en-US') : '–' },
+        { label: 'Most requested skill', value: top ? top.name : '–', note: topShare === null ? '' : `${topShare}%` },
+        { label: 'Skills tracked', value: String(allSkills.length || '–') },
+        { label: 'Years of history', value: years.length ? String(years.length) : '–', note: years.length ? `${years[0]}–${years[years.length - 1]}` : '' }
+    ];
+
+    container.innerHTML = '';
+    kpis.forEach(kpi => {
+        const wrap = document.createElement('div');
+        wrap.className = 'kpi';
+        const dt = document.createElement('dt');
+        dt.textContent = kpi.label;
+        const dd = document.createElement('dd');
+        dd.textContent = kpi.value;
+        if (kpi.note) {
+            const small = document.createElement('small');
+            small.textContent = kpi.note;
+            dd.appendChild(small);
+        }
+        wrap.append(dt, dd);
+        container.appendChild(wrap);
+    });
+}
+
+function paintCategoryDots() {
+    document.querySelectorAll('.card-dot[data-category]').forEach(dot => {
+        dot.style.backgroundColor = categoryColor(dot.dataset.category);
+    });
+}
 
 function loadKnownSkills() {
     try {
@@ -181,6 +242,7 @@ function renderLocationFilter() {
             if (location === selectedLocation) return;
             selectedLocation = location;
             renderLocationFilter();
+            renderKpis();
             renderCharts();
             renderSkillGapResults();
             renderJobPostings();
@@ -214,6 +276,9 @@ function renderSkillPicker() {
         heading.className = 'skill-category-label';
         heading.textContent = category;
         container.appendChild(heading);
+        const group = document.createElement('div');
+        group.className = 'skill-picker-group';
+        container.appendChild(group);
 
         skills.forEach(skill => {
             const row = document.createElement('label');
@@ -241,7 +306,7 @@ function renderSkillPicker() {
             label.textContent = skill.name;
 
             row.append(checkbox, swatch, label);
-            container.appendChild(row);
+            group.appendChild(row);
         });
     });
 }
@@ -265,35 +330,57 @@ function renderSkillGapResults() {
         return;
     }
 
-    gaps.forEach((skill, index) => {
+    const maxValue = Math.max(...gaps.map(skill => skillValue(skill)), 1);
+    const visible = showAllGaps ? gaps : gaps.slice(0, GAPS_SHOWN);
+
+    visible.forEach((skill, index) => {
         const item = document.createElement('div');
-        item.className = 'skill-gap-item skill-gap-item-clickable';
-        item.addEventListener('click', () => showJobPostings(skill.name));
+        item.className = 'skill-gap-item skill-gap-item-clickable' + (skill.name === selectedSkill ? ' is-selected' : '');
+        item.tabIndex = 0;
+        item.setAttribute('role', 'button');
+        item.addEventListener('click', (event) => {
+            if (event.target.closest('a')) return; // course links open on their own
+            showJobPostings(skill.name);
+        });
+        item.addEventListener('keydown', (event) => {
+            if (event.target === item && (event.key === 'Enter' || event.key === ' ')) {
+                event.preventDefault();
+                showJobPostings(skill.name);
+            }
+        });
 
         const header = document.createElement('div');
         header.className = 'skill-gap-item-header';
 
         const rank = document.createElement('span');
         rank.className = 'skill-gap-rank';
-        rank.textContent = `#${index + 1}`;
+        rank.textContent = String(index + 1).padStart(2, '0');
 
+        const color = categoryColor(skill.category);
         const swatch = document.createElement('span');
         swatch.className = 'skill-swatch';
-        swatch.style.backgroundColor = categoryColor(skill.category);
+        swatch.style.backgroundColor = color;
 
         const name = document.createElement('span');
         name.className = 'skill-gap-name';
-        name.textContent = skill.name;
+        name.append(swatch, document.createTextNode(skill.name));
 
         const share = skillShare(skill);
         const ads = skillCount(skill);
 
         const count = document.createElement('span');
         count.className = 'skill-gap-count';
-        count.textContent = share === null ? `${ads} postings` : `${share}% of IT ads`;
-        count.title = `${ads.toLocaleString()} live ads`;
+        count.textContent = share === null ? `${ads} ads` : `${share}%`;
+        count.title = share === null ? `${ads.toLocaleString()} live ads` : `${share}% of live Data/IT ads (${ads.toLocaleString()} ads)`;
 
-        header.append(rank, swatch, name, count);
+        const bar = document.createElement('div');
+        bar.className = 'skill-gap-bar';
+        const fill = document.createElement('span');
+        fill.style.width = `${(100 * skillValue(skill) / maxValue).toFixed(1)}%`;
+        fill.style.backgroundColor = color;
+        bar.appendChild(fill);
+
+        header.append(rank, name, count, bar);
 
         const trend = trendLabel(skill.name, ads);
         if (trend) {
@@ -322,11 +409,24 @@ function renderSkillGapResults() {
         item.append(header, courseLinks);
         container.appendChild(item);
     });
+
+    if (gaps.length > GAPS_SHOWN) {
+        const more = document.createElement('button');
+        more.type = 'button';
+        more.className = 'location-pill show-more';
+        more.textContent = showAllGaps ? `Show top ${GAPS_SHOWN} only` : `Show all ${gaps.length} gaps`;
+        more.addEventListener('click', () => {
+            showAllGaps = !showAllGaps;
+            renderSkillGapResults();
+        });
+        container.appendChild(more);
+    }
 }
 
 function showJobPostings(skillName) {
     selectedSkill = skillName;
     renderJobPostings();
+    renderSkillGapResults();
 }
 
 function renderJobPostings() {
@@ -338,19 +438,19 @@ function renderJobPostings() {
     if (!selectedSkill) {
         const hint = document.createElement('p');
         hint.className = 'skill-gap-empty';
-        hint.textContent = 'Click a skill to see live job postings.';
+        hint.textContent = 'No skill picked yet.';
         container.appendChild(hint);
         return;
     }
 
     const locationSuffix = selectedLocation === 'Sweden' ? '' : ` · ${selectedLocation}`;
-    if (title) title.textContent = `Job Postings — ${selectedSkill}${locationSuffix}`;
+    if (title) title.textContent = `Job postings: ${selectedSkill}${locationSuffix}`;
 
     const remoteInfo = remoteWorkData[selectedSkill];
     if (remoteInfo) {
         const remoteBadge = document.createElement('p');
         remoteBadge.className = 'remote-work-badge';
-        remoteBadge.textContent = `🏠 ${remoteInfo.percent}% of the ${remoteInfo.sample_size} live Data/IT ads mentioning it bring up remote/hybrid work`;
+        remoteBadge.textContent = `${remoteInfo.percent}% of the ${remoteInfo.sample_size} live Data/IT ads mentioning it bring up remote/hybrid work`;
         container.appendChild(remoteBadge);
     }
 
@@ -404,14 +504,87 @@ function renderJobPostings() {
 }
 
 function isDarkMode() {
+    const forced = document.documentElement.dataset.theme;
+    if (forced === 'dark' || forced === 'light') return forced === 'dark';
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
 
-function chartTheme() {
-    return isDarkMode()
-        ? { ink: '#c3c2b7', grid: '#2c2c2a', axis: '#383835' }
-        : { ink: '#52514e', grid: '#e1e0d9', axis: '#c3c2b7' };
+// Chart colors come from the CSS tokens in styles.css, so charts and page always match.
+function cssToken(name, fallback) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || fallback;
 }
+
+function chartTheme() {
+    return {
+        ink: cssToken('--text-secondary', '#475569'),
+        muted: cssToken('--text-muted', '#64748b'),
+        strong: cssToken('--text-primary', '#0f172a'),
+        grid: cssToken('--gridline', '#e8ecf1'),
+        axis: cssToken('--axis', '#cbd2dc'),
+        surface: cssToken('--surface', '#ffffff'),
+        tooltipBg: cssToken('--tooltip-bg', '#0f172a'),
+        tooltipInk: cssToken('--tooltip-ink', '#f8fafc')
+    };
+}
+
+// One tooltip look for every chart on the page.
+function tooltipStyle(theme) {
+    return {
+        backgroundColor: theme.tooltipBg,
+        titleColor: theme.tooltipInk,
+        bodyColor: theme.tooltipInk,
+        footerColor: theme.tooltipInk,
+        titleFont: { weight: '600', size: 12 },
+        bodyFont: { size: 12 },
+        padding: 10,
+        cornerRadius: 8,
+        boxPadding: 4,
+        displayColors: false,
+        caretSize: 5
+    };
+}
+
+// Writes each bar's value just past its end, so the reader doesn't need the x axis.
+const barValueLabels = {
+    id: 'barValueLabels',
+    afterDatasetsDraw(chart, _args, options) {
+        const { ctx } = chart;
+        const meta = chart.getDatasetMeta(0);
+        ctx.save();
+        ctx.font = `600 12px ${Chart.defaults.font.family}`;
+        ctx.fillStyle = options.color;
+        ctx.textBaseline = 'middle';
+        meta.data.forEach((bar, index) => {
+            const value = chart.data.datasets[0].data[index];
+            ctx.fillText(options.format(value), bar.x + 6, bar.y);
+        });
+        ctx.restore();
+    }
+};
+
+function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    try { localStorage.setItem(THEME_KEY, theme); } catch {}
+    refreshTheme();
+}
+
+// Re-render everything that bakes colors in (canvas charts, swatches, the SVG tree).
+function refreshTheme() {
+    if (!allSkills.length) return;
+    paintCategoryDots();
+    renderCharts();
+    renderSkillPicker();
+    renderSkillGapResults();
+    renderHistory();
+    if (typeof drawNetworkTree === 'function' && typeof skillNetwork !== 'undefined' && skillNetwork) {
+        drawNetworkTree();
+        renderNetworkPanel();
+    }
+}
+
+document.getElementById('themeToggle')?.addEventListener('click', () => {
+    setTheme(isDarkMode() ? 'light' : 'dark');
+});
 
 function createChart(canvasId, categoryData, categoryKey) {
     const canvas = document.getElementById(canvasId);
@@ -428,6 +601,11 @@ function createChart(canvasId, categoryData, categoryKey) {
     const counts = sorted.map(item => item.count);
     const shares = showsShares();
 
+    const format = (value) => shares ? `${value}%` : value.toLocaleString();
+
+    // Same bar thickness and spacing in every card, whatever the number of skills.
+    canvas.parentElement.style.height = `${Math.max(sorted.length, 4) * 34 + 8}px`;
+
     return new Chart(ctx, {
         type: 'bar',
         data: {
@@ -436,17 +614,21 @@ function createChart(canvasId, categoryData, categoryKey) {
                 label: shares ? 'Share of live Data/IT ads' : 'Active job postings',
                 data: dataValues,
                 backgroundColor: barColor,
+                hoverBackgroundColor: barColor,
                 borderRadius: 4,
-                borderSkipped: false,
-                maxBarThickness: 28
+                borderSkipped: 'start',
+                barPercentage: 0.78,
+                categoryPercentage: 0.9,
+                maxBarThickness: 24
             }]
         },
+        plugins: [barValueLabels],
         options: {
             indexAxis: 'y', // Generates horizontal bar charts for clean text scanning
             responsive: true,
             maintainAspectRatio: false, // The .chart-wrapper element controls actual height
             layout: {
-                padding: { right: 12 }
+                padding: { right: 44 }
             },
             onClick: (_evt, elements) => {
                 if (elements.length) showJobPostings(labels[elements[0].index]);
@@ -456,26 +638,29 @@ function createChart(canvasId, categoryData, categoryKey) {
             },
             plugins: {
                 legend: { display: false },
+                barValueLabels: { color: theme.strong, format },
                 tooltip: {
+                    ...tooltipStyle(theme),
+                    footerFont: { size: 11, weight: '400' },
                     callbacks: {
                         label: (item) => shares
                             ? `${item.raw}% of Data/IT ads (${counts[item.dataIndex].toLocaleString()} of ${(itTotals[selectedLocation] || 0).toLocaleString()})`
                             : `${item.formattedValue} job postings`,
-                        afterLabel: (item) => trendLabel(item.label, counts[item.dataIndex])?.text || ''
+                        afterLabel: (item) => trendLabel(item.label, counts[item.dataIndex])?.text || '',
+                        footer: () => 'Click to see openings'
                     }
                 }
             },
             scales: {
                 x: {
+                    display: false,
                     beginAtZero: true,
-                    grid: { color: theme.grid },
-                    border: { color: theme.axis },
-                    ticks: { color: theme.ink, callback: (value) => shares ? `${value}%` : value }
+                    grace: '4%'
                 },
                 y: {
                     grid: { display: false },
-                    border: { color: theme.axis },
-                    ticks: { color: theme.ink }
+                    border: { display: false },
+                    ticks: { color: theme.ink, font: { size: 12.5, weight: '500' }, padding: 6 }
                 }
             }
         }
@@ -517,7 +702,7 @@ function aggregateHistoricalByYear(csvText) {
 }
 
 function renderHistory() {
-    const section = document.querySelector('.history-section');
+    const section = document.getElementById('history');
     const canvas = document.getElementById('historyChart');
     if (!section || !canvas) return;
 
@@ -552,8 +737,9 @@ function renderHistory() {
         pointRadius: 0,
         pointHoverRadius: 5,
         pointHoverBorderWidth: 2,
-        pointHoverBorderColor: getComputedStyle(document.documentElement).getPropertyValue('--surface').trim() || '#fff',
-        tension: 0.25
+        pointHoverBorderColor: theme.surface,
+        tension: 0.3,
+        cubicInterpolationMode: 'monotone' // smooth, but never overshoots the real values
     }));
 
     if (historyChart) historyChart.destroy();
@@ -568,9 +754,12 @@ function renderHistory() {
                 legend: {
                     position: 'top',
                     align: 'start',
-                    labels: { color: theme.ink, usePointStyle: true, pointStyle: 'line', boxWidth: 24 }
+                    labels: { color: theme.ink, usePointStyle: true, pointStyle: 'circle', boxWidth: 8, boxHeight: 8, padding: 16, font: { size: 12.5, weight: '500' } }
                 },
                 tooltip: {
+                    ...tooltipStyle(theme),
+                    displayColors: true,
+                    usePointStyle: true,
                     itemSort: (a, b) => b.raw - a.raw,
                     callbacks: {
                         title: (items) => items[0].label === '2026' ? '2026 (Jan–Oct)' : items[0].label,
@@ -582,14 +771,14 @@ function renderHistory() {
                 x: {
                     grid: { display: false },
                     border: { color: theme.axis },
-                    ticks: { color: theme.ink, maxRotation: 0, autoSkipPadding: 12 }
+                    ticks: { color: theme.muted, maxRotation: 0, autoSkipPadding: 12 }
                 },
                 y: {
                     beginAtZero: true,
                     grid: { color: theme.grid },
                     border: { display: false },
-                    ticks: { color: theme.ink, callback: (value) => `${value}%` },
-                    title: { display: true, text: 'Share of all ads', color: theme.ink }
+                    ticks: { color: theme.muted, callback: (value) => `${value}%`, padding: 8 },
+                    title: { display: true, text: 'Share of Data/IT ads', color: theme.muted, font: { size: 12 } }
                 }
             }
         }
@@ -650,23 +839,9 @@ function renderHistoryTable(years, datasets) {
 }
 
 // React to the viewer switching OS-level light/dark mode without a page reload
+// (only matters while they haven't picked a mode with the toggle).
 if (window.matchMedia) {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-        const theme = chartTheme();
-        charts.forEach(chart => {
-            if (!chart) return;
-            const categoryKey = Object.keys(CATEGORY_COLORS).find(key =>
-                CATEGORY_COLORS[key].light === chart.data.datasets[0].backgroundColor ||
-                CATEGORY_COLORS[key].dark === chart.data.datasets[0].backgroundColor
-            );
-            chart.data.datasets[0].backgroundColor = categoryColor(categoryKey);
-            chart.options.scales.x.grid.color = theme.grid;
-            chart.options.scales.x.border.color = theme.axis;
-            chart.options.scales.x.ticks.color = theme.ink;
-            chart.options.scales.y.border.color = theme.axis;
-            chart.options.scales.y.ticks.color = theme.ink;
-            chart.update();
-        });
-        renderHistory();
+        if (!document.documentElement.dataset.theme) refreshTheme();
     });
 }

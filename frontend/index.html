@@ -3,89 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill Matrix</title>
+    <title>Skill Matrix · Sweden tech jobs</title>
+    <meta name="description" content="Which tech skills Sweden's job ads ask for, how demand has changed since 2008, and what to learn next.">
+    <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // Apply a saved light/dark choice before first paint, so the page doesn't flash.
+        try {
+            const saved = localStorage.getItem('techTrends.theme');
+            if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+        } catch {}
+    </script>
 </head>
 <body>
-    <header>
-        <p class="eyebrow">🇸🇪 Sweden Tech Market</p>
-        <h1>Skill Matrix</h1>
-        <p class="subtitle">What Sweden's tech job ads ask for, and which skills to learn next. Built on Arbetsförmedlingen's live and historical ads.</p>
-        <div id="timestamp" class="timestamp">Loading data updates…</div>
-        <div id="locationFilter" class="location-filter"></div>
-        <p class="section-hint">Bars show the share of live Data/IT job ads that mention each skill.</p>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="#top" aria-label="Skill Matrix, back to top">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span>Skill Matrix</span>
+            </a>
+            <nav class="topnav" aria-label="Sections">
+                <a href="#live">Live demand</a>
+                <a href="#connections">Connections</a>
+                <a href="#history">Over time</a>
+                <a href="#plan">Learning plan</a>
+            </nav>
+            <button id="themeToggle" class="icon-button" type="button" aria-label="Switch light or dark mode" title="Switch light or dark mode">
+                <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+            </button>
+        </div>
     </header>
 
-    <main class="dashboard-container">
-        <!-- Chart Cards -->
-        <div class="chart-card">
-            <h3>Most Demanded Programming Languages</h3>
-            <div class="chart-wrapper">
-                <canvas id="languagesChart"></canvas>
+    <main id="top" class="page">
+        <section class="hero">
+            <p class="eyebrow">Sweden tech job market</p>
+            <h1>Which tech skills Sweden is hiring for</h1>
+            <p class="lede">What Data/IT job ads in Sweden ask for today, how that has changed since 2008, and which skills to learn next. Built on Arbetsförmedlingen's live and historical job ads, refreshed every week.</p>
+            <dl id="kpis" class="kpis" aria-live="polite">
+                <div class="kpi"><dt>Live Data/IT ads</dt><dd>–</dd></div>
+                <div class="kpi"><dt>Most requested</dt><dd>–</dd></div>
+                <div class="kpi"><dt>Skills tracked</dt><dd>–</dd></div>
+                <div class="kpi"><dt>Years of history</dt><dd>–</dd></div>
+            </dl>
+        </section>
+
+        <div class="toolbar" role="region" aria-label="Filters">
+            <div class="toolbar-inner">
+                <span class="toolbar-label">Location</span>
+                <div id="locationFilter" class="pill-group" role="group" aria-label="Location"></div>
+                <span id="timestamp" class="timestamp">Loading data…</span>
             </div>
         </div>
 
-        <div class="chart-card">
-            <h3>Cloud & Infrastructure Skills</h3>
-            <div class="chart-wrapper">
-                <canvas id="cloudChart"></canvas>
+        <section id="live" class="section">
+            <div class="section-head">
+                <p class="section-kicker">01</p>
+                <div>
+                    <h2>Live demand</h2>
+                    <p class="section-desc">Share of live Data/IT job ads that mention each skill. Click a bar to see openings for it.</p>
+                </div>
             </div>
-        </div>
+            <div class="grid-3">
+                <article class="card">
+                    <header class="card-head">
+                        <h3><span class="card-dot" data-category="Languages"></span>Programming languages</h3>
+                    </header>
+                    <div class="chart-wrapper">
+                        <canvas id="languagesChart" role="img" aria-label="Bar chart of programming languages by share of live Data/IT ads"></canvas>
+                    </div>
+                </article>
+                <article class="card">
+                    <header class="card-head">
+                        <h3><span class="card-dot" data-category="Cloud &amp; Infra"></span>Cloud &amp; infrastructure</h3>
+                    </header>
+                    <div class="chart-wrapper">
+                        <canvas id="cloudChart" role="img" aria-label="Bar chart of cloud and infrastructure skills by share of live Data/IT ads"></canvas>
+                    </div>
+                </article>
+                <article class="card">
+                    <header class="card-head">
+                        <h3><span class="card-dot" data-category="Platforms &amp; Data"></span>Platforms &amp; data</h3>
+                    </header>
+                    <div class="chart-wrapper">
+                        <canvas id="dataChart" role="img" aria-label="Bar chart of platforms and data skills by share of live Data/IT ads"></canvas>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-        <div class="chart-card">
-            <h3>Platforms & Data</h3>
-            <div class="chart-wrapper">
-                <canvas id="dataChart"></canvas>
+        <section id="connections" class="section network-section">
+            <div class="section-head">
+                <p class="section-kicker">02</p>
+                <div>
+                    <h2>How the skills connect</h2>
+                    <p class="section-desc">Pick a skill to light up the ones to learn with it. Together the numbered skills make you a match for most of the live Data/IT ads that mention it: you have every tracked skill the ad asks for, or all but one. Lines show how often the skill appears alongside each other one. Covers all of Sweden.</p>
+                </div>
             </div>
-        </div>
+            <article class="card">
+                <div class="network-layout">
+                    <div id="skillNetwork" class="network-chart">Loading skill connections…</div>
+                    <div id="skillNetworkPanel" class="network-panel" aria-live="polite"></div>
+                </div>
+            </article>
+        </section>
+
+        <section id="history" class="section history-section">
+            <div class="section-head">
+                <p class="section-kicker">03</p>
+                <div>
+                    <h2>Demand over time, 2008–2026</h2>
+                    <p class="section-desc">Share of Data/IT job ads published each year that mention the skill, from Arbetsförmedlingen's Historical Ads. Follows the location filter. Starts in 2008, because older ads mostly have no job category. 2026 covers January–October.</p>
+                </div>
+            </div>
+            <article class="card">
+                <div id="historyCategoryFilter" class="pill-group pill-group-tabs" role="group" aria-label="Skill category"></div>
+                <div class="chart-wrapper history-chart-wrapper">
+                    <canvas id="historyChart" role="img" aria-label="Line chart of yearly share of job ads mentioning each skill"></canvas>
+                </div>
+                <details class="history-table-toggle">
+                    <summary>Show as table</summary>
+                    <div class="history-table-scroll">
+                        <table id="historyTable" class="history-table"></table>
+                    </div>
+                </details>
+            </article>
+        </section>
+
+        <section id="plan" class="section">
+            <div class="section-head">
+                <p class="section-kicker">04</p>
+                <div>
+                    <h2>Your learning plan</h2>
+                    <p class="section-desc">Tick the skills you already have. The rest are ranked by how many live Data/IT ads ask for them, with courses to close the gap.</p>
+                </div>
+            </div>
+            <div class="plan-grid">
+                <article class="card">
+                    <header class="card-head"><h3>Skills you know</h3></header>
+                    <div id="skillPicker" class="skill-picker">Loading skills…</div>
+                </article>
+
+                <article class="card">
+                    <header class="card-head"><h3>Your gaps, ranked by demand</h3></header>
+                    <div id="skillGapResults" class="skill-gap-results">Loading recommendations…</div>
+                </article>
+
+                <article class="card job-card">
+                    <header class="card-head">
+                        <h3 id="jobPostingsTitle">Job postings</h3>
+                        <p class="card-sub">Click a bar in the charts, or a skill gap, to see live openings.</p>
+                    </header>
+                    <div id="jobPostings" class="job-postings-list"></div>
+                </article>
+            </div>
+        </section>
     </main>
 
-    <section class="history-section">
-        <div class="chart-card">
-            <h3>How the skills connect</h3>
-            <p class="section-hint">Pick a skill to light up the ones to learn with it. Together the numbered skills make you a match for most of the live Data/IT ads that mention it: you have every tracked skill the ad asks for, or all but one. Lines show how often the skill appears alongside each other one. Covers all of Sweden.</p>
-            <div class="network-layout">
-                <div id="skillNetwork" class="network-chart">Loading skill connections…</div>
-                <div id="skillNetworkPanel" class="network-panel" aria-live="polite"></div>
-            </div>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>Data: <a href="https://jobtechdev.se/" target="_blank" rel="noopener noreferrer">JobTech Dev</a>, Arbetsförmedlingen's open job ads API, live and historical. Updated automatically every Monday.</p>
+            <p><a href="https://github.com/aamirusaf/sweden-tech-trends" target="_blank" rel="noopener noreferrer">Source on GitHub</a></p>
         </div>
-    </section>
-
-    <section class="history-section">
-        <div class="chart-card">
-            <h3>Demand over time, 2008–2026</h3>
-            <p class="section-hint">Share of Data/IT job ads published each year that mention the skill, from Arbetsförmedlingen's Historical Ads. Follows the location filter above. Starts in 2008, because older ads mostly have no job category. 2026 covers January–October.</p>
-            <div id="historyCategoryFilter" class="location-filter history-filter" role="group" aria-label="Skill category"></div>
-            <div class="chart-wrapper history-chart-wrapper">
-                <canvas id="historyChart" role="img" aria-label="Line chart of yearly share of job ads mentioning each skill"></canvas>
-            </div>
-            <details class="history-table-toggle">
-                <summary>Show as table</summary>
-                <div class="history-table-scroll">
-                    <table id="historyTable" class="history-table"></table>
-                </div>
-            </details>
-        </div>
-    </section>
-
-    <section class="skill-gap-grid">
-        <div class="chart-card">
-            <h3>Which skills do you already know?</h3>
-            <p class="section-hint">Check off what you know. Everything else gets ranked by how many live Data/IT ads ask for it, with courses to close the gap.</p>
-            <div id="skillPicker" class="skill-picker">Loading skills…</div>
-        </div>
-
-        <div class="chart-card">
-            <h3>Your skill gaps, ranked by demand</h3>
-            <div id="skillGapResults" class="skill-gap-results">Loading recommendations…</div>
-        </div>
-
-        <div class="chart-card">
-            <h3 id="jobPostingsTitle">Job Postings</h3>
-            <p class="section-hint">Click a bar in the charts above, or a skill gap card, to see live openings for it.</p>
-            <div id="jobPostings" class="job-postings-list"></div>
-        </div>
-    </section>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
     <script src="app.js"></script>

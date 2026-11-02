@@ -365,16 +365,9 @@ function renderNetworkPanel() {
     openings.textContent = `See live ${name} openings ↓`;
     openings.addEventListener('click', () => {
         showJobPostings(name);
-        document.getElementById('jobPostings')?.closest('.chart-card')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById('jobPostings')?.closest('.card')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
     panel.appendChild(openings);
 }
 
-if (window.matchMedia) {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', () => {
-        if (skillNetwork) {
-            drawNetworkTree();
-            renderNetworkPanel();
-        }
-    });
-}
+// Light/dark switches redraw the tree through refreshTheme() in app.js.
