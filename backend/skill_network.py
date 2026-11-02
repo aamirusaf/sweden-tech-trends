@@ -6,14 +6,21 @@ From those sets this module works out, for each skill:
 - pairs: how many of its ads also mention each other skill, and
 - a "bundle": the companion skills that, learned alongside it, cover the most of its
   ads. An ad counts as covered when you know every tracked skill it mentions, so
-  "Python + Linux + Git covers 48%" means 48% of the ads mentioning Python ask for
-  nothing else from the 20 tracked skills.
+  "Python + Linux + Git covers 48%" means that for 48% of the ads mentioning Python,
+  those skills are all the ad asks for from the 20 tracked skills, or all but one
+  (see BUNDLE_MISSING_ALLOWED).
 
 Kept free of network code so it can be tested on hand-made ads.
 """
 
+from itertools import combinations
+
 # Stop adding companions once this share of the skill's ads is covered ("most jobs").
 BUNDLE_TARGET_PERCENT = 50
+# How many of an ad's tracked skills you may lack and still count as a match. Ads
+# often list nice-to-haves, and with none allowed six companions only reached about
+# 25-35% of a skill's ads in the live data (2026-11-02).
+BUNDLE_MISSING_ALLOWED = 1
 # Never suggest more than this many companions, even if the target isn't reached.
 BUNDLE_MAX_COMPANIONS = 6
 # Skills with fewer ads than this get no bundle; the percentages would be noise.
@@ -32,23 +39,33 @@ def build_bundle(skill, ad_skill_sets):
     companion, each with the percent covered once it is added)."""
     total = len(ad_skill_sets)
     chosen = {skill}
+    allowed = BUNDLE_MISSING_ALLOWED
+
+    def is_match(skills, known):
+        return len(skills - known) <= allowed
 
     def covered():
-        return sum(1 for s in ad_skill_sets if s <= chosen)
+        return sum(1 for s in ad_skill_sets if is_match(s, chosen))
 
     baseline = round(100 * covered() / total)
     steps = []
     while len(steps) < BUNDLE_MAX_COMPANIONS:
-        uncovered = [s for s in ad_skill_sets if not s <= chosen]
+        uncovered = [s for s in ad_skill_sets if not is_match(s, chosen)]
         budget = BUNDLE_MAX_COMPANIONS - len(steps)
-        options = {frozenset(s - chosen) for s in uncovered}
-        options = [o for o in options if len(o) <= budget]
+        # The ways to turn an uncovered ad into a match: add all it is missing except
+        # `allowed` of them, whichever ones those are.
+        options = set()
+        for s in uncovered:
+            missing = sorted(s - chosen)
+            for left_out in combinations(missing, allowed):
+                options.add(frozenset(missing) - set(left_out))
+        options = [o for o in options if o and len(o) <= budget]
         if not options:
             break
 
         def score(option):
             with_option = chosen | option
-            gain = sum(1 for s in uncovered if s <= with_option)
+            gain = sum(1 for s in uncovered if is_match(s, with_option))
             return (gain / len(option), gain, -len(option), sorted(option))
 
         best = max(options, key=score)
@@ -58,7 +75,7 @@ def build_bundle(skill, ad_skill_sets):
         remaining = set(best)
         while remaining:
             name = max(remaining, key=lambda n: (
-                sum(1 for s in uncovered if s <= chosen | {n}), mentions[n], n
+                sum(1 for s in uncovered if is_match(s, chosen | {n})), mentions[n], n
             ))
             remaining.remove(name)
             chosen.add(name)
@@ -110,6 +127,7 @@ def build_skill_network(ad_skill_sets, all_skills, top_n=5, min_count=2):
     network = {
         "total_ads": len(ad_skill_sets),
         "target_percent": BUNDLE_TARGET_PERCENT,
+        "missing_allowed": BUNDLE_MISSING_ALLOWED,
         "ads": {skill: len(ads_by_skill[skill]) for skill in all_skills},
         "pairs": pairs,
         "bundles": bundles,
