@@ -7,6 +7,8 @@ import time
 from datetime import datetime, timezone
 import requests
 
+from skill_network import build_skill_network
+
 # Base endpoint for the official JobTech Dev / Arbetsförmedlingen search engine
 API_URL = "https://jobsearch.api.jobtechdev.se/search"
 
@@ -42,14 +44,14 @@ MAX_PAGED_HITS = 2100
 # How many sample postings to keep per skill/location for the "click a skill to see openings" panel
 POSTINGS_PER_SKILL = 6
 
-# How many nationwide postings per skill to scan for co-occurring skills. Larger than
-# POSTINGS_PER_SKILL because this only feeds aggregate counts, not a list a user reads.
-CO_OCCURRENCE_SAMPLE_SIZE = 20
-
-# How many co-occurring skills to keep per skill, and the minimum sample count to
-# bother reporting (avoids noise like "1 posting out of 20 mentioned X").
+# How many co-occurring skills to list per skill in the job postings panel, and the
+# minimum number of shared ads to bother listing one.
 CO_OCCURRENCE_TOP_N = 5
 CO_OCCURRENCE_MIN_COUNT = 2
+
+# Sort orders used to page through every live Data/IT ad. One query can reach at most
+# MAX_PAGED_HITS ads, so newest-first plus oldest-first covers up to twice that.
+FULL_SCAN_SORTS = ["pubdate-desc", "pubdate-asc"]
 
 ALL_SKILLS = [skill for skills in TECH_STACKS.values() for skill in skills]
 
@@ -202,10 +204,6 @@ def fetch_skill_demand():
         "data": {}
     }
     postings_by_skill = {}
-    co_occurrence_counts = {skill: {} for skill in ALL_SKILLS}
-    co_occurrence_samples = {skill: 0 for skill in ALL_SKILLS}
-    remote_mention_counts = {skill: {"remote_or_hybrid": 0, "sampled": 0} for skill in ALL_SKILLS}
-
     failures = []
 
     print("🚀 Fetching live technology metrics from Arbetsförmedlingen API...")
@@ -238,11 +236,8 @@ def fetch_skill_demand():
                 # Two counts per skill: within Data/IT ads (what the dashboard shows, and
                 # where the sample postings come from) and across all ads (kept in
                 # history.csv so the long-term archive continues the earlier measure).
-                # The nationwide ("Sweden") query pulls a bigger sample since it also feeds the
-                # skill co-occurrence scan below; city queries only need enough for the postings list.
-                sample_size = CO_OCCURRENCE_SAMPLE_SIZE if location == "Sweden" else POSTINGS_PER_SKILL
                 try:
-                    it_ads, hits = search_skill(skill, municipality_id, sample_size, it_only=True)
+                    it_ads, hits = search_skill(skill, municipality_id, POSTINGS_PER_SKILL, it_only=True)
                     total_ads, _ = search_skill(skill, municipality_id, 0)
                     it_by_location[location] = it_ads
                     by_location[location] = total_ads
@@ -258,11 +253,6 @@ def fetch_skill_demand():
                         }
                         for hit in hits[:POSTINGS_PER_SKILL]
                     ]
-
-                    if location == "Sweden":
-                        analyze_nationwide_sample(
-                            skill, hits, co_occurrence_counts, co_occurrence_samples, remote_mention_counts
-                        )
 
                     print(f"✅ {skill} ({location}): {it_ads} Data/IT ads, {total_ads} ads in all.")
 
@@ -285,6 +275,15 @@ def fetch_skill_demand():
             })
             postings_by_skill[skill] = postings_by_location
 
+    # Which skills appear together, and how often remote work comes up, read from every
+    # live Data/IT ad rather than a per-skill sample.
+    try:
+        all_it_ads = fetch_all_it_ads()
+    except (ApiError, requests.RequestException) as e:
+        print(f"⚠️ Failed fetching all Data/IT ads for the skill network. {e}")
+        failures.append("all Data/IT ads")
+        all_it_ads = []
+
     # A failed request would otherwise be recorded as 0 postings, and that 0 would land in
     # history.json and skew the trend badges. Keep the previous data files instead and exit
     # non-zero so a scheduled run shows up as failed rather than committing bad numbers.
@@ -292,8 +291,13 @@ def fetch_skill_demand():
         print(f"\n❌ {len(failures)} request(s) failed, not writing data files: {', '.join(failures)}")
         sys.exit(1)
 
-    co_occurrence = summarize_co_occurrence(co_occurrence_counts, co_occurrence_samples)
-    remote_work = summarize_remote_work(remote_mention_counts)
+    ad_skill_sets, remote_flags = scan_ads(all_it_ads)
+    network, co_occurrence = build_skill_network(
+        ad_skill_sets, ALL_SKILLS, CO_OCCURRENCE_TOP_N, CO_OCCURRENCE_MIN_COUNT
+    )
+    network["last_updated"] = results["last_updated"]
+    network["categories"] = TECH_STACKS
+    remote_work = summarize_remote_work(ad_skill_sets, remote_flags)
 
     # Persist the dynamic calculations to the data layer directory
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -303,6 +307,7 @@ def fetch_skill_demand():
     history_path = os.path.join(data_dir, "history.json")
     history_csv_path = os.path.join(data_dir, "history.csv")
     co_occurrence_path = os.path.join(data_dir, "co_occurrence.json")
+    network_path = os.path.join(data_dir, "skill_network.json")
 
     try:
         with open(trends_path, "w", encoding="utf-8") as f:
@@ -321,6 +326,8 @@ def fetch_skill_demand():
                 },
                 f, indent=4, ensure_ascii=False
             )
+        with open(network_path, "w", encoding="utf-8") as f:
+            json.dump(network, f, indent=4, ensure_ascii=False)
         # Seed the CSV archive from history.json the first time, before history.json
         # gets today's snapshot (and before it can drop old ones past its cap).
         if not os.path.exists(history_csv_path):
@@ -332,58 +339,58 @@ def fetch_skill_demand():
         print("❌ Error: Directory 'backend/data/' does not exist. Run setup structure command first.")
 
 
-def analyze_nationwide_sample(skill, hits, co_occurrence_counts, co_occurrence_samples, remote_mention_counts):
-    """Scan a skill's nationwide sample postings once for both co-occurring skills
-    and remote/hybrid language, since both read the same description text."""
-    for hit in hits:
-        text = (hit.get("description") or {}).get("text") or hit.get("headline") or ""
+def fetch_all_it_ads():
+    """Every live ad in the Data/IT field, deduplicated by id.
 
-        mentioned = {name for name, matcher in SKILL_MATCHERS.items() if matcher.search(text)}
-        if skill in mentioned:
-            co_occurrence_samples[skill] += 1
-            for other in mentioned - {skill}:
-                co_occurrence_counts[skill][other] = co_occurrence_counts[skill].get(other, 0) + 1
+    JobSearch pages stop at MAX_PAGED_HITS per query, so read newest-first and then
+    oldest-first; together they cover up to twice that many ads."""
+    ads, total = {}, 0
+    for sort in FULL_SCAN_SORTS:
+        offset = 0
+        while offset < MAX_PAGED_HITS:
+            data = search({
+                "occupation-field": DATA_IT_FIELD, "sort": sort, "limit": 100, "offset": offset
+            })
+            total = data.get("total", {}).get("value", 0)
+            hits = data.get("hits", [])
+            for hit in hits:
+                ads[hit.get("id")] = hit
+            if not hits or offset + 100 >= total:
+                break
+            offset += 100
+            time.sleep(0.2)
+        if len(ads) >= total:
+            break
+    print(f"🔗 Scanned {len(ads)} of {total} live Data/IT ads for skill connections")
+    if len(ads) < total:
+        print(f"⚠️ {total - len(ads)} Data/IT ads were out of reach of paging and are left out")
+    return list(ads.values())
 
-        remote_mention_counts[skill]["sampled"] += 1
-        if REMOTE_HYBRID_PATTERN.search(text):
-            remote_mention_counts[skill]["remote_or_hybrid"] += 1
+
+def scan_ads(ads):
+    """Return, per ad, the set of tracked skills it mentions and whether it mentions
+    remote/hybrid work."""
+    skill_sets, remote_flags = [], []
+    for ad in ads:
+        text = " ".join(filter(None, [
+            ad.get("headline"), (ad.get("description") or {}).get("text")
+        ]))
+        skill_sets.append({name for name, matcher in SKILL_MATCHERS.items() if matcher.search(text)})
+        remote_flags.append(bool(REMOTE_HYBRID_PATTERN.search(text)))
+    return skill_sets, remote_flags
 
 
-def summarize_co_occurrence(co_occurrence_counts, co_occurrence_samples):
-    """Turn raw co-mention counts into a top-N list per skill, with a % of that
-    skill's own sample so the frontend can show e.g. 'AWS · 40%'."""
+def summarize_remote_work(ad_skill_sets, remote_flags):
+    """% of each skill's Data/IT ads that mention remote/hybrid work."""
     summary = {}
-    for skill, counts in co_occurrence_counts.items():
-        sample_size = co_occurrence_samples[skill]
-        if not sample_size:
+    for skill in ALL_SKILLS:
+        flags = [remote for skills, remote in zip(ad_skill_sets, remote_flags) if skill in skills]
+        if len(flags) < MIN_SAMPLE_FOR_REMOTE_BADGE:
             continue
-
-        ranked = sorted(counts.items(), key=lambda pair: pair[1], reverse=True)
-        top = [
-            {"name": name, "count": count, "percent": round(count / sample_size * 100)}
-            for name, count in ranked
-            if count >= CO_OCCURRENCE_MIN_COUNT
-        ][:CO_OCCURRENCE_TOP_N]
-
-        if top:
-            summary[skill] = top
-
-    return summary
-
-
-def summarize_remote_work(remote_mention_counts):
-    """Turn remote/hybrid keyword-mention tallies into a % per skill."""
-    summary = {}
-    for skill, counts in remote_mention_counts.items():
-        sample_size = counts["sampled"]
-        if sample_size < MIN_SAMPLE_FOR_REMOTE_BADGE:
-            continue
-
         summary[skill] = {
-            "percent": round(counts["remote_or_hybrid"] / sample_size * 100),
-            "sample_size": sample_size
+            "percent": round(100 * sum(flags) / len(flags)),
+            "sample_size": len(flags)
         }
-
     return summary
 
 

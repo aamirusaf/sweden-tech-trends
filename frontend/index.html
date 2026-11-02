@@ -42,6 +42,17 @@
 
     <section class="history-section">
         <div class="chart-card">
+            <h3>How the skills connect</h3>
+            <p class="section-hint">Pick a skill to light up the ones to learn with it. Together the numbered skills cover most of the live Data/IT ads that mention it, meaning those ads ask for no other tracked skill. Lines show how often the skill appears alongside each other one. Covers all of Sweden.</p>
+            <div class="network-layout">
+                <div id="skillNetwork" class="network-chart">Loading skill connections…</div>
+                <div id="skillNetworkPanel" class="network-panel" aria-live="polite"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="history-section">
+        <div class="chart-card">
             <h3>Demand over time, 2008–2026</h3>
             <p class="section-hint">Share of Data/IT job ads published each year that mention the skill, from Arbetsförmedlingen's Historical Ads. Follows the location filter above. Starts in 2008, because older ads mostly have no job category. 2026 covers January–October.</p>
             <div id="historyCategoryFilter" class="location-filter history-filter" role="group" aria-label="Skill category"></div>
@@ -78,6 +89,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
     <script src="app.js"></script>
+    <script src="skill-network.js"></script>
 
 </body>
 </html>

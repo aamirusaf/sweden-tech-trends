@@ -79,9 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('../backend/data/job_postings.json').then(response => response.ok ? response.json() : { postings: {} }),
         fetch('../backend/data/history.json').then(response => response.ok ? response.json() : { snapshots: [] }),
         fetch('../backend/data/co_occurrence.json').then(response => response.ok ? response.json() : { co_occurrence: {} }),
-        fetch('../backend/data/historical_monthly.csv').then(response => response.ok ? response.text() : '').catch(() => '')
+        fetch('../backend/data/historical_monthly.csv').then(response => response.ok ? response.text() : '').catch(() => ''),
+        fetch('../backend/data/skill_network.json').then(response => response.ok ? response.json() : null).catch(() => null)
     ])
-        .then(([jsonData, courses, jobPostings, history, coOccurrence, historicalCsv]) => {
+        .then(([jsonData, courses, jobPostings, history, coOccurrence, historicalCsv, skillNetworkData]) => {
             historicalYearly = aggregateHistoricalByYear(historicalCsv);
             coursesData = courses;
             jobPostingsData = jobPostings.postings || {};
@@ -107,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderSkillGapResults();
             renderJobPostings();
             renderHistory();
+            renderSkillNetwork(skillNetworkData);
         })
         .catch(error => {
             console.error('Error loading dynamic metrics:', error);
@@ -348,7 +350,7 @@ function renderJobPostings() {
     if (remoteInfo) {
         const remoteBadge = document.createElement('p');
         remoteBadge.className = 'remote-work-badge';
-        remoteBadge.textContent = `🏠 ${remoteInfo.percent}% of sampled postings mention remote/hybrid work (of ${remoteInfo.sample_size} nationwide)`;
+        remoteBadge.textContent = `🏠 ${remoteInfo.percent}% of the ${remoteInfo.sample_size} live Data/IT ads mentioning it bring up remote/hybrid work`;
         container.appendChild(remoteBadge);
     }
 
