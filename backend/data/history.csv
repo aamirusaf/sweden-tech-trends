@@ -67,86 +67,74 @@ date,category,skill,location,postings
 2026-10-31,Data & AI,TensorFlow,Stockholm,6
 2026-10-31,Data & AI,TensorFlow,Göteborg,1
 2026-10-31,Data & AI,TensorFlow,Malmö,3
-2026-11-01,Languages,Python,Sweden,655
-2026-11-01,Languages,Python,Stockholm,223
-2026-11-01,Languages,Python,Göteborg,138
-2026-11-01,Languages,Python,Malmö,28
-2026-11-01,Languages,Java,Sweden,282
-2026-11-01,Languages,Java,Stockholm,98
-2026-11-01,Languages,Java,Göteborg,64
-2026-11-01,Languages,Java,Malmö,19
-2026-11-01,Languages,C#,Sweden,225
-2026-11-01,Languages,C#,Stockholm,61
-2026-11-01,Languages,C#,Göteborg,53
-2026-11-01,Languages,C#,Malmö,9
-2026-11-01,Languages,C++,Sweden,269
-2026-11-01,Languages,C++,Stockholm,49
-2026-11-01,Languages,C++,Göteborg,72
-2026-11-01,Languages,C++,Malmö,7
-2026-11-01,Languages,C,Sweden,96
-2026-11-01,Languages,C,Stockholm,13
-2026-11-01,Languages,C,Göteborg,37
-2026-11-01,Languages,C,Malmö,0
-2026-11-01,Languages,JavaScript,Sweden,153
-2026-11-01,Languages,JavaScript,Stockholm,60
-2026-11-01,Languages,JavaScript,Göteborg,19
+2026-11-01,Languages,JavaScript,Sweden,158
+2026-11-01,Languages,JavaScript,Stockholm,61
+2026-11-01,Languages,JavaScript,Göteborg,21
 2026-11-01,Languages,JavaScript,Malmö,8
-2026-11-01,Languages,TypeScript,Sweden,192
-2026-11-01,Languages,TypeScript,Stockholm,94
+2026-11-01,Languages,TypeScript,Sweden,193
+2026-11-01,Languages,TypeScript,Stockholm,93
 2026-11-01,Languages,TypeScript,Göteborg,31
 2026-11-01,Languages,TypeScript,Malmö,9
-2026-11-01,Cloud & Infra,Azure,Sweden,470
-2026-11-01,Cloud & Infra,Azure,Stockholm,179
-2026-11-01,Cloud & Infra,Azure,Göteborg,101
-2026-11-01,Cloud & Infra,Azure,Malmö,24
-2026-11-01,Cloud & Infra,AWS,Sweden,258
-2026-11-01,Cloud & Infra,AWS,Stockholm,111
+2026-11-01,Languages,Python,Sweden,682
+2026-11-01,Languages,Python,Stockholm,231
+2026-11-01,Languages,Python,Göteborg,140
+2026-11-01,Languages,Python,Malmö,29
+2026-11-01,Languages,Java,Sweden,289
+2026-11-01,Languages,Java,Stockholm,100
+2026-11-01,Languages,Java,Göteborg,64
+2026-11-01,Languages,Java,Malmö,19
+2026-11-01,Languages,C#,Sweden,227
+2026-11-01,Languages,C#,Stockholm,62
+2026-11-01,Languages,C#,Göteborg,54
+2026-11-01,Languages,C#,Malmö,9
+2026-11-01,Languages,Go,Sweden,184
+2026-11-01,Languages,Go,Stockholm,78
+2026-11-01,Languages,Go,Göteborg,30
+2026-11-01,Languages,Go,Malmö,8
+2026-11-01,Languages,Rust,Sweden,26
+2026-11-01,Languages,Rust,Stockholm,8
+2026-11-01,Languages,Rust,Göteborg,6
+2026-11-01,Languages,Rust,Malmö,2
+2026-11-01,Cloud & Infra,AWS,Sweden,260
+2026-11-01,Cloud & Infra,AWS,Stockholm,112
 2026-11-01,Cloud & Infra,AWS,Göteborg,68
 2026-11-01,Cloud & Infra,AWS,Malmö,14
-2026-11-01,Cloud & Infra,GCP,Sweden,130
-2026-11-01,Cloud & Infra,GCP,Stockholm,71
-2026-11-01,Cloud & Infra,GCP,Göteborg,18
-2026-11-01,Cloud & Infra,GCP,Malmö,8
-2026-11-01,Cloud & Infra,Kubernetes,Sweden,283
-2026-11-01,Cloud & Infra,Kubernetes,Stockholm,119
-2026-11-01,Cloud & Infra,Kubernetes,Göteborg,60
-2026-11-01,Cloud & Infra,Kubernetes,Malmö,14
-2026-11-01,Cloud & Infra,Docker,Sweden,222
-2026-11-01,Cloud & Infra,Docker,Stockholm,84
-2026-11-01,Cloud & Infra,Docker,Göteborg,42
+2026-11-01,Cloud & Infra,Azure,Sweden,478
+2026-11-01,Cloud & Infra,Azure,Stockholm,182
+2026-11-01,Cloud & Infra,Azure,Göteborg,102
+2026-11-01,Cloud & Infra,Azure,Malmö,24
+2026-11-01,Cloud & Infra,Docker,Sweden,227
+2026-11-01,Cloud & Infra,Docker,Stockholm,85
+2026-11-01,Cloud & Infra,Docker,Göteborg,43
 2026-11-01,Cloud & Infra,Docker,Malmö,9
-2026-11-01,Cloud & Infra,Terraform,Sweden,130
+2026-11-01,Cloud & Infra,Kubernetes,Sweden,290
+2026-11-01,Cloud & Infra,Kubernetes,Stockholm,119
+2026-11-01,Cloud & Infra,Kubernetes,Göteborg,63
+2026-11-01,Cloud & Infra,Kubernetes,Malmö,14
+2026-11-01,Cloud & Infra,Terraform,Sweden,133
 2026-11-01,Cloud & Infra,Terraform,Stockholm,65
 2026-11-01,Cloud & Infra,Terraform,Göteborg,18
 2026-11-01,Cloud & Infra,Terraform,Malmö,4
-2026-11-01,Cloud & Infra,Linux,Sweden,278
-2026-11-01,Cloud & Infra,Linux,Stockholm,95
-2026-11-01,Cloud & Infra,Linux,Göteborg,53
-2026-11-01,Cloud & Infra,Linux,Malmö,8
-2026-11-01,Cloud & Infra,Git,Sweden,230
-2026-11-01,Cloud & Infra,Git,Stockholm,69
-2026-11-01,Cloud & Infra,Git,Göteborg,54
-2026-11-01,Cloud & Infra,Git,Malmö,5
-2026-11-01,Platforms & Data,SQL,Sweden,310
-2026-11-01,Platforms & Data,SQL,Stockholm,117
-2026-11-01,Platforms & Data,SQL,Göteborg,44
-2026-11-01,Platforms & Data,SQL,Malmö,18
-2026-11-01,Platforms & Data,.NET,Sweden,184
-2026-11-01,Platforms & Data,.NET,Stockholm,47
-2026-11-01,Platforms & Data,.NET,Göteborg,46
-2026-11-01,Platforms & Data,.NET,Malmö,10
-2026-11-01,Platforms & Data,React,Sweden,196
-2026-11-01,Platforms & Data,React,Stockholm,91
-2026-11-01,Platforms & Data,React,Göteborg,25
-2026-11-01,Platforms & Data,React,Malmö,12
-2026-11-01,Platforms & Data,Microsoft 365,Sweden,23
-2026-11-01,Platforms & Data,Microsoft 365,Stockholm,11
-2026-11-01,Platforms & Data,Microsoft 365,Göteborg,0
-2026-11-01,Platforms & Data,Microsoft 365,Malmö,0
-2026-11-01,Platforms & Data,Active Directory,Sweden,184
-2026-11-01,Platforms & Data,Active Directory,Stockholm,62
-2026-11-01,Platforms & Data,Active Directory,Göteborg,19
-2026-11-01,Platforms & Data,Active Directory,Malmö,7
+2026-11-01,Data & AI,PostgreSQL,Sweden,79
+2026-11-01,Data & AI,PostgreSQL,Stockholm,34
+2026-11-01,Data & AI,PostgreSQL,Göteborg,16
+2026-11-01,Data & AI,PostgreSQL,Malmö,3
+2026-11-01,Data & AI,SQL,Sweden,324
+2026-11-01,Data & AI,SQL,Stockholm,123
+2026-11-01,Data & AI,SQL,Göteborg,46
+2026-11-01,Data & AI,SQL,Malmö,19
+2026-11-01,Data & AI,Apache Kafka,Sweden,71
+2026-11-01,Data & AI,Apache Kafka,Stockholm,28
+2026-11-01,Data & AI,Apache Kafka,Göteborg,17
+2026-11-01,Data & AI,Apache Kafka,Malmö,5
+2026-11-01,Data & AI,PyTorch,Sweden,22
+2026-11-01,Data & AI,PyTorch,Stockholm,8
+2026-11-01,Data & AI,PyTorch,Göteborg,3
+2026-11-01,Data & AI,PyTorch,Malmö,3
+2026-11-01,Data & AI,TensorFlow,Sweden,14
+2026-11-01,Data & AI,TensorFlow,Stockholm,4
+2026-11-01,Data & AI,TensorFlow,Göteborg,1
+2026-11-01,Data & AI,TensorFlow,Malmö,3
 2026-11-02,Languages,Python,Sweden,655
 2026-11-02,Languages,Python,Stockholm,223
 2026-11-02,Languages,Python,Göteborg,138
