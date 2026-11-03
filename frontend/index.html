@@ -25,6 +25,7 @@
             <nav class="topnav" aria-label="Sections">
                 <a href="#live">Live demand</a>
                 <a href="#connections">Connections</a>
+                <a href="#titles">Job titles</a>
                 <a href="#history">Over time</a>
                 <a href="#plan">Learning plan</a>
             </nav>
@@ -108,9 +109,35 @@
             </article>
         </section>
 
-        <section id="history" class="section history-section">
+        <section id="titles" class="section titles-section">
             <div class="section-head">
                 <p class="section-kicker">03</p>
+                <div>
+                    <h2>Job Titles</h2>
+                    <p class="section-desc">What employers call the job in the title of their Data/IT ads, grouped into families such as Data Engineer or DevOps &amp; Platform. Pick a title to see the skills its ads ask for; they light up in the skill tree too. The change and the small trend lines come from ads published each year since 2008. Covers all of Sweden.</p>
+                </div>
+            </div>
+            <div class="titles-layout">
+                <article class="card">
+                    <header class="card-head"><h3>Most used job titles</h3></header>
+                    <div id="titleList" class="title-list" aria-live="polite">Loading job titles…</div>
+                </article>
+                <article class="card">
+                    <div id="titlePanel" class="network-panel title-panel" aria-live="polite"></div>
+                </article>
+            </div>
+            <article class="card heatmap-card">
+                <header class="card-head">
+                    <h3>Which skills each title asks for</h3>
+                    <p class="card-sub">Each cell is the share of that title's live ads that mention the skill. Click a title to select it, or a skill to highlight its column.</p>
+                </header>
+                <div id="titleHeatmap"></div>
+            </article>
+        </section>
+
+        <section id="history" class="section history-section">
+            <div class="section-head">
+                <p class="section-kicker">04</p>
                 <div>
                     <h2>Demand over time, 2008–2026</h2>
                     <p class="section-desc">Share of Data/IT job ads published each year that mention the skill, from Arbetsförmedlingen's Historical Ads. Follows the location filter. Starts in 2008, because older ads mostly have no job category. 2026 covers January–October.</p>
@@ -132,7 +159,7 @@
 
         <section id="plan" class="section">
             <div class="section-head">
-                <p class="section-kicker">04</p>
+                <p class="section-kicker">05</p>
                 <div>
                     <h2>Your learning plan</h2>
                     <p class="section-desc">Tick the skills you already have. The rest are ranked by how many live Data/IT ads ask for them, with courses to close the gap.</p>
@@ -170,6 +197,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
     <script src="app.js"></script>
     <script src="skill-network.js"></script>
+    <script src="job-titles.js"></script>
 
 </body>
 </html>

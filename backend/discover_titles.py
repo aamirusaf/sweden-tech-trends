@@ -22,7 +22,8 @@ from collections import Counter
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from job_titles import classify_title, FAMILY_NAMES  # noqa: E402
 from backfill_historical import download, iter_ads, ad_is_it, load_legacy_it_occupations, DEFAULT_FILE_FOR  # noqa: E402
-from main import search, DATA_IT_FIELD, MAX_PAGED_HITS, FULL_SCAN_SORTS  # noqa: E402
+from job_titles import build_title_stats  # noqa: E402
+from main import search, scan_ads, ALL_SKILLS, DATA_IT_FIELD, MAX_PAGED_HITS, FULL_SCAN_SORTS  # noqa: E402
 
 WORD = re.compile(r"[a-zåäöéü][a-zåäöéü+#.-]{1,}", re.IGNORECASE)
 STOP = set("""och i till med för på inom en ett av som vi söker the and for to in of at a an with
@@ -55,12 +56,19 @@ def cmd_live(args):
             data = search({"occupation-field": DATA_IT_FIELD, "sort": sort, "limit": 100, "offset": offset})
             hits = data.get("hits", [])
             for hit in hits:
-                ads[hit.get("id")] = hit.get("headline")
+                ads[hit.get("id")] = hit
             if not hits or offset + 100 >= data.get("total", {}).get("value", 0):
                 break
             offset += 100
             time.sleep(0.2)
-    json.dump(summarize("live", list(ads.values())), open(args.out, "w"), ensure_ascii=False, indent=1)
+    hits = list(ads.values())
+    summary = summarize("live", [hit.get("headline") for hit in hits])
+    # The same title-by-skill table the weekly job writes to job_titles.json, so a
+    # change to the families can be previewed without running the weekly job.
+    skill_sets, _ = scan_ads(hits)
+    summary["job_titles"] = build_title_stats(
+        [(hit.get("headline"), skills) for hit, skills in zip(hits, skill_sets)], ALL_SKILLS)
+    json.dump(summary, open(args.out, "w"), ensure_ascii=False, indent=1)
 
 
 def cmd_hist(args):
@@ -98,6 +106,9 @@ def cmd_report(args):
         print("--- sample unmatched headlines")
         for h in d["other_samples"]:
             print("  ", h)
+        if "job_titles" in d:
+            print("--- job_titles.json preview")
+            print("JOB_TITLES_JSON " + json.dumps(d["job_titles"], ensure_ascii=False, separators=(",", ":")))
 
 
 def main():

@@ -77,9 +77,10 @@ TITLE_FAMILIES = [
      r"android|\bios\b|mobil\w*[\s-]*(?:utvecklare|developer|app)|apputvecklare|app[\s-]*utvecklare|"
      r"app\s*developer|flutter|react\s*native",
      "Android, iOS, App developer"),
-    ("Frontend Developer",
-     r"front[\s-]*end|webbutvecklare|webb[\s-]*utvecklare|web\s*developer|webbprogrammerare",
-     "Frontend developer, Webbutvecklare"),
+    ("Frontend & Web Developer",
+     r"front[\s-]*end|webbutvecklare|webb[\s-]*utvecklare|web\s*developer|webbprogrammerare|"
+     r"webb?\s*master|webbansvarig|wordpress",
+     "Frontend developer, Webbutvecklare, Webmaster"),
     ("Fullstack Developer",
      r"full[\s-]*stack",
      "Fullstack developer"),
@@ -87,7 +88,7 @@ TITLE_FAMILIES = [
      r"back[\s-]*end",
      "Backend developer, Backendutvecklare"),
     ("Software Developer",
-     r"utvecklare|developer|programmerare|programmer|software|mjukvar|systemutveckl|\bcoder\b|"
+     r"utvecklare|utvikl|developer|programm?e?rare|programmer|software|mjukvar|systemutveckl|systemvetare|\bcoder\b|"
      r"utveckling|development|kodare",
      "Systemutvecklare, Software engineer, Java/.NET/C++ developer"),
     # Running and looking after business systems, a large group in Swedish public sector ads.
