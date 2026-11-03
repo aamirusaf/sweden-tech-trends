@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 import requests
 
 from skill_network import build_skill_network
+from job_titles import build_title_stats
 
 # Base endpoint for the official JobTech Dev / Arbetsförmedlingen search engine
 API_URL = "https://jobsearch.api.jobtechdev.se/search"
@@ -298,6 +299,12 @@ def fetch_skill_demand():
     network["last_updated"] = results["last_updated"]
     network["categories"] = TECH_STACKS
     remote_work = summarize_remote_work(ad_skill_sets, remote_flags)
+    # What employers call these jobs: each ad's headline grouped into a title family,
+    # with the share of each family's ads that mention each tracked skill.
+    job_titles = build_title_stats(
+        [(ad.get("headline"), skills) for ad, skills in zip(all_it_ads, ad_skill_sets)], ALL_SKILLS
+    )
+    job_titles["last_updated"] = results["last_updated"]
 
     # Persist the dynamic calculations to the data layer directory
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -308,6 +315,7 @@ def fetch_skill_demand():
     history_csv_path = os.path.join(data_dir, "history.csv")
     co_occurrence_path = os.path.join(data_dir, "co_occurrence.json")
     network_path = os.path.join(data_dir, "skill_network.json")
+    job_titles_path = os.path.join(data_dir, "job_titles.json")
 
     try:
         with open(trends_path, "w", encoding="utf-8") as f:
@@ -328,6 +336,8 @@ def fetch_skill_demand():
             )
         with open(network_path, "w", encoding="utf-8") as f:
             json.dump(network, f, indent=4, ensure_ascii=False)
+        with open(job_titles_path, "w", encoding="utf-8") as f:
+            json.dump(job_titles, f, indent=4, ensure_ascii=False)
         # Seed the CSV archive from history.json the first time, before history.json
         # gets today's snapshot (and before it can drop old ones past its cap).
         if not os.path.exists(history_csv_path):

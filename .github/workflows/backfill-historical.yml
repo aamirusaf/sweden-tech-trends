@@ -3,7 +3,8 @@ name: Backfill historical data
 # Run by hand from the Actions tab. Downloads Arbetsförmedlingen's Historical Ads
 # files (one per year, ~0.1-1.5 GB each), counts monthly tech mentions in each
 # file in parallel, then merges the results into backend/data/historical_monthly.csv
-# and commits it to main. If one file fails, use "Re-run failed jobs" and the merge
+# and commits it to main. The same pass counts job-title families in Data/IT
+# headlines into backend/data/historical_titles_monthly.csv. If one file fails, use "Re-run failed jobs" and the merge
 # step runs once they all succeed.
 
 on:
@@ -48,7 +49,9 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: partial-${{ matrix.file }}
-          path: partial/${{ matrix.file }}.csv
+          path: |
+            partial/${{ matrix.file }}.csv
+            partial/titles/${{ matrix.file }}.csv
           retention-days: 7
 
   merge:
@@ -74,15 +77,19 @@ jobs:
       - name: Merge into historical_monthly.csv
         run: python backend/backfill_historical.py merge partial/*.csv --out backend/data/historical_monthly.csv
 
+      - name: Merge into historical_titles_monthly.csv
+        run: python backend/backfill_historical.py merge-titles partial/titles/*.csv --out backend/data/historical_titles_monthly.csv
+
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add backend/data/historical_monthly.csv
+          git add backend/data/historical_monthly.csv backend/data/historical_titles_monthly.csv
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
           git commit -m "Backfill historical monthly tech demand"
-          git pull --rebase origin main
-          git push
+          # Run from main this updates main; run from a branch it updates that branch.
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"

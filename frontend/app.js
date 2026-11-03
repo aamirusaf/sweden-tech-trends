@@ -88,10 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('../backend/data/co_occurrence.json').then(response => response.ok ? response.json() : { co_occurrence: {} }),
         fetch('../backend/data/historical_monthly.csv').then(response => response.ok ? response.text() : '').catch(() => ''),
         fetch('../backend/data/skill_network.json').then(response => response.ok ? response.json() : null).catch(() => null),
+        fetch('../backend/data/job_titles.json').then(response => response.ok ? response.json() : null).catch(() => null),
+        fetch('../backend/data/historical_titles_monthly.csv').then(response => response.ok ? response.text() : '').catch(() => ''),
         // Canvas text doesn't re-render when a web font arrives, so wait for Inter first.
         document.fonts ? document.fonts.load('500 12px Inter').catch(() => null) : null
     ])
-        .then(([jsonData, courses, jobPostings, history, coOccurrence, historicalCsv, skillNetworkData]) => {
+        .then(([jsonData, courses, jobPostings, history, coOccurrence, historicalCsv, skillNetworkData, jobTitlesData, titlesCsv]) => {
             historicalYearly = aggregateHistoricalByYear(historicalCsv);
             coursesData = courses;
             jobPostingsData = jobPostings.postings || {};
@@ -121,6 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
             renderSkillGapResults();
             renderJobPostings();
             renderHistory();
+            // Titles first: the tree's panel lists the titles that ask for each skill.
+            if (typeof renderJobTitles === 'function') renderJobTitles(jobTitlesData, titlesCsv);
             renderSkillNetwork(skillNetworkData);
         })
         .catch(error => {
@@ -576,6 +580,7 @@ function refreshTheme() {
     renderSkillPicker();
     renderSkillGapResults();
     renderHistory();
+    if (typeof drawJobTitles === 'function') drawJobTitles();
     if (typeof drawNetworkTree === 'function' && typeof skillNetwork !== 'undefined' && skillNetwork) {
         drawNetworkTree();
         renderNetworkPanel();
@@ -701,6 +706,15 @@ function aggregateHistoricalByYear(csvText) {
     return byLocation;
 }
 
+// Ads from 2006-2007 mostly carry no job category, so few of them can be placed in
+// Data/IT. Years with too few Data/IT ads, or where they are an implausibly small
+// part of all ads, are left out instead of drawn from a sliver of the data.
+function validHistoryYears(yearly) {
+    return Object.keys(yearly || {}).sort().filter(year =>
+        yearly[year].total >= MIN_ADS_PER_YEAR &&
+        yearly[year].total >= MIN_IT_SHARE_OF_ALL_ADS * yearly[year].allTotal);
+}
+
 function renderHistory() {
     const section = document.getElementById('history');
     const canvas = document.getElementById('historyChart');
@@ -715,12 +729,7 @@ function renderHistory() {
 
     renderHistoryCategoryFilter();
 
-    // Ads from 2006-2007 mostly carry no job category, so few of them can be placed in
-    // Data/IT. Years with too few Data/IT ads, or where they are an implausibly small
-    // part of all ads, are left out instead of drawn from a sliver of the data.
-    const years = Object.keys(yearly).sort().filter(year =>
-        yearly[year].total >= MIN_ADS_PER_YEAR &&
-        yearly[year].total >= MIN_IT_SHARE_OF_ALL_ADS * yearly[year].allTotal);
+    const years = validHistoryYears(yearly);
     const skills = (rawCategoryData[selectedHistoryCategory] || []).map(skill => skill.name);
     const palette = SERIES_COLORS[isDarkMode() ? 'dark' : 'light'];
     const theme = chartTheme();

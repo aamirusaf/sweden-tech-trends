@@ -34,6 +34,9 @@
     --bad: #c2410c;
     --tooltip-bg: #0f172a;
     --tooltip-ink: #f8fafc;
+    /* Job titles: one hue, used for their bars, sparklines and the heatmap scale. */
+    --title: #6250d6;
+    --title-ink: #ffffff;
     --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.06);
     --shadow-md: 0 4px 16px -4px rgba(15, 23, 42, 0.10);
 
@@ -76,6 +79,8 @@
         --bad: #f08a5d;
         --tooltip-bg: #e8edf4;
         --tooltip-ink: #0b0f15;
+        --title: #9085e9;
+        --title-ink: #0b0f15;
         --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
         --shadow-md: 0 6px 20px -6px rgba(0, 0, 0, 0.5);
     }
@@ -101,6 +106,8 @@
     --bad: #f08a5d;
     --tooltip-bg: #e8edf4;
     --tooltip-ink: #0b0f15;
+    --title: #9085e9;
+    --title-ink: #0b0f15;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 6px 20px -6px rgba(0, 0, 0, 0.5);
 }
@@ -1222,4 +1229,392 @@ span.network-step-label {
     .network-root-label { font-size: 15px; }
     .card { padding: 1.125rem; }
     .network-panel { padding: 1rem; }
+}
+
+/* ---------- Job Titles ---------- */
+
+.titles-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .titles-layout { grid-template-columns: minmax(0, 1fr); }
+}
+
+.title-panel {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.title-rows {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.title-row {
+    display: grid;
+    grid-template-columns: minmax(10.5rem, 1.1fr) minmax(5rem, 1.4fr) 4.75rem 96px;
+    align-items: center;
+    gap: 0.875rem;
+    width: 100%;
+    padding: 0.4rem 0.5rem;
+    font: inherit;
+    font-size: var(--fs-sm);
+    color: var(--text-primary);
+    text-align: left;
+    background: none;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.title-row.no-history {
+    grid-template-columns: minmax(10.5rem, 1fr) minmax(5rem, 1.6fr);
+}
+
+.title-row:hover {
+    background-color: var(--surface-2);
+}
+
+.title-row.is-selected {
+    background-color: var(--surface-2);
+    border-color: var(--border-strong);
+}
+
+.title-row-head {
+    cursor: default;
+    padding-top: 0;
+    padding-bottom: 0.375rem;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.title-row-head:hover { background: none; }
+
+.title-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    min-width: 0;
+}
+
+.title-rank {
+    flex-shrink: 0;
+    width: 1.25rem;
+    font-size: var(--fs-xs);
+    font-weight: 500;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+}
+
+.title-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 18px;
+}
+
+.title-bar-fill {
+    display: block;
+    height: 12px;
+    min-width: 2px;
+    border-radius: 0 4px 4px 0;
+    background-color: var(--title);
+    transition: width 0.4s ease;
+}
+
+.title-bar-value {
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-secondary);
+}
+
+.title-trend {
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.title-spark-wrap { display: block; line-height: 0; }
+
+.title-spark {
+    width: 96px;
+    height: 28px;
+    overflow: visible;
+}
+
+.title-spark-line {
+    fill: none;
+    stroke: var(--title);
+    stroke-width: 1.75;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.title-spark-area {
+    fill: var(--title);
+    opacity: 0.12;
+}
+
+.title-spark-dot {
+    fill: var(--title);
+    stroke: var(--surface);
+    stroke-width: 1.5;
+}
+
+.title-note {
+    margin: 0.875rem 0 0;
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+}
+
+.link-button {
+    padding: 0;
+    font: inherit;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: none;
+    border: none;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+}
+
+.network-title-links {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+}
+
+.network-title-link {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.375rem;
+    padding: 0.3rem 0.625rem;
+    font: inherit;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+    background-color: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-left: 3px solid var(--title);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.network-title-link:hover { background-color: var(--surface-3); }
+
+.network-title-value {
+    font-size: var(--fs-xs);
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.network-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.network-root.is-title {
+    fill: var(--title);
+    stroke: none;
+}
+
+.network-root.is-title + .network-root-label {
+    fill: var(--title-ink);
+}
+
+/* Heatmap: titles x skills. Cell color mixes the title hue into the surface by share. */
+
+.heatmap-scroll {
+    overflow-x: auto;
+    margin: 0 -0.25rem;
+    padding: 0 0.25rem 0.25rem;
+}
+
+.heatmap {
+    border-collapse: separate;
+    border-spacing: 2px;
+    font-size: var(--fs-xs);
+    font-variant-numeric: tabular-nums;
+    min-width: 100%;
+}
+
+.heatmap th {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.heatmap-corner {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background-color: var(--surface);
+    text-align: left;
+    vertical-align: bottom;
+    font-weight: 500 !important;
+    color: var(--text-muted) !important;
+    padding: 0 0.5rem 0.375rem 0;
+    white-space: nowrap;
+}
+
+.heatmap-group {
+    text-align: left;
+    padding: 0 0 0.25rem 0.25rem;
+    white-space: nowrap;
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-muted) !important;
+}
+
+.heatmap-group .card-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 0.375rem;
+    vertical-align: 0;
+}
+
+.heatmap-group-start { border-left: 6px solid transparent; background-clip: padding-box; }
+
+.heatmap-col {
+    vertical-align: bottom;
+    height: 6.5rem;
+    padding: 0 0 0.375rem;
+}
+
+.heatmap-col-button {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 0;
+    font: inherit;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.heatmap-col-button:hover,
+.heatmap-col.is-active .heatmap-col-button {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.heatmap tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: var(--surface);
+    text-align: left;
+    padding: 0 0.75rem 0 0;
+    white-space: nowrap;
+}
+
+.heatmap-row-button {
+    padding: 0.125rem 0;
+    font: inherit;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.heatmap-row-button:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.heatmap tbody tr.is-selected th .heatmap-row-button {
+    box-shadow: inset 3px 0 0 var(--title);
+    padding-left: 0.5rem;
+}
+
+.heatmap-cell {
+    --level: 0%;
+    min-width: 2.125rem;
+    height: 1.875rem;
+    text-align: center;
+    border-radius: 4px;
+    color: var(--text-secondary);
+    background-color: color-mix(in oklab, var(--title) var(--level), var(--surface-2));
+}
+
+.heatmap-cell.is-strong {
+    color: var(--title-ink);
+    font-weight: 600;
+}
+
+.heatmap tbody tr.is-selected .heatmap-cell {
+    outline: 1.5px solid var(--text-primary);
+    outline-offset: -1px;
+}
+
+.heatmap-cell.is-active {
+    box-shadow: inset 0 0 0 1.5px var(--text-primary);
+}
+
+.heatmap-legend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    margin-top: 0.875rem;
+    font-size: var(--fs-xs);
+    color: var(--text-muted);
+}
+
+.heatmap-legend-scale { display: inline-flex; gap: 2px; }
+
+.heatmap-legend-step {
+    --level: 0%;
+    display: inline-grid;
+    place-items: center;
+    width: 2rem;
+    height: 1.25rem;
+    border-radius: 3px;
+    color: var(--text-secondary);
+    background-color: color-mix(in oklab, var(--title) var(--level), var(--surface-2));
+}
+
+.heatmap-legend-step:nth-last-child(-n+2) { color: var(--title-ink); }
+
+@media (max-width: 600px) {
+    .title-row {
+        grid-template-columns: minmax(0, 1fr) 4.25rem 64px;
+        grid-template-areas: "name trend spark" "bar bar bar";
+        row-gap: 0.25rem;
+    }
+    .title-row.no-history { grid-template-columns: minmax(0, 1fr); grid-template-areas: "name" "bar"; }
+    .title-row .title-name { grid-area: name; }
+    .title-row .title-bar { grid-area: bar; }
+    .title-row .title-trend { grid-area: trend; text-align: right; }
+    .title-row .title-spark-wrap { grid-area: spark; }
+    .title-spark { width: 64px; }
+    .title-row-head { display: none; }
+    .heatmap tbody th { white-space: normal; min-width: 6.5rem; max-width: 7.5rem; line-height: 1.25; }
+    .heatmap-row-button { font-size: var(--fs-xs); }
+    .heatmap-corner { white-space: normal; }
 }

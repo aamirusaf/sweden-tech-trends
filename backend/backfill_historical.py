@@ -17,6 +17,12 @@ Usage (each year file is processed separately so the work can run in parallel):
 
     python backend/backfill_historical.py count 2015 --out partial/2015.csv
     python backend/backfill_historical.py merge partial/*.csv --out backend/data/historical_monthly.csv
+
+The count step also writes partial/titles/<name>.csv: how many Data/IT ads each month
+had a headline in each job-title family (backend/job_titles.py), nationwide. Merge
+those with:
+
+    python backend/backfill_historical.py merge-titles partial/titles/*.csv --out backend/data/historical_titles_monthly.csv
 """
 import argparse
 import csv
@@ -34,6 +40,7 @@ from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from main import TECH_STACKS, LOCATIONS, build_skill_matcher  # noqa: E402  (keep the skill list in one place)
+from job_titles import classify_title, FAMILY_NAMES  # noqa: E402
 
 BASE_URL = "https://data.jobtechdev.se/annonser/historiska/"
 
@@ -49,6 +56,9 @@ MIN_YEAR = 2006
 # ads / total_ads: across all job ads. it_ads / it_total_ads: only ads in the Data/IT
 # occupation field, which is what the dashboard's history chart shows.
 OUTPUT_FIELDS = ["month", "category", "skill", "location", "ads", "total_ads", "it_ads", "it_total_ads"]
+# it_ads: Data/IT ads published that month whose headline is in the title family;
+# it_total_ads: all Data/IT ads published that month. Nationwide only.
+TITLE_FIELDS = ["month", "title", "it_ads", "it_total_ads"]
 
 DATA_IT_FIELD = "apaJ_2ja_LuF"
 
@@ -207,6 +217,7 @@ def count_file(zip_path):
     totals = Counter()     # (month, location) -> ads
     it_mentions = Counter()
     it_totals = Counter()
+    title_counts = Counter()  # (month, title family) -> Data/IT ads, nationwide
     seen_ids = set()
     stats = Counter()
 
@@ -240,6 +251,10 @@ def count_file(zip_path):
         is_it = ad_is_it(ad, legacy_it_ids)
         if is_it:
             stats["data_it"] += 1
+            family = classify_title(ad.get("headline"))
+            if family:
+                title_counts[(month, family)] += 1
+                stats["it_with_title_family"] += 1
 
         locations = ["Sweden"] + ([city] if city else [])
         for location in locations:
@@ -270,7 +285,7 @@ def count_file(zip_path):
     if stats["data_it"] < 0.01 * stats["counted"]:
         print(f"⚠️ Only {stats['data_it']} of {stats['counted']} ads could be placed in Data/IT; "
               "this file mostly has no occupation data.", flush=True)
-    return mentions, totals, it_mentions, it_totals
+    return mentions, totals, it_mentions, it_totals, title_counts
 
 
 def rows_from_counts(mentions, totals, it_mentions, it_totals):
@@ -288,6 +303,28 @@ def rows_from_counts(mentions, totals, it_mentions, it_totals):
                 "it_total_ads": it_totals.get((month, location), 0),
             })
     return rows
+
+
+def title_rows_from_counts(title_counts, it_totals):
+    return [
+        {"month": month, "title": title, "it_ads": title_counts.get((month, title), 0), "it_total_ads": total}
+        for (month, location), total in it_totals.items() if location == "Sweden"
+        for title in FAMILY_NAMES
+    ]
+
+
+def write_title_rows(path, rows):
+    order = {title: i for i, title in enumerate(FAMILY_NAMES)}
+    rows.sort(key=lambda r: (r["month"], order[r["title"]]))
+    os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=TITLE_FIELDS, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def default_titles_out(out):
+    return os.path.join(os.path.dirname(os.path.abspath(out)), "titles", os.path.basename(out))
 
 
 def write_rows(path, rows):
@@ -308,9 +345,14 @@ def cmd_count(args):
     else:
         with tempfile.TemporaryDirectory() as tmp:
             counts = count_file(download(name, tmp))
-    rows = rows_from_counts(*counts)
+    mentions, totals, it_mentions, it_totals, title_counts = counts
+    rows = rows_from_counts(mentions, totals, it_mentions, it_totals)
     write_rows(args.out, rows)
     print(f"Wrote {len(rows)} rows for {name} to {args.out}")
+    titles_out = args.titles_out or default_titles_out(args.out)
+    title_rows = title_rows_from_counts(title_counts, it_totals)
+    write_title_rows(titles_out, title_rows)
+    print(f"Wrote {len(title_rows)} job-title rows for {name} to {titles_out}")
 
 
 # --- merge ---------------------------------------------------------------------
@@ -347,6 +389,33 @@ def cmd_merge(args):
     print(f"Wrote {len(rows)} rows covering {months[0] if months else '-'} to {months[-1] if months else '-'} to {args.out}")
 
 
+def cmd_merge_titles(args):
+    """Same as merge, for the job-title partials. Counts for a month found in two files
+    are summed; months already in the output that no partial covers are kept."""
+    ads = Counter()
+    month_totals = Counter()
+    seen_month_file = set()
+    for path in args.partials:
+        with open(path, encoding="utf-8", newline="") as f:
+            for row in csv.DictReader(f):
+                ads[(row["month"], row["title"])] += int(row.get("it_ads") or 0)
+                # it_total_ads repeats on every title row; add it once per month per file
+                if (path, row["month"]) not in seen_month_file:
+                    seen_month_file.add((path, row["month"]))
+                    month_totals[row["month"]] += int(row.get("it_total_ads") or 0)
+    rows = [
+        {"month": month, "title": title, "it_ads": ads.get((month, title), 0), "it_total_ads": month_totals[month]}
+        for month in month_totals for title in FAMILY_NAMES
+    ]
+    if os.path.exists(args.out):
+        with open(args.out, encoding="utf-8", newline="") as f:
+            rows.extend(r for r in csv.DictReader(f)
+                        if r["month"] not in month_totals and r["title"] in FAMILY_NAMES and valid_month(r["month"]))
+    write_title_rows(args.out, rows)
+    months = sorted({r["month"] for r in rows})
+    print(f"Wrote {len(rows)} job-title rows covering {months[0] if months else '-'} to {months[-1] if months else '-'} to {args.out}")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="command", required=True)
@@ -355,12 +424,18 @@ def main():
     count.add_argument("name", help='File name without extension, e.g. "2015" or "2026-Q1"')
     count.add_argument("--out", required=True)
     count.add_argument("--zip", help="Use an already downloaded .jsonl.zip instead of downloading")
+    count.add_argument("--titles-out", help="Where to write the job-title counts (default: titles/<out name> next to --out)")
     count.set_defaults(func=cmd_count)
 
     merge = sub.add_parser("merge", help="Merge partial CSVs into one file")
     merge.add_argument("partials", nargs="+")
     merge.add_argument("--out", required=True)
     merge.set_defaults(func=cmd_merge)
+
+    merge_titles = sub.add_parser("merge-titles", help="Merge job-title partial CSVs into one file")
+    merge_titles.add_argument("partials", nargs="+")
+    merge_titles.add_argument("--out", required=True)
+    merge_titles.set_defaults(func=cmd_merge_titles)
 
     args = parser.parse_args()
     args.func(args)

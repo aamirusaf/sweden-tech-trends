@@ -2,6 +2,8 @@
 // skill). Clicking a skill lights up the companion skills that, learned together with
 // it, cover most of the Data/IT ads that mention it, and draws a link to every skill
 // it shares ads with. Data: backend/data/skill_network.json (see backend/skill_network.py).
+// Picking a job title in the "Job Titles" section (job-titles.js) switches the tree to
+// that title: its typical skills light up, with the share of its ads that mention each.
 // Relies on categoryColor, allSkills and showJobPostings from app.js.
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
@@ -15,6 +17,7 @@ const NETWORK_GEOMETRY = {
 
 let skillNetwork = null;
 let networkSelected = null;
+let networkTitle = null;   // a job title shown in the tree instead of a skill, or null
 let networkLayout = {}; // { skillName: { x, y, angle, category } }
 
 function renderSkillNetwork(network) {
@@ -104,9 +107,12 @@ function drawNetworkTree() {
     defs.appendChild(glow);
     svg.appendChild(defs);
 
-    const selected = networkSelected;
-    const bundle = new Set(bundleOf(selected));
-    const lit = new Set([selected, ...bundle]);
+    // Title mode: no selected skill; the title's typical skills light up instead.
+    const titleSkills = networkTitle && typeof typicalSkills === 'function' ? typicalSkills(networkTitle) : [];
+    const titlePercent = Object.fromEntries(titleSkills.map(t => [t.skill, t.percent]));
+    const selected = networkTitle ? null : networkSelected;
+    const bundle = new Set(networkTitle ? titleSkills.map(t => t.skill) : bundleOf(selected));
+    const lit = new Set([selected, ...bundle].filter(Boolean));
     const litCategories = new Set([...lit].map(name => networkLayout[name]?.category));
     const pairs = (skillNetwork.pairs && skillNetwork.pairs[selected]) || {};
     const selectedAds = skillNetwork.ads[selected] || 0;
@@ -165,6 +171,7 @@ function drawNetworkTree() {
     const root = svgEl('circle', { r: 26, class: 'network-root' });
     const rootLabel = svgEl('text', { class: 'network-root-label', 'text-anchor': 'middle', dy: '0.35em' });
     rootLabel.textContent = 'Data/IT';
+    if (networkTitle) root.classList.add('is-title');
     hubs.append(root, rootLabel);
     Object.keys(categories).forEach(category => {
         const c = polar(g.categoryRadius, categoryAngles[category]);
@@ -226,9 +233,10 @@ function drawNetworkTree() {
         const label = svgEl('text', { x: l.x, y: l.y + dy, 'text-anchor': anchor, class: 'network-label' });
         label.textContent = name;
         if (bundle.has(name)) {
-            // Step number on the side facing away from the circle.
+            // Step number (or, for a title, the share of its ads) on the side facing
+            // away from the circle.
             const badge = svgEl('tspan', { class: 'network-step' });
-            const number = order.indexOf(name) + 1;
+            const number = networkTitle ? `${titlePercent[name]}%` : order.indexOf(name) + 1;
             badge.textContent = anchor === 'end' ? `${number} ` : ` ${number}`;
             if (anchor === 'end') label.prepend(badge);
             else label.appendChild(badge);
@@ -250,9 +258,18 @@ function drawNetworkTree() {
     container.appendChild(svg);
 }
 
+// Show a job title's typical skills in the tree (called from job-titles.js).
+function showTitleInNetwork(title) {
+    if (!skillNetwork) return;
+    networkTitle = title;
+    drawNetworkTree();
+    renderNetworkPanel();
+}
+
 function selectNetworkSkill(name) {
     if (!skillNetwork) return;
     networkSelected = name;
+    networkTitle = null;
     const focused = document.activeElement && document.activeElement.closest
         ? document.activeElement.closest('.network-leaf') : null;
     drawNetworkTree();
@@ -277,6 +294,10 @@ function renderNetworkPanel() {
     const panel = document.getElementById('skillNetworkPanel');
     if (!panel) return;
     panel.innerHTML = '';
+    if (skillNetwork && networkTitle) {
+        renderNetworkTitlePanel(panel);
+        return;
+    }
     const name = networkSelected;
     if (!skillNetwork || !name) return;
 
@@ -359,6 +380,8 @@ function renderNetworkPanel() {
         : `${name} ads ask for a wide mix of skills; these make you a match for ${last}% of them${matchRule()}.`;
     panel.appendChild(summary);
 
+    appendTitlesForSkill(panel, name);
+
     const openings = document.createElement('button');
     openings.type = 'button';
     openings.className = 'location-pill network-openings';
@@ -368,6 +391,107 @@ function renderNetworkPanel() {
         document.getElementById('jobPostings')?.closest('.card')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
     panel.appendChild(openings);
+}
+
+// The job titles whose ads mention the skill most, each a link to the Job Titles section.
+function appendTitlesForSkill(panel, skill) {
+    const titles = typeof titlesForSkill === 'function' ? titlesForSkill(skill) : [];
+    if (!titles.length) return;
+    const sub = document.createElement('p');
+    sub.className = 'network-panel-subhead';
+    sub.textContent = `Job titles that ask for ${skill} most`;
+    panel.appendChild(sub);
+    const list = document.createElement('ul');
+    list.className = 'network-title-links';
+    titles.forEach(title => {
+        const item = document.createElement('li');
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'network-title-link';
+        button.title = `Open ${title.name} in Job Titles`;
+        const label = document.createElement('span');
+        label.textContent = title.name;
+        const value = document.createElement('span');
+        value.className = 'network-title-value';
+        value.textContent = `${title.percent}% of its ads`;
+        button.append(label, value);
+        button.addEventListener('click', () => selectTitle(title.name, { scroll: true, fromTree: true }));
+        item.appendChild(button);
+        list.appendChild(item);
+    });
+    panel.appendChild(list);
+}
+
+function renderNetworkTitlePanel(panel) {
+    const title = typeof titleByName === 'function' ? titleByName(networkTitle) : null;
+    const skills = typicalSkills(networkTitle);
+
+    const kicker = document.createElement('p');
+    kicker.className = 'network-panel-subhead';
+    kicker.textContent = 'Job title';
+    const heading = document.createElement('h4');
+    heading.className = 'network-panel-title';
+    heading.textContent = networkTitle;
+    panel.append(kicker, heading);
+
+    const meta = document.createElement('p');
+    meta.className = 'network-panel-meta';
+    meta.textContent = title
+        ? `${title.ads.toLocaleString()} live Data/IT ads have a title like this. Lit up: the skills at least ${TYPICAL_SKILL_PERCENT}% of them mention.`
+        : '';
+    panel.appendChild(meta);
+
+    if (!skills.length) {
+        const none = document.createElement('p');
+        none.className = 'network-panel-note';
+        none.textContent = `No tracked skill reaches ${TYPICAL_SKILL_PERCENT}% of these ads.`;
+        panel.appendChild(none);
+    } else {
+        const categoryOf = Object.fromEntries(Object.entries(networkLayout).map(([n, l]) => [n, l.category]));
+        const list = document.createElement('ol');
+        list.className = 'network-steps';
+        skills.forEach(({ skill, percent }) => {
+            const item = document.createElement('li');
+            item.className = 'network-step-row';
+            const label = document.createElement('button');
+            label.type = 'button';
+            label.className = 'network-step-label';
+            label.title = `Show ${skill}'s connections`;
+            const swatch = document.createElement('span');
+            swatch.className = 'skill-swatch';
+            swatch.style.backgroundColor = categoryColor(categoryOf[skill]);
+            label.append(swatch, document.createTextNode(skill));
+            label.addEventListener('click', () => selectNetworkSkill(skill));
+            const bar = document.createElement('span');
+            bar.className = 'network-step-bar';
+            const fill = document.createElement('span');
+            fill.className = 'network-step-fill';
+            fill.style.width = `${percent}%`;
+            fill.style.backgroundColor = categoryColor(categoryOf[skill]);
+            bar.appendChild(fill);
+            const value = document.createElement('span');
+            value.className = 'network-step-value';
+            value.textContent = `${percent}%`;
+            item.append(label, bar, value);
+            list.appendChild(item);
+        });
+        panel.appendChild(list);
+    }
+
+    const actions = document.createElement('div');
+    actions.className = 'network-actions';
+    const back = document.createElement('button');
+    back.type = 'button';
+    back.className = 'location-pill';
+    back.textContent = '← Back to skill connections';
+    back.addEventListener('click', () => selectNetworkSkill(networkSelected));
+    const open = document.createElement('button');
+    open.type = 'button';
+    open.className = 'location-pill';
+    open.textContent = 'Open in Job Titles ↓';
+    open.addEventListener('click', () => selectTitle(networkTitle, { scroll: true, fromTree: true }));
+    actions.append(back, open);
+    panel.appendChild(actions);
 }
 
 // Light/dark switches redraw the tree through refreshTheme() in app.js.
