@@ -1,10 +1,17 @@
 name: Discover top skills
 
 # Run by hand from the Actions tab (e.g. once a year) to check whether the 20 skills
-# in backend/main.py are still the most-mentioned ones in Data/IT job ads. Read the
-# ranking in each job's log; nothing is committed.
+# in backend/main.py are still the most-mentioned ones in Data/IT job ads, or (scan:
+# titles) how well the job-title families in backend/job_titles.py cover the ads'
+# headlines. Read the ranking in each job's log; nothing is committed.
 on:
   workflow_dispatch:
+    inputs:
+      scan:
+        description: "What to check"
+        type: choice
+        options: [skills, titles]
+        default: skills
 
 jobs:
   scan:
@@ -13,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        source: [live, "2025", "2026-Q3"]
+        source: ${{ fromJSON(inputs.scan == 'titles' && '["live","2010","2018","2025"]' || '["live","2025","2026-Q3"]') }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -21,15 +28,20 @@ jobs:
           python-version: "3.12"
       - run: pip install -r backend/requirements.txt
       - name: Scan
+        env:
+          SCAN: ${{ inputs.scan || 'skills' }}
+          SOURCE: ${{ matrix.source }}
         run: |
           mkdir -p discovery
-          if [ "${{ matrix.source }}" = live ]; then
-            python backend/discover_skills.py live --out discovery/live.json
+          script=backend/discover_skills.py
+          [ "$SCAN" = titles ] && script=backend/discover_titles.py
+          if [ "$SOURCE" = live ]; then
+            python "$script" live --out discovery/live.json
           else
-            python backend/discover_skills.py hist "${{ matrix.source }}" --out "discovery/hist-${{ matrix.source }}.json"
+            python "$script" hist "$SOURCE" --out "discovery/hist-$SOURCE.json"
           fi
-          python backend/discover_skills.py report discovery/*.json
+          python "$script" report discovery/*.json
       - uses: actions/upload-artifact@v4
         with:
-          name: discovery-${{ matrix.source }}
+          name: discovery-${{ inputs.scan || 'skills' }}-${{ matrix.source }}
           path: discovery/
