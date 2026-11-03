@@ -19,7 +19,8 @@ import re
 # (family, pattern, words shown to readers as "what counts"). Case-insensitive.
 TITLE_FAMILIES = [
     ("Project & Product Manager",
-     r"projektledare|projektledning|project\s*manager|project\s*lead|produkt[äa]gare|product\s*owner|"
+     r"projekt?\w*ledare|projektledning|uppdragsledare|projektadministrat|projektsamordnare|samordnare|"
+     r"koordinator|coordinator|project\s*manager|project\s*lead|produkt[äa]gare|product\s*owner|"
      r"product\s*manager|scrum\s*master|agil[e]?\s*coach|delivery\s*manager|program\s*manager|programledare|"
      r"f[öo]rvaltningsledare|tj[äa]nste[äa]gare|service\s*owner|release\s*manager",
      "Project manager, Product owner, Scrum master, Förvaltningsledare"),
@@ -43,8 +44,9 @@ TITLE_FAMILIES = [
      "Data scientist, Data science"),
     ("Data Engineer",
      r"data\s*engineer|dataingenj[öo]r|data\s*warehouse|\bdwh\b|\betl\b|data\s*platform|dataplattform|"
-     r"data[\s-]*utvecklare|data\s*developer|dataspecialist|data\s*specialist|data\s*ops\b|dataops",
-     "Data engineer, Dataingenjör, Data warehouse, Data platform"),
+     r"data[\s-]*utvecklare|data\s*developer|dataspecialist|data\s*specialist|data\s*ops\b|dataops|"
+     r"databas|database|\bdba\b|master\s*data|masterdata|data\s*steward",
+     "Data engineer, Dataingenjör, Data warehouse, Database administrator"),
     ("Data Analyst & BI",
      r"data\s*analy|dataanaly|\bbi\b|\bbi[\s-]|business\s*intelligence|power\s*bi|analytics|rapport\w*",
      "Data analyst, BI developer, Power BI, Analytics engineer"),
@@ -56,8 +58,8 @@ TITLE_FAMILIES = [
      r"s[äa]kerhet|security|cyber(?!net)|\bsoc\b|\biam\b|identity|pentest|penetration|\bsiem\b",
      "Security specialist, Cybersecurity, IAM, SOC analyst"),
     ("Architect",
-     r"arkitekt|architect",
-     "Solution architect, IT-arkitekt, Cloud architect"),
+     r"arkitekt|architect|strateg",
+     "Solution architect, IT-arkitekt, IT-strateg"),
     ("Cloud Engineer",
      r"cloud|moln|\b(?:azure|aws|gcp)[\s-]*(?:engineer|ingenj|specialist|tekniker|consultant|konsult|administrat|expert)",
      "Cloud engineer, Azure / AWS specialist"),
@@ -88,10 +90,16 @@ TITLE_FAMILIES = [
      r"utvecklare|developer|programmerare|programmer|software|mjukvar|systemutveckl|\bcoder\b|"
      r"utveckling|development|kodare",
      "Systemutvecklare, Software engineer, Java/.NET/C++ developer"),
+    # Running and looking after business systems, a large group in Swedish public sector ads.
+    ("Application Specialist",
+     r"systemf[öo]rvalt|systemansvarig|system[äa]gare|applikations|application\s*(?:specialist|manager|management|owner)|"
+     r"app\.?\s*specialist|objektledare|objektspecialist|tj[äa]nsteansvarig|\bsap\b|dynamics|salesforce|"
+     r"servicenow|business\s*central|\berp\b|\bcrm\b|systemintegrat|integrations?(?:specialist|utvecklare)?\b|\bintegration\b",
+     "Systemförvaltare, Applikationsspecialist, SAP / Dynamics specialist"),
     ("Network & Infrastructure",
      r"n[äa]tverk|network|infrastruktur|infrastructure|system\s*administrat|systemadministrat|sysadmin|"
      r"drift(?!ig)|operations|server|datacenter|data\s*center|linux|windows|systemtekniker|systemingenj|"
-     r"system\s*engineer|systemspecialist|it[\s-]*tekniker\s+infra",
+     r"system\s*engineer|systemspecialist|administrat",
      "Network engineer, Systemadministratör, Drifttekniker"),
     ("IT Support",
      r"support|helpdesk|help\s*desk|servicedesk|service\s*desk|tekniker|first\s*line|1st\s*line|"
@@ -100,6 +108,9 @@ TITLE_FAMILIES = [
     ("Analyst",
      r"analytiker|analyst|kravanaly|requirements",
      "Business analyst, Systemanalytiker, Kravanalytiker"),
+    ("Researcher",
+     r"forskare|researcher|postdo[ck]|\bphd\b|doktorand|research",
+     "Forskare, Researcher, Postdoc, PhD student"),
     ("Consultant",
      r"konsult|consultant",
      "IT-konsult, Consultant"),

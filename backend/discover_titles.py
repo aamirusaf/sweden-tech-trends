@@ -69,9 +69,13 @@ def cmd_hist(args):
     headlines, seen = [], set()
     with tempfile.TemporaryDirectory() as tmp:
         for ad in iter_ads(download(name, tmp)):
-            if not isinstance(ad, dict) or ad.get("id") in seen:
+            if not isinstance(ad, dict):
                 continue
-            seen.add(ad.get("id"))
+            ad_id = ad.get("id")
+            if ad_id is not None:  # the oldest files have no ids
+                if ad_id in seen:
+                    continue
+                seen.add(ad_id)
             if ad_is_it(ad, legacy):
                 headlines.append(ad.get("headline"))
     json.dump(summarize(f"hist-{name}", headlines), open(args.out, "w"), ensure_ascii=False, indent=1)
