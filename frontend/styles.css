@@ -1614,4 +1614,7 @@ span.network-step-label {
     .title-row .title-spark-wrap { grid-area: spark; }
     .title-spark { width: 64px; }
     .title-row-head { display: none; }
+    .heatmap tbody th { white-space: normal; min-width: 6.5rem; max-width: 7.5rem; line-height: 1.25; }
+    .heatmap-row-button { font-size: var(--fs-xs); }
+    .heatmap-corner { white-space: normal; }
 }

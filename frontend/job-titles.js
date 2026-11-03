@@ -14,6 +14,7 @@ const TYPICAL_SKILLS_MAX = 6;
 // Titles with fewer live ads than this are left out of the heatmap and skill lists.
 const MIN_TITLE_ADS = 15;
 const TITLES_SHOWN = 12;
+const HEATMAP_ROWS = 15;
 
 let jobTitles = null;         // job_titles.json
 let titleHistory = {};        // { title: { year: share% } }
@@ -344,7 +345,11 @@ function skillCategories() {
 function renderTitleHeatmap() {
     const container = document.getElementById('titleHeatmap');
     container.innerHTML = '';
-    const rows = jobTitles.titles.filter(t => t.ads >= MIN_TITLE_ADS && Object.keys(t.skills || {}).length);
+    // The most used titles, plus the selected one if it's further down the list.
+    const eligible = jobTitles.titles.filter(t => t.ads >= MIN_TITLE_ADS && Object.keys(t.skills || {}).length);
+    const rows = eligible.slice(0, HEATMAP_ROWS);
+    const chosen = eligible.find(t => t.name === selectedTitle);
+    if (chosen && !rows.includes(chosen)) rows.push(chosen);
     if (!rows.length) return;
     const categories = Object.entries(rawCategoryData || {}).map(([category, skills]) => [category, skills.map(s => s.name)]);
     const columns = categories.flatMap(([category, skills]) => skills.map(skill => ({ skill, category })));
