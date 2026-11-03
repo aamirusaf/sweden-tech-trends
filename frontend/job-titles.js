@@ -12,7 +12,7 @@
 const TYPICAL_SKILL_PERCENT = 20;
 const TYPICAL_SKILLS_MAX = 6;
 // Titles with fewer live ads than this are left out of the heatmap and skill lists.
-const MIN_TITLE_ADS = 15;
+const MIN_TITLE_ADS = 10;
 const TITLES_SHOWN = 12;
 const HEATMAP_ROWS = 15;
 
