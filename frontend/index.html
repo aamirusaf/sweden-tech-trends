@@ -27,6 +27,7 @@
                 <a href="#connections">Connections</a>
                 <a href="#titles">Job titles</a>
                 <a href="#history">Over time</a>
+                <a href="#cv">Your CV</a>
                 <a href="#plan">Learning plan</a>
             </nav>
             <button id="themeToggle" class="icon-button" type="button" aria-label="Switch light or dark mode" title="Switch light or dark mode">
@@ -157,9 +158,54 @@
             </article>
         </section>
 
-        <section id="plan" class="section">
+        <section id="cv" class="section cv-section">
             <div class="section-head">
                 <p class="section-kicker">05</p>
+                <div>
+                    <h2>Check your CV</h2>
+                    <p class="section-desc">Add your CV to see how many live Data/IT job ads in Sweden it fits, which job titles suit it best, and which skill would open the most new ads. An ad counts as a match when your CV has every tracked skill the ad asks for, or all but one, the same rule as the skill tree. Follows the location filter.</p>
+                </div>
+            </div>
+            <div class="cv-grid">
+                <article class="card cv-input-card">
+                    <header class="card-head">
+                        <h3>Your CV</h3>
+                        <p class="card-sub cv-privacy"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Read in this browser only. Your CV is never uploaded or saved.</p>
+                    </header>
+                    <label id="cvDrop" class="cv-drop">
+                        <input id="cvFile" type="file" accept=".pdf,.docx,.txt,.md,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 18v-6M9.5 14.5 12 12l2.5 2.5"/></svg>
+                        <span class="cv-drop-title">Drop your CV here or <u>choose a file</u></span>
+                        <span class="cv-drop-sub">PDF, Word (.docx) or text</span>
+                    </label>
+                    <div class="cv-alt">
+                        <button id="cvPasteToggle" type="button" class="link-button">Paste text instead</button>
+                        <span aria-hidden="true">·</span>
+                        <button id="cvSample" type="button" class="link-button">Try a sample CV</button>
+                    </div>
+                    <div id="cvPaste" class="cv-paste" hidden>
+                        <label for="cvText" class="visually-hidden">CV text</label>
+                        <textarea id="cvText" rows="8" placeholder="Paste the text of your CV"></textarea>
+                        <button id="cvTextGo" type="button" class="location-pill location-pill-active">Check this text</button>
+                    </div>
+                    <p id="cvStatus" class="cv-status" role="status" aria-live="polite"></p>
+                    <div id="cvFound" class="cv-found" hidden></div>
+                </article>
+
+                <article class="card cv-result-card">
+                    <div id="cvResults" class="cv-results">
+                        <div class="cv-empty">
+                            <p class="cv-empty-score">–</p>
+                            <p>Your match with live Data/IT ads shows here once you add a CV.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="plan" class="section">
+            <div class="section-head">
+                <p class="section-kicker">06</p>
                 <div>
                     <h2>Your learning plan</h2>
                     <p class="section-desc">Tick the skills you already have. The rest are ranked by how many live Data/IT ads ask for them, with courses to close the gap.</p>
@@ -198,6 +244,7 @@
     <script src="app.js"></script>
     <script src="skill-network.js"></script>
     <script src="job-titles.js"></script>
+    <script src="cv-check.js"></script>
 
 </body>
 </html>

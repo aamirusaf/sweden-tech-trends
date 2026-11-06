@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Titles first: the tree's panel lists the titles that ask for each skill.
             if (typeof renderJobTitles === 'function') renderJobTitles(jobTitlesData, titlesCsv);
             renderSkillNetwork(skillNetworkData);
+            if (typeof initCvCheck === 'function') initCvCheck();
         })
         .catch(error => {
             console.error('Error loading dynamic metrics:', error);
@@ -251,6 +252,7 @@ function renderLocationFilter() {
             renderSkillGapResults();
             renderJobPostings();
             renderHistory();
+            if (typeof renderCvResults === 'function') renderCvResults();
         });
         container.appendChild(button);
     });
@@ -581,6 +583,7 @@ function refreshTheme() {
     renderSkillGapResults();
     renderHistory();
     if (typeof drawJobTitles === 'function') drawJobTitles();
+    if (typeof renderCvCheck === 'function') renderCvCheck();
     if (typeof drawNetworkTree === 'function' && typeof skillNetwork !== 'undefined' && skillNetwork) {
         drawNetworkTree();
         renderNetworkPanel();
