@@ -93,6 +93,9 @@ let cvYearsOverride = null;
 let cvTitleGuess = null;
 let cvSourceName = '';
 let cvHasCv = false;
+let cvJobsShown = 0;
+let cvJobsFullOnly = false;
+const CV_JOBS_PAGE = 10;
 
 function initCvCheck() {
     const fileInput = document.getElementById('cvFile');
@@ -358,6 +361,7 @@ function analyseCv(text, sourceName) {
     cvTitleGuess = guessTitle(text);
     cvSourceName = sourceName;
     cvHasCv = true;
+    cvJobsShown = CV_JOBS_PAGE;
     const count = cvFoundSkills.size;
     setCvStatus(count
         ? `${sourceName}: found ${count} of the ${Object.keys(cvSkillMatchers).length} tracked skills. Untick any that are wrong, or tick ones it missed.`
@@ -585,6 +589,7 @@ function renderCvResults() {
     const container = document.getElementById('cvResults');
     if (!container || !cvHasCv) return;
     container.innerHTML = '';
+    renderCvJobs();
     const locationName = selectedLocation === 'Sweden' ? 'Sweden' : selectedLocation;
 
     if (!cvAdData) {
@@ -751,4 +756,107 @@ function appendCvPlanButton(container) {
     });
     row.appendChild(button);
     container.appendChild(row);
+}
+
+// ---------- The matching ads themselves ----------
+
+// Matching ads for the chosen skills and location, best fit first: ads you fully
+// match, then those sharing the most skills with you, then the newest.
+function cvMatchingJobs() {
+    if (!cvAdData || !Array.isArray(cvAdData.listings)) return [];
+    const mask = cvMask(cvChosenSkills);
+    if (!mask) return [];
+    const cityIndex = selectedLocation === 'Sweden' ? null : cvAdData.locations.indexOf(selectedLocation);
+    const jobs = [];
+    cvAdData.ads.forEach((ad, i) => {
+        if (cityIndex !== null && ad[2] !== cityIndex) return;
+        if (!ad[0] || !isCvMatch(ad[0], mask)) return;
+        const listing = cvAdData.listings[i];
+        if (!listing) return;
+        const have = [], missing = [];
+        cvAdData.skills.forEach((name, bit) => {
+            if (!(ad[0] & (1 << bit))) return;
+            (mask & (1 << bit) ? have : missing).push(name);
+        });
+        jobs.push({
+            id: listing[0], headline: listing[1], employer: listing[2], place: listing[3], published: listing[4],
+            have, missing, full: missing.length === 0
+        });
+    });
+    return jobs.sort((a, b) =>
+        (b.full - a.full) || (b.have.length - a.have.length) || b.published.localeCompare(a.published));
+}
+
+function formatJobDate(iso) {
+    const date = new Date(`${iso}T00:00:00Z`);
+    if (!iso || isNaN(date)) return '';
+    return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+}
+
+function renderCvJobs() {
+    const card = document.getElementById('cvJobs');
+    if (!card) return;
+    const all = cvHasCv ? cvMatchingJobs() : [];
+    card.hidden = !all.length;
+    if (!all.length) return;
+    card.innerHTML = '';
+
+    const fullCount = all.filter(job => job.full).length;
+    if (!fullCount) cvJobsFullOnly = false;
+    const jobs = cvJobsFullOnly ? all.filter(job => job.full) : all;
+    const where = selectedLocation === 'Sweden' ? 'in Sweden' : `in ${selectedLocation}`;
+
+    const head = el('header', 'card-head cv-jobs-head');
+    const titles = el('div');
+    titles.append(
+        el('h3', '', `Jobs that match your CV ${where}`),
+        el('p', 'card-sub', 'Live ads on Arbetsförmedlingen\'s Platsbanken, best fit first. ✓ marks skills you have; + marks the one skill the ad asks for that your CV doesn\'t list.')
+    );
+    const filter = el('div', 'pill-group-tabs cv-jobs-filter');
+    [[false, `All matches · ${all.length.toLocaleString('en-US')}`], [true, `Full matches · ${fullCount.toLocaleString('en-US')}`]]
+        .forEach(([fullOnly, label]) => {
+            const button = el('button', 'location-pill' + (cvJobsFullOnly === fullOnly ? ' location-pill-active' : ''), label);
+            button.type = 'button';
+            button.disabled = fullOnly && !fullCount;
+            button.addEventListener('click', () => {
+                cvJobsFullOnly = fullOnly;
+                cvJobsShown = CV_JOBS_PAGE;
+                renderCvJobs();
+            });
+            filter.appendChild(button);
+        });
+    head.append(titles, filter);
+    card.appendChild(head);
+
+    const list = el('ol', 'cv-jobs-list');
+    jobs.slice(0, cvJobsShown).forEach(job => {
+        const item = el('li', 'cv-job');
+        const title = job.id && cvAdData.url_base ? el('a', 'cv-job-title', job.headline || 'Untitled ad') : el('span', 'cv-job-title', job.headline || 'Untitled ad');
+        if (title.tagName === 'A') {
+            title.href = cvAdData.url_base + encodeURIComponent(job.id);
+            title.target = '_blank';
+            title.rel = 'noopener noreferrer';
+        }
+        const meta = el('p', 'cv-job-meta', [job.employer, job.place, formatJobDate(job.published)].filter(Boolean).join(' · '));
+        const skills = el('div', 'cv-job-skills');
+        job.have.forEach(name => skills.appendChild(el('span', 'cv-job-skill is-have', `✓ ${name}`)));
+        job.missing.forEach(name => {
+            const chip = el('span', 'cv-job-skill is-missing', `+ ${name}`);
+            chip.title = `This ad also asks for ${name}, which your CV doesn't list`;
+            skills.appendChild(chip);
+        });
+        item.append(title, meta, skills);
+        list.appendChild(item);
+    });
+    card.appendChild(list);
+
+    if (jobs.length > cvJobsShown) {
+        const more = el('button', 'location-pill show-more', `Show ${Math.min(CV_JOBS_PAGE, jobs.length - cvJobsShown)} more of ${jobs.length.toLocaleString('en-US')}`);
+        more.type = 'button';
+        more.addEventListener('click', () => {
+            cvJobsShown += CV_JOBS_PAGE;
+            renderCvJobs();
+        });
+        card.appendChild(more);
+    }
 }

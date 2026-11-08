@@ -314,6 +314,12 @@ def fetch_skill_demand():
                 "headline": ad.get("headline"),
                 "municipality_id": (ad.get("workplace_address") or {}).get("municipality_concept_id"),
                 "experience_required": ad.get("experience_required"),
+                "id": ad.get("id"),
+                "url": ad.get("webpage_url"),
+                "employer": (ad.get("employer") or {}).get("name"),
+                "place": (ad.get("workplace_address") or {}).get("municipality")
+                    or (ad.get("workplace_address") or {}).get("region"),
+                "published": ad.get("publication_date"),
             }
             for ad, skills in zip(all_it_ads, ad_skill_sets)
         ],
@@ -383,15 +389,19 @@ def skill_patterns_for_browser():
 
 
 def write_ad_skills(path, ad_skills):
-    """Like json.dump with indent, but one ad per line: 2,500 rows of five numbers
-    would otherwise take 7 lines each."""
-    rows = ad_skills["ads"]
-    head = {key: value for key, value in ad_skills.items() if key != "ads"}
-    text = json.dumps(head, indent=4, ensure_ascii=False)
-    body = ",\n".join("        " + json.dumps(row, separators=(",", ":")) for row in rows)
-    text = text[:-2] + ',\n    "ads": [\n' + body + ("\n" if rows else "") + "    ]\n}\n"
+    """Like json.dump with indent, but one ad per line: 2,500 short rows would
+    otherwise take 7 lines each."""
+    row_keys = ["ads", "listings"]
+    head = {key: value for key, value in ad_skills.items() if key not in row_keys}
+    text = json.dumps(head, indent=4, ensure_ascii=False)[:-2]
+    for key in row_keys:
+        rows = ad_skills.get(key, [])
+        body = ",\n".join(
+            "        " + json.dumps(row, separators=(",", ":"), ensure_ascii=False) for row in rows
+        )
+        text += f',\n    "{key}": [\n' + body + ("\n" if rows else "") + "    ]"
     with open(path, "w", encoding="utf-8") as f:
-        f.write(text)
+        f.write(text + "\n}\n")
 
 
 def fetch_all_it_ads():

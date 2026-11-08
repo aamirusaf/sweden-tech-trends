@@ -3,7 +3,7 @@
 The dashboard's "Check your CV" section scores a CV against every live Data/IT ad in
 the visitor's browser: an ad is a match when the CV has every tracked skill it names,
 or all but one. That needs each ad's set of skills, so the weekly job writes one row
-per ad here. A row holds only flags and small numbers (no ad text, employer or link):
+per ad here. A row holds only flags and small numbers:
 
     [skill bitmask, title family index, location index, seniority, experience required]
 
@@ -14,6 +14,10 @@ per ad here. A row holds only flags and small numbers (no ad text, employer or l
   read from the headline
 - experience required: 1 when the employer ticked "experience required", else 0
 
+A parallel "listings" array holds what the page needs to list the matching ads, in
+the same order: [Platsbanken ad id, headline, employer, workplace, publication date].
+The link is url_base + id. The ad description is not stored.
+
 The file also carries the regexes the backend uses to spot skills and title families,
 so the browser finds skills in a CV exactly the way this job finds them in ads.
 
@@ -21,6 +25,8 @@ Kept free of network code so it can be tested on hand-made ads.
 """
 
 import re
+
+PLATSBANKEN_URL = "https://arbetsformedlingen.se/platsbanken/annonser/"
 
 SENIOR_PATTERN = re.compile(
     r"\bsenior|\bseni[öo]r|\blead\b|\bprincipal\b|\bstaff\s+(?:engineer|developer)|\bexpert\b|\berfaren\b",
@@ -44,6 +50,12 @@ def seniority(headline):
     return 0
 
 
+def platsbanken_id(ad):
+    """The ad's id in its Platsbanken link (webpage_url), falling back to its API id."""
+    match = re.search(r"/annonser/(\w+)", ad.get("url") or "")
+    return match.group(1) if match else str(ad.get("id") or "")
+
+
 def regex_source(pattern, flags):
     """A Python regex as a JavaScript one: {source, flags}."""
     return {"source": pattern, "flags": "i" if flags & re.IGNORECASE else ""}
@@ -52,13 +64,14 @@ def regex_source(pattern, flags):
 def build_ad_skills(ads, all_skills, title_names, classify_title, locations):
     """ads: one dict per ad with keys skills (set), headline, municipality_id and
     experience_required. locations: {name: municipality concept id} for the cities
-    shown on the dashboard (the nationwide entry, with id None, is skipped)."""
+    shown on the dashboard (the nationwide entry, with id None, is skipped).
+    Optional keys for the listing: id, url, employer, place, published."""
     city_names = [name for name, concept in locations.items() if concept]
     city_index = {locations[name]: i for i, name in enumerate(city_names)}
     title_index = {name: i for i, name in enumerate(title_names)}
     bit = {skill: 1 << i for i, skill in enumerate(all_skills)}
 
-    rows = []
+    rows, listings = [], []
     for ad in ads:
         mask = 0
         for skill in ad.get("skills") or ():
@@ -71,6 +84,13 @@ def build_ad_skills(ads, all_skills, title_names, classify_title, locations):
             seniority(ad.get("headline")),
             1 if ad.get("experience_required") else 0,
         ])
+        listings.append([
+            platsbanken_id(ad),
+            (ad.get("headline") or "").strip(),
+            ad.get("employer") or "",
+            ad.get("place") or "",
+            (ad.get("published") or "")[:10],
+        ])
 
     return {
         "total_ads": len(rows),
@@ -78,5 +98,7 @@ def build_ad_skills(ads, all_skills, title_names, classify_title, locations):
         "titles": list(title_names),
         "locations": city_names,
         "columns": ["skills", "title", "location", "seniority", "experience_required"],
+        "url_base": PLATSBANKEN_URL,
         "ads": rows,
+        "listings": listings,
     }

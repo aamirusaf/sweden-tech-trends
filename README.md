@@ -61,7 +61,9 @@ from this repository on every push to `main`:
 The "Check your CV" section reads a CV (PDF, .docx or text) in the visitor's
 browser only; nothing is uploaded. It matches the CV's skills against
 `backend/data/ad_skills.json`, which the weekly job writes: one row of skill
-flags per live Data/IT ad, with no ad text (see `backend/ad_skills.py`).
+flags per live Data/IT ad, plus its headline, employer, place, date and
+Platsbanken link so the matching jobs can be listed. Ad descriptions are not
+stored (see `backend/ad_skills.py`).
 
 The data is refreshed by the **Update job market data** GitHub Action
 (`.github/workflows/update-data.yml`). It runs every Monday at 05:00 UTC (and can
