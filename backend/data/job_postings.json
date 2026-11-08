@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-11-02 21:35:41 UTC",
+    "last_updated": "2026-11-08 14:15:11 UTC",
     "postings": {
         "Python": {
             "Sweden": [
@@ -18,18 +18,18 @@
                     "published": "2026-10-28"
                 },
                 {
-                    "headline": "3D Graphics Developer | C++ & Python",
-                    "employer": "Experis AB",
-                    "location": "Älmhult",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31573361",
-                    "published": "2026-10-08"
-                },
-                {
                     "headline": "Software Developer  C++, Python, Linux & Radar Systems",
                     "employer": "Hykmann Global Business Solutions AB",
                     "location": "Göteborg",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31663638",
                     "published": "2026-10-29"
+                },
+                {
+                    "headline": "Data Engineer  AWS, Python & Data Pipelines - 206022",
+                    "employer": "Veritaz AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31677546",
+                    "published": "2026-11-03"
                 },
                 {
                     "headline": "Senior Software Engineer  Python, AWS & EV Charging Integrations",
@@ -62,32 +62,32 @@
                     "published": "2026-10-23"
                 },
                 {
-                    "headline": "Underrättelseanalytiker med teknisk inriktning",
-                    "employer": "Försvarets Radioanstalt",
+                    "headline": "Senior Data Engineer för datakatalog",
+                    "employer": "Avaron AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675252",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699963",
+                    "published": "2026-11-07"
                 },
                 {
-                    "headline": "Fullstack Developer till Nova Sounds",
-                    "employer": "Friday Väst AB",
+                    "headline": "Utvecklare med fokus på IT-säkerhet",
+                    "employer": "Vetenskapsrådet",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674308",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698159",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "DevOps/SecOps",
-                    "employer": "Knowit Aktiebolag (publ)",
+                    "headline": "Dataingenjör till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671766",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696405",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Embedded Software Developer - Automotive",
-                    "employer": "Knowit Aktiebolag (publ)",
+                    "headline": "Junior DevOps Engineer vid Must",
+                    "employer": "Försvarsmakten",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671658",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696155",
+                    "published": "2026-11-06"
                 }
             ],
             "Göteborg": [
@@ -106,35 +106,56 @@
                     "published": "2026-10-27"
                 },
                 {
-                    "headline": "Nätverkstekniker",
-                    "employer": "DOER Bemanning AB",
+                    "headline": "Senior Data Scientist, Göteborg",
+                    "employer": "Soros Consulting AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674750",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698515",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Senior mjukvaruutvecklare: Java eller embedded, med agentisk AI",
-                    "employer": "CaptureInnovation AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31672376",
-                    "published": "2026-11-02"
+                    "headline": "INTEGRATIONS- OCH DATAUTVECKLARE TILL AKADEMISKA HUS",
+                    "employer": "Nexer Recruit AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695961",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "DevOps-ingenjör",
-                    "employer": "Futuria People AB",
+                    "headline": "Testingenjör inom Automotive",
+                    "employer": "AFRY AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671843",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694762",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Embedded Software Engineer – Java",
-                    "employer": "Agile Resources AB",
+                    "headline": "Managed Services Support Engineer",
+                    "employer": "Barona Teknik & Installation AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31667517",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31688225",
+                    "published": "2026-11-05"
                 }
             ],
             "Malmö": [
+                {
+                    "headline": "Data Engineer  AWS, Python & Data Pipelines - 206022",
+                    "employer": "Veritaz AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31677546",
+                    "published": "2026-11-03"
+                },
+                {
+                    "headline": "C# Developer",
+                    "employer": "Bytelope AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699943",
+                    "published": "2026-11-07"
+                },
+                {
+                    "headline": "Senior Embedded Developer till Advenica",
+                    "employer": "Cabeza rekrytering och konsulting AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31682898",
+                    "published": "2026-11-04"
+                },
                 {
                     "headline": "Embedded Software Engineer för kommande uppdrag",
                     "employer": "NXT Interim Malmö AB",
@@ -155,45 +176,17 @@
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31648400",
                     "published": "2026-10-27"
-                },
-                {
-                    "headline": "ITSM/ESM-konsult inom integration & automation",
-                    "employer": "Zitac Consulting AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31635435",
-                    "published": "2026-10-23"
-                },
-                {
-                    "headline": "AI- & Digitaliseringsspecialist",
-                    "employer": "Framtiden i Sverige AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31608068",
-                    "published": "2026-10-16"
-                },
-                {
-                    "headline": "Svensktalande Embedded Software Engineer",
-                    "employer": "Alira Consulting Group AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31564764",
-                    "published": "2026-10-07"
                 }
             ]
         },
         "Java": {
             "Sweden": [
                 {
-                    "headline": "Systemutvecklare Java",
+                    "headline": "Integrationsutvecklare Java",
                     "employer": "Deploja AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31655069",
-                    "published": "2026-10-28"
-                },
-                {
-                    "headline": "Java Developer",
-                    "employer": "Cyberway AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31513318",
-                    "published": "2026-09-23"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696992",
+                    "published": "2026-11-06"
                 },
                 {
                     "headline": "Java developer",
@@ -203,11 +196,11 @@
                     "published": "2026-09-16"
                 },
                 {
-                    "headline": "Java developer",
-                    "employer": "Tavana IT AB",
+                    "headline": "Senior Backendutvecklare Java",
+                    "employer": "Deploja AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31008076",
-                    "published": "2026-05-07"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31689264",
+                    "published": "2026-11-05"
                 },
                 {
                     "headline": "Senior Fullstackutvecklare Java",
@@ -222,22 +215,29 @@
                     "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31535930",
                     "published": "2026-09-30"
+                },
+                {
+                    "headline": "Systemutvecklare - Java",
+                    "employer": "Independent Tech Sweden AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31428201",
+                    "published": "2026-09-02"
                 }
             ],
             "Stockholm": [
                 {
-                    "headline": "Systemutvecklare Java",
+                    "headline": "Integrationsutvecklare Java",
                     "employer": "Deploja AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31655069",
-                    "published": "2026-10-28"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696992",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Java developer",
-                    "employer": "Tavana IT AB",
+                    "headline": "Senior Backendutvecklare Java",
+                    "employer": "Deploja AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31008076",
-                    "published": "2026-05-07"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31689264",
+                    "published": "2026-11-05"
                 },
                 {
                     "headline": "Senior Fullstackutvecklare Java",
@@ -261,11 +261,11 @@
                     "published": "2026-09-02"
                 },
                 {
-                    "headline": "Senior Java Fullstackutvecklare",
-                    "employer": "Iver Accelerate AB",
+                    "headline": "Senior Java Developer",
+                    "employer": "Qred Bank AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31245993",
-                    "published": "2026-07-03"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31450111",
+                    "published": "2026-09-08"
                 }
             ],
             "Göteborg": [
@@ -314,25 +314,11 @@
             ],
             "Malmö": [
                 {
-                    "headline": "Java Developer",
-                    "employer": "Cyberway AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31513318",
-                    "published": "2026-09-23"
-                },
-                {
                     "headline": "Backend Engineer (Scala, Java, C++)",
                     "employer": "Hykmann Global Business Solutions AB",
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31610330",
                     "published": "2026-10-18"
-                },
-                {
-                    "headline": "Senior fullstackutvecklare inom Java eller .NET",
-                    "employer": "Knowit Aktiebolag (publ)",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31510867",
-                    "published": "2026-09-23"
                 },
                 {
                     "headline": "Backendutvecklare inom Java och integrationer till Malmö",
@@ -354,11 +340,39 @@
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31653536",
                     "published": "2026-10-28"
+                },
+                {
+                    "headline": "Software Engineer",
+                    "employer": "IKEA IT Aktiebolag",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681093",
+                    "published": "2026-11-03"
+                },
+                {
+                    "headline": "Backend Engineer  Geospatial Data & Distributed Systems - 20094",
+                    "employer": "Veritaz AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31628835",
+                    "published": "2026-10-21"
                 }
             ]
         },
         "C#": {
             "Sweden": [
+                {
+                    "headline": "C# Developer",
+                    "employer": "Bytelope AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699943",
+                    "published": "2026-11-07"
+                },
+                {
+                    "headline": "3D/Spelutvecklare C#",
+                    "employer": "Procruitment AB",
+                    "location": "Jönköping",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31676238",
+                    "published": "2026-11-03"
+                },
                 {
                     "headline": "Backendutvecklare C#",
                     "employer": "Maxitech AB",
@@ -374,13 +388,6 @@
                     "published": "2026-09-18"
                 },
                 {
-                    "headline": "Senior C# backend-utvecklare – Stockholm heltid",
-                    "employer": "Modernera AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31618361",
-                    "published": "2026-10-20"
-                },
-                {
                     "headline": "Vi söker en C# .NET-utvecklare med AI-fokus!",
                     "employer": "Academic Work Sweden AB",
                     "location": "Stockholm",
@@ -393,23 +400,9 @@
                     "location": "Västerås",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31253883",
                     "published": "2026-07-07"
-                },
-                {
-                    "headline": "Erfaren mjukvaruutvecklare .NET C# till UMS Skeldar i Linköping",
-                    "employer": "UMS Skeldar Sweden AB",
-                    "location": "Linköping",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31232652",
-                    "published": "2026-06-30"
                 }
             ],
             "Stockholm": [
-                {
-                    "headline": "Senior C# backend-utvecklare – Stockholm heltid",
-                    "employer": "Modernera AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31618361",
-                    "published": "2026-10-20"
-                },
                 {
                     "headline": "Vi söker en C# .NET-utvecklare med AI-fokus!",
                     "employer": "Academic Work Sweden AB",
@@ -418,32 +411,39 @@
                     "published": "2026-11-02"
                 },
                 {
-                    "headline": "Fullstackutvecklare till Innovativt techbolag",
-                    "employer": "Nordicrule AB",
+                    "headline": "Backend Developer till Synsams Digital Business-team",
+                    "employer": "Synsam Group Sweden AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671584",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698017",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "IT konsult",
-                    "employer": "Sogeti Sverige AB",
+                    "headline": "Senior mjukvaruutvecklare Embedded",
+                    "employer": "AFRY AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31167425",
-                    "published": "2026-11-01"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696113",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Senior systemutvecklare .NET/Lösningsdesigner",
-                    "employer": "NXT Interim Stockholm AB",
+                    "headline": "INTEGRATIONS- OCH DATAUTVECKLARE TILL AKADEMISKA HUS",
+                    "employer": "Nexer Recruit AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31666357",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695961",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Python-utvecklare",
-                    "employer": "Syntronic Aktiebolag",
+                    "headline": "Erfaren systemutvecklare till Bostadsförmedlingen",
+                    "employer": "Bostadsförmedlingen i Stockholm AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665923",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695671",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Fullstackutvecklare med frontendfokus",
+                    "employer": "Knightec Group Hardware and Design AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694307",
+                    "published": "2026-11-06"
                 }
             ],
             "Göteborg": [
@@ -455,42 +455,56 @@
                     "published": "2026-10-26"
                 },
                 {
-                    "headline": "Senior mjukvaruutvecklare: Java eller embedded, med agentisk AI",
-                    "employer": "CaptureInnovation AB",
+                    "headline": "Frontendutvecklare – React och TypeScript",
+                    "employer": "Agile Resources AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31672376",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700773",
+                    "published": "2026-11-08"
                 },
                 {
-                    "headline": "Software Solution Architect inom automation/logistik till KION Group",
-                    "employer": "Needo Recruitment Sthlm AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31661304",
-                    "published": "2026-10-29"
+                    "headline": "INTEGRATIONS- OCH DATAUTVECKLARE TILL AKADEMISKA HUS",
+                    "employer": "Nexer Recruit AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695961",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Software Engineer inom automation/logistik till KION Group",
-                    "employer": "Needo Recruitment Sthlm AB",
+                    "headline": "Testingenjör inom Automotive",
+                    "employer": "AFRY AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31661232",
-                    "published": "2026-10-29"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694762",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Software Developer till Swarco",
-                    "employer": "Bravura Sverige AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31660756",
-                    "published": "2026-10-29"
+                    "headline": "AI-utvecklare",
+                    "employer": "B3 Consulting Group AB (publ)",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31683744",
+                    "published": "2026-11-04"
                 },
                 {
-                    "headline": "Senior Systemutvecklare till Ictech i Göteborg",
-                    "employer": "Ictech Göteborg AB",
+                    "headline": "Intresseanmälan Systemutvecklare med kunskap inom Java eller .Net",
+                    "employer": "Bemannia AB (publ.)",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652165",
-                    "published": "2026-10-27"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31680905",
+                    "published": "2026-11-03"
                 }
             ],
             "Malmö": [
+                {
+                    "headline": "C# Developer",
+                    "employer": "Bytelope AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699943",
+                    "published": "2026-11-07"
+                },
+                {
+                    "headline": "SW Test automation - C# and Gherkin - midsenior",
+                    "employer": "AFRY AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31680482",
+                    "published": "2026-11-03"
+                },
                 {
                     "headline": "Systemutvecklare i början av sin karriär - Anläggning Järnväg",
                     "employer": "Trafikverket",
@@ -506,25 +520,11 @@
                     "published": "2026-10-23"
                 },
                 {
-                    "headline": "Senior Frontendutvecklare – Vue.js / TypeScript",
-                    "employer": "Quest Consulting Sverige AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31633383",
-                    "published": "2026-10-22"
-                },
-                {
                     "headline": "Integrationsutvecklare",
                     "employer": "Cyberway AB",
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31549539",
                     "published": "2026-10-02"
-                },
-                {
-                    "headline": "Senior fullstackutvecklare inom Java eller .NET",
-                    "employer": "Knowit Aktiebolag (publ)",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31510867",
-                    "published": "2026-09-23"
                 },
                 {
                     "headline": "Software Developer",
@@ -552,13 +552,6 @@
                     "published": "2026-08-13"
                 },
                 {
-                    "headline": "Software Developer, C++",
-                    "employer": "Epiroc Rock Drills Aktiebolag",
-                    "location": "Örebro",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31620149",
-                    "published": "2026-10-20"
-                },
-                {
                     "headline": "System- och mjukvaruingenjör  C++",
                     "employer": "Hykmann Global Business Solutions AB",
                     "location": "Linköping",
@@ -578,6 +571,13 @@
                     "location": "Göteborg",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31672083",
                     "published": "2026-11-02"
+                },
+                {
+                    "headline": "System- och mjukvaruingenjör  C++, Linköping",
+                    "employer": "NDP IT AB",
+                    "location": "Linköping",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31611169",
+                    "published": "2026-10-19"
                 }
             ],
             "Stockholm": [
@@ -596,32 +596,32 @@
                     "published": "2026-10-30"
                 },
                 {
-                    "headline": "Underrättelseanalytiker med teknisk inriktning",
-                    "employer": "Försvarets Radioanstalt",
+                    "headline": "Utvecklare till innovativ start-up inom datorseende och fotogrammetri!",
+                    "employer": "Academic Work Sweden AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675252",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697376",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Mjukvaruutvecklare inom försvarsindustri",
-                    "employer": "Knowit Aktiebolag (publ)",
+                    "headline": "Senior mjukvaruutvecklare Embedded",
+                    "employer": "AFRY AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671756",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696113",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Embedded Software Developer - Automotive",
-                    "employer": "Knowit Aktiebolag (publ)",
+                    "headline": "C++-utvecklare - AI och avancerade system",
+                    "employer": "Friday Väst AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671658",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31686942",
+                    "published": "2026-11-04"
                 },
                 {
-                    "headline": "Embedded mjukvaruingengör",
-                    "employer": "Rosenthal, Emanuel",
+                    "headline": "Embedded-utvecklare till konsultbolag i Stockholm",
+                    "employer": "InterAgent AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31669483",
-                    "published": "2026-11-01"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31682202",
+                    "published": "2026-11-04"
                 }
             ],
             "Göteborg": [
@@ -647,13 +647,6 @@
                     "published": "2026-11-02"
                 },
                 {
-                    "headline": "C++ Software Developer inom realtidssystem",
-                    "employer": "Agile Resources AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652316",
-                    "published": "2026-10-27"
-                },
-                {
                     "headline": "Arbeta som C++ utvecklare inom Realtidssystem",
                     "employer": "Friday Väst AB",
                     "location": "Göteborg",
@@ -666,9 +659,23 @@
                     "location": "Göteborg",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675404",
                     "published": "2026-11-02"
+                },
+                {
+                    "headline": "Delsystemansvarig för mjukvara  Systemarkitektur, Linux & C++",
+                    "employer": "Hykmann Global Business Solutions AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31663664",
+                    "published": "2026-10-29"
                 }
             ],
             "Malmö": [
+                {
+                    "headline": "Senior Embedded Developer till Advenica",
+                    "employer": "Cabeza rekrytering och konsulting AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31682898",
+                    "published": "2026-11-04"
+                },
                 {
                     "headline": "Embedded Software Engineer för kommande uppdrag",
                     "employer": "NXT Interim Malmö AB",
@@ -682,13 +689,6 @@
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31646343",
                     "published": "2026-10-26"
-                },
-                {
-                    "headline": "Svensktalande Embedded Software Engineer",
-                    "employer": "Alira Consulting Group AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31564764",
-                    "published": "2026-10-07"
                 },
                 {
                     "headline": "Erfaren utvecklare inbyggda system med säkerhetsfokus",
@@ -705,104 +705,118 @@
                     "published": "2026-06-29"
                 },
                 {
-                    "headline": "Backend Engineer  Geospatial Data & Distributed Systems - 20094",
-                    "employer": "Veritaz AB",
+                    "headline": "Senior/Principal Render Engineer",
+                    "employer": "Sharkmob AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31628835",
-                    "published": "2026-10-21"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31690398",
+                    "published": "2026-11-05"
                 }
             ]
         },
         "C": {
             "Sweden": [
                 {
-                    "headline": "Embedded Software Developer - Automotive",
-                    "employer": "Knowit Aktiebolag (publ)",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671658",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Embedded C++/C Developer  Functional Safety & Robotics - 20437",
-                    "employer": "Veritaz AB",
+                    "headline": "C/C++-utvecklare inom robotik",
+                    "employer": "Bytelope AB",
                     "location": "Västerås",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31667989",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699965",
+                    "published": "2026-11-07"
                 },
                 {
-                    "headline": "Embedded Software Developer",
-                    "employer": "Aktiebolaget Regin",
-                    "location": "Lund",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31666952",
-                    "published": "2026-10-30"
+                    "headline": "Mjukvaruutvecklare C/C++",
+                    "employer": "Krets Consulting Group AB",
+                    "location": "Örebro",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698548",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Software Engineer",
-                    "employer": "Cisco Systems (Sweden) Aktiebolag",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31666104",
-                    "published": "2026-10-30"
+                    "headline": "Embeddedutvecklare",
+                    "employer": "AFRY AB",
+                    "location": "Västerås",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698429",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Embeddedutvecklare (C/C++ utvecklare)",
-                    "employer": "Syntronic Aktiebolag",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665986",
-                    "published": "2026-10-30"
+                    "headline": "Embedded-utvecklare (C/C++) till Unipower",
+                    "employer": "Unipower AB",
+                    "location": "Alingsås",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698144",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Embedded C/C++ Developer",
-                    "employer": "Techla Group AB",
+                    "headline": "Embedded Developer ",
+                    "employer": "Alten Sverige Aktiebolag",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665589",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697344",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "System Tester",
+                    "employer": "ASSA ABLOY AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696331",
+                    "published": "2026-11-06"
                 }
             ],
             "Stockholm": [
                 {
+                    "headline": "System Tester",
+                    "employer": "ASSA ABLOY AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696331",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Senior mjukvaruutvecklare Embedded",
+                    "employer": "AFRY AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696113",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Junior BB SW Developer",
+                    "employer": "Ericsson AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31686226",
+                    "published": "2026-11-04"
+                },
+                {
+                    "headline": "Junior Cloud RAN Layer 1 SW Developer",
+                    "employer": "Ericsson AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31686224",
+                    "published": "2026-11-04"
+                },
+                {
+                    "headline": "Junior Cloud RAN Layer 1 SW Developer",
+                    "employer": "Ericsson AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31676948",
+                    "published": "2026-11-03"
+                },
+                {
                     "headline": "Embedded Software Developer - Automotive",
                     "employer": "Knowit Aktiebolag (publ)",
                     "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671658",
                     "published": "2026-11-02"
-                },
-                {
-                    "headline": "Software Engineer",
-                    "employer": "Cisco Systems (Sweden) Aktiebolag",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31666104",
-                    "published": "2026-10-30"
-                },
-                {
-                    "headline": "Embeddedutvecklare (C/C++ utvecklare)",
-                    "employer": "Syntronic Aktiebolag",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665986",
-                    "published": "2026-10-30"
-                },
-                {
-                    "headline": "Testare till polisbilen",
-                    "employer": "Polismyndigheten",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31662326",
-                    "published": "2026-10-30"
-                },
-                {
-                    "headline": "Core Network SaaS Developer",
-                    "employer": "Ericsson AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31651725",
-                    "published": "2026-10-27"
-                },
-                {
-                    "headline": "Embedded Software Engineer  Sensors & Control Systems - 20327",
-                    "employer": "Veritaz AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31640004",
-                    "published": "2026-10-23"
                 }
             ],
             "Göteborg": [
+                {
+                    "headline": "Embedded Developer ",
+                    "employer": "Alten Sverige Aktiebolag",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697344",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Embedded Software Engineer",
+                    "employer": "Knightec Group Software and Cloud AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31686341",
+                    "published": "2026-11-04"
+                },
                 {
                     "headline": "Embedded C/C++ Developer",
                     "employer": "Techla Group AB",
@@ -830,23 +844,17 @@
                     "location": "Göteborg",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31656813",
                     "published": "2026-10-28"
-                },
-                {
-                    "headline": "Verification & Quality Lead",
-                    "employer": "GlobalLogic Sweden AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31656789",
-                    "published": "2026-10-28"
-                },
-                {
-                    "headline": "Senior Embedded DevOps Engineer till Ictech i Göteborg",
-                    "employer": "Ictech Göteborg AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652135",
-                    "published": "2026-10-27"
                 }
             ],
-            "Malmö": []
+            "Malmö": [
+                {
+                    "headline": "Senior Embedded Developer till Advenica",
+                    "employer": "Cabeza rekrytering och konsulting AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31682898",
+                    "published": "2026-11-04"
+                }
+            ]
         },
         "JavaScript": {
             "Sweden": [
@@ -858,39 +866,39 @@
                     "published": "2026-09-10"
                 },
                 {
-                    "headline": "Staff Scientist inom AI och Data Engineering",
-                    "employer": "Umeå Universitet",
-                    "location": "Umeå",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675656",
-                    "published": "2026-11-02"
+                    "headline": "Senior Javautvecklare till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
+                    "location": "Sundsvall",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698202",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Underrättelseanalytiker med teknisk inriktning",
-                    "employer": "Försvarets Radioanstalt",
+                    "headline": "Senior Javautvecklare till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675252",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697948",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Teknisk testare till Verksamt.se",
-                    "employer": "Tillväxtverket",
-                    "location": "Östersund",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674431",
-                    "published": "2026-11-02"
+                    "headline": "Senior Javautvecklare till vårt konsultteam",
+                    "employer": "Chas Visual Management AB",
+                    "location": "Nacka",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697065",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Teknisk testare till Verksamt.se",
-                    "employer": "Tillväxtverket",
+                    "headline": "Erfaren systemutvecklare till Bostadsförmedlingen",
+                    "employer": "Bostadsförmedlingen i Stockholm AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674365",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695671",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Junior Frontend Utvecklare",
-                    "employer": "Faverli AB",
-                    "location": "Sweden",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674256",
-                    "published": "2026-11-02"
+                    "headline": "Vi söker en erfaren Optimizely-utvecklare!",
+                    "employer": "Chas Visual Management AB",
+                    "location": "Nacka",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694946",
+                    "published": "2026-11-06"
                 }
             ],
             "Stockholm": [
@@ -902,48 +910,55 @@
                     "published": "2026-09-10"
                 },
                 {
-                    "headline": "Underrättelseanalytiker med teknisk inriktning",
-                    "employer": "Försvarets Radioanstalt",
+                    "headline": "Senior Javautvecklare till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675252",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697948",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Teknisk testare till Verksamt.se",
-                    "employer": "Tillväxtverket",
+                    "headline": "Erfaren systemutvecklare till Bostadsförmedlingen",
+                    "employer": "Bostadsförmedlingen i Stockholm AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674365",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695671",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Backendutvecklare inom WordPress? Bygg framtidens webbplatser med oss!",
-                    "employer": "The Generation AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31666145",
-                    "published": "2026-10-30"
-                },
-                {
-                    "headline": "Senior frontendutvecklare",
+                    "headline": "BI-utvecklare / Data Analyst, Stockholm",
                     "employer": "Soros Consulting AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665997",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694788",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Frontend Utvecklare",
+                    "headline": "Senior Backendutvecklare Java",
                     "employer": "Deploja AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665921",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31689264",
+                    "published": "2026-11-05"
+                },
+                {
+                    "headline": "Frontendutvecklare",
+                    "employer": "Adavo AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31684195",
+                    "published": "2026-11-04"
                 }
             ],
             "Göteborg": [
                 {
-                    "headline": "Fullstackutvecklare",
+                    "headline": "UI/UX designer på praktik",
+                    "employer": "Kapita Investment Group AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31685055",
+                    "published": "2026-11-04"
+                },
+                {
+                    "headline": "Frontendutvecklare – React & TypeScript",
                     "employer": "Agile Resources AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652540",
-                    "published": "2026-10-27"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31678503",
+                    "published": "2026-11-03"
                 },
                 {
                     "headline": "Systemutvecklare C#/.NET till CANEA Partner Group",
@@ -972,13 +987,6 @@
                     "location": "Göteborg",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31633142",
                     "published": "2026-10-22"
-                },
-                {
-                    "headline": "Cloud Native och Linux entusiast",
-                    "employer": "Combitech Aktiebolag",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31613065",
-                    "published": "2026-10-19"
                 }
             ],
             "Malmö": [
@@ -990,25 +998,11 @@
                     "published": "2026-10-23"
                 },
                 {
-                    "headline": "Senior Frontendutvecklare – Vue.js / TypeScript",
-                    "employer": "Quest Consulting Sverige AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31633383",
-                    "published": "2026-10-22"
-                },
-                {
                     "headline": "Integrationsutvecklare",
                     "employer": "Cyberway AB",
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31549539",
                     "published": "2026-10-02"
-                },
-                {
-                    "headline": "Senior UX Designer / Frontendutvecklare",
-                    "employer": "Knowit Aktiebolag (publ)",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31512343",
-                    "published": "2026-09-23"
                 },
                 {
                     "headline": "Software Developer",
@@ -1023,17 +1017,45 @@
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31130652",
                     "published": "2026-06-03"
+                },
+                {
+                    "headline": "Full Stack Developer (TypeScript/React)",
+                    "employer": "Conrec Infinity AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700619",
+                    "published": "2026-11-08"
+                },
+                {
+                    "headline": "Product Software Engineer",
+                    "employer": "IKEA of Sweden AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665983",
+                    "published": "2026-10-30"
                 }
             ]
         },
         "TypeScript": {
             "Sweden": [
                 {
-                    "headline": "Senior Frontendutvecklare – Vue.js / TypeScript",
-                    "employer": "Quest Consulting Sverige AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31633383",
-                    "published": "2026-10-22"
+                    "headline": "Frontendutvecklare – React och TypeScript",
+                    "employer": "Agile Resources AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700773",
+                    "published": "2026-11-08"
+                },
+                {
+                    "headline": "Frontendutvecklare – React & TypeScript",
+                    "employer": "Agile Resources AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31678503",
+                    "published": "2026-11-03"
+                },
+                {
+                    "headline": "Front-end Developer  React & TypeScript",
+                    "employer": "Hykmann Global Business Solutions AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681533",
+                    "published": "2026-11-03"
                 },
                 {
                     "headline": "TypeScript, Node.js & Azure Cloud - Automotive",
@@ -1043,79 +1065,86 @@
                     "published": "2026-10-27"
                 },
                 {
-                    "headline": "Senior Frontend Developer - React & TypeScript",
-                    "employer": "Qlose Recruitment & Consulting AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31638602",
-                    "published": "2026-10-23"
+                    "headline": "Experienced Frontend Developer  TypeScript | Svelte | Playwright",
+                    "employer": "Hykmann Global Business Solutions AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681623",
+                    "published": "2026-11-03"
                 },
                 {
-                    "headline": "Principal Software Engineer  TypeScript, Node.js & Azure - 20417",
+                    "headline": "Professional Front-End Developer  React & TypeScript - 20593",
                     "employer": "Veritaz AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31649324",
-                    "published": "2026-10-27"
-                },
-                {
-                    "headline": "Staff Scientist inom AI och Data Engineering",
-                    "employer": "Umeå Universitet",
-                    "location": "Umeå",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675656",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Senior systemutvecklare med fokus mot backend",
-                    "employer": "Sveriges Meteorologiska och Hydrologiska Institu",
-                    "location": "Norrköping",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675173",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31679745",
+                    "published": "2026-11-03"
                 }
             ],
             "Stockholm": [
+                {
+                    "headline": "Senior Javautvecklare till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697948",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "BI-utvecklare / Data Analyst, Stockholm",
+                    "employer": "Soros Consulting AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694788",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Senior Fullstack-utvecklare (.NET, Vue.js & TypeScript), Distans",
+                    "employer": "Soros Consulting AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31689544",
+                    "published": "2026-11-05"
+                },
+                {
+                    "headline": "Frontendutvecklare",
+                    "employer": "Adavo AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31684195",
+                    "published": "2026-11-04"
+                },
+                {
+                    "headline": "Testautomationsspecialist till konsultbolag i Stockholm",
+                    "employer": "InterAgent AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31682188",
+                    "published": "2026-11-04"
+                },
                 {
                     "headline": "Teknisk testare till Verksamt.se",
                     "employer": "Tillväxtverket",
                     "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674365",
                     "published": "2026-11-02"
-                },
-                {
-                    "headline": "Fullstack Developer till Nova Sounds",
-                    "employer": "Friday Väst AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674308",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Senior Full-stack Developer till Baemingo",
-                    "employer": "Nordicrule AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671550",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Fullstackutvecklare: Infrastruktur",
-                    "employer": "Rosenthal, Emanuel",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31669519",
-                    "published": "2026-11-01"
-                },
-                {
-                    "headline": "Senior frontendutvecklare",
-                    "employer": "Soros Consulting AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665997",
-                    "published": "2026-10-30"
-                },
-                {
-                    "headline": "Frontend Utvecklare",
-                    "employer": "Deploja AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665921",
-                    "published": "2026-10-30"
                 }
             ],
             "Göteborg": [
+                {
+                    "headline": "Frontendutvecklare – React och TypeScript",
+                    "employer": "Agile Resources AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700773",
+                    "published": "2026-11-08"
+                },
+                {
+                    "headline": "Frontendutvecklare – React & TypeScript",
+                    "employer": "Agile Resources AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31678503",
+                    "published": "2026-11-03"
+                },
+                {
+                    "headline": "Front-end Developer  React & TypeScript",
+                    "employer": "Hykmann Global Business Solutions AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681533",
+                    "published": "2026-11-03"
+                },
                 {
                     "headline": "TypeScript, Node.js & Azure Cloud - Automotive",
                     "employer": "Hykmann Global Business Solutions AB",
@@ -1124,56 +1153,21 @@
                     "published": "2026-10-27"
                 },
                 {
-                    "headline": "Principal Software Engineer  TypeScript, Node.js & Azure - 20417",
+                    "headline": "Experienced Frontend Developer  TypeScript | Svelte | Playwright",
+                    "employer": "Hykmann Global Business Solutions AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681623",
+                    "published": "2026-11-03"
+                },
+                {
+                    "headline": "Professional Front-End Developer  React & TypeScript - 20593",
                     "employer": "Veritaz AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31649324",
-                    "published": "2026-10-27"
-                },
-                {
-                    "headline": "Software Developer till Swarco",
-                    "employer": "Bravura Sverige AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31660756",
-                    "published": "2026-10-29"
-                },
-                {
-                    "headline": "Fullstackutvecklare",
-                    "employer": "Agile Resources AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652540",
-                    "published": "2026-10-27"
-                },
-                {
-                    "headline": "Senior Systemutvecklare till Ictech i Göteborg",
-                    "employer": "Ictech Göteborg AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652165",
-                    "published": "2026-10-27"
-                },
-                {
-                    "headline": "Systemutvecklare C#/.NET till CANEA Partner Group",
-                    "employer": "Academic Work Sweden AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31646944",
-                    "published": "2026-10-26"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31679745",
+                    "published": "2026-11-03"
                 }
             ],
             "Malmö": [
-                {
-                    "headline": "Senior Frontendutvecklare – Vue.js / TypeScript",
-                    "employer": "Quest Consulting Sverige AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31633383",
-                    "published": "2026-10-22"
-                },
-                {
-                    "headline": "Senior Frontend Developer - React & TypeScript",
-                    "employer": "Qlose Recruitment & Consulting AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31638602",
-                    "published": "2026-10-23"
-                },
                 {
                     "headline": "Senior Androidutvecklare till Tyra",
                     "employer": "Bravura Sverige AB",
@@ -1201,17 +1195,38 @@
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31638297",
                     "published": "2026-10-23"
+                },
+                {
+                    "headline": "AI Engineer (Cloud & Backend)",
+                    "employer": "Knowit Aktiebolag (publ)",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31211839",
+                    "published": "2026-06-24"
+                },
+                {
+                    "headline": "Full Stack Developer (TypeScript/React)",
+                    "employer": "Conrec Infinity AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700619",
+                    "published": "2026-11-08"
                 }
             ]
         },
         "Azure": {
             "Sweden": [
                 {
-                    "headline": "Azure Architect",
-                    "employer": "Rosenthal, Emanuel",
-                    "location": "Södertälje",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31669311",
-                    "published": "2026-11-01"
+                    "headline": "Azure Data Engineer",
+                    "employer": "Advitum AB",
+                    "location": "Växjö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694955",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Azure Cloud Engineer",
+                    "employer": "Iver Accelerate AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31680699",
+                    "published": "2026-11-03"
                 },
                 {
                     "headline": "Azure Cloud Engineer",
@@ -1235,21 +1250,21 @@
                     "published": "2026-08-14"
                 },
                 {
-                    "headline": "Azure Cloud Engineer",
-                    "employer": "Iver Accelerate AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31227537",
-                    "published": "2026-06-29"
-                },
-                {
-                    "headline": "Lead Developer .NET och Azure",
-                    "employer": "Lynqa AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31477126",
-                    "published": "2026-09-15"
+                    "headline": "Azure Specialist – Cloud Adoption",
+                    "employer": "Advitum AB",
+                    "location": "Växjö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695094",
+                    "published": "2026-11-06"
                 }
             ],
             "Stockholm": [
+                {
+                    "headline": "Azure Cloud Engineer",
+                    "employer": "Iver Accelerate AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31680699",
+                    "published": "2026-11-03"
+                },
                 {
                     "headline": "Azure Cloud Specialist",
                     "employer": "Eccera Professionals AB",
@@ -1263,13 +1278,6 @@
                     "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31355669",
                     "published": "2026-08-14"
-                },
-                {
-                    "headline": "Azure Cloud Engineer",
-                    "employer": "Iver Accelerate AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31227537",
-                    "published": "2026-06-29"
                 },
                 {
                     "headline": "Lead Developer .NET och Azure",
@@ -1330,20 +1338,41 @@
                     "published": "2026-06-05"
                 },
                 {
-                    "headline": "AI & Data Solution Engineer / Tech Lead",
+                    "headline": "Frontendutvecklare – React och TypeScript",
                     "employer": "Agile Resources AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31668984",
-                    "published": "2026-10-31"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700773",
+                    "published": "2026-11-08"
                 }
             ],
             "Malmö": [
                 {
-                    "headline": "System Administrator – Azure & Plattform, till Pågen",
-                    "employer": "Cabeza rekrytering och konsulting AB",
+                    "headline": "Senior Integration Specialist  Solution Architecture & Azure - 20669",
+                    "employer": "Veritaz AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31019842",
-                    "published": "2026-05-11"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31685407",
+                    "published": "2026-11-04"
+                },
+                {
+                    "headline": "Affärskonsult inom Microsoft Dynamics 365 Business Central",
+                    "employer": "Columbus Sweden AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697841",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Integration Developer",
+                    "employer": "Epical Sweden AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31679417",
+                    "published": "2026-11-03"
+                },
+                {
+                    "headline": "Onsite IT-tekniker till Malmö!",
+                    "employer": "Academic Work Sweden AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31677914",
+                    "published": "2026-11-03"
                 },
                 {
                     "headline": "R&D Senior Configuration Manager",
@@ -1358,27 +1387,6 @@
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31651459",
                     "published": "2026-10-27"
-                },
-                {
-                    "headline": "Delförvaltningsledare IT inom Fastighet - Malmö",
-                    "employer": "Kriminalvården",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31651054",
-                    "published": "2026-10-27"
-                },
-                {
-                    "headline": "Software Engineer – .NET & AI-first utveckling, Malmö",
-                    "employer": "Qronos AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31638297",
-                    "published": "2026-10-23"
-                },
-                {
-                    "headline": "Senior Frontendutvecklare – Vue.js / TypeScript",
-                    "employer": "Quest Consulting Sverige AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31633383",
-                    "published": "2026-10-22"
                 }
             ]
         },
@@ -1392,13 +1400,6 @@
                     "published": "2026-10-23"
                 },
                 {
-                    "headline": "Senior Java AWS Developer",
-                    "employer": "Techrytera AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31644907",
-                    "published": "2026-10-26"
-                },
-                {
                     "headline": "Serverlessutvecklare AWS till Axfood IT",
                     "employer": "TNG Group AB",
                     "location": "Stockholm",
@@ -1406,11 +1407,11 @@
                     "published": "2026-10-29"
                 },
                 {
-                    "headline": "Senior Backend Java / AWS",
-                    "employer": "Everone AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31024900",
-                    "published": "2026-05-11"
+                    "headline": "Solution Architect  AWS, Cloud-Native, Automotive",
+                    "employer": "Hykmann Global Business Solutions AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681527",
+                    "published": "2026-11-03"
                 },
                 {
                     "headline": "Senior Java Developer with AWS",
@@ -1425,29 +1426,22 @@
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31645678",
                     "published": "2026-10-26"
+                },
+                {
+                    "headline": "Lead Project Leader - AWS AI",
+                    "employer": "Nordea Bank Abp, filial i Sverige",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31613615",
+                    "published": "2026-10-19"
                 }
             ],
             "Stockholm": [
-                {
-                    "headline": "Senior Java AWS Developer",
-                    "employer": "Techrytera AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31644907",
-                    "published": "2026-10-26"
-                },
                 {
                     "headline": "Serverlessutvecklare AWS till Axfood IT",
                     "employer": "TNG Group AB",
                     "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31659393",
                     "published": "2026-10-29"
-                },
-                {
-                    "headline": "Senior Backend Java / AWS",
-                    "employer": "Everone AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31024900",
-                    "published": "2026-05-11"
                 },
                 {
                     "headline": "Lead Project Leader - AWS AI",
@@ -1464,14 +1458,35 @@
                     "published": "2026-10-21"
                 },
                 {
-                    "headline": "Informationssäkerhetsspecialist till Neonic",
-                    "employer": "TNG Group AB",
+                    "headline": "Dataingenjör till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674266",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696405",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Senior DevOps Engineer vid Must",
+                    "employer": "Försvarsmakten",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696119",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "DevOps-ingenjör till försvarsindustrin ",
+                    "employer": "AFRY AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695772",
+                    "published": "2026-11-06"
                 }
             ],
             "Göteborg": [
+                {
+                    "headline": "Solution Architect  AWS, Cloud-Native, Automotive",
+                    "employer": "Hykmann Global Business Solutions AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681527",
+                    "published": "2026-11-03"
+                },
                 {
                     "headline": "Senior Java Developer with AWS",
                     "employer": "Surely Sci & Tech AB",
@@ -1506,13 +1521,6 @@
                     "location": "Göteborg",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652698",
                     "published": "2026-10-27"
-                },
-                {
-                    "headline": "DevOps-ingenjör",
-                    "employer": "Futuria People AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671843",
-                    "published": "2026-11-02"
                 }
             ],
             "Malmö": [
@@ -1524,11 +1532,11 @@
                     "published": "2026-10-26"
                 },
                 {
-                    "headline": "Intresseanmälan Fullstack Engineer",
-                    "employer": "ACADEMIC WORK SWEDEN AB",
+                    "headline": "Data Engineer  AWS, Python & Data Pipelines - 206022",
+                    "employer": "Veritaz AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31374594",
-                    "published": "2026-08-20"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31677546",
+                    "published": "2026-11-03"
                 },
                 {
                     "headline": "Data Scientist",
@@ -1552,110 +1560,110 @@
                     "published": "2026-05-20"
                 },
                 {
-                    "headline": "Senior Data engineer",
-                    "employer": "Verisure Sverige AB",
+                    "headline": "Full Stack Developer (TypeScript/React)",
+                    "employer": "Conrec Infinity AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31636995",
-                    "published": "2026-10-23"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700619",
+                    "published": "2026-11-08"
                 }
             ]
         },
         "GCP": {
             "Sweden": [
                 {
-                    "headline": "Entry Level: Software Developer - Packet Core",
-                    "employer": "Ericsson AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675608",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Informationssäkerhetsspecialist till Neonic",
-                    "employer": "TNG Group AB",
+                    "headline": "Senior DevOps Engineer vid Must",
+                    "employer": "Försvarsmakten",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674266",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696119",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Backend Engineer  Catalog, /dev/null - 20567",
+                    "headline": "BI Developer - Data Analytics & Business Intelligence - 20718",
                     "employer": "Veritaz AB",
-                    "location": "Sweden",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31673550",
-                    "published": "2026-11-02"
+                    "location": "Solna",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696055",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "DevOps/SecOps",
-                    "employer": "Knowit Aktiebolag (publ)",
+                    "headline": "DevOps-ingenjör till försvarsindustrin ",
+                    "employer": "AFRY AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671766",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695772",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "AI Architect",
-                    "employer": "Knowit Aktiebolag (publ)",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671626",
-                    "published": "2026-11-02"
+                    "headline": "Seniora dataanalytiker sökes!",
+                    "employer": "Chas Visual Management AB",
+                    "location": "Nacka",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695076",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Fullstackutvecklare till Innovativt techbolag",
-                    "employer": "Nordicrule AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671584",
-                    "published": "2026-11-02"
+                    "headline": "Bli vår nästa säkerhetsspecialist!",
+                    "employer": "Chas Visual Management AB",
+                    "location": "Nacka",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695053",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Vi söker Cloud & Plattform Engineers!",
+                    "employer": "Chas Visual Management AB",
+                    "location": "Nacka",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695025",
+                    "published": "2026-11-06"
                 }
             ],
             "Stockholm": [
                 {
-                    "headline": "Informationssäkerhetsspecialist till Neonic",
-                    "employer": "TNG Group AB",
+                    "headline": "Senior DevOps Engineer vid Must",
+                    "employer": "Försvarsmakten",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674266",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696119",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "DevOps/SecOps",
-                    "employer": "Knowit Aktiebolag (publ)",
+                    "headline": "DevOps-ingenjör till försvarsindustrin ",
+                    "employer": "AFRY AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671766",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695772",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "AI Architect",
-                    "employer": "Knowit Aktiebolag (publ)",
+                    "headline": "Junior Java-utvecklare",
+                    "employer": "Comstream AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671626",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694900",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Fullstackutvecklare till Innovativt techbolag",
-                    "employer": "Nordicrule AB",
+                    "headline": "BI-utvecklare / Data Analyst, Stockholm",
+                    "employer": "Soros Consulting AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671584",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694788",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Senior Backend Engineer | Orders Team",
-                    "employer": "Instabee Group AB",
+                    "headline": "Senior Test Automation Engineer",
+                    "employer": "Agil arbetskraft Sverige GF AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31669673",
-                    "published": "2026-11-01"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31687884",
+                    "published": "2026-11-05"
                 },
                 {
-                    "headline": "Data Scientist",
-                    "employer": "Techrytera AB",
+                    "headline": "Senior Test Automation Engineer needed!",
+                    "employer": "Perido AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31667832",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31686627",
+                    "published": "2026-11-04"
                 }
             ],
             "Göteborg": [
                 {
-                    "headline": "Entry Level: Software Developer - Packet Core",
-                    "employer": "Ericsson AB",
+                    "headline": "Data Engineer",
+                    "employer": "Eccera Professionals AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675608",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31679542",
+                    "published": "2026-11-03"
                 },
                 {
                     "headline": "Join our DevOps & Platform team in Gothenburg",
@@ -1695,18 +1703,32 @@
             ],
             "Malmö": [
                 {
+                    "headline": "Software Engineer",
+                    "employer": "IKEA of Sweden AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31688015",
+                    "published": "2026-11-05"
+                },
+                {
+                    "headline": "Software Engineer",
+                    "employer": "IKEA IT Aktiebolag",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681093",
+                    "published": "2026-11-03"
+                },
+                {
+                    "headline": "Technical Lead – IoT to Alfa Laval!",
+                    "employer": "Academic Work Sweden AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31679733",
+                    "published": "2026-11-03"
+                },
+                {
                     "headline": "Senior Fullstack Developer / Product Engineer till FINQR",
                     "employer": "Qlose Recruitment & Consulting AB",
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31656424",
                     "published": "2026-10-28"
-                },
-                {
-                    "headline": "Intresseanmälan Fullstack Engineer",
-                    "employer": "ACADEMIC WORK SWEDEN AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31374594",
-                    "published": "2026-08-20"
                 },
                 {
                     "headline": "Software Engineer",
@@ -1721,20 +1743,6 @@
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31235524",
                     "published": "2026-07-01"
-                },
-                {
-                    "headline": "AI Engineer (Cloud & Backend)",
-                    "employer": "Knowit Aktiebolag (publ)",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31211839",
-                    "published": "2026-06-24"
-                },
-                {
-                    "headline": "Senior IT Security Architect",
-                    "employer": "Orange Cyberdefense Sweden AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31148802",
-                    "published": "2026-06-07"
                 }
             ]
         },
@@ -1746,13 +1754,6 @@
                     "location": "Göteborg",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31667905",
                     "published": "2026-10-30"
-                },
-                {
-                    "headline": "Senior Kubernetes platform engineer",
-                    "employer": "Quest Consulting Sverige AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31662945",
-                    "published": "2026-10-29"
                 },
                 {
                     "headline": "Javautvecklare inom integration och Kubernetes",
@@ -1781,16 +1782,16 @@
                     "location": "Sundsvall",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31669351",
                     "published": "2026-11-01"
+                },
+                {
+                    "headline": "Javautvecklare med Spring och Kubernetes i Sundsvall",
+                    "employer": "TIKK TAKK TIME SWEDEN AB",
+                    "location": "Sundsvall",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31658129",
+                    "published": "2026-10-28"
                 }
             ],
             "Stockholm": [
-                {
-                    "headline": "Senior Kubernetes platform engineer",
-                    "employer": "Quest Consulting Sverige AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31662945",
-                    "published": "2026-10-29"
-                },
                 {
                     "headline": "Javautvecklare inom integration och Kubernetes",
                     "employer": "Maxitech AB",
@@ -1806,25 +1807,32 @@
                     "published": "2026-07-06"
                 },
                 {
-                    "headline": "Produktägare – DevOps",
-                    "employer": "Techrytera AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675807",
-                    "published": "2026-11-02"
+                    "headline": "Drift och jour av Linuxsystem (SRE/DevOps)",
+                    "employer": "Scalability AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695891",
+                    "published": "2026-11-08"
                 },
                 {
-                    "headline": "DevOps/SecOps",
-                    "employer": "Knowit Aktiebolag (publ)",
+                    "headline": "SRE/DevOps: Drift av Linuxsystem (heltid, Stockholm)",
+                    "employer": "Scalability AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671766",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695832",
+                    "published": "2026-11-07"
                 },
                 {
-                    "headline": "Fullstackutvecklare: Infrastruktur",
-                    "employer": "Rosenthal, Emanuel",
+                    "headline": "Junior Javautvecklare till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31669519",
-                    "published": "2026-11-01"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698183",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Senior Javautvecklare till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697948",
+                    "published": "2026-11-06"
                 }
             ],
             "Göteborg": [
@@ -1850,25 +1858,25 @@
                     "published": "2026-10-27"
                 },
                 {
-                    "headline": "Produktägare – DevOps",
-                    "employer": "Techrytera AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675807",
-                    "published": "2026-11-02"
+                    "headline": "Senior Software Developer – sensorsimulering",
+                    "employer": "Agile Resources AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698968",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Senior mjukvaruutvecklare: Java eller embedded, med agentisk AI",
-                    "employer": "CaptureInnovation AB",
+                    "headline": "IT-utvecklare",
+                    "employer": "Göteborgs Universitet",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31672376",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31693045",
+                    "published": "2026-11-05"
                 },
                 {
-                    "headline": "DevOps-ingenjör",
-                    "employer": "Futuria People AB",
+                    "headline": "Senior Cloud Developer",
+                    "employer": "CGI Sverige AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671843",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31679755",
+                    "published": "2026-11-03"
                 }
             ],
             "Malmö": [
@@ -1894,118 +1902,139 @@
                     "published": "2026-10-22"
                 },
                 {
-                    "headline": "Senior Software Engineer, konsultuppdrag i Malmö",
-                    "employer": "Intensogruppen AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31561267",
-                    "published": "2026-10-06"
-                },
-                {
-                    "headline": "Intresseanmälan Fullstack Engineer",
-                    "employer": "ACADEMIC WORK SWEDEN AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31374594",
-                    "published": "2026-08-20"
-                },
-                {
                     "headline": "Site Reliability Engineer/Cloud Engineer",
                     "employer": "Iver Accelerate AB",
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31240992",
                     "published": "2026-07-02"
+                },
+                {
+                    "headline": "AI Engineer (Cloud & Backend)",
+                    "employer": "Knowit Aktiebolag (publ)",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31211839",
+                    "published": "2026-06-24"
+                },
+                {
+                    "headline": "Software Engineer",
+                    "employer": "IKEA IT Aktiebolag",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681093",
+                    "published": "2026-11-03"
                 }
             ]
         },
         "Docker": {
             "Sweden": [
                 {
-                    "headline": "Backendutvecklare",
-                    "employer": "E-Hälsomyndigheten",
-                    "location": "Kalmar",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675667",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Senior lösningsarkitekt  verksamhetskritiska system i Linköping",
-                    "employer": "Skarp Systems AB",
-                    "location": "Norrköping",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674772",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "En social systems administrator för Artifactory",
-                    "employer": "SAAB Aktiebolag",
-                    "location": "Solna",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31673479",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Systemarkitekt inom IT-säkerhet",
-                    "employer": "Eccera Professionals AB",
-                    "location": "Danderyd",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31673449",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "DevOps-ingenjör",
-                    "employer": "Futuria People AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671843",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "DevOps/SecOps",
-                    "employer": "Knowit Aktiebolag (publ)",
+                    "headline": "Drift och jour av Linuxsystem (SRE/DevOps)",
+                    "employer": "Scalability AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671766",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695891",
+                    "published": "2026-11-08"
+                },
+                {
+                    "headline": "SRE/DevOps: Drift av Linuxsystem (heltid, Stockholm)",
+                    "employer": "Scalability AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695832",
+                    "published": "2026-11-07"
+                },
+                {
+                    "headline": "Senior Software Developer – sensorsimulering",
+                    "employer": "Agile Resources AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698968",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Embedded-utvecklare (C/C++) till Unipower",
+                    "employer": "Unipower AB",
+                    "location": "Alingsås",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698144",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Senior Javautvecklare till vårt konsultteam",
+                    "employer": "Chas Visual Management AB",
+                    "location": "Nacka",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697065",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Dataingenjör till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696405",
+                    "published": "2026-11-06"
                 }
             ],
             "Stockholm": [
                 {
-                    "headline": "DevOps/SecOps",
-                    "employer": "Knowit Aktiebolag (publ)",
+                    "headline": "Drift och jour av Linuxsystem (SRE/DevOps)",
+                    "employer": "Scalability AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671766",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695891",
+                    "published": "2026-11-08"
                 },
                 {
-                    "headline": "Embedded mjukvaruingengör",
-                    "employer": "Rosenthal, Emanuel",
+                    "headline": "SRE/DevOps: Drift av Linuxsystem (heltid, Stockholm)",
+                    "employer": "Scalability AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31669483",
-                    "published": "2026-11-01"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695832",
+                    "published": "2026-11-07"
                 },
                 {
-                    "headline": "Backendutvecklare inom WordPress? Bygg framtidens webbplatser med oss!",
-                    "employer": "The Generation AB",
+                    "headline": "Dataingenjör till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31666145",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696405",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Virtualiseringstekniker till Transportstyrelsen",
-                    "employer": "Transportstyrelsen",
+                    "headline": "DevOps-ingenjör till försvarsindustrin ",
+                    "employer": "AFRY AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31666013",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695772",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Javautvecklare",
-                    "employer": "Syntronic Aktiebolag",
+                    "headline": "Junior Java-utvecklare",
+                    "employer": "Comstream AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665973",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694900",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Python-utvecklare",
-                    "employer": "Syntronic Aktiebolag",
+                    "headline": "Senior Backendutvecklare Java",
+                    "employer": "Deploja AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665923",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31689264",
+                    "published": "2026-11-05"
                 }
             ],
             "Göteborg": [
+                {
+                    "headline": "Senior Software Developer – sensorsimulering",
+                    "employer": "Agile Resources AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698968",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Utvecklare till framtidens uppkopplade lösningar",
+                    "employer": "Friday Väst AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31685535",
+                    "published": "2026-11-04"
+                },
+                {
+                    "headline": "AI-utvecklare",
+                    "employer": "B3 Consulting Group AB (publ)",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31683744",
+                    "published": "2026-11-04"
+                },
                 {
                     "headline": "DevOps-ingenjör",
                     "employer": "Futuria People AB",
@@ -2026,27 +2055,6 @@
                     "location": "Göteborg",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652165",
                     "published": "2026-10-27"
-                },
-                {
-                    "headline": "Senior Java Backend Engineer - IAM Specialist",
-                    "employer": "Maxitech AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31643773",
-                    "published": "2026-10-26"
-                },
-                {
-                    "headline": "DevOps-ingenjör till Jonsered",
-                    "employer": "Academic Work Sweden AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31639807",
-                    "published": "2026-10-23"
-                },
-                {
-                    "headline": "SiS söker systemutvecklare",
-                    "employer": "Statens Institutionsstyrelse",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31638083",
-                    "published": "2026-10-23"
                 }
             ],
             "Malmö": [
@@ -2056,13 +2064,6 @@
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31632256",
                     "published": "2026-10-22"
-                },
-                {
-                    "headline": "Intresseanmälan Fullstack Engineer",
-                    "employer": "ACADEMIC WORK SWEDEN AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31374594",
-                    "published": "2026-08-20"
                 },
                 {
                     "headline": "Senior Platform Engineer – OpenStack, Linux & Automation",
@@ -2079,111 +2080,118 @@
                     "published": "2026-06-29"
                 },
                 {
-                    "headline": "Backend Engineer",
-                    "employer": "Techrytera AB",
+                    "headline": "Full Stack Developer (TypeScript/React)",
+                    "employer": "Conrec Infinity AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31645052",
-                    "published": "2026-10-26"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700619",
+                    "published": "2026-11-08"
                 },
                 {
-                    "headline": "Senior Frontend Developer - React & TypeScript",
-                    "employer": "Qlose Recruitment & Consulting AB",
+                    "headline": "Technical Lead – IoT to Alfa Laval!",
+                    "employer": "Academic Work Sweden AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31638602",
-                    "published": "2026-10-23"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31679733",
+                    "published": "2026-11-03"
                 }
             ]
         },
         "Terraform": {
             "Sweden": [
                 {
-                    "headline": "DevOps/SecOps",
-                    "employer": "Knowit Aktiebolag (publ)",
+                    "headline": "Linuxtekniker – bidra till en robust och säker IT-miljö",
+                    "employer": "Regeringskansliet",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671766",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698836",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Site Reliability Engineer",
-                    "employer": "Eccera Professionals AB",
+                    "headline": "Linuxutvecklare",
+                    "employer": "NXT Interim Malmö AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698026",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "DevOps-ingenjör till försvarsindustrin ",
+                    "employer": "AFRY AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695772",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Vi söker DevOps-konsulter!",
+                    "employer": "Chas Visual Management AB",
+                    "location": "Nacka",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694962",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "IaC utvecklare Linux",
+                    "employer": "NXT Interim Stockholm AB",
                     "location": "Linköping",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31670425",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31688848",
+                    "published": "2026-11-05"
                 },
                 {
-                    "headline": "Senior IT-tekniker  Containerteknik, Kubernetes & Middleware",
-                    "employer": "Hykmann Global Business Solutions AB",
-                    "location": "Sundsvall",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31669351",
-                    "published": "2026-11-01"
-                },
-                {
-                    "headline": "Nimbl söker Software Engineer i Stockholm",
-                    "employer": "TNG Group AB",
+                    "headline": "Javautvecklare",
+                    "employer": "Deploja AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665066",
-                    "published": "2026-10-30"
-                },
-                {
-                    "headline": "Konsult / Interim - DevSecOps",
-                    "employer": "TNG Group AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665038",
-                    "published": "2026-10-30"
-                },
-                {
-                    "headline": "DevSecOps till BeyondNow i Stockholm",
-                    "employer": "TNG Group AB",
-                    "location": "Solna",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665053",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31685383",
+                    "published": "2026-11-04"
                 }
             ],
             "Stockholm": [
                 {
-                    "headline": "DevOps/SecOps",
-                    "employer": "Knowit Aktiebolag (publ)",
+                    "headline": "Linuxtekniker – bidra till en robust och säker IT-miljö",
+                    "employer": "Regeringskansliet",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671766",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698836",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Nimbl söker Software Engineer i Stockholm",
-                    "employer": "TNG Group AB",
+                    "headline": "DevOps-ingenjör till försvarsindustrin ",
+                    "employer": "AFRY AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665066",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695772",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Konsult / Interim - DevSecOps",
-                    "employer": "TNG Group AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665038",
-                    "published": "2026-10-30"
-                },
-                {
-                    "headline": "Senior Data Engineer",
-                    "employer": "Quest Consulting Sverige AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31661496",
-                    "published": "2026-10-29"
-                },
-                {
-                    "headline": "Serverlessutvecklare AWS till Axfood IT",
-                    "employer": "TNG Group AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31659393",
-                    "published": "2026-10-29"
-                },
-                {
-                    "headline": "Systemutvecklare Java",
+                    "headline": "Javautvecklare",
                     "employer": "Deploja AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31655069",
-                    "published": "2026-10-28"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31685383",
+                    "published": "2026-11-04"
+                },
+                {
+                    "headline": "Linux- och DevOps-ingenjör till konsultbolag i Stockholm",
+                    "employer": "InterAgent AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31682107",
+                    "published": "2026-11-04"
+                },
+                {
+                    "headline": "Är du vår nya DevOps Engineer?",
+                    "employer": "Finansinspektionen",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31678433",
+                    "published": "2026-11-03"
+                },
+                {
+                    "headline": "DevOps-ingenjör till konsultbolag i Stockholm",
+                    "employer": "InterAgent AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31676532",
+                    "published": "2026-11-03"
                 }
             ],
             "Göteborg": [
+                {
+                    "headline": "Senior Software Architect",
+                    "employer": "Agile Resources AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31678526",
+                    "published": "2026-11-03"
+                },
                 {
                     "headline": "Network Engineer",
                     "employer": "Nexer Infrastructure AB",
@@ -2213,13 +2221,6 @@
                     "published": "2026-10-09"
                 },
                 {
-                    "headline": "DevOps DevSecOps, konsultuppdrag  Göteborg",
-                    "employer": "Intensogruppen AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31561255",
-                    "published": "2026-10-06"
-                },
-                {
                     "headline": "DevOps Engineer",
                     "employer": "Eccera Professionals AB",
                     "location": "Göteborg",
@@ -2229,29 +2230,43 @@
             ],
             "Malmö": [
                 {
-                    "headline": "Senior fullstackutvecklare inom Java eller .NET",
-                    "employer": "Knowit Aktiebolag (publ)",
+                    "headline": "Linuxutvecklare",
+                    "employer": "NXT Interim Malmö AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31510867",
-                    "published": "2026-09-23"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698026",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Intresseanmälan Fullstack Engineer",
-                    "employer": "ACADEMIC WORK SWEDEN AB",
+                    "headline": "Software Engineer",
+                    "employer": "IKEA of Sweden AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31374594",
-                    "published": "2026-08-20"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695796",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Software Engineer",
+                    "employer": "IKEA IT Aktiebolag",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681093",
+                    "published": "2026-11-03"
+                },
+                {
+                    "headline": "Data Engineer  AWS, Python & Data Pipelines - 206022",
+                    "employer": "Veritaz AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31677546",
+                    "published": "2026-11-03"
                 }
             ]
         },
         "Linux": {
             "Sweden": [
                 {
-                    "headline": "Linux Developer",
-                    "employer": "Rosenthal, Emanuel",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31649945",
-                    "published": "2026-10-27"
+                    "headline": "IaC utvecklare Linux",
+                    "employer": "NXT Interim Stockholm AB",
+                    "location": "Linköping",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31688848",
+                    "published": "2026-11-05"
                 },
                 {
                     "headline": "Systemadministratör inom Linux",
@@ -2268,13 +2283,6 @@
                     "published": "2026-07-09"
                 },
                 {
-                    "headline": "Systemtekniker: Linux & Solaris",
-                    "employer": "Rosenthal, Emanuel",
-                    "location": "Linköping",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31669514",
-                    "published": "2026-11-01"
-                },
-                {
                     "headline": "Operations Engineer - Linux",
                     "employer": "Vattenfall AB",
                     "location": "Varberg",
@@ -2287,16 +2295,16 @@
                     "location": "Oskarshamn",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31656531",
                     "published": "2026-10-28"
+                },
+                {
+                    "headline": "Operations Engineer - Linux",
+                    "employer": "Vattenfall AB",
+                    "location": "Östhammar",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31656486",
+                    "published": "2026-10-28"
                 }
             ],
             "Stockholm": [
-                {
-                    "headline": "Linux Developer",
-                    "employer": "Rosenthal, Emanuel",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31649945",
-                    "published": "2026-10-27"
-                },
                 {
                     "headline": "Systemadministratör inom Linux",
                     "employer": "Eccera Professionals AB",
@@ -2331,6 +2339,13 @@
                     "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31423195",
                     "published": "2026-09-01"
+                },
+                {
+                    "headline": "Linux Engineer Inom Systemintegration och Säkerhet",
+                    "employer": "Friday Väst AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31605785",
+                    "published": "2026-10-16"
                 }
             ],
             "Göteborg": [
@@ -2370,11 +2385,11 @@
                     "published": "2026-10-21"
                 },
                 {
-                    "headline": "Arbeta som C++ utvecklare inom Realtidssystem",
-                    "employer": "Friday Väst AB",
+                    "headline": "Linuxspecialist, fokus säkra informationssystem",
+                    "employer": "Länsstyrelsen i Västra Götalands län",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675413",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699514",
+                    "published": "2026-11-06"
                 }
             ],
             "Malmö": [
@@ -2384,6 +2399,20 @@
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31227659",
                     "published": "2026-06-29"
+                },
+                {
+                    "headline": "Linuxutvecklare",
+                    "employer": "NXT Interim Malmö AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698026",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "1st line supporttekniker till kund i Malmö!",
+                    "employer": "Poolia AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696160",
+                    "published": "2026-11-06"
                 },
                 {
                     "headline": "Junior IT-tekniker till Nova Security",
@@ -2405,20 +2434,6 @@
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31603603",
                     "published": "2026-10-15"
-                },
-                {
-                    "headline": "Är du i början av din IT-karriär? Vi söker en 1st Line Supporttekniker!",
-                    "employer": "Gigstep AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31360102",
-                    "published": "2026-08-17"
-                },
-                {
-                    "headline": "Site Reliability Engineer/Cloud Engineer",
-                    "employer": "Iver Accelerate AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31240992",
-                    "published": "2026-07-02"
                 }
             ]
         },
@@ -2432,39 +2447,39 @@
                     "published": "2026-10-09"
                 },
                 {
-                    "headline": "Arbeta som C++ utvecklare inom Realtidssystem",
-                    "employer": "Friday Väst AB",
+                    "headline": "Frontendutvecklare – React och TypeScript",
+                    "employer": "Agile Resources AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675413",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700773",
+                    "published": "2026-11-08"
                 },
                 {
-                    "headline": "C++ UTVECKLARE MED TEST- OCH VERIFIERINGSINTRESSE",
-                    "employer": "Friday Väst AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675404",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Teknisk testare till Verksamt.se",
-                    "employer": "Tillväxtverket",
-                    "location": "Östersund",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674431",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Teknisk testare till Verksamt.se",
-                    "employer": "Tillväxtverket",
+                    "headline": "Senior Data Engineer för datakatalog",
+                    "employer": "Avaron AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674365",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699963",
+                    "published": "2026-11-07"
                 },
                 {
-                    "headline": "Junior Frontend Utvecklare",
-                    "employer": "Faverli AB",
-                    "location": "Sweden",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674256",
-                    "published": "2026-11-02"
+                    "headline": "Linuxspecialist, fokus säkra informationssystem",
+                    "employer": "Länsstyrelsen i Västra Götalands län",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699514",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Junior Javautvecklare till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
+                    "location": "Sundsvall",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699280",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Mjukvaruutvecklare",
+                    "employer": "Agile Resources AB",
+                    "location": "Jönköping",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698533",
+                    "published": "2026-11-06"
                 }
             ],
             "Stockholm": [
@@ -2476,93 +2491,86 @@
                     "published": "2026-10-09"
                 },
                 {
-                    "headline": "Teknisk testare till Verksamt.se",
-                    "employer": "Tillväxtverket",
+                    "headline": "Senior Data Engineer för datakatalog",
+                    "employer": "Avaron AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674365",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699963",
+                    "published": "2026-11-07"
                 },
                 {
-                    "headline": "DevOps/SecOps",
-                    "employer": "Knowit Aktiebolag (publ)",
+                    "headline": "Junior Javautvecklare till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671766",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698183",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Embedded mjukvaruingengör",
-                    "employer": "Rosenthal, Emanuel",
+                    "headline": "Senior Javautvecklare till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31669483",
-                    "published": "2026-11-01"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697948",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Senior systemutvecklare .NET/Lösningsdesigner",
-                    "employer": "NXT Interim Stockholm AB",
+                    "headline": "Dataingenjör till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31666357",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696405",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Backendutvecklare inom WordPress? Bygg framtidens webbplatser med oss!",
-                    "employer": "The Generation AB",
+                    "headline": "DevOps-ingenjör till försvarsindustrin ",
+                    "employer": "AFRY AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31666145",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695772",
+                    "published": "2026-11-06"
                 }
             ],
             "Göteborg": [
                 {
-                    "headline": "Arbeta som C++ utvecklare inom Realtidssystem",
-                    "employer": "Friday Väst AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675413",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "C++ UTVECKLARE MED TEST- OCH VERIFIERINGSINTRESSE",
-                    "employer": "Friday Väst AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675404",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "DevOps-ingenjör",
-                    "employer": "Futuria People AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671843",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Software Engineer inom automation/logistik till KION Group",
-                    "employer": "Needo Recruitment Sthlm AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31661232",
-                    "published": "2026-10-29"
-                },
-                {
-                    "headline": "Senior Embedded Software Engineer",
+                    "headline": "Frontendutvecklare – React och TypeScript",
                     "employer": "Agile Resources AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652323",
-                    "published": "2026-10-27"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700773",
+                    "published": "2026-11-08"
                 },
                 {
-                    "headline": "C++ Software Developer inom realtidssystem",
+                    "headline": "Linuxspecialist, fokus säkra informationssystem",
+                    "employer": "Länsstyrelsen i Västra Götalands län",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699514",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Managed Services Support Engineer",
+                    "employer": "Barona Teknik & Installation AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31688225",
+                    "published": "2026-11-05"
+                },
+                {
+                    "headline": "Utvecklare på praktik: systemintegration och automation",
+                    "employer": "Kapita Investment Group AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31685035",
+                    "published": "2026-11-04"
+                },
+                {
+                    "headline": "Senior Cloud Developer",
+                    "employer": "CGI Sverige AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31679755",
+                    "published": "2026-11-03"
+                },
+                {
+                    "headline": "Frontendutvecklare – React & TypeScript",
                     "employer": "Agile Resources AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652316",
-                    "published": "2026-10-27"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31678503",
+                    "published": "2026-11-03"
                 }
             ],
             "Malmö": [
-                {
-                    "headline": "Senior Frontendutvecklare – Vue.js / TypeScript",
-                    "employer": "Quest Consulting Sverige AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31633383",
-                    "published": "2026-10-22"
-                },
                 {
                     "headline": "Senior Testare till Quest Consulting",
                     "employer": "Quest Consulting Sverige AB",
@@ -2571,118 +2579,125 @@
                     "published": "2026-10-22"
                 },
                 {
-                    "headline": "Svensktalande Embedded Software Engineer",
-                    "employer": "Alira Consulting Group AB",
+                    "headline": "Full Stack Developer (TypeScript/React)",
+                    "employer": "Conrec Infinity AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31564764",
-                    "published": "2026-10-07"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700619",
+                    "published": "2026-11-08"
                 },
                 {
-                    "headline": "Systemutvecklare med passion för AI till Prima Vård!",
-                    "employer": "Academic Work Sweden AB",
+                    "headline": "Data Engineer  AWS, Python & Data Pipelines - 206022",
+                    "employer": "Veritaz AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31505930",
-                    "published": "2026-09-22"
-                },
-                {
-                    "headline": "Java Developer",
-                    "employer": "Cyberway AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31513318",
-                    "published": "2026-09-23"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31677546",
+                    "published": "2026-11-03"
                 }
             ]
         },
         "SQL": {
             "Sweden": [
                 {
-                    "headline": "Senior applikationstekniker – SQL, integrationer & TechOps",
-                    "employer": "Thalamus it consulting AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31495474",
-                    "published": "2026-09-18"
-                },
-                {
-                    "headline": "Staff Scientist inom AI och Data Engineering",
-                    "employer": "Umeå Universitet",
-                    "location": "Umeå",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675656",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Junior applikationsspecialist inom Dynamics 365 Finance & Operations",
-                    "employer": "Edge of Talent AB",
+                    "headline": "Senior Data Engineer för datakatalog",
+                    "employer": "Avaron AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675139",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699963",
+                    "published": "2026-11-07"
                 },
                 {
-                    "headline": "Fullstack Developer till Nova Sounds",
-                    "employer": "Friday Väst AB",
+                    "headline": "Junior Javautvecklare till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
+                    "location": "Sundsvall",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699280",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Junior Javautvecklare till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
+                    "location": "Sundsvall",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698284",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Junior Javautvecklare till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674308",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698183",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": ".NET-utvecklare för uppdrag i Umeå",
-                    "employer": "A Hub AB",
-                    "location": "Umeå",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671677",
-                    "published": "2026-11-02"
+                    "headline": "Dataingenjör till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696405",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Uddevalla Energi söker erfaren lösningsarkitekt",
-                    "employer": "Uddevalla Energi Aktiebolag",
-                    "location": "Uddevalla",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31670815",
-                    "published": "2026-11-02"
+                    "headline": "Seniora dataanalytiker sökes!",
+                    "employer": "Chas Visual Management AB",
+                    "location": "Nacka",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695076",
+                    "published": "2026-11-06"
                 }
             ],
             "Stockholm": [
                 {
-                    "headline": "Junior applikationsspecialist inom Dynamics 365 Finance & Operations",
-                    "employer": "Edge of Talent AB",
+                    "headline": "Senior Data Engineer för datakatalog",
+                    "employer": "Avaron AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675139",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699963",
+                    "published": "2026-11-07"
                 },
                 {
-                    "headline": "Fullstack Developer till Nova Sounds",
-                    "employer": "Friday Väst AB",
+                    "headline": "Junior Javautvecklare till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674308",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698183",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Data Warehouse-utvecklare till konsultbolag i Stockholm",
-                    "employer": "InterAgent AB",
+                    "headline": "Dataingenjör till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31670686",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696405",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Python-utvecklare",
-                    "employer": "Syntronic Aktiebolag",
+                    "headline": "BI-utvecklare / Data Analyst, Stockholm",
+                    "employer": "Soros Consulting AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665923",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694788",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Nimbl söker Software Engineer i Stockholm",
-                    "employer": "TNG Group AB",
+                    "headline": "Data engineer",
+                    "employer": "Inspektionen För Vård och Omsorg",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31665066",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31688017",
+                    "published": "2026-11-05"
                 },
                 {
-                    "headline": "Data Engineer",
-                    "employer": "UTBETALNINGSMYNDIGHETEN",
+                    "headline": "IFS System Developer",
+                    "employer": "NXT Interim Stockholm AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31663197",
-                    "published": "2026-10-29"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31685248",
+                    "published": "2026-11-04"
                 }
             ],
             "Göteborg": [
+                {
+                    "headline": "Utvecklare på praktik: systemintegration och automation",
+                    "employer": "Kapita Investment Group AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31685035",
+                    "published": "2026-11-04"
+                },
+                {
+                    "headline": "Kravanalytiker ERP - Stockholm/Göteborg",
+                    "employer": "Agil arbetskraft Sverige GF AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31683432",
+                    "published": "2026-11-04"
+                },
                 {
                     "headline": "Software Engineer inom automation/logistik till KION Group",
                     "employer": "Needo Recruitment Sthlm AB",
@@ -2710,30 +2725,9 @@
                     "location": "Göteborg",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652165",
                     "published": "2026-10-27"
-                },
-                {
-                    "headline": "SiS söker systemutvecklare",
-                    "employer": "Statens Institutionsstyrelse",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31638083",
-                    "published": "2026-10-23"
-                },
-                {
-                    "headline": "Testautomatiserare",
-                    "employer": "Skatteverket",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31615520",
-                    "published": "2026-10-19"
                 }
             ],
             "Malmö": [
-                {
-                    "headline": "Senior applikationstekniker – SQL, integrationer & TechOps",
-                    "employer": "Thalamus it consulting AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31495474",
-                    "published": "2026-09-18"
-                },
                 {
                     "headline": "Delförvaltningsledare IT inom HR - Malmö",
                     "employer": "Kriminalvården",
@@ -2768,6 +2762,13 @@
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31608068",
                     "published": "2026-10-16"
+                },
+                {
+                    "headline": "Malmö: Systemutvecklare Affärssystem Hybrid",
+                    "employer": "Jobbakuten Väst AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31574628",
+                    "published": "2026-10-09"
                 }
             ]
         },
@@ -2779,6 +2780,13 @@
                     "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31629336",
                     "published": "2026-10-22"
+                },
+                {
+                    "headline": "Senior fullstackutvecklare .NET",
+                    "employer": "Quest Consulting Sverige AB",
+                    "location": "Uppsala",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31691566",
+                    "published": "2026-11-05"
                 },
                 {
                     "headline": "Erfaren .NET systemutvecklare",
@@ -2795,25 +2803,18 @@
                     "published": "2026-10-26"
                 },
                 {
-                    "headline": "Systemutvecklare .NET (vikariat)",
-                    "employer": "ARBETSMILJÖVERKET",
-                    "location": "Solna",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31623664",
-                    "published": "2026-10-21"
-                },
-                {
-                    "headline": "Fullstackutvecklare inom .NET",
-                    "employer": "Combitech Aktiebolag",
-                    "location": "Växjö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31583544",
-                    "published": "2026-10-12"
-                },
-                {
                     "headline": "C# .NET Utvecklare",
                     "employer": "Sigma Technology Software Solutions AB",
                     "location": "Lund",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31493434",
                     "published": "2026-09-18"
+                },
+                {
+                    "headline": "Senior .NET utvecklare",
+                    "employer": "Kumpan Sweden AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31468699",
+                    "published": "2026-09-11"
                 }
             ],
             "Stockholm": [
@@ -2883,11 +2884,11 @@
                     "published": "2026-10-07"
                 },
                 {
-                    "headline": "Senior .NET & Go Developer",
-                    "employer": "Explipro Group AB",
+                    "headline": "Embedded Software Integration Engineer  Automotive- .Net",
+                    "employer": "Hykmann Global Business Solutions AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31435400",
-                    "published": "2026-09-03"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681590",
+                    "published": "2026-11-03"
                 },
                 {
                     "headline": "API Developer - .NET Customer Success",
@@ -2897,21 +2898,14 @@
                     "published": "2026-11-02"
                 },
                 {
-                    "headline": "Senior mjukvaruutvecklare: Java eller embedded, med agentisk AI",
-                    "employer": "CaptureInnovation AB",
+                    "headline": "Intresseanmälan Systemutvecklare med kunskap inom Java eller .Net",
+                    "employer": "Bemannia AB (publ.)",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31672376",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31680905",
+                    "published": "2026-11-03"
                 }
             ],
             "Malmö": [
-                {
-                    "headline": "Senior fullstackutvecklare inom Java eller .NET",
-                    "employer": "Knowit Aktiebolag (publ)",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31510867",
-                    "published": "2026-09-23"
-                },
                 {
                     "headline": "Fullstack Developer | .NET + Angular",
                     "employer": "Lynqa AB",
@@ -2934,18 +2928,25 @@
                     "published": "2026-10-27"
                 },
                 {
-                    "headline": "Senior Frontendutvecklare – Vue.js / TypeScript",
-                    "employer": "Quest Consulting Sverige AB",
+                    "headline": "Software Developer",
+                    "employer": "Knightec Group Software and Cloud AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31633383",
-                    "published": "2026-10-22"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31130704",
+                    "published": "2026-06-03"
                 },
                 {
-                    "headline": "Intresseanmälan Fullstack Engineer",
-                    "employer": "ACADEMIC WORK SWEDEN AB",
+                    "headline": "Software Developer",
+                    "employer": "Knightec Group Software and Cloud AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31374594",
-                    "published": "2026-08-20"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31130652",
+                    "published": "2026-06-03"
+                },
+                {
+                    "headline": "Software Engineer",
+                    "employer": "IKEA of Sweden AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695796",
+                    "published": "2026-11-06"
                 }
             ]
         },
@@ -2959,6 +2960,20 @@
                     "published": "2026-07-07"
                 },
                 {
+                    "headline": "Frontendutvecklare – React och TypeScript",
+                    "employer": "Agile Resources AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700773",
+                    "published": "2026-11-08"
+                },
+                {
+                    "headline": "Frontendutvecklare – React & TypeScript",
+                    "employer": "Agile Resources AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31678503",
+                    "published": "2026-11-03"
+                },
+                {
                     "headline": "Systemutvecklare – C#/.NET & React",
                     "employer": "RE-CAS AB",
                     "location": "Trollhättan",
@@ -2966,32 +2981,18 @@
                     "published": "2026-09-22"
                 },
                 {
+                    "headline": "Front-end Developer  React & TypeScript",
+                    "employer": "Hykmann Global Business Solutions AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681533",
+                    "published": "2026-11-03"
+                },
+                {
                     "headline": "Senior frontendutvecklare med React i Uppsala",
                     "employer": "TIKK TAKK TIME SWEDEN AB",
                     "location": "Uppsala",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31658131",
                     "published": "2026-10-28"
-                },
-                {
-                    "headline": "React Developer for Command and Control",
-                    "employer": "SAAB Aktiebolag",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31656711",
-                    "published": "2026-10-28"
-                },
-                {
-                    "headline": "Senior Frontend Developer - React & TypeScript",
-                    "employer": "Qlose Recruitment & Consulting AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31638602",
-                    "published": "2026-10-23"
-                },
-                {
-                    "headline": "React / Redux - Webbutvecklare till TaxiCaller i Linköping",
-                    "employer": "TaxiCaller Nordic AB",
-                    "location": "Linköping",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31591518",
-                    "published": "2026-10-18"
                 }
             ],
             "Stockholm": [
@@ -3003,39 +3004,39 @@
                     "published": "2026-10-20"
                 },
                 {
-                    "headline": "Fullstack Developer till Nova Sounds",
-                    "employer": "Friday Väst AB",
+                    "headline": "Senior Javautvecklare till Digitaliseringsmyndigheten",
+                    "employer": "Post- och Telestyrelsen",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674308",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697948",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Fullstackutvecklare till Hallon",
-                    "employer": "HI3G Access AB",
+                    "headline": "Fullstackutvecklare",
+                    "employer": "Deploja AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31673457",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697074",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Senior Full-stack Developer till Baemingo",
-                    "employer": "Nordicrule AB",
+                    "headline": "Fullstackutvecklare",
+                    "employer": "Deploja AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31671550",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697041",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "IT konsult",
-                    "employer": "Sogeti Sverige AB",
+                    "headline": "Fullstackutvecklare med frontendfokus",
+                    "employer": "Knightec Group Hardware and Design AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31167425",
-                    "published": "2026-11-01"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694307",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Senior systemutvecklare .NET/Lösningsdesigner",
-                    "employer": "NXT Interim Stockholm AB",
+                    "headline": "Fullstackutvecklare (2 konsulter), Sundsvall eller Stockholm",
+                    "employer": "Soros Consulting AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31666357",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31689726",
+                    "published": "2026-11-05"
                 }
             ],
             "Göteborg": [
@@ -3047,11 +3048,32 @@
                     "published": "2026-07-07"
                 },
                 {
-                    "headline": "React Developer for Command and Control",
-                    "employer": "SAAB Aktiebolag",
+                    "headline": "Frontendutvecklare – React och TypeScript",
+                    "employer": "Agile Resources AB",
                     "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31656711",
-                    "published": "2026-10-28"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700773",
+                    "published": "2026-11-08"
+                },
+                {
+                    "headline": "Frontendutvecklare – React & TypeScript",
+                    "employer": "Agile Resources AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31678503",
+                    "published": "2026-11-03"
+                },
+                {
+                    "headline": "Front-end Developer  React & TypeScript",
+                    "employer": "Hykmann Global Business Solutions AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681533",
+                    "published": "2026-11-03"
+                },
+                {
+                    "headline": "Professional Front-End Developer  React & TypeScript - 20593",
+                    "employer": "Veritaz AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31679745",
+                    "published": "2026-11-03"
                 },
                 {
                     "headline": "Fullstack Developer with a focus on React (and some C#/.NET)",
@@ -3059,37 +3081,9 @@
                     "location": "Göteborg",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31548993",
                     "published": "2026-10-02"
-                },
-                {
-                    "headline": "Fullstackutvecklare",
-                    "employer": "Agile Resources AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652540",
-                    "published": "2026-10-27"
-                },
-                {
-                    "headline": "Senior Systemutvecklare till Ictech i Göteborg",
-                    "employer": "Ictech Göteborg AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652165",
-                    "published": "2026-10-27"
-                },
-                {
-                    "headline": "SiS söker systemutvecklare",
-                    "employer": "Statens Institutionsstyrelse",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31638083",
-                    "published": "2026-10-23"
                 }
             ],
             "Malmö": [
-                {
-                    "headline": "Senior Frontend Developer - React & TypeScript",
-                    "employer": "Qlose Recruitment & Consulting AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31638602",
-                    "published": "2026-10-23"
-                },
                 {
                     "headline": "Senior Fullstack Developer / Product Engineer till FINQR",
                     "employer": "Qlose Recruitment & Consulting AB",
@@ -3105,75 +3099,110 @@
                     "published": "2026-10-23"
                 },
                 {
-                    "headline": "Senior Frontendutvecklare – Vue.js / TypeScript",
-                    "employer": "Quest Consulting Sverige AB",
+                    "headline": "Software Developer",
+                    "employer": "Knightec Group Software and Cloud AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31633383",
-                    "published": "2026-10-22"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31130704",
+                    "published": "2026-06-03"
                 },
                 {
-                    "headline": "Senior fullstackutvecklare inom Java eller .NET",
-                    "employer": "Knowit Aktiebolag (publ)",
+                    "headline": "Software Developer",
+                    "employer": "Knightec Group Software and Cloud AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31510867",
-                    "published": "2026-09-23"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31130652",
+                    "published": "2026-06-03"
                 },
                 {
-                    "headline": "Intresseanmälan Fullstack Engineer",
-                    "employer": "ACADEMIC WORK SWEDEN AB",
+                    "headline": "Full Stack Developer (TypeScript/React)",
+                    "employer": "Conrec Infinity AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31374594",
-                    "published": "2026-08-20"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700619",
+                    "published": "2026-11-08"
+                },
+                {
+                    "headline": "Software Engineer",
+                    "employer": "IKEA of Sweden AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695796",
+                    "published": "2026-11-06"
                 }
             ]
         },
         "Microsoft 365": {
             "Sweden": [
                 {
-                    "headline": "IT-supporttekniker med driv, servicekänsla och intresse för teknik",
-                    "employer": "IT-bemanning Sverige AB",
+                    "headline": "IT-tekniker",
+                    "employer": "Releasy Customer Management AB",
+                    "location": "Linköping",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699199",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "IT-Tekniker till Dialect i Avesta",
+                    "employer": "Louwin AB",
+                    "location": "Avesta",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698951",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Global IT- supporttekniker",
+                    "employer": "Personal Roslagen AB",
+                    "location": "Norrtälje",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698582",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "IT-tekniker till Svenska kyrkan Västerås",
+                    "employer": "Västerås Pastorat",
+                    "location": "Västerås",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698491",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "IT Support Specialist till mediebolag i Stockholm",
+                    "employer": "Adecco Sweden Aktiebolag",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675470",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697187",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Vi söker en C# .NET-utvecklare med AI-fokus!",
-                    "employer": "Academic Work Sweden AB",
+                    "headline": "Avonova Hälsa söker IT Operations and Workplace Specialist",
+                    "employer": "Avonova Hälsa AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675441",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "GDM söker supporttekniker",
-                    "employer": "GDM Konsult AB",
-                    "location": "Östersund",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675342",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Supporttekniker inom IT till framtida möjligheter i Sundsvall",
-                    "employer": "Bravura Sverige AB",
-                    "location": "Sundsvall",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675156",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Nätverkstekniker LAN & WiFi",
-                    "employer": "Eccera Professionals AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674719",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Teknisk specialist M365 & digital samverkan ",
-                    "employer": "REGION KRONOBERG",
-                    "location": "Växjö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674670",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696396",
+                    "published": "2026-11-06"
                 }
             ],
             "Stockholm": [
                 {
+                    "headline": "IT Support Specialist till mediebolag i Stockholm",
+                    "employer": "Adecco Sweden Aktiebolag",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697187",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Avonova Hälsa söker IT Operations and Workplace Specialist",
+                    "employer": "Avonova Hälsa AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696396",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Systemförvaltare med projektledande ansvar till Feelgood",
+                    "employer": "Bravura Sverige AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31689555",
+                    "published": "2026-11-05"
+                },
+                {
+                    "headline": "Domänarkitekt med huvudinriktning IT-arbetsplats och infrastruktur",
+                    "employer": "Sveriges Riksbank",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31678333",
+                    "published": "2026-11-03"
+                },
+                {
                     "headline": "IT-supporttekniker med driv, servicekänsla och intresse för teknik",
                     "employer": "IT-bemanning Sverige AB",
                     "location": "Stockholm",
@@ -3186,37 +3215,30 @@
                     "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675441",
                     "published": "2026-11-02"
-                },
-                {
-                    "headline": "Nätverkstekniker LAN & WiFi",
-                    "employer": "Eccera Professionals AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674719",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Support & Digital Workplace Manager to the Stockholm School of Economics",
-                    "employer": "Handelshögskolan i Stockholm",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31674310",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "1st Line Support",
-                    "employer": "Camai Consulting AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31670990",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Senior projektledare/uppdragsledare",
-                    "employer": "Quest Consulting Sverige AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31666511",
-                    "published": "2026-10-30"
                 }
             ],
             "Göteborg": [
+                {
+                    "headline": "Productivity Support Officer R&D/ Laboratory Services",
+                    "employer": "Nouryon AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695328",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Intresseanmälan Informationssäkerhet, IT-säkerhet,  Säkerhetsskyddkonsulter",
+                    "employer": "Bemannia AB (publ.)",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694677",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Intresseanmälan It-konsulter inom tekniskt stöd och servicedesk",
+                    "employer": "Bemannia AB (publ.)",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694423",
+                    "published": "2026-11-06"
+                },
                 {
                     "headline": "Junior Supporttekniker,1st line IT Support",
                     "employer": "Akkodis Sweden AB",
@@ -3232,35 +3254,28 @@
                     "published": "2026-10-30"
                 },
                 {
-                    "headline": "SharePoint-konsult",
-                    "employer": "B3 Consulting Group AB (publ)",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31659785",
-                    "published": "2026-10-29"
-                },
-                {
                     "headline": "IAM-konsult",
                     "employer": "B3 Consulting Group AB (publ)",
-                    "location": "Göteborg",
+                    "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31659732",
                     "published": "2026-10-29"
-                },
-                {
-                    "headline": "Systemtekniker vikariat",
-                    "employer": "GÖTEBORGS KOMMUN",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31659048",
-                    "published": "2026-10-29"
-                },
-                {
-                    "headline": "IT Support Specialist  Manufacturing IT",
-                    "employer": "Hykmann Global Business Solutions AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652732",
-                    "published": "2026-10-27"
                 }
             ],
             "Malmö": [
+                {
+                    "headline": "IT-tekniker till SLU i Alnarp – bli en del av en viktig supportfunktion",
+                    "employer": "Poolia AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694960",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Onsite IT-tekniker till Malmö!",
+                    "employer": "Academic Work Sweden AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31677914",
+                    "published": "2026-11-03"
+                },
                 {
                     "headline": "First Line Support till Malmö!",
                     "employer": "Camai Consulting AB",
@@ -3288,113 +3303,120 @@
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31582105",
                     "published": "2026-10-12"
-                },
-                {
-                    "headline": "Microsoft Cloud & Identity Consultant",
-                    "employer": "Iver Accelerate AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31579609",
-                    "published": "2026-10-09"
-                },
-                {
-                    "headline": "Senior Modern Workplace-konsult till Upheads",
-                    "employer": "Bravura Sverige AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31499030",
-                    "published": "2026-09-21"
                 }
             ]
         },
         "Active Directory": {
             "Sweden": [
                 {
-                    "headline": "IT-supporttekniker med driv, servicekänsla och intresse för teknik",
-                    "employer": "IT-bemanning Sverige AB",
+                    "headline": "Linuxspecialist, fokus säkra informationssystem",
+                    "employer": "Länsstyrelsen i Västra Götalands län",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699514",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "IT-tekniker",
+                    "employer": "Releasy Customer Management AB",
+                    "location": "Linköping",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699199",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "IT-Tekniker till Dialect i Avesta",
+                    "employer": "Louwin AB",
+                    "location": "Avesta",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698951",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Systemintegratör",
+                    "employer": "AFRY AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675470",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698862",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "GDM söker supporttekniker",
-                    "employer": "GDM Konsult AB",
-                    "location": "Östersund",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675342",
-                    "published": "2026-11-02"
+                    "headline": "Global IT- supporttekniker",
+                    "employer": "Personal Roslagen AB",
+                    "location": "Norrtälje",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698582",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Supporttekniker inom IT till framtida möjligheter i Sundsvall",
-                    "employer": "Bravura Sverige AB",
-                    "location": "Sundsvall",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675156",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "DevSecOps Engineer",
-                    "employer": "Multiply Teknik & IT AB",
-                    "location": "Huddinge",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675143",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "IT-supporttekniker",
-                    "employer": "Wise Group AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31672330",
-                    "published": "2026-11-02"
-                },
-                {
-                    "headline": "Uddevalla Energi söker erfaren lösningsarkitekt",
-                    "employer": "Uddevalla Energi Aktiebolag",
-                    "location": "Uddevalla",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31670815",
-                    "published": "2026-11-02"
+                    "headline": "IT-tekniker till Svenska kyrkan Västerås",
+                    "employer": "Västerås Pastorat",
+                    "location": "Västerås",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698491",
+                    "published": "2026-11-06"
                 }
             ],
             "Stockholm": [
                 {
-                    "headline": "IT-supporttekniker med driv, servicekänsla och intresse för teknik",
-                    "employer": "IT-bemanning Sverige AB",
+                    "headline": "Systemintegratör",
+                    "employer": "AFRY AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31675470",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698862",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "IT-supporttekniker",
-                    "employer": "Wise Group AB",
+                    "headline": "IT Support Specialist till mediebolag i Stockholm",
+                    "employer": "Adecco Sweden Aktiebolag",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31672330",
-                    "published": "2026-11-02"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697187",
+                    "published": "2026-11-06"
                 },
                 {
-                    "headline": "Lead Microsoft Identity and Access Management Infrastructure Engineer",
-                    "employer": "Swedbank AB",
+                    "headline": "IT Support, part-time to a company within circular grocery",
+                    "employer": "Academic Work Sweden AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31664278",
-                    "published": "2026-10-30"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31690383",
+                    "published": "2026-11-05"
                 },
                 {
-                    "headline": "Finsk- och svensktalande IT-supporttekniker",
-                    "employer": "Humanit Stockholm AB",
+                    "headline": "Azure Cloud Engineer",
+                    "employer": "Iver Accelerate AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31663585",
-                    "published": "2026-10-29"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31680699",
+                    "published": "2026-11-03"
                 },
                 {
-                    "headline": "Säkerhetskonsult M365",
-                    "employer": "B3 Consulting Group AB (publ)",
+                    "headline": "IAM-arkitekt till Axfood IT i Stockholm",
+                    "employer": "TNG Group AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31659754",
-                    "published": "2026-10-29"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31679250",
+                    "published": "2026-11-03"
                 },
                 {
-                    "headline": "Social IT-konsult till onsite-uppdrag",
-                    "employer": "Eccera Professionals AB",
+                    "headline": "System Administratör - Windows",
+                    "employer": "Techrytera AB",
                     "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31659004",
-                    "published": "2026-10-29"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31678781",
+                    "published": "2026-11-03"
                 }
             ],
             "Göteborg": [
+                {
+                    "headline": "Linuxspecialist, fokus säkra informationssystem",
+                    "employer": "Länsstyrelsen i Västra Götalands län",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699514",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Productivity Support Officer R&D/ Laboratory Services",
+                    "employer": "Nouryon AB",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695328",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Intresseanmälan Systemutvecklare med kunskap inom Java eller .Net",
+                    "employer": "Bemannia AB (publ.)",
+                    "location": "Göteborg",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31680905",
+                    "published": "2026-11-03"
+                },
                 {
                     "headline": "Junior Supporttekniker,1st line IT Support",
                     "employer": "Akkodis Sweden AB",
@@ -3405,7 +3427,7 @@
                 {
                     "headline": "IAM-konsult",
                     "employer": "B3 Consulting Group AB (publ)",
-                    "location": "Göteborg",
+                    "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31659732",
                     "published": "2026-10-29"
                 },
@@ -3415,30 +3437,37 @@
                     "location": "Göteborg",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652732",
                     "published": "2026-10-27"
-                },
-                {
-                    "headline": "IT-supportchef till OneMed Sverige",
-                    "employer": "Academic Work Sweden AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31652360",
-                    "published": "2026-10-27"
-                },
-                {
-                    "headline": "Systemadministratör Windows till uppdrag inom försvarsindustrin",
-                    "employer": "SysPartner Consulting AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31646384",
-                    "published": "2026-10-26"
-                },
-                {
-                    "headline": "Technical Operations & Cloud Platform Engineer till NTT Security i Göteborg",
-                    "employer": "Maxitech AB",
-                    "location": "Göteborg",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31642809",
-                    "published": "2026-10-26"
                 }
             ],
             "Malmö": [
+                {
+                    "headline": "Linuxutvecklare",
+                    "employer": "NXT Interim Malmö AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698026",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "1st line supporttekniker till kund i Malmö!",
+                    "employer": "Poolia AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696160",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "IT-tekniker till SLU i Alnarp – bli en del av en viktig supportfunktion",
+                    "employer": "Poolia AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694960",
+                    "published": "2026-11-06"
+                },
+                {
+                    "headline": "Onsite IT-tekniker till Malmö!",
+                    "employer": "Academic Work Sweden AB",
+                    "location": "Malmö",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31677914",
+                    "published": "2026-11-03"
+                },
                 {
                     "headline": "Systemadministratör Windows till uppdrag inom försvarsindustrin i Malmö",
                     "employer": "SysPartner Consulting AB",
@@ -3452,34 +3481,6 @@
                     "location": "Malmö",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31635435",
                     "published": "2026-10-23"
-                },
-                {
-                    "headline": "IT-supporttekniker till Victoriahem i Malmö",
-                    "employer": "Victoriahem AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31633413",
-                    "published": "2026-10-22"
-                },
-                {
-                    "headline": "IT-tekniker Active Directory och PKI",
-                    "employer": "Kriminalvården",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31617804",
-                    "published": "2026-10-20"
-                },
-                {
-                    "headline": "Microsoft Cloud & Identity Consultant",
-                    "employer": "Iver Accelerate AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31579609",
-                    "published": "2026-10-09"
-                },
-                {
-                    "headline": "Systemutvecklare med passion för AI till Prima Vård!",
-                    "employer": "Academic Work Sweden AB",
-                    "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31505930",
-                    "published": "2026-09-22"
                 }
             ]
         }

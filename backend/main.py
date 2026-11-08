@@ -8,7 +8,8 @@ from datetime import datetime, timezone
 import requests
 
 from skill_network import build_skill_network
-from job_titles import build_title_stats
+from job_titles import build_title_stats, classify_title, FAMILY_NAMES, TITLE_FAMILIES
+from ad_skills import build_ad_skills, regex_source
 
 # Base endpoint for the official JobTech Dev / Arbetsförmedlingen search engine
 API_URL = "https://jobsearch.api.jobtechdev.se/search"
@@ -305,6 +306,30 @@ def fetch_skill_demand():
         [(ad.get("headline"), skills) for ad, skills in zip(all_it_ads, ad_skill_sets)], ALL_SKILLS
     )
     job_titles["last_updated"] = results["last_updated"]
+    # Per-ad skill flags for the in-browser CV check (no ad text, see ad_skills.py).
+    ad_skills = build_ad_skills(
+        [
+            {
+                "skills": skills,
+                "headline": ad.get("headline"),
+                "municipality_id": (ad.get("workplace_address") or {}).get("municipality_concept_id"),
+                "experience_required": ad.get("experience_required"),
+                "id": ad.get("id"),
+                "url": ad.get("webpage_url"),
+                "employer": (ad.get("employer") or {}).get("name"),
+                "place": (ad.get("workplace_address") or {}).get("municipality")
+                    or (ad.get("workplace_address") or {}).get("region"),
+                "published": ad.get("publication_date"),
+            }
+            for ad, skills in zip(all_it_ads, ad_skill_sets)
+        ],
+        ALL_SKILLS, FAMILY_NAMES, classify_title, LOCATIONS,
+    )
+    ad_skills["last_updated"] = results["last_updated"]
+    ad_skills["skill_patterns"] = skill_patterns_for_browser()
+    ad_skills["title_patterns"] = [
+        {"title": name, **regex_source(pattern, re.IGNORECASE)} for name, pattern, _ in TITLE_FAMILIES
+    ]
 
     # Persist the dynamic calculations to the data layer directory
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -316,6 +341,7 @@ def fetch_skill_demand():
     co_occurrence_path = os.path.join(data_dir, "co_occurrence.json")
     network_path = os.path.join(data_dir, "skill_network.json")
     job_titles_path = os.path.join(data_dir, "job_titles.json")
+    ad_skills_path = os.path.join(data_dir, "ad_skills.json")
 
     try:
         with open(trends_path, "w", encoding="utf-8") as f:
@@ -338,6 +364,7 @@ def fetch_skill_demand():
             json.dump(network, f, indent=4, ensure_ascii=False)
         with open(job_titles_path, "w", encoding="utf-8") as f:
             json.dump(job_titles, f, indent=4, ensure_ascii=False)
+        write_ad_skills(ad_skills_path, ad_skills)
         # Seed the CSV archive from history.json the first time, before history.json
         # gets today's snapshot (and before it can drop old ones past its cap).
         if not os.path.exists(history_csv_path):
@@ -347,6 +374,34 @@ def fetch_skill_demand():
         print(f"\n🎉 Successfully compiled metrics files saved to: {data_dir}")
     except FileNotFoundError:
         print("❌ Error: Directory 'backend/data/' does not exist. Run setup structure command first.")
+
+
+def skill_patterns_for_browser():
+    """SKILL_PATTERNS (plus the whole-word default and the context rules) as
+    JavaScript regexes, so the CV check finds skills the same way as this script."""
+    patterns = {}
+    for skill, matcher in SKILL_MATCHERS.items():
+        entry = regex_source(matcher.pattern.pattern, matcher.pattern.flags)
+        if matcher.context is not None:
+            entry["context"] = regex_source(matcher.context.pattern, matcher.context.flags)
+        patterns[skill] = entry
+    return patterns
+
+
+def write_ad_skills(path, ad_skills):
+    """Like json.dump with indent, but one ad per line: 2,500 short rows would
+    otherwise take 7 lines each."""
+    row_keys = ["ads", "listings"]
+    head = {key: value for key, value in ad_skills.items() if key not in row_keys}
+    text = json.dumps(head, indent=4, ensure_ascii=False)[:-2]
+    for key in row_keys:
+        rows = ad_skills.get(key, [])
+        body = ",\n".join(
+            "        " + json.dumps(row, separators=(",", ":"), ensure_ascii=False) for row in rows
+        )
+        text += f',\n    "{key}": [\n' + body + ("\n" if rows else "") + "    ]"
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(text + "\n}\n")
 
 
 def fetch_all_it_ads():

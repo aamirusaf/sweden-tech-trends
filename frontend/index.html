@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill Matrix · Sweden tech jobs</title>
+    <title>Skill Matrix · Is your CV ready for Sweden's tech jobs?</title>
     <meta name="description" content="Which tech skills Sweden's job ads ask for, how demand has changed since 2008, and what to learn next.">
     <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
@@ -23,6 +23,7 @@
                 <span>Skill Matrix</span>
             </a>
             <nav class="topnav" aria-label="Sections">
+                <a href="#cv">Your CV</a>
                 <a href="#live">Live demand</a>
                 <a href="#connections">Connections</a>
                 <a href="#titles">Job titles</a>
@@ -39,8 +40,12 @@
     <main id="top" class="page">
         <section class="hero">
             <p class="eyebrow">Sweden tech job market</p>
-            <h1>Which tech skills Sweden is hiring for</h1>
-            <p class="lede">What Data/IT job ads in Sweden ask for today, how that has changed since 2008, and which skills to learn next. Built on Arbetsförmedlingen's live and historical job ads, refreshed every week.</p>
+            <h1>Sweden is hiring in tech. Are your skills on the list?</h1>
+            <p class="lede">Add your CV and see how many of Sweden's live Data/IT job ads you fit, which job titles suit you, and the one skill that would open the most new doors. Then explore what employers ask for and how it has changed since 2008. Built on Arbetsförmedlingen's job ads, refreshed every week.</p>
+            <div class="hero-actions">
+                <a class="hero-cta" href="#cv">Check your CV</a>
+                <span class="hero-cta-note">Free, and your CV never leaves your browser</span>
+            </div>
             <dl id="kpis" class="kpis" aria-live="polite">
                 <div class="kpi"><dt>Live Data/IT ads</dt><dd>–</dd></div>
                 <div class="kpi"><dt>Most requested</dt><dd>–</dd></div>
@@ -57,9 +62,56 @@
             </div>
         </div>
 
-        <section id="live" class="section">
+        <section id="cv" class="section cv-section">
             <div class="section-head">
                 <p class="section-kicker">01</p>
+                <div>
+                    <h2>How well does your CV fit?</h2>
+                    <p class="section-desc">Add your CV to see how many live Data/IT job ads in Sweden it fits, which job titles suit it best, and which skill would open the most new ads. An ad counts as a match when your CV has every tracked skill the ad asks for, or all but one, the same rule as the skill tree. Follows the location filter.</p>
+                </div>
+            </div>
+            <div class="cv-grid">
+                <article class="card cv-input-card">
+                    <header class="card-head">
+                        <h3>Your CV</h3>
+                        <p class="card-sub cv-privacy"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Read in this browser only. Your CV is never uploaded or saved.</p>
+                    </header>
+                    <label id="cvDrop" class="cv-drop">
+                        <input id="cvFile" type="file" accept=".pdf,.docx,.txt,.md,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 18v-6M9.5 14.5 12 12l2.5 2.5"/></svg>
+                        <span class="cv-drop-title">Drop your CV here or <u>choose a file</u></span>
+                        <span class="cv-drop-sub">PDF, Word (.docx) or text</span>
+                    </label>
+                    <div class="cv-alt">
+                        <button id="cvPasteToggle" type="button" class="link-button">Paste text instead</button>
+                        <span aria-hidden="true">·</span>
+                        <button id="cvSample" type="button" class="link-button">Try a sample CV</button>
+                    </div>
+                    <div id="cvPaste" class="cv-paste" hidden>
+                        <label for="cvText" class="visually-hidden">CV text</label>
+                        <textarea id="cvText" rows="8" placeholder="Paste the text of your CV"></textarea>
+                        <button id="cvTextGo" type="button" class="location-pill location-pill-active">Check this text</button>
+                    </div>
+                    <p id="cvStatus" class="cv-status" role="status" aria-live="polite"></p>
+                    <div id="cvFound" class="cv-found" hidden></div>
+                </article>
+
+                <article class="card cv-result-card">
+                    <div id="cvResults" class="cv-results">
+                        <div class="cv-empty">
+                            <p class="cv-empty-score">–</p>
+                            <p>Your match with live Data/IT ads shows here once you add a CV.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cvJobs" class="card cv-jobs-card" hidden aria-live="polite"></article>
+            </div>
+        </section>
+
+        <section id="live" class="section">
+            <div class="section-head">
+                <p class="section-kicker">02</p>
                 <div>
                     <h2>Live demand</h2>
                     <p class="section-desc">Share of live Data/IT job ads that mention each skill. Click a bar to see openings for it.</p>
@@ -95,7 +147,7 @@
 
         <section id="connections" class="section network-section">
             <div class="section-head">
-                <p class="section-kicker">02</p>
+                <p class="section-kicker">03</p>
                 <div>
                     <h2>How the skills connect</h2>
                     <p class="section-desc">Pick a skill to light up the ones to learn with it. Together the numbered skills make you a match for most of the live Data/IT ads that mention it: you have every tracked skill the ad asks for, or all but one. Lines show how often the skill appears alongside each other one. Covers all of Sweden.</p>
@@ -111,7 +163,7 @@
 
         <section id="titles" class="section titles-section">
             <div class="section-head">
-                <p class="section-kicker">03</p>
+                <p class="section-kicker">04</p>
                 <div>
                     <h2>Job Titles</h2>
                     <p class="section-desc">What employers call the job in the title of their Data/IT ads, grouped into families such as Data Engineer or DevOps &amp; Platform. Pick a title to see the skills its ads ask for; they light up in the skill tree too. The change and the small trend lines come from ads published each year since 2008. Covers all of Sweden.</p>
@@ -137,7 +189,7 @@
 
         <section id="history" class="section history-section">
             <div class="section-head">
-                <p class="section-kicker">04</p>
+                <p class="section-kicker">05</p>
                 <div>
                     <h2>Demand over time, 2008–2026</h2>
                     <p class="section-desc">Share of Data/IT job ads published each year that mention the skill, from Arbetsförmedlingen's Historical Ads. Follows the location filter. Starts in 2008, because older ads mostly have no job category. 2026 covers January–October.</p>
@@ -159,7 +211,7 @@
 
         <section id="plan" class="section">
             <div class="section-head">
-                <p class="section-kicker">05</p>
+                <p class="section-kicker">06</p>
                 <div>
                     <h2>Your learning plan</h2>
                     <p class="section-desc">Tick the skills you already have. The rest are ranked by how many live Data/IT ads ask for them, with courses to close the gap.</p>
@@ -198,6 +250,7 @@
     <script src="app.js"></script>
     <script src="skill-network.js"></script>
     <script src="job-titles.js"></script>
+    <script src="cv-check.js"></script>
 
 </body>
 </html>

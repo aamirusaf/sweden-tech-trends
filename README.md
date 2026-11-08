@@ -52,6 +52,18 @@ from this repository on every push to `main`:
 - `_redirects` sends the site root `/` to `/frontend/`.
 - In the Cloudflare dashboard the deploy command should be the default
   `npx wrangler deploy` with no extra flags, so it uses `wrangler.jsonc`.
+- Pull requests get a preview build: the preview (non-production branch)
+  command is `npx wrangler versions upload`, and the Cloudflare bot comments
+  the preview link on the PR.
+
+## Check your CV
+
+The "Check your CV" section reads a CV (PDF, .docx or text) in the visitor's
+browser only; nothing is uploaded. It matches the CV's skills against
+`backend/data/ad_skills.json`, which the weekly job writes: one row of skill
+flags per live Data/IT ad, plus its headline, employer, place, date and
+Platsbanken link so the matching jobs can be listed. Ad descriptions are not
+stored (see `backend/ad_skills.py`).
 
 The data is refreshed by the **Update job market data** GitHub Action
 (`.github/workflows/update-data.yml`). It runs every Monday at 05:00 UTC (and can
