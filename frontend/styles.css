@@ -280,7 +280,7 @@ a {
 }
 
 h1 {
-    max-width: 18ch;
+    max-width: 22ch;
     margin: 0 0 1rem;
     font-size: var(--fs-display);
     font-weight: 700;
@@ -294,6 +294,37 @@ h1 {
     font-size: var(--fs-lg);
     line-height: 1.6;
     color: var(--text-secondary);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+    margin-top: 1.5rem;
+}
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    color: var(--accent-ink);
+    background-color: var(--accent);
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.15s ease;
+}
+
+.hero-cta::after { content: "↓"; }
+.hero-cta:hover { transform: translateY(-1px); }
+.hero-cta:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+
+.hero-cta-note {
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
 }
 
 .kpis {
