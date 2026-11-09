@@ -1,20 +1,20 @@
 {
-    "last_updated": "2026-11-09 13:31:57 UTC",
+    "last_updated": "2026-11-09 21:31:00 UTC",
     "co_occurrence": {
         "Python": [
             {
                 "name": "Git",
-                "count": 166,
+                "count": 169,
                 "percent": 32
             },
             {
                 "name": "Linux",
-                "count": 151,
+                "count": 153,
                 "percent": 29
             },
             {
                 "name": "Azure",
-                "count": 144,
+                "count": 147,
                 "percent": 28
             },
             {
@@ -24,7 +24,7 @@
             },
             {
                 "name": "AWS",
-                "count": 120,
+                "count": 122,
                 "percent": 23
             }
         ],
@@ -32,16 +32,16 @@
             {
                 "name": "Kubernetes",
                 "count": 101,
-                "percent": 36
+                "percent": 35
             },
             {
                 "name": "Python",
-                "count": 85,
+                "count": 86,
                 "percent": 30
             },
             {
                 "name": "Git",
-                "count": 78,
+                "count": 80,
                 "percent": 28
             },
             {
@@ -51,47 +51,47 @@
             },
             {
                 "name": "SQL",
-                "count": 69,
-                "percent": 24
+                "count": 70,
+                "percent": 25
             }
         ],
         "C#": [
             {
                 "name": ".NET",
-                "count": 147,
+                "count": 150,
                 "percent": 64
             },
             {
                 "name": "Azure",
-                "count": 119,
+                "count": 122,
                 "percent": 52
             },
             {
                 "name": "SQL",
-                "count": 89,
-                "percent": 39
+                "count": 93,
+                "percent": 40
             },
             {
                 "name": "Python",
-                "count": 78,
+                "count": 79,
                 "percent": 34
             },
             {
                 "name": "Git",
-                "count": 64,
+                "count": 66,
                 "percent": 28
             }
         ],
         "C++": [
             {
                 "name": "C",
-                "count": 126,
+                "count": 127,
                 "percent": 55
             },
             {
                 "name": "Python",
-                "count": 99,
-                "percent": 43
+                "count": 102,
+                "percent": 44
             },
             {
                 "name": "Linux",
@@ -100,35 +100,35 @@
             },
             {
                 "name": "Git",
-                "count": 56,
+                "count": 57,
                 "percent": 24
             },
             {
                 "name": "Java",
-                "count": 46,
+                "count": 47,
                 "percent": 20
             }
         ],
         "C": [
             {
                 "name": "C++",
-                "count": 126,
+                "count": 127,
                 "percent": 87
             },
             {
                 "name": "Python",
-                "count": 72,
+                "count": 73,
                 "percent": 50
             },
             {
                 "name": "Linux",
-                "count": 66,
+                "count": 67,
                 "percent": 46
             },
             {
                 "name": "Git",
-                "count": 32,
-                "percent": 22
+                "count": 33,
+                "percent": 23
             },
             {
                 "name": "Java",
@@ -166,8 +166,13 @@
         "TypeScript": [
             {
                 "name": "React",
-                "count": 115,
+                "count": 117,
                 "percent": 60
+            },
+            {
+                "name": "Git",
+                "count": 70,
+                "percent": 36
             },
             {
                 "name": "JavaScript",
@@ -175,18 +180,13 @@
                 "percent": 36
             },
             {
-                "name": "Git",
-                "count": 69,
-                "percent": 36
+                "name": "Azure",
+                "count": 65,
+                "percent": 33
             },
             {
                 "name": "Python",
                 "count": 64,
-                "percent": 33
-            },
-            {
-                "name": "AWS",
-                "count": 63,
                 "percent": 33
             }
         ],
@@ -194,17 +194,17 @@
             {
                 "name": "AWS",
                 "count": 160,
-                "percent": 34
+                "percent": 33
             },
             {
                 "name": "Git",
-                "count": 152,
+                "count": 153,
                 "percent": 32
             },
             {
                 "name": "Python",
-                "count": 144,
-                "percent": 30
+                "count": 147,
+                "percent": 31
             },
             {
                 "name": "Kubernetes",
@@ -212,9 +212,9 @@
                 "percent": 28
             },
             {
-                "name": "C#",
-                "count": 119,
-                "percent": 25
+                "name": "SQL",
+                "count": 123,
+                "percent": 26
             }
         ],
         "AWS": [
@@ -225,56 +225,56 @@
             },
             {
                 "name": "Python",
-                "count": 120,
+                "count": 122,
                 "percent": 46
             },
             {
                 "name": "Kubernetes",
-                "count": 117,
-                "percent": 45
+                "count": 116,
+                "percent": 44
             },
             {
                 "name": "Docker",
-                "count": 103,
+                "count": 102,
                 "percent": 39
             },
             {
                 "name": "GCP",
-                "count": 101,
+                "count": 102,
                 "percent": 39
             }
         ],
         "GCP": [
             {
                 "name": "AWS",
-                "count": 101,
-                "percent": 66
+                "count": 102,
+                "percent": 65
             },
             {
                 "name": "Azure",
-                "count": 97,
-                "percent": 63
+                "count": 98,
+                "percent": 62
             },
             {
                 "name": "Kubernetes",
                 "count": 80,
-                "percent": 52
+                "percent": 51
             },
             {
                 "name": "Python",
-                "count": 72,
+                "count": 74,
                 "percent": 47
             },
             {
                 "name": "Docker",
                 "count": 63,
-                "percent": 41
+                "percent": 40
             }
         ],
         "Kubernetes": [
             {
                 "name": "Docker",
-                "count": 164,
+                "count": 165,
                 "percent": 51
             },
             {
@@ -283,25 +283,25 @@
                 "percent": 42
             },
             {
-                "name": "Git",
-                "count": 131,
-                "percent": 41
-            },
-            {
                 "name": "Python",
                 "count": 131,
                 "percent": 41
             },
             {
+                "name": "Git",
+                "count": 130,
+                "percent": 40
+            },
+            {
                 "name": "AWS",
-                "count": 117,
+                "count": 116,
                 "percent": 36
             }
         ],
         "Docker": [
             {
                 "name": "Kubernetes",
-                "count": 164,
+                "count": 165,
                 "percent": 70
             },
             {
@@ -311,56 +311,56 @@
             },
             {
                 "name": "Python",
-                "count": 113,
+                "count": 114,
                 "percent": 48
             },
             {
                 "name": "Azure",
                 "count": 107,
-                "percent": 46
+                "percent": 45
             },
             {
                 "name": "AWS",
-                "count": 103,
-                "percent": 44
+                "count": 102,
+                "percent": 43
             }
         ],
         "Terraform": [
             {
                 "name": "Kubernetes",
                 "count": 93,
-                "percent": 65
+                "percent": 63
             },
             {
                 "name": "Git",
                 "count": 84,
-                "percent": 58
-            },
-            {
-                "name": "Python",
-                "count": 82,
                 "percent": 57
             },
             {
+                "name": "Python",
+                "count": 83,
+                "percent": 56
+            },
+            {
                 "name": "AWS",
-                "count": 68,
+                "count": 69,
                 "percent": 47
             },
             {
                 "name": "Azure",
                 "count": 68,
-                "percent": 47
+                "percent": 46
             }
         ],
         "Linux": [
             {
                 "name": "Python",
-                "count": 151,
-                "percent": 41
+                "count": 153,
+                "percent": 42
             },
             {
                 "name": "Git",
-                "count": 112,
+                "count": 113,
                 "percent": 31
             },
             {
@@ -375,116 +375,116 @@
             },
             {
                 "name": "Docker",
-                "count": 83,
+                "count": 84,
                 "percent": 23
             }
         ],
         "Git": [
             {
                 "name": "Python",
-                "count": 166,
+                "count": 169,
                 "percent": 45
             },
             {
                 "name": "Azure",
-                "count": 152,
+                "count": 153,
                 "percent": 41
             },
             {
                 "name": "Kubernetes",
-                "count": 131,
-                "percent": 36
+                "count": 130,
+                "percent": 34
             },
             {
                 "name": "Docker",
                 "count": 122,
-                "percent": 33
+                "percent": 32
             },
             {
                 "name": "Linux",
-                "count": 112,
+                "count": 113,
                 "percent": 30
             }
         ],
         "SQL": [
             {
                 "name": "Azure",
-                "count": 117,
+                "count": 123,
                 "percent": 39
             },
             {
                 "name": "Python",
-                "count": 99,
+                "count": 102,
                 "percent": 33
             },
             {
                 "name": "Git",
-                "count": 93,
+                "count": 97,
                 "percent": 31
             },
             {
                 "name": "C#",
-                "count": 89,
-                "percent": 29
+                "count": 93,
+                "percent": 30
             },
             {
                 "name": ".NET",
-                "count": 80,
-                "percent": 26
+                "count": 83,
+                "percent": 27
             }
         ],
         ".NET": [
             {
                 "name": "C#",
-                "count": 147,
+                "count": 150,
                 "percent": 80
             },
             {
                 "name": "Azure",
-                "count": 111,
+                "count": 114,
                 "percent": 61
             },
             {
                 "name": "SQL",
-                "count": 80,
+                "count": 83,
                 "percent": 44
             },
             {
                 "name": "React",
-                "count": 60,
+                "count": 62,
                 "percent": 33
             },
             {
                 "name": "Git",
-                "count": 59,
-                "percent": 32
+                "count": 61,
+                "percent": 33
             }
         ],
         "React": [
             {
                 "name": "TypeScript",
-                "count": 115,
+                "count": 117,
                 "percent": 56
             },
             {
                 "name": "Azure",
-                "count": 80,
+                "count": 82,
                 "percent": 39
             },
             {
                 "name": "Git",
-                "count": 72,
+                "count": 73,
                 "percent": 35
             },
             {
                 "name": "Kubernetes",
-                "count": 69,
+                "count": 68,
                 "percent": 33
             },
             {
                 "name": "Java",
                 "count": 67,
-                "percent": 33
+                "percent": 32
             }
         ],
         "Microsoft 365": [
@@ -495,13 +495,13 @@
             },
             {
                 "name": "Azure",
-                "count": 59,
+                "count": 60,
                 "percent": 31
             },
             {
                 "name": "SQL",
-                "count": 11,
-                "percent": 6
+                "count": 13,
+                "percent": 7
             },
             {
                 "name": "Linux",
@@ -510,8 +510,8 @@
             },
             {
                 "name": "Git",
-                "count": 6,
-                "percent": 3
+                "count": 7,
+                "percent": 4
             }
         ],
         "Active Directory": [
@@ -522,22 +522,22 @@
             },
             {
                 "name": "Azure",
-                "count": 74,
+                "count": 75,
                 "percent": 37
+            },
+            {
+                "name": "SQL",
+                "count": 25,
+                "percent": 12
             },
             {
                 "name": "Linux",
                 "count": 23,
-                "percent": 12
-            },
-            {
-                "name": "SQL",
-                "count": 23,
-                "percent": 12
+                "percent": 11
             },
             {
                 "name": "Git",
-                "count": 17,
+                "count": 18,
                 "percent": 9
             }
         ]
@@ -545,23 +545,23 @@
     "remote_work": {
         "Python": {
             "percent": 22,
-            "sample_size": 516
+            "sample_size": 526
         },
         "Java": {
             "percent": 29,
-            "sample_size": 283
+            "sample_size": 285
         },
         "C#": {
             "percent": 22,
-            "sample_size": 228
+            "sample_size": 233
         },
         "C++": {
             "percent": 10,
-            "sample_size": 231
+            "sample_size": 233
         },
         "C": {
             "percent": 14,
-            "sample_size": 145
+            "sample_size": 146
         },
         "JavaScript": {
             "percent": 33,
@@ -569,31 +569,31 @@
         },
         "TypeScript": {
             "percent": 27,
-            "sample_size": 192
+            "sample_size": 195
         },
         "Azure": {
             "percent": 30,
-            "sample_size": 474
+            "sample_size": 481
         },
         "AWS": {
-            "percent": 29,
-            "sample_size": 262
+            "percent": 30,
+            "sample_size": 264
         },
         "GCP": {
-            "percent": 20,
-            "sample_size": 154
+            "percent": 21,
+            "sample_size": 157
         },
         "Kubernetes": {
             "percent": 35,
-            "sample_size": 323
+            "sample_size": 322
         },
         "Docker": {
             "percent": 30,
-            "sample_size": 234
+            "sample_size": 236
         },
         "Terraform": {
-            "percent": 30,
-            "sample_size": 144
+            "percent": 31,
+            "sample_size": 147
         },
         "Linux": {
             "percent": 31,
@@ -601,27 +601,27 @@
         },
         "Git": {
             "percent": 29,
-            "sample_size": 369
+            "sample_size": 377
         },
         "SQL": {
-            "percent": 28,
-            "sample_size": 302
+            "percent": 30,
+            "sample_size": 313
         },
         ".NET": {
             "percent": 27,
-            "sample_size": 183
+            "sample_size": 187
         },
         "React": {
             "percent": 26,
-            "sample_size": 206
+            "sample_size": 208
         },
         "Microsoft 365": {
             "percent": 26,
-            "sample_size": 191
+            "sample_size": 194
         },
         "Active Directory": {
-            "percent": 31,
-            "sample_size": 199
+            "percent": 32,
+            "sample_size": 201
         }
     }
 }
