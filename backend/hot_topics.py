@@ -88,6 +88,34 @@ HOT_TOPICS = [
              r"|\bplatform engineer|\bGitOps\b|\bserverless\b|\bcontaineri[sz]", I),
         ],
     },
+    # Smaller themes, kept even where the numbers are small, so readers can see how
+    # much (or how little) Swedish tech ads ask for them.
+    {
+        "name": "IoT & embedded",
+        "description": "Internet of things, embedded systems, firmware and microcontrollers.",
+        "patterns": [
+            (r"\bIoT\b|\bRTOS\b", 0),
+            (r"\binternet of things\b|\bsakernas internet\b|\bembedded\b|\binbyggda system|\binbyggd (?:mjukvara|programvara|elektronik)"
+             r"|\bfirmware\b|\bmikrokontroller|\bmicrocontroller|\bFreeRTOS\b|\bZephyr\b|\bedge computing\b", I),
+        ],
+    },
+    {
+        "name": "Blockchain & Web3",
+        "description": "Blockchain, smart contracts, Web3 and crypto-assets.",
+        "patterns": [
+            (r"\bblockchain|\bblock chain\b|\bblockkedj|\bweb ?3\b|\bsmart contracts?\b|\bSolidity\b|\bEthereum\b"
+             r"|\bcrypto ?currenc|\bkryptovalut|\bcrypto[- ]assets?\b|\bkryptotillgång|\bDeFi\b|\bdistributed ledger", I),
+        ],
+    },
+    {
+        "name": "Quantum computing",
+        "description": "Quantum computers, quantum algorithms and quantum-safe cryptography.",
+        "patterns": [
+            (r"\bquantum (?:computing|computers?|technolog|algorithms?|software|information|sensing|safe|resistant)"
+             r"|\bpost[- ]quantum\b|\bkvantdator|\bkvantteknik|\bkvantberäkning|\bkvantalgoritm|\bkvantsäker"
+             r"|\bqubits?\b|\bQiskit\b", I),
+        ],
+    },
 ]
 
 TOPIC_NAMES = [topic["name"] for topic in HOT_TOPICS]

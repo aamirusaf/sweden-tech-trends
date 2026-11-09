@@ -89,8 +89,12 @@ function hotTopicByName(name) {
     return hotTopics?.topics.find(t => t.name === name) || null;
 }
 
+// The eight series colors from app.js plus a ninth, so no two topics share one.
+const HOT_EXTRA_COLOR = { light: '#1a8fa0', dark: '#2bb3c4' };
+
 function hotColor(name) {
-    const palette = SERIES_COLORS[isDarkMode() ? 'dark' : 'light'];
+    const mode = isDarkMode() ? 'dark' : 'light';
+    const palette = [...SERIES_COLORS[mode], HOT_EXTRA_COLOR[mode]];
     const index = (hotTopics?.topics || []).findIndex(t => t.name === name);
     return palette[(index < 0 ? 0 : index) % palette.length];
 }

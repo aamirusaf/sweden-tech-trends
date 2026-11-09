@@ -68,7 +68,8 @@ stored (see `backend/ad_skills.py`).
 ## Hot topics
 
 Broad themes that aren't single tools: AI, GenAI & LLMs, machine learning,
-cybersecurity, data & analytics, and cloud-native & DevOps. They are kept
+cybersecurity, data & analytics, cloud-native & DevOps, IoT & embedded,
+blockchain & Web3, and quantum computing. They are kept
 apart from the 20 tracked skills and don't count toward the CV score, but are
 measured the same way, as the share of Data/IT ads that mention them. The
 topics and their Swedish and English search patterns are in
