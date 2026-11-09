@@ -1,70 +1,70 @@
 {
-    "last_updated": "2026-11-09 11:08:16 UTC",
+    "last_updated": "2026-11-09 21:57:54 UTC",
     "data": {
         "Languages": [
             {
                 "name": "Python",
-                "value": 720,
+                "value": 736,
                 "by_location": {
-                    "Sweden": 720,
-                    "Stockholm": 250,
-                    "Göteborg": 151,
-                    "Malmö": 27
+                    "Sweden": 736,
+                    "Stockholm": 259,
+                    "Göteborg": 155,
+                    "Malmö": 29
                 },
-                "it_value": 475,
+                "it_value": 484,
                 "it_by_location": {
-                    "Sweden": 475,
-                    "Stockholm": 175,
-                    "Göteborg": 118,
-                    "Malmö": 19
+                    "Sweden": 484,
+                    "Stockholm": 179,
+                    "Göteborg": 120,
+                    "Malmö": 20
                 }
             },
             {
                 "name": "Java",
-                "value": 291,
+                "value": 294,
                 "by_location": {
-                    "Sweden": 291,
-                    "Stockholm": 104,
-                    "Göteborg": 64,
+                    "Sweden": 294,
+                    "Stockholm": 105,
+                    "Göteborg": 65,
                     "Malmö": 15
                 },
-                "it_value": 267,
+                "it_value": 270,
                 "it_by_location": {
-                    "Sweden": 267,
-                    "Stockholm": 94,
-                    "Göteborg": 63,
+                    "Sweden": 270,
+                    "Stockholm": 95,
+                    "Göteborg": 64,
                     "Malmö": 12
                 }
             },
             {
                 "name": "C#",
-                "value": 244,
+                "value": 250,
                 "by_location": {
-                    "Sweden": 244,
-                    "Stockholm": 63,
-                    "Göteborg": 53,
+                    "Sweden": 250,
+                    "Stockholm": 64,
+                    "Göteborg": 56,
                     "Malmö": 12
                 },
-                "it_value": 217,
+                "it_value": 224,
                 "it_by_location": {
-                    "Sweden": 217,
-                    "Stockholm": 58,
-                    "Göteborg": 51,
+                    "Sweden": 224,
+                    "Stockholm": 59,
+                    "Göteborg": 54,
                     "Malmö": 11
                 }
             },
             {
                 "name": "C++",
-                "value": 278,
+                "value": 282,
                 "by_location": {
-                    "Sweden": 278,
+                    "Sweden": 282,
                     "Stockholm": 53,
-                    "Göteborg": 75,
+                    "Göteborg": 77,
                     "Malmö": 8
                 },
-                "it_value": 225,
+                "it_value": 227,
                 "it_by_location": {
-                    "Sweden": 225,
+                    "Sweden": 227,
                     "Stockholm": 50,
                     "Göteborg": 65,
                     "Malmö": 8
@@ -72,33 +72,33 @@
             },
             {
                 "name": "C",
-                "value": 106,
+                "value": 109,
                 "by_location": {
-                    "Sweden": 106,
+                    "Sweden": 109,
                     "Stockholm": 17,
-                    "Göteborg": 34,
+                    "Göteborg": 36,
                     "Malmö": 1
                 },
-                "it_value": 82,
+                "it_value": 83,
                 "it_by_location": {
-                    "Sweden": 82,
+                    "Sweden": 83,
                     "Stockholm": 16,
-                    "Göteborg": 26,
+                    "Göteborg": 27,
                     "Malmö": 1
                 }
             },
             {
                 "name": "JavaScript",
-                "value": 154,
+                "value": 155,
                 "by_location": {
-                    "Sweden": 154,
+                    "Sweden": 155,
                     "Stockholm": 57,
                     "Göteborg": 20,
                     "Malmö": 6
                 },
-                "it_value": 136,
+                "it_value": 137,
                 "it_by_location": {
-                    "Sweden": 136,
+                    "Sweden": 137,
                     "Stockholm": 53,
                     "Göteborg": 19,
                     "Malmö": 6
@@ -106,156 +106,156 @@
             },
             {
                 "name": "TypeScript",
-                "value": 192,
+                "value": 196,
                 "by_location": {
-                    "Sweden": 192,
-                    "Stockholm": 93,
+                    "Sweden": 196,
+                    "Stockholm": 95,
                     "Göteborg": 36,
-                    "Malmö": 8
+                    "Malmö": 9
                 },
-                "it_value": 175,
+                "it_value": 179,
                 "it_by_location": {
-                    "Sweden": 175,
-                    "Stockholm": 84,
+                    "Sweden": 179,
+                    "Stockholm": 86,
                     "Göteborg": 36,
-                    "Malmö": 8
+                    "Malmö": 9
                 }
             }
         ],
         "Cloud & Infra": [
             {
                 "name": "Azure",
-                "value": 501,
+                "value": 518,
                 "by_location": {
-                    "Sweden": 501,
-                    "Stockholm": 188,
-                    "Göteborg": 115,
+                    "Sweden": 518,
+                    "Stockholm": 196,
+                    "Göteborg": 119,
                     "Malmö": 32
                 },
-                "it_value": 432,
+                "it_value": 444,
                 "it_by_location": {
-                    "Sweden": 432,
-                    "Stockholm": 156,
-                    "Göteborg": 104,
+                    "Sweden": 444,
+                    "Stockholm": 163,
+                    "Göteborg": 107,
                     "Malmö": 23
                 }
             },
             {
                 "name": "AWS",
-                "value": 283,
+                "value": 287,
                 "by_location": {
-                    "Sweden": 283,
-                    "Stockholm": 113,
-                    "Göteborg": 82,
-                    "Malmö": 14
+                    "Sweden": 287,
+                    "Stockholm": 116,
+                    "Göteborg": 81,
+                    "Malmö": 15
                 },
-                "it_value": 245,
+                "it_value": 247,
                 "it_by_location": {
-                    "Sweden": 245,
-                    "Stockholm": 94,
-                    "Göteborg": 73,
-                    "Malmö": 11
+                    "Sweden": 247,
+                    "Stockholm": 95,
+                    "Göteborg": 72,
+                    "Malmö": 12
                 }
             },
             {
                 "name": "GCP",
-                "value": 188,
+                "value": 193,
                 "by_location": {
-                    "Sweden": 188,
-                    "Stockholm": 101,
+                    "Sweden": 193,
+                    "Stockholm": 104,
                     "Göteborg": 23,
                     "Malmö": 11
                 },
-                "it_value": 142,
+                "it_value": 146,
                 "it_by_location": {
-                    "Sweden": 142,
-                    "Stockholm": 75,
+                    "Sweden": 146,
+                    "Stockholm": 77,
                     "Göteborg": 16,
                     "Malmö": 8
                 }
             },
             {
                 "name": "Kubernetes",
-                "value": 289,
+                "value": 293,
                 "by_location": {
-                    "Sweden": 289,
-                    "Stockholm": 114,
-                    "Göteborg": 60,
-                    "Malmö": 14
-                },
-                "it_value": 274,
-                "it_by_location": {
-                    "Sweden": 274,
-                    "Stockholm": 109,
-                    "Göteborg": 58,
+                    "Sweden": 293,
+                    "Stockholm": 116,
+                    "Göteborg": 59,
                     "Malmö": 13
+                },
+                "it_value": 275,
+                "it_by_location": {
+                    "Sweden": 275,
+                    "Stockholm": 109,
+                    "Göteborg": 57,
+                    "Malmö": 12
                 }
             },
             {
                 "name": "Docker",
-                "value": 220,
+                "value": 225,
                 "by_location": {
-                    "Sweden": 220,
-                    "Stockholm": 84,
+                    "Sweden": 225,
+                    "Stockholm": 87,
                     "Göteborg": 41,
                     "Malmö": 6
                 },
-                "it_value": 204,
+                "it_value": 209,
                 "it_by_location": {
-                    "Sweden": 204,
-                    "Stockholm": 80,
+                    "Sweden": 209,
+                    "Stockholm": 83,
                     "Göteborg": 38,
                     "Malmö": 5
                 }
             },
             {
                 "name": "Terraform",
-                "value": 139,
+                "value": 147,
                 "by_location": {
-                    "Sweden": 139,
-                    "Stockholm": 66,
-                    "Göteborg": 22,
+                    "Sweden": 147,
+                    "Stockholm": 71,
+                    "Göteborg": 24,
                     "Malmö": 6
                 },
-                "it_value": 119,
+                "it_value": 125,
                 "it_by_location": {
-                    "Sweden": 119,
-                    "Stockholm": 53,
-                    "Göteborg": 19,
+                    "Sweden": 125,
+                    "Stockholm": 56,
+                    "Göteborg": 21,
                     "Malmö": 4
                 }
             },
             {
                 "name": "Linux",
-                "value": 288,
+                "value": 291,
                 "by_location": {
-                    "Sweden": 288,
-                    "Stockholm": 95,
-                    "Göteborg": 53,
+                    "Sweden": 291,
+                    "Stockholm": 97,
+                    "Göteborg": 52,
                     "Malmö": 10
                 },
-                "it_value": 266,
+                "it_value": 269,
                 "it_by_location": {
-                    "Sweden": 266,
-                    "Stockholm": 89,
-                    "Göteborg": 51,
+                    "Sweden": 269,
+                    "Stockholm": 91,
+                    "Göteborg": 50,
                     "Malmö": 10
                 }
             },
             {
                 "name": "Git",
-                "value": 231,
+                "value": 240,
                 "by_location": {
-                    "Sweden": 231,
-                    "Stockholm": 74,
-                    "Göteborg": 55,
+                    "Sweden": 240,
+                    "Stockholm": 79,
+                    "Göteborg": 56,
                     "Malmö": 5
                 },
-                "it_value": 198,
+                "it_value": 205,
                 "it_by_location": {
-                    "Sweden": 198,
-                    "Stockholm": 61,
-                    "Göteborg": 50,
+                    "Sweden": 205,
+                    "Stockholm": 64,
+                    "Göteborg": 51,
                     "Malmö": 3
                 }
             }
@@ -263,95 +263,95 @@
         "Platforms & Data": [
             {
                 "name": "SQL",
-                "value": 343,
+                "value": 357,
                 "by_location": {
-                    "Sweden": 343,
-                    "Stockholm": 139,
-                    "Göteborg": 44,
+                    "Sweden": 357,
+                    "Stockholm": 147,
+                    "Göteborg": 47,
                     "Malmö": 16
                 },
-                "it_value": 208,
+                "it_value": 217,
                 "it_by_location": {
-                    "Sweden": 208,
-                    "Stockholm": 65,
-                    "Göteborg": 33,
+                    "Sweden": 217,
+                    "Stockholm": 70,
+                    "Göteborg": 35,
                     "Malmö": 12
                 }
             },
             {
                 "name": ".NET",
-                "value": 191,
+                "value": 196,
                 "by_location": {
-                    "Sweden": 191,
-                    "Stockholm": 46,
-                    "Göteborg": 52,
+                    "Sweden": 196,
+                    "Stockholm": 47,
+                    "Göteborg": 54,
                     "Malmö": 11
                 },
-                "it_value": 172,
+                "it_value": 177,
                 "it_by_location": {
-                    "Sweden": 172,
-                    "Stockholm": 41,
-                    "Göteborg": 48,
+                    "Sweden": 177,
+                    "Stockholm": 42,
+                    "Göteborg": 50,
                     "Malmö": 9
                 }
             },
             {
                 "name": "React",
-                "value": 199,
+                "value": 202,
                 "by_location": {
-                    "Sweden": 199,
-                    "Stockholm": 91,
+                    "Sweden": 202,
+                    "Stockholm": 93,
                     "Göteborg": 29,
-                    "Malmö": 10
+                    "Malmö": 11
                 },
-                "it_value": 188,
+                "it_value": 191,
                 "it_by_location": {
-                    "Sweden": 188,
-                    "Stockholm": 84,
+                    "Sweden": 191,
+                    "Stockholm": 86,
                     "Göteborg": 28,
-                    "Malmö": 10
+                    "Malmö": 11
                 }
             },
             {
                 "name": "Microsoft 365",
-                "value": 403,
+                "value": 414,
                 "by_location": {
-                    "Sweden": 403,
-                    "Stockholm": 100,
-                    "Göteborg": 36,
+                    "Sweden": 414,
+                    "Stockholm": 102,
+                    "Göteborg": 38,
                     "Malmö": 17
                 },
-                "it_value": 180,
+                "it_value": 184,
                 "it_by_location": {
-                    "Sweden": 180,
-                    "Stockholm": 61,
-                    "Göteborg": 19,
+                    "Sweden": 184,
+                    "Stockholm": 62,
+                    "Göteborg": 20,
                     "Malmö": 9
                 }
             },
             {
                 "name": "Active Directory",
-                "value": 209,
+                "value": 213,
                 "by_location": {
-                    "Sweden": 209,
-                    "Stockholm": 69,
-                    "Göteborg": 21,
+                    "Sweden": 213,
+                    "Stockholm": 70,
+                    "Göteborg": 23,
                     "Malmö": 10
                 },
-                "it_value": 187,
+                "it_value": 191,
                 "it_by_location": {
-                    "Sweden": 187,
-                    "Stockholm": 58,
-                    "Göteborg": 21,
+                    "Sweden": 191,
+                    "Stockholm": 59,
+                    "Göteborg": 23,
                     "Malmö": 10
                 }
             }
         ]
     },
     "it_totals": {
-        "Sweden": 2700,
-        "Stockholm": 903,
-        "Göteborg": 453,
+        "Sweden": 2759,
+        "Stockholm": 921,
+        "Göteborg": 464,
         "Malmö": 124
     }
 }

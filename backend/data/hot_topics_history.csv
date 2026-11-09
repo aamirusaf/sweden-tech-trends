@@ -1,0 +1,37 @@
+date,topic,location,it_ads,it_total
+2026-11-09,AI,Sweden,731,2759
+2026-11-09,AI,Stockholm,310,913
+2026-11-09,AI,Göteborg,123,454
+2026-11-09,AI,Malmö,33,118
+2026-11-09,GenAI & LLMs,Sweden,240,2759
+2026-11-09,GenAI & LLMs,Stockholm,124,913
+2026-11-09,GenAI & LLMs,Göteborg,37,454
+2026-11-09,GenAI & LLMs,Malmö,15,118
+2026-11-09,Machine learning,Sweden,174,2759
+2026-11-09,Machine learning,Stockholm,81,913
+2026-11-09,Machine learning,Göteborg,27,454
+2026-11-09,Machine learning,Malmö,5,118
+2026-11-09,Cybersecurity,Sweden,621,2759
+2026-11-09,Cybersecurity,Stockholm,203,913
+2026-11-09,Cybersecurity,Göteborg,114,454
+2026-11-09,Cybersecurity,Malmö,19,118
+2026-11-09,Data & analytics,Sweden,304,2759
+2026-11-09,Data & analytics,Stockholm,115,913
+2026-11-09,Data & analytics,Göteborg,50,454
+2026-11-09,Data & analytics,Malmö,17,118
+2026-11-09,Cloud-native & DevOps,Sweden,756,2759
+2026-11-09,Cloud-native & DevOps,Stockholm,282,913
+2026-11-09,Cloud-native & DevOps,Göteborg,180,454
+2026-11-09,Cloud-native & DevOps,Malmö,38,118
+2026-11-09,IoT & embedded,Sweden,319,2759
+2026-11-09,IoT & embedded,Stockholm,64,913
+2026-11-09,IoT & embedded,Göteborg,109,454
+2026-11-09,IoT & embedded,Malmö,12,118
+2026-11-09,Blockchain & Web3,Sweden,5,2759
+2026-11-09,Blockchain & Web3,Stockholm,3,913
+2026-11-09,Blockchain & Web3,Göteborg,1,454
+2026-11-09,Blockchain & Web3,Malmö,0,118
+2026-11-09,Quantum computing,Sweden,1,2759
+2026-11-09,Quantum computing,Stockholm,0,913
+2026-11-09,Quantum computing,Göteborg,0,454
+2026-11-09,Quantum computing,Malmö,0,118
