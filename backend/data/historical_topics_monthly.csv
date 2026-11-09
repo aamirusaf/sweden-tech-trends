@@ -5,6 +5,9 @@ month,topic,location,it_ads,it_total_ads
 2007-05,Cybersecurity,Sweden,0,2
 2007-05,Data & analytics,Sweden,0,2
 2007-05,Cloud-native & DevOps,Sweden,0,2
+2007-05,IoT & embedded,Sweden,0,2
+2007-05,Blockchain & Web3,Sweden,0,2
+2007-05,Quantum computing,Sweden,0,2
 2007-06,AI,Sweden,0,11
 2007-06,AI,Stockholm,0,1
 2007-06,GenAI & LLMs,Sweden,0,11
@@ -17,6 +20,12 @@ month,topic,location,it_ads,it_total_ads
 2007-06,Data & analytics,Stockholm,0,1
 2007-06,Cloud-native & DevOps,Sweden,0,11
 2007-06,Cloud-native & DevOps,Stockholm,0,1
+2007-06,IoT & embedded,Sweden,0,11
+2007-06,IoT & embedded,Stockholm,0,1
+2007-06,Blockchain & Web3,Sweden,0,11
+2007-06,Blockchain & Web3,Stockholm,0,1
+2007-06,Quantum computing,Sweden,0,11
+2007-06,Quantum computing,Stockholm,0,1
 2007-07,AI,Sweden,0,25
 2007-07,AI,Stockholm,0,6
 2007-07,GenAI & LLMs,Sweden,0,25
@@ -29,6 +38,12 @@ month,topic,location,it_ads,it_total_ads
 2007-07,Data & analytics,Stockholm,0,6
 2007-07,Cloud-native & DevOps,Sweden,0,25
 2007-07,Cloud-native & DevOps,Stockholm,0,6
+2007-07,IoT & embedded,Sweden,0,25
+2007-07,IoT & embedded,Stockholm,0,6
+2007-07,Blockchain & Web3,Sweden,0,25
+2007-07,Blockchain & Web3,Stockholm,0,6
+2007-07,Quantum computing,Sweden,0,25
+2007-07,Quantum computing,Stockholm,0,6
 2007-08,AI,Sweden,0,39
 2007-08,AI,Stockholm,0,10
 2007-08,AI,Göteborg,0,3
@@ -53,6 +68,18 @@ month,topic,location,it_ads,it_total_ads
 2007-08,Cloud-native & DevOps,Stockholm,0,10
 2007-08,Cloud-native & DevOps,Göteborg,0,3
 2007-08,Cloud-native & DevOps,Malmö,0,4
+2007-08,IoT & embedded,Sweden,0,39
+2007-08,IoT & embedded,Stockholm,0,10
+2007-08,IoT & embedded,Göteborg,0,3
+2007-08,IoT & embedded,Malmö,0,4
+2007-08,Blockchain & Web3,Sweden,0,39
+2007-08,Blockchain & Web3,Stockholm,0,10
+2007-08,Blockchain & Web3,Göteborg,0,3
+2007-08,Blockchain & Web3,Malmö,0,4
+2007-08,Quantum computing,Sweden,0,39
+2007-08,Quantum computing,Stockholm,0,10
+2007-08,Quantum computing,Göteborg,0,3
+2007-08,Quantum computing,Malmö,0,4
 2007-09,AI,Sweden,0,73
 2007-09,AI,Stockholm,0,25
 2007-09,AI,Malmö,0,2
@@ -71,6 +98,15 @@ month,topic,location,it_ads,it_total_ads
 2007-09,Cloud-native & DevOps,Sweden,0,73
 2007-09,Cloud-native & DevOps,Stockholm,0,25
 2007-09,Cloud-native & DevOps,Malmö,0,2
+2007-09,IoT & embedded,Sweden,0,73
+2007-09,IoT & embedded,Stockholm,0,25
+2007-09,IoT & embedded,Malmö,0,2
+2007-09,Blockchain & Web3,Sweden,0,73
+2007-09,Blockchain & Web3,Stockholm,0,25
+2007-09,Blockchain & Web3,Malmö,0,2
+2007-09,Quantum computing,Sweden,0,73
+2007-09,Quantum computing,Stockholm,0,25
+2007-09,Quantum computing,Malmö,0,2
 2007-10,AI,Sweden,0,114
 2007-10,AI,Stockholm,0,46
 2007-10,AI,Göteborg,0,4
@@ -95,6 +131,18 @@ month,topic,location,it_ads,it_total_ads
 2007-10,Cloud-native & DevOps,Stockholm,0,46
 2007-10,Cloud-native & DevOps,Göteborg,0,4
 2007-10,Cloud-native & DevOps,Malmö,0,3
+2007-10,IoT & embedded,Sweden,0,114
+2007-10,IoT & embedded,Stockholm,0,46
+2007-10,IoT & embedded,Göteborg,0,4
+2007-10,IoT & embedded,Malmö,0,3
+2007-10,Blockchain & Web3,Sweden,0,114
+2007-10,Blockchain & Web3,Stockholm,0,46
+2007-10,Blockchain & Web3,Göteborg,0,4
+2007-10,Blockchain & Web3,Malmö,0,3
+2007-10,Quantum computing,Sweden,0,114
+2007-10,Quantum computing,Stockholm,0,46
+2007-10,Quantum computing,Göteborg,0,4
+2007-10,Quantum computing,Malmö,0,3
 2007-11,AI,Sweden,0,383
 2007-11,AI,Stockholm,0,179
 2007-11,AI,Göteborg,0,33
@@ -119,6 +167,18 @@ month,topic,location,it_ads,it_total_ads
 2007-11,Cloud-native & DevOps,Stockholm,0,179
 2007-11,Cloud-native & DevOps,Göteborg,0,33
 2007-11,Cloud-native & DevOps,Malmö,0,11
+2007-11,IoT & embedded,Sweden,1,383
+2007-11,IoT & embedded,Stockholm,1,179
+2007-11,IoT & embedded,Göteborg,0,33
+2007-11,IoT & embedded,Malmö,0,11
+2007-11,Blockchain & Web3,Sweden,0,383
+2007-11,Blockchain & Web3,Stockholm,0,179
+2007-11,Blockchain & Web3,Göteborg,0,33
+2007-11,Blockchain & Web3,Malmö,0,11
+2007-11,Quantum computing,Sweden,0,383
+2007-11,Quantum computing,Stockholm,0,179
+2007-11,Quantum computing,Göteborg,0,33
+2007-11,Quantum computing,Malmö,0,11
 2007-12,AI,Sweden,0,391
 2007-12,AI,Stockholm,0,165
 2007-12,AI,Göteborg,0,34
@@ -143,6 +203,18 @@ month,topic,location,it_ads,it_total_ads
 2007-12,Cloud-native & DevOps,Stockholm,0,165
 2007-12,Cloud-native & DevOps,Göteborg,0,34
 2007-12,Cloud-native & DevOps,Malmö,0,12
+2007-12,IoT & embedded,Sweden,3,391
+2007-12,IoT & embedded,Stockholm,0,165
+2007-12,IoT & embedded,Göteborg,1,34
+2007-12,IoT & embedded,Malmö,0,12
+2007-12,Blockchain & Web3,Sweden,0,391
+2007-12,Blockchain & Web3,Stockholm,0,165
+2007-12,Blockchain & Web3,Göteborg,0,34
+2007-12,Blockchain & Web3,Malmö,0,12
+2007-12,Quantum computing,Sweden,0,391
+2007-12,Quantum computing,Stockholm,0,165
+2007-12,Quantum computing,Göteborg,0,34
+2007-12,Quantum computing,Malmö,0,12
 2008-01,AI,Sweden,0,516
 2008-01,AI,Stockholm,0,231
 2008-01,AI,Göteborg,0,40
@@ -167,6 +239,18 @@ month,topic,location,it_ads,it_total_ads
 2008-01,Cloud-native & DevOps,Stockholm,0,231
 2008-01,Cloud-native & DevOps,Göteborg,0,40
 2008-01,Cloud-native & DevOps,Malmö,0,19
+2008-01,IoT & embedded,Sweden,14,516
+2008-01,IoT & embedded,Stockholm,4,231
+2008-01,IoT & embedded,Göteborg,0,40
+2008-01,IoT & embedded,Malmö,1,19
+2008-01,Blockchain & Web3,Sweden,0,516
+2008-01,Blockchain & Web3,Stockholm,0,231
+2008-01,Blockchain & Web3,Göteborg,0,40
+2008-01,Blockchain & Web3,Malmö,0,19
+2008-01,Quantum computing,Sweden,0,516
+2008-01,Quantum computing,Stockholm,0,231
+2008-01,Quantum computing,Göteborg,0,40
+2008-01,Quantum computing,Malmö,0,19
 2008-02,AI,Sweden,0,653
 2008-02,AI,Stockholm,0,273
 2008-02,AI,Göteborg,0,65
@@ -191,6 +275,18 @@ month,topic,location,it_ads,it_total_ads
 2008-02,Cloud-native & DevOps,Stockholm,0,273
 2008-02,Cloud-native & DevOps,Göteborg,0,65
 2008-02,Cloud-native & DevOps,Malmö,0,24
+2008-02,IoT & embedded,Sweden,8,653
+2008-02,IoT & embedded,Stockholm,4,273
+2008-02,IoT & embedded,Göteborg,2,65
+2008-02,IoT & embedded,Malmö,0,24
+2008-02,Blockchain & Web3,Sweden,0,653
+2008-02,Blockchain & Web3,Stockholm,0,273
+2008-02,Blockchain & Web3,Göteborg,0,65
+2008-02,Blockchain & Web3,Malmö,0,24
+2008-02,Quantum computing,Sweden,0,653
+2008-02,Quantum computing,Stockholm,0,273
+2008-02,Quantum computing,Göteborg,0,65
+2008-02,Quantum computing,Malmö,0,24
 2008-03,AI,Sweden,0,843
 2008-03,AI,Stockholm,0,355
 2008-03,AI,Göteborg,0,89
@@ -215,6 +311,18 @@ month,topic,location,it_ads,it_total_ads
 2008-03,Cloud-native & DevOps,Stockholm,0,355
 2008-03,Cloud-native & DevOps,Göteborg,0,89
 2008-03,Cloud-native & DevOps,Malmö,0,48
+2008-03,IoT & embedded,Sweden,38,843
+2008-03,IoT & embedded,Stockholm,16,355
+2008-03,IoT & embedded,Göteborg,7,89
+2008-03,IoT & embedded,Malmö,2,48
+2008-03,Blockchain & Web3,Sweden,0,843
+2008-03,Blockchain & Web3,Stockholm,0,355
+2008-03,Blockchain & Web3,Göteborg,0,89
+2008-03,Blockchain & Web3,Malmö,0,48
+2008-03,Quantum computing,Sweden,0,843
+2008-03,Quantum computing,Stockholm,0,355
+2008-03,Quantum computing,Göteborg,0,89
+2008-03,Quantum computing,Malmö,0,48
 2008-04,AI,Sweden,0,996
 2008-04,AI,Stockholm,0,433
 2008-04,AI,Göteborg,0,95
@@ -239,6 +347,18 @@ month,topic,location,it_ads,it_total_ads
 2008-04,Cloud-native & DevOps,Stockholm,3,433
 2008-04,Cloud-native & DevOps,Göteborg,0,95
 2008-04,Cloud-native & DevOps,Malmö,0,51
+2008-04,IoT & embedded,Sweden,22,996
+2008-04,IoT & embedded,Stockholm,6,433
+2008-04,IoT & embedded,Göteborg,5,95
+2008-04,IoT & embedded,Malmö,2,51
+2008-04,Blockchain & Web3,Sweden,0,996
+2008-04,Blockchain & Web3,Stockholm,0,433
+2008-04,Blockchain & Web3,Göteborg,0,95
+2008-04,Blockchain & Web3,Malmö,0,51
+2008-04,Quantum computing,Sweden,0,996
+2008-04,Quantum computing,Stockholm,0,433
+2008-04,Quantum computing,Göteborg,0,95
+2008-04,Quantum computing,Malmö,0,51
 2008-05,AI,Sweden,2,859
 2008-05,AI,Stockholm,2,377
 2008-05,AI,Göteborg,0,81
@@ -263,6 +383,18 @@ month,topic,location,it_ads,it_total_ads
 2008-05,Cloud-native & DevOps,Stockholm,1,377
 2008-05,Cloud-native & DevOps,Göteborg,0,81
 2008-05,Cloud-native & DevOps,Malmö,0,44
+2008-05,IoT & embedded,Sweden,35,859
+2008-05,IoT & embedded,Stockholm,13,377
+2008-05,IoT & embedded,Göteborg,3,81
+2008-05,IoT & embedded,Malmö,2,44
+2008-05,Blockchain & Web3,Sweden,0,859
+2008-05,Blockchain & Web3,Stockholm,0,377
+2008-05,Blockchain & Web3,Göteborg,0,81
+2008-05,Blockchain & Web3,Malmö,0,44
+2008-05,Quantum computing,Sweden,0,859
+2008-05,Quantum computing,Stockholm,0,377
+2008-05,Quantum computing,Göteborg,0,81
+2008-05,Quantum computing,Malmö,0,44
 2008-06,AI,Sweden,4,795
 2008-06,AI,Stockholm,1,311
 2008-06,AI,Göteborg,2,101
@@ -287,6 +419,18 @@ month,topic,location,it_ads,it_total_ads
 2008-06,Cloud-native & DevOps,Stockholm,0,311
 2008-06,Cloud-native & DevOps,Göteborg,1,101
 2008-06,Cloud-native & DevOps,Malmö,0,32
+2008-06,IoT & embedded,Sweden,44,795
+2008-06,IoT & embedded,Stockholm,7,311
+2008-06,IoT & embedded,Göteborg,8,101
+2008-06,IoT & embedded,Malmö,0,32
+2008-06,Blockchain & Web3,Sweden,0,795
+2008-06,Blockchain & Web3,Stockholm,0,311
+2008-06,Blockchain & Web3,Göteborg,0,101
+2008-06,Blockchain & Web3,Malmö,0,32
+2008-06,Quantum computing,Sweden,0,795
+2008-06,Quantum computing,Stockholm,0,311
+2008-06,Quantum computing,Göteborg,0,101
+2008-06,Quantum computing,Malmö,0,32
 2008-07,AI,Sweden,2,480
 2008-07,AI,Stockholm,1,190
 2008-07,AI,Göteborg,0,46
@@ -311,6 +455,18 @@ month,topic,location,it_ads,it_total_ads
 2008-07,Cloud-native & DevOps,Stockholm,0,190
 2008-07,Cloud-native & DevOps,Göteborg,0,46
 2008-07,Cloud-native & DevOps,Malmö,0,28
+2008-07,IoT & embedded,Sweden,18,480
+2008-07,IoT & embedded,Stockholm,1,190
+2008-07,IoT & embedded,Göteborg,5,46
+2008-07,IoT & embedded,Malmö,0,28
+2008-07,Blockchain & Web3,Sweden,0,480
+2008-07,Blockchain & Web3,Stockholm,0,190
+2008-07,Blockchain & Web3,Göteborg,0,46
+2008-07,Blockchain & Web3,Malmö,0,28
+2008-07,Quantum computing,Sweden,0,480
+2008-07,Quantum computing,Stockholm,0,190
+2008-07,Quantum computing,Göteborg,0,46
+2008-07,Quantum computing,Malmö,0,28
 2008-08,AI,Sweden,0,730
 2008-08,AI,Stockholm,0,292
 2008-08,AI,Göteborg,0,85
@@ -335,6 +491,18 @@ month,topic,location,it_ads,it_total_ads
 2008-08,Cloud-native & DevOps,Stockholm,0,292
 2008-08,Cloud-native & DevOps,Göteborg,0,85
 2008-08,Cloud-native & DevOps,Malmö,0,25
+2008-08,IoT & embedded,Sweden,41,730
+2008-08,IoT & embedded,Stockholm,6,292
+2008-08,IoT & embedded,Göteborg,5,85
+2008-08,IoT & embedded,Malmö,2,25
+2008-08,Blockchain & Web3,Sweden,0,730
+2008-08,Blockchain & Web3,Stockholm,0,292
+2008-08,Blockchain & Web3,Göteborg,0,85
+2008-08,Blockchain & Web3,Malmö,0,25
+2008-08,Quantum computing,Sweden,0,730
+2008-08,Quantum computing,Stockholm,0,292
+2008-08,Quantum computing,Göteborg,0,85
+2008-08,Quantum computing,Malmö,0,25
 2008-09,AI,Sweden,2,1147
 2008-09,AI,Stockholm,2,467
 2008-09,AI,Göteborg,0,154
@@ -359,6 +527,18 @@ month,topic,location,it_ads,it_total_ads
 2008-09,Cloud-native & DevOps,Stockholm,0,467
 2008-09,Cloud-native & DevOps,Göteborg,0,154
 2008-09,Cloud-native & DevOps,Malmö,0,59
+2008-09,IoT & embedded,Sweden,50,1147
+2008-09,IoT & embedded,Stockholm,11,467
+2008-09,IoT & embedded,Göteborg,8,154
+2008-09,IoT & embedded,Malmö,7,59
+2008-09,Blockchain & Web3,Sweden,0,1147
+2008-09,Blockchain & Web3,Stockholm,0,467
+2008-09,Blockchain & Web3,Göteborg,0,154
+2008-09,Blockchain & Web3,Malmö,0,59
+2008-09,Quantum computing,Sweden,0,1147
+2008-09,Quantum computing,Stockholm,0,467
+2008-09,Quantum computing,Göteborg,0,154
+2008-09,Quantum computing,Malmö,0,59
 2008-10,AI,Sweden,1,1235
 2008-10,AI,Stockholm,0,513
 2008-10,AI,Göteborg,0,124
@@ -383,6 +563,18 @@ month,topic,location,it_ads,it_total_ads
 2008-10,Cloud-native & DevOps,Stockholm,0,513
 2008-10,Cloud-native & DevOps,Göteborg,0,124
 2008-10,Cloud-native & DevOps,Malmö,0,66
+2008-10,IoT & embedded,Sweden,60,1235
+2008-10,IoT & embedded,Stockholm,7,513
+2008-10,IoT & embedded,Göteborg,8,124
+2008-10,IoT & embedded,Malmö,6,66
+2008-10,Blockchain & Web3,Sweden,0,1235
+2008-10,Blockchain & Web3,Stockholm,0,513
+2008-10,Blockchain & Web3,Göteborg,0,124
+2008-10,Blockchain & Web3,Malmö,0,66
+2008-10,Quantum computing,Sweden,0,1235
+2008-10,Quantum computing,Stockholm,0,513
+2008-10,Quantum computing,Göteborg,0,124
+2008-10,Quantum computing,Malmö,0,66
 2008-11,AI,Sweden,2,881
 2008-11,AI,Stockholm,1,366
 2008-11,AI,Göteborg,0,100
@@ -407,6 +599,18 @@ month,topic,location,it_ads,it_total_ads
 2008-11,Cloud-native & DevOps,Stockholm,0,366
 2008-11,Cloud-native & DevOps,Göteborg,0,100
 2008-11,Cloud-native & DevOps,Malmö,0,39
+2008-11,IoT & embedded,Sweden,25,881
+2008-11,IoT & embedded,Stockholm,7,366
+2008-11,IoT & embedded,Göteborg,8,100
+2008-11,IoT & embedded,Malmö,3,39
+2008-11,Blockchain & Web3,Sweden,0,881
+2008-11,Blockchain & Web3,Stockholm,0,366
+2008-11,Blockchain & Web3,Göteborg,0,100
+2008-11,Blockchain & Web3,Malmö,0,39
+2008-11,Quantum computing,Sweden,0,881
+2008-11,Quantum computing,Stockholm,0,366
+2008-11,Quantum computing,Göteborg,0,100
+2008-11,Quantum computing,Malmö,0,39
 2008-12,AI,Sweden,1,761
 2008-12,AI,Stockholm,1,278
 2008-12,AI,Göteborg,0,93
@@ -431,6 +635,18 @@ month,topic,location,it_ads,it_total_ads
 2008-12,Cloud-native & DevOps,Stockholm,0,278
 2008-12,Cloud-native & DevOps,Göteborg,0,93
 2008-12,Cloud-native & DevOps,Malmö,0,21
+2008-12,IoT & embedded,Sweden,27,761
+2008-12,IoT & embedded,Stockholm,4,278
+2008-12,IoT & embedded,Göteborg,7,93
+2008-12,IoT & embedded,Malmö,1,21
+2008-12,Blockchain & Web3,Sweden,0,761
+2008-12,Blockchain & Web3,Stockholm,0,278
+2008-12,Blockchain & Web3,Göteborg,0,93
+2008-12,Blockchain & Web3,Malmö,0,21
+2008-12,Quantum computing,Sweden,0,761
+2008-12,Quantum computing,Stockholm,0,278
+2008-12,Quantum computing,Göteborg,0,93
+2008-12,Quantum computing,Malmö,0,21
 2009-01,AI,Sweden,0,673
 2009-01,AI,Stockholm,0,292
 2009-01,AI,Göteborg,0,74
@@ -455,6 +671,18 @@ month,topic,location,it_ads,it_total_ads
 2009-01,Cloud-native & DevOps,Stockholm,0,292
 2009-01,Cloud-native & DevOps,Göteborg,0,74
 2009-01,Cloud-native & DevOps,Malmö,0,32
+2009-01,IoT & embedded,Sweden,19,673
+2009-01,IoT & embedded,Stockholm,8,292
+2009-01,IoT & embedded,Göteborg,4,74
+2009-01,IoT & embedded,Malmö,1,32
+2009-01,Blockchain & Web3,Sweden,0,673
+2009-01,Blockchain & Web3,Stockholm,0,292
+2009-01,Blockchain & Web3,Göteborg,0,74
+2009-01,Blockchain & Web3,Malmö,0,32
+2009-01,Quantum computing,Sweden,0,673
+2009-01,Quantum computing,Stockholm,0,292
+2009-01,Quantum computing,Göteborg,0,74
+2009-01,Quantum computing,Malmö,0,32
 2009-02,AI,Sweden,1,787
 2009-02,AI,Stockholm,0,274
 2009-02,AI,Göteborg,0,126
@@ -479,6 +707,18 @@ month,topic,location,it_ads,it_total_ads
 2009-02,Cloud-native & DevOps,Stockholm,0,274
 2009-02,Cloud-native & DevOps,Göteborg,0,126
 2009-02,Cloud-native & DevOps,Malmö,2,29
+2009-02,IoT & embedded,Sweden,19,787
+2009-02,IoT & embedded,Stockholm,2,274
+2009-02,IoT & embedded,Göteborg,4,126
+2009-02,IoT & embedded,Malmö,2,29
+2009-02,Blockchain & Web3,Sweden,0,787
+2009-02,Blockchain & Web3,Stockholm,0,274
+2009-02,Blockchain & Web3,Göteborg,0,126
+2009-02,Blockchain & Web3,Malmö,0,29
+2009-02,Quantum computing,Sweden,0,787
+2009-02,Quantum computing,Stockholm,0,274
+2009-02,Quantum computing,Göteborg,0,126
+2009-02,Quantum computing,Malmö,0,29
 2009-03,AI,Sweden,3,702
 2009-03,AI,Stockholm,1,303
 2009-03,AI,Göteborg,1,87
@@ -503,6 +743,18 @@ month,topic,location,it_ads,it_total_ads
 2009-03,Cloud-native & DevOps,Stockholm,0,303
 2009-03,Cloud-native & DevOps,Göteborg,0,87
 2009-03,Cloud-native & DevOps,Malmö,1,29
+2009-03,IoT & embedded,Sweden,15,702
+2009-03,IoT & embedded,Stockholm,0,303
+2009-03,IoT & embedded,Göteborg,4,87
+2009-03,IoT & embedded,Malmö,1,29
+2009-03,Blockchain & Web3,Sweden,0,702
+2009-03,Blockchain & Web3,Stockholm,0,303
+2009-03,Blockchain & Web3,Göteborg,0,87
+2009-03,Blockchain & Web3,Malmö,0,29
+2009-03,Quantum computing,Sweden,0,702
+2009-03,Quantum computing,Stockholm,0,303
+2009-03,Quantum computing,Göteborg,0,87
+2009-03,Quantum computing,Malmö,0,29
 2009-04,AI,Sweden,2,599
 2009-04,AI,Stockholm,0,226
 2009-04,AI,Göteborg,1,76
@@ -527,6 +779,18 @@ month,topic,location,it_ads,it_total_ads
 2009-04,Cloud-native & DevOps,Stockholm,0,226
 2009-04,Cloud-native & DevOps,Göteborg,0,76
 2009-04,Cloud-native & DevOps,Malmö,0,25
+2009-04,IoT & embedded,Sweden,28,599
+2009-04,IoT & embedded,Stockholm,4,226
+2009-04,IoT & embedded,Göteborg,7,76
+2009-04,IoT & embedded,Malmö,2,25
+2009-04,Blockchain & Web3,Sweden,0,599
+2009-04,Blockchain & Web3,Stockholm,0,226
+2009-04,Blockchain & Web3,Göteborg,0,76
+2009-04,Blockchain & Web3,Malmö,0,25
+2009-04,Quantum computing,Sweden,0,599
+2009-04,Quantum computing,Stockholm,0,226
+2009-04,Quantum computing,Göteborg,0,76
+2009-04,Quantum computing,Malmö,0,25
 2009-05,AI,Sweden,2,529
 2009-05,AI,Stockholm,0,219
 2009-05,AI,Göteborg,0,52
@@ -551,6 +815,18 @@ month,topic,location,it_ads,it_total_ads
 2009-05,Cloud-native & DevOps,Stockholm,0,219
 2009-05,Cloud-native & DevOps,Göteborg,0,52
 2009-05,Cloud-native & DevOps,Malmö,0,19
+2009-05,IoT & embedded,Sweden,23,529
+2009-05,IoT & embedded,Stockholm,3,219
+2009-05,IoT & embedded,Göteborg,4,52
+2009-05,IoT & embedded,Malmö,0,19
+2009-05,Blockchain & Web3,Sweden,0,529
+2009-05,Blockchain & Web3,Stockholm,0,219
+2009-05,Blockchain & Web3,Göteborg,0,52
+2009-05,Blockchain & Web3,Malmö,0,19
+2009-05,Quantum computing,Sweden,0,529
+2009-05,Quantum computing,Stockholm,0,219
+2009-05,Quantum computing,Göteborg,0,52
+2009-05,Quantum computing,Malmö,0,19
 2009-06,AI,Sweden,2,587
 2009-06,AI,Stockholm,0,217
 2009-06,AI,Göteborg,0,66
@@ -575,6 +851,18 @@ month,topic,location,it_ads,it_total_ads
 2009-06,Cloud-native & DevOps,Stockholm,0,217
 2009-06,Cloud-native & DevOps,Göteborg,0,66
 2009-06,Cloud-native & DevOps,Malmö,1,22
+2009-06,IoT & embedded,Sweden,31,587
+2009-06,IoT & embedded,Stockholm,1,217
+2009-06,IoT & embedded,Göteborg,3,66
+2009-06,IoT & embedded,Malmö,3,22
+2009-06,Blockchain & Web3,Sweden,0,587
+2009-06,Blockchain & Web3,Stockholm,0,217
+2009-06,Blockchain & Web3,Göteborg,0,66
+2009-06,Blockchain & Web3,Malmö,0,22
+2009-06,Quantum computing,Sweden,0,587
+2009-06,Quantum computing,Stockholm,0,217
+2009-06,Quantum computing,Göteborg,0,66
+2009-06,Quantum computing,Malmö,0,22
 2009-07,AI,Sweden,2,332
 2009-07,AI,Stockholm,0,128
 2009-07,AI,Göteborg,0,43
@@ -599,6 +887,18 @@ month,topic,location,it_ads,it_total_ads
 2009-07,Cloud-native & DevOps,Stockholm,0,128
 2009-07,Cloud-native & DevOps,Göteborg,0,43
 2009-07,Cloud-native & DevOps,Malmö,0,14
+2009-07,IoT & embedded,Sweden,7,332
+2009-07,IoT & embedded,Stockholm,2,128
+2009-07,IoT & embedded,Göteborg,3,43
+2009-07,IoT & embedded,Malmö,0,14
+2009-07,Blockchain & Web3,Sweden,0,332
+2009-07,Blockchain & Web3,Stockholm,0,128
+2009-07,Blockchain & Web3,Göteborg,0,43
+2009-07,Blockchain & Web3,Malmö,0,14
+2009-07,Quantum computing,Sweden,0,332
+2009-07,Quantum computing,Stockholm,0,128
+2009-07,Quantum computing,Göteborg,0,43
+2009-07,Quantum computing,Malmö,0,14
 2009-08,AI,Sweden,3,463
 2009-08,AI,Stockholm,0,177
 2009-08,AI,Göteborg,3,60
@@ -623,6 +923,18 @@ month,topic,location,it_ads,it_total_ads
 2009-08,Cloud-native & DevOps,Stockholm,0,177
 2009-08,Cloud-native & DevOps,Göteborg,1,60
 2009-08,Cloud-native & DevOps,Malmö,0,17
+2009-08,IoT & embedded,Sweden,19,463
+2009-08,IoT & embedded,Stockholm,0,177
+2009-08,IoT & embedded,Göteborg,7,60
+2009-08,IoT & embedded,Malmö,0,17
+2009-08,Blockchain & Web3,Sweden,0,463
+2009-08,Blockchain & Web3,Stockholm,0,177
+2009-08,Blockchain & Web3,Göteborg,0,60
+2009-08,Blockchain & Web3,Malmö,0,17
+2009-08,Quantum computing,Sweden,0,463
+2009-08,Quantum computing,Stockholm,0,177
+2009-08,Quantum computing,Göteborg,0,60
+2009-08,Quantum computing,Malmö,0,17
 2009-09,AI,Sweden,0,688
 2009-09,AI,Stockholm,0,259
 2009-09,AI,Göteborg,0,89
@@ -647,6 +959,18 @@ month,topic,location,it_ads,it_total_ads
 2009-09,Cloud-native & DevOps,Stockholm,0,259
 2009-09,Cloud-native & DevOps,Göteborg,0,89
 2009-09,Cloud-native & DevOps,Malmö,0,27
+2009-09,IoT & embedded,Sweden,21,688
+2009-09,IoT & embedded,Stockholm,1,259
+2009-09,IoT & embedded,Göteborg,9,89
+2009-09,IoT & embedded,Malmö,0,27
+2009-09,Blockchain & Web3,Sweden,0,688
+2009-09,Blockchain & Web3,Stockholm,0,259
+2009-09,Blockchain & Web3,Göteborg,0,89
+2009-09,Blockchain & Web3,Malmö,0,27
+2009-09,Quantum computing,Sweden,0,688
+2009-09,Quantum computing,Stockholm,0,259
+2009-09,Quantum computing,Göteborg,0,89
+2009-09,Quantum computing,Malmö,0,27
 2009-10,AI,Sweden,1,766
 2009-10,AI,Stockholm,1,336
 2009-10,AI,Göteborg,0,90
@@ -671,6 +995,18 @@ month,topic,location,it_ads,it_total_ads
 2009-10,Cloud-native & DevOps,Stockholm,0,336
 2009-10,Cloud-native & DevOps,Göteborg,0,90
 2009-10,Cloud-native & DevOps,Malmö,0,20
+2009-10,IoT & embedded,Sweden,16,766
+2009-10,IoT & embedded,Stockholm,5,336
+2009-10,IoT & embedded,Göteborg,5,90
+2009-10,IoT & embedded,Malmö,0,20
+2009-10,Blockchain & Web3,Sweden,0,766
+2009-10,Blockchain & Web3,Stockholm,0,336
+2009-10,Blockchain & Web3,Göteborg,0,90
+2009-10,Blockchain & Web3,Malmö,0,20
+2009-10,Quantum computing,Sweden,0,766
+2009-10,Quantum computing,Stockholm,0,336
+2009-10,Quantum computing,Göteborg,0,90
+2009-10,Quantum computing,Malmö,0,20
 2009-11,AI,Sweden,1,767
 2009-11,AI,Stockholm,0,307
 2009-11,AI,Göteborg,1,101
@@ -695,6 +1031,18 @@ month,topic,location,it_ads,it_total_ads
 2009-11,Cloud-native & DevOps,Stockholm,1,307
 2009-11,Cloud-native & DevOps,Göteborg,0,101
 2009-11,Cloud-native & DevOps,Malmö,0,27
+2009-11,IoT & embedded,Sweden,29,767
+2009-11,IoT & embedded,Stockholm,4,307
+2009-11,IoT & embedded,Göteborg,9,101
+2009-11,IoT & embedded,Malmö,1,27
+2009-11,Blockchain & Web3,Sweden,0,767
+2009-11,Blockchain & Web3,Stockholm,0,307
+2009-11,Blockchain & Web3,Göteborg,0,101
+2009-11,Blockchain & Web3,Malmö,0,27
+2009-11,Quantum computing,Sweden,0,767
+2009-11,Quantum computing,Stockholm,0,307
+2009-11,Quantum computing,Göteborg,0,101
+2009-11,Quantum computing,Malmö,0,27
 2009-12,AI,Sweden,1,763
 2009-12,AI,Stockholm,0,327
 2009-12,AI,Göteborg,1,106
@@ -719,6 +1067,18 @@ month,topic,location,it_ads,it_total_ads
 2009-12,Cloud-native & DevOps,Stockholm,0,327
 2009-12,Cloud-native & DevOps,Göteborg,0,106
 2009-12,Cloud-native & DevOps,Malmö,0,27
+2009-12,IoT & embedded,Sweden,23,763
+2009-12,IoT & embedded,Stockholm,5,327
+2009-12,IoT & embedded,Göteborg,9,106
+2009-12,IoT & embedded,Malmö,1,27
+2009-12,Blockchain & Web3,Sweden,0,763
+2009-12,Blockchain & Web3,Stockholm,0,327
+2009-12,Blockchain & Web3,Göteborg,0,106
+2009-12,Blockchain & Web3,Malmö,0,27
+2009-12,Quantum computing,Sweden,0,763
+2009-12,Quantum computing,Stockholm,0,327
+2009-12,Quantum computing,Göteborg,0,106
+2009-12,Quantum computing,Malmö,0,27
 2010-01,AI,Sweden,2,770
 2010-01,AI,Stockholm,0,343
 2010-01,AI,Göteborg,2,101
@@ -743,6 +1103,18 @@ month,topic,location,it_ads,it_total_ads
 2010-01,Cloud-native & DevOps,Stockholm,0,343
 2010-01,Cloud-native & DevOps,Göteborg,0,101
 2010-01,Cloud-native & DevOps,Malmö,0,26
+2010-01,IoT & embedded,Sweden,31,770
+2010-01,IoT & embedded,Stockholm,4,343
+2010-01,IoT & embedded,Göteborg,9,101
+2010-01,IoT & embedded,Malmö,0,26
+2010-01,Blockchain & Web3,Sweden,0,770
+2010-01,Blockchain & Web3,Stockholm,0,343
+2010-01,Blockchain & Web3,Göteborg,0,101
+2010-01,Blockchain & Web3,Malmö,0,26
+2010-01,Quantum computing,Sweden,0,770
+2010-01,Quantum computing,Stockholm,0,343
+2010-01,Quantum computing,Göteborg,0,101
+2010-01,Quantum computing,Malmö,0,26
 2010-02,AI,Sweden,3,881
 2010-02,AI,Stockholm,0,418
 2010-02,AI,Göteborg,0,110
@@ -767,6 +1139,18 @@ month,topic,location,it_ads,it_total_ads
 2010-02,Cloud-native & DevOps,Stockholm,0,418
 2010-02,Cloud-native & DevOps,Göteborg,0,110
 2010-02,Cloud-native & DevOps,Malmö,0,21
+2010-02,IoT & embedded,Sweden,37,881
+2010-02,IoT & embedded,Stockholm,11,418
+2010-02,IoT & embedded,Göteborg,7,110
+2010-02,IoT & embedded,Malmö,2,21
+2010-02,Blockchain & Web3,Sweden,0,881
+2010-02,Blockchain & Web3,Stockholm,0,418
+2010-02,Blockchain & Web3,Göteborg,0,110
+2010-02,Blockchain & Web3,Malmö,0,21
+2010-02,Quantum computing,Sweden,0,881
+2010-02,Quantum computing,Stockholm,0,418
+2010-02,Quantum computing,Göteborg,0,110
+2010-02,Quantum computing,Malmö,0,21
 2010-03,AI,Sweden,3,1118
 2010-03,AI,Stockholm,0,465
 2010-03,AI,Göteborg,3,116
@@ -791,6 +1175,18 @@ month,topic,location,it_ads,it_total_ads
 2010-03,Cloud-native & DevOps,Stockholm,1,465
 2010-03,Cloud-native & DevOps,Göteborg,0,116
 2010-03,Cloud-native & DevOps,Malmö,0,43
+2010-03,IoT & embedded,Sweden,41,1118
+2010-03,IoT & embedded,Stockholm,14,465
+2010-03,IoT & embedded,Göteborg,9,116
+2010-03,IoT & embedded,Malmö,1,43
+2010-03,Blockchain & Web3,Sweden,0,1118
+2010-03,Blockchain & Web3,Stockholm,0,465
+2010-03,Blockchain & Web3,Göteborg,0,116
+2010-03,Blockchain & Web3,Malmö,0,43
+2010-03,Quantum computing,Sweden,0,1118
+2010-03,Quantum computing,Stockholm,0,465
+2010-03,Quantum computing,Göteborg,0,116
+2010-03,Quantum computing,Malmö,0,43
 2010-04,AI,Sweden,1,915
 2010-04,AI,Stockholm,0,416
 2010-04,AI,Göteborg,1,97
@@ -815,6 +1211,18 @@ month,topic,location,it_ads,it_total_ads
 2010-04,Cloud-native & DevOps,Stockholm,1,416
 2010-04,Cloud-native & DevOps,Göteborg,0,97
 2010-04,Cloud-native & DevOps,Malmö,0,26
+2010-04,IoT & embedded,Sweden,37,915
+2010-04,IoT & embedded,Stockholm,9,416
+2010-04,IoT & embedded,Göteborg,9,97
+2010-04,IoT & embedded,Malmö,0,26
+2010-04,Blockchain & Web3,Sweden,0,915
+2010-04,Blockchain & Web3,Stockholm,0,416
+2010-04,Blockchain & Web3,Göteborg,0,97
+2010-04,Blockchain & Web3,Malmö,0,26
+2010-04,Quantum computing,Sweden,0,915
+2010-04,Quantum computing,Stockholm,0,416
+2010-04,Quantum computing,Göteborg,0,97
+2010-04,Quantum computing,Malmö,0,26
 2010-05,AI,Sweden,0,982
 2010-05,AI,Stockholm,0,419
 2010-05,AI,Göteborg,0,88
@@ -839,6 +1247,18 @@ month,topic,location,it_ads,it_total_ads
 2010-05,Cloud-native & DevOps,Stockholm,1,419
 2010-05,Cloud-native & DevOps,Göteborg,0,88
 2010-05,Cloud-native & DevOps,Malmö,0,35
+2010-05,IoT & embedded,Sweden,49,982
+2010-05,IoT & embedded,Stockholm,23,419
+2010-05,IoT & embedded,Göteborg,5,88
+2010-05,IoT & embedded,Malmö,2,35
+2010-05,Blockchain & Web3,Sweden,0,982
+2010-05,Blockchain & Web3,Stockholm,0,419
+2010-05,Blockchain & Web3,Göteborg,0,88
+2010-05,Blockchain & Web3,Malmö,0,35
+2010-05,Quantum computing,Sweden,0,982
+2010-05,Quantum computing,Stockholm,0,419
+2010-05,Quantum computing,Göteborg,0,88
+2010-05,Quantum computing,Malmö,0,35
 2010-06,AI,Sweden,2,1035
 2010-06,AI,Stockholm,1,462
 2010-06,AI,Göteborg,0,123
@@ -863,6 +1283,18 @@ month,topic,location,it_ads,it_total_ads
 2010-06,Cloud-native & DevOps,Stockholm,0,462
 2010-06,Cloud-native & DevOps,Göteborg,0,123
 2010-06,Cloud-native & DevOps,Malmö,0,43
+2010-06,IoT & embedded,Sweden,62,1035
+2010-06,IoT & embedded,Stockholm,18,462
+2010-06,IoT & embedded,Göteborg,14,123
+2010-06,IoT & embedded,Malmö,1,43
+2010-06,Blockchain & Web3,Sweden,1,1035
+2010-06,Blockchain & Web3,Stockholm,0,462
+2010-06,Blockchain & Web3,Göteborg,0,123
+2010-06,Blockchain & Web3,Malmö,0,43
+2010-06,Quantum computing,Sweden,0,1035
+2010-06,Quantum computing,Stockholm,0,462
+2010-06,Quantum computing,Göteborg,0,123
+2010-06,Quantum computing,Malmö,0,43
 2010-07,AI,Sweden,1,607
 2010-07,AI,Stockholm,1,237
 2010-07,AI,Göteborg,0,74
@@ -887,6 +1319,18 @@ month,topic,location,it_ads,it_total_ads
 2010-07,Cloud-native & DevOps,Stockholm,1,237
 2010-07,Cloud-native & DevOps,Göteborg,0,74
 2010-07,Cloud-native & DevOps,Malmö,0,26
+2010-07,IoT & embedded,Sweden,21,607
+2010-07,IoT & embedded,Stockholm,8,237
+2010-07,IoT & embedded,Göteborg,3,74
+2010-07,IoT & embedded,Malmö,0,26
+2010-07,Blockchain & Web3,Sweden,0,607
+2010-07,Blockchain & Web3,Stockholm,0,237
+2010-07,Blockchain & Web3,Göteborg,0,74
+2010-07,Blockchain & Web3,Malmö,0,26
+2010-07,Quantum computing,Sweden,0,607
+2010-07,Quantum computing,Stockholm,0,237
+2010-07,Quantum computing,Göteborg,0,74
+2010-07,Quantum computing,Malmö,0,26
 2010-08,AI,Sweden,1,920
 2010-08,AI,Stockholm,0,398
 2010-08,AI,Göteborg,0,91
@@ -911,6 +1355,18 @@ month,topic,location,it_ads,it_total_ads
 2010-08,Cloud-native & DevOps,Stockholm,0,398
 2010-08,Cloud-native & DevOps,Göteborg,0,91
 2010-08,Cloud-native & DevOps,Malmö,0,34
+2010-08,IoT & embedded,Sweden,44,920
+2010-08,IoT & embedded,Stockholm,6,398
+2010-08,IoT & embedded,Göteborg,11,91
+2010-08,IoT & embedded,Malmö,3,34
+2010-08,Blockchain & Web3,Sweden,0,920
+2010-08,Blockchain & Web3,Stockholm,0,398
+2010-08,Blockchain & Web3,Göteborg,0,91
+2010-08,Blockchain & Web3,Malmö,0,34
+2010-08,Quantum computing,Sweden,0,920
+2010-08,Quantum computing,Stockholm,0,398
+2010-08,Quantum computing,Göteborg,0,91
+2010-08,Quantum computing,Malmö,0,34
 2010-09,AI,Sweden,3,1265
 2010-09,AI,Stockholm,0,480
 2010-09,AI,Göteborg,2,174
@@ -935,6 +1391,18 @@ month,topic,location,it_ads,it_total_ads
 2010-09,Cloud-native & DevOps,Stockholm,0,480
 2010-09,Cloud-native & DevOps,Göteborg,0,174
 2010-09,Cloud-native & DevOps,Malmö,0,62
+2010-09,IoT & embedded,Sweden,65,1265
+2010-09,IoT & embedded,Stockholm,9,480
+2010-09,IoT & embedded,Göteborg,13,174
+2010-09,IoT & embedded,Malmö,4,62
+2010-09,Blockchain & Web3,Sweden,0,1265
+2010-09,Blockchain & Web3,Stockholm,0,480
+2010-09,Blockchain & Web3,Göteborg,0,174
+2010-09,Blockchain & Web3,Malmö,0,62
+2010-09,Quantum computing,Sweden,0,1265
+2010-09,Quantum computing,Stockholm,0,480
+2010-09,Quantum computing,Göteborg,0,174
+2010-09,Quantum computing,Malmö,0,62
 2010-10,AI,Sweden,3,1339
 2010-10,AI,Stockholm,0,549
 2010-10,AI,Göteborg,0,128
@@ -959,6 +1427,18 @@ month,topic,location,it_ads,it_total_ads
 2010-10,Cloud-native & DevOps,Stockholm,1,549
 2010-10,Cloud-native & DevOps,Göteborg,0,128
 2010-10,Cloud-native & DevOps,Malmö,0,52
+2010-10,IoT & embedded,Sweden,64,1339
+2010-10,IoT & embedded,Stockholm,11,549
+2010-10,IoT & embedded,Göteborg,11,128
+2010-10,IoT & embedded,Malmö,4,52
+2010-10,Blockchain & Web3,Sweden,0,1339
+2010-10,Blockchain & Web3,Stockholm,0,549
+2010-10,Blockchain & Web3,Göteborg,0,128
+2010-10,Blockchain & Web3,Malmö,0,52
+2010-10,Quantum computing,Sweden,0,1339
+2010-10,Quantum computing,Stockholm,0,549
+2010-10,Quantum computing,Göteborg,0,128
+2010-10,Quantum computing,Malmö,0,52
 2010-11,AI,Sweden,6,1359
 2010-11,AI,Stockholm,6,585
 2010-11,AI,Göteborg,0,158
@@ -983,6 +1463,18 @@ month,topic,location,it_ads,it_total_ads
 2010-11,Cloud-native & DevOps,Stockholm,2,585
 2010-11,Cloud-native & DevOps,Göteborg,2,158
 2010-11,Cloud-native & DevOps,Malmö,0,69
+2010-11,IoT & embedded,Sweden,68,1359
+2010-11,IoT & embedded,Stockholm,20,585
+2010-11,IoT & embedded,Göteborg,12,158
+2010-11,IoT & embedded,Malmö,5,69
+2010-11,Blockchain & Web3,Sweden,0,1359
+2010-11,Blockchain & Web3,Stockholm,0,585
+2010-11,Blockchain & Web3,Göteborg,0,158
+2010-11,Blockchain & Web3,Malmö,0,69
+2010-11,Quantum computing,Sweden,0,1359
+2010-11,Quantum computing,Stockholm,0,585
+2010-11,Quantum computing,Göteborg,0,158
+2010-11,Quantum computing,Malmö,0,69
 2010-12,AI,Sweden,2,1302
 2010-12,AI,Stockholm,2,519
 2010-12,AI,Göteborg,0,146
@@ -1007,6 +1499,18 @@ month,topic,location,it_ads,it_total_ads
 2010-12,Cloud-native & DevOps,Stockholm,1,519
 2010-12,Cloud-native & DevOps,Göteborg,0,146
 2010-12,Cloud-native & DevOps,Malmö,0,58
+2010-12,IoT & embedded,Sweden,85,1302
+2010-12,IoT & embedded,Stockholm,25,519
+2010-12,IoT & embedded,Göteborg,11,146
+2010-12,IoT & embedded,Malmö,5,58
+2010-12,Blockchain & Web3,Sweden,1,1302
+2010-12,Blockchain & Web3,Stockholm,0,519
+2010-12,Blockchain & Web3,Göteborg,0,146
+2010-12,Blockchain & Web3,Malmö,0,58
+2010-12,Quantum computing,Sweden,0,1302
+2010-12,Quantum computing,Stockholm,0,519
+2010-12,Quantum computing,Göteborg,0,146
+2010-12,Quantum computing,Malmö,0,58
 2011-01,AI,Sweden,3,1374
 2011-01,AI,Stockholm,1,538
 2011-01,AI,Göteborg,0,196
@@ -1031,6 +1535,18 @@ month,topic,location,it_ads,it_total_ads
 2011-01,Cloud-native & DevOps,Stockholm,0,538
 2011-01,Cloud-native & DevOps,Göteborg,0,196
 2011-01,Cloud-native & DevOps,Malmö,0,56
+2011-01,IoT & embedded,Sweden,87,1374
+2011-01,IoT & embedded,Stockholm,18,538
+2011-01,IoT & embedded,Göteborg,26,196
+2011-01,IoT & embedded,Malmö,2,56
+2011-01,Blockchain & Web3,Sweden,0,1374
+2011-01,Blockchain & Web3,Stockholm,0,538
+2011-01,Blockchain & Web3,Göteborg,0,196
+2011-01,Blockchain & Web3,Malmö,0,56
+2011-01,Quantum computing,Sweden,0,1374
+2011-01,Quantum computing,Stockholm,0,538
+2011-01,Quantum computing,Göteborg,0,196
+2011-01,Quantum computing,Malmö,0,56
 2011-02,AI,Sweden,1,1639
 2011-02,AI,Stockholm,1,658
 2011-02,AI,Göteborg,0,221
@@ -1055,6 +1571,18 @@ month,topic,location,it_ads,it_total_ads
 2011-02,Cloud-native & DevOps,Stockholm,1,658
 2011-02,Cloud-native & DevOps,Göteborg,2,221
 2011-02,Cloud-native & DevOps,Malmö,0,89
+2011-02,IoT & embedded,Sweden,126,1639
+2011-02,IoT & embedded,Stockholm,22,658
+2011-02,IoT & embedded,Göteborg,30,221
+2011-02,IoT & embedded,Malmö,7,89
+2011-02,Blockchain & Web3,Sweden,0,1639
+2011-02,Blockchain & Web3,Stockholm,0,658
+2011-02,Blockchain & Web3,Göteborg,0,221
+2011-02,Blockchain & Web3,Malmö,0,89
+2011-02,Quantum computing,Sweden,0,1639
+2011-02,Quantum computing,Stockholm,0,658
+2011-02,Quantum computing,Göteborg,0,221
+2011-02,Quantum computing,Malmö,0,89
 2011-03,AI,Sweden,5,1818
 2011-03,AI,Stockholm,5,760
 2011-03,AI,Göteborg,0,237
@@ -1079,6 +1607,18 @@ month,topic,location,it_ads,it_total_ads
 2011-03,Cloud-native & DevOps,Stockholm,1,760
 2011-03,Cloud-native & DevOps,Göteborg,0,237
 2011-03,Cloud-native & DevOps,Malmö,0,90
+2011-03,IoT & embedded,Sweden,138,1818
+2011-03,IoT & embedded,Stockholm,37,760
+2011-03,IoT & embedded,Göteborg,50,237
+2011-03,IoT & embedded,Malmö,4,90
+2011-03,Blockchain & Web3,Sweden,0,1818
+2011-03,Blockchain & Web3,Stockholm,0,760
+2011-03,Blockchain & Web3,Göteborg,0,237
+2011-03,Blockchain & Web3,Malmö,0,90
+2011-03,Quantum computing,Sweden,0,1818
+2011-03,Quantum computing,Stockholm,0,760
+2011-03,Quantum computing,Göteborg,0,237
+2011-03,Quantum computing,Malmö,0,90
 2011-04,AI,Sweden,6,1487
 2011-04,AI,Stockholm,5,613
 2011-04,AI,Göteborg,0,208
@@ -1103,6 +1643,18 @@ month,topic,location,it_ads,it_total_ads
 2011-04,Cloud-native & DevOps,Stockholm,0,613
 2011-04,Cloud-native & DevOps,Göteborg,1,208
 2011-04,Cloud-native & DevOps,Malmö,0,87
+2011-04,IoT & embedded,Sweden,112,1487
+2011-04,IoT & embedded,Stockholm,25,613
+2011-04,IoT & embedded,Göteborg,35,208
+2011-04,IoT & embedded,Malmö,9,87
+2011-04,Blockchain & Web3,Sweden,1,1487
+2011-04,Blockchain & Web3,Stockholm,0,613
+2011-04,Blockchain & Web3,Göteborg,0,208
+2011-04,Blockchain & Web3,Malmö,0,87
+2011-04,Quantum computing,Sweden,0,1487
+2011-04,Quantum computing,Stockholm,0,613
+2011-04,Quantum computing,Göteborg,0,208
+2011-04,Quantum computing,Malmö,0,87
 2011-05,AI,Sweden,1,1887
 2011-05,AI,Stockholm,0,756
 2011-05,AI,Göteborg,0,296
@@ -1127,6 +1679,18 @@ month,topic,location,it_ads,it_total_ads
 2011-05,Cloud-native & DevOps,Stockholm,0,756
 2011-05,Cloud-native & DevOps,Göteborg,1,296
 2011-05,Cloud-native & DevOps,Malmö,1,105
+2011-05,IoT & embedded,Sweden,159,1887
+2011-05,IoT & embedded,Stockholm,36,756
+2011-05,IoT & embedded,Göteborg,32,296
+2011-05,IoT & embedded,Malmö,10,105
+2011-05,Blockchain & Web3,Sweden,0,1887
+2011-05,Blockchain & Web3,Stockholm,0,756
+2011-05,Blockchain & Web3,Göteborg,0,296
+2011-05,Blockchain & Web3,Malmö,0,105
+2011-05,Quantum computing,Sweden,0,1887
+2011-05,Quantum computing,Stockholm,0,756
+2011-05,Quantum computing,Göteborg,0,296
+2011-05,Quantum computing,Malmö,0,105
 2011-06,AI,Sweden,4,1445
 2011-06,AI,Stockholm,3,555
 2011-06,AI,Göteborg,0,239
@@ -1151,6 +1715,18 @@ month,topic,location,it_ads,it_total_ads
 2011-06,Cloud-native & DevOps,Stockholm,3,555
 2011-06,Cloud-native & DevOps,Göteborg,1,239
 2011-06,Cloud-native & DevOps,Malmö,0,89
+2011-06,IoT & embedded,Sweden,97,1445
+2011-06,IoT & embedded,Stockholm,27,555
+2011-06,IoT & embedded,Göteborg,15,239
+2011-06,IoT & embedded,Malmö,5,89
+2011-06,Blockchain & Web3,Sweden,0,1445
+2011-06,Blockchain & Web3,Stockholm,0,555
+2011-06,Blockchain & Web3,Göteborg,0,239
+2011-06,Blockchain & Web3,Malmö,0,89
+2011-06,Quantum computing,Sweden,0,1445
+2011-06,Quantum computing,Stockholm,0,555
+2011-06,Quantum computing,Göteborg,0,239
+2011-06,Quantum computing,Malmö,0,89
 2011-07,AI,Sweden,0,884
 2011-07,AI,Stockholm,0,362
 2011-07,AI,Göteborg,0,144
@@ -1175,6 +1751,18 @@ month,topic,location,it_ads,it_total_ads
 2011-07,Cloud-native & DevOps,Stockholm,0,362
 2011-07,Cloud-native & DevOps,Göteborg,1,144
 2011-07,Cloud-native & DevOps,Malmö,0,45
+2011-07,IoT & embedded,Sweden,82,884
+2011-07,IoT & embedded,Stockholm,19,362
+2011-07,IoT & embedded,Göteborg,28,144
+2011-07,IoT & embedded,Malmö,9,45
+2011-07,Blockchain & Web3,Sweden,0,884
+2011-07,Blockchain & Web3,Stockholm,0,362
+2011-07,Blockchain & Web3,Göteborg,0,144
+2011-07,Blockchain & Web3,Malmö,0,45
+2011-07,Quantum computing,Sweden,0,884
+2011-07,Quantum computing,Stockholm,0,362
+2011-07,Quantum computing,Göteborg,0,144
+2011-07,Quantum computing,Malmö,0,45
 2011-08,AI,Sweden,1,1359
 2011-08,AI,Stockholm,1,547
 2011-08,AI,Göteborg,0,194
@@ -1199,6 +1787,18 @@ month,topic,location,it_ads,it_total_ads
 2011-08,Cloud-native & DevOps,Stockholm,0,547
 2011-08,Cloud-native & DevOps,Göteborg,2,194
 2011-08,Cloud-native & DevOps,Malmö,0,48
+2011-08,IoT & embedded,Sweden,99,1359
+2011-08,IoT & embedded,Stockholm,26,547
+2011-08,IoT & embedded,Göteborg,19,194
+2011-08,IoT & embedded,Malmö,2,48
+2011-08,Blockchain & Web3,Sweden,0,1359
+2011-08,Blockchain & Web3,Stockholm,0,547
+2011-08,Blockchain & Web3,Göteborg,0,194
+2011-08,Blockchain & Web3,Malmö,0,48
+2011-08,Quantum computing,Sweden,0,1359
+2011-08,Quantum computing,Stockholm,0,547
+2011-08,Quantum computing,Göteborg,0,194
+2011-08,Quantum computing,Malmö,0,48
 2011-09,AI,Sweden,1,1849
 2011-09,AI,Stockholm,1,722
 2011-09,AI,Göteborg,0,285
@@ -1223,6 +1823,18 @@ month,topic,location,it_ads,it_total_ads
 2011-09,Cloud-native & DevOps,Stockholm,5,722
 2011-09,Cloud-native & DevOps,Göteborg,0,285
 2011-09,Cloud-native & DevOps,Malmö,0,87
+2011-09,IoT & embedded,Sweden,151,1849
+2011-09,IoT & embedded,Stockholm,35,722
+2011-09,IoT & embedded,Göteborg,28,285
+2011-09,IoT & embedded,Malmö,11,87
+2011-09,Blockchain & Web3,Sweden,0,1849
+2011-09,Blockchain & Web3,Stockholm,0,722
+2011-09,Blockchain & Web3,Göteborg,0,285
+2011-09,Blockchain & Web3,Malmö,0,87
+2011-09,Quantum computing,Sweden,0,1849
+2011-09,Quantum computing,Stockholm,0,722
+2011-09,Quantum computing,Göteborg,0,285
+2011-09,Quantum computing,Malmö,0,87
 2011-10,AI,Sweden,1,1846
 2011-10,AI,Stockholm,0,763
 2011-10,AI,Göteborg,0,264
@@ -1247,6 +1859,18 @@ month,topic,location,it_ads,it_total_ads
 2011-10,Cloud-native & DevOps,Stockholm,0,763
 2011-10,Cloud-native & DevOps,Göteborg,0,264
 2011-10,Cloud-native & DevOps,Malmö,0,75
+2011-10,IoT & embedded,Sweden,124,1846
+2011-10,IoT & embedded,Stockholm,31,763
+2011-10,IoT & embedded,Göteborg,24,264
+2011-10,IoT & embedded,Malmö,11,75
+2011-10,Blockchain & Web3,Sweden,0,1846
+2011-10,Blockchain & Web3,Stockholm,0,763
+2011-10,Blockchain & Web3,Göteborg,0,264
+2011-10,Blockchain & Web3,Malmö,0,75
+2011-10,Quantum computing,Sweden,0,1846
+2011-10,Quantum computing,Stockholm,0,763
+2011-10,Quantum computing,Göteborg,0,264
+2011-10,Quantum computing,Malmö,0,75
 2011-11,AI,Sweden,1,1834
 2011-11,AI,Stockholm,0,669
 2011-11,AI,Göteborg,0,336
@@ -1271,6 +1895,18 @@ month,topic,location,it_ads,it_total_ads
 2011-11,Cloud-native & DevOps,Stockholm,4,669
 2011-11,Cloud-native & DevOps,Göteborg,0,336
 2011-11,Cloud-native & DevOps,Malmö,0,92
+2011-11,IoT & embedded,Sweden,128,1834
+2011-11,IoT & embedded,Stockholm,23,669
+2011-11,IoT & embedded,Göteborg,39,336
+2011-11,IoT & embedded,Malmö,7,92
+2011-11,Blockchain & Web3,Sweden,0,1834
+2011-11,Blockchain & Web3,Stockholm,0,669
+2011-11,Blockchain & Web3,Göteborg,0,336
+2011-11,Blockchain & Web3,Malmö,0,92
+2011-11,Quantum computing,Sweden,0,1834
+2011-11,Quantum computing,Stockholm,0,669
+2011-11,Quantum computing,Göteborg,0,336
+2011-11,Quantum computing,Malmö,0,92
 2011-12,AI,Sweden,4,1670
 2011-12,AI,Stockholm,3,586
 2011-12,AI,Göteborg,1,291
@@ -1295,6 +1931,18 @@ month,topic,location,it_ads,it_total_ads
 2011-12,Cloud-native & DevOps,Stockholm,2,586
 2011-12,Cloud-native & DevOps,Göteborg,0,291
 2011-12,Cloud-native & DevOps,Malmö,0,72
+2011-12,IoT & embedded,Sweden,112,1670
+2011-12,IoT & embedded,Stockholm,18,586
+2011-12,IoT & embedded,Göteborg,30,291
+2011-12,IoT & embedded,Malmö,7,72
+2011-12,Blockchain & Web3,Sweden,0,1670
+2011-12,Blockchain & Web3,Stockholm,0,586
+2011-12,Blockchain & Web3,Göteborg,0,291
+2011-12,Blockchain & Web3,Malmö,0,72
+2011-12,Quantum computing,Sweden,0,1670
+2011-12,Quantum computing,Stockholm,0,586
+2011-12,Quantum computing,Göteborg,0,291
+2011-12,Quantum computing,Malmö,0,72
 2012-01,AI,Sweden,2,1584
 2012-01,AI,Stockholm,1,620
 2012-01,AI,Göteborg,0,208
@@ -1319,6 +1967,18 @@ month,topic,location,it_ads,it_total_ads
 2012-01,Cloud-native & DevOps,Stockholm,3,620
 2012-01,Cloud-native & DevOps,Göteborg,1,208
 2012-01,Cloud-native & DevOps,Malmö,0,72
+2012-01,IoT & embedded,Sweden,112,1584
+2012-01,IoT & embedded,Stockholm,20,620
+2012-01,IoT & embedded,Göteborg,14,208
+2012-01,IoT & embedded,Malmö,12,72
+2012-01,Blockchain & Web3,Sweden,0,1584
+2012-01,Blockchain & Web3,Stockholm,0,620
+2012-01,Blockchain & Web3,Göteborg,0,208
+2012-01,Blockchain & Web3,Malmö,0,72
+2012-01,Quantum computing,Sweden,0,1584
+2012-01,Quantum computing,Stockholm,0,620
+2012-01,Quantum computing,Göteborg,0,208
+2012-01,Quantum computing,Malmö,0,72
 2012-02,AI,Sweden,2,1857
 2012-02,AI,Stockholm,1,694
 2012-02,AI,Göteborg,0,306
@@ -1343,6 +2003,18 @@ month,topic,location,it_ads,it_total_ads
 2012-02,Cloud-native & DevOps,Stockholm,4,694
 2012-02,Cloud-native & DevOps,Göteborg,1,306
 2012-02,Cloud-native & DevOps,Malmö,0,70
+2012-02,IoT & embedded,Sweden,107,1857
+2012-02,IoT & embedded,Stockholm,27,694
+2012-02,IoT & embedded,Göteborg,13,306
+2012-02,IoT & embedded,Malmö,6,70
+2012-02,Blockchain & Web3,Sweden,0,1857
+2012-02,Blockchain & Web3,Stockholm,0,694
+2012-02,Blockchain & Web3,Göteborg,0,306
+2012-02,Blockchain & Web3,Malmö,0,70
+2012-02,Quantum computing,Sweden,0,1857
+2012-02,Quantum computing,Stockholm,0,694
+2012-02,Quantum computing,Göteborg,0,306
+2012-02,Quantum computing,Malmö,0,70
 2012-03,AI,Sweden,1,1960
 2012-03,AI,Stockholm,1,702
 2012-03,AI,Göteborg,0,334
@@ -1367,6 +2039,18 @@ month,topic,location,it_ads,it_total_ads
 2012-03,Cloud-native & DevOps,Stockholm,2,702
 2012-03,Cloud-native & DevOps,Göteborg,0,334
 2012-03,Cloud-native & DevOps,Malmö,0,102
+2012-03,IoT & embedded,Sweden,113,1960
+2012-03,IoT & embedded,Stockholm,22,702
+2012-03,IoT & embedded,Göteborg,35,334
+2012-03,IoT & embedded,Malmö,5,102
+2012-03,Blockchain & Web3,Sweden,0,1960
+2012-03,Blockchain & Web3,Stockholm,0,702
+2012-03,Blockchain & Web3,Göteborg,0,334
+2012-03,Blockchain & Web3,Malmö,0,102
+2012-03,Quantum computing,Sweden,0,1960
+2012-03,Quantum computing,Stockholm,0,702
+2012-03,Quantum computing,Göteborg,0,334
+2012-03,Quantum computing,Malmö,0,102
 2012-04,AI,Sweden,3,1600
 2012-04,AI,Stockholm,2,556
 2012-04,AI,Göteborg,0,283
@@ -1391,6 +2075,18 @@ month,topic,location,it_ads,it_total_ads
 2012-04,Cloud-native & DevOps,Stockholm,4,556
 2012-04,Cloud-native & DevOps,Göteborg,0,283
 2012-04,Cloud-native & DevOps,Malmö,0,69
+2012-04,IoT & embedded,Sweden,101,1600
+2012-04,IoT & embedded,Stockholm,26,556
+2012-04,IoT & embedded,Göteborg,24,283
+2012-04,IoT & embedded,Malmö,0,69
+2012-04,Blockchain & Web3,Sweden,0,1600
+2012-04,Blockchain & Web3,Stockholm,0,556
+2012-04,Blockchain & Web3,Göteborg,0,283
+2012-04,Blockchain & Web3,Malmö,0,69
+2012-04,Quantum computing,Sweden,0,1600
+2012-04,Quantum computing,Stockholm,0,556
+2012-04,Quantum computing,Göteborg,0,283
+2012-04,Quantum computing,Malmö,0,69
 2012-05,AI,Sweden,5,1796
 2012-05,AI,Stockholm,4,696
 2012-05,AI,Göteborg,0,262
@@ -1415,6 +2111,18 @@ month,topic,location,it_ads,it_total_ads
 2012-05,Cloud-native & DevOps,Stockholm,8,696
 2012-05,Cloud-native & DevOps,Göteborg,0,262
 2012-05,Cloud-native & DevOps,Malmö,0,69
+2012-05,IoT & embedded,Sweden,89,1796
+2012-05,IoT & embedded,Stockholm,17,696
+2012-05,IoT & embedded,Göteborg,18,262
+2012-05,IoT & embedded,Malmö,5,69
+2012-05,Blockchain & Web3,Sweden,0,1796
+2012-05,Blockchain & Web3,Stockholm,0,696
+2012-05,Blockchain & Web3,Göteborg,0,262
+2012-05,Blockchain & Web3,Malmö,0,69
+2012-05,Quantum computing,Sweden,0,1796
+2012-05,Quantum computing,Stockholm,0,696
+2012-05,Quantum computing,Göteborg,0,262
+2012-05,Quantum computing,Malmö,0,69
 2012-06,AI,Sweden,5,1489
 2012-06,AI,Stockholm,4,500
 2012-06,AI,Göteborg,0,253
@@ -1439,6 +2147,18 @@ month,topic,location,it_ads,it_total_ads
 2012-06,Cloud-native & DevOps,Stockholm,5,500
 2012-06,Cloud-native & DevOps,Göteborg,3,253
 2012-06,Cloud-native & DevOps,Malmö,0,86
+2012-06,IoT & embedded,Sweden,98,1489
+2012-06,IoT & embedded,Stockholm,12,500
+2012-06,IoT & embedded,Göteborg,17,253
+2012-06,IoT & embedded,Malmö,14,86
+2012-06,Blockchain & Web3,Sweden,0,1489
+2012-06,Blockchain & Web3,Stockholm,0,500
+2012-06,Blockchain & Web3,Göteborg,0,253
+2012-06,Blockchain & Web3,Malmö,0,86
+2012-06,Quantum computing,Sweden,0,1489
+2012-06,Quantum computing,Stockholm,0,500
+2012-06,Quantum computing,Göteborg,0,253
+2012-06,Quantum computing,Malmö,0,86
 2012-07,AI,Sweden,2,953
 2012-07,AI,Stockholm,2,372
 2012-07,AI,Göteborg,0,169
@@ -1463,6 +2183,18 @@ month,topic,location,it_ads,it_total_ads
 2012-07,Cloud-native & DevOps,Stockholm,5,372
 2012-07,Cloud-native & DevOps,Göteborg,0,169
 2012-07,Cloud-native & DevOps,Malmö,0,48
+2012-07,IoT & embedded,Sweden,62,953
+2012-07,IoT & embedded,Stockholm,11,372
+2012-07,IoT & embedded,Göteborg,17,169
+2012-07,IoT & embedded,Malmö,1,48
+2012-07,Blockchain & Web3,Sweden,0,953
+2012-07,Blockchain & Web3,Stockholm,0,372
+2012-07,Blockchain & Web3,Göteborg,0,169
+2012-07,Blockchain & Web3,Malmö,0,48
+2012-07,Quantum computing,Sweden,0,953
+2012-07,Quantum computing,Stockholm,0,372
+2012-07,Quantum computing,Göteborg,0,169
+2012-07,Quantum computing,Malmö,0,48
 2012-08,AI,Sweden,1,1481
 2012-08,AI,Stockholm,1,597
 2012-08,AI,Göteborg,0,205
@@ -1487,6 +2219,18 @@ month,topic,location,it_ads,it_total_ads
 2012-08,Cloud-native & DevOps,Stockholm,2,597
 2012-08,Cloud-native & DevOps,Göteborg,1,205
 2012-08,Cloud-native & DevOps,Malmö,1,63
+2012-08,IoT & embedded,Sweden,101,1481
+2012-08,IoT & embedded,Stockholm,23,597
+2012-08,IoT & embedded,Göteborg,14,205
+2012-08,IoT & embedded,Malmö,7,63
+2012-08,Blockchain & Web3,Sweden,0,1481
+2012-08,Blockchain & Web3,Stockholm,0,597
+2012-08,Blockchain & Web3,Göteborg,0,205
+2012-08,Blockchain & Web3,Malmö,0,63
+2012-08,Quantum computing,Sweden,0,1481
+2012-08,Quantum computing,Stockholm,0,597
+2012-08,Quantum computing,Göteborg,0,205
+2012-08,Quantum computing,Malmö,0,63
 2012-09,AI,Sweden,6,1583
 2012-09,AI,Stockholm,5,607
 2012-09,AI,Göteborg,0,274
@@ -1511,6 +2255,18 @@ month,topic,location,it_ads,it_total_ads
 2012-09,Cloud-native & DevOps,Stockholm,1,607
 2012-09,Cloud-native & DevOps,Göteborg,2,274
 2012-09,Cloud-native & DevOps,Malmö,0,61
+2012-09,IoT & embedded,Sweden,87,1583
+2012-09,IoT & embedded,Stockholm,15,607
+2012-09,IoT & embedded,Göteborg,15,274
+2012-09,IoT & embedded,Malmö,1,61
+2012-09,Blockchain & Web3,Sweden,0,1583
+2012-09,Blockchain & Web3,Stockholm,0,607
+2012-09,Blockchain & Web3,Göteborg,0,274
+2012-09,Blockchain & Web3,Malmö,0,61
+2012-09,Quantum computing,Sweden,0,1583
+2012-09,Quantum computing,Stockholm,0,607
+2012-09,Quantum computing,Göteborg,0,274
+2012-09,Quantum computing,Malmö,0,61
 2012-10,AI,Sweden,4,1849
 2012-10,AI,Stockholm,3,717
 2012-10,AI,Göteborg,1,265
@@ -1535,6 +2291,18 @@ month,topic,location,it_ads,it_total_ads
 2012-10,Cloud-native & DevOps,Stockholm,7,717
 2012-10,Cloud-native & DevOps,Göteborg,0,265
 2012-10,Cloud-native & DevOps,Malmö,0,65
+2012-10,IoT & embedded,Sweden,107,1849
+2012-10,IoT & embedded,Stockholm,15,717
+2012-10,IoT & embedded,Göteborg,20,265
+2012-10,IoT & embedded,Malmö,3,65
+2012-10,Blockchain & Web3,Sweden,0,1849
+2012-10,Blockchain & Web3,Stockholm,0,717
+2012-10,Blockchain & Web3,Göteborg,0,265
+2012-10,Blockchain & Web3,Malmö,0,65
+2012-10,Quantum computing,Sweden,0,1849
+2012-10,Quantum computing,Stockholm,0,717
+2012-10,Quantum computing,Göteborg,0,265
+2012-10,Quantum computing,Malmö,0,65
 2012-11,AI,Sweden,3,1580
 2012-11,AI,Stockholm,2,630
 2012-11,AI,Göteborg,1,273
@@ -1559,6 +2327,18 @@ month,topic,location,it_ads,it_total_ads
 2012-11,Cloud-native & DevOps,Stockholm,3,630
 2012-11,Cloud-native & DevOps,Göteborg,2,273
 2012-11,Cloud-native & DevOps,Malmö,0,64
+2012-11,IoT & embedded,Sweden,71,1580
+2012-11,IoT & embedded,Stockholm,21,630
+2012-11,IoT & embedded,Göteborg,14,273
+2012-11,IoT & embedded,Malmö,3,64
+2012-11,Blockchain & Web3,Sweden,0,1580
+2012-11,Blockchain & Web3,Stockholm,0,630
+2012-11,Blockchain & Web3,Göteborg,0,273
+2012-11,Blockchain & Web3,Malmö,0,64
+2012-11,Quantum computing,Sweden,0,1580
+2012-11,Quantum computing,Stockholm,0,630
+2012-11,Quantum computing,Göteborg,0,273
+2012-11,Quantum computing,Malmö,0,64
 2012-12,AI,Sweden,5,1313
 2012-12,AI,Stockholm,2,521
 2012-12,AI,Göteborg,1,174
@@ -1583,6 +2363,18 @@ month,topic,location,it_ads,it_total_ads
 2012-12,Cloud-native & DevOps,Stockholm,3,521
 2012-12,Cloud-native & DevOps,Göteborg,1,174
 2012-12,Cloud-native & DevOps,Malmö,2,61
+2012-12,IoT & embedded,Sweden,93,1313
+2012-12,IoT & embedded,Stockholm,21,521
+2012-12,IoT & embedded,Göteborg,14,174
+2012-12,IoT & embedded,Malmö,4,61
+2012-12,Blockchain & Web3,Sweden,0,1313
+2012-12,Blockchain & Web3,Stockholm,0,521
+2012-12,Blockchain & Web3,Göteborg,0,174
+2012-12,Blockchain & Web3,Malmö,0,61
+2012-12,Quantum computing,Sweden,0,1313
+2012-12,Quantum computing,Stockholm,0,521
+2012-12,Quantum computing,Göteborg,0,174
+2012-12,Quantum computing,Malmö,0,61
 2013-01,AI,Sweden,6,1562
 2013-01,AI,Stockholm,4,630
 2013-01,AI,Göteborg,0,208
@@ -1607,6 +2399,18 @@ month,topic,location,it_ads,it_total_ads
 2013-01,Cloud-native & DevOps,Stockholm,2,630
 2013-01,Cloud-native & DevOps,Göteborg,0,208
 2013-01,Cloud-native & DevOps,Malmö,0,67
+2013-01,IoT & embedded,Sweden,78,1562
+2013-01,IoT & embedded,Stockholm,26,630
+2013-01,IoT & embedded,Göteborg,16,208
+2013-01,IoT & embedded,Malmö,0,67
+2013-01,Blockchain & Web3,Sweden,1,1562
+2013-01,Blockchain & Web3,Stockholm,0,630
+2013-01,Blockchain & Web3,Göteborg,0,208
+2013-01,Blockchain & Web3,Malmö,0,67
+2013-01,Quantum computing,Sweden,0,1562
+2013-01,Quantum computing,Stockholm,0,630
+2013-01,Quantum computing,Göteborg,0,208
+2013-01,Quantum computing,Malmö,0,67
 2013-02,AI,Sweden,3,1506
 2013-02,AI,Stockholm,2,603
 2013-02,AI,Göteborg,1,209
@@ -1631,6 +2435,18 @@ month,topic,location,it_ads,it_total_ads
 2013-02,Cloud-native & DevOps,Stockholm,4,603
 2013-02,Cloud-native & DevOps,Göteborg,0,209
 2013-02,Cloud-native & DevOps,Malmö,0,55
+2013-02,IoT & embedded,Sweden,71,1506
+2013-02,IoT & embedded,Stockholm,15,603
+2013-02,IoT & embedded,Göteborg,15,209
+2013-02,IoT & embedded,Malmö,3,55
+2013-02,Blockchain & Web3,Sweden,0,1506
+2013-02,Blockchain & Web3,Stockholm,0,603
+2013-02,Blockchain & Web3,Göteborg,0,209
+2013-02,Blockchain & Web3,Malmö,0,55
+2013-02,Quantum computing,Sweden,0,1506
+2013-02,Quantum computing,Stockholm,0,603
+2013-02,Quantum computing,Göteborg,0,209
+2013-02,Quantum computing,Malmö,0,55
 2013-03,AI,Sweden,5,1403
 2013-03,AI,Stockholm,5,570
 2013-03,AI,Göteborg,0,160
@@ -1655,6 +2471,18 @@ month,topic,location,it_ads,it_total_ads
 2013-03,Cloud-native & DevOps,Stockholm,4,570
 2013-03,Cloud-native & DevOps,Göteborg,0,160
 2013-03,Cloud-native & DevOps,Malmö,0,64
+2013-03,IoT & embedded,Sweden,64,1403
+2013-03,IoT & embedded,Stockholm,16,570
+2013-03,IoT & embedded,Göteborg,14,160
+2013-03,IoT & embedded,Malmö,0,64
+2013-03,Blockchain & Web3,Sweden,0,1403
+2013-03,Blockchain & Web3,Stockholm,0,570
+2013-03,Blockchain & Web3,Göteborg,0,160
+2013-03,Blockchain & Web3,Malmö,0,64
+2013-03,Quantum computing,Sweden,0,1403
+2013-03,Quantum computing,Stockholm,0,570
+2013-03,Quantum computing,Göteborg,0,160
+2013-03,Quantum computing,Malmö,0,64
 2013-04,AI,Sweden,1,1418
 2013-04,AI,Stockholm,1,550
 2013-04,AI,Göteborg,0,193
@@ -1679,6 +2507,18 @@ month,topic,location,it_ads,it_total_ads
 2013-04,Cloud-native & DevOps,Stockholm,12,550
 2013-04,Cloud-native & DevOps,Göteborg,0,193
 2013-04,Cloud-native & DevOps,Malmö,0,70
+2013-04,IoT & embedded,Sweden,60,1418
+2013-04,IoT & embedded,Stockholm,17,550
+2013-04,IoT & embedded,Göteborg,13,193
+2013-04,IoT & embedded,Malmö,4,70
+2013-04,Blockchain & Web3,Sweden,0,1418
+2013-04,Blockchain & Web3,Stockholm,0,550
+2013-04,Blockchain & Web3,Göteborg,0,193
+2013-04,Blockchain & Web3,Malmö,0,70
+2013-04,Quantum computing,Sweden,0,1418
+2013-04,Quantum computing,Stockholm,0,550
+2013-04,Quantum computing,Göteborg,0,193
+2013-04,Quantum computing,Malmö,0,70
 2013-05,AI,Sweden,5,1466
 2013-05,AI,Stockholm,3,612
 2013-05,AI,Göteborg,0,188
@@ -1703,6 +2543,18 @@ month,topic,location,it_ads,it_total_ads
 2013-05,Cloud-native & DevOps,Stockholm,14,612
 2013-05,Cloud-native & DevOps,Göteborg,0,188
 2013-05,Cloud-native & DevOps,Malmö,0,69
+2013-05,IoT & embedded,Sweden,77,1466
+2013-05,IoT & embedded,Stockholm,20,612
+2013-05,IoT & embedded,Göteborg,15,188
+2013-05,IoT & embedded,Malmö,3,69
+2013-05,Blockchain & Web3,Sweden,0,1466
+2013-05,Blockchain & Web3,Stockholm,0,612
+2013-05,Blockchain & Web3,Göteborg,0,188
+2013-05,Blockchain & Web3,Malmö,0,69
+2013-05,Quantum computing,Sweden,0,1466
+2013-05,Quantum computing,Stockholm,0,612
+2013-05,Quantum computing,Göteborg,0,188
+2013-05,Quantum computing,Malmö,0,69
 2013-06,AI,Sweden,3,1125
 2013-06,AI,Stockholm,0,444
 2013-06,AI,Göteborg,1,172
@@ -1727,6 +2579,18 @@ month,topic,location,it_ads,it_total_ads
 2013-06,Cloud-native & DevOps,Stockholm,10,444
 2013-06,Cloud-native & DevOps,Göteborg,1,172
 2013-06,Cloud-native & DevOps,Malmö,1,58
+2013-06,IoT & embedded,Sweden,53,1125
+2013-06,IoT & embedded,Stockholm,17,444
+2013-06,IoT & embedded,Göteborg,8,172
+2013-06,IoT & embedded,Malmö,2,58
+2013-06,Blockchain & Web3,Sweden,0,1125
+2013-06,Blockchain & Web3,Stockholm,0,444
+2013-06,Blockchain & Web3,Göteborg,0,172
+2013-06,Blockchain & Web3,Malmö,0,58
+2013-06,Quantum computing,Sweden,0,1125
+2013-06,Quantum computing,Stockholm,0,444
+2013-06,Quantum computing,Göteborg,0,172
+2013-06,Quantum computing,Malmö,0,58
 2013-07,AI,Sweden,2,904
 2013-07,AI,Stockholm,1,364
 2013-07,AI,Göteborg,0,148
@@ -1751,6 +2615,18 @@ month,topic,location,it_ads,it_total_ads
 2013-07,Cloud-native & DevOps,Stockholm,3,364
 2013-07,Cloud-native & DevOps,Göteborg,0,148
 2013-07,Cloud-native & DevOps,Malmö,1,59
+2013-07,IoT & embedded,Sweden,49,904
+2013-07,IoT & embedded,Stockholm,12,364
+2013-07,IoT & embedded,Göteborg,13,148
+2013-07,IoT & embedded,Malmö,3,59
+2013-07,Blockchain & Web3,Sweden,0,904
+2013-07,Blockchain & Web3,Stockholm,0,364
+2013-07,Blockchain & Web3,Göteborg,0,148
+2013-07,Blockchain & Web3,Malmö,0,59
+2013-07,Quantum computing,Sweden,0,904
+2013-07,Quantum computing,Stockholm,0,364
+2013-07,Quantum computing,Göteborg,0,148
+2013-07,Quantum computing,Malmö,0,59
 2013-08,AI,Sweden,4,1060
 2013-08,AI,Stockholm,2,451
 2013-08,AI,Göteborg,0,129
@@ -1775,6 +2651,18 @@ month,topic,location,it_ads,it_total_ads
 2013-08,Cloud-native & DevOps,Stockholm,16,451
 2013-08,Cloud-native & DevOps,Göteborg,0,129
 2013-08,Cloud-native & DevOps,Malmö,0,49
+2013-08,IoT & embedded,Sweden,66,1060
+2013-08,IoT & embedded,Stockholm,21,451
+2013-08,IoT & embedded,Göteborg,12,129
+2013-08,IoT & embedded,Malmö,4,49
+2013-08,Blockchain & Web3,Sweden,0,1060
+2013-08,Blockchain & Web3,Stockholm,0,451
+2013-08,Blockchain & Web3,Göteborg,0,129
+2013-08,Blockchain & Web3,Malmö,0,49
+2013-08,Quantum computing,Sweden,0,1060
+2013-08,Quantum computing,Stockholm,0,451
+2013-08,Quantum computing,Göteborg,0,129
+2013-08,Quantum computing,Malmö,0,49
 2013-09,AI,Sweden,4,1298
 2013-09,AI,Stockholm,4,541
 2013-09,AI,Göteborg,0,158
@@ -1799,6 +2687,18 @@ month,topic,location,it_ads,it_total_ads
 2013-09,Cloud-native & DevOps,Stockholm,9,541
 2013-09,Cloud-native & DevOps,Göteborg,1,158
 2013-09,Cloud-native & DevOps,Malmö,1,70
+2013-09,IoT & embedded,Sweden,75,1298
+2013-09,IoT & embedded,Stockholm,20,541
+2013-09,IoT & embedded,Göteborg,19,158
+2013-09,IoT & embedded,Malmö,2,70
+2013-09,Blockchain & Web3,Sweden,0,1298
+2013-09,Blockchain & Web3,Stockholm,0,541
+2013-09,Blockchain & Web3,Göteborg,0,158
+2013-09,Blockchain & Web3,Malmö,0,70
+2013-09,Quantum computing,Sweden,0,1298
+2013-09,Quantum computing,Stockholm,0,541
+2013-09,Quantum computing,Göteborg,0,158
+2013-09,Quantum computing,Malmö,0,70
 2013-10,AI,Sweden,2,1450
 2013-10,AI,Stockholm,1,548
 2013-10,AI,Göteborg,0,204
@@ -1823,6 +2723,18 @@ month,topic,location,it_ads,it_total_ads
 2013-10,Cloud-native & DevOps,Stockholm,10,548
 2013-10,Cloud-native & DevOps,Göteborg,2,204
 2013-10,Cloud-native & DevOps,Malmö,0,69
+2013-10,IoT & embedded,Sweden,82,1450
+2013-10,IoT & embedded,Stockholm,20,548
+2013-10,IoT & embedded,Göteborg,25,204
+2013-10,IoT & embedded,Malmö,1,69
+2013-10,Blockchain & Web3,Sweden,0,1450
+2013-10,Blockchain & Web3,Stockholm,0,548
+2013-10,Blockchain & Web3,Göteborg,0,204
+2013-10,Blockchain & Web3,Malmö,0,69
+2013-10,Quantum computing,Sweden,0,1450
+2013-10,Quantum computing,Stockholm,0,548
+2013-10,Quantum computing,Göteborg,0,204
+2013-10,Quantum computing,Malmö,0,69
 2013-11,AI,Sweden,5,1430
 2013-11,AI,Stockholm,1,517
 2013-11,AI,Göteborg,0,189
@@ -1847,6 +2759,18 @@ month,topic,location,it_ads,it_total_ads
 2013-11,Cloud-native & DevOps,Stockholm,6,517
 2013-11,Cloud-native & DevOps,Göteborg,2,189
 2013-11,Cloud-native & DevOps,Malmö,0,65
+2013-11,IoT & embedded,Sweden,97,1430
+2013-11,IoT & embedded,Stockholm,21,517
+2013-11,IoT & embedded,Göteborg,22,189
+2013-11,IoT & embedded,Malmö,5,65
+2013-11,Blockchain & Web3,Sweden,1,1430
+2013-11,Blockchain & Web3,Stockholm,1,517
+2013-11,Blockchain & Web3,Göteborg,0,189
+2013-11,Blockchain & Web3,Malmö,0,65
+2013-11,Quantum computing,Sweden,0,1430
+2013-11,Quantum computing,Stockholm,0,517
+2013-11,Quantum computing,Göteborg,0,189
+2013-11,Quantum computing,Malmö,0,65
 2013-12,AI,Sweden,14,1263
 2013-12,AI,Stockholm,5,455
 2013-12,AI,Göteborg,2,164
@@ -1871,6 +2795,18 @@ month,topic,location,it_ads,it_total_ads
 2013-12,Cloud-native & DevOps,Stockholm,13,455
 2013-12,Cloud-native & DevOps,Göteborg,1,164
 2013-12,Cloud-native & DevOps,Malmö,0,49
+2013-12,IoT & embedded,Sweden,71,1263
+2013-12,IoT & embedded,Stockholm,21,455
+2013-12,IoT & embedded,Göteborg,16,164
+2013-12,IoT & embedded,Malmö,1,49
+2013-12,Blockchain & Web3,Sweden,0,1263
+2013-12,Blockchain & Web3,Stockholm,0,455
+2013-12,Blockchain & Web3,Göteborg,0,164
+2013-12,Blockchain & Web3,Malmö,0,49
+2013-12,Quantum computing,Sweden,0,1263
+2013-12,Quantum computing,Stockholm,0,455
+2013-12,Quantum computing,Göteborg,0,164
+2013-12,Quantum computing,Malmö,0,49
 2014-01,AI,Sweden,9,1398
 2014-01,AI,Stockholm,7,569
 2014-01,AI,Göteborg,1,200
@@ -1895,6 +2831,18 @@ month,topic,location,it_ads,it_total_ads
 2014-01,Cloud-native & DevOps,Stockholm,16,569
 2014-01,Cloud-native & DevOps,Göteborg,1,200
 2014-01,Cloud-native & DevOps,Malmö,1,66
+2014-01,IoT & embedded,Sweden,88,1398
+2014-01,IoT & embedded,Stockholm,22,569
+2014-01,IoT & embedded,Göteborg,22,200
+2014-01,IoT & embedded,Malmö,4,66
+2014-01,Blockchain & Web3,Sweden,0,1398
+2014-01,Blockchain & Web3,Stockholm,0,569
+2014-01,Blockchain & Web3,Göteborg,0,200
+2014-01,Blockchain & Web3,Malmö,0,66
+2014-01,Quantum computing,Sweden,0,1398
+2014-01,Quantum computing,Stockholm,0,569
+2014-01,Quantum computing,Göteborg,0,200
+2014-01,Quantum computing,Malmö,0,66
 2014-02,AI,Sweden,2,1604
 2014-02,AI,Stockholm,2,601
 2014-02,AI,Göteborg,0,257
@@ -1919,6 +2867,18 @@ month,topic,location,it_ads,it_total_ads
 2014-02,Cloud-native & DevOps,Stockholm,17,601
 2014-02,Cloud-native & DevOps,Göteborg,1,257
 2014-02,Cloud-native & DevOps,Malmö,0,63
+2014-02,IoT & embedded,Sweden,108,1604
+2014-02,IoT & embedded,Stockholm,23,601
+2014-02,IoT & embedded,Göteborg,25,257
+2014-02,IoT & embedded,Malmö,4,63
+2014-02,Blockchain & Web3,Sweden,0,1604
+2014-02,Blockchain & Web3,Stockholm,0,601
+2014-02,Blockchain & Web3,Göteborg,0,257
+2014-02,Blockchain & Web3,Malmö,0,63
+2014-02,Quantum computing,Sweden,0,1604
+2014-02,Quantum computing,Stockholm,0,601
+2014-02,Quantum computing,Göteborg,0,257
+2014-02,Quantum computing,Malmö,0,63
 2014-03,AI,Sweden,4,1769
 2014-03,AI,Stockholm,2,733
 2014-03,AI,Göteborg,0,253
@@ -1943,6 +2903,18 @@ month,topic,location,it_ads,it_total_ads
 2014-03,Cloud-native & DevOps,Stockholm,19,733
 2014-03,Cloud-native & DevOps,Göteborg,4,253
 2014-03,Cloud-native & DevOps,Malmö,0,59
+2014-03,IoT & embedded,Sweden,97,1769
+2014-03,IoT & embedded,Stockholm,26,733
+2014-03,IoT & embedded,Göteborg,26,253
+2014-03,IoT & embedded,Malmö,5,59
+2014-03,Blockchain & Web3,Sweden,0,1769
+2014-03,Blockchain & Web3,Stockholm,0,733
+2014-03,Blockchain & Web3,Göteborg,0,253
+2014-03,Blockchain & Web3,Malmö,0,59
+2014-03,Quantum computing,Sweden,0,1769
+2014-03,Quantum computing,Stockholm,0,733
+2014-03,Quantum computing,Göteborg,0,253
+2014-03,Quantum computing,Malmö,0,59
 2014-04,AI,Sweden,5,1576
 2014-04,AI,Stockholm,5,611
 2014-04,AI,Göteborg,0,214
@@ -1967,6 +2939,18 @@ month,topic,location,it_ads,it_total_ads
 2014-04,Cloud-native & DevOps,Stockholm,14,611
 2014-04,Cloud-native & DevOps,Göteborg,3,214
 2014-04,Cloud-native & DevOps,Malmö,1,88
+2014-04,IoT & embedded,Sweden,89,1576
+2014-04,IoT & embedded,Stockholm,24,611
+2014-04,IoT & embedded,Göteborg,17,214
+2014-04,IoT & embedded,Malmö,5,88
+2014-04,Blockchain & Web3,Sweden,0,1576
+2014-04,Blockchain & Web3,Stockholm,0,611
+2014-04,Blockchain & Web3,Göteborg,0,214
+2014-04,Blockchain & Web3,Malmö,0,88
+2014-04,Quantum computing,Sweden,0,1576
+2014-04,Quantum computing,Stockholm,0,611
+2014-04,Quantum computing,Göteborg,0,214
+2014-04,Quantum computing,Malmö,0,88
 2014-05,AI,Sweden,7,1631
 2014-05,AI,Stockholm,5,634
 2014-05,AI,Göteborg,0,203
@@ -1991,6 +2975,18 @@ month,topic,location,it_ads,it_total_ads
 2014-05,Cloud-native & DevOps,Stockholm,11,634
 2014-05,Cloud-native & DevOps,Göteborg,2,203
 2014-05,Cloud-native & DevOps,Malmö,2,87
+2014-05,IoT & embedded,Sweden,113,1631
+2014-05,IoT & embedded,Stockholm,28,634
+2014-05,IoT & embedded,Göteborg,22,203
+2014-05,IoT & embedded,Malmö,6,87
+2014-05,Blockchain & Web3,Sweden,0,1631
+2014-05,Blockchain & Web3,Stockholm,0,634
+2014-05,Blockchain & Web3,Göteborg,0,203
+2014-05,Blockchain & Web3,Malmö,0,87
+2014-05,Quantum computing,Sweden,0,1631
+2014-05,Quantum computing,Stockholm,0,634
+2014-05,Quantum computing,Göteborg,0,203
+2014-05,Quantum computing,Malmö,0,87
 2014-06,AI,Sweden,7,1549
 2014-06,AI,Stockholm,4,568
 2014-06,AI,Göteborg,1,232
@@ -2015,6 +3011,18 @@ month,topic,location,it_ads,it_total_ads
 2014-06,Cloud-native & DevOps,Stockholm,15,568
 2014-06,Cloud-native & DevOps,Göteborg,1,232
 2014-06,Cloud-native & DevOps,Malmö,0,75
+2014-06,IoT & embedded,Sweden,114,1549
+2014-06,IoT & embedded,Stockholm,23,568
+2014-06,IoT & embedded,Göteborg,24,232
+2014-06,IoT & embedded,Malmö,11,75
+2014-06,Blockchain & Web3,Sweden,2,1549
+2014-06,Blockchain & Web3,Stockholm,2,568
+2014-06,Blockchain & Web3,Göteborg,0,232
+2014-06,Blockchain & Web3,Malmö,0,75
+2014-06,Quantum computing,Sweden,0,1549
+2014-06,Quantum computing,Stockholm,0,568
+2014-06,Quantum computing,Göteborg,0,232
+2014-06,Quantum computing,Malmö,0,75
 2014-07,AI,Sweden,6,984
 2014-07,AI,Stockholm,6,379
 2014-07,AI,Göteborg,0,131
@@ -2039,6 +3047,18 @@ month,topic,location,it_ads,it_total_ads
 2014-07,Cloud-native & DevOps,Stockholm,9,379
 2014-07,Cloud-native & DevOps,Göteborg,3,131
 2014-07,Cloud-native & DevOps,Malmö,0,44
+2014-07,IoT & embedded,Sweden,75,984
+2014-07,IoT & embedded,Stockholm,8,379
+2014-07,IoT & embedded,Göteborg,16,131
+2014-07,IoT & embedded,Malmö,4,44
+2014-07,Blockchain & Web3,Sweden,0,984
+2014-07,Blockchain & Web3,Stockholm,0,379
+2014-07,Blockchain & Web3,Göteborg,0,131
+2014-07,Blockchain & Web3,Malmö,0,44
+2014-07,Quantum computing,Sweden,0,984
+2014-07,Quantum computing,Stockholm,0,379
+2014-07,Quantum computing,Göteborg,0,131
+2014-07,Quantum computing,Malmö,0,44
 2014-08,AI,Sweden,8,1349
 2014-08,AI,Stockholm,4,558
 2014-08,AI,Göteborg,1,180
@@ -2063,6 +3083,18 @@ month,topic,location,it_ads,it_total_ads
 2014-08,Cloud-native & DevOps,Stockholm,16,558
 2014-08,Cloud-native & DevOps,Göteborg,2,180
 2014-08,Cloud-native & DevOps,Malmö,0,52
+2014-08,IoT & embedded,Sweden,103,1349
+2014-08,IoT & embedded,Stockholm,21,558
+2014-08,IoT & embedded,Göteborg,24,180
+2014-08,IoT & embedded,Malmö,5,52
+2014-08,Blockchain & Web3,Sweden,0,1349
+2014-08,Blockchain & Web3,Stockholm,0,558
+2014-08,Blockchain & Web3,Göteborg,0,180
+2014-08,Blockchain & Web3,Malmö,0,52
+2014-08,Quantum computing,Sweden,0,1349
+2014-08,Quantum computing,Stockholm,0,558
+2014-08,Quantum computing,Göteborg,0,180
+2014-08,Quantum computing,Malmö,0,52
 2014-09,AI,Sweden,10,1937
 2014-09,AI,Stockholm,8,755
 2014-09,AI,Göteborg,0,286
@@ -2087,6 +3119,18 @@ month,topic,location,it_ads,it_total_ads
 2014-09,Cloud-native & DevOps,Stockholm,17,755
 2014-09,Cloud-native & DevOps,Göteborg,12,286
 2014-09,Cloud-native & DevOps,Malmö,1,96
+2014-09,IoT & embedded,Sweden,138,1937
+2014-09,IoT & embedded,Stockholm,23,755
+2014-09,IoT & embedded,Göteborg,41,286
+2014-09,IoT & embedded,Malmö,6,96
+2014-09,Blockchain & Web3,Sweden,1,1937
+2014-09,Blockchain & Web3,Stockholm,1,755
+2014-09,Blockchain & Web3,Göteborg,0,286
+2014-09,Blockchain & Web3,Malmö,0,96
+2014-09,Quantum computing,Sweden,0,1937
+2014-09,Quantum computing,Stockholm,0,755
+2014-09,Quantum computing,Göteborg,0,286
+2014-09,Quantum computing,Malmö,0,96
 2014-10,AI,Sweden,7,1875
 2014-10,AI,Stockholm,3,662
 2014-10,AI,Göteborg,1,293
@@ -2111,6 +3155,18 @@ month,topic,location,it_ads,it_total_ads
 2014-10,Cloud-native & DevOps,Stockholm,18,662
 2014-10,Cloud-native & DevOps,Göteborg,7,293
 2014-10,Cloud-native & DevOps,Malmö,1,128
+2014-10,IoT & embedded,Sweden,117,1875
+2014-10,IoT & embedded,Stockholm,11,662
+2014-10,IoT & embedded,Göteborg,35,293
+2014-10,IoT & embedded,Malmö,13,128
+2014-10,Blockchain & Web3,Sweden,0,1875
+2014-10,Blockchain & Web3,Stockholm,0,662
+2014-10,Blockchain & Web3,Göteborg,0,293
+2014-10,Blockchain & Web3,Malmö,0,128
+2014-10,Quantum computing,Sweden,0,1875
+2014-10,Quantum computing,Stockholm,0,662
+2014-10,Quantum computing,Göteborg,0,293
+2014-10,Quantum computing,Malmö,0,128
 2014-11,AI,Sweden,7,1556
 2014-11,AI,Stockholm,4,637
 2014-11,AI,Göteborg,0,234
@@ -2135,6 +3191,18 @@ month,topic,location,it_ads,it_total_ads
 2014-11,Cloud-native & DevOps,Stockholm,16,637
 2014-11,Cloud-native & DevOps,Göteborg,11,234
 2014-11,Cloud-native & DevOps,Malmö,1,72
+2014-11,IoT & embedded,Sweden,95,1556
+2014-11,IoT & embedded,Stockholm,19,637
+2014-11,IoT & embedded,Göteborg,27,234
+2014-11,IoT & embedded,Malmö,8,72
+2014-11,Blockchain & Web3,Sweden,0,1556
+2014-11,Blockchain & Web3,Stockholm,0,637
+2014-11,Blockchain & Web3,Göteborg,0,234
+2014-11,Blockchain & Web3,Malmö,0,72
+2014-11,Quantum computing,Sweden,0,1556
+2014-11,Quantum computing,Stockholm,0,637
+2014-11,Quantum computing,Göteborg,0,234
+2014-11,Quantum computing,Malmö,0,72
 2014-12,AI,Sweden,8,1519
 2014-12,AI,Stockholm,6,525
 2014-12,AI,Göteborg,0,245
@@ -2159,6 +3227,18 @@ month,topic,location,it_ads,it_total_ads
 2014-12,Cloud-native & DevOps,Stockholm,28,525
 2014-12,Cloud-native & DevOps,Göteborg,8,245
 2014-12,Cloud-native & DevOps,Malmö,1,74
+2014-12,IoT & embedded,Sweden,109,1519
+2014-12,IoT & embedded,Stockholm,13,525
+2014-12,IoT & embedded,Göteborg,32,245
+2014-12,IoT & embedded,Malmö,10,74
+2014-12,Blockchain & Web3,Sweden,0,1519
+2014-12,Blockchain & Web3,Stockholm,0,525
+2014-12,Blockchain & Web3,Göteborg,0,245
+2014-12,Blockchain & Web3,Malmö,0,74
+2014-12,Quantum computing,Sweden,0,1519
+2014-12,Quantum computing,Stockholm,0,525
+2014-12,Quantum computing,Göteborg,0,245
+2014-12,Quantum computing,Malmö,0,74
 2015-01,AI,Sweden,12,1769
 2015-01,AI,Stockholm,10,639
 2015-01,AI,Göteborg,0,264
@@ -2183,6 +3263,18 @@ month,topic,location,it_ads,it_total_ads
 2015-01,Cloud-native & DevOps,Stockholm,26,639
 2015-01,Cloud-native & DevOps,Göteborg,11,264
 2015-01,Cloud-native & DevOps,Malmö,2,104
+2015-01,IoT & embedded,Sweden,90,1769
+2015-01,IoT & embedded,Stockholm,20,639
+2015-01,IoT & embedded,Göteborg,24,264
+2015-01,IoT & embedded,Malmö,10,104
+2015-01,Blockchain & Web3,Sweden,0,1769
+2015-01,Blockchain & Web3,Stockholm,0,639
+2015-01,Blockchain & Web3,Göteborg,0,264
+2015-01,Blockchain & Web3,Malmö,0,104
+2015-01,Quantum computing,Sweden,0,1769
+2015-01,Quantum computing,Stockholm,0,639
+2015-01,Quantum computing,Göteborg,0,264
+2015-01,Quantum computing,Malmö,0,104
 2015-02,AI,Sweden,6,2029
 2015-02,AI,Stockholm,1,798
 2015-02,AI,Göteborg,4,331
@@ -2207,6 +3299,18 @@ month,topic,location,it_ads,it_total_ads
 2015-02,Cloud-native & DevOps,Stockholm,26,798
 2015-02,Cloud-native & DevOps,Göteborg,13,331
 2015-02,Cloud-native & DevOps,Malmö,0,102
+2015-02,IoT & embedded,Sweden,103,2029
+2015-02,IoT & embedded,Stockholm,13,798
+2015-02,IoT & embedded,Göteborg,41,331
+2015-02,IoT & embedded,Malmö,6,102
+2015-02,Blockchain & Web3,Sweden,1,2029
+2015-02,Blockchain & Web3,Stockholm,0,798
+2015-02,Blockchain & Web3,Göteborg,0,331
+2015-02,Blockchain & Web3,Malmö,0,102
+2015-02,Quantum computing,Sweden,0,2029
+2015-02,Quantum computing,Stockholm,0,798
+2015-02,Quantum computing,Göteborg,0,331
+2015-02,Quantum computing,Malmö,0,102
 2015-03,AI,Sweden,15,2278
 2015-03,AI,Stockholm,13,805
 2015-03,AI,Göteborg,1,284
@@ -2231,6 +3335,18 @@ month,topic,location,it_ads,it_total_ads
 2015-03,Cloud-native & DevOps,Stockholm,35,805
 2015-03,Cloud-native & DevOps,Göteborg,12,284
 2015-03,Cloud-native & DevOps,Malmö,3,123
+2015-03,IoT & embedded,Sweden,123,2278
+2015-03,IoT & embedded,Stockholm,19,805
+2015-03,IoT & embedded,Göteborg,32,284
+2015-03,IoT & embedded,Malmö,14,123
+2015-03,Blockchain & Web3,Sweden,0,2278
+2015-03,Blockchain & Web3,Stockholm,0,805
+2015-03,Blockchain & Web3,Göteborg,0,284
+2015-03,Blockchain & Web3,Malmö,0,123
+2015-03,Quantum computing,Sweden,0,2278
+2015-03,Quantum computing,Stockholm,0,805
+2015-03,Quantum computing,Göteborg,0,284
+2015-03,Quantum computing,Malmö,0,123
 2015-04,AI,Sweden,7,2134
 2015-04,AI,Stockholm,5,815
 2015-04,AI,Göteborg,1,271
@@ -2255,6 +3371,18 @@ month,topic,location,it_ads,it_total_ads
 2015-04,Cloud-native & DevOps,Stockholm,27,815
 2015-04,Cloud-native & DevOps,Göteborg,9,271
 2015-04,Cloud-native & DevOps,Malmö,1,97
+2015-04,IoT & embedded,Sweden,128,2134
+2015-04,IoT & embedded,Stockholm,20,815
+2015-04,IoT & embedded,Göteborg,44,271
+2015-04,IoT & embedded,Malmö,9,97
+2015-04,Blockchain & Web3,Sweden,0,2134
+2015-04,Blockchain & Web3,Stockholm,0,815
+2015-04,Blockchain & Web3,Göteborg,0,271
+2015-04,Blockchain & Web3,Malmö,0,97
+2015-04,Quantum computing,Sweden,0,2134
+2015-04,Quantum computing,Stockholm,0,815
+2015-04,Quantum computing,Göteborg,0,271
+2015-04,Quantum computing,Malmö,0,97
 2015-05,AI,Sweden,11,1845
 2015-05,AI,Stockholm,9,730
 2015-05,AI,Göteborg,0,233
@@ -2279,6 +3407,18 @@ month,topic,location,it_ads,it_total_ads
 2015-05,Cloud-native & DevOps,Stockholm,41,730
 2015-05,Cloud-native & DevOps,Göteborg,4,233
 2015-05,Cloud-native & DevOps,Malmö,3,95
+2015-05,IoT & embedded,Sweden,107,1845
+2015-05,IoT & embedded,Stockholm,17,730
+2015-05,IoT & embedded,Göteborg,21,233
+2015-05,IoT & embedded,Malmö,4,95
+2015-05,Blockchain & Web3,Sweden,0,1845
+2015-05,Blockchain & Web3,Stockholm,0,730
+2015-05,Blockchain & Web3,Göteborg,0,233
+2015-05,Blockchain & Web3,Malmö,0,95
+2015-05,Quantum computing,Sweden,1,1845
+2015-05,Quantum computing,Stockholm,1,730
+2015-05,Quantum computing,Göteborg,0,233
+2015-05,Quantum computing,Malmö,0,95
 2015-06,AI,Sweden,16,2001
 2015-06,AI,Stockholm,10,760
 2015-06,AI,Göteborg,0,268
@@ -2303,6 +3443,18 @@ month,topic,location,it_ads,it_total_ads
 2015-06,Cloud-native & DevOps,Stockholm,39,760
 2015-06,Cloud-native & DevOps,Göteborg,11,268
 2015-06,Cloud-native & DevOps,Malmö,0,94
+2015-06,IoT & embedded,Sweden,125,2001
+2015-06,IoT & embedded,Stockholm,16,760
+2015-06,IoT & embedded,Göteborg,43,268
+2015-06,IoT & embedded,Malmö,1,94
+2015-06,Blockchain & Web3,Sweden,0,2001
+2015-06,Blockchain & Web3,Stockholm,0,760
+2015-06,Blockchain & Web3,Göteborg,0,268
+2015-06,Blockchain & Web3,Malmö,0,94
+2015-06,Quantum computing,Sweden,0,2001
+2015-06,Quantum computing,Stockholm,0,760
+2015-06,Quantum computing,Göteborg,0,268
+2015-06,Quantum computing,Malmö,0,94
 2015-07,AI,Sweden,10,1147
 2015-07,AI,Stockholm,8,437
 2015-07,AI,Göteborg,0,155
@@ -2327,6 +3479,18 @@ month,topic,location,it_ads,it_total_ads
 2015-07,Cloud-native & DevOps,Stockholm,11,437
 2015-07,Cloud-native & DevOps,Göteborg,7,155
 2015-07,Cloud-native & DevOps,Malmö,1,59
+2015-07,IoT & embedded,Sweden,80,1147
+2015-07,IoT & embedded,Stockholm,6,437
+2015-07,IoT & embedded,Göteborg,28,155
+2015-07,IoT & embedded,Malmö,4,59
+2015-07,Blockchain & Web3,Sweden,0,1147
+2015-07,Blockchain & Web3,Stockholm,0,437
+2015-07,Blockchain & Web3,Göteborg,0,155
+2015-07,Blockchain & Web3,Malmö,0,59
+2015-07,Quantum computing,Sweden,0,1147
+2015-07,Quantum computing,Stockholm,0,437
+2015-07,Quantum computing,Göteborg,0,155
+2015-07,Quantum computing,Malmö,0,59
 2015-08,AI,Sweden,6,1645
 2015-08,AI,Stockholm,4,647
 2015-08,AI,Göteborg,1,240
@@ -2351,6 +3515,18 @@ month,topic,location,it_ads,it_total_ads
 2015-08,Cloud-native & DevOps,Stockholm,47,647
 2015-08,Cloud-native & DevOps,Göteborg,5,240
 2015-08,Cloud-native & DevOps,Malmö,1,73
+2015-08,IoT & embedded,Sweden,97,1645
+2015-08,IoT & embedded,Stockholm,11,647
+2015-08,IoT & embedded,Göteborg,27,240
+2015-08,IoT & embedded,Malmö,3,73
+2015-08,Blockchain & Web3,Sweden,0,1645
+2015-08,Blockchain & Web3,Stockholm,0,647
+2015-08,Blockchain & Web3,Göteborg,0,240
+2015-08,Blockchain & Web3,Malmö,0,73
+2015-08,Quantum computing,Sweden,0,1645
+2015-08,Quantum computing,Stockholm,0,647
+2015-08,Quantum computing,Göteborg,0,240
+2015-08,Quantum computing,Malmö,0,73
 2015-09,AI,Sweden,6,2297
 2015-09,AI,Stockholm,3,863
 2015-09,AI,Göteborg,1,334
@@ -2375,6 +3551,18 @@ month,topic,location,it_ads,it_total_ads
 2015-09,Cloud-native & DevOps,Stockholm,45,863
 2015-09,Cloud-native & DevOps,Göteborg,6,334
 2015-09,Cloud-native & DevOps,Malmö,5,127
+2015-09,IoT & embedded,Sweden,94,2297
+2015-09,IoT & embedded,Stockholm,12,863
+2015-09,IoT & embedded,Göteborg,25,334
+2015-09,IoT & embedded,Malmö,4,127
+2015-09,Blockchain & Web3,Sweden,0,2297
+2015-09,Blockchain & Web3,Stockholm,0,863
+2015-09,Blockchain & Web3,Göteborg,0,334
+2015-09,Blockchain & Web3,Malmö,0,127
+2015-09,Quantum computing,Sweden,0,2297
+2015-09,Quantum computing,Stockholm,0,863
+2015-09,Quantum computing,Göteborg,0,334
+2015-09,Quantum computing,Malmö,0,127
 2015-10,AI,Sweden,15,2337
 2015-10,AI,Stockholm,11,843
 2015-10,AI,Göteborg,1,385
@@ -2399,6 +3587,18 @@ month,topic,location,it_ads,it_total_ads
 2015-10,Cloud-native & DevOps,Stockholm,45,843
 2015-10,Cloud-native & DevOps,Göteborg,13,385
 2015-10,Cloud-native & DevOps,Malmö,3,117
+2015-10,IoT & embedded,Sweden,160,2337
+2015-10,IoT & embedded,Stockholm,22,843
+2015-10,IoT & embedded,Göteborg,52,385
+2015-10,IoT & embedded,Malmö,11,117
+2015-10,Blockchain & Web3,Sweden,3,2337
+2015-10,Blockchain & Web3,Stockholm,1,843
+2015-10,Blockchain & Web3,Göteborg,0,385
+2015-10,Blockchain & Web3,Malmö,0,117
+2015-10,Quantum computing,Sweden,0,2337
+2015-10,Quantum computing,Stockholm,0,843
+2015-10,Quantum computing,Göteborg,0,385
+2015-10,Quantum computing,Malmö,0,117
 2015-11,AI,Sweden,7,2208
 2015-11,AI,Stockholm,3,821
 2015-11,AI,Göteborg,1,331
@@ -2423,6 +3623,18 @@ month,topic,location,it_ads,it_total_ads
 2015-11,Cloud-native & DevOps,Stockholm,57,821
 2015-11,Cloud-native & DevOps,Göteborg,19,331
 2015-11,Cloud-native & DevOps,Malmö,1,97
+2015-11,IoT & embedded,Sweden,151,2208
+2015-11,IoT & embedded,Stockholm,28,821
+2015-11,IoT & embedded,Göteborg,52,331
+2015-11,IoT & embedded,Malmö,6,97
+2015-11,Blockchain & Web3,Sweden,1,2208
+2015-11,Blockchain & Web3,Stockholm,1,821
+2015-11,Blockchain & Web3,Göteborg,0,331
+2015-11,Blockchain & Web3,Malmö,0,97
+2015-11,Quantum computing,Sweden,0,2208
+2015-11,Quantum computing,Stockholm,0,821
+2015-11,Quantum computing,Göteborg,0,331
+2015-11,Quantum computing,Malmö,0,97
 2015-12,AI,Sweden,20,2454
 2015-12,AI,Stockholm,9,821
 2015-12,AI,Göteborg,3,384
@@ -2447,6 +3659,18 @@ month,topic,location,it_ads,it_total_ads
 2015-12,Cloud-native & DevOps,Stockholm,48,821
 2015-12,Cloud-native & DevOps,Göteborg,6,384
 2015-12,Cloud-native & DevOps,Malmö,5,123
+2015-12,IoT & embedded,Sweden,196,2454
+2015-12,IoT & embedded,Stockholm,30,821
+2015-12,IoT & embedded,Göteborg,67,384
+2015-12,IoT & embedded,Malmö,11,123
+2015-12,Blockchain & Web3,Sweden,2,2454
+2015-12,Blockchain & Web3,Stockholm,2,821
+2015-12,Blockchain & Web3,Göteborg,0,384
+2015-12,Blockchain & Web3,Malmö,0,123
+2015-12,Quantum computing,Sweden,0,2454
+2015-12,Quantum computing,Stockholm,0,821
+2015-12,Quantum computing,Göteborg,0,384
+2015-12,Quantum computing,Malmö,0,123
 2016-01,AI,Sweden,12,2124
 2016-01,AI,Stockholm,5,762
 2016-01,AI,Göteborg,5,352
@@ -2471,6 +3695,18 @@ month,topic,location,it_ads,it_total_ads
 2016-01,Cloud-native & DevOps,Stockholm,46,762
 2016-01,Cloud-native & DevOps,Göteborg,19,352
 2016-01,Cloud-native & DevOps,Malmö,0,107
+2016-01,IoT & embedded,Sweden,152,2124
+2016-01,IoT & embedded,Stockholm,10,762
+2016-01,IoT & embedded,Göteborg,69,352
+2016-01,IoT & embedded,Malmö,11,107
+2016-01,Blockchain & Web3,Sweden,0,2124
+2016-01,Blockchain & Web3,Stockholm,0,762
+2016-01,Blockchain & Web3,Göteborg,0,352
+2016-01,Blockchain & Web3,Malmö,0,107
+2016-01,Quantum computing,Sweden,0,2124
+2016-01,Quantum computing,Stockholm,0,762
+2016-01,Quantum computing,Göteborg,0,352
+2016-01,Quantum computing,Malmö,0,107
 2016-02,AI,Sweden,28,2835
 2016-02,AI,Stockholm,18,1060
 2016-02,AI,Göteborg,5,435
@@ -2495,6 +3731,18 @@ month,topic,location,it_ads,it_total_ads
 2016-02,Cloud-native & DevOps,Stockholm,46,1060
 2016-02,Cloud-native & DevOps,Göteborg,19,435
 2016-02,Cloud-native & DevOps,Malmö,2,196
+2016-02,IoT & embedded,Sweden,193,2835
+2016-02,IoT & embedded,Stockholm,33,1060
+2016-02,IoT & embedded,Göteborg,58,435
+2016-02,IoT & embedded,Malmö,18,196
+2016-02,Blockchain & Web3,Sweden,2,2835
+2016-02,Blockchain & Web3,Stockholm,2,1060
+2016-02,Blockchain & Web3,Göteborg,0,435
+2016-02,Blockchain & Web3,Malmö,0,196
+2016-02,Quantum computing,Sweden,0,2835
+2016-02,Quantum computing,Stockholm,0,1060
+2016-02,Quantum computing,Göteborg,0,435
+2016-02,Quantum computing,Malmö,0,196
 2016-03,AI,Sweden,17,2696
 2016-03,AI,Stockholm,8,972
 2016-03,AI,Göteborg,3,479
@@ -2519,6 +3767,18 @@ month,topic,location,it_ads,it_total_ads
 2016-03,Cloud-native & DevOps,Stockholm,47,972
 2016-03,Cloud-native & DevOps,Göteborg,23,479
 2016-03,Cloud-native & DevOps,Malmö,2,134
+2016-03,IoT & embedded,Sweden,191,2696
+2016-03,IoT & embedded,Stockholm,39,972
+2016-03,IoT & embedded,Göteborg,65,479
+2016-03,IoT & embedded,Malmö,16,134
+2016-03,Blockchain & Web3,Sweden,0,2696
+2016-03,Blockchain & Web3,Stockholm,0,972
+2016-03,Blockchain & Web3,Göteborg,0,479
+2016-03,Blockchain & Web3,Malmö,0,134
+2016-03,Quantum computing,Sweden,0,2696
+2016-03,Quantum computing,Stockholm,0,972
+2016-03,Quantum computing,Göteborg,0,479
+2016-03,Quantum computing,Malmö,0,134
 2016-04,AI,Sweden,17,2982
 2016-04,AI,Stockholm,11,1075
 2016-04,AI,Göteborg,1,486
@@ -2543,6 +3803,18 @@ month,topic,location,it_ads,it_total_ads
 2016-04,Cloud-native & DevOps,Stockholm,59,1075
 2016-04,Cloud-native & DevOps,Göteborg,41,486
 2016-04,Cloud-native & DevOps,Malmö,6,206
+2016-04,IoT & embedded,Sweden,229,2982
+2016-04,IoT & embedded,Stockholm,32,1075
+2016-04,IoT & embedded,Göteborg,67,486
+2016-04,IoT & embedded,Malmö,16,206
+2016-04,Blockchain & Web3,Sweden,0,2982
+2016-04,Blockchain & Web3,Stockholm,0,1075
+2016-04,Blockchain & Web3,Göteborg,0,486
+2016-04,Blockchain & Web3,Malmö,0,206
+2016-04,Quantum computing,Sweden,0,2982
+2016-04,Quantum computing,Stockholm,0,1075
+2016-04,Quantum computing,Göteborg,0,486
+2016-04,Quantum computing,Malmö,0,206
 2016-05,AI,Sweden,19,3042
 2016-05,AI,Stockholm,13,1100
 2016-05,AI,Göteborg,3,483
@@ -2567,6 +3839,18 @@ month,topic,location,it_ads,it_total_ads
 2016-05,Cloud-native & DevOps,Stockholm,94,1100
 2016-05,Cloud-native & DevOps,Göteborg,12,483
 2016-05,Cloud-native & DevOps,Malmö,5,179
+2016-05,IoT & embedded,Sweden,234,3042
+2016-05,IoT & embedded,Stockholm,40,1100
+2016-05,IoT & embedded,Göteborg,79,483
+2016-05,IoT & embedded,Malmö,16,179
+2016-05,Blockchain & Web3,Sweden,0,3042
+2016-05,Blockchain & Web3,Stockholm,0,1100
+2016-05,Blockchain & Web3,Göteborg,0,483
+2016-05,Blockchain & Web3,Malmö,0,179
+2016-05,Quantum computing,Sweden,0,3042
+2016-05,Quantum computing,Stockholm,0,1100
+2016-05,Quantum computing,Göteborg,0,483
+2016-05,Quantum computing,Malmö,0,179
 2016-06,AI,Sweden,23,2778
 2016-06,AI,Stockholm,16,1011
 2016-06,AI,Göteborg,1,425
@@ -2591,6 +3875,18 @@ month,topic,location,it_ads,it_total_ads
 2016-06,Cloud-native & DevOps,Stockholm,61,1011
 2016-06,Cloud-native & DevOps,Göteborg,24,425
 2016-06,Cloud-native & DevOps,Malmö,14,163
+2016-06,IoT & embedded,Sweden,258,2778
+2016-06,IoT & embedded,Stockholm,51,1011
+2016-06,IoT & embedded,Göteborg,62,425
+2016-06,IoT & embedded,Malmö,17,163
+2016-06,Blockchain & Web3,Sweden,1,2778
+2016-06,Blockchain & Web3,Stockholm,1,1011
+2016-06,Blockchain & Web3,Göteborg,0,425
+2016-06,Blockchain & Web3,Malmö,0,163
+2016-06,Quantum computing,Sweden,0,2778
+2016-06,Quantum computing,Stockholm,0,1011
+2016-06,Quantum computing,Göteborg,0,425
+2016-06,Quantum computing,Malmö,0,163
 2016-07,AI,Sweden,19,1875
 2016-07,AI,Stockholm,9,580
 2016-07,AI,Göteborg,1,312
@@ -2615,6 +3911,18 @@ month,topic,location,it_ads,it_total_ads
 2016-07,Cloud-native & DevOps,Stockholm,32,580
 2016-07,Cloud-native & DevOps,Göteborg,19,312
 2016-07,Cloud-native & DevOps,Malmö,3,118
+2016-07,IoT & embedded,Sweden,180,1875
+2016-07,IoT & embedded,Stockholm,19,580
+2016-07,IoT & embedded,Göteborg,41,312
+2016-07,IoT & embedded,Malmö,11,118
+2016-07,Blockchain & Web3,Sweden,0,1875
+2016-07,Blockchain & Web3,Stockholm,0,580
+2016-07,Blockchain & Web3,Göteborg,0,312
+2016-07,Blockchain & Web3,Malmö,0,118
+2016-07,Quantum computing,Sweden,0,1875
+2016-07,Quantum computing,Stockholm,0,580
+2016-07,Quantum computing,Göteborg,0,312
+2016-07,Quantum computing,Malmö,0,118
 2016-08,AI,Sweden,17,2396
 2016-08,AI,Stockholm,8,942
 2016-08,AI,Göteborg,3,370
@@ -2639,6 +3947,18 @@ month,topic,location,it_ads,it_total_ads
 2016-08,Cloud-native & DevOps,Stockholm,80,942
 2016-08,Cloud-native & DevOps,Göteborg,23,370
 2016-08,Cloud-native & DevOps,Malmö,6,139
+2016-08,IoT & embedded,Sweden,180,2396
+2016-08,IoT & embedded,Stockholm,26,942
+2016-08,IoT & embedded,Göteborg,50,370
+2016-08,IoT & embedded,Malmö,17,139
+2016-08,Blockchain & Web3,Sweden,2,2396
+2016-08,Blockchain & Web3,Stockholm,1,942
+2016-08,Blockchain & Web3,Göteborg,0,370
+2016-08,Blockchain & Web3,Malmö,0,139
+2016-08,Quantum computing,Sweden,0,2396
+2016-08,Quantum computing,Stockholm,0,942
+2016-08,Quantum computing,Göteborg,0,370
+2016-08,Quantum computing,Malmö,0,139
 2016-09,AI,Sweden,23,3222
 2016-09,AI,Stockholm,10,1178
 2016-09,AI,Göteborg,6,547
@@ -2663,6 +3983,18 @@ month,topic,location,it_ads,it_total_ads
 2016-09,Cloud-native & DevOps,Stockholm,88,1178
 2016-09,Cloud-native & DevOps,Göteborg,33,547
 2016-09,Cloud-native & DevOps,Malmö,4,191
+2016-09,IoT & embedded,Sweden,343,3222
+2016-09,IoT & embedded,Stockholm,66,1178
+2016-09,IoT & embedded,Göteborg,87,547
+2016-09,IoT & embedded,Malmö,28,191
+2016-09,Blockchain & Web3,Sweden,0,3222
+2016-09,Blockchain & Web3,Stockholm,0,1178
+2016-09,Blockchain & Web3,Göteborg,0,547
+2016-09,Blockchain & Web3,Malmö,0,191
+2016-09,Quantum computing,Sweden,0,3222
+2016-09,Quantum computing,Stockholm,0,1178
+2016-09,Quantum computing,Göteborg,0,547
+2016-09,Quantum computing,Malmö,0,191
 2016-10,AI,Sweden,23,3076
 2016-10,AI,Stockholm,10,1133
 2016-10,AI,Göteborg,6,502
@@ -2687,6 +4019,18 @@ month,topic,location,it_ads,it_total_ads
 2016-10,Cloud-native & DevOps,Stockholm,89,1133
 2016-10,Cloud-native & DevOps,Göteborg,32,502
 2016-10,Cloud-native & DevOps,Malmö,8,197
+2016-10,IoT & embedded,Sweden,268,3076
+2016-10,IoT & embedded,Stockholm,37,1133
+2016-10,IoT & embedded,Göteborg,87,502
+2016-10,IoT & embedded,Malmö,10,197
+2016-10,Blockchain & Web3,Sweden,1,3076
+2016-10,Blockchain & Web3,Stockholm,1,1133
+2016-10,Blockchain & Web3,Göteborg,0,502
+2016-10,Blockchain & Web3,Malmö,0,197
+2016-10,Quantum computing,Sweden,0,3076
+2016-10,Quantum computing,Stockholm,0,1133
+2016-10,Quantum computing,Göteborg,0,502
+2016-10,Quantum computing,Malmö,0,197
 2016-11,AI,Sweden,40,3070
 2016-11,AI,Stockholm,20,1035
 2016-11,AI,Göteborg,4,466
@@ -2711,6 +4055,18 @@ month,topic,location,it_ads,it_total_ads
 2016-11,Cloud-native & DevOps,Stockholm,100,1035
 2016-11,Cloud-native & DevOps,Göteborg,29,466
 2016-11,Cloud-native & DevOps,Malmö,3,188
+2016-11,IoT & embedded,Sweden,283,3070
+2016-11,IoT & embedded,Stockholm,39,1035
+2016-11,IoT & embedded,Göteborg,83,466
+2016-11,IoT & embedded,Malmö,28,188
+2016-11,Blockchain & Web3,Sweden,1,3070
+2016-11,Blockchain & Web3,Stockholm,1,1035
+2016-11,Blockchain & Web3,Göteborg,0,466
+2016-11,Blockchain & Web3,Malmö,0,188
+2016-11,Quantum computing,Sweden,0,3070
+2016-11,Quantum computing,Stockholm,0,1035
+2016-11,Quantum computing,Göteborg,0,466
+2016-11,Quantum computing,Malmö,0,188
 2016-12,AI,Sweden,33,3304
 2016-12,AI,Stockholm,17,1070
 2016-12,AI,Göteborg,1,567
@@ -2735,6 +4091,18 @@ month,topic,location,it_ads,it_total_ads
 2016-12,Cloud-native & DevOps,Stockholm,79,1070
 2016-12,Cloud-native & DevOps,Göteborg,58,567
 2016-12,Cloud-native & DevOps,Malmö,7,162
+2016-12,IoT & embedded,Sweden,379,3304
+2016-12,IoT & embedded,Stockholm,58,1070
+2016-12,IoT & embedded,Göteborg,104,567
+2016-12,IoT & embedded,Malmö,20,162
+2016-12,Blockchain & Web3,Sweden,0,3304
+2016-12,Blockchain & Web3,Stockholm,0,1070
+2016-12,Blockchain & Web3,Göteborg,0,567
+2016-12,Blockchain & Web3,Malmö,0,162
+2016-12,Quantum computing,Sweden,0,3304
+2016-12,Quantum computing,Stockholm,0,1070
+2016-12,Quantum computing,Göteborg,0,567
+2016-12,Quantum computing,Malmö,0,162
 2017-01,AI,Sweden,40,3123
 2017-01,AI,Stockholm,18,1048
 2017-01,AI,Göteborg,6,535
@@ -2759,6 +4127,18 @@ month,topic,location,it_ads,it_total_ads
 2017-01,Cloud-native & DevOps,Stockholm,86,1048
 2017-01,Cloud-native & DevOps,Göteborg,31,535
 2017-01,Cloud-native & DevOps,Malmö,8,194
+2017-01,IoT & embedded,Sweden,298,3123
+2017-01,IoT & embedded,Stockholm,51,1048
+2017-01,IoT & embedded,Göteborg,85,535
+2017-01,IoT & embedded,Malmö,24,194
+2017-01,Blockchain & Web3,Sweden,0,3123
+2017-01,Blockchain & Web3,Stockholm,0,1048
+2017-01,Blockchain & Web3,Göteborg,0,535
+2017-01,Blockchain & Web3,Malmö,0,194
+2017-01,Quantum computing,Sweden,0,3123
+2017-01,Quantum computing,Stockholm,0,1048
+2017-01,Quantum computing,Göteborg,0,535
+2017-01,Quantum computing,Malmö,0,194
 2017-02,AI,Sweden,43,3066
 2017-02,AI,Stockholm,19,1048
 2017-02,AI,Göteborg,8,423
@@ -2783,6 +4163,18 @@ month,topic,location,it_ads,it_total_ads
 2017-02,Cloud-native & DevOps,Stockholm,109,1048
 2017-02,Cloud-native & DevOps,Göteborg,32,423
 2017-02,Cloud-native & DevOps,Malmö,10,186
+2017-02,IoT & embedded,Sweden,298,3066
+2017-02,IoT & embedded,Stockholm,72,1048
+2017-02,IoT & embedded,Göteborg,67,423
+2017-02,IoT & embedded,Malmö,24,186
+2017-02,Blockchain & Web3,Sweden,0,3066
+2017-02,Blockchain & Web3,Stockholm,0,1048
+2017-02,Blockchain & Web3,Göteborg,0,423
+2017-02,Blockchain & Web3,Malmö,0,186
+2017-02,Quantum computing,Sweden,0,3066
+2017-02,Quantum computing,Stockholm,0,1048
+2017-02,Quantum computing,Göteborg,0,423
+2017-02,Quantum computing,Malmö,0,186
 2017-03,AI,Sweden,45,3434
 2017-03,AI,Stockholm,19,1176
 2017-03,AI,Göteborg,6,490
@@ -2807,6 +4199,18 @@ month,topic,location,it_ads,it_total_ads
 2017-03,Cloud-native & DevOps,Stockholm,98,1176
 2017-03,Cloud-native & DevOps,Göteborg,44,490
 2017-03,Cloud-native & DevOps,Malmö,7,203
+2017-03,IoT & embedded,Sweden,338,3434
+2017-03,IoT & embedded,Stockholm,64,1176
+2017-03,IoT & embedded,Göteborg,91,490
+2017-03,IoT & embedded,Malmö,30,203
+2017-03,Blockchain & Web3,Sweden,2,3434
+2017-03,Blockchain & Web3,Stockholm,1,1176
+2017-03,Blockchain & Web3,Göteborg,1,490
+2017-03,Blockchain & Web3,Malmö,0,203
+2017-03,Quantum computing,Sweden,0,3434
+2017-03,Quantum computing,Stockholm,0,1176
+2017-03,Quantum computing,Göteborg,0,490
+2017-03,Quantum computing,Malmö,0,203
 2017-04,AI,Sweden,44,2704
 2017-04,AI,Stockholm,15,927
 2017-04,AI,Göteborg,9,410
@@ -2831,6 +4235,18 @@ month,topic,location,it_ads,it_total_ads
 2017-04,Cloud-native & DevOps,Stockholm,98,927
 2017-04,Cloud-native & DevOps,Göteborg,34,410
 2017-04,Cloud-native & DevOps,Malmö,12,153
+2017-04,IoT & embedded,Sweden,278,2704
+2017-04,IoT & embedded,Stockholm,66,927
+2017-04,IoT & embedded,Göteborg,66,410
+2017-04,IoT & embedded,Malmö,12,153
+2017-04,Blockchain & Web3,Sweden,5,2704
+2017-04,Blockchain & Web3,Stockholm,0,927
+2017-04,Blockchain & Web3,Göteborg,3,410
+2017-04,Blockchain & Web3,Malmö,0,153
+2017-04,Quantum computing,Sweden,0,2704
+2017-04,Quantum computing,Stockholm,0,927
+2017-04,Quantum computing,Göteborg,0,410
+2017-04,Quantum computing,Malmö,0,153
 2017-05,AI,Sweden,67,3220
 2017-05,AI,Stockholm,30,1179
 2017-05,AI,Göteborg,8,453
@@ -2855,6 +4271,18 @@ month,topic,location,it_ads,it_total_ads
 2017-05,Cloud-native & DevOps,Stockholm,123,1179
 2017-05,Cloud-native & DevOps,Göteborg,40,453
 2017-05,Cloud-native & DevOps,Malmö,17,192
+2017-05,IoT & embedded,Sweden,394,3220
+2017-05,IoT & embedded,Stockholm,96,1179
+2017-05,IoT & embedded,Göteborg,80,453
+2017-05,IoT & embedded,Malmö,21,192
+2017-05,Blockchain & Web3,Sweden,1,3220
+2017-05,Blockchain & Web3,Stockholm,1,1179
+2017-05,Blockchain & Web3,Göteborg,0,453
+2017-05,Blockchain & Web3,Malmö,0,192
+2017-05,Quantum computing,Sweden,0,3220
+2017-05,Quantum computing,Stockholm,0,1179
+2017-05,Quantum computing,Göteborg,0,453
+2017-05,Quantum computing,Malmö,0,192
 2017-06,AI,Sweden,64,2956
 2017-06,AI,Stockholm,28,966
 2017-06,AI,Göteborg,9,452
@@ -2879,6 +4307,18 @@ month,topic,location,it_ads,it_total_ads
 2017-06,Cloud-native & DevOps,Stockholm,91,966
 2017-06,Cloud-native & DevOps,Göteborg,46,452
 2017-06,Cloud-native & DevOps,Malmö,21,202
+2017-06,IoT & embedded,Sweden,330,2956
+2017-06,IoT & embedded,Stockholm,87,966
+2017-06,IoT & embedded,Göteborg,68,452
+2017-06,IoT & embedded,Malmö,35,202
+2017-06,Blockchain & Web3,Sweden,1,2956
+2017-06,Blockchain & Web3,Stockholm,1,966
+2017-06,Blockchain & Web3,Göteborg,0,452
+2017-06,Blockchain & Web3,Malmö,0,202
+2017-06,Quantum computing,Sweden,0,2956
+2017-06,Quantum computing,Stockholm,0,966
+2017-06,Quantum computing,Göteborg,0,452
+2017-06,Quantum computing,Malmö,0,202
 2017-07,AI,Sweden,61,2276
 2017-07,AI,Stockholm,18,720
 2017-07,AI,Göteborg,8,339
@@ -2903,6 +4343,18 @@ month,topic,location,it_ads,it_total_ads
 2017-07,Cloud-native & DevOps,Stockholm,72,720
 2017-07,Cloud-native & DevOps,Göteborg,43,339
 2017-07,Cloud-native & DevOps,Malmö,17,142
+2017-07,IoT & embedded,Sweden,263,2276
+2017-07,IoT & embedded,Stockholm,53,720
+2017-07,IoT & embedded,Göteborg,68,339
+2017-07,IoT & embedded,Malmö,13,142
+2017-07,Blockchain & Web3,Sweden,0,2276
+2017-07,Blockchain & Web3,Stockholm,0,720
+2017-07,Blockchain & Web3,Göteborg,0,339
+2017-07,Blockchain & Web3,Malmö,0,142
+2017-07,Quantum computing,Sweden,0,2276
+2017-07,Quantum computing,Stockholm,0,720
+2017-07,Quantum computing,Göteborg,0,339
+2017-07,Quantum computing,Malmö,0,142
 2017-08,AI,Sweden,49,2881
 2017-08,AI,Stockholm,21,998
 2017-08,AI,Göteborg,7,481
@@ -2927,6 +4379,18 @@ month,topic,location,it_ads,it_total_ads
 2017-08,Cloud-native & DevOps,Stockholm,98,998
 2017-08,Cloud-native & DevOps,Göteborg,55,481
 2017-08,Cloud-native & DevOps,Malmö,19,172
+2017-08,IoT & embedded,Sweden,348,2881
+2017-08,IoT & embedded,Stockholm,59,998
+2017-08,IoT & embedded,Göteborg,81,481
+2017-08,IoT & embedded,Malmö,27,172
+2017-08,Blockchain & Web3,Sweden,0,2881
+2017-08,Blockchain & Web3,Stockholm,0,998
+2017-08,Blockchain & Web3,Göteborg,0,481
+2017-08,Blockchain & Web3,Malmö,0,172
+2017-08,Quantum computing,Sweden,0,2881
+2017-08,Quantum computing,Stockholm,0,998
+2017-08,Quantum computing,Göteborg,0,481
+2017-08,Quantum computing,Malmö,0,172
 2017-09,AI,Sweden,60,3377
 2017-09,AI,Stockholm,29,1113
 2017-09,AI,Göteborg,8,554
@@ -2951,6 +4415,18 @@ month,topic,location,it_ads,it_total_ads
 2017-09,Cloud-native & DevOps,Stockholm,105,1113
 2017-09,Cloud-native & DevOps,Göteborg,67,554
 2017-09,Cloud-native & DevOps,Malmö,17,202
+2017-09,IoT & embedded,Sweden,378,3377
+2017-09,IoT & embedded,Stockholm,72,1113
+2017-09,IoT & embedded,Göteborg,98,554
+2017-09,IoT & embedded,Malmö,36,202
+2017-09,Blockchain & Web3,Sweden,2,3377
+2017-09,Blockchain & Web3,Stockholm,2,1113
+2017-09,Blockchain & Web3,Göteborg,0,554
+2017-09,Blockchain & Web3,Malmö,0,202
+2017-09,Quantum computing,Sweden,0,3377
+2017-09,Quantum computing,Stockholm,0,1113
+2017-09,Quantum computing,Göteborg,0,554
+2017-09,Quantum computing,Malmö,0,202
 2017-10,AI,Sweden,79,3346
 2017-10,AI,Stockholm,31,1097
 2017-10,AI,Göteborg,13,548
@@ -2975,6 +4451,18 @@ month,topic,location,it_ads,it_total_ads
 2017-10,Cloud-native & DevOps,Stockholm,103,1097
 2017-10,Cloud-native & DevOps,Göteborg,55,548
 2017-10,Cloud-native & DevOps,Malmö,12,201
+2017-10,IoT & embedded,Sweden,389,3346
+2017-10,IoT & embedded,Stockholm,69,1097
+2017-10,IoT & embedded,Göteborg,114,548
+2017-10,IoT & embedded,Malmö,32,201
+2017-10,Blockchain & Web3,Sweden,0,3346
+2017-10,Blockchain & Web3,Stockholm,0,1097
+2017-10,Blockchain & Web3,Göteborg,0,548
+2017-10,Blockchain & Web3,Malmö,0,201
+2017-10,Quantum computing,Sweden,0,3346
+2017-10,Quantum computing,Stockholm,0,1097
+2017-10,Quantum computing,Göteborg,0,548
+2017-10,Quantum computing,Malmö,0,201
 2017-11,AI,Sweden,109,3467
 2017-11,AI,Stockholm,53,1161
 2017-11,AI,Göteborg,12,555
@@ -2999,6 +4487,18 @@ month,topic,location,it_ads,it_total_ads
 2017-11,Cloud-native & DevOps,Stockholm,125,1161
 2017-11,Cloud-native & DevOps,Göteborg,45,555
 2017-11,Cloud-native & DevOps,Malmö,23,248
+2017-11,IoT & embedded,Sweden,322,3467
+2017-11,IoT & embedded,Stockholm,65,1161
+2017-11,IoT & embedded,Göteborg,88,555
+2017-11,IoT & embedded,Malmö,19,248
+2017-11,Blockchain & Web3,Sweden,6,3467
+2017-11,Blockchain & Web3,Stockholm,4,1161
+2017-11,Blockchain & Web3,Göteborg,1,555
+2017-11,Blockchain & Web3,Malmö,0,248
+2017-11,Quantum computing,Sweden,2,3467
+2017-11,Quantum computing,Stockholm,2,1161
+2017-11,Quantum computing,Göteborg,0,555
+2017-11,Quantum computing,Malmö,0,248
 2017-12,AI,Sweden,99,3493
 2017-12,AI,Stockholm,46,1032
 2017-12,AI,Göteborg,14,522
@@ -3023,6 +4523,18 @@ month,topic,location,it_ads,it_total_ads
 2017-12,Cloud-native & DevOps,Stockholm,103,1032
 2017-12,Cloud-native & DevOps,Göteborg,55,522
 2017-12,Cloud-native & DevOps,Malmö,22,200
+2017-12,IoT & embedded,Sweden,359,3493
+2017-12,IoT & embedded,Stockholm,65,1032
+2017-12,IoT & embedded,Göteborg,89,522
+2017-12,IoT & embedded,Malmö,30,200
+2017-12,Blockchain & Web3,Sweden,1,3493
+2017-12,Blockchain & Web3,Stockholm,1,1032
+2017-12,Blockchain & Web3,Göteborg,0,522
+2017-12,Blockchain & Web3,Malmö,0,200
+2017-12,Quantum computing,Sweden,0,3493
+2017-12,Quantum computing,Stockholm,0,1032
+2017-12,Quantum computing,Göteborg,0,522
+2017-12,Quantum computing,Malmö,0,200
 2018-01,AI,Sweden,91,3617
 2018-01,AI,Stockholm,36,1179
 2018-01,AI,Göteborg,10,656
@@ -3047,6 +4559,18 @@ month,topic,location,it_ads,it_total_ads
 2018-01,Cloud-native & DevOps,Stockholm,107,1179
 2018-01,Cloud-native & DevOps,Göteborg,71,656
 2018-01,Cloud-native & DevOps,Malmö,11,235
+2018-01,IoT & embedded,Sweden,375,3617
+2018-01,IoT & embedded,Stockholm,51,1179
+2018-01,IoT & embedded,Göteborg,121,656
+2018-01,IoT & embedded,Malmö,30,235
+2018-01,Blockchain & Web3,Sweden,7,3617
+2018-01,Blockchain & Web3,Stockholm,5,1179
+2018-01,Blockchain & Web3,Göteborg,0,656
+2018-01,Blockchain & Web3,Malmö,1,235
+2018-01,Quantum computing,Sweden,2,3617
+2018-01,Quantum computing,Stockholm,2,1179
+2018-01,Quantum computing,Göteborg,0,656
+2018-01,Quantum computing,Malmö,0,235
 2018-02,AI,Sweden,121,3613
 2018-02,AI,Stockholm,42,1255
 2018-02,AI,Göteborg,12,554
@@ -3071,6 +4595,18 @@ month,topic,location,it_ads,it_total_ads
 2018-02,Cloud-native & DevOps,Stockholm,112,1255
 2018-02,Cloud-native & DevOps,Göteborg,51,554
 2018-02,Cloud-native & DevOps,Malmö,13,258
+2018-02,IoT & embedded,Sweden,365,3613
+2018-02,IoT & embedded,Stockholm,76,1255
+2018-02,IoT & embedded,Göteborg,83,554
+2018-02,IoT & embedded,Malmö,28,258
+2018-02,Blockchain & Web3,Sweden,4,3613
+2018-02,Blockchain & Web3,Stockholm,3,1255
+2018-02,Blockchain & Web3,Göteborg,0,554
+2018-02,Blockchain & Web3,Malmö,0,258
+2018-02,Quantum computing,Sweden,0,3613
+2018-02,Quantum computing,Stockholm,0,1255
+2018-02,Quantum computing,Göteborg,0,554
+2018-02,Quantum computing,Malmö,0,258
 2018-03,AI,Sweden,91,3709
 2018-03,AI,Stockholm,31,1334
 2018-03,AI,Göteborg,14,634
@@ -3095,6 +4631,18 @@ month,topic,location,it_ads,it_total_ads
 2018-03,Cloud-native & DevOps,Stockholm,145,1334
 2018-03,Cloud-native & DevOps,Göteborg,91,634
 2018-03,Cloud-native & DevOps,Malmö,11,242
+2018-03,IoT & embedded,Sweden,423,3709
+2018-03,IoT & embedded,Stockholm,87,1334
+2018-03,IoT & embedded,Göteborg,114,634
+2018-03,IoT & embedded,Malmö,31,242
+2018-03,Blockchain & Web3,Sweden,5,3709
+2018-03,Blockchain & Web3,Stockholm,2,1334
+2018-03,Blockchain & Web3,Göteborg,0,634
+2018-03,Blockchain & Web3,Malmö,1,242
+2018-03,Quantum computing,Sweden,0,3709
+2018-03,Quantum computing,Stockholm,0,1334
+2018-03,Quantum computing,Göteborg,0,634
+2018-03,Quantum computing,Malmö,0,242
 2018-04,AI,Sweden,104,3537
 2018-04,AI,Stockholm,37,1245
 2018-04,AI,Göteborg,18,596
@@ -3119,6 +4667,18 @@ month,topic,location,it_ads,it_total_ads
 2018-04,Cloud-native & DevOps,Stockholm,143,1245
 2018-04,Cloud-native & DevOps,Göteborg,76,596
 2018-04,Cloud-native & DevOps,Malmö,13,213
+2018-04,IoT & embedded,Sweden,355,3537
+2018-04,IoT & embedded,Stockholm,63,1245
+2018-04,IoT & embedded,Göteborg,111,596
+2018-04,IoT & embedded,Malmö,23,213
+2018-04,Blockchain & Web3,Sweden,5,3537
+2018-04,Blockchain & Web3,Stockholm,2,1245
+2018-04,Blockchain & Web3,Göteborg,1,596
+2018-04,Blockchain & Web3,Malmö,0,213
+2018-04,Quantum computing,Sweden,0,3537
+2018-04,Quantum computing,Stockholm,0,1245
+2018-04,Quantum computing,Göteborg,0,596
+2018-04,Quantum computing,Malmö,0,213
 2018-05,AI,Sweden,122,3809
 2018-05,AI,Stockholm,46,1420
 2018-05,AI,Göteborg,17,534
@@ -3143,6 +4703,18 @@ month,topic,location,it_ads,it_total_ads
 2018-05,Cloud-native & DevOps,Stockholm,154,1420
 2018-05,Cloud-native & DevOps,Göteborg,64,534
 2018-05,Cloud-native & DevOps,Malmö,10,241
+2018-05,IoT & embedded,Sweden,362,3809
+2018-05,IoT & embedded,Stockholm,94,1420
+2018-05,IoT & embedded,Göteborg,85,534
+2018-05,IoT & embedded,Malmö,22,241
+2018-05,Blockchain & Web3,Sweden,5,3809
+2018-05,Blockchain & Web3,Stockholm,1,1420
+2018-05,Blockchain & Web3,Göteborg,0,534
+2018-05,Blockchain & Web3,Malmö,1,241
+2018-05,Quantum computing,Sweden,0,3809
+2018-05,Quantum computing,Stockholm,0,1420
+2018-05,Quantum computing,Göteborg,0,534
+2018-05,Quantum computing,Malmö,0,241
 2018-06,AI,Sweden,127,3569
 2018-06,AI,Stockholm,50,1308
 2018-06,AI,Göteborg,17,480
@@ -3167,6 +4739,18 @@ month,topic,location,it_ads,it_total_ads
 2018-06,Cloud-native & DevOps,Stockholm,149,1308
 2018-06,Cloud-native & DevOps,Göteborg,57,480
 2018-06,Cloud-native & DevOps,Malmö,9,255
+2018-06,IoT & embedded,Sweden,404,3569
+2018-06,IoT & embedded,Stockholm,80,1308
+2018-06,IoT & embedded,Göteborg,85,480
+2018-06,IoT & embedded,Malmö,21,255
+2018-06,Blockchain & Web3,Sweden,4,3569
+2018-06,Blockchain & Web3,Stockholm,1,1308
+2018-06,Blockchain & Web3,Göteborg,0,480
+2018-06,Blockchain & Web3,Malmö,0,255
+2018-06,Quantum computing,Sweden,0,3569
+2018-06,Quantum computing,Stockholm,0,1308
+2018-06,Quantum computing,Göteborg,0,480
+2018-06,Quantum computing,Malmö,0,255
 2018-07,AI,Sweden,99,2645
 2018-07,AI,Stockholm,49,982
 2018-07,AI,Göteborg,15,435
@@ -3191,6 +4775,18 @@ month,topic,location,it_ads,it_total_ads
 2018-07,Cloud-native & DevOps,Stockholm,89,982
 2018-07,Cloud-native & DevOps,Göteborg,66,435
 2018-07,Cloud-native & DevOps,Malmö,5,173
+2018-07,IoT & embedded,Sweden,324,2645
+2018-07,IoT & embedded,Stockholm,75,982
+2018-07,IoT & embedded,Göteborg,94,435
+2018-07,IoT & embedded,Malmö,15,173
+2018-07,Blockchain & Web3,Sweden,4,2645
+2018-07,Blockchain & Web3,Stockholm,2,982
+2018-07,Blockchain & Web3,Göteborg,0,435
+2018-07,Blockchain & Web3,Malmö,0,173
+2018-07,Quantum computing,Sweden,0,2645
+2018-07,Quantum computing,Stockholm,0,982
+2018-07,Quantum computing,Göteborg,0,435
+2018-07,Quantum computing,Malmö,0,173
 2018-08,AI,Sweden,113,3389
 2018-08,AI,Stockholm,54,1282
 2018-08,AI,Göteborg,17,549
@@ -3215,6 +4811,18 @@ month,topic,location,it_ads,it_total_ads
 2018-08,Cloud-native & DevOps,Stockholm,128,1282
 2018-08,Cloud-native & DevOps,Göteborg,52,549
 2018-08,Cloud-native & DevOps,Malmö,14,233
+2018-08,IoT & embedded,Sweden,333,3389
+2018-08,IoT & embedded,Stockholm,69,1282
+2018-08,IoT & embedded,Göteborg,101,549
+2018-08,IoT & embedded,Malmö,20,233
+2018-08,Blockchain & Web3,Sweden,5,3389
+2018-08,Blockchain & Web3,Stockholm,4,1282
+2018-08,Blockchain & Web3,Göteborg,0,549
+2018-08,Blockchain & Web3,Malmö,0,233
+2018-08,Quantum computing,Sweden,0,3389
+2018-08,Quantum computing,Stockholm,0,1282
+2018-08,Quantum computing,Göteborg,0,549
+2018-08,Quantum computing,Malmö,0,233
 2018-09,AI,Sweden,151,3727
 2018-09,AI,Stockholm,56,1467
 2018-09,AI,Göteborg,23,514
@@ -3239,6 +4847,18 @@ month,topic,location,it_ads,it_total_ads
 2018-09,Cloud-native & DevOps,Stockholm,192,1467
 2018-09,Cloud-native & DevOps,Göteborg,75,514
 2018-09,Cloud-native & DevOps,Malmö,8,248
+2018-09,IoT & embedded,Sweden,358,3727
+2018-09,IoT & embedded,Stockholm,93,1467
+2018-09,IoT & embedded,Göteborg,72,514
+2018-09,IoT & embedded,Malmö,21,248
+2018-09,Blockchain & Web3,Sweden,14,3727
+2018-09,Blockchain & Web3,Stockholm,5,1467
+2018-09,Blockchain & Web3,Göteborg,1,514
+2018-09,Blockchain & Web3,Malmö,5,248
+2018-09,Quantum computing,Sweden,0,3727
+2018-09,Quantum computing,Stockholm,0,1467
+2018-09,Quantum computing,Göteborg,0,514
+2018-09,Quantum computing,Malmö,0,248
 2018-10,AI,Sweden,192,4268
 2018-10,AI,Stockholm,60,1492
 2018-10,AI,Göteborg,35,638
@@ -3263,6 +4883,18 @@ month,topic,location,it_ads,it_total_ads
 2018-10,Cloud-native & DevOps,Stockholm,174,1492
 2018-10,Cloud-native & DevOps,Göteborg,95,638
 2018-10,Cloud-native & DevOps,Malmö,22,289
+2018-10,IoT & embedded,Sweden,423,4268
+2018-10,IoT & embedded,Stockholm,70,1492
+2018-10,IoT & embedded,Göteborg,137,638
+2018-10,IoT & embedded,Malmö,26,289
+2018-10,Blockchain & Web3,Sweden,11,4268
+2018-10,Blockchain & Web3,Stockholm,4,1492
+2018-10,Blockchain & Web3,Göteborg,1,638
+2018-10,Blockchain & Web3,Malmö,0,289
+2018-10,Quantum computing,Sweden,0,4268
+2018-10,Quantum computing,Stockholm,0,1492
+2018-10,Quantum computing,Göteborg,0,638
+2018-10,Quantum computing,Malmö,0,289
 2018-11,AI,Sweden,156,3850
 2018-11,AI,Stockholm,57,1467
 2018-11,AI,Göteborg,40,534
@@ -3287,6 +4919,18 @@ month,topic,location,it_ads,it_total_ads
 2018-11,Cloud-native & DevOps,Stockholm,176,1467
 2018-11,Cloud-native & DevOps,Göteborg,84,534
 2018-11,Cloud-native & DevOps,Malmö,22,260
+2018-11,IoT & embedded,Sweden,347,3850
+2018-11,IoT & embedded,Stockholm,84,1467
+2018-11,IoT & embedded,Göteborg,78,534
+2018-11,IoT & embedded,Malmö,25,260
+2018-11,Blockchain & Web3,Sweden,5,3850
+2018-11,Blockchain & Web3,Stockholm,2,1467
+2018-11,Blockchain & Web3,Göteborg,1,534
+2018-11,Blockchain & Web3,Malmö,0,260
+2018-11,Quantum computing,Sweden,0,3850
+2018-11,Quantum computing,Stockholm,0,1467
+2018-11,Quantum computing,Göteborg,0,534
+2018-11,Quantum computing,Malmö,0,260
 2018-12,AI,Sweden,178,3781
 2018-12,AI,Stockholm,62,1429
 2018-12,AI,Göteborg,28,548
@@ -3311,6 +4955,18 @@ month,topic,location,it_ads,it_total_ads
 2018-12,Cloud-native & DevOps,Stockholm,191,1429
 2018-12,Cloud-native & DevOps,Göteborg,105,548
 2018-12,Cloud-native & DevOps,Malmö,13,183
+2018-12,IoT & embedded,Sweden,390,3781
+2018-12,IoT & embedded,Stockholm,79,1429
+2018-12,IoT & embedded,Göteborg,118,548
+2018-12,IoT & embedded,Malmö,18,183
+2018-12,Blockchain & Web3,Sweden,6,3781
+2018-12,Blockchain & Web3,Stockholm,4,1429
+2018-12,Blockchain & Web3,Göteborg,0,548
+2018-12,Blockchain & Web3,Malmö,0,183
+2018-12,Quantum computing,Sweden,2,3781
+2018-12,Quantum computing,Stockholm,0,1429
+2018-12,Quantum computing,Göteborg,1,548
+2018-12,Quantum computing,Malmö,0,183
 2019-01,AI,Sweden,169,3920
 2019-01,AI,Stockholm,72,1486
 2019-01,AI,Göteborg,27,558
@@ -3335,6 +4991,18 @@ month,topic,location,it_ads,it_total_ads
 2019-01,Cloud-native & DevOps,Stockholm,183,1486
 2019-01,Cloud-native & DevOps,Göteborg,79,558
 2019-01,Cloud-native & DevOps,Malmö,20,257
+2019-01,IoT & embedded,Sweden,373,3920
+2019-01,IoT & embedded,Stockholm,69,1486
+2019-01,IoT & embedded,Göteborg,112,558
+2019-01,IoT & embedded,Malmö,20,257
+2019-01,Blockchain & Web3,Sweden,6,3920
+2019-01,Blockchain & Web3,Stockholm,2,1486
+2019-01,Blockchain & Web3,Göteborg,0,558
+2019-01,Blockchain & Web3,Malmö,1,257
+2019-01,Quantum computing,Sweden,0,3920
+2019-01,Quantum computing,Stockholm,0,1486
+2019-01,Quantum computing,Göteborg,0,558
+2019-01,Quantum computing,Malmö,0,257
 2019-02,AI,Sweden,183,3452
 2019-02,AI,Stockholm,68,1228
 2019-02,AI,Göteborg,40,532
@@ -3359,6 +5027,18 @@ month,topic,location,it_ads,it_total_ads
 2019-02,Cloud-native & DevOps,Stockholm,152,1228
 2019-02,Cloud-native & DevOps,Göteborg,113,532
 2019-02,Cloud-native & DevOps,Malmö,12,194
+2019-02,IoT & embedded,Sweden,361,3452
+2019-02,IoT & embedded,Stockholm,73,1228
+2019-02,IoT & embedded,Göteborg,101,532
+2019-02,IoT & embedded,Malmö,15,194
+2019-02,Blockchain & Web3,Sweden,2,3452
+2019-02,Blockchain & Web3,Stockholm,1,1228
+2019-02,Blockchain & Web3,Göteborg,0,532
+2019-02,Blockchain & Web3,Malmö,0,194
+2019-02,Quantum computing,Sweden,0,3452
+2019-02,Quantum computing,Stockholm,0,1228
+2019-02,Quantum computing,Göteborg,0,532
+2019-02,Quantum computing,Malmö,0,194
 2019-03,AI,Sweden,194,3866
 2019-03,AI,Stockholm,67,1345
 2019-03,AI,Göteborg,37,630
@@ -3383,6 +5063,18 @@ month,topic,location,it_ads,it_total_ads
 2019-03,Cloud-native & DevOps,Stockholm,181,1345
 2019-03,Cloud-native & DevOps,Göteborg,88,630
 2019-03,Cloud-native & DevOps,Malmö,30,285
+2019-03,IoT & embedded,Sweden,400,3866
+2019-03,IoT & embedded,Stockholm,61,1345
+2019-03,IoT & embedded,Göteborg,121,630
+2019-03,IoT & embedded,Malmö,19,285
+2019-03,Blockchain & Web3,Sweden,3,3866
+2019-03,Blockchain & Web3,Stockholm,2,1345
+2019-03,Blockchain & Web3,Göteborg,0,630
+2019-03,Blockchain & Web3,Malmö,0,285
+2019-03,Quantum computing,Sweden,0,3866
+2019-03,Quantum computing,Stockholm,0,1345
+2019-03,Quantum computing,Göteborg,0,630
+2019-03,Quantum computing,Malmö,0,285
 2019-04,AI,Sweden,186,3891
 2019-04,AI,Stockholm,61,1501
 2019-04,AI,Göteborg,51,606
@@ -3407,6 +5099,18 @@ month,topic,location,it_ads,it_total_ads
 2019-04,Cloud-native & DevOps,Stockholm,181,1501
 2019-04,Cloud-native & DevOps,Göteborg,114,606
 2019-04,Cloud-native & DevOps,Malmö,21,238
+2019-04,IoT & embedded,Sweden,377,3891
+2019-04,IoT & embedded,Stockholm,50,1501
+2019-04,IoT & embedded,Göteborg,103,606
+2019-04,IoT & embedded,Malmö,19,238
+2019-04,Blockchain & Web3,Sweden,3,3891
+2019-04,Blockchain & Web3,Stockholm,2,1501
+2019-04,Blockchain & Web3,Göteborg,0,606
+2019-04,Blockchain & Web3,Malmö,1,238
+2019-04,Quantum computing,Sweden,0,3891
+2019-04,Quantum computing,Stockholm,0,1501
+2019-04,Quantum computing,Göteborg,0,606
+2019-04,Quantum computing,Malmö,0,238
 2019-05,AI,Sweden,220,4195
 2019-05,AI,Stockholm,84,1452
 2019-05,AI,Göteborg,44,806
@@ -3431,6 +5135,18 @@ month,topic,location,it_ads,it_total_ads
 2019-05,Cloud-native & DevOps,Stockholm,219,1452
 2019-05,Cloud-native & DevOps,Göteborg,155,806
 2019-05,Cloud-native & DevOps,Malmö,40,269
+2019-05,IoT & embedded,Sweden,431,4195
+2019-05,IoT & embedded,Stockholm,72,1452
+2019-05,IoT & embedded,Göteborg,165,806
+2019-05,IoT & embedded,Malmö,12,269
+2019-05,Blockchain & Web3,Sweden,4,4195
+2019-05,Blockchain & Web3,Stockholm,1,1452
+2019-05,Blockchain & Web3,Göteborg,2,806
+2019-05,Blockchain & Web3,Malmö,0,269
+2019-05,Quantum computing,Sweden,1,4195
+2019-05,Quantum computing,Stockholm,1,1452
+2019-05,Quantum computing,Göteborg,0,806
+2019-05,Quantum computing,Malmö,0,269
 2019-06,AI,Sweden,182,3149
 2019-06,AI,Stockholm,53,1046
 2019-06,AI,Göteborg,38,478
@@ -3455,6 +5171,18 @@ month,topic,location,it_ads,it_total_ads
 2019-06,Cloud-native & DevOps,Stockholm,169,1046
 2019-06,Cloud-native & DevOps,Göteborg,95,478
 2019-06,Cloud-native & DevOps,Malmö,33,220
+2019-06,IoT & embedded,Sweden,315,3149
+2019-06,IoT & embedded,Stockholm,52,1046
+2019-06,IoT & embedded,Göteborg,87,478
+2019-06,IoT & embedded,Malmö,19,220
+2019-06,Blockchain & Web3,Sweden,4,3149
+2019-06,Blockchain & Web3,Stockholm,1,1046
+2019-06,Blockchain & Web3,Göteborg,3,478
+2019-06,Blockchain & Web3,Malmö,0,220
+2019-06,Quantum computing,Sweden,0,3149
+2019-06,Quantum computing,Stockholm,0,1046
+2019-06,Quantum computing,Göteborg,0,478
+2019-06,Quantum computing,Malmö,0,220
 2019-07,AI,Sweden,165,2528
 2019-07,AI,Stockholm,56,824
 2019-07,AI,Göteborg,41,437
@@ -3479,6 +5207,18 @@ month,topic,location,it_ads,it_total_ads
 2019-07,Cloud-native & DevOps,Stockholm,127,824
 2019-07,Cloud-native & DevOps,Göteborg,96,437
 2019-07,Cloud-native & DevOps,Malmö,33,202
+2019-07,IoT & embedded,Sweden,324,2528
+2019-07,IoT & embedded,Stockholm,44,824
+2019-07,IoT & embedded,Göteborg,110,437
+2019-07,IoT & embedded,Malmö,26,202
+2019-07,Blockchain & Web3,Sweden,5,2528
+2019-07,Blockchain & Web3,Stockholm,0,824
+2019-07,Blockchain & Web3,Göteborg,5,437
+2019-07,Blockchain & Web3,Malmö,0,202
+2019-07,Quantum computing,Sweden,0,2528
+2019-07,Quantum computing,Stockholm,0,824
+2019-07,Quantum computing,Göteborg,0,437
+2019-07,Quantum computing,Malmö,0,202
 2019-08,AI,Sweden,152,2863
 2019-08,AI,Stockholm,57,1089
 2019-08,AI,Göteborg,34,424
@@ -3503,6 +5243,18 @@ month,topic,location,it_ads,it_total_ads
 2019-08,Cloud-native & DevOps,Stockholm,176,1089
 2019-08,Cloud-native & DevOps,Göteborg,79,424
 2019-08,Cloud-native & DevOps,Malmö,34,207
+2019-08,IoT & embedded,Sweden,309,2863
+2019-08,IoT & embedded,Stockholm,61,1089
+2019-08,IoT & embedded,Göteborg,97,424
+2019-08,IoT & embedded,Malmö,36,207
+2019-08,Blockchain & Web3,Sweden,2,2863
+2019-08,Blockchain & Web3,Stockholm,0,1089
+2019-08,Blockchain & Web3,Göteborg,2,424
+2019-08,Blockchain & Web3,Malmö,0,207
+2019-08,Quantum computing,Sweden,0,2863
+2019-08,Quantum computing,Stockholm,0,1089
+2019-08,Quantum computing,Göteborg,0,424
+2019-08,Quantum computing,Malmö,0,207
 2019-09,AI,Sweden,230,3352
 2019-09,AI,Stockholm,71,1137
 2019-09,AI,Göteborg,44,551
@@ -3527,6 +5279,18 @@ month,topic,location,it_ads,it_total_ads
 2019-09,Cloud-native & DevOps,Stockholm,152,1137
 2019-09,Cloud-native & DevOps,Göteborg,136,551
 2019-09,Cloud-native & DevOps,Malmö,46,294
+2019-09,IoT & embedded,Sweden,356,3352
+2019-09,IoT & embedded,Stockholm,46,1137
+2019-09,IoT & embedded,Göteborg,107,551
+2019-09,IoT & embedded,Malmö,36,294
+2019-09,Blockchain & Web3,Sweden,3,3352
+2019-09,Blockchain & Web3,Stockholm,2,1137
+2019-09,Blockchain & Web3,Göteborg,1,551
+2019-09,Blockchain & Web3,Malmö,0,294
+2019-09,Quantum computing,Sweden,0,3352
+2019-09,Quantum computing,Stockholm,0,1137
+2019-09,Quantum computing,Göteborg,0,551
+2019-09,Quantum computing,Malmö,0,294
 2019-10,AI,Sweden,298,3988
 2019-10,AI,Stockholm,97,1423
 2019-10,AI,Göteborg,54,678
@@ -3551,6 +5315,18 @@ month,topic,location,it_ads,it_total_ads
 2019-10,Cloud-native & DevOps,Stockholm,231,1423
 2019-10,Cloud-native & DevOps,Göteborg,158,678
 2019-10,Cloud-native & DevOps,Malmö,46,298
+2019-10,IoT & embedded,Sweden,522,3988
+2019-10,IoT & embedded,Stockholm,117,1423
+2019-10,IoT & embedded,Göteborg,139,678
+2019-10,IoT & embedded,Malmö,52,298
+2019-10,Blockchain & Web3,Sweden,5,3988
+2019-10,Blockchain & Web3,Stockholm,2,1423
+2019-10,Blockchain & Web3,Göteborg,2,678
+2019-10,Blockchain & Web3,Malmö,0,298
+2019-10,Quantum computing,Sweden,2,3988
+2019-10,Quantum computing,Stockholm,0,1423
+2019-10,Quantum computing,Göteborg,2,678
+2019-10,Quantum computing,Malmö,0,298
 2019-11,AI,Sweden,289,3757
 2019-11,AI,Stockholm,91,1503
 2019-11,AI,Göteborg,49,582
@@ -3575,6 +5351,18 @@ month,topic,location,it_ads,it_total_ads
 2019-11,Cloud-native & DevOps,Stockholm,223,1503
 2019-11,Cloud-native & DevOps,Göteborg,127,582
 2019-11,Cloud-native & DevOps,Malmö,39,278
+2019-11,IoT & embedded,Sweden,477,3757
+2019-11,IoT & embedded,Stockholm,89,1503
+2019-11,IoT & embedded,Göteborg,126,582
+2019-11,IoT & embedded,Malmö,49,278
+2019-11,Blockchain & Web3,Sweden,4,3757
+2019-11,Blockchain & Web3,Stockholm,1,1503
+2019-11,Blockchain & Web3,Göteborg,3,582
+2019-11,Blockchain & Web3,Malmö,0,278
+2019-11,Quantum computing,Sweden,0,3757
+2019-11,Quantum computing,Stockholm,0,1503
+2019-11,Quantum computing,Göteborg,0,582
+2019-11,Quantum computing,Malmö,0,278
 2019-12,AI,Sweden,336,3951
 2019-12,AI,Stockholm,106,1405
 2019-12,AI,Göteborg,71,664
@@ -3599,6 +5387,18 @@ month,topic,location,it_ads,it_total_ads
 2019-12,Cloud-native & DevOps,Stockholm,257,1405
 2019-12,Cloud-native & DevOps,Göteborg,161,664
 2019-12,Cloud-native & DevOps,Malmö,30,235
+2019-12,IoT & embedded,Sweden,495,3951
+2019-12,IoT & embedded,Stockholm,80,1405
+2019-12,IoT & embedded,Göteborg,170,664
+2019-12,IoT & embedded,Malmö,33,235
+2019-12,Blockchain & Web3,Sweden,7,3951
+2019-12,Blockchain & Web3,Stockholm,3,1405
+2019-12,Blockchain & Web3,Göteborg,2,664
+2019-12,Blockchain & Web3,Malmö,0,235
+2019-12,Quantum computing,Sweden,4,3951
+2019-12,Quantum computing,Stockholm,0,1405
+2019-12,Quantum computing,Göteborg,4,664
+2019-12,Quantum computing,Malmö,0,235
 2020-01,AI,Sweden,197,3932
 2020-01,AI,Stockholm,44,1153
 2020-01,AI,Göteborg,43,497
@@ -3623,6 +5423,18 @@ month,topic,location,it_ads,it_total_ads
 2020-01,Cloud-native & DevOps,Stockholm,178,1153
 2020-01,Cloud-native & DevOps,Göteborg,112,497
 2020-01,Cloud-native & DevOps,Malmö,10,182
+2020-01,IoT & embedded,Sweden,401,3932
+2020-01,IoT & embedded,Stockholm,59,1153
+2020-01,IoT & embedded,Göteborg,111,497
+2020-01,IoT & embedded,Malmö,18,182
+2020-01,Blockchain & Web3,Sweden,4,3932
+2020-01,Blockchain & Web3,Stockholm,0,1153
+2020-01,Blockchain & Web3,Göteborg,2,497
+2020-01,Blockchain & Web3,Malmö,0,182
+2020-01,Quantum computing,Sweden,1,3932
+2020-01,Quantum computing,Stockholm,0,1153
+2020-01,Quantum computing,Göteborg,0,497
+2020-01,Quantum computing,Malmö,0,182
 2020-02,AI,Sweden,206,3785
 2020-02,AI,Stockholm,49,1031
 2020-02,AI,Göteborg,29,502
@@ -3647,6 +5459,18 @@ month,topic,location,it_ads,it_total_ads
 2020-02,Cloud-native & DevOps,Stockholm,150,1031
 2020-02,Cloud-native & DevOps,Göteborg,88,502
 2020-02,Cloud-native & DevOps,Malmö,14,223
+2020-02,IoT & embedded,Sweden,324,3785
+2020-02,IoT & embedded,Stockholm,36,1031
+2020-02,IoT & embedded,Göteborg,95,502
+2020-02,IoT & embedded,Malmö,23,223
+2020-02,Blockchain & Web3,Sweden,3,3785
+2020-02,Blockchain & Web3,Stockholm,0,1031
+2020-02,Blockchain & Web3,Göteborg,1,502
+2020-02,Blockchain & Web3,Malmö,0,223
+2020-02,Quantum computing,Sweden,0,3785
+2020-02,Quantum computing,Stockholm,0,1031
+2020-02,Quantum computing,Göteborg,0,502
+2020-02,Quantum computing,Malmö,0,223
 2020-03,AI,Sweden,192,3423
 2020-03,AI,Stockholm,66,1199
 2020-03,AI,Göteborg,47,472
@@ -3671,6 +5495,18 @@ month,topic,location,it_ads,it_total_ads
 2020-03,Cloud-native & DevOps,Stockholm,203,1199
 2020-03,Cloud-native & DevOps,Göteborg,101,472
 2020-03,Cloud-native & DevOps,Malmö,15,181
+2020-03,IoT & embedded,Sweden,306,3423
+2020-03,IoT & embedded,Stockholm,76,1199
+2020-03,IoT & embedded,Göteborg,79,472
+2020-03,IoT & embedded,Malmö,9,181
+2020-03,Blockchain & Web3,Sweden,1,3423
+2020-03,Blockchain & Web3,Stockholm,0,1199
+2020-03,Blockchain & Web3,Göteborg,0,472
+2020-03,Blockchain & Web3,Malmö,0,181
+2020-03,Quantum computing,Sweden,1,3423
+2020-03,Quantum computing,Stockholm,0,1199
+2020-03,Quantum computing,Göteborg,1,472
+2020-03,Quantum computing,Malmö,0,181
 2020-04,AI,Sweden,161,2196
 2020-04,AI,Stockholm,70,809
 2020-04,AI,Göteborg,23,277
@@ -3695,6 +5531,18 @@ month,topic,location,it_ads,it_total_ads
 2020-04,Cloud-native & DevOps,Stockholm,134,809
 2020-04,Cloud-native & DevOps,Göteborg,55,277
 2020-04,Cloud-native & DevOps,Malmö,6,140
+2020-04,IoT & embedded,Sweden,167,2196
+2020-04,IoT & embedded,Stockholm,43,809
+2020-04,IoT & embedded,Göteborg,32,277
+2020-04,IoT & embedded,Malmö,16,140
+2020-04,Blockchain & Web3,Sweden,2,2196
+2020-04,Blockchain & Web3,Stockholm,1,809
+2020-04,Blockchain & Web3,Göteborg,1,277
+2020-04,Blockchain & Web3,Malmö,0,140
+2020-04,Quantum computing,Sweden,0,2196
+2020-04,Quantum computing,Stockholm,0,809
+2020-04,Quantum computing,Göteborg,0,277
+2020-04,Quantum computing,Malmö,0,140
 2020-05,AI,Sweden,122,2046
 2020-05,AI,Stockholm,51,758
 2020-05,AI,Göteborg,19,217
@@ -3719,6 +5567,18 @@ month,topic,location,it_ads,it_total_ads
 2020-05,Cloud-native & DevOps,Stockholm,154,758
 2020-05,Cloud-native & DevOps,Göteborg,45,217
 2020-05,Cloud-native & DevOps,Malmö,9,99
+2020-05,IoT & embedded,Sweden,167,2046
+2020-05,IoT & embedded,Stockholm,52,758
+2020-05,IoT & embedded,Göteborg,32,217
+2020-05,IoT & embedded,Malmö,10,99
+2020-05,Blockchain & Web3,Sweden,2,2046
+2020-05,Blockchain & Web3,Stockholm,1,758
+2020-05,Blockchain & Web3,Göteborg,0,217
+2020-05,Blockchain & Web3,Malmö,0,99
+2020-05,Quantum computing,Sweden,0,2046
+2020-05,Quantum computing,Stockholm,0,758
+2020-05,Quantum computing,Göteborg,0,217
+2020-05,Quantum computing,Malmö,0,99
 2020-06,AI,Sweden,119,2047
 2020-06,AI,Stockholm,50,777
 2020-06,AI,Göteborg,19,182
@@ -3743,6 +5603,18 @@ month,topic,location,it_ads,it_total_ads
 2020-06,Cloud-native & DevOps,Stockholm,140,777
 2020-06,Cloud-native & DevOps,Göteborg,37,182
 2020-06,Cloud-native & DevOps,Malmö,16,121
+2020-06,IoT & embedded,Sweden,169,2047
+2020-06,IoT & embedded,Stockholm,73,777
+2020-06,IoT & embedded,Göteborg,27,182
+2020-06,IoT & embedded,Malmö,11,121
+2020-06,Blockchain & Web3,Sweden,2,2047
+2020-06,Blockchain & Web3,Stockholm,0,777
+2020-06,Blockchain & Web3,Göteborg,1,182
+2020-06,Blockchain & Web3,Malmö,0,121
+2020-06,Quantum computing,Sweden,0,2047
+2020-06,Quantum computing,Stockholm,0,777
+2020-06,Quantum computing,Göteborg,0,182
+2020-06,Quantum computing,Malmö,0,121
 2020-07,AI,Sweden,115,1450
 2020-07,AI,Stockholm,46,555
 2020-07,AI,Göteborg,26,145
@@ -3767,6 +5639,18 @@ month,topic,location,it_ads,it_total_ads
 2020-07,Cloud-native & DevOps,Stockholm,111,555
 2020-07,Cloud-native & DevOps,Göteborg,33,145
 2020-07,Cloud-native & DevOps,Malmö,13,76
+2020-07,IoT & embedded,Sweden,145,1450
+2020-07,IoT & embedded,Stockholm,45,555
+2020-07,IoT & embedded,Göteborg,24,145
+2020-07,IoT & embedded,Malmö,9,76
+2020-07,Blockchain & Web3,Sweden,3,1450
+2020-07,Blockchain & Web3,Stockholm,2,555
+2020-07,Blockchain & Web3,Göteborg,0,145
+2020-07,Blockchain & Web3,Malmö,0,76
+2020-07,Quantum computing,Sweden,0,1450
+2020-07,Quantum computing,Stockholm,0,555
+2020-07,Quantum computing,Göteborg,0,145
+2020-07,Quantum computing,Malmö,0,76
 2020-08,AI,Sweden,143,1876
 2020-08,AI,Stockholm,53,737
 2020-08,AI,Göteborg,31,240
@@ -3791,6 +5675,18 @@ month,topic,location,it_ads,it_total_ads
 2020-08,Cloud-native & DevOps,Stockholm,133,737
 2020-08,Cloud-native & DevOps,Göteborg,40,240
 2020-08,Cloud-native & DevOps,Malmö,19,114
+2020-08,IoT & embedded,Sweden,182,1876
+2020-08,IoT & embedded,Stockholm,41,737
+2020-08,IoT & embedded,Göteborg,28,240
+2020-08,IoT & embedded,Malmö,18,114
+2020-08,Blockchain & Web3,Sweden,2,1876
+2020-08,Blockchain & Web3,Stockholm,1,737
+2020-08,Blockchain & Web3,Göteborg,1,240
+2020-08,Blockchain & Web3,Malmö,0,114
+2020-08,Quantum computing,Sweden,0,1876
+2020-08,Quantum computing,Stockholm,0,737
+2020-08,Quantum computing,Göteborg,0,240
+2020-08,Quantum computing,Malmö,0,114
 2020-09,AI,Sweden,157,2731
 2020-09,AI,Stockholm,63,1036
 2020-09,AI,Göteborg,23,306
@@ -3815,6 +5711,18 @@ month,topic,location,it_ads,it_total_ads
 2020-09,Cloud-native & DevOps,Stockholm,210,1036
 2020-09,Cloud-native & DevOps,Göteborg,69,306
 2020-09,Cloud-native & DevOps,Malmö,22,145
+2020-09,IoT & embedded,Sweden,299,2731
+2020-09,IoT & embedded,Stockholm,83,1036
+2020-09,IoT & embedded,Göteborg,52,306
+2020-09,IoT & embedded,Malmö,27,145
+2020-09,Blockchain & Web3,Sweden,3,2731
+2020-09,Blockchain & Web3,Stockholm,1,1036
+2020-09,Blockchain & Web3,Göteborg,0,306
+2020-09,Blockchain & Web3,Malmö,0,145
+2020-09,Quantum computing,Sweden,0,2731
+2020-09,Quantum computing,Stockholm,0,1036
+2020-09,Quantum computing,Göteborg,0,306
+2020-09,Quantum computing,Malmö,0,145
 2020-10,AI,Sweden,163,2993
 2020-10,AI,Stockholm,45,1046
 2020-10,AI,Göteborg,31,423
@@ -3839,6 +5747,18 @@ month,topic,location,it_ads,it_total_ads
 2020-10,Cloud-native & DevOps,Stockholm,191,1046
 2020-10,Cloud-native & DevOps,Göteborg,119,423
 2020-10,Cloud-native & DevOps,Malmö,34,170
+2020-10,IoT & embedded,Sweden,321,2993
+2020-10,IoT & embedded,Stockholm,68,1046
+2020-10,IoT & embedded,Göteborg,82,423
+2020-10,IoT & embedded,Malmö,21,170
+2020-10,Blockchain & Web3,Sweden,5,2993
+2020-10,Blockchain & Web3,Stockholm,0,1046
+2020-10,Blockchain & Web3,Göteborg,1,423
+2020-10,Blockchain & Web3,Malmö,1,170
+2020-10,Quantum computing,Sweden,1,2993
+2020-10,Quantum computing,Stockholm,0,1046
+2020-10,Quantum computing,Göteborg,1,423
+2020-10,Quantum computing,Malmö,0,170
 2020-11,AI,Sweden,201,3430
 2020-11,AI,Stockholm,75,1190
 2020-11,AI,Göteborg,32,419
@@ -3863,6 +5783,18 @@ month,topic,location,it_ads,it_total_ads
 2020-11,Cloud-native & DevOps,Stockholm,245,1190
 2020-11,Cloud-native & DevOps,Göteborg,94,419
 2020-11,Cloud-native & DevOps,Malmö,43,208
+2020-11,IoT & embedded,Sweden,382,3430
+2020-11,IoT & embedded,Stockholm,85,1190
+2020-11,IoT & embedded,Göteborg,74,419
+2020-11,IoT & embedded,Malmö,21,208
+2020-11,Blockchain & Web3,Sweden,5,3430
+2020-11,Blockchain & Web3,Stockholm,3,1190
+2020-11,Blockchain & Web3,Göteborg,1,419
+2020-11,Blockchain & Web3,Malmö,1,208
+2020-11,Quantum computing,Sweden,1,3430
+2020-11,Quantum computing,Stockholm,0,1190
+2020-11,Quantum computing,Göteborg,1,419
+2020-11,Quantum computing,Malmö,0,208
 2020-12,AI,Sweden,244,3542
 2020-12,AI,Stockholm,84,1110
 2020-12,AI,Göteborg,54,513
@@ -3887,6 +5819,18 @@ month,topic,location,it_ads,it_total_ads
 2020-12,Cloud-native & DevOps,Stockholm,218,1110
 2020-12,Cloud-native & DevOps,Göteborg,146,513
 2020-12,Cloud-native & DevOps,Malmö,25,199
+2020-12,IoT & embedded,Sweden,447,3542
+2020-12,IoT & embedded,Stockholm,76,1110
+2020-12,IoT & embedded,Göteborg,118,513
+2020-12,IoT & embedded,Malmö,19,199
+2020-12,Blockchain & Web3,Sweden,2,3542
+2020-12,Blockchain & Web3,Stockholm,1,1110
+2020-12,Blockchain & Web3,Göteborg,0,513
+2020-12,Blockchain & Web3,Malmö,0,199
+2020-12,Quantum computing,Sweden,0,3542
+2020-12,Quantum computing,Stockholm,0,1110
+2020-12,Quantum computing,Göteborg,0,513
+2020-12,Quantum computing,Malmö,0,199
 2021-01,AI,Sweden,155,3034
 2021-01,AI,Stockholm,56,1071
 2021-01,AI,Göteborg,14,403
@@ -3911,6 +5855,18 @@ month,topic,location,it_ads,it_total_ads
 2021-01,Cloud-native & DevOps,Stockholm,178,1071
 2021-01,Cloud-native & DevOps,Göteborg,94,403
 2021-01,Cloud-native & DevOps,Malmö,21,175
+2021-01,IoT & embedded,Sweden,336,3034
+2021-01,IoT & embedded,Stockholm,65,1071
+2021-01,IoT & embedded,Göteborg,51,403
+2021-01,IoT & embedded,Malmö,15,175
+2021-01,Blockchain & Web3,Sweden,6,3034
+2021-01,Blockchain & Web3,Stockholm,3,1071
+2021-01,Blockchain & Web3,Göteborg,3,403
+2021-01,Blockchain & Web3,Malmö,0,175
+2021-01,Quantum computing,Sweden,0,3034
+2021-01,Quantum computing,Stockholm,0,1071
+2021-01,Quantum computing,Göteborg,0,403
+2021-01,Quantum computing,Malmö,0,175
 2021-02,AI,Sweden,210,3822
 2021-02,AI,Stockholm,54,1285
 2021-02,AI,Göteborg,50,538
@@ -3935,6 +5891,18 @@ month,topic,location,it_ads,it_total_ads
 2021-02,Cloud-native & DevOps,Stockholm,210,1285
 2021-02,Cloud-native & DevOps,Göteborg,131,538
 2021-02,Cloud-native & DevOps,Malmö,46,257
+2021-02,IoT & embedded,Sweden,414,3822
+2021-02,IoT & embedded,Stockholm,94,1285
+2021-02,IoT & embedded,Göteborg,101,538
+2021-02,IoT & embedded,Malmö,17,257
+2021-02,Blockchain & Web3,Sweden,6,3822
+2021-02,Blockchain & Web3,Stockholm,1,1285
+2021-02,Blockchain & Web3,Göteborg,4,538
+2021-02,Blockchain & Web3,Malmö,0,257
+2021-02,Quantum computing,Sweden,0,3822
+2021-02,Quantum computing,Stockholm,0,1285
+2021-02,Quantum computing,Göteborg,0,538
+2021-02,Quantum computing,Malmö,0,257
 2021-03,AI,Sweden,292,4347
 2021-03,AI,Stockholm,95,1324
 2021-03,AI,Göteborg,62,651
@@ -3959,6 +5927,18 @@ month,topic,location,it_ads,it_total_ads
 2021-03,Cloud-native & DevOps,Stockholm,243,1324
 2021-03,Cloud-native & DevOps,Göteborg,166,651
 2021-03,Cloud-native & DevOps,Malmö,45,243
+2021-03,IoT & embedded,Sweden,478,4347
+2021-03,IoT & embedded,Stockholm,80,1324
+2021-03,IoT & embedded,Göteborg,111,651
+2021-03,IoT & embedded,Malmö,23,243
+2021-03,Blockchain & Web3,Sweden,3,4347
+2021-03,Blockchain & Web3,Stockholm,2,1324
+2021-03,Blockchain & Web3,Göteborg,0,651
+2021-03,Blockchain & Web3,Malmö,0,243
+2021-03,Quantum computing,Sweden,1,4347
+2021-03,Quantum computing,Stockholm,0,1324
+2021-03,Quantum computing,Göteborg,1,651
+2021-03,Quantum computing,Malmö,0,243
 2021-04,AI,Sweden,259,4327
 2021-04,AI,Stockholm,91,1443
 2021-04,AI,Göteborg,43,637
@@ -3983,6 +5963,18 @@ month,topic,location,it_ads,it_total_ads
 2021-04,Cloud-native & DevOps,Stockholm,296,1443
 2021-04,Cloud-native & DevOps,Göteborg,149,637
 2021-04,Cloud-native & DevOps,Malmö,21,262
+2021-04,IoT & embedded,Sweden,424,4327
+2021-04,IoT & embedded,Stockholm,91,1443
+2021-04,IoT & embedded,Göteborg,85,637
+2021-04,IoT & embedded,Malmö,18,262
+2021-04,Blockchain & Web3,Sweden,3,4327
+2021-04,Blockchain & Web3,Stockholm,0,1443
+2021-04,Blockchain & Web3,Göteborg,2,637
+2021-04,Blockchain & Web3,Malmö,0,262
+2021-04,Quantum computing,Sweden,0,4327
+2021-04,Quantum computing,Stockholm,0,1443
+2021-04,Quantum computing,Göteborg,0,637
+2021-04,Quantum computing,Malmö,0,262
 2021-05,AI,Sweden,316,4474
 2021-05,AI,Stockholm,93,1421
 2021-05,AI,Göteborg,70,667
@@ -4007,6 +5999,18 @@ month,topic,location,it_ads,it_total_ads
 2021-05,Cloud-native & DevOps,Stockholm,292,1421
 2021-05,Cloud-native & DevOps,Göteborg,144,667
 2021-05,Cloud-native & DevOps,Malmö,54,312
+2021-05,IoT & embedded,Sweden,552,4474
+2021-05,IoT & embedded,Stockholm,106,1421
+2021-05,IoT & embedded,Göteborg,126,667
+2021-05,IoT & embedded,Malmö,27,312
+2021-05,Blockchain & Web3,Sweden,7,4474
+2021-05,Blockchain & Web3,Stockholm,1,1421
+2021-05,Blockchain & Web3,Göteborg,3,667
+2021-05,Blockchain & Web3,Malmö,1,312
+2021-05,Quantum computing,Sweden,2,4474
+2021-05,Quantum computing,Stockholm,0,1421
+2021-05,Quantum computing,Göteborg,2,667
+2021-05,Quantum computing,Malmö,0,312
 2021-06,AI,Sweden,296,4359
 2021-06,AI,Stockholm,116,1530
 2021-06,AI,Göteborg,53,636
@@ -4031,6 +6035,18 @@ month,topic,location,it_ads,it_total_ads
 2021-06,Cloud-native & DevOps,Stockholm,288,1530
 2021-06,Cloud-native & DevOps,Göteborg,161,636
 2021-06,Cloud-native & DevOps,Malmö,25,235
+2021-06,IoT & embedded,Sweden,478,4359
+2021-06,IoT & embedded,Stockholm,103,1530
+2021-06,IoT & embedded,Göteborg,120,636
+2021-06,IoT & embedded,Malmö,16,235
+2021-06,Blockchain & Web3,Sweden,7,4359
+2021-06,Blockchain & Web3,Stockholm,4,1530
+2021-06,Blockchain & Web3,Göteborg,2,636
+2021-06,Blockchain & Web3,Malmö,0,235
+2021-06,Quantum computing,Sweden,0,4359
+2021-06,Quantum computing,Stockholm,0,1530
+2021-06,Quantum computing,Göteborg,0,636
+2021-06,Quantum computing,Malmö,0,235
 2021-07,AI,Sweden,223,3005
 2021-07,AI,Stockholm,67,984
 2021-07,AI,Göteborg,54,495
@@ -4055,6 +6071,18 @@ month,topic,location,it_ads,it_total_ads
 2021-07,Cloud-native & DevOps,Stockholm,195,984
 2021-07,Cloud-native & DevOps,Göteborg,130,495
 2021-07,Cloud-native & DevOps,Malmö,36,215
+2021-07,IoT & embedded,Sweden,326,3005
+2021-07,IoT & embedded,Stockholm,68,984
+2021-07,IoT & embedded,Göteborg,93,495
+2021-07,IoT & embedded,Malmö,14,215
+2021-07,Blockchain & Web3,Sweden,7,3005
+2021-07,Blockchain & Web3,Stockholm,0,984
+2021-07,Blockchain & Web3,Göteborg,4,495
+2021-07,Blockchain & Web3,Malmö,0,215
+2021-07,Quantum computing,Sweden,1,3005
+2021-07,Quantum computing,Stockholm,0,984
+2021-07,Quantum computing,Göteborg,1,495
+2021-07,Quantum computing,Malmö,0,215
 2021-08,AI,Sweden,234,3738
 2021-08,AI,Stockholm,85,1280
 2021-08,AI,Göteborg,27,554
@@ -4079,6 +6107,18 @@ month,topic,location,it_ads,it_total_ads
 2021-08,Cloud-native & DevOps,Stockholm,263,1280
 2021-08,Cloud-native & DevOps,Göteborg,112,554
 2021-08,Cloud-native & DevOps,Malmö,23,227
+2021-08,IoT & embedded,Sweden,411,3738
+2021-08,IoT & embedded,Stockholm,83,1280
+2021-08,IoT & embedded,Göteborg,83,554
+2021-08,IoT & embedded,Malmö,16,227
+2021-08,Blockchain & Web3,Sweden,4,3738
+2021-08,Blockchain & Web3,Stockholm,2,1280
+2021-08,Blockchain & Web3,Göteborg,0,554
+2021-08,Blockchain & Web3,Malmö,0,227
+2021-08,Quantum computing,Sweden,0,3738
+2021-08,Quantum computing,Stockholm,0,1280
+2021-08,Quantum computing,Göteborg,0,554
+2021-08,Quantum computing,Malmö,0,227
 2021-09,AI,Sweden,352,5472
 2021-09,AI,Stockholm,135,1893
 2021-09,AI,Göteborg,65,819
@@ -4103,6 +6143,18 @@ month,topic,location,it_ads,it_total_ads
 2021-09,Cloud-native & DevOps,Stockholm,359,1893
 2021-09,Cloud-native & DevOps,Göteborg,186,819
 2021-09,Cloud-native & DevOps,Malmö,56,309
+2021-09,IoT & embedded,Sweden,589,5472
+2021-09,IoT & embedded,Stockholm,123,1893
+2021-09,IoT & embedded,Göteborg,157,819
+2021-09,IoT & embedded,Malmö,25,309
+2021-09,Blockchain & Web3,Sweden,5,5472
+2021-09,Blockchain & Web3,Stockholm,2,1893
+2021-09,Blockchain & Web3,Göteborg,1,819
+2021-09,Blockchain & Web3,Malmö,0,309
+2021-09,Quantum computing,Sweden,7,5472
+2021-09,Quantum computing,Stockholm,3,1893
+2021-09,Quantum computing,Göteborg,4,819
+2021-09,Quantum computing,Malmö,0,309
 2021-10,AI,Sweden,352,5670
 2021-10,AI,Stockholm,124,1951
 2021-10,AI,Göteborg,56,915
@@ -4127,6 +6179,18 @@ month,topic,location,it_ads,it_total_ads
 2021-10,Cloud-native & DevOps,Stockholm,385,1951
 2021-10,Cloud-native & DevOps,Göteborg,190,915
 2021-10,Cloud-native & DevOps,Malmö,23,230
+2021-10,IoT & embedded,Sweden,556,5670
+2021-10,IoT & embedded,Stockholm,117,1951
+2021-10,IoT & embedded,Göteborg,144,915
+2021-10,IoT & embedded,Malmö,17,230
+2021-10,Blockchain & Web3,Sweden,9,5670
+2021-10,Blockchain & Web3,Stockholm,6,1951
+2021-10,Blockchain & Web3,Göteborg,0,915
+2021-10,Blockchain & Web3,Malmö,0,230
+2021-10,Quantum computing,Sweden,2,5670
+2021-10,Quantum computing,Stockholm,0,1951
+2021-10,Quantum computing,Göteborg,2,915
+2021-10,Quantum computing,Malmö,0,230
 2021-11,AI,Sweden,370,5880
 2021-11,AI,Stockholm,148,2011
 2021-11,AI,Göteborg,66,953
@@ -4151,6 +6215,18 @@ month,topic,location,it_ads,it_total_ads
 2021-11,Cloud-native & DevOps,Stockholm,365,2011
 2021-11,Cloud-native & DevOps,Göteborg,246,953
 2021-11,Cloud-native & DevOps,Malmö,53,305
+2021-11,IoT & embedded,Sweden,594,5880
+2021-11,IoT & embedded,Stockholm,124,2011
+2021-11,IoT & embedded,Göteborg,165,953
+2021-11,IoT & embedded,Malmö,14,305
+2021-11,Blockchain & Web3,Sweden,9,5880
+2021-11,Blockchain & Web3,Stockholm,6,2011
+2021-11,Blockchain & Web3,Göteborg,2,953
+2021-11,Blockchain & Web3,Malmö,0,305
+2021-11,Quantum computing,Sweden,6,5880
+2021-11,Quantum computing,Stockholm,0,2011
+2021-11,Quantum computing,Göteborg,6,953
+2021-11,Quantum computing,Malmö,0,305
 2021-12,AI,Sweden,415,6290
 2021-12,AI,Stockholm,149,2074
 2021-12,AI,Göteborg,82,879
@@ -4175,6 +6251,18 @@ month,topic,location,it_ads,it_total_ads
 2021-12,Cloud-native & DevOps,Stockholm,424,2074
 2021-12,Cloud-native & DevOps,Göteborg,190,879
 2021-12,Cloud-native & DevOps,Malmö,45,312
+2021-12,IoT & embedded,Sweden,570,6290
+2021-12,IoT & embedded,Stockholm,117,2074
+2021-12,IoT & embedded,Göteborg,132,879
+2021-12,IoT & embedded,Malmö,26,312
+2021-12,Blockchain & Web3,Sweden,11,6290
+2021-12,Blockchain & Web3,Stockholm,6,2074
+2021-12,Blockchain & Web3,Göteborg,0,879
+2021-12,Blockchain & Web3,Malmö,0,312
+2021-12,Quantum computing,Sweden,2,6290
+2021-12,Quantum computing,Stockholm,1,2074
+2021-12,Quantum computing,Göteborg,1,879
+2021-12,Quantum computing,Malmö,0,312
 2022-01,AI,Sweden,314,4739
 2022-01,AI,Stockholm,112,1532
 2022-01,AI,Göteborg,52,793
@@ -4199,6 +6287,18 @@ month,topic,location,it_ads,it_total_ads
 2022-01,Cloud-native & DevOps,Stockholm,376,1532
 2022-01,Cloud-native & DevOps,Göteborg,190,793
 2022-01,Cloud-native & DevOps,Malmö,39,272
+2022-01,IoT & embedded,Sweden,475,4739
+2022-01,IoT & embedded,Stockholm,107,1532
+2022-01,IoT & embedded,Göteborg,119,793
+2022-01,IoT & embedded,Malmö,20,272
+2022-01,Blockchain & Web3,Sweden,10,4739
+2022-01,Blockchain & Web3,Stockholm,4,1532
+2022-01,Blockchain & Web3,Göteborg,3,793
+2022-01,Blockchain & Web3,Malmö,0,272
+2022-01,Quantum computing,Sweden,3,4739
+2022-01,Quantum computing,Stockholm,2,1532
+2022-01,Quantum computing,Göteborg,0,793
+2022-01,Quantum computing,Malmö,0,272
 2022-02,AI,Sweden,336,5997
 2022-02,AI,Stockholm,116,1962
 2022-02,AI,Göteborg,52,821
@@ -4223,6 +6323,18 @@ month,topic,location,it_ads,it_total_ads
 2022-02,Cloud-native & DevOps,Stockholm,447,1962
 2022-02,Cloud-native & DevOps,Göteborg,166,821
 2022-02,Cloud-native & DevOps,Malmö,54,314
+2022-02,IoT & embedded,Sweden,622,5997
+2022-02,IoT & embedded,Stockholm,138,1962
+2022-02,IoT & embedded,Göteborg,157,821
+2022-02,IoT & embedded,Malmö,27,314
+2022-02,Blockchain & Web3,Sweden,16,5997
+2022-02,Blockchain & Web3,Stockholm,7,1962
+2022-02,Blockchain & Web3,Göteborg,2,821
+2022-02,Blockchain & Web3,Malmö,0,314
+2022-02,Quantum computing,Sweden,2,5997
+2022-02,Quantum computing,Stockholm,1,1962
+2022-02,Quantum computing,Göteborg,1,821
+2022-02,Quantum computing,Malmö,0,314
 2022-03,AI,Sweden,490,6643
 2022-03,AI,Stockholm,158,2154
 2022-03,AI,Göteborg,102,973
@@ -4247,6 +6359,18 @@ month,topic,location,it_ads,it_total_ads
 2022-03,Cloud-native & DevOps,Stockholm,483,2154
 2022-03,Cloud-native & DevOps,Göteborg,224,973
 2022-03,Cloud-native & DevOps,Malmö,68,377
+2022-03,IoT & embedded,Sweden,644,6643
+2022-03,IoT & embedded,Stockholm,129,2154
+2022-03,IoT & embedded,Göteborg,154,973
+2022-03,IoT & embedded,Malmö,39,377
+2022-03,Blockchain & Web3,Sweden,16,6643
+2022-03,Blockchain & Web3,Stockholm,8,2154
+2022-03,Blockchain & Web3,Göteborg,2,973
+2022-03,Blockchain & Web3,Malmö,1,377
+2022-03,Quantum computing,Sweden,0,6643
+2022-03,Quantum computing,Stockholm,0,2154
+2022-03,Quantum computing,Göteborg,0,973
+2022-03,Quantum computing,Malmö,0,377
 2022-04,AI,Sweden,413,5821
 2022-04,AI,Stockholm,133,1803
 2022-04,AI,Göteborg,73,817
@@ -4271,6 +6395,18 @@ month,topic,location,it_ads,it_total_ads
 2022-04,Cloud-native & DevOps,Stockholm,414,1803
 2022-04,Cloud-native & DevOps,Göteborg,189,817
 2022-04,Cloud-native & DevOps,Malmö,81,369
+2022-04,IoT & embedded,Sweden,562,5821
+2022-04,IoT & embedded,Stockholm,125,1803
+2022-04,IoT & embedded,Göteborg,136,817
+2022-04,IoT & embedded,Malmö,33,369
+2022-04,Blockchain & Web3,Sweden,12,5821
+2022-04,Blockchain & Web3,Stockholm,5,1803
+2022-04,Blockchain & Web3,Göteborg,2,817
+2022-04,Blockchain & Web3,Malmö,0,369
+2022-04,Quantum computing,Sweden,1,5821
+2022-04,Quantum computing,Stockholm,0,1803
+2022-04,Quantum computing,Göteborg,1,817
+2022-04,Quantum computing,Malmö,0,369
 2022-05,AI,Sweden,450,6215
 2022-05,AI,Stockholm,148,1893
 2022-05,AI,Göteborg,79,952
@@ -4295,6 +6431,18 @@ month,topic,location,it_ads,it_total_ads
 2022-05,Cloud-native & DevOps,Stockholm,444,1893
 2022-05,Cloud-native & DevOps,Göteborg,191,952
 2022-05,Cloud-native & DevOps,Malmö,68,381
+2022-05,IoT & embedded,Sweden,633,6215
+2022-05,IoT & embedded,Stockholm,138,1893
+2022-05,IoT & embedded,Göteborg,159,952
+2022-05,IoT & embedded,Malmö,25,381
+2022-05,Blockchain & Web3,Sweden,8,6215
+2022-05,Blockchain & Web3,Stockholm,4,1893
+2022-05,Blockchain & Web3,Göteborg,2,952
+2022-05,Blockchain & Web3,Malmö,0,381
+2022-05,Quantum computing,Sweden,4,6215
+2022-05,Quantum computing,Stockholm,2,1893
+2022-05,Quantum computing,Göteborg,2,952
+2022-05,Quantum computing,Malmö,0,381
 2022-06,AI,Sweden,380,5541
 2022-06,AI,Stockholm,110,1682
 2022-06,AI,Göteborg,60,808
@@ -4319,6 +6467,18 @@ month,topic,location,it_ads,it_total_ads
 2022-06,Cloud-native & DevOps,Stockholm,383,1682
 2022-06,Cloud-native & DevOps,Göteborg,180,808
 2022-06,Cloud-native & DevOps,Malmö,56,325
+2022-06,IoT & embedded,Sweden,585,5541
+2022-06,IoT & embedded,Stockholm,111,1682
+2022-06,IoT & embedded,Göteborg,136,808
+2022-06,IoT & embedded,Malmö,37,325
+2022-06,Blockchain & Web3,Sweden,18,5541
+2022-06,Blockchain & Web3,Stockholm,9,1682
+2022-06,Blockchain & Web3,Göteborg,2,808
+2022-06,Blockchain & Web3,Malmö,1,325
+2022-06,Quantum computing,Sweden,2,5541
+2022-06,Quantum computing,Stockholm,1,1682
+2022-06,Quantum computing,Göteborg,1,808
+2022-06,Quantum computing,Malmö,0,325
 2022-07,AI,Sweden,311,4042
 2022-07,AI,Stockholm,96,1244
 2022-07,AI,Göteborg,51,609
@@ -4343,6 +6503,18 @@ month,topic,location,it_ads,it_total_ads
 2022-07,Cloud-native & DevOps,Stockholm,296,1244
 2022-07,Cloud-native & DevOps,Göteborg,136,609
 2022-07,Cloud-native & DevOps,Malmö,42,233
+2022-07,IoT & embedded,Sweden,451,4042
+2022-07,IoT & embedded,Stockholm,93,1244
+2022-07,IoT & embedded,Göteborg,118,609
+2022-07,IoT & embedded,Malmö,24,233
+2022-07,Blockchain & Web3,Sweden,8,4042
+2022-07,Blockchain & Web3,Stockholm,4,1244
+2022-07,Blockchain & Web3,Göteborg,1,609
+2022-07,Blockchain & Web3,Malmö,0,233
+2022-07,Quantum computing,Sweden,0,4042
+2022-07,Quantum computing,Stockholm,0,1244
+2022-07,Quantum computing,Göteborg,0,609
+2022-07,Quantum computing,Malmö,0,233
 2022-08,AI,Sweden,321,5092
 2022-08,AI,Stockholm,102,1695
 2022-08,AI,Göteborg,62,788
@@ -4367,6 +6539,18 @@ month,topic,location,it_ads,it_total_ads
 2022-08,Cloud-native & DevOps,Stockholm,432,1695
 2022-08,Cloud-native & DevOps,Göteborg,187,788
 2022-08,Cloud-native & DevOps,Malmö,58,275
+2022-08,IoT & embedded,Sweden,556,5092
+2022-08,IoT & embedded,Stockholm,107,1695
+2022-08,IoT & embedded,Göteborg,142,788
+2022-08,IoT & embedded,Malmö,29,275
+2022-08,Blockchain & Web3,Sweden,7,5092
+2022-08,Blockchain & Web3,Stockholm,5,1695
+2022-08,Blockchain & Web3,Göteborg,2,788
+2022-08,Blockchain & Web3,Malmö,0,275
+2022-08,Quantum computing,Sweden,1,5092
+2022-08,Quantum computing,Stockholm,0,1695
+2022-08,Quantum computing,Göteborg,1,788
+2022-08,Quantum computing,Malmö,0,275
 2022-09,AI,Sweden,417,5942
 2022-09,AI,Stockholm,121,1677
 2022-09,AI,Göteborg,68,899
@@ -4391,6 +6575,18 @@ month,topic,location,it_ads,it_total_ads
 2022-09,Cloud-native & DevOps,Stockholm,432,1677
 2022-09,Cloud-native & DevOps,Göteborg,196,899
 2022-09,Cloud-native & DevOps,Malmö,36,281
+2022-09,IoT & embedded,Sweden,628,5942
+2022-09,IoT & embedded,Stockholm,113,1677
+2022-09,IoT & embedded,Göteborg,160,899
+2022-09,IoT & embedded,Malmö,24,281
+2022-09,Blockchain & Web3,Sweden,8,5942
+2022-09,Blockchain & Web3,Stockholm,6,1677
+2022-09,Blockchain & Web3,Göteborg,1,899
+2022-09,Blockchain & Web3,Malmö,0,281
+2022-09,Quantum computing,Sweden,1,5942
+2022-09,Quantum computing,Stockholm,1,1677
+2022-09,Quantum computing,Göteborg,0,899
+2022-09,Quantum computing,Malmö,0,281
 2022-10,AI,Sweden,527,6758
 2022-10,AI,Stockholm,104,1835
 2022-10,AI,Göteborg,100,997
@@ -4415,6 +6611,18 @@ month,topic,location,it_ads,it_total_ads
 2022-10,Cloud-native & DevOps,Stockholm,417,1835
 2022-10,Cloud-native & DevOps,Göteborg,213,997
 2022-10,Cloud-native & DevOps,Malmö,78,375
+2022-10,IoT & embedded,Sweden,650,6758
+2022-10,IoT & embedded,Stockholm,102,1835
+2022-10,IoT & embedded,Göteborg,149,997
+2022-10,IoT & embedded,Malmö,49,375
+2022-10,Blockchain & Web3,Sweden,6,6758
+2022-10,Blockchain & Web3,Stockholm,3,1835
+2022-10,Blockchain & Web3,Göteborg,1,997
+2022-10,Blockchain & Web3,Malmö,0,375
+2022-10,Quantum computing,Sweden,1,6758
+2022-10,Quantum computing,Stockholm,0,1835
+2022-10,Quantum computing,Göteborg,1,997
+2022-10,Quantum computing,Malmö,0,375
 2022-11,AI,Sweden,434,6050
 2022-11,AI,Stockholm,90,1743
 2022-11,AI,Göteborg,111,915
@@ -4439,6 +6647,18 @@ month,topic,location,it_ads,it_total_ads
 2022-11,Cloud-native & DevOps,Stockholm,409,1743
 2022-11,Cloud-native & DevOps,Göteborg,177,915
 2022-11,Cloud-native & DevOps,Malmö,66,324
+2022-11,IoT & embedded,Sweden,544,6050
+2022-11,IoT & embedded,Stockholm,114,1743
+2022-11,IoT & embedded,Göteborg,127,915
+2022-11,IoT & embedded,Malmö,36,324
+2022-11,Blockchain & Web3,Sweden,3,6050
+2022-11,Blockchain & Web3,Stockholm,3,1743
+2022-11,Blockchain & Web3,Göteborg,0,915
+2022-11,Blockchain & Web3,Malmö,0,324
+2022-11,Quantum computing,Sweden,0,6050
+2022-11,Quantum computing,Stockholm,0,1743
+2022-11,Quantum computing,Göteborg,0,915
+2022-11,Quantum computing,Malmö,0,324
 2022-12,AI,Sweden,485,6129
 2022-12,AI,Stockholm,103,1505
 2022-12,AI,Göteborg,61,882
@@ -4463,6 +6683,18 @@ month,topic,location,it_ads,it_total_ads
 2022-12,Cloud-native & DevOps,Stockholm,327,1505
 2022-12,Cloud-native & DevOps,Göteborg,190,882
 2022-12,Cloud-native & DevOps,Malmö,54,321
+2022-12,IoT & embedded,Sweden,528,6129
+2022-12,IoT & embedded,Stockholm,91,1505
+2022-12,IoT & embedded,Göteborg,131,882
+2022-12,IoT & embedded,Malmö,29,321
+2022-12,Blockchain & Web3,Sweden,5,6129
+2022-12,Blockchain & Web3,Stockholm,3,1505
+2022-12,Blockchain & Web3,Göteborg,1,882
+2022-12,Blockchain & Web3,Malmö,0,321
+2022-12,Quantum computing,Sweden,0,6129
+2022-12,Quantum computing,Stockholm,0,1505
+2022-12,Quantum computing,Göteborg,0,882
+2022-12,Quantum computing,Malmö,0,321
 2023-01,AI,Sweden,317,5802
 2023-01,AI,Stockholm,71,1455
 2023-01,AI,Göteborg,47,857
@@ -4487,6 +6719,18 @@ month,topic,location,it_ads,it_total_ads
 2023-01,Cloud-native & DevOps,Stockholm,239,1455
 2023-01,Cloud-native & DevOps,Göteborg,140,857
 2023-01,Cloud-native & DevOps,Malmö,42,328
+2023-01,IoT & embedded,Sweden,427,5802
+2023-01,IoT & embedded,Stockholm,78,1455
+2023-01,IoT & embedded,Göteborg,100,857
+2023-01,IoT & embedded,Malmö,29,328
+2023-01,Blockchain & Web3,Sweden,4,5802
+2023-01,Blockchain & Web3,Stockholm,2,1455
+2023-01,Blockchain & Web3,Göteborg,1,857
+2023-01,Blockchain & Web3,Malmö,0,328
+2023-01,Quantum computing,Sweden,2,5802
+2023-01,Quantum computing,Stockholm,0,1455
+2023-01,Quantum computing,Göteborg,2,857
+2023-01,Quantum computing,Malmö,0,328
 2023-02,AI,Sweden,287,5017
 2023-02,AI,Stockholm,78,1470
 2023-02,AI,Göteborg,52,892
@@ -4511,6 +6755,18 @@ month,topic,location,it_ads,it_total_ads
 2023-02,Cloud-native & DevOps,Stockholm,255,1470
 2023-02,Cloud-native & DevOps,Göteborg,156,892
 2023-02,Cloud-native & DevOps,Malmö,45,281
+2023-02,IoT & embedded,Sweden,394,5017
+2023-02,IoT & embedded,Stockholm,78,1470
+2023-02,IoT & embedded,Göteborg,92,892
+2023-02,IoT & embedded,Malmö,21,281
+2023-02,Blockchain & Web3,Sweden,3,5017
+2023-02,Blockchain & Web3,Stockholm,1,1470
+2023-02,Blockchain & Web3,Göteborg,2,892
+2023-02,Blockchain & Web3,Malmö,0,281
+2023-02,Quantum computing,Sweden,1,5017
+2023-02,Quantum computing,Stockholm,0,1470
+2023-02,Quantum computing,Göteborg,1,892
+2023-02,Quantum computing,Malmö,0,281
 2023-03,AI,Sweden,335,6424
 2023-03,AI,Stockholm,75,1550
 2023-03,AI,Göteborg,56,1034
@@ -4535,6 +6791,18 @@ month,topic,location,it_ads,it_total_ads
 2023-03,Cloud-native & DevOps,Stockholm,248,1550
 2023-03,Cloud-native & DevOps,Göteborg,203,1034
 2023-03,Cloud-native & DevOps,Malmö,36,326
+2023-03,IoT & embedded,Sweden,440,6424
+2023-03,IoT & embedded,Stockholm,64,1550
+2023-03,IoT & embedded,Göteborg,118,1034
+2023-03,IoT & embedded,Malmö,30,326
+2023-03,Blockchain & Web3,Sweden,6,6424
+2023-03,Blockchain & Web3,Stockholm,2,1550
+2023-03,Blockchain & Web3,Göteborg,1,1034
+2023-03,Blockchain & Web3,Malmö,0,326
+2023-03,Quantum computing,Sweden,1,6424
+2023-03,Quantum computing,Stockholm,0,1550
+2023-03,Quantum computing,Göteborg,1,1034
+2023-03,Quantum computing,Malmö,0,326
 2023-04,AI,Sweden,268,4834
 2023-04,AI,Stockholm,79,1237
 2023-04,AI,Göteborg,37,726
@@ -4559,6 +6827,18 @@ month,topic,location,it_ads,it_total_ads
 2023-04,Cloud-native & DevOps,Stockholm,206,1237
 2023-04,Cloud-native & DevOps,Göteborg,133,726
 2023-04,Cloud-native & DevOps,Malmö,27,244
+2023-04,IoT & embedded,Sweden,344,4834
+2023-04,IoT & embedded,Stockholm,67,1237
+2023-04,IoT & embedded,Göteborg,96,726
+2023-04,IoT & embedded,Malmö,19,244
+2023-04,Blockchain & Web3,Sweden,3,4834
+2023-04,Blockchain & Web3,Stockholm,2,1237
+2023-04,Blockchain & Web3,Göteborg,0,726
+2023-04,Blockchain & Web3,Malmö,0,244
+2023-04,Quantum computing,Sweden,4,4834
+2023-04,Quantum computing,Stockholm,0,1237
+2023-04,Quantum computing,Göteborg,4,726
+2023-04,Quantum computing,Malmö,0,244
 2023-05,AI,Sweden,380,7386
 2023-05,AI,Stockholm,80,1696
 2023-05,AI,Göteborg,61,965
@@ -4583,6 +6863,18 @@ month,topic,location,it_ads,it_total_ads
 2023-05,Cloud-native & DevOps,Stockholm,268,1696
 2023-05,Cloud-native & DevOps,Göteborg,165,965
 2023-05,Cloud-native & DevOps,Malmö,40,363
+2023-05,IoT & embedded,Sweden,486,7386
+2023-05,IoT & embedded,Stockholm,81,1696
+2023-05,IoT & embedded,Göteborg,137,965
+2023-05,IoT & embedded,Malmö,39,363
+2023-05,Blockchain & Web3,Sweden,5,7386
+2023-05,Blockchain & Web3,Stockholm,0,1696
+2023-05,Blockchain & Web3,Göteborg,1,965
+2023-05,Blockchain & Web3,Malmö,0,363
+2023-05,Quantum computing,Sweden,3,7386
+2023-05,Quantum computing,Stockholm,0,1696
+2023-05,Quantum computing,Göteborg,3,965
+2023-05,Quantum computing,Malmö,0,363
 2023-06,AI,Sweden,307,5093
 2023-06,AI,Stockholm,69,1265
 2023-06,AI,Göteborg,59,705
@@ -4607,6 +6899,18 @@ month,topic,location,it_ads,it_total_ads
 2023-06,Cloud-native & DevOps,Stockholm,198,1265
 2023-06,Cloud-native & DevOps,Göteborg,118,705
 2023-06,Cloud-native & DevOps,Malmö,29,238
+2023-06,IoT & embedded,Sweden,370,5093
+2023-06,IoT & embedded,Stockholm,66,1265
+2023-06,IoT & embedded,Göteborg,114,705
+2023-06,IoT & embedded,Malmö,28,238
+2023-06,Blockchain & Web3,Sweden,8,5093
+2023-06,Blockchain & Web3,Stockholm,4,1265
+2023-06,Blockchain & Web3,Göteborg,0,705
+2023-06,Blockchain & Web3,Malmö,0,238
+2023-06,Quantum computing,Sweden,1,5093
+2023-06,Quantum computing,Stockholm,0,1265
+2023-06,Quantum computing,Göteborg,1,705
+2023-06,Quantum computing,Malmö,0,238
 2023-07,AI,Sweden,180,3243
 2023-07,AI,Stockholm,53,765
 2023-07,AI,Göteborg,22,514
@@ -4631,6 +6935,18 @@ month,topic,location,it_ads,it_total_ads
 2023-07,Cloud-native & DevOps,Stockholm,159,765
 2023-07,Cloud-native & DevOps,Göteborg,92,514
 2023-07,Cloud-native & DevOps,Malmö,33,168
+2023-07,IoT & embedded,Sweden,312,3243
+2023-07,IoT & embedded,Stockholm,51,765
+2023-07,IoT & embedded,Göteborg,94,514
+2023-07,IoT & embedded,Malmö,19,168
+2023-07,Blockchain & Web3,Sweden,3,3243
+2023-07,Blockchain & Web3,Stockholm,0,765
+2023-07,Blockchain & Web3,Göteborg,1,514
+2023-07,Blockchain & Web3,Malmö,0,168
+2023-07,Quantum computing,Sweden,1,3243
+2023-07,Quantum computing,Stockholm,0,765
+2023-07,Quantum computing,Göteborg,1,514
+2023-07,Quantum computing,Malmö,0,168
 2023-08,AI,Sweden,301,4273
 2023-08,AI,Stockholm,81,1240
 2023-08,AI,Göteborg,29,687
@@ -4655,6 +6971,18 @@ month,topic,location,it_ads,it_total_ads
 2023-08,Cloud-native & DevOps,Stockholm,204,1240
 2023-08,Cloud-native & DevOps,Göteborg,117,687
 2023-08,Cloud-native & DevOps,Malmö,41,219
+2023-08,IoT & embedded,Sweden,414,4273
+2023-08,IoT & embedded,Stockholm,75,1240
+2023-08,IoT & embedded,Göteborg,110,687
+2023-08,IoT & embedded,Malmö,24,219
+2023-08,Blockchain & Web3,Sweden,4,4273
+2023-08,Blockchain & Web3,Stockholm,1,1240
+2023-08,Blockchain & Web3,Göteborg,1,687
+2023-08,Blockchain & Web3,Malmö,0,219
+2023-08,Quantum computing,Sweden,3,4273
+2023-08,Quantum computing,Stockholm,0,1240
+2023-08,Quantum computing,Göteborg,3,687
+2023-08,Quantum computing,Malmö,0,219
 2023-09,AI,Sweden,296,4354
 2023-09,AI,Stockholm,83,1207
 2023-09,AI,Göteborg,44,754
@@ -4679,6 +7007,18 @@ month,topic,location,it_ads,it_total_ads
 2023-09,Cloud-native & DevOps,Stockholm,199,1207
 2023-09,Cloud-native & DevOps,Göteborg,129,754
 2023-09,Cloud-native & DevOps,Malmö,23,202
+2023-09,IoT & embedded,Sweden,408,4354
+2023-09,IoT & embedded,Stockholm,67,1207
+2023-09,IoT & embedded,Göteborg,143,754
+2023-09,IoT & embedded,Malmö,22,202
+2023-09,Blockchain & Web3,Sweden,5,4354
+2023-09,Blockchain & Web3,Stockholm,1,1207
+2023-09,Blockchain & Web3,Göteborg,4,754
+2023-09,Blockchain & Web3,Malmö,0,202
+2023-09,Quantum computing,Sweden,1,4354
+2023-09,Quantum computing,Stockholm,1,1207
+2023-09,Quantum computing,Göteborg,0,754
+2023-09,Quantum computing,Malmö,0,202
 2023-10,AI,Sweden,369,4488
 2023-10,AI,Stockholm,88,1422
 2023-10,AI,Göteborg,43,714
@@ -4703,6 +7043,18 @@ month,topic,location,it_ads,it_total_ads
 2023-10,Cloud-native & DevOps,Stockholm,230,1422
 2023-10,Cloud-native & DevOps,Göteborg,115,714
 2023-10,Cloud-native & DevOps,Malmö,29,193
+2023-10,IoT & embedded,Sweden,399,4488
+2023-10,IoT & embedded,Stockholm,68,1422
+2023-10,IoT & embedded,Göteborg,127,714
+2023-10,IoT & embedded,Malmö,25,193
+2023-10,Blockchain & Web3,Sweden,8,4488
+2023-10,Blockchain & Web3,Stockholm,1,1422
+2023-10,Blockchain & Web3,Göteborg,3,714
+2023-10,Blockchain & Web3,Malmö,0,193
+2023-10,Quantum computing,Sweden,3,4488
+2023-10,Quantum computing,Stockholm,0,1422
+2023-10,Quantum computing,Göteborg,3,714
+2023-10,Quantum computing,Malmö,0,193
 2023-11,AI,Sweden,382,4537
 2023-11,AI,Stockholm,101,1432
 2023-11,AI,Göteborg,54,763
@@ -4727,6 +7079,18 @@ month,topic,location,it_ads,it_total_ads
 2023-11,Cloud-native & DevOps,Stockholm,217,1432
 2023-11,Cloud-native & DevOps,Göteborg,132,763
 2023-11,Cloud-native & DevOps,Malmö,16,222
+2023-11,IoT & embedded,Sweden,394,4537
+2023-11,IoT & embedded,Stockholm,53,1432
+2023-11,IoT & embedded,Göteborg,145,763
+2023-11,IoT & embedded,Malmö,21,222
+2023-11,Blockchain & Web3,Sweden,5,4537
+2023-11,Blockchain & Web3,Stockholm,3,1432
+2023-11,Blockchain & Web3,Göteborg,2,763
+2023-11,Blockchain & Web3,Malmö,0,222
+2023-11,Quantum computing,Sweden,2,4537
+2023-11,Quantum computing,Stockholm,0,1432
+2023-11,Quantum computing,Göteborg,2,763
+2023-11,Quantum computing,Malmö,0,222
 2023-12,AI,Sweden,342,4139
 2023-12,AI,Stockholm,70,1112
 2023-12,AI,Göteborg,57,682
@@ -4751,6 +7115,18 @@ month,topic,location,it_ads,it_total_ads
 2023-12,Cloud-native & DevOps,Stockholm,199,1112
 2023-12,Cloud-native & DevOps,Göteborg,141,682
 2023-12,Cloud-native & DevOps,Malmö,26,165
+2023-12,IoT & embedded,Sweden,378,4139
+2023-12,IoT & embedded,Stockholm,45,1112
+2023-12,IoT & embedded,Göteborg,137,682
+2023-12,IoT & embedded,Malmö,14,165
+2023-12,Blockchain & Web3,Sweden,8,4139
+2023-12,Blockchain & Web3,Stockholm,0,1112
+2023-12,Blockchain & Web3,Göteborg,4,682
+2023-12,Blockchain & Web3,Malmö,0,165
+2023-12,Quantum computing,Sweden,9,4139
+2023-12,Quantum computing,Stockholm,0,1112
+2023-12,Quantum computing,Göteborg,9,682
+2023-12,Quantum computing,Malmö,0,165
 2024-01,AI,Sweden,322,3893
 2024-01,AI,Stockholm,77,1239
 2024-01,AI,Göteborg,47,679
@@ -4775,6 +7151,18 @@ month,topic,location,it_ads,it_total_ads
 2024-01,Cloud-native & DevOps,Stockholm,220,1239
 2024-01,Cloud-native & DevOps,Göteborg,111,679
 2024-01,Cloud-native & DevOps,Malmö,28,146
+2024-01,IoT & embedded,Sweden,412,3893
+2024-01,IoT & embedded,Stockholm,55,1239
+2024-01,IoT & embedded,Göteborg,157,679
+2024-01,IoT & embedded,Malmö,21,146
+2024-01,Blockchain & Web3,Sweden,7,3893
+2024-01,Blockchain & Web3,Stockholm,3,1239
+2024-01,Blockchain & Web3,Göteborg,1,679
+2024-01,Blockchain & Web3,Malmö,0,146
+2024-01,Quantum computing,Sweden,0,3893
+2024-01,Quantum computing,Stockholm,0,1239
+2024-01,Quantum computing,Göteborg,0,679
+2024-01,Quantum computing,Malmö,0,146
 2024-02,AI,Sweden,331,4051
 2024-02,AI,Stockholm,70,1175
 2024-02,AI,Göteborg,37,665
@@ -4799,6 +7187,18 @@ month,topic,location,it_ads,it_total_ads
 2024-02,Cloud-native & DevOps,Stockholm,220,1175
 2024-02,Cloud-native & DevOps,Göteborg,111,665
 2024-02,Cloud-native & DevOps,Malmö,40,201
+2024-02,IoT & embedded,Sweden,367,4051
+2024-02,IoT & embedded,Stockholm,57,1175
+2024-02,IoT & embedded,Göteborg,129,665
+2024-02,IoT & embedded,Malmö,25,201
+2024-02,Blockchain & Web3,Sweden,3,4051
+2024-02,Blockchain & Web3,Stockholm,0,1175
+2024-02,Blockchain & Web3,Göteborg,1,665
+2024-02,Blockchain & Web3,Malmö,0,201
+2024-02,Quantum computing,Sweden,3,4051
+2024-02,Quantum computing,Stockholm,0,1175
+2024-02,Quantum computing,Göteborg,1,665
+2024-02,Quantum computing,Malmö,0,201
 2024-03,AI,Sweden,379,3835
 2024-03,AI,Stockholm,112,1064
 2024-03,AI,Göteborg,44,644
@@ -4823,6 +7223,18 @@ month,topic,location,it_ads,it_total_ads
 2024-03,Cloud-native & DevOps,Stockholm,221,1064
 2024-03,Cloud-native & DevOps,Göteborg,120,644
 2024-03,Cloud-native & DevOps,Malmö,27,158
+2024-03,IoT & embedded,Sweden,349,3835
+2024-03,IoT & embedded,Stockholm,76,1064
+2024-03,IoT & embedded,Göteborg,122,644
+2024-03,IoT & embedded,Malmö,14,158
+2024-03,Blockchain & Web3,Sweden,5,3835
+2024-03,Blockchain & Web3,Stockholm,3,1064
+2024-03,Blockchain & Web3,Göteborg,0,644
+2024-03,Blockchain & Web3,Malmö,0,158
+2024-03,Quantum computing,Sweden,2,3835
+2024-03,Quantum computing,Stockholm,0,1064
+2024-03,Quantum computing,Göteborg,1,644
+2024-03,Quantum computing,Malmö,0,158
 2024-04,AI,Sweden,322,3846
 2024-04,AI,Stockholm,81,1084
 2024-04,AI,Göteborg,49,713
@@ -4847,6 +7259,18 @@ month,topic,location,it_ads,it_total_ads
 2024-04,Cloud-native & DevOps,Stockholm,214,1084
 2024-04,Cloud-native & DevOps,Göteborg,129,713
 2024-04,Cloud-native & DevOps,Malmö,37,200
+2024-04,IoT & embedded,Sweden,363,3846
+2024-04,IoT & embedded,Stockholm,44,1084
+2024-04,IoT & embedded,Göteborg,136,713
+2024-04,IoT & embedded,Malmö,20,200
+2024-04,Blockchain & Web3,Sweden,3,3846
+2024-04,Blockchain & Web3,Stockholm,1,1084
+2024-04,Blockchain & Web3,Göteborg,0,713
+2024-04,Blockchain & Web3,Malmö,1,200
+2024-04,Quantum computing,Sweden,9,3846
+2024-04,Quantum computing,Stockholm,0,1084
+2024-04,Quantum computing,Göteborg,9,713
+2024-04,Quantum computing,Malmö,0,200
 2024-05,AI,Sweden,318,3507
 2024-05,AI,Stockholm,79,972
 2024-05,AI,Göteborg,40,590
@@ -4871,6 +7295,18 @@ month,topic,location,it_ads,it_total_ads
 2024-05,Cloud-native & DevOps,Stockholm,203,972
 2024-05,Cloud-native & DevOps,Göteborg,115,590
 2024-05,Cloud-native & DevOps,Malmö,25,137
+2024-05,IoT & embedded,Sweden,285,3507
+2024-05,IoT & embedded,Stockholm,46,972
+2024-05,IoT & embedded,Göteborg,85,590
+2024-05,IoT & embedded,Malmö,13,137
+2024-05,Blockchain & Web3,Sweden,4,3507
+2024-05,Blockchain & Web3,Stockholm,1,972
+2024-05,Blockchain & Web3,Göteborg,1,590
+2024-05,Blockchain & Web3,Malmö,0,137
+2024-05,Quantum computing,Sweden,0,3507
+2024-05,Quantum computing,Stockholm,0,972
+2024-05,Quantum computing,Göteborg,0,590
+2024-05,Quantum computing,Malmö,0,137
 2024-06,AI,Sweden,326,3389
 2024-06,AI,Stockholm,68,938
 2024-06,AI,Göteborg,90,650
@@ -4895,6 +7331,18 @@ month,topic,location,it_ads,it_total_ads
 2024-06,Cloud-native & DevOps,Stockholm,227,938
 2024-06,Cloud-native & DevOps,Göteborg,125,650
 2024-06,Cloud-native & DevOps,Malmö,27,147
+2024-06,IoT & embedded,Sweden,277,3389
+2024-06,IoT & embedded,Stockholm,41,938
+2024-06,IoT & embedded,Göteborg,130,650
+2024-06,IoT & embedded,Malmö,10,147
+2024-06,Blockchain & Web3,Sweden,4,3389
+2024-06,Blockchain & Web3,Stockholm,0,938
+2024-06,Blockchain & Web3,Göteborg,1,650
+2024-06,Blockchain & Web3,Malmö,0,147
+2024-06,Quantum computing,Sweden,4,3389
+2024-06,Quantum computing,Stockholm,0,938
+2024-06,Quantum computing,Göteborg,2,650
+2024-06,Quantum computing,Malmö,0,147
 2024-07,AI,Sweden,206,2371
 2024-07,AI,Stockholm,66,663
 2024-07,AI,Göteborg,22,370
@@ -4919,6 +7367,18 @@ month,topic,location,it_ads,it_total_ads
 2024-07,Cloud-native & DevOps,Stockholm,122,663
 2024-07,Cloud-native & DevOps,Göteborg,93,370
 2024-07,Cloud-native & DevOps,Malmö,16,100
+2024-07,IoT & embedded,Sweden,229,2371
+2024-07,IoT & embedded,Stockholm,33,663
+2024-07,IoT & embedded,Göteborg,78,370
+2024-07,IoT & embedded,Malmö,6,100
+2024-07,Blockchain & Web3,Sweden,5,2371
+2024-07,Blockchain & Web3,Stockholm,1,663
+2024-07,Blockchain & Web3,Göteborg,3,370
+2024-07,Blockchain & Web3,Malmö,0,100
+2024-07,Quantum computing,Sweden,1,2371
+2024-07,Quantum computing,Stockholm,0,663
+2024-07,Quantum computing,Göteborg,1,370
+2024-07,Quantum computing,Malmö,0,100
 2024-08,AI,Sweden,242,2995
 2024-08,AI,Stockholm,56,908
 2024-08,AI,Göteborg,52,507
@@ -4943,6 +7403,18 @@ month,topic,location,it_ads,it_total_ads
 2024-08,Cloud-native & DevOps,Stockholm,180,908
 2024-08,Cloud-native & DevOps,Göteborg,138,507
 2024-08,Cloud-native & DevOps,Malmö,25,119
+2024-08,IoT & embedded,Sweden,262,2995
+2024-08,IoT & embedded,Stockholm,39,908
+2024-08,IoT & embedded,Göteborg,96,507
+2024-08,IoT & embedded,Malmö,4,119
+2024-08,Blockchain & Web3,Sweden,1,2995
+2024-08,Blockchain & Web3,Stockholm,0,908
+2024-08,Blockchain & Web3,Göteborg,0,507
+2024-08,Blockchain & Web3,Malmö,0,119
+2024-08,Quantum computing,Sweden,0,2995
+2024-08,Quantum computing,Stockholm,0,908
+2024-08,Quantum computing,Göteborg,0,507
+2024-08,Quantum computing,Malmö,0,119
 2024-09,AI,Sweden,328,3690
 2024-09,AI,Stockholm,101,1193
 2024-09,AI,Göteborg,53,553
@@ -4967,6 +7439,18 @@ month,topic,location,it_ads,it_total_ads
 2024-09,Cloud-native & DevOps,Stockholm,285,1193
 2024-09,Cloud-native & DevOps,Göteborg,144,553
 2024-09,Cloud-native & DevOps,Malmö,20,136
+2024-09,IoT & embedded,Sweden,325,3690
+2024-09,IoT & embedded,Stockholm,65,1193
+2024-09,IoT & embedded,Göteborg,98,553
+2024-09,IoT & embedded,Malmö,10,136
+2024-09,Blockchain & Web3,Sweden,4,3690
+2024-09,Blockchain & Web3,Stockholm,2,1193
+2024-09,Blockchain & Web3,Göteborg,0,553
+2024-09,Blockchain & Web3,Malmö,0,136
+2024-09,Quantum computing,Sweden,0,3690
+2024-09,Quantum computing,Stockholm,0,1193
+2024-09,Quantum computing,Göteborg,0,553
+2024-09,Quantum computing,Malmö,0,136
 2024-10,AI,Sweden,394,3906
 2024-10,AI,Stockholm,137,1343
 2024-10,AI,Göteborg,36,533
@@ -4991,6 +7475,18 @@ month,topic,location,it_ads,it_total_ads
 2024-10,Cloud-native & DevOps,Stockholm,297,1343
 2024-10,Cloud-native & DevOps,Göteborg,141,533
 2024-10,Cloud-native & DevOps,Malmö,40,191
+2024-10,IoT & embedded,Sweden,302,3906
+2024-10,IoT & embedded,Stockholm,53,1343
+2024-10,IoT & embedded,Göteborg,92,533
+2024-10,IoT & embedded,Malmö,15,191
+2024-10,Blockchain & Web3,Sweden,0,3906
+2024-10,Blockchain & Web3,Stockholm,0,1343
+2024-10,Blockchain & Web3,Göteborg,0,533
+2024-10,Blockchain & Web3,Malmö,0,191
+2024-10,Quantum computing,Sweden,1,3906
+2024-10,Quantum computing,Stockholm,0,1343
+2024-10,Quantum computing,Göteborg,1,533
+2024-10,Quantum computing,Malmö,0,191
 2024-11,AI,Sweden,433,3775
 2024-11,AI,Stockholm,175,1243
 2024-11,AI,Göteborg,50,540
@@ -5015,6 +7511,18 @@ month,topic,location,it_ads,it_total_ads
 2024-11,Cloud-native & DevOps,Stockholm,331,1243
 2024-11,Cloud-native & DevOps,Göteborg,136,540
 2024-11,Cloud-native & DevOps,Malmö,26,152
+2024-11,IoT & embedded,Sweden,304,3775
+2024-11,IoT & embedded,Stockholm,50,1243
+2024-11,IoT & embedded,Göteborg,102,540
+2024-11,IoT & embedded,Malmö,10,152
+2024-11,Blockchain & Web3,Sweden,1,3775
+2024-11,Blockchain & Web3,Stockholm,1,1243
+2024-11,Blockchain & Web3,Göteborg,0,540
+2024-11,Blockchain & Web3,Malmö,0,152
+2024-11,Quantum computing,Sweden,3,3775
+2024-11,Quantum computing,Stockholm,0,1243
+2024-11,Quantum computing,Göteborg,3,540
+2024-11,Quantum computing,Malmö,0,152
 2024-12,AI,Sweden,358,3401
 2024-12,AI,Stockholm,107,1016
 2024-12,AI,Göteborg,34,449
@@ -5039,6 +7547,18 @@ month,topic,location,it_ads,it_total_ads
 2024-12,Cloud-native & DevOps,Stockholm,238,1016
 2024-12,Cloud-native & DevOps,Göteborg,108,449
 2024-12,Cloud-native & DevOps,Malmö,42,169
+2024-12,IoT & embedded,Sweden,262,3401
+2024-12,IoT & embedded,Stockholm,45,1016
+2024-12,IoT & embedded,Göteborg,72,449
+2024-12,IoT & embedded,Malmö,8,169
+2024-12,Blockchain & Web3,Sweden,1,3401
+2024-12,Blockchain & Web3,Stockholm,1,1016
+2024-12,Blockchain & Web3,Göteborg,0,449
+2024-12,Blockchain & Web3,Malmö,0,169
+2024-12,Quantum computing,Sweden,3,3401
+2024-12,Quantum computing,Stockholm,0,1016
+2024-12,Quantum computing,Göteborg,3,449
+2024-12,Quantum computing,Malmö,0,169
 2025-01,AI,Sweden,305,3414
 2025-01,AI,Stockholm,89,1123
 2025-01,AI,Göteborg,41,417
@@ -5063,6 +7583,18 @@ month,topic,location,it_ads,it_total_ads
 2025-01,Cloud-native & DevOps,Stockholm,226,1123
 2025-01,Cloud-native & DevOps,Göteborg,84,417
 2025-01,Cloud-native & DevOps,Malmö,27,129
+2025-01,IoT & embedded,Sweden,274,3414
+2025-01,IoT & embedded,Stockholm,44,1123
+2025-01,IoT & embedded,Göteborg,71,417
+2025-01,IoT & embedded,Malmö,8,129
+2025-01,Blockchain & Web3,Sweden,7,3414
+2025-01,Blockchain & Web3,Stockholm,2,1123
+2025-01,Blockchain & Web3,Göteborg,0,417
+2025-01,Blockchain & Web3,Malmö,1,129
+2025-01,Quantum computing,Sweden,3,3414
+2025-01,Quantum computing,Stockholm,3,1123
+2025-01,Quantum computing,Göteborg,0,417
+2025-01,Quantum computing,Malmö,0,129
 2025-02,AI,Sweden,344,3240
 2025-02,AI,Stockholm,121,960
 2025-02,AI,Göteborg,37,388
@@ -5087,6 +7619,18 @@ month,topic,location,it_ads,it_total_ads
 2025-02,Cloud-native & DevOps,Stockholm,225,960
 2025-02,Cloud-native & DevOps,Göteborg,80,388
 2025-02,Cloud-native & DevOps,Malmö,31,146
+2025-02,IoT & embedded,Sweden,249,3240
+2025-02,IoT & embedded,Stockholm,35,960
+2025-02,IoT & embedded,Göteborg,73,388
+2025-02,IoT & embedded,Malmö,13,146
+2025-02,Blockchain & Web3,Sweden,5,3240
+2025-02,Blockchain & Web3,Stockholm,2,960
+2025-02,Blockchain & Web3,Göteborg,0,388
+2025-02,Blockchain & Web3,Malmö,2,146
+2025-02,Quantum computing,Sweden,0,3240
+2025-02,Quantum computing,Stockholm,0,960
+2025-02,Quantum computing,Göteborg,0,388
+2025-02,Quantum computing,Malmö,0,146
 2025-03,AI,Sweden,341,3302
 2025-03,AI,Stockholm,108,960
 2025-03,AI,Göteborg,40,372
@@ -5111,6 +7655,18 @@ month,topic,location,it_ads,it_total_ads
 2025-03,Cloud-native & DevOps,Stockholm,194,960
 2025-03,Cloud-native & DevOps,Göteborg,76,372
 2025-03,Cloud-native & DevOps,Malmö,33,147
+2025-03,IoT & embedded,Sweden,243,3302
+2025-03,IoT & embedded,Stockholm,39,960
+2025-03,IoT & embedded,Göteborg,60,372
+2025-03,IoT & embedded,Malmö,16,147
+2025-03,Blockchain & Web3,Sweden,3,3302
+2025-03,Blockchain & Web3,Stockholm,1,960
+2025-03,Blockchain & Web3,Göteborg,0,372
+2025-03,Blockchain & Web3,Malmö,0,147
+2025-03,Quantum computing,Sweden,1,3302
+2025-03,Quantum computing,Stockholm,0,960
+2025-03,Quantum computing,Göteborg,1,372
+2025-03,Quantum computing,Malmö,0,147
 2025-04,AI,Sweden,383,3466
 2025-04,AI,Stockholm,139,1063
 2025-04,AI,Göteborg,45,399
@@ -5135,6 +7691,18 @@ month,topic,location,it_ads,it_total_ads
 2025-04,Cloud-native & DevOps,Stockholm,219,1063
 2025-04,Cloud-native & DevOps,Göteborg,95,399
 2025-04,Cloud-native & DevOps,Malmö,31,167
+2025-04,IoT & embedded,Sweden,283,3466
+2025-04,IoT & embedded,Stockholm,52,1063
+2025-04,IoT & embedded,Göteborg,69,399
+2025-04,IoT & embedded,Malmö,6,167
+2025-04,Blockchain & Web3,Sweden,3,3466
+2025-04,Blockchain & Web3,Stockholm,2,1063
+2025-04,Blockchain & Web3,Göteborg,0,399
+2025-04,Blockchain & Web3,Malmö,0,167
+2025-04,Quantum computing,Sweden,9,3466
+2025-04,Quantum computing,Stockholm,0,1063
+2025-04,Quantum computing,Göteborg,9,399
+2025-04,Quantum computing,Malmö,0,167
 2025-05,AI,Sweden,309,3406
 2025-05,AI,Stockholm,105,1117
 2025-05,AI,Göteborg,42,423
@@ -5159,6 +7727,18 @@ month,topic,location,it_ads,it_total_ads
 2025-05,Cloud-native & DevOps,Stockholm,256,1117
 2025-05,Cloud-native & DevOps,Göteborg,93,423
 2025-05,Cloud-native & DevOps,Malmö,32,183
+2025-05,IoT & embedded,Sweden,255,3406
+2025-05,IoT & embedded,Stockholm,41,1117
+2025-05,IoT & embedded,Göteborg,75,423
+2025-05,IoT & embedded,Malmö,9,183
+2025-05,Blockchain & Web3,Sweden,0,3406
+2025-05,Blockchain & Web3,Stockholm,0,1117
+2025-05,Blockchain & Web3,Göteborg,0,423
+2025-05,Blockchain & Web3,Malmö,0,183
+2025-05,Quantum computing,Sweden,0,3406
+2025-05,Quantum computing,Stockholm,0,1117
+2025-05,Quantum computing,Göteborg,0,423
+2025-05,Quantum computing,Malmö,0,183
 2025-06,AI,Sweden,287,2574
 2025-06,AI,Stockholm,106,796
 2025-06,AI,Göteborg,48,312
@@ -5183,6 +7763,18 @@ month,topic,location,it_ads,it_total_ads
 2025-06,Cloud-native & DevOps,Stockholm,167,796
 2025-06,Cloud-native & DevOps,Göteborg,79,312
 2025-06,Cloud-native & DevOps,Malmö,33,134
+2025-06,IoT & embedded,Sweden,200,2574
+2025-06,IoT & embedded,Stockholm,39,796
+2025-06,IoT & embedded,Göteborg,58,312
+2025-06,IoT & embedded,Malmö,2,134
+2025-06,Blockchain & Web3,Sweden,1,2574
+2025-06,Blockchain & Web3,Stockholm,1,796
+2025-06,Blockchain & Web3,Göteborg,0,312
+2025-06,Blockchain & Web3,Malmö,0,134
+2025-06,Quantum computing,Sweden,2,2574
+2025-06,Quantum computing,Stockholm,0,796
+2025-06,Quantum computing,Göteborg,2,312
+2025-06,Quantum computing,Malmö,0,134
 2025-07,AI,Sweden,263,1973
 2025-07,AI,Stockholm,80,573
 2025-07,AI,Göteborg,27,182
@@ -5207,6 +7799,18 @@ month,topic,location,it_ads,it_total_ads
 2025-07,Cloud-native & DevOps,Stockholm,129,573
 2025-07,Cloud-native & DevOps,Göteborg,38,182
 2025-07,Cloud-native & DevOps,Malmö,28,113
+2025-07,IoT & embedded,Sweden,146,1973
+2025-07,IoT & embedded,Stockholm,23,573
+2025-07,IoT & embedded,Göteborg,22,182
+2025-07,IoT & embedded,Malmö,5,113
+2025-07,Blockchain & Web3,Sweden,5,1973
+2025-07,Blockchain & Web3,Stockholm,4,573
+2025-07,Blockchain & Web3,Göteborg,0,182
+2025-07,Blockchain & Web3,Malmö,0,113
+2025-07,Quantum computing,Sweden,2,1973
+2025-07,Quantum computing,Stockholm,0,573
+2025-07,Quantum computing,Göteborg,2,182
+2025-07,Quantum computing,Malmö,0,113
 2025-08,AI,Sweden,278,2213
 2025-08,AI,Stockholm,114,744
 2025-08,AI,Göteborg,24,205
@@ -5231,6 +7835,18 @@ month,topic,location,it_ads,it_total_ads
 2025-08,Cloud-native & DevOps,Stockholm,174,744
 2025-08,Cloud-native & DevOps,Göteborg,46,205
 2025-08,Cloud-native & DevOps,Malmö,28,141
+2025-08,IoT & embedded,Sweden,167,2213
+2025-08,IoT & embedded,Stockholm,26,744
+2025-08,IoT & embedded,Göteborg,27,205
+2025-08,IoT & embedded,Malmö,6,141
+2025-08,Blockchain & Web3,Sweden,2,2213
+2025-08,Blockchain & Web3,Stockholm,0,744
+2025-08,Blockchain & Web3,Göteborg,0,205
+2025-08,Blockchain & Web3,Malmö,0,141
+2025-08,Quantum computing,Sweden,0,2213
+2025-08,Quantum computing,Stockholm,0,744
+2025-08,Quantum computing,Göteborg,0,205
+2025-08,Quantum computing,Malmö,0,141
 2025-09,AI,Sweden,364,3336
 2025-09,AI,Stockholm,104,1039
 2025-09,AI,Göteborg,43,355
@@ -5255,6 +7871,18 @@ month,topic,location,it_ads,it_total_ads
 2025-09,Cloud-native & DevOps,Stockholm,253,1039
 2025-09,Cloud-native & DevOps,Göteborg,79,355
 2025-09,Cloud-native & DevOps,Malmö,38,145
+2025-09,IoT & embedded,Sweden,253,3336
+2025-09,IoT & embedded,Stockholm,52,1039
+2025-09,IoT & embedded,Göteborg,50,355
+2025-09,IoT & embedded,Malmö,4,145
+2025-09,Blockchain & Web3,Sweden,1,3336
+2025-09,Blockchain & Web3,Stockholm,1,1039
+2025-09,Blockchain & Web3,Göteborg,0,355
+2025-09,Blockchain & Web3,Malmö,0,145
+2025-09,Quantum computing,Sweden,1,3336
+2025-09,Quantum computing,Stockholm,0,1039
+2025-09,Quantum computing,Göteborg,1,355
+2025-09,Quantum computing,Malmö,0,145
 2025-10,AI,Sweden,377,3547
 2025-10,AI,Stockholm,137,993
 2025-10,AI,Göteborg,35,345
@@ -5279,6 +7907,18 @@ month,topic,location,it_ads,it_total_ads
 2025-10,Cloud-native & DevOps,Stockholm,254,993
 2025-10,Cloud-native & DevOps,Göteborg,77,345
 2025-10,Cloud-native & DevOps,Malmö,26,131
+2025-10,IoT & embedded,Sweden,297,3547
+2025-10,IoT & embedded,Stockholm,42,993
+2025-10,IoT & embedded,Göteborg,65,345
+2025-10,IoT & embedded,Malmö,4,131
+2025-10,Blockchain & Web3,Sweden,2,3547
+2025-10,Blockchain & Web3,Stockholm,1,993
+2025-10,Blockchain & Web3,Göteborg,0,345
+2025-10,Blockchain & Web3,Malmö,0,131
+2025-10,Quantum computing,Sweden,1,3547
+2025-10,Quantum computing,Stockholm,0,993
+2025-10,Quantum computing,Göteborg,0,345
+2025-10,Quantum computing,Malmö,1,131
 2025-11,AI,Sweden,415,3117
 2025-11,AI,Stockholm,132,894
 2025-11,AI,Göteborg,39,349
@@ -5303,6 +7943,18 @@ month,topic,location,it_ads,it_total_ads
 2025-11,Cloud-native & DevOps,Stockholm,234,894
 2025-11,Cloud-native & DevOps,Göteborg,92,349
 2025-11,Cloud-native & DevOps,Malmö,36,146
+2025-11,IoT & embedded,Sweden,268,3117
+2025-11,IoT & embedded,Stockholm,51,894
+2025-11,IoT & embedded,Göteborg,64,349
+2025-11,IoT & embedded,Malmö,6,146
+2025-11,Blockchain & Web3,Sweden,5,3117
+2025-11,Blockchain & Web3,Stockholm,1,894
+2025-11,Blockchain & Web3,Göteborg,0,349
+2025-11,Blockchain & Web3,Malmö,0,146
+2025-11,Quantum computing,Sweden,2,3117
+2025-11,Quantum computing,Stockholm,0,894
+2025-11,Quantum computing,Göteborg,0,349
+2025-11,Quantum computing,Malmö,2,146
 2025-12,AI,Sweden,443,3165
 2025-12,AI,Stockholm,136,849
 2025-12,AI,Göteborg,52,319
@@ -5327,6 +7979,18 @@ month,topic,location,it_ads,it_total_ads
 2025-12,Cloud-native & DevOps,Stockholm,182,849
 2025-12,Cloud-native & DevOps,Göteborg,85,319
 2025-12,Cloud-native & DevOps,Malmö,42,161
+2025-12,IoT & embedded,Sweden,224,3165
+2025-12,IoT & embedded,Stockholm,29,849
+2025-12,IoT & embedded,Göteborg,40,319
+2025-12,IoT & embedded,Malmö,7,161
+2025-12,Blockchain & Web3,Sweden,1,3165
+2025-12,Blockchain & Web3,Stockholm,1,849
+2025-12,Blockchain & Web3,Göteborg,0,319
+2025-12,Blockchain & Web3,Malmö,0,161
+2025-12,Quantum computing,Sweden,1,3165
+2025-12,Quantum computing,Stockholm,1,849
+2025-12,Quantum computing,Göteborg,0,319
+2025-12,Quantum computing,Malmö,0,161
 2026-01,AI,Sweden,302,2444
 2026-01,AI,Stockholm,97,767
 2026-01,AI,Göteborg,35,335
@@ -5351,6 +8015,18 @@ month,topic,location,it_ads,it_total_ads
 2026-01,Cloud-native & DevOps,Stockholm,168,767
 2026-01,Cloud-native & DevOps,Göteborg,90,335
 2026-01,Cloud-native & DevOps,Malmö,28,105
+2026-01,IoT & embedded,Sweden,206,2444
+2026-01,IoT & embedded,Stockholm,33,767
+2026-01,IoT & embedded,Göteborg,47,335
+2026-01,IoT & embedded,Malmö,4,105
+2026-01,Blockchain & Web3,Sweden,1,2444
+2026-01,Blockchain & Web3,Stockholm,0,767
+2026-01,Blockchain & Web3,Göteborg,0,335
+2026-01,Blockchain & Web3,Malmö,0,105
+2026-01,Quantum computing,Sweden,0,2444
+2026-01,Quantum computing,Stockholm,0,767
+2026-01,Quantum computing,Göteborg,0,335
+2026-01,Quantum computing,Malmö,0,105
 2026-02,AI,Sweden,400,3068
 2026-02,AI,Stockholm,165,948
 2026-02,AI,Göteborg,44,406
@@ -5375,6 +8051,18 @@ month,topic,location,it_ads,it_total_ads
 2026-02,Cloud-native & DevOps,Stockholm,201,948
 2026-02,Cloud-native & DevOps,Göteborg,117,406
 2026-02,Cloud-native & DevOps,Malmö,17,89
+2026-02,IoT & embedded,Sweden,229,3068
+2026-02,IoT & embedded,Stockholm,32,948
+2026-02,IoT & embedded,Göteborg,58,406
+2026-02,IoT & embedded,Malmö,8,89
+2026-02,Blockchain & Web3,Sweden,3,3068
+2026-02,Blockchain & Web3,Stockholm,1,948
+2026-02,Blockchain & Web3,Göteborg,0,406
+2026-02,Blockchain & Web3,Malmö,0,89
+2026-02,Quantum computing,Sweden,3,3068
+2026-02,Quantum computing,Stockholm,0,948
+2026-02,Quantum computing,Göteborg,3,406
+2026-02,Quantum computing,Malmö,0,89
 2026-03,AI,Sweden,445,3258
 2026-03,AI,Stockholm,173,1044
 2026-03,AI,Göteborg,47,440
@@ -5399,6 +8087,18 @@ month,topic,location,it_ads,it_total_ads
 2026-03,Cloud-native & DevOps,Stockholm,233,1044
 2026-03,Cloud-native & DevOps,Göteborg,108,440
 2026-03,Cloud-native & DevOps,Malmö,23,118
+2026-03,IoT & embedded,Sweden,270,3258
+2026-03,IoT & embedded,Stockholm,46,1044
+2026-03,IoT & embedded,Göteborg,76,440
+2026-03,IoT & embedded,Malmö,13,118
+2026-03,Blockchain & Web3,Sweden,2,3258
+2026-03,Blockchain & Web3,Stockholm,2,1044
+2026-03,Blockchain & Web3,Göteborg,0,440
+2026-03,Blockchain & Web3,Malmö,0,118
+2026-03,Quantum computing,Sweden,1,3258
+2026-03,Quantum computing,Stockholm,0,1044
+2026-03,Quantum computing,Göteborg,1,440
+2026-03,Quantum computing,Malmö,0,118
 2026-04,AI,Sweden,366,2360
 2026-04,AI,Stockholm,142,719
 2026-04,AI,Göteborg,44,301
@@ -5423,6 +8123,18 @@ month,topic,location,it_ads,it_total_ads
 2026-04,Cloud-native & DevOps,Stockholm,201,719
 2026-04,Cloud-native & DevOps,Göteborg,82,301
 2026-04,Cloud-native & DevOps,Malmö,21,89
+2026-04,IoT & embedded,Sweden,209,2360
+2026-04,IoT & embedded,Stockholm,34,719
+2026-04,IoT & embedded,Göteborg,57,301
+2026-04,IoT & embedded,Malmö,9,89
+2026-04,Blockchain & Web3,Sweden,1,2360
+2026-04,Blockchain & Web3,Stockholm,1,719
+2026-04,Blockchain & Web3,Göteborg,0,301
+2026-04,Blockchain & Web3,Malmö,0,89
+2026-04,Quantum computing,Sweden,0,2360
+2026-04,Quantum computing,Stockholm,0,719
+2026-04,Quantum computing,Göteborg,0,301
+2026-04,Quantum computing,Malmö,0,89
 2026-05,AI,Sweden,472,2686
 2026-05,AI,Stockholm,167,831
 2026-05,AI,Göteborg,60,353
@@ -5447,6 +8159,18 @@ month,topic,location,it_ads,it_total_ads
 2026-05,Cloud-native & DevOps,Stockholm,175,831
 2026-05,Cloud-native & DevOps,Göteborg,93,353
 2026-05,Cloud-native & DevOps,Malmö,29,120
+2026-05,IoT & embedded,Sweden,208,2686
+2026-05,IoT & embedded,Stockholm,31,831
+2026-05,IoT & embedded,Göteborg,58,353
+2026-05,IoT & embedded,Malmö,3,120
+2026-05,Blockchain & Web3,Sweden,1,2686
+2026-05,Blockchain & Web3,Stockholm,0,831
+2026-05,Blockchain & Web3,Göteborg,0,353
+2026-05,Blockchain & Web3,Malmö,0,120
+2026-05,Quantum computing,Sweden,3,2686
+2026-05,Quantum computing,Stockholm,0,831
+2026-05,Quantum computing,Göteborg,1,353
+2026-05,Quantum computing,Malmö,0,120
 2026-06,AI,Sweden,561,2937
 2026-06,AI,Stockholm,185,782
 2026-06,AI,Göteborg,90,459
@@ -5471,6 +8195,18 @@ month,topic,location,it_ads,it_total_ads
 2026-06,Cloud-native & DevOps,Stockholm,182,782
 2026-06,Cloud-native & DevOps,Göteborg,133,459
 2026-06,Cloud-native & DevOps,Malmö,19,135
+2026-06,IoT & embedded,Sweden,310,2937
+2026-06,IoT & embedded,Stockholm,42,782
+2026-06,IoT & embedded,Göteborg,97,459
+2026-06,IoT & embedded,Malmö,3,135
+2026-06,Blockchain & Web3,Sweden,0,2937
+2026-06,Blockchain & Web3,Stockholm,0,782
+2026-06,Blockchain & Web3,Göteborg,0,459
+2026-06,Blockchain & Web3,Malmö,0,135
+2026-06,Quantum computing,Sweden,2,2937
+2026-06,Quantum computing,Stockholm,2,782
+2026-06,Quantum computing,Göteborg,0,459
+2026-06,Quantum computing,Malmö,0,135
 2026-07,AI,Sweden,377,1726
 2026-07,AI,Stockholm,154,545
 2026-07,AI,Göteborg,55,238
@@ -5495,6 +8231,18 @@ month,topic,location,it_ads,it_total_ads
 2026-07,Cloud-native & DevOps,Stockholm,137,545
 2026-07,Cloud-native & DevOps,Göteborg,73,238
 2026-07,Cloud-native & DevOps,Malmö,21,67
+2026-07,IoT & embedded,Sweden,153,1726
+2026-07,IoT & embedded,Stockholm,13,545
+2026-07,IoT & embedded,Göteborg,51,238
+2026-07,IoT & embedded,Malmö,8,67
+2026-07,Blockchain & Web3,Sweden,1,1726
+2026-07,Blockchain & Web3,Stockholm,1,545
+2026-07,Blockchain & Web3,Göteborg,0,238
+2026-07,Blockchain & Web3,Malmö,0,67
+2026-07,Quantum computing,Sweden,0,1726
+2026-07,Quantum computing,Stockholm,0,545
+2026-07,Quantum computing,Göteborg,0,238
+2026-07,Quantum computing,Malmö,0,67
 2026-08,AI,Sweden,437,2354
 2026-08,AI,Stockholm,175,745
 2026-08,AI,Göteborg,57,335
@@ -5519,6 +8267,18 @@ month,topic,location,it_ads,it_total_ads
 2026-08,Cloud-native & DevOps,Stockholm,172,745
 2026-08,Cloud-native & DevOps,Göteborg,101,335
 2026-08,Cloud-native & DevOps,Malmö,23,74
+2026-08,IoT & embedded,Sweden,181,2354
+2026-08,IoT & embedded,Stockholm,17,745
+2026-08,IoT & embedded,Göteborg,64,335
+2026-08,IoT & embedded,Malmö,5,74
+2026-08,Blockchain & Web3,Sweden,2,2354
+2026-08,Blockchain & Web3,Stockholm,0,745
+2026-08,Blockchain & Web3,Göteborg,1,335
+2026-08,Blockchain & Web3,Malmö,0,74
+2026-08,Quantum computing,Sweden,1,2354
+2026-08,Quantum computing,Stockholm,0,745
+2026-08,Quantum computing,Göteborg,1,335
+2026-08,Quantum computing,Malmö,0,74
 2026-09,AI,Sweden,631,3045
 2026-09,AI,Stockholm,246,1014
 2026-09,AI,Göteborg,97,466
@@ -5543,6 +8303,18 @@ month,topic,location,it_ads,it_total_ads
 2026-09,Cloud-native & DevOps,Stockholm,284,1014
 2026-09,Cloud-native & DevOps,Göteborg,161,466
 2026-09,Cloud-native & DevOps,Malmö,18,130
+2026-09,IoT & embedded,Sweden,290,3045
+2026-09,IoT & embedded,Stockholm,44,1014
+2026-09,IoT & embedded,Göteborg,83,466
+2026-09,IoT & embedded,Malmö,17,130
+2026-09,Blockchain & Web3,Sweden,0,3045
+2026-09,Blockchain & Web3,Stockholm,0,1014
+2026-09,Blockchain & Web3,Göteborg,0,466
+2026-09,Blockchain & Web3,Malmö,0,130
+2026-09,Quantum computing,Sweden,2,3045
+2026-09,Quantum computing,Stockholm,1,1014
+2026-09,Quantum computing,Göteborg,0,466
+2026-09,Quantum computing,Malmö,0,130
 2026-10,AI,Sweden,0,9
 2026-10,AI,Stockholm,0,4
 2026-10,GenAI & LLMs,Sweden,0,9
@@ -5555,3 +8327,9 @@ month,topic,location,it_ads,it_total_ads
 2026-10,Data & analytics,Stockholm,3,4
 2026-10,Cloud-native & DevOps,Sweden,1,9
 2026-10,Cloud-native & DevOps,Stockholm,1,4
+2026-10,IoT & embedded,Sweden,0,9
+2026-10,IoT & embedded,Stockholm,0,4
+2026-10,Blockchain & Web3,Sweden,0,9
+2026-10,Blockchain & Web3,Stockholm,0,4
+2026-10,Quantum computing,Sweden,0,9
+2026-10,Quantum computing,Stockholm,0,4
