@@ -22,6 +22,7 @@ let titleYears = [];          // years shown in the sparklines
 let selectedTitle = null;
 let showAllTitles = false;
 let heatmapSkill = null;      // column highlighted in the heatmap
+let titleTab = 'titles';      // 'titles' or 'themes' (Big Themes, hot-topics.js)
 
 function renderJobTitles(data, historyCsv) {
     jobTitles = data && Array.isArray(data.titles) && data.total_ads ? data : null;
@@ -95,12 +96,48 @@ function titleTrend(name) {
     return { last, previous, now: history[last], before: history[previous], change: history[last] - history[previous] };
 }
 
+// The "Job titles" / "Big Themes" tabs on the list card. The Big Themes tab draws into
+// the same list, panel and heatmap (see hot-topics.js).
+function setTitleTab(tab) {
+    titleTab = tab === 'themes' && typeof hasBigThemes === 'function' && hasBigThemes() ? 'themes' : 'titles';
+    drawJobTitles();
+}
+
+function renderTitleTabs() {
+    const tabs = document.getElementById('titleTabs');
+    if (!tabs) return;
+    const showThemes = typeof hasBigThemes === 'function' && hasBigThemes();
+    tabs.hidden = !showThemes;
+    tabs.querySelectorAll('[data-tab]').forEach(button => {
+        const active = button.dataset.tab === titleTab;
+        button.className = 'location-pill' + (active ? ' location-pill-active' : '');
+        button.setAttribute('aria-selected', String(active));
+        button.onclick = () => { if (!active) setTitleTab(button.dataset.tab); };
+    });
+    const heading = document.getElementById('titleListHeading');
+    if (heading) heading.hidden = showThemes;
+    const heatmapTitle = document.getElementById('titleHeatmapHeading');
+    const heatmapSub = document.getElementById('titleHeatmapSub');
+    const themes = titleTab === 'themes';
+    if (heatmapTitle) heatmapTitle.textContent = themes ? 'Which skills each theme asks for' : 'Which skills each title asks for';
+    if (heatmapSub) heatmapSub.textContent = themes
+        ? "Each cell is the share of that theme's live ads that mention the skill. Click a theme to select it, or a skill to highlight its column."
+        : "Each cell is the share of that title's live ads that mention the skill. Click a title to select it, or a skill to highlight its column.";
+}
+
 function drawJobTitles() {
     const section = document.getElementById('titles');
     if (!section) return;
     const list = document.getElementById('titleList');
     const panel = document.getElementById('titlePanel');
     const heatmap = document.getElementById('titleHeatmap');
+    renderTitleTabs();
+    if (titleTab === 'themes' && typeof hasBigThemes === 'function' && hasBigThemes()) {
+        renderThemeList();
+        renderThemePanel();
+        renderThemeHeatmap();
+        return;
+    }
     if (!jobTitles) {
         list.innerHTML = '<p class="skill-gap-empty">Job titles appear after the next weekly data update.</p>';
         panel.innerHTML = '';
@@ -115,9 +152,8 @@ function drawJobTitles() {
 function selectTitle(name, { scroll = false, fromTree = false } = {}) {
     if (!titleByName(name)) return;
     selectedTitle = name;
-    renderTitleList();
-    renderTitlePanel();
-    renderTitleHeatmap();
+    titleTab = 'titles';
+    drawJobTitles();
     // Light up the title's typical skills in the skill tree too.
     if (!fromTree && typeof showTitleInNetwork === 'function') showTitleInNetwork(name);
     if (scroll) document.getElementById('titles')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -343,13 +379,28 @@ function skillCategories() {
 }
 
 function renderTitleHeatmap() {
-    const container = document.getElementById('titleHeatmap');
-    container.innerHTML = '';
     // The most used titles, plus the selected one if it's further down the list.
     const eligible = jobTitles.titles.filter(t => t.ads >= MIN_TITLE_ADS && Object.keys(t.skills || {}).length);
     const rows = eligible.slice(0, HEATMAP_ROWS);
     const chosen = eligible.find(t => t.name === selectedTitle);
     if (chosen && !rows.includes(chosen)) rows.push(chosen);
+    renderSkillHeatmap({
+        rows,
+        selected: selectedTitle,
+        onSelect: name => selectTitle(name),
+        corner: 'Title ↓ · Skill →',
+        caption: 'Share of live Data/IT ads with each job title that mention each skill',
+        legendLabel: '% of the title\'s ads that mention the skill',
+        cellTitle: (row, skill, percent) => `${percent}% of ${row} ads mention ${skill}`,
+        rerender: renderTitleHeatmap
+    });
+}
+
+// Rows (titles or themes) by the 20 tracked skills, grouped by category.
+// rows: [{ name, skills: { skill: percent } }].
+function renderSkillHeatmap({ rows, selected, onSelect, corner: cornerText, caption: captionText, legendLabel, cellTitle, rerender }) {
+    const container = document.getElementById('titleHeatmap');
+    container.innerHTML = '';
     if (!rows.length) return;
     const categories = Object.entries(rawCategoryData || {}).map(([category, skills]) => [category, skills.map(s => s.name)]);
     const columns = categories.flatMap(([category, skills]) => skills.map(skill => ({ skill, category })));
@@ -358,7 +409,7 @@ function renderTitleHeatmap() {
     table.className = 'heatmap';
     const caption = document.createElement('caption');
     caption.className = 'visually-hidden';
-    caption.textContent = 'Share of live Data/IT ads with each job title that mention each skill';
+    caption.textContent = captionText;
     table.appendChild(caption);
 
     const thead = table.createTHead();
@@ -367,7 +418,7 @@ function renderTitleHeatmap() {
     const corner = document.createElement('th');
     corner.rowSpan = 2;
     corner.className = 'heatmap-corner';
-    corner.textContent = 'Title ↓ · Skill →';
+    corner.textContent = cornerText;
     groupRow.appendChild(corner);
     categories.forEach(([category, skills], index) => {
         const th = document.createElement('th');
@@ -394,7 +445,7 @@ function renderTitleHeatmap() {
         button.title = `Highlight ${skill}, and show it in the skill tree`;
         button.addEventListener('click', () => {
             heatmapSkill = heatmapSkill === skill ? null : skill;
-            renderTitleHeatmap();
+            rerender();
             if (heatmapSkill && typeof selectNetworkSkill === 'function') selectNetworkSkill(skill);
         });
         th.appendChild(button);
@@ -404,14 +455,14 @@ function renderTitleHeatmap() {
     const body = table.createTBody();
     rows.forEach(title => {
         const tr = body.insertRow();
-        tr.className = title.name === selectedTitle ? 'is-selected' : '';
+        tr.className = title.name === selected ? 'is-selected' : '';
         const th = document.createElement('th');
         th.scope = 'row';
         const button = document.createElement('button');
         button.type = 'button';
         button.className = 'heatmap-row-button';
         button.textContent = title.name;
-        button.addEventListener('click', () => selectTitle(title.name));
+        button.addEventListener('click', () => onSelect(title.name));
         th.appendChild(button);
         tr.appendChild(th);
         columns.forEach(({ skill, category }, index) => {
@@ -423,7 +474,7 @@ function renderTitleHeatmap() {
             // Sequential scale, one hue: mix the accent into the surface by the share.
             td.style.setProperty('--level', `${Math.min(100, Math.round(percent * 1.4))}%`);
             td.textContent = percent >= 5 ? percent : '';
-            td.title = `${percent}% of ${title.name} ads mention ${skill}`;
+            td.title = cellTitle(title.name, skill, percent);
         });
     });
 
@@ -437,7 +488,7 @@ function renderTitleHeatmap() {
 
     const legend = document.createElement('div');
     legend.className = 'heatmap-legend';
-    legend.innerHTML = '<span>% of the title\'s ads that mention the skill</span>' +
+    legend.innerHTML = `<span>${legendLabel}</span>` +
         '<span class="heatmap-legend-scale" aria-hidden="true">' +
         [0, 10, 20, 35, 50, 70].map(p => `<span class="heatmap-legend-step" style="--level:${Math.min(100, Math.round(p * 1.4))}%">${p}</span>`).join('') +
         '</span>';

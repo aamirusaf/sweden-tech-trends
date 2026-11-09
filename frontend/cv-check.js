@@ -94,7 +94,7 @@ let cvTitleGuess = null;
 let cvSourceName = '';
 let cvHasCv = false;
 let cvJobsFullOnly = false;
-let cvHotTopics = [];       // hot topics (hot-topics.js) the CV mentions; shown, not scored
+let cvHotTopics = [];       // Big Themes (hot-topics.js) the CV mentions; shown, not scored
 let cvText = '';
 
 function initCvCheck() {
@@ -543,7 +543,7 @@ function renderCvFound() {
     if (cvHotTopics.length) {
         const hotHead = document.createElement('p');
         hotHead.className = 'skill-category-label';
-        hotHead.textContent = 'Hot topics on your CV (not scored)';
+        hotHead.textContent = 'Big Themes on your CV (not scored)';
         container.appendChild(hotHead);
         const hot = document.createElement('div');
         hot.className = 'cv-other';
@@ -552,7 +552,7 @@ function renderCvFound() {
             chip.type = 'button';
             chip.className = 'co-occurrence-chip hot-chip-link';
             chip.textContent = name;
-            chip.title = `See ${name} in Hot topics`;
+            chip.title = `See ${name} in Big Themes`;
             chip.addEventListener('click', () => selectHotTopic(name, { scroll: true }));
             hot.appendChild(chip);
         });

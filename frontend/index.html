@@ -24,8 +24,7 @@
             </a>
             <nav class="topnav" aria-label="Sections">
                 <a href="#cv">Your CV</a>
-                <a href="#hot">Hot topics</a>
-                <a href="#live">Live demand</a>
+                <a href="#live">Skill demand</a>
                 <a href="#connections">Connections</a>
                 <a href="#titles">Job titles</a>
                 <a href="#history">Over time</a>
@@ -112,36 +111,11 @@
             </div>
         </section>
 
-        <section id="hot" class="section hot-section">
+        <section id="live" class="section">
             <div class="section-head">
                 <p class="section-kicker">02</p>
                 <div>
-                    <h2>Hot topics: AI, LLMs, cybersecurity</h2>
-                    <p class="section-desc">Big themes rather than single tools, so they sit apart from the 20 tracked skills and don't count toward your CV score. Each shows the share of live Data/IT job ads that mention it, and how that share has moved since 2008. Topics overlap: an ad about LLMs also counts under AI. Follows the location filter.</p>
-                </div>
-            </div>
-            <div class="hot-layout">
-                <div id="hotGrid" class="hot-grid" aria-live="polite">Loading hot topics…</div>
-                <article class="card">
-                    <div id="hotPanel" class="network-panel title-panel" aria-live="polite"></div>
-                </article>
-            </div>
-            <article id="hotChartCard" class="card hot-chart-card" hidden>
-                <header class="card-head">
-                    <h3>Hot topics over time</h3>
-                    <p class="card-sub">Share of Data/IT ads published each year that mention the topic, from Arbetsförmedlingen's Historical Ads. 2026 covers January–October. Click a line or a name to select it.</p>
-                </header>
-                <div class="chart-wrapper history-chart-wrapper">
-                    <canvas id="hotChart" role="img" aria-label="Line chart of the yearly share of Data/IT job ads mentioning each hot topic"></canvas>
-                </div>
-            </article>
-        </section>
-
-        <section id="live" class="section">
-            <div class="section-head">
-                <p class="section-kicker">03</p>
-                <div>
-                    <h2>Live demand</h2>
+                    <h2>Skill demand</h2>
                     <p class="section-desc">Share of live Data/IT job ads that mention each skill. Click a bar to see openings for it.</p>
                 </div>
             </div>
@@ -175,7 +149,7 @@
 
         <section id="connections" class="section network-section">
             <div class="section-head">
-                <p class="section-kicker">04</p>
+                <p class="section-kicker">03</p>
                 <div>
                     <h2>How the skills connect</h2>
                     <p class="section-desc">Pick a skill to light up the ones to learn with it. Together the numbered skills make you a match for most of the live Data/IT ads that mention it: you have every tracked skill the ad asks for, or all but one. Lines show how often the skill appears alongside each other one. Covers all of Sweden.</p>
@@ -191,15 +165,21 @@
 
         <section id="titles" class="section titles-section">
             <div class="section-head">
-                <p class="section-kicker">05</p>
+                <p class="section-kicker">04</p>
                 <div>
                     <h2>Job Titles</h2>
-                    <p class="section-desc">What employers call the job in the title of their Data/IT ads, grouped into families such as Data Engineer or DevOps &amp; Platform. Pick a title to see the skills its ads ask for; they light up in the skill tree too. The change and the small trend lines come from ads published each year since 2008. Covers all of Sweden.</p>
+                    <p class="section-desc">What employers call the job in the title of their Data/IT ads, grouped into families such as Data Engineer or DevOps &amp; Platform. Pick a title to see the skills its ads ask for; they light up in the skill tree too. The Big Themes tab does the same for AI, LLMs, cybersecurity and other themes that span many titles. The change and the small trend lines come from ads published each year since 2008. Covers all of Sweden.</p>
                 </div>
             </div>
             <div class="titles-layout">
                 <article class="card">
-                    <header class="card-head"><h3>Most used job titles</h3></header>
+                    <header class="card-head">
+                        <h3 id="titleListHeading">Most used job titles</h3>
+                        <div id="titleTabs" class="pill-group pill-group-tabs" role="tablist" aria-label="Job titles or big themes" hidden>
+                            <button type="button" role="tab" data-tab="titles" class="location-pill location-pill-active" aria-selected="true">Most used job titles</button>
+                            <button type="button" role="tab" data-tab="themes" class="location-pill" aria-selected="false">Big Themes</button>
+                        </div>
+                    </header>
                     <div id="titleList" class="title-list" aria-live="polite">Loading job titles…</div>
                 </article>
                 <article class="card">
@@ -208,8 +188,8 @@
             </div>
             <article class="card heatmap-card">
                 <header class="card-head">
-                    <h3>Which skills each title asks for</h3>
-                    <p class="card-sub">Each cell is the share of that title's live ads that mention the skill. Click a title to select it, or a skill to highlight its column.</p>
+                    <h3 id="titleHeatmapHeading">Which skills each title asks for</h3>
+                    <p id="titleHeatmapSub" class="card-sub">Each cell is the share of that title's live ads that mention the skill. Click a title to select it, or a skill to highlight its column.</p>
                 </header>
                 <div id="titleHeatmap"></div>
             </article>
@@ -217,10 +197,10 @@
 
         <section id="history" class="section history-section">
             <div class="section-head">
-                <p class="section-kicker">06</p>
+                <p class="section-kicker">05</p>
                 <div>
                     <h2>Demand over time, 2008–2026</h2>
-                    <p class="section-desc">Share of Data/IT job ads published each year that mention the skill, from Arbetsförmedlingen's Historical Ads. Follows the location filter. Starts in 2008, because older ads mostly have no job category. 2026 covers January–October.</p>
+                    <p class="section-desc">Share of Data/IT job ads published each year that mention the skill or theme, from Arbetsförmedlingen's Historical Ads. Follows the location filter. Starts in 2008, because older ads mostly have no job category. 2026 covers January–October.</p>
                 </div>
             </div>
             <article class="card">
@@ -239,7 +219,7 @@
 
         <section id="plan" class="section">
             <div class="section-head">
-                <p class="section-kicker">07</p>
+                <p class="section-kicker">06</p>
                 <div>
                     <h2>Your learning plan</h2>
                     <p class="section-desc">Tick the skills you already have. The rest are ranked by how many live Data/IT ads ask for them, with courses to close the gap.</p>

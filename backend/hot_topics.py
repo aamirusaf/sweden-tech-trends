@@ -224,6 +224,8 @@ def build_hot_topics(ads, all_skills, locations):
                 {"name": skill, "percent": round(100 * count / n)}
                 for skill, count in sorted(skill_counts.items(), key=lambda kv: (-kv[1], all_skills.index(kv[0])))[:TOP_SKILLS]
             ] if n else [],
+            # Every tracked skill, for the theme-by-skill heatmap.
+            "skill_shares": {skill: round(100 * skill_counts.get(skill, 0) / n) if n else 0 for skill in all_skills},
             "titles": [
                 {"name": title, "percent": round(100 * count / n)}
                 for title, count in title_counts.most_common(TOP_TITLES)

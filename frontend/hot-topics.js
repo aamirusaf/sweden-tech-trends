@@ -1,41 +1,45 @@
-// "Hot topics": broad themes such as AI, LLMs and cybersecurity. They aren't tools, so
+// "Big Themes": broad themes such as AI, LLMs and cybersecurity. They aren't tools, so
 // they aren't among the 20 tracked skills, but they're measured the same way: the share
 // of Data/IT job ads that mention them, live and every year since 2008.
+// They appear in two places: a "Big Themes" tab beside "Most used job titles" (with
+// the same list, panel and heatmap as the titles), and a "Big Themes" pill in the
+// "Demand over time" chart (app.js).
 // Data: backend/data/hot_topics.json (live ads, weekly) and
-// backend/data/historical_topics_monthly.csv (Historical Ads); the topics and their
+// backend/data/historical_topics_monthly.csv (Historical Ads); the themes and their
 // patterns are defined in backend/hot_topics.py.
-// Relies on selectedLocation, historicalYearly, validHistoryYears, chartTheme,
-// tooltipStyle, isDarkMode, categoryColor, skillCategories, SERIES_COLORS, SVG_NS and
-// LOCATION_LABELS from app.js and the other scripts, and on selectTitle from job-titles.js.
+// Relies on historicalYearly, validHistoryYears, isDarkMode, categoryColor, SERIES_COLORS
+// and SVG_NS from app.js and skill-network.js, and on job-titles.js for the shared
+// list, heatmap and tab state (titleTab).
 
-const HOT_TREND_YEARS_BACK = 5;     // "since 2021" when the latest year is 2026
+const BIG_THEMES = 'Big Themes';
 const HOT_SAMPLES_SHOWN = 4;
+const HOT_TITLES_SHOWN = 4;
 
 let hotTopics = null;               // hot_topics.json
-let hotHistory = {};                // { location: { topic: { year: share% } } }
+let hotHistory = {};                // { location: { theme: { year: share% } } }
 let hotYears = [];                  // years shown, same as the skills history chart
 let hotMatchers = [];               // [{ name, patterns: [RegExp] }] for the CV check
 let selectedHotTopic = null;
-let hotChart = null;
 
-function initHotTopics() {
-    Promise.all([
-        fetch('../backend/data/hot_topics.json').then(r => r.ok ? r.json() : null).catch(() => null),
-        fetch('../backend/data/historical_topics_monthly.csv').then(r => r.ok ? r.text() : '').catch(() => '')
-    ]).then(([data, csv]) => {
-        hotTopics = data && Array.isArray(data.topics) && data.total_ads ? data : null;
-        hotHistory = aggregateHotHistory(csv);
-        hotMatchers = buildHotMatchers(hotTopics?.patterns);
-        if (!selectedHotTopic) selectedHotTopic = defaultHotTopic();
-        renderHotTopics();
-        // The CV may have been read before the topics arrived.
-        if (typeof renderCvFound === 'function' && typeof cvHasCv !== 'undefined' && cvHasCv) renderCvFound();
-    });
+// Called by app.js once the data files have loaded (after historicalYearly is set).
+function initHotTopics(data, csv) {
+    hotTopics = data && Array.isArray(data.topics) && data.total_ads ? data : null;
+    hotHistory = aggregateHotHistory(csv);
+    hotMatchers = buildHotMatchers(hotTopics?.patterns);
+    selectedHotTopic = hotTopics?.topics.find(t => /LLM/.test(t.name))?.name || hotTopics?.topics[0]?.name || null;
+}
+
+function hasBigThemes() {
+    return !!hotTopics;
+}
+
+function hasBigThemesHistory(location) {
+    return !!(hotHistory[location] && hotYears.length > 1);
 }
 
 function aggregateHotHistory(csvText) {
     // CSV columns: month,topic,location,it_ads,it_total_ads (Data/IT ads only).
-    const ads = {};      // location -> topic -> year -> ads
+    const ads = {};      // location -> theme -> year -> ads
     const totals = {};   // location -> year -> month -> Data/IT ads
     const lines = (csvText || '').trim().split('\n');
     for (const line of lines.slice(1)) {
@@ -74,22 +78,17 @@ function buildHotMatchers(patterns) {
     }));
 }
 
-// Hot topics mentioned in a piece of text (the CV check uses this).
+// Big Themes mentioned in a piece of text (the CV check uses this).
 function hotTopicsInText(text) {
     if (!text) return [];
     return hotMatchers.filter(m => m.patterns.some(p => p.test(text))).map(m => m.name);
-}
-
-function defaultHotTopic() {
-    if (!hotTopics) return null;
-    return hotTopics.topics.find(t => /LLM/.test(t.name))?.name || hotTopics.topics[0]?.name || null;
 }
 
 function hotTopicByName(name) {
     return hotTopics?.topics.find(t => t.name === name) || null;
 }
 
-// The eight series colors from app.js plus a ninth, so no two topics share one.
+// The eight series colors from app.js plus a ninth, so no two themes share one.
 const HOT_EXTRA_COLOR = { light: '#1a8fa0', dark: '#2bb3c4' };
 
 function hotColor(name) {
@@ -99,27 +98,29 @@ function hotColor(name) {
     return palette[(index < 0 ? 0 : index) % palette.length];
 }
 
-function hotSeries(name, location = selectedLocation) {
-    return hotHistory[location]?.[name] || hotHistory.Sweden?.[name] || null;
+// Yearly share (%) of Data/IT ads mentioning each theme, for the "Demand over time" chart.
+function bigThemesHistory(location) {
+    const history = hotHistory[location] || {};
+    return (hotTopics?.topics || []).map(topic => ({ name: topic.name, color: hotColor(topic.name), years: history[topic.name] || {} }));
 }
 
-// Change in yearly share over the last HOT_TREND_YEARS_BACK years, in percentage points.
-function hotTrend(name, location = selectedLocation) {
-    const series = hotSeries(name, location);
+// Change in share from the year before the latest one, in percentage points (Sweden),
+// the same comparison as the job titles.
+function hotTrend(name) {
+    const series = hotHistory.Sweden?.[name];
     if (!series || hotYears.length < 2) return null;
     const last = hotYears[hotYears.length - 1];
-    const fromIndex = Math.max(0, hotYears.length - 1 - HOT_TREND_YEARS_BACK);
-    const from = hotYears[fromIndex];
-    if (series[last] == null || series[from] == null) return null;
-    return { from, last, before: series[from], now: series[last], change: series[last] - series[from] };
+    const previous = hotYears[hotYears.length - 2];
+    if (series[last] == null || series[previous] == null) return null;
+    return { last, previous, now: series[last], before: series[previous], change: series[last] - series[previous] };
 }
 
-// Share of live Data/IT ads (%), from the counts so small topics don't round to 0.
-function hotShare(topic, location = selectedLocation) {
-    const ads = topic.ads_by_location?.[location];
-    const total = hotTopics?.totals_by_location?.[location];
+// Share of live Data/IT ads in Sweden (%), from the counts so small themes don't round to 0.
+function hotShare(topic) {
+    const ads = topic.ads_by_location?.Sweden;
+    const total = hotTopics?.totals_by_location?.Sweden || hotTopics?.total_ads;
     if (ads != null && total) return 100 * ads / total;
-    return topic.percent_by_location?.[location] ?? topic.percent_by_location?.Sweden ?? 0;
+    return topic.percent_by_location?.Sweden ?? 0;
 }
 
 function fmtHotShare(share) {
@@ -128,110 +129,125 @@ function fmtHotShare(share) {
     return `${share.toFixed(2)}%`;
 }
 
-function renderHotTopics() {
-    const section = document.getElementById('hot');
-    if (!section) return;
-    const grid = document.getElementById('hotGrid');
-    const panel = document.getElementById('hotPanel');
-    if (!hotTopics) {
-        grid.innerHTML = '<p class="skill-gap-empty">Hot topics appear after the next weekly data update.</p>';
-        panel.innerHTML = '';
-        document.getElementById('hotChartCard').hidden = true;
-        return;
-    }
-    renderHotGrid();
-    renderHotPanel();
-    renderHotChart();
-}
-
-function renderHotGrid() {
-    const grid = document.getElementById('hotGrid');
-    grid.innerHTML = '';
-    const location = selectedLocation;
-    const total = hotTopics.totals_by_location?.[location] ?? hotTopics.total_ads;
-    hotTopics.topics.forEach(topic => {
-        const button = document.createElement('button');
-        button.type = 'button';
-        const selected = topic.name === selectedHotTopic;
-        button.className = 'hot-tile' + (selected ? ' is-selected' : '');
-        button.setAttribute('aria-pressed', String(selected));
-        button.style.setProperty('--hot-color', hotColor(topic.name));
-
-        const name = el('span', 'hot-tile-name', topic.name);
-        const share = hotShare(topic, location);
-        const value = el('span', 'hot-tile-value', fmtHotShare(share));
-        const ads = topic.ads_by_location?.[location] ?? 0;
-        const sub = el('span', 'hot-tile-sub', `of live Data/IT ads · ${ads.toLocaleString()} ad${ads === 1 ? "" : "s"}`);
-
-        const foot = el('span', 'hot-tile-foot');
-        const trend = hotTrend(topic.name, location);
-        const badge = el('span', 'title-trend hot-tile-trend');
-        if (trend) {
-            const rounded = Math.abs(trend.change) < 0.05 ? 0 : trend.change;
-            badge.classList.add(rounded > 0 ? 'trend-up' : rounded < 0 ? 'trend-down' : 'trend-flat');
-            badge.textContent = rounded === 0
-                ? `±0 pts since ${trend.from}`
-                : `${rounded > 0 ? '▲' : '▼'} ${Math.abs(rounded).toFixed(1)} pts since ${trend.from}`;
-            badge.title = `${fmtHotShare(trend.before)} of Data/IT ads published in ${trend.from}, ${fmtHotShare(trend.now)} in ${trend.last}${trend.last === '2026' ? ' (Jan–Oct)' : ''}`;
-        } else {
-            badge.textContent = hotYears.length ? '–' : '';
-        }
-        foot.append(badge, hotSparkline(topic.name, location));
-
-        button.append(name, value, sub, foot);
-        button.setAttribute('aria-label', `${topic.name}: ${fmtHotShare(share)} of ${total.toLocaleString()} live Data/IT ads${trend ? `, ${trend.change >= 0 ? 'up' : 'down'} ${Math.abs(trend.change).toFixed(1)} points since ${trend.from}` : ''}`);
-        button.addEventListener('click', () => selectHotTopic(topic.name));
-        grid.appendChild(button);
-    });
-}
-
-function hotSparkline(name, location) {
-    const series = hotSeries(name, location) || {};
-    const values = hotYears.map(year => series[year]);
-    const width = 120, height = 32, pad = 3;
-    const svg = document.createElementNS(SVG_NS, 'svg');
-    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
-    svg.setAttribute('class', 'hot-spark');
-    svg.setAttribute('aria-hidden', 'true');
-    const max = Math.max(...values.filter(v => v != null), 0.1);
-    const x = i => pad + (width - 2 * pad) * i / Math.max(values.length - 1, 1);
-    const y = v => height - pad - (height - 2 * pad) * v / max;
-    const points = values.map((v, i) => v == null ? null : [x(i), y(v)]).filter(Boolean);
-    if (points.length > 1) {
-        const path = points.map(([px, py]) => `${px.toFixed(1)},${py.toFixed(1)}`).join(' ');
-        const area = document.createElementNS(SVG_NS, 'polygon');
-        area.setAttribute('points', `${points[0][0].toFixed(1)},${height - pad} ${path} ${points[points.length - 1][0].toFixed(1)},${height - pad}`);
-        area.setAttribute('class', 'hot-spark-area');
-        const line = document.createElementNS(SVG_NS, 'polyline');
-        line.setAttribute('points', path);
-        line.setAttribute('class', 'hot-spark-line');
-        const dot = document.createElementNS(SVG_NS, 'circle');
-        const [lx, ly] = points[points.length - 1];
-        dot.setAttribute('cx', lx.toFixed(1));
-        dot.setAttribute('cy', ly.toFixed(1));
-        dot.setAttribute('r', 2.5);
-        dot.setAttribute('class', 'hot-spark-dot');
-        svg.append(area, line, dot);
-    }
-    return svg;
-}
-
+// Open a theme in the Big Themes tab (from the CV check).
 function selectHotTopic(name, { scroll = false } = {}) {
     if (!hotTopicByName(name)) return;
     selectedHotTopic = name;
-    renderHotGrid();
-    renderHotPanel();
-    renderHotChart();
-    if (scroll) document.getElementById('hot')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (typeof setTitleTab === 'function') setTitleTab('themes');
+    if (scroll) document.getElementById('titles')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-function renderHotPanel() {
-    const panel = document.getElementById('hotPanel');
+// ---------- The Big Themes tab (drawn into the job-title card's containers) ----------
+
+function renderThemeList() {
+    const container = document.getElementById('titleList');
+    container.innerHTML = '';
+    const topics = hotTopics.topics;
+    const shares = new Map(topics.map(t => [t.name, hotShare(t)]));
+    const max = Math.max(...shares.values(), 1);
+    const hasHistory = hotYears.length > 1 && !!hotHistory.Sweden;
+
+    const head = document.createElement('div');
+    head.className = 'title-row title-row-head';
+    head.setAttribute('aria-hidden', 'true');
+    head.innerHTML = `<span>Theme</span><span>Share of live Data/IT ads</span>` +
+        (hasHistory ? `<span class="title-col-trend">vs ${hotYears[hotYears.length - 2]}</span><span class="title-col-spark">${hotYears[0]}–${hotYears[hotYears.length - 1]}</span>` : '');
+    container.appendChild(head);
+
+    const ol = document.createElement('ol');
+    ol.className = 'title-rows';
+    topics.forEach((topic, index) => {
+        const share = shares.get(topic.name);
+        const selected = topic.name === selectedHotTopic;
+        const item = document.createElement('li');
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'title-row theme-row' + (selected ? ' is-selected' : '') + (hasHistory ? '' : ' no-history');
+        button.setAttribute('aria-pressed', String(selected));
+        // The row's bar and sparkline take the theme's own color.
+        button.style.setProperty('--title', hotColor(topic.name));
+
+        const name = el('span', 'title-name');
+        name.append(el('span', 'title-rank', String(index + 1)), document.createTextNode(topic.name));
+
+        const bar = el('span', 'title-bar');
+        const fill = el('span', 'title-bar-fill');
+        fill.style.width = `${(100 * share / max).toFixed(1)}%`;
+        bar.append(fill, el('span', 'title-bar-value', fmtHotShare(share)));
+        button.append(name, bar);
+
+        if (hasHistory) {
+            const trend = hotTrend(topic.name);
+            const badge = el('span', 'title-trend');
+            if (trend) {
+                const rounded = Math.abs(trend.change) < 0.05 ? 0 : trend.change;
+                badge.classList.add(rounded > 0 ? 'trend-up' : rounded < 0 ? 'trend-down' : 'trend-flat');
+                badge.textContent = rounded === 0 ? '±0 pts' : `${rounded > 0 ? '▲' : '▼'} ${Math.abs(rounded).toFixed(1)} pts`;
+                badge.title = `${fmtHotShare(trend.now)} of Data/IT ads published in ${trend.last}${trend.last === '2026' ? ' (Jan–Oct)' : ''}, ${fmtHotShare(trend.before)} in ${trend.previous}`;
+            } else {
+                badge.textContent = '–';
+            }
+            button.append(badge, themeSparkline(topic.name));
+        }
+
+        const ads = topic.ads_by_location?.Sweden ?? 0;
+        button.setAttribute('aria-label', `${topic.name}: ${fmtHotShare(share)} of live Data/IT ads, ${ads.toLocaleString()} ad${ads === 1 ? '' : 's'}`);
+        button.addEventListener('click', () => {
+            selectedHotTopic = topic.name;
+            drawJobTitles();
+        });
+        item.appendChild(button);
+        ol.appendChild(item);
+    });
+    container.appendChild(ol);
+
+    container.appendChild(el('p', 'title-note',
+        `Themes overlap: an ad about LLMs also counts under AI. Out of ${(hotTopics.totals_by_location?.Sweden || hotTopics.total_ads).toLocaleString()} live Data/IT ads in Sweden.`));
+}
+
+function themeSparkline(name) {
+    const series = hotHistory.Sweden?.[name] || {};
+    const values = hotYears.map(year => series[year]);
+    const width = 96, height = 28, pad = 3;
+    const max = Math.max(...values.filter(v => v != null), 0.01);
+    const x = i => pad + (width - 2 * pad) * i / Math.max(values.length - 1, 1);
+    const y = v => height - pad - (height - 2 * pad) * v / max;
+    const points = values.map((v, i) => v == null ? null : `${x(i).toFixed(1)},${y(v).toFixed(1)}`).filter(Boolean);
+
+    const svg = document.createElementNS(SVG_NS, 'svg');
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    svg.setAttribute('class', 'title-spark');
+    svg.setAttribute('aria-hidden', 'true');
+    if (points.length > 1) {
+        const area = document.createElementNS(SVG_NS, 'polygon');
+        area.setAttribute('points', `${points[0].split(',')[0]},${height - pad} ${points.join(' ')} ${points[points.length - 1].split(',')[0]},${height - pad}`);
+        area.setAttribute('class', 'title-spark-area');
+        const line = document.createElementNS(SVG_NS, 'polyline');
+        line.setAttribute('points', points.join(' '));
+        line.setAttribute('class', 'title-spark-line');
+        const [lx, ly] = points[points.length - 1].split(',');
+        const dot = document.createElementNS(SVG_NS, 'circle');
+        dot.setAttribute('cx', lx);
+        dot.setAttribute('cy', ly);
+        dot.setAttribute('r', 2.5);
+        dot.setAttribute('class', 'title-spark-dot');
+        svg.append(area, line, dot);
+    }
+    const wrap = el('span', 'title-spark-wrap');
+    const first = values.find(v => v != null);
+    const last = values[values.length - 1];
+    wrap.title = first != null && last != null
+        ? `${hotYears[0]}: ${fmtHotShare(first)} → ${hotYears[hotYears.length - 1]}: ${fmtHotShare(last)} of Data/IT ads published`
+        : '';
+    wrap.appendChild(svg);
+    return wrap;
+}
+
+function renderThemePanel() {
+    const panel = document.getElementById('titlePanel');
     panel.innerHTML = '';
     const topic = hotTopicByName(selectedHotTopic);
     if (!topic) return;
-    const location = selectedLocation;
-    const locationName = location === 'Sweden' ? 'Sweden' : location;
 
     const heading = el('h4', 'network-panel-title');
     const swatch = el('span', 'skill-swatch');
@@ -240,50 +256,61 @@ function renderHotPanel() {
     panel.appendChild(heading);
     panel.appendChild(el('p', 'network-panel-meta', topic.description));
 
-    const ads = topic.ads_by_location?.[location] ?? 0;
-    const total = hotTopics.totals_by_location?.[location] ?? hotTopics.total_ads;
-    const trend = hotTrend(topic.name, location);
-    let summary = `${ads.toLocaleString()} of ${total.toLocaleString()} live Data/IT ads in ${locationName} (${fmtHotShare(hotShare(topic, location))}).`;
+    const ads = topic.ads_by_location?.Sweden ?? 0;
+    const total = hotTopics.totals_by_location?.Sweden || hotTopics.total_ads;
+    panel.appendChild(el('p', 'network-panel-meta',
+        `${ads.toLocaleString()} of ${total.toLocaleString()} live Data/IT ads (${fmtHotShare(hotShare(topic))}).`));
+    const trend = hotTrend(topic.name);
     if (trend) {
-        const first = hotSeries(topic.name, location)?.[hotYears[0]];
-        summary += ` In ads published: ${first == null ? '–' : fmtHotShare(first)} in ${hotYears[0]}, ${fmtHotShare(trend.before)} in ${trend.from}, ${fmtHotShare(trend.now)} in ${trend.last}${trend.last === '2026' ? ' so far' : ''}.`;
+        const first = hotHistory.Sweden?.[topic.name]?.[hotYears[0]];
+        panel.appendChild(el('p', 'network-panel-meta',
+            `In published ads: ${first == null ? '–' : fmtHotShare(first)} in ${hotYears[0]}, ${fmtHotShare(trend.before)} in ${trend.previous}, ${fmtHotShare(trend.now)} in ${trend.last}${trend.last === '2026' ? ' so far' : ''}.`));
     }
-    panel.appendChild(el('p', 'network-panel-meta', summary));
 
-    if (topic.skills?.length) {
+    const shares = topic.skill_shares || Object.fromEntries((topic.skills || []).map(s => [s.name, s.percent]));
+    const skills = Object.entries(shares).filter(([, p]) => p > 0).sort((a, b) => b[1] - a[1]).slice(0, 6);
+    if (skills.length && ads >= 3) {
         panel.appendChild(el('p', 'network-panel-subhead', 'Skills these ads ask for'));
-        const row = el('div', 'hot-chips');
-        const categoryOf = typeof skillCategories === 'function' ? skillCategories() : {};
-        topic.skills.slice(0, 6).forEach(skill => {
-            const chip = el('span', 'co-occurrence-chip hot-chip');
+        const list = el('ol', 'network-steps');
+        const categoryOf = skillCategories();
+        skills.forEach(([skill, percent]) => {
+            const item = el('li', 'network-step-row');
+            const label = el('button', 'network-step-label');
+            label.type = 'button';
+            label.title = `Show ${skill} in the skill tree`;
             const dot = el('span', 'skill-swatch');
-            dot.style.backgroundColor = categoryColor(categoryOf[skill.name]);
-            chip.append(dot, document.createTextNode(`${skill.name} ${skill.percent}%`));
-            chip.title = `${skill.percent}% of the ${topic.name} ads (all of Sweden) mention ${skill.name}`;
-            row.appendChild(chip);
-        });
-        panel.appendChild(row);
-    }
-
-    if (topic.titles?.length) {
-        panel.appendChild(el('p', 'network-panel-subhead', 'Most common job titles'));
-        const row = el('div', 'hot-chips');
-        topic.titles.forEach(title => {
-            const chip = document.createElement('button');
-            chip.type = 'button';
-            chip.className = 'co-occurrence-chip hot-chip hot-chip-link';
-            chip.textContent = `${title.name} ${title.percent}%`;
-            chip.title = `See ${title.name} in Job titles`;
-            chip.addEventListener('click', () => {
-                if (typeof selectTitle === 'function') selectTitle(title.name, { scroll: true });
+            dot.style.backgroundColor = categoryColor(categoryOf[skill]);
+            label.append(dot, document.createTextNode(skill));
+            label.addEventListener('click', () => {
+                if (typeof selectNetworkSkill === 'function') selectNetworkSkill(skill);
+                document.getElementById('connections')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
+            const bar = el('span', 'network-step-bar');
+            const fill = el('span', 'network-step-fill');
+            fill.style.width = `${percent}%`;
+            fill.style.backgroundColor = categoryColor(categoryOf[skill]);
+            bar.appendChild(fill);
+            item.append(label, bar, el('span', 'network-step-value', `${percent}%`));
+            list.appendChild(item);
+        });
+        panel.appendChild(list);
+    }
+
+    if (topic.titles?.length && ads >= 3) {
+        panel.appendChild(el('p', 'network-panel-subhead', 'Job titles of these ads'));
+        const row = el('div', 'hot-chips');
+        topic.titles.slice(0, HOT_TITLES_SHOWN).forEach(title => {
+            const chip = el('button', 'co-occurrence-chip hot-chip-link', `${title.name} ${title.percent}%`);
+            chip.type = 'button';
+            chip.title = `Open ${title.name} in the Job titles tab`;
+            chip.addEventListener('click', () => selectTitle(title.name));
             row.appendChild(chip);
         });
         panel.appendChild(row);
     }
 
-    const samples = (topic.samples?.[location] || []).slice(0, HOT_SAMPLES_SHOWN);
-    panel.appendChild(el('p', 'network-panel-subhead', samples.length ? 'Latest openings' : 'No live openings here right now'));
+    const samples = (topic.samples?.Sweden || []).slice(0, HOT_SAMPLES_SHOWN);
+    panel.appendChild(el('p', 'network-panel-subhead', samples.length ? 'Latest openings' : 'No live openings right now'));
     if (samples.length) {
         const list = el('div', 'job-postings-list');
         samples.forEach(post => {
@@ -302,84 +329,18 @@ function renderHotPanel() {
     }
 }
 
-function renderHotChart() {
-    const card = document.getElementById('hotChartCard');
-    const canvas = document.getElementById('hotChart');
-    if (!card || !canvas || !window.Chart) return;
-    const history = hotHistory[selectedLocation] || hotHistory.Sweden;
-    if (!history || hotYears.length < 2) {
-        card.hidden = true;
-        return;
-    }
-    card.hidden = false;
-    const theme = chartTheme();
-    const datasets = hotTopics.topics.map(topic => {
-        const selected = topic.name === selectedHotTopic;
-        const color = hotColor(topic.name);
-        return {
-            label: topic.name,
-            data: hotYears.map(year => {
-                const v = history[topic.name]?.[year];
-                return v == null ? null : +v.toFixed(2);
-            }),
-            borderColor: selected ? color : color + '80',
-            backgroundColor: color,
-            borderWidth: selected ? 3 : 1.75,
-            pointRadius: 0,
-            pointHoverRadius: 5,
-            pointHoverBorderWidth: 2,
-            pointHoverBorderColor: theme.surface,
-            tension: 0.3,
-            cubicInterpolationMode: 'monotone',
-            order: selected ? 0 : 1   // drawn on top
-        };
-    });
-    if (hotChart) hotChart.destroy();
-    hotChart = new Chart(canvas.getContext('2d'), {
-        type: 'line',
-        data: { labels: hotYears, datasets },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            interaction: { mode: 'index', intersect: false },
-            onClick: (event, elements, chart) => {
-                const hit = chart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, false)[0];
-                if (hit) selectHotTopic(datasets[hit.datasetIndex].label);
-            },
-            plugins: {
-                legend: {
-                    position: 'top',
-                    align: 'start',
-                    onClick: (event, item) => selectHotTopic(item.text),
-                    // Keep the topics' own order; Chart.js would otherwise sort by draw order.
-                    labels: { sort: (a, b) => a.datasetIndex - b.datasetIndex, color: theme.ink, usePointStyle: true, pointStyle: 'circle', boxWidth: 8, boxHeight: 8, padding: 16, font: { size: 12.5, weight: '500' } }
-                },
-                tooltip: {
-                    ...tooltipStyle(theme),
-                    displayColors: true,
-                    usePointStyle: true,
-                    itemSort: (a, b) => b.raw - a.raw,
-                    callbacks: {
-                        title: (items) => items[0].label === '2026' ? '2026 (Jan–Oct)' : items[0].label,
-                        label: (item) => ` ${fmtHotShare(item.raw)}  ${item.dataset.label}`,
-                        labelColor: (item) => ({ borderColor: item.dataset.backgroundColor, backgroundColor: item.dataset.backgroundColor })
-                    }
-                }
-            },
-            scales: {
-                x: {
-                    grid: { display: false },
-                    border: { color: theme.axis },
-                    ticks: { color: theme.muted, maxRotation: 0, autoSkipPadding: 12 }
-                },
-                y: {
-                    beginAtZero: true,
-                    grid: { color: theme.grid },
-                    border: { display: false },
-                    ticks: { color: theme.muted, callback: (value) => `${value}%`, padding: 8 },
-                    title: { display: true, text: 'Share of Data/IT ads', color: theme.muted, font: { size: 12 } }
-                }
-            }
-        }
+function renderThemeHeatmap() {
+    const rows = hotTopics.topics
+        .filter(t => (t.ads_by_location?.Sweden ?? 0) >= MIN_TITLE_ADS)
+        .map(t => ({ name: t.name, skills: t.skill_shares || Object.fromEntries((t.skills || []).map(s => [s.name, s.percent])) }));
+    renderSkillHeatmap({
+        rows,
+        selected: selectedHotTopic,
+        onSelect: name => { selectedHotTopic = name; drawJobTitles(); },
+        corner: 'Theme ↓ · Skill →',
+        caption: 'Share of live Data/IT ads about each big theme that mention each skill',
+        legendLabel: '% of the theme\'s ads that mention the skill',
+        cellTitle: (row, skill, percent) => `${percent}% of ${row} ads mention ${skill}`,
+        rerender: renderThemeHeatmap
     });
 }

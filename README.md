@@ -65,13 +65,15 @@ flags per live Data/IT ad, plus its headline, employer, place, date and
 Platsbanken link so the matching jobs can be listed. Ad descriptions are not
 stored (see `backend/ad_skills.py`).
 
-## Hot topics
+## Big Themes
 
 Broad themes that aren't single tools: AI, GenAI & LLMs, machine learning,
 cybersecurity, data & analytics, cloud-native & DevOps, IoT & embedded,
 blockchain & Web3, and quantum computing. They are kept
 apart from the 20 tracked skills and don't count toward the CV score, but are
-measured the same way, as the share of Data/IT ads that mention them. The
+measured the same way, as the share of Data/IT ads that mention them. They
+appear as a "Big Themes" tab beside the job titles and as a "Big Themes" pill in
+the "Demand over time" chart. The
 topics and their Swedish and English search patterns are in
 `backend/hot_topics.py`. The weekly job writes `backend/data/hot_topics.json`
 (live shares, related skills and titles, latest ads) and adds a row per week to

@@ -90,11 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('../backend/data/skill_network.json').then(response => response.ok ? response.json() : null).catch(() => null),
         fetch('../backend/data/job_titles.json').then(response => response.ok ? response.json() : null).catch(() => null),
         fetch('../backend/data/historical_titles_monthly.csv').then(response => response.ok ? response.text() : '').catch(() => ''),
+        fetch('../backend/data/hot_topics.json').then(response => response.ok ? response.json() : null).catch(() => null),
+        fetch('../backend/data/historical_topics_monthly.csv').then(response => response.ok ? response.text() : '').catch(() => ''),
         // Canvas text doesn't re-render when a web font arrives, so wait for Inter first.
         document.fonts ? document.fonts.load('500 12px Inter').catch(() => null) : null
     ])
-        .then(([jsonData, courses, jobPostings, history, coOccurrence, historicalCsv, skillNetworkData, jobTitlesData, titlesCsv]) => {
+        .then(([jsonData, courses, jobPostings, history, coOccurrence, historicalCsv, skillNetworkData, jobTitlesData, titlesCsv, hotTopicsData, topicsCsv]) => {
             historicalYearly = aggregateHistoricalByYear(historicalCsv);
+            if (typeof initHotTopics === 'function') initHotTopics(hotTopicsData, topicsCsv);
             coursesData = courses;
             jobPostingsData = jobPostings.postings || {};
             coOccurrenceData = coOccurrence.co_occurrence || {};
@@ -127,7 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof renderJobTitles === 'function') renderJobTitles(jobTitlesData, titlesCsv);
             renderSkillNetwork(skillNetworkData);
             if (typeof initCvCheck === 'function') initCvCheck();
-            if (typeof initHotTopics === 'function') initHotTopics();
         })
         .catch(error => {
             console.error('Error loading dynamic metrics:', error);
@@ -254,7 +256,6 @@ function renderLocationFilter() {
             renderJobPostings();
             renderHistory();
             if (typeof renderCvResults === 'function') renderCvResults();
-            if (typeof renderHotTopics === 'function') renderHotTopics();
         });
         container.appendChild(button);
     });
@@ -586,7 +587,6 @@ function refreshTheme() {
     renderHistory();
     if (typeof drawJobTitles === 'function') drawJobTitles();
     if (typeof renderCvCheck === 'function') renderCvCheck();
-    if (typeof renderHotTopics === 'function') renderHotTopics();
     if (typeof drawNetworkTree === 'function' && typeof skillNetwork !== 'undefined' && skillNetwork) {
         drawNetworkTree();
         renderNetworkPanel();
@@ -736,18 +736,29 @@ function renderHistory() {
     renderHistoryCategoryFilter();
 
     const years = validHistoryYears(yearly);
-    const skills = (rawCategoryData[selectedHistoryCategory] || []).map(skill => skill.name);
     const palette = SERIES_COLORS[isDarkMode() ? 'dark' : 'light'];
     const theme = chartTheme();
+    // "Big Themes" (hot-topics.js) or one of the skill categories.
+    const series = isBigThemesSelected()
+        ? bigThemesHistory(selectedLocation).map(t => ({
+            label: t.name,
+            color: t.color,
+            values: years.map(year => t.years[year] == null ? null : +t.years[year].toFixed(3))
+        }))
+        : (rawCategoryData[selectedHistoryCategory] || []).map((skill, index) => ({
+            label: skill.name,
+            color: palette[index % palette.length],
+            values: years.map(year => {
+                const { total, skills: counts } = yearly[year];
+                return total ? +(100 * (counts[skill.name] || 0) / total).toFixed(3) : null;
+            })
+        }));
 
-    const datasets = skills.map((skill, index) => ({
-        label: skill,
-        data: years.map(year => {
-            const { total, skills: counts } = yearly[year];
-            return total ? +(100 * (counts[skill] || 0) / total).toFixed(3) : null;
-        }),
-        borderColor: palette[index % palette.length],
-        backgroundColor: palette[index % palette.length],
+    const datasets = series.map(({ label, color, values }) => ({
+        label,
+        data: values,
+        borderColor: color,
+        backgroundColor: color,
         borderWidth: 2,
         pointRadius: 0,
         pointHoverRadius: 5,
@@ -778,7 +789,8 @@ function renderHistory() {
                     itemSort: (a, b) => b.raw - a.raw,
                     callbacks: {
                         title: (items) => items[0].label === '2026' ? '2026 (Jan–Oct)' : items[0].label,
-                        label: (item) => ` ${item.raw.toFixed(2)}%  ${item.dataset.label}`
+                        label: (item) => ` ${item.raw.toFixed(2)}%  ${item.dataset.label}`,
+                        labelColor: (item) => ({ borderColor: item.dataset.backgroundColor, backgroundColor: item.dataset.backgroundColor })
                     }
                 }
             },
@@ -802,12 +814,20 @@ function renderHistory() {
     renderHistoryTable(years, datasets);
 }
 
+function isBigThemesSelected() {
+    return typeof BIG_THEMES !== 'undefined' && selectedHistoryCategory === BIG_THEMES &&
+        typeof hasBigThemesHistory === 'function' && hasBigThemesHistory(selectedLocation);
+}
+
 function renderHistoryCategoryFilter() {
     const container = document.getElementById('historyCategoryFilter');
     if (!container) return;
     container.innerHTML = '';
 
-    Object.keys(rawCategoryData).forEach(category => {
+    const categories = Object.keys(rawCategoryData);
+    if (typeof hasBigThemesHistory === 'function' && hasBigThemesHistory(selectedLocation)) categories.push(BIG_THEMES);
+    if (!categories.includes(selectedHistoryCategory)) selectedHistoryCategory = categories[0];
+    categories.forEach(category => {
         const button = document.createElement('button');
         button.type = 'button';
         button.className = 'location-pill' + (category === selectedHistoryCategory ? ' location-pill-active' : '');
@@ -833,7 +853,7 @@ function renderHistoryTable(years, datasets) {
     table.appendChild(caption);
 
     const headRow = table.createTHead().insertRow();
-    ['Skill', ...years].forEach(text => {
+    [isBigThemesSelected() ? 'Theme' : 'Skill', ...years].forEach(text => {
         const th = document.createElement('th');
         th.scope = 'col';
         th.textContent = text;
