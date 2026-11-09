@@ -374,6 +374,21 @@ h1 {
     .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+/* Wide screens: headline on the left, the four KPI tiles as a 2x2 block on the right. */
+@media (min-width: 1000px) {
+    .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+        gap: 3rem;
+        align-items: center;
+    }
+    .hero .kpis {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin: 0;
+    }
+    .hero .kpi { padding: 1.375rem 1.5rem; }
+}
+
 /* ---------- Sticky filter bar ---------- */
 
 .toolbar {
@@ -2109,4 +2124,31 @@ a.cv-job-title:hover { text-decoration-color: currentColor; }
 .cv-job-skill.is-missing {
     color: var(--bad);
     border: 1px dashed currentColor;
+}
+
+/* Fixed-height CV columns: content scrolls inside the cards instead of
+   stretching the layout as skills, titles and jobs are added. */
+@media (min-width: 901px) {
+    .cv-input-card,
+    .cv-result-card {
+        height: min(80vh, 780px);
+        box-sizing: border-box;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        scrollbar-gutter: stable;
+    }
+}
+
+.cv-jobs-list {
+    max-height: min(70vh, 640px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    padding-right: 0.25rem;
+}
+
+.cv-jobs-count {
+    margin: 0.75rem 0 0;
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
 }

@@ -93,9 +93,7 @@ let cvYearsOverride = null;
 let cvTitleGuess = null;
 let cvSourceName = '';
 let cvHasCv = false;
-let cvJobsShown = 0;
 let cvJobsFullOnly = false;
-const CV_JOBS_PAGE = 10;
 
 function initCvCheck() {
     const fileInput = document.getElementById('cvFile');
@@ -361,7 +359,6 @@ function analyseCv(text, sourceName) {
     cvTitleGuess = guessTitle(text);
     cvSourceName = sourceName;
     cvHasCv = true;
-    cvJobsShown = CV_JOBS_PAGE;
     const count = cvFoundSkills.size;
     setCvStatus(count
         ? `${sourceName}: found ${count} of the ${Object.keys(cvSkillMatchers).length} tracked skills. Untick any that are wrong, or tick ones it missed.`
@@ -820,7 +817,6 @@ function renderCvJobs() {
             button.disabled = fullOnly && !fullCount;
             button.addEventListener('click', () => {
                 cvJobsFullOnly = fullOnly;
-                cvJobsShown = CV_JOBS_PAGE;
                 renderCvJobs();
             });
             filter.appendChild(button);
@@ -829,7 +825,7 @@ function renderCvJobs() {
     card.appendChild(head);
 
     const list = el('ol', 'cv-jobs-list');
-    jobs.slice(0, cvJobsShown).forEach(job => {
+    jobs.forEach(job => {
         const item = el('li', 'cv-job');
         const title = job.id && cvAdData.url_base ? el('a', 'cv-job-title', job.headline || 'Untitled ad') : el('span', 'cv-job-title', job.headline || 'Untitled ad');
         if (title.tagName === 'A') {
@@ -850,13 +846,5 @@ function renderCvJobs() {
     });
     card.appendChild(list);
 
-    if (jobs.length > cvJobsShown) {
-        const more = el('button', 'location-pill show-more', `Show ${Math.min(CV_JOBS_PAGE, jobs.length - cvJobsShown)} more of ${jobs.length.toLocaleString('en-US')}`);
-        more.type = 'button';
-        more.addEventListener('click', () => {
-            cvJobsShown += CV_JOBS_PAGE;
-            renderCvJobs();
-        });
-        card.appendChild(more);
-    }
+    card.appendChild(el('p', 'cv-jobs-count', `${jobs.length.toLocaleString('en-US')} ads · scroll the list to see them all`));
 }
