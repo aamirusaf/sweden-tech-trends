@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-11-09 09:29:06 UTC",
+    "last_updated": "2026-11-09 11:08:16 UTC",
     "postings": {
         "Python": {
             "Sweden": [
@@ -1081,6 +1081,13 @@
             ],
             "Stockholm": [
                 {
+                    "headline": "Senior Fullstackutvecklare med fokus på Next.js",
+                    "employer": "Kumpan Sweden AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31704053",
+                    "published": "2026-11-09"
+                },
+                {
                     "headline": "Senior fullstackutvecklare",
                     "employer": "Deploja AB",
                     "location": "Stockholm",
@@ -1113,13 +1120,6 @@
                     "employer": "Adavo AB",
                     "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31684195",
-                    "published": "2026-11-04"
-                },
-                {
-                    "headline": "Testautomationsspecialist till konsultbolag i Stockholm",
-                    "employer": "InterAgent AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31682188",
                     "published": "2026-11-04"
                 }
             ],
@@ -1458,6 +1458,13 @@
                     "published": "2026-10-21"
                 },
                 {
+                    "headline": "Java-backendutvecklare",
+                    "employer": "Deploja AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703568",
+                    "published": "2026-11-09"
+                },
+                {
                     "headline": "Dataingenjör till Digitaliseringsmyndigheten",
                     "employer": "Post- och Telestyrelsen",
                     "location": "Stockholm",
@@ -1469,13 +1476,6 @@
                     "employer": "Försvarsmakten",
                     "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696119",
-                    "published": "2026-11-06"
-                },
-                {
-                    "headline": "DevOps-ingenjör till försvarsindustrin ",
-                    "employer": "AFRY AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695772",
                     "published": "2026-11-06"
                 }
             ],
@@ -1916,11 +1916,11 @@
                     "published": "2026-06-24"
                 },
                 {
-                    "headline": "Software Engineer",
-                    "employer": "IKEA IT Aktiebolag",
+                    "headline": "OT Security Engineer",
+                    "employer": "AFRY AB",
                     "location": "Malmö",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681093",
-                    "published": "2026-11-03"
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703132",
+                    "published": "2026-11-09"
                 }
             ]
         },
@@ -2597,6 +2597,13 @@
         "SQL": {
             "Sweden": [
                 {
+                    "headline": "Data Engineer till kund",
+                    "employer": "Black Sheep Recruitment AB",
+                    "location": "Mölndal",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703990",
+                    "published": "2026-11-09"
+                },
+                {
                     "headline": "Senior Data Engineer för datakatalog",
                     "employer": "Avaron AB",
                     "location": "Stockholm",
@@ -2629,13 +2636,6 @@
                     "employer": "Post- och Telestyrelsen",
                     "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696405",
-                    "published": "2026-11-06"
-                },
-                {
-                    "headline": "Seniora dataanalytiker sökes!",
-                    "employer": "Chas Visual Management AB",
-                    "location": "Nacka",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695076",
                     "published": "2026-11-06"
                 }
             ],
@@ -3004,6 +3004,20 @@
                     "published": "2026-10-20"
                 },
                 {
+                    "headline": "Senior Fullstackutvecklare med fokus på Next.js",
+                    "employer": "Kumpan Sweden AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31704053",
+                    "published": "2026-11-09"
+                },
+                {
+                    "headline": "Java-backendutvecklare",
+                    "employer": "Deploja AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703568",
+                    "published": "2026-11-09"
+                },
+                {
                     "headline": "Senior fullstackutvecklare",
                     "employer": "Deploja AB",
                     "location": "Stockholm",
@@ -3022,20 +3036,6 @@
                     "employer": "Deploja AB",
                     "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697074",
-                    "published": "2026-11-06"
-                },
-                {
-                    "headline": "Fullstackutvecklare",
-                    "employer": "Deploja AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697041",
-                    "published": "2026-11-06"
-                },
-                {
-                    "headline": "Fullstackutvecklare med frontendfokus",
-                    "employer": "Knightec Group Hardware and Design AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694307",
                     "published": "2026-11-06"
                 }
             ],
@@ -3131,6 +3131,20 @@
         "Microsoft 365": {
             "Sweden": [
                 {
+                    "headline": "IT-support med fokus på leverantörssupport och systemförvaltning",
+                    "employer": "Quattro Bemanning & Rekrytering AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703432",
+                    "published": "2026-11-09"
+                },
+                {
+                    "headline": "Senior Azure-specialist",
+                    "employer": "Recruitive AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703211",
+                    "published": "2026-11-09"
+                },
+                {
                     "headline": "Supporttekniker 1st Line i Östersund",
                     "employer": "Barona Professionals AB",
                     "location": "Östersund",
@@ -3157,23 +3171,23 @@
                     "location": "Linköping",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699199",
                     "published": "2026-11-06"
-                },
-                {
-                    "headline": "IT-Tekniker till Dialect i Avesta",
-                    "employer": "Louwin AB",
-                    "location": "Avesta",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698951",
-                    "published": "2026-11-06"
-                },
-                {
-                    "headline": "Global IT- supporttekniker",
-                    "employer": "Personal Roslagen AB",
-                    "location": "Norrtälje",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698582",
-                    "published": "2026-11-06"
                 }
             ],
             "Stockholm": [
+                {
+                    "headline": "IT-support med fokus på leverantörssupport och systemförvaltning",
+                    "employer": "Quattro Bemanning & Rekrytering AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703432",
+                    "published": "2026-11-09"
+                },
+                {
+                    "headline": "Senior Azure-specialist",
+                    "employer": "Recruitive AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703211",
+                    "published": "2026-11-09"
+                },
                 {
                     "headline": "IT-tekniker till Sveriges Lärare",
                     "employer": "Bravura Sverige AB",
@@ -3201,20 +3215,6 @@
                     "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696396",
                     "published": "2026-11-06"
-                },
-                {
-                    "headline": "Systemförvaltare med projektledande ansvar till Feelgood",
-                    "employer": "Bravura Sverige AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31689555",
-                    "published": "2026-11-05"
-                },
-                {
-                    "headline": "Domänarkitekt med huvudinriktning IT-arbetsplats och infrastruktur",
-                    "employer": "Sveriges Riksbank",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31678333",
-                    "published": "2026-11-03"
                 }
             ],
             "Göteborg": [
@@ -3309,6 +3309,13 @@
         "Active Directory": {
             "Sweden": [
                 {
+                    "headline": "Senior Azure-specialist",
+                    "employer": "Recruitive AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703211",
+                    "published": "2026-11-09"
+                },
+                {
                     "headline": "Linux Platform Engineer",
                     "employer": "Eccera Professionals AB",
                     "location": "Linköping",
@@ -3342,16 +3349,16 @@
                     "location": "Linköping",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31699199",
                     "published": "2026-11-06"
-                },
-                {
-                    "headline": "IT-Tekniker till Dialect i Avesta",
-                    "employer": "Louwin AB",
-                    "location": "Avesta",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698951",
-                    "published": "2026-11-06"
                 }
             ],
             "Stockholm": [
+                {
+                    "headline": "Senior Azure-specialist",
+                    "employer": "Recruitive AB",
+                    "location": "Stockholm",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703211",
+                    "published": "2026-11-09"
+                },
                 {
                     "headline": "Systemintegratör inom molnplattformar och infrastruktur",
                     "employer": "Försvarets Radioanstalt",
@@ -3385,13 +3392,6 @@
                     "employer": "Iver Accelerate AB",
                     "location": "Stockholm",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31680699",
-                    "published": "2026-11-03"
-                },
-                {
-                    "headline": "IAM-arkitekt till Axfood IT i Stockholm",
-                    "employer": "TNG Group AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31679250",
                     "published": "2026-11-03"
                 }
             ],
