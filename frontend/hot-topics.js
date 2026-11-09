@@ -114,8 +114,18 @@ function hotTrend(name, location = selectedLocation) {
     return { from, last, before: series[from], now: series[last], change: series[last] - series[from] };
 }
 
+// Share of live Data/IT ads (%), from the counts so small topics don't round to 0.
 function hotShare(topic, location = selectedLocation) {
+    const ads = topic.ads_by_location?.[location];
+    const total = hotTopics?.totals_by_location?.[location];
+    if (ads != null && total) return 100 * ads / total;
     return topic.percent_by_location?.[location] ?? topic.percent_by_location?.Sweden ?? 0;
+}
+
+function fmtHotShare(share) {
+    if (share >= 10) return `${Math.round(share)}%`;
+    if (share >= 1 || share === 0) return `${share.toFixed(1)}%`;
+    return `${share.toFixed(2)}%`;
 }
 
 function renderHotTopics() {
@@ -149,7 +159,7 @@ function renderHotGrid() {
 
         const name = el('span', 'hot-tile-name', topic.name);
         const share = hotShare(topic, location);
-        const value = el('span', 'hot-tile-value', `${share >= 10 ? Math.round(share) : share.toFixed(1)}%`);
+        const value = el('span', 'hot-tile-value', fmtHotShare(share));
         const ads = topic.ads_by_location?.[location] ?? 0;
         const sub = el('span', 'hot-tile-sub', `of live Data/IT ads · ${ads.toLocaleString()} ads`);
 
@@ -162,14 +172,14 @@ function renderHotGrid() {
             badge.textContent = rounded === 0
                 ? `±0 pts since ${trend.from}`
                 : `${rounded > 0 ? '▲' : '▼'} ${Math.abs(rounded).toFixed(1)} pts since ${trend.from}`;
-            badge.title = `${trend.before.toFixed(1)}% of Data/IT ads published in ${trend.from}, ${trend.now.toFixed(1)}% in ${trend.last}${trend.last === '2026' ? ' (Jan–Oct)' : ''}`;
+            badge.title = `${fmtHotShare(trend.before)} of Data/IT ads published in ${trend.from}, ${fmtHotShare(trend.now)} in ${trend.last}${trend.last === '2026' ? ' (Jan–Oct)' : ''}`;
         } else {
             badge.textContent = hotYears.length ? '–' : '';
         }
         foot.append(badge, hotSparkline(topic.name, location));
 
         button.append(name, value, sub, foot);
-        button.setAttribute('aria-label', `${topic.name}: ${share}% of ${total.toLocaleString()} live Data/IT ads${trend ? `, ${trend.change >= 0 ? 'up' : 'down'} ${Math.abs(trend.change).toFixed(1)} points since ${trend.from}` : ''}`);
+        button.setAttribute('aria-label', `${topic.name}: ${fmtHotShare(share)} of ${total.toLocaleString()} live Data/IT ads${trend ? `, ${trend.change >= 0 ? 'up' : 'down'} ${Math.abs(trend.change).toFixed(1)} points since ${trend.from}` : ''}`);
         button.addEventListener('click', () => selectHotTopic(topic.name));
         grid.appendChild(button);
     });
@@ -233,10 +243,10 @@ function renderHotPanel() {
     const ads = topic.ads_by_location?.[location] ?? 0;
     const total = hotTopics.totals_by_location?.[location] ?? hotTopics.total_ads;
     const trend = hotTrend(topic.name, location);
-    let summary = `${ads.toLocaleString()} of ${total.toLocaleString()} live Data/IT ads in ${locationName} (${hotShare(topic, location)}%).`;
+    let summary = `${ads.toLocaleString()} of ${total.toLocaleString()} live Data/IT ads in ${locationName} (${fmtHotShare(hotShare(topic, location))}).`;
     if (trend) {
         const first = hotSeries(topic.name, location)?.[hotYears[0]];
-        summary += ` In ads published: ${first == null ? '–' : first.toFixed(1) + '%'} in ${hotYears[0]}, ${trend.before.toFixed(1)}% in ${trend.from}, ${trend.now.toFixed(1)}% in ${trend.last}${trend.last === '2026' ? ' so far' : ''}.`;
+        summary += ` In ads published: ${first == null ? '–' : fmtHotShare(first)} in ${hotYears[0]}, ${fmtHotShare(trend.before)} in ${trend.from}, ${fmtHotShare(trend.now)} in ${trend.last}${trend.last === '2026' ? ' so far' : ''}.`;
     }
     panel.appendChild(el('p', 'network-panel-meta', summary));
 
@@ -351,7 +361,7 @@ function renderHotChart() {
                     itemSort: (a, b) => b.raw - a.raw,
                     callbacks: {
                         title: (items) => items[0].label === '2026' ? '2026 (Jan–Oct)' : items[0].label,
-                        label: (item) => ` ${item.raw.toFixed(1)}%  ${item.dataset.label}`,
+                        label: (item) => ` ${fmtHotShare(item.raw)}  ${item.dataset.label}`,
                         labelColor: (item) => ({ borderColor: item.dataset.backgroundColor, backgroundColor: item.dataset.backgroundColor })
                     }
                 }
