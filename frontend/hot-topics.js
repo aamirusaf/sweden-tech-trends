@@ -161,7 +161,7 @@ function renderHotGrid() {
         const share = hotShare(topic, location);
         const value = el('span', 'hot-tile-value', fmtHotShare(share));
         const ads = topic.ads_by_location?.[location] ?? 0;
-        const sub = el('span', 'hot-tile-sub', `of live Data/IT ads · ${ads.toLocaleString()} ads`);
+        const sub = el('span', 'hot-tile-sub', `of live Data/IT ads · ${ads.toLocaleString()} ad${ads === 1 ? "" : "s"}`);
 
         const foot = el('span', 'hot-tile-foot');
         const trend = hotTrend(topic.name, location);
