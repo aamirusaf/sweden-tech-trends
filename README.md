@@ -65,6 +65,20 @@ flags per live Data/IT ad, plus its headline, employer, place, date and
 Platsbanken link so the matching jobs can be listed. Ad descriptions are not
 stored (see `backend/ad_skills.py`).
 
+## Hot topics
+
+Broad themes that aren't single tools: AI, GenAI & LLMs, machine learning,
+cybersecurity, data & analytics, and cloud-native & DevOps. They are kept
+apart from the 20 tracked skills and don't count toward the CV score, but are
+measured the same way, as the share of Data/IT ads that mention them. The
+topics and their Swedish and English search patterns are in
+`backend/hot_topics.py`. The weekly job writes `backend/data/hot_topics.json`
+(live shares, related skills and titles, latest ads) and adds a row per week to
+`backend/data/hot_topics_history.csv`. The historical backfill writes
+`backend/data/historical_topics_monthly.csv` (monthly Data/IT ads per topic
+since 2006). Both jobs print the terms each topic matched, so the patterns can
+be checked against real ads in the Actions log.
+
 The data is refreshed by the **Update job market data** GitHub Action
 (`.github/workflows/update-data.yml`). It runs every Monday at 05:00 UTC (and can
 be run by hand from the Actions tab), runs `backend/main.py`, and commits the

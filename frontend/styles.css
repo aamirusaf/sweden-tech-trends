@@ -2152,3 +2152,153 @@ a.cv-job-title:hover { text-decoration-color: currentColor; }
     font-size: var(--fs-sm);
     color: var(--text-muted);
 }
+
+/* ---------- Hot topics ---------- */
+
+.hot-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .hot-layout { grid-template-columns: minmax(0, 1fr); }
+}
+
+.hot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 13.5rem), 1fr));
+    gap: 0.75rem;
+}
+
+@media (max-width: 600px) {
+    .hot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; }
+    .hot-tile { padding: 0.875rem 0.75rem 0.75rem; }
+    .hot-tile-value { font-size: var(--fs-lg); }
+    .hot-tile-foot { flex-direction: column-reverse; align-items: stretch; gap: 0.25rem; }
+    .hot-spark { width: 100%; max-width: none; }
+}
+
+.hot-tile {
+    --hot-color: var(--title);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.125rem;
+    min-width: 0;
+    padding: 1rem 1rem 0.875rem;
+    font: inherit;
+    color: var(--text-primary);
+    text-align: left;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.hot-tile::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background-color: var(--hot-color);
+}
+
+.hot-tile:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-md);
+}
+
+.hot-tile.is-selected {
+    border-color: var(--hot-color);
+    box-shadow: 0 0 0 1px var(--hot-color), var(--shadow-md);
+}
+
+.hot-tile-name {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.hot-tile-value {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.2;
+}
+
+.hot-tile-sub {
+    font-size: var(--fs-xs);
+    color: var(--text-muted);
+}
+
+.hot-tile-foot {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.hot-spark {
+    width: 120px;
+    max-width: 55%;
+    height: 32px;
+    overflow: visible;
+    flex-shrink: 1;
+}
+
+.hot-spark-line {
+    fill: none;
+    stroke: var(--hot-color);
+    stroke-width: 1.75;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.hot-spark-area {
+    fill: var(--hot-color);
+    opacity: 0.14;
+}
+
+.hot-spark-dot {
+    fill: var(--hot-color);
+    stroke: var(--surface);
+    stroke-width: 1.5;
+}
+
+.hot-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin-bottom: 1rem;
+}
+
+.hot-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.hot-chip-link {
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.hot-chip-link:hover {
+    color: var(--text-primary);
+    background-color: var(--border-strong);
+}
+
+.hot-chart-card .history-chart-wrapper {
+    margin-top: 0.5rem;
+}

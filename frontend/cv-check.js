@@ -59,7 +59,7 @@ const CV_OTHER_SKILLS = [
     ['Ansible', /\bansible\b/i], ['Jenkins', /\bjenkins\b/i], ['GitHub Actions', /\bgithub actions\b/i],
     ['Azure DevOps', /\bazure devops\b/i], ['Helm', /\bhelm\b/i], ['Prometheus', /\bprometheus\b/i], ['Grafana', /\bgrafana\b/i],
     ['PyTorch', /\bpytorch\b/i], ['TensorFlow', /\btensorflow\b/i], ['scikit-learn', /\bscikit[\s-]?learn\b|\bsklearn\b/i],
-    ['Pandas', /\bpandas\b/i], ['LLMs', /\bLLMs?\b|\blarge language models?\b/i],
+    ['Pandas', /\bpandas\b/i],
     ['SAP', /\bSAP\b/], ['Salesforce', /\bsalesforce\b/i], ['ServiceNow', /\bservicenow\b/i], ['Figma', /\bfigma\b/i]
 ];
 
@@ -94,6 +94,8 @@ let cvTitleGuess = null;
 let cvSourceName = '';
 let cvHasCv = false;
 let cvJobsFullOnly = false;
+let cvHotTopics = [];       // hot topics (hot-topics.js) the CV mentions; shown, not scored
+let cvText = '';
 
 function initCvCheck() {
     const fileInput = document.getElementById('cvFile');
@@ -354,6 +356,7 @@ function analyseCv(text, sourceName) {
     cvFoundSkills = findTrackedSkills(text);
     cvChosenSkills = new Set(cvFoundSkills);
     cvOtherSkills = findOtherSkills(text, cvFoundSkills);
+    cvText = text;
     cvExperience = estimateExperience(text);
     cvYearsOverride = null;
     cvTitleGuess = guessTitle(text);
@@ -534,6 +537,26 @@ function renderCvFound() {
             other.appendChild(chip);
         });
         container.appendChild(other);
+    }
+
+    cvHotTopics = typeof hotTopicsInText === 'function' ? hotTopicsInText(cvText) : [];
+    if (cvHotTopics.length) {
+        const hotHead = document.createElement('p');
+        hotHead.className = 'skill-category-label';
+        hotHead.textContent = 'Hot topics on your CV (not scored)';
+        container.appendChild(hotHead);
+        const hot = document.createElement('div');
+        hot.className = 'cv-other';
+        cvHotTopics.forEach(name => {
+            const chip = document.createElement('button');
+            chip.type = 'button';
+            chip.className = 'co-occurrence-chip hot-chip-link';
+            chip.textContent = name;
+            chip.title = `See ${name} in Hot topics`;
+            chip.addEventListener('click', () => selectHotTopic(name, { scroll: true }));
+            hot.appendChild(chip);
+        });
+        container.appendChild(hot);
     }
 
     const expHead = document.createElement('p');

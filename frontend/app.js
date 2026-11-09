@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof renderJobTitles === 'function') renderJobTitles(jobTitlesData, titlesCsv);
             renderSkillNetwork(skillNetworkData);
             if (typeof initCvCheck === 'function') initCvCheck();
+            if (typeof initHotTopics === 'function') initHotTopics();
         })
         .catch(error => {
             console.error('Error loading dynamic metrics:', error);
@@ -253,6 +254,7 @@ function renderLocationFilter() {
             renderJobPostings();
             renderHistory();
             if (typeof renderCvResults === 'function') renderCvResults();
+            if (typeof renderHotTopics === 'function') renderHotTopics();
         });
         container.appendChild(button);
     });
@@ -584,6 +586,7 @@ function refreshTheme() {
     renderHistory();
     if (typeof drawJobTitles === 'function') drawJobTitles();
     if (typeof renderCvCheck === 'function') renderCvCheck();
+    if (typeof renderHotTopics === 'function') renderHotTopics();
     if (typeof drawNetworkTree === 'function' && typeof skillNetwork !== 'undefined' && skillNetwork) {
         drawNetworkTree();
         renderNetworkPanel();

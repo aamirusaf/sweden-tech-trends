@@ -23,6 +23,12 @@ had a headline in each job-title family (backend/job_titles.py), nationwide. Mer
 those with:
 
     python backend/backfill_historical.py merge-titles partial/titles/*.csv --out backend/data/historical_titles_monthly.csv
+
+It also writes partial/topics/<name>.csv: how many Data/IT ads each month mention each
+hot topic (backend/hot_topics.py: AI, LLMs, cybersecurity...), nationwide and per city.
+Merge those with:
+
+    python backend/backfill_historical.py merge-topics partial/topics/*.csv --out backend/data/historical_topics_monthly.csv
 """
 import argparse
 import csv
@@ -41,6 +47,7 @@ from collections import Counter
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from main import TECH_STACKS, LOCATIONS, build_skill_matcher  # noqa: E402  (keep the skill list in one place)
 from job_titles import classify_title, FAMILY_NAMES  # noqa: E402
+import hot_topics  # noqa: E402
 
 BASE_URL = "https://data.jobtechdev.se/annonser/historiska/"
 
@@ -59,6 +66,9 @@ OUTPUT_FIELDS = ["month", "category", "skill", "location", "ads", "total_ads", "
 # it_ads: Data/IT ads published that month whose headline is in the title family;
 # it_total_ads: all Data/IT ads published that month. Nationwide only.
 TITLE_FIELDS = ["month", "title", "it_ads", "it_total_ads"]
+# it_ads: Data/IT ads published that month that mention the hot topic; it_total_ads: all
+# Data/IT ads published that month in that location.
+TOPIC_FIELDS = ["month", "topic", "location", "it_ads", "it_total_ads"]
 
 DATA_IT_FIELD = "apaJ_2ja_LuF"
 
@@ -218,6 +228,8 @@ def count_file(zip_path):
     it_mentions = Counter()
     it_totals = Counter()
     title_counts = Counter()  # (month, title family) -> Data/IT ads, nationwide
+    topic_counts = Counter()  # (month, hot topic, location) -> Data/IT ads
+    topic_terms = Counter()   # (hot topic, matched term) -> mentions, for the log
     seen_ids = set()
     stats = Counter()
 
@@ -268,10 +280,20 @@ def count_file(zip_path):
                     if is_it:
                         it_mentions[(month, skill, location)] += 1
 
+        if is_it and text:
+            for topic in hot_topics.topics_in(text):
+                for location in locations:
+                    topic_counts[(month, topic, location)] += 1
+            # Matched terms from every 10th Data/IT ad are enough to check the patterns.
+            if stats["data_it"] % 10 == 0:
+                hot_topics.matched_terms(text, topic_terms)
+
         if stats["lines"] % 200000 == 0:
             print(f"  {stats['lines']:,} lines...", flush=True)
 
     print("Stats:", dict(stats), flush=True)
+    print("Terms matched per hot topic (every 10th Data/IT ad):", flush=True)
+    hot_topics.print_matched_terms(topic_terms)
     # Unparseable lines count against the file: a format this script can't read must
     # fail the job, not quietly produce an almost-empty year.
     ads = max(stats["lines"] - stats["duplicates"], 1)
@@ -285,7 +307,7 @@ def count_file(zip_path):
     if stats["data_it"] < 0.01 * stats["counted"]:
         print(f"⚠️ Only {stats['data_it']} of {stats['counted']} ads could be placed in Data/IT; "
               "this file mostly has no occupation data.", flush=True)
-    return mentions, totals, it_mentions, it_totals, title_counts
+    return mentions, totals, it_mentions, it_totals, title_counts, topic_counts
 
 
 def rows_from_counts(mentions, totals, it_mentions, it_totals):
@@ -323,8 +345,28 @@ def write_title_rows(path, rows):
         writer.writerows(rows)
 
 
-def default_titles_out(out):
-    return os.path.join(os.path.dirname(os.path.abspath(out)), "titles", os.path.basename(out))
+def default_titles_out(out, kind="titles"):
+    return os.path.join(os.path.dirname(os.path.abspath(out)), kind, os.path.basename(out))
+
+
+def topic_rows_from_counts(topic_counts, it_totals):
+    return [
+        {"month": month, "topic": topic, "location": location,
+         "it_ads": topic_counts.get((month, topic, location), 0), "it_total_ads": total}
+        for (month, location), total in it_totals.items()
+        for topic in hot_topics.TOPIC_NAMES
+    ]
+
+
+def write_topic_rows(path, rows):
+    order = {topic: i for i, topic in enumerate(hot_topics.TOPIC_NAMES)}
+    location_order = {location: i for i, location in enumerate(LOCATIONS)}
+    rows.sort(key=lambda r: (r["month"], order[r["topic"]], location_order.get(r["location"], 99)))
+    os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=TOPIC_FIELDS, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
 
 
 def write_rows(path, rows):
@@ -345,7 +387,7 @@ def cmd_count(args):
     else:
         with tempfile.TemporaryDirectory() as tmp:
             counts = count_file(download(name, tmp))
-    mentions, totals, it_mentions, it_totals, title_counts = counts
+    mentions, totals, it_mentions, it_totals, title_counts, topic_counts = counts
     rows = rows_from_counts(mentions, totals, it_mentions, it_totals)
     write_rows(args.out, rows)
     print(f"Wrote {len(rows)} rows for {name} to {args.out}")
@@ -353,6 +395,10 @@ def cmd_count(args):
     title_rows = title_rows_from_counts(title_counts, it_totals)
     write_title_rows(titles_out, title_rows)
     print(f"Wrote {len(title_rows)} job-title rows for {name} to {titles_out}")
+    topics_out = args.topics_out or default_titles_out(args.out, "topics")
+    topic_rows = topic_rows_from_counts(topic_counts, it_totals)
+    write_topic_rows(topics_out, topic_rows)
+    print(f"Wrote {len(topic_rows)} hot-topic rows for {name} to {topics_out}")
 
 
 # --- merge ---------------------------------------------------------------------
@@ -416,6 +462,38 @@ def cmd_merge_titles(args):
     print(f"Wrote {len(rows)} job-title rows covering {months[0] if months else '-'} to {months[-1] if months else '-'} to {args.out}")
 
 
+def cmd_merge_topics(args):
+    """Same as merge, for the hot-topic partials: counts for a month found in two files
+    are summed; months already in the output that no partial covers are kept."""
+    ads = Counter()
+    month_totals = Counter()   # (month, location) -> Data/IT ads
+    seen = set()
+    for path in args.partials:
+        with open(path, encoding="utf-8", newline="") as f:
+            for row in csv.DictReader(f):
+                ads[(row["month"], row["topic"], row["location"])] += int(row.get("it_ads") or 0)
+                # it_total_ads repeats on every topic row; add it once per month, location and file
+                key = (path, row["month"], row["location"])
+                if key not in seen:
+                    seen.add(key)
+                    month_totals[(row["month"], row["location"])] += int(row.get("it_total_ads") or 0)
+    rows = [
+        {"month": month, "topic": topic, "location": location,
+         "it_ads": ads.get((month, topic, location), 0), "it_total_ads": total}
+        for (month, location), total in month_totals.items()
+        for topic in hot_topics.TOPIC_NAMES
+    ]
+    new_months = {month for month, _ in month_totals}
+    if os.path.exists(args.out):
+        with open(args.out, encoding="utf-8", newline="") as f:
+            rows.extend(r for r in csv.DictReader(f)
+                        if r["month"] not in new_months and r["topic"] in hot_topics.TOPIC_NAMES
+                        and r["location"] in LOCATIONS and valid_month(r["month"]))
+    write_topic_rows(args.out, rows)
+    months = sorted({r["month"] for r in rows})
+    print(f"Wrote {len(rows)} hot-topic rows covering {months[0] if months else '-'} to {months[-1] if months else '-'} to {args.out}")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="command", required=True)
@@ -425,6 +503,7 @@ def main():
     count.add_argument("--out", required=True)
     count.add_argument("--zip", help="Use an already downloaded .jsonl.zip instead of downloading")
     count.add_argument("--titles-out", help="Where to write the job-title counts (default: titles/<out name> next to --out)")
+    count.add_argument("--topics-out", help="Where to write the hot-topic counts (default: topics/<out name> next to --out)")
     count.set_defaults(func=cmd_count)
 
     merge = sub.add_parser("merge", help="Merge partial CSVs into one file")
@@ -436,6 +515,11 @@ def main():
     merge_titles.add_argument("partials", nargs="+")
     merge_titles.add_argument("--out", required=True)
     merge_titles.set_defaults(func=cmd_merge_titles)
+
+    merge_topics = sub.add_parser("merge-topics", help="Merge hot-topic partial CSVs into one file")
+    merge_topics.add_argument("partials", nargs="+")
+    merge_topics.add_argument("--out", required=True)
+    merge_topics.set_defaults(func=cmd_merge_topics)
 
     args = parser.parse_args()
     args.func(args)
