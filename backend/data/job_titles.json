@@ -313,8 +313,8 @@
         {
             "name": "Fullstack Developer",
             "examples": "Fullstack developer",
-            "ads": 76,
-            "percent": 2.8,
+            "ads": 75,
+            "percent": 2.7,
             "skills": {
                 "Python": 28,
                 "Java": 34,
@@ -333,7 +333,7 @@
                 "Git": 36,
                 "SQL": 32,
                 ".NET": 36,
-                "React": 71,
+                "React": 72,
                 "Microsoft 365": 0,
                 "Active Directory": 0
             }

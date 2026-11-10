@@ -829,7 +829,7 @@
             "steps": [
                 {
                     "skill": "Azure",
-                    "coverage": 32
+                    "coverage": 33
                 },
                 {
                     "skill": "C#",
