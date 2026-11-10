@@ -93,7 +93,7 @@ let cvYearsOverride = null;
 let cvTitleGuess = null;
 let cvSourceName = '';
 let cvHasCv = false;
-let cvJobsFullOnly = false;
+let cvJobsFilter = 'all';   // jobs list tab: all | full | stretch
 let cvHotTopics = [];       // Big Themes (hot-topics.js) the CV mentions; shown, not scored
 let cvText = '';
 
@@ -780,17 +780,43 @@ function appendCvPlanButton(container) {
 
 // ---------- The matching ads themselves ----------
 
-// Matching ads for the chosen skills and location, best fit first: ads you fully
-// match, then those sharing the most skills with you, then the newest.
+const CV_STRETCH_MISSING = 2;    // "Stretch" tab: ads that ask for two skills you don't list
+const CV_SKILL_WEIGHT = 0.75;    // match % = 75% skills + 25% experience
+const CV_SENIOR_YEARS = 5;       // a senior or lead ad counts as a full fit from here
+const CV_EXPERIENCED_YEARS = 2;  // an ad that asks for experience counts as a full fit from here
+
+// How well the CV's years fit what an ad says about level. Ads give no year counts,
+// only flags: ad[3] = 0 none, 1 junior/graduate, 2 senior/lead; ad[4] = asks for
+// earlier experience. Returns null when the CV gives no years to compare.
+function cvExperienceFit(ad, years) {
+    if (years === null || years === undefined) return null;
+    if (ad[3] === 2) {
+        const fit = Math.min(1, years / CV_SENIOR_YEARS);
+        return { fit, label: fit >= 1 ? 'experience fits' : 'senior role' };
+    }
+    if (ad[3] === 1) return { fit: 1, label: 'junior role, experience fits' };
+    if (ad[4]) {
+        const fit = Math.min(1, 0.5 + years / (2 * CV_EXPERIENCED_YEARS));
+        return { fit, label: fit >= 1 ? 'experience fits' : 'asks for experience' };
+    }
+    return { fit: 1, label: 'no level asked' };
+}
+
+// Every ad for the chosen skills and location that misses at most two tracked
+// skills, with its match %: the share of the ad's tracked skills the CV has,
+// blended with the experience fit when the CV gives years.
 function cvMatchingJobs() {
     if (!cvAdData || !Array.isArray(cvAdData.listings)) return [];
     const mask = cvMask(cvChosenSkills);
     if (!mask) return [];
+    const years = cvYears();
     const cityIndex = selectedLocation === 'Sweden' ? null : cvAdData.locations.indexOf(selectedLocation);
     const jobs = [];
     cvAdData.ads.forEach((ad, i) => {
         if (cityIndex !== null && ad[2] !== cityIndex) return;
-        if (!ad[0] || !isCvMatch(ad[0], mask)) return;
+        if (!ad[0] || !(ad[0] & mask)) return;
+        const missingCount = popcount(ad[0] & ~mask);
+        if (missingCount > CV_STRETCH_MISSING) return;
         const listing = cvAdData.listings[i];
         if (!listing) return;
         const have = [], missing = [];
@@ -798,13 +824,36 @@ function cvMatchingJobs() {
             if (!(ad[0] & (1 << bit))) return;
             (mask & (1 << bit) ? have : missing).push(name);
         });
+        const skillFit = have.length / (have.length + missing.length);
+        const experience = cvExperienceFit(ad, years);
+        const match = experience
+            ? CV_SKILL_WEIGHT * skillFit + (1 - CV_SKILL_WEIGHT) * experience.fit
+            : skillFit;
         jobs.push({
             id: listing[0], headline: listing[1], employer: listing[2], place: listing[3], published: listing[4],
-            have, missing, full: missing.length === 0
+            have, missing, experience, percent: Math.round(100 * match),
+            full: missing.length === 0, stretch: missing.length === CV_STRETCH_MISSING
         });
     });
-    return jobs.sort((a, b) =>
-        (b.full - a.full) || (b.have.length - a.have.length) || b.published.localeCompare(a.published));
+    // Ties: ads naming more of your skills first (stronger evidence), then the newest.
+    return jobs.sort((a, b) => b.percent - a.percent || b.have.length - a.have.length || b.published.localeCompare(a.published));
+}
+
+// The one skill that would turn the most of these jobs into full matches, and what
+// it does to the overall score.
+function cvJobsNextSkill(jobs) {
+    const gained = {};
+    jobs.forEach(job => {
+        if (job.missing.length === 1) gained[job.missing[0]] = (gained[job.missing[0]] || 0) + 1;
+    });
+    const best = Object.entries(gained).sort((a, b) => b[1] - a[1])[0];
+    if (!best) return null;
+    const [name, count] = best;
+    const mask = cvMask(cvChosenSkills);
+    const ads = cvAdsForLocation();
+    const before = scoreCv(mask, ads);
+    const after = scoreCv(mask | (1 << cvAdData.skills.indexOf(name)), ads);
+    return { name, count, before: before.percent, after: after.percent };
 }
 
 function formatJobDate(iso) {
@@ -813,39 +862,89 @@ function formatJobDate(iso) {
     return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
 }
 
+function matchLevel(percent) {
+    if (percent >= 80) return 'is-high';
+    if (percent >= 60) return 'is-mid';
+    return 'is-low';
+}
+
+function renderCvNextSkill(card, jobs) {
+    const next = cvJobsNextSkill(jobs);
+    if (!next) return;
+    const box = el('div', 'cv-next-skill');
+    const text = el('p', 'cv-next-skill-text');
+    const plural = next.count === 1 ? 'job becomes a full match' : 'jobs become full matches';
+    text.append(
+        el('span', 'cv-next-skill-label', 'Learn this next'),
+        document.createTextNode(' Add '),
+        el('strong', '', next.name),
+        document.createTextNode(` to your CV and ${next.count.toLocaleString('en-US')} of these ${plural}. `
+            + `Your overall score goes from ${fmtPercent(next.before)} to ${fmtPercent(next.after)}.`)
+    );
+    box.appendChild(text);
+    const courses = (typeof coursesData !== 'undefined' && coursesData[next.name]) || [];
+    if (courses.length) {
+        const links = el('div', 'skill-gap-courses');
+        courses.forEach(course => {
+            const link = el('a', '', `${course.title} (${course.platform})`);
+            link.href = course.url;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            links.appendChild(link);
+        });
+        box.appendChild(links);
+    }
+    card.appendChild(box);
+}
+
 function renderCvJobs() {
     const card = document.getElementById('cvJobs');
     if (!card) return;
-    const all = cvHasCv ? cvMatchingJobs() : [];
-    card.hidden = !all.length;
-    if (!all.length) return;
+    const every = cvHasCv ? cvMatchingJobs() : [];
+    const matches = every.filter(job => !job.stretch);
+    card.hidden = !every.length;
+    if (!every.length) return;
     card.innerHTML = '';
 
-    const fullCount = all.filter(job => job.full).length;
-    if (!fullCount) cvJobsFullOnly = false;
-    const jobs = cvJobsFullOnly ? all.filter(job => job.full) : all;
+    const counts = {
+        all: matches.length,
+        full: matches.filter(job => job.full).length,
+        stretch: every.length - matches.length
+    };
+    if (!counts[cvJobsFilter]) cvJobsFilter = counts.all ? 'all' : 'stretch';
+    const jobs = cvJobsFilter === 'full' ? matches.filter(job => job.full)
+        : cvJobsFilter === 'stretch' ? every.filter(job => job.stretch)
+        : matches;
     const where = selectedLocation === 'Sweden' ? 'in Sweden' : `in ${selectedLocation}`;
+    const years = cvYears();
 
     const head = el('header', 'card-head cv-jobs-head');
     const titles = el('div');
     titles.append(
         el('h3', '', `Jobs that match your CV ${where}`),
-        el('p', 'card-sub', 'Live ads on Arbetsförmedlingen\'s Platsbanken, best fit first. ✓ marks skills you have; + marks the one skill the ad asks for that your CV doesn\'t list.')
+        el('p', 'card-sub', 'Live ads on Arbetsförmedlingen\'s Platsbanken, best match first. '
+            + (years === null
+                ? 'Match % is the share of the ad\'s tracked skills on your CV; add your years of experience above to include them.'
+                : 'Match % blends the ad\'s tracked skills on your CV (75%) with how your experience fits its level (25%).')
+            + ' ✓ = on your CV, ✗ = missing.')
     );
     const filter = el('div', 'pill-group-tabs cv-jobs-filter');
-    [[false, `All matches · ${all.length.toLocaleString('en-US')}`], [true, `Full matches · ${fullCount.toLocaleString('en-US')}`]]
-        .forEach(([fullOnly, label]) => {
-            const button = el('button', 'location-pill' + (cvJobsFullOnly === fullOnly ? ' location-pill-active' : ''), label);
-            button.type = 'button';
-            button.disabled = fullOnly && !fullCount;
-            button.addEventListener('click', () => {
-                cvJobsFullOnly = fullOnly;
-                renderCvJobs();
-            });
-            filter.appendChild(button);
+    [['all', 'All matches'], ['full', 'Full matches'], ['stretch', 'Stretch']].forEach(([key, label]) => {
+        const button = el('button', 'location-pill' + (cvJobsFilter === key ? ' location-pill-active' : ''),
+            `${label} · ${counts[key].toLocaleString('en-US')}`);
+        button.type = 'button';
+        button.disabled = !counts[key];
+        if (key === 'stretch') button.title = 'Ads that ask for two tracked skills your CV doesn\'t list';
+        button.addEventListener('click', () => {
+            cvJobsFilter = key;
+            renderCvJobs();
         });
+        filter.appendChild(button);
+    });
     head.append(titles, filter);
     card.appendChild(head);
+
+    renderCvNextSkill(card, every);
 
     const list = el('ol', 'cv-jobs-list');
     jobs.forEach(job => {
@@ -857,17 +956,37 @@ function renderCvJobs() {
             title.rel = 'noopener noreferrer';
         }
         const meta = el('p', 'cv-job-meta', [job.employer, job.place, formatJobDate(job.published)].filter(Boolean).join(' · '));
+
+        const total = job.have.length + job.missing.length;
+        const match = el('div', `cv-job-match ${matchLevel(job.percent)}`);
+        const bar = el('div', 'cv-job-bar');
+        bar.setAttribute('role', 'meter');
+        bar.setAttribute('aria-valuemin', '0');
+        bar.setAttribute('aria-valuemax', '100');
+        bar.setAttribute('aria-valuenow', String(job.percent));
+        bar.setAttribute('aria-label', 'Match');
+        const fill = el('span', 'cv-job-bar-fill');
+        fill.style.width = `${job.percent}%`;
+        bar.appendChild(fill);
+        const detail = [`${job.have.length} of ${total} skill${total === 1 ? '' : 's'}`];
+        if (job.experience) detail.push(job.experience.label);
+        match.append(
+            el('span', 'cv-job-match-value', `Match ${job.percent}%`),
+            bar,
+            el('span', 'cv-job-match-detail', detail.join(' · '))
+        );
+
         const skills = el('div', 'cv-job-skills');
         job.have.forEach(name => skills.appendChild(el('span', 'cv-job-skill is-have', `✓ ${name}`)));
         job.missing.forEach(name => {
-            const chip = el('span', 'cv-job-skill is-missing', `+ ${name}`);
+            const chip = el('span', 'cv-job-skill is-missing', `✗ ${name}`);
             chip.title = `This ad also asks for ${name}, which your CV doesn't list`;
             skills.appendChild(chip);
         });
-        item.append(title, meta, skills);
+        item.append(title, meta, match, skills);
         list.appendChild(item);
     });
     card.appendChild(list);
 
-    card.appendChild(el('p', 'cv-jobs-count', `${jobs.length.toLocaleString('en-US')} ads · scroll the list to see them all`));
+    card.appendChild(el('p', 'cv-jobs-count', `${jobs.length.toLocaleString('en-US')} ads · scroll the list to see them all · skills outside the 20 tracked ones aren't counted`));
 }

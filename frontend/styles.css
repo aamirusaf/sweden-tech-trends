@@ -2127,6 +2127,71 @@ a.cv-job-title:hover { text-decoration-color: currentColor; }
     border: 1px dashed currentColor;
 }
 
+/* Match % bar on each job */
+.cv-job-match {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.25rem 0.625rem;
+    margin-top: 0.125rem;
+}
+
+.cv-job-match-value {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-primary);
+}
+
+.cv-job-bar {
+    height: 6px;
+    border-radius: 999px;
+    background-color: var(--surface-3);
+    overflow: hidden;
+}
+
+.cv-job-bar-fill {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background-color: var(--text-muted);
+}
+
+.cv-job-match.is-high .cv-job-bar-fill { background-color: var(--good); }
+.cv-job-match.is-low .cv-job-bar-fill { background-color: var(--bad); }
+
+.cv-job-match-detail {
+    grid-column: 1 / -1;
+    font-size: var(--fs-xs);
+    color: var(--text-muted);
+}
+
+/* "Learn this next" above the jobs list */
+.cv-next-skill {
+    margin: 0 0 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--good);
+    border-radius: var(--radius-sm);
+    background-color: var(--surface-2);
+}
+
+.cv-next-skill-text {
+    margin: 0;
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+}
+
+.cv-next-skill-text strong { color: var(--text-primary); }
+
+.cv-next-skill-label {
+    margin-right: 0.25rem;
+    font-weight: 600;
+    color: var(--good);
+}
+
+.cv-next-skill .skill-gap-courses { margin-top: 0.375rem; padding-left: 0; }
+
 /* Fixed-height CV columns: content scrolls inside the cards instead of
    stretching the layout as skills, titles and jobs are added. */
 @media (min-width: 901px) {
