@@ -610,6 +610,7 @@ function renderCvResults() {
     if (!container || !cvHasCv) return;
     container.innerHTML = '';
     renderCvJobs();
+    if (typeof renderCvAlerts === 'function') renderCvAlerts();
     const locationName = selectedLocation === 'Sweden' ? 'Sweden' : selectedLocation;
 
     if (!cvAdData) {

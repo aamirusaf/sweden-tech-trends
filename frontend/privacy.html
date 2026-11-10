@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy · Skill Matrix</title>
+    <meta name="description" content="What Skill Matrix stores about you, and how to delete it.">
+    <link rel="canonical" href="https://skillmatris.com/frontend/privacy.html">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        try {
+            const saved = localStorage.getItem('techTrends.theme');
+            if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+        } catch {}
+    </script>
+    <style>
+        .privacy { max-width: 44rem; margin: 0 auto; padding: 3rem var(--gutter) 4rem; }
+        .privacy h1 { font-size: var(--fs-xl); margin: 0 0 0.5rem; }
+        .privacy h2 { font-size: var(--fs-lg); margin: 2rem 0 0.5rem; }
+        .privacy p, .privacy li { color: var(--text-secondary); line-height: 1.6; }
+        .privacy a { color: var(--text-primary); }
+        .privacy .updated { color: var(--text-muted); font-size: var(--fs-sm); }
+    </style>
+</head>
+<body>
+    <main class="privacy">
+        <p><a href="index.html">← Back to Skill Matrix</a></p>
+        <h1>Privacy</h1>
+        <p class="updated">Last updated 10 November 2026</p>
+
+        <h2>Your CV stays in your browser</h2>
+        <p>When you check your CV, the file is read and analysed on your own device. It is not uploaded, sent or saved anywhere. Your light/dark choice and your learning-plan ticks are kept in your browser's local storage, which only you can see.</p>
+
+        <h2>Job alerts: what we save</h2>
+        <p>Only if you sign up for job alerts, we save:</p>
+        <ul>
+            <li>your email address,</li>
+            <li>the tracked skills you ticked (for example Python, SQL),</li>
+            <li>your years of work experience, if the check found or you entered them,</li>
+            <li>the area you chose (all of Sweden or a city),</li>
+            <li>when you signed up, confirmed and last got an email.</li>
+        </ul>
+        <p>We never save your CV, your name or any other text from it. We use this only to email you new job ads that match your skills, once a week. We don't sell or share it, and we don't use it for advertising.</p>
+
+        <h2>Legal basis and where it's kept</h2>
+        <p>We save it with your consent, which you give by ticking the box and confirming the link we email you. The data is stored in a Cloudflare D1 database, and emails are sent through Resend. Both act as our processors. A sign-up you don't confirm within 48 hours is deleted.</p>
+
+        <h2>Stop and delete</h2>
+        <p>Every alert email has an "Unsubscribe and delete my data" link. Using it deletes everything we saved about you at once. To change your skills or area, check your CV again and sign up with the same email; the new profile replaces the old one after you confirm.</p>
+
+        <h2>Your rights</h2>
+        <p>Under the GDPR you can ask to see, correct or delete your data, and you can complain to the Swedish Authority for Privacy Protection (IMY). For questions, open an issue on <a href="https://github.com/aamirusaf/sweden-tech-trends/issues" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+    </main>
+</body>
+</html>

@@ -1,10 +1,26 @@
 {
-  // Cloudflare Workers static-assets config. The whole repo root is uploaded so the
-  // dashboard in frontend/ can fetch ../backend/data/*.json (they must be siblings).
+  // Cloudflare Worker: static assets (the whole repo root, so the dashboard in
+  // frontend/ can fetch ../backend/data/*.json) plus worker/index.js for the job
+  // alerts API (/api/alerts/*) and the Monday alert emails.
   // The name must match the Worker created in the Cloudflare dashboard.
   "name": "sweden-tech-trends",
+  "main": "worker/index.js",
   "compatibility_date": "2026-10-01",
   "assets": {
-    "directory": "."
-  }
+    "directory": ".",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "SITE_URL": "https://skillmatris.com",
+    "MAIL_FROM": "Skill Matrix <alerts@skillmatris.com>"
+  },
+  // Mondays 08:00 UTC: three hours after the weekly data refresh (05:00 UTC),
+  // so the new ad_skills.json is deployed before the alerts go out.
+  "triggers": {
+    "crons": ["0 8 * * 1"]
+  },
+  "observability": { "enabled": true }
+  // The D1 binding is added once the database exists:
+  // "d1_databases": [{ "binding": "DB", "database_name": "skillmatris", "database_id": "<id>" }]
+  // Secret (dashboard > Worker > Settings > Variables and Secrets): RESEND_API_KEY
 }
