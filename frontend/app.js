@@ -161,6 +161,10 @@ function renderKpis() {
         { label: 'Years of history', value: years.length ? String(years.length) : '–', note: years.length ? `${years[0]}–${years[years.length - 1]}` : '' }
     ];
 
+    // The live ad count in the hero's introduction (always nationwide).
+    const heroAds = document.getElementById('heroLiveAds');
+    if (heroAds && itTotals.Sweden) heroAds.textContent = `${Math.floor(itTotals.Sweden / 100) * 100 > 0 ? 'over ' + (Math.floor(itTotals.Sweden / 100) * 100).toLocaleString('en-US') : itTotals.Sweden.toLocaleString('en-US')}`;
+
     container.innerHTML = '';
     kpis.forEach(kpi => {
         const wrap = document.createElement('div');
