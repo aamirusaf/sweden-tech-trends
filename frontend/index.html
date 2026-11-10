@@ -8,6 +8,8 @@
     <meta property="og:title" content="How many Swedish tech jobs does your CV fit?">
     <meta property="og:description" content="Skill Matrix reads every tech job ad in Sweden each week. Drop in your CV and see where you stand, free and private.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillmatris.com/frontend/">
+    <link rel="canonical" href="https://skillmatris.com/frontend/">
     <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <script>
@@ -111,6 +113,8 @@
                 </article>
 
                 <article id="cvJobs" class="card cv-jobs-card" hidden aria-live="polite"></article>
+
+                <article id="cvAlerts" class="card cv-alerts-card" hidden></article>
             </div>
         </section>
 
@@ -253,7 +257,7 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <p>Data: <a href="https://jobtechdev.se/" target="_blank" rel="noopener noreferrer">JobTech Dev</a>, Arbetsförmedlingen's open job ads API, live and historical. Updated automatically every Monday.</p>
-            <p><a href="https://github.com/aamirusaf/sweden-tech-trends" target="_blank" rel="noopener noreferrer">Source on GitHub</a></p>
+            <p><a href="privacy.html">Privacy</a> · <a href="https://github.com/aamirusaf/sweden-tech-trends" target="_blank" rel="noopener noreferrer">Source on GitHub</a></p>
         </div>
     </footer>
 
@@ -262,6 +266,7 @@
     <script src="skill-network.js"></script>
     <script src="job-titles.js"></script>
     <script src="cv-check.js"></script>
+    <script src="alerts.js"></script>
     <script src="hot-topics.js"></script>
 
 </body>

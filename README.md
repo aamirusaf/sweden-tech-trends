@@ -139,3 +139,38 @@ the history.
 - [x] Backend data collection from the JobTech Dev API
 - [x] Frontend dashboard with per-category demand charts
 - [ ] Course recommendations to close skill gaps for in-demand technologies
+
+## Job alerts
+
+Visitors can sign up under their CV results to get new matching ads by email every
+Monday. The CV check itself stays account-free, and the CV never leaves the browser:
+a sign-up sends only the email, the ticked tracked skills, years of experience and
+the chosen area. See `frontend/privacy.html`.
+
+How it works (`worker/index.js`, the Worker that also serves the site):
+
+- `POST /api/alerts/subscribe` saves the profile as pending and emails a confirmation
+  link (double opt-in). Signing up again with the same email replaces the profile
+  after the new link is confirmed.
+- Confirm and unsubscribe links open a page with a button, so mail scanners that
+  open links change nothing. Every alert has a one-click `List-Unsubscribe` header.
+  Unsubscribing deletes the row.
+- A cron trigger (Mondays 08:00 UTC, after the 05:00 data refresh) sends each
+  subscriber the ads that are new since last week's snapshot and match their skills,
+  using the same rule and match % as the CV check (at most 15 per email).
+
+Setup (once, in the Cloudflare dashboard):
+
+1. Create a D1 database named `skillmatris` and put its id in the
+   `d1_databases` block of `wrangler.jsonc` (binding `DB`). Tables are created on
+   first use; `worker/schema.sql` documents them.
+2. Verify `skillmatris.com` at [Resend](https://resend.com) and add the secret
+   `RESEND_API_KEY` under the Worker's Settings > Variables and Secrets.
+3. `SITE_URL` and `MAIL_FROM` are plain vars in `wrangler.jsonc`.
+
+Without the database or the key, the sign-up form answers "not switched on yet" and
+the cron does nothing.
+
+Local test: `npx wrangler dev --test-scheduled` with a config that adds a local D1
+binding and `RESEND_API_URL` pointing at a mock server, then open
+`/__scheduled?cron=0+8+*+*+1` to run the weekly send.
