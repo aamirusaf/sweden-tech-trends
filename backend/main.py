@@ -4,12 +4,14 @@ import os
 import re
 import sys
 import time
+from collections import Counter
 from datetime import datetime, timezone
 import requests
 
 from skill_network import build_skill_network
 from job_titles import build_title_stats, classify_title, FAMILY_NAMES, TITLE_FAMILIES
 from ad_skills import build_ad_skills, regex_source
+import hot_topics
 
 # Base endpoint for the official JobTech Dev / Arbetsförmedlingen search engine
 API_URL = "https://jobsearch.api.jobtechdev.se/search"
@@ -330,6 +332,10 @@ def fetch_skill_demand():
     ad_skills["title_patterns"] = [
         {"title": name, **regex_source(pattern, re.IGNORECASE)} for name, pattern, _ in TITLE_FAMILIES
     ]
+    # Broad themes (AI, LLMs, cybersecurity…) that aren't tools, tracked apart from the
+    # 20 skills but measured the same way: share of the scanned Data/IT ads.
+    topics = build_live_hot_topics(all_it_ads, ad_skill_sets)
+    topics["last_updated"] = results["last_updated"]
 
     # Persist the dynamic calculations to the data layer directory
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -342,6 +348,8 @@ def fetch_skill_demand():
     network_path = os.path.join(data_dir, "skill_network.json")
     job_titles_path = os.path.join(data_dir, "job_titles.json")
     ad_skills_path = os.path.join(data_dir, "ad_skills.json")
+    hot_topics_path = os.path.join(data_dir, "hot_topics.json")
+    hot_topics_history_path = os.path.join(data_dir, "hot_topics_history.csv")
 
     try:
         with open(trends_path, "w", encoding="utf-8") as f:
@@ -365,6 +373,9 @@ def fetch_skill_demand():
         with open(job_titles_path, "w", encoding="utf-8") as f:
             json.dump(job_titles, f, indent=4, ensure_ascii=False)
         write_ad_skills(ad_skills_path, ad_skills)
+        with open(hot_topics_path, "w", encoding="utf-8") as f:
+            json.dump(topics, f, indent=4, ensure_ascii=False)
+        hot_topics.append_history(hot_topics_history_path, today_utc(), topics)
         # Seed the CSV archive from history.json the first time, before history.json
         # gets today's snapshot (and before it can drop old ones past its cap).
         if not os.path.exists(history_csv_path):
@@ -437,12 +448,44 @@ def scan_ads(ads):
     remote/hybrid work."""
     skill_sets, remote_flags = [], []
     for ad in ads:
-        text = " ".join(filter(None, [
-            ad.get("headline"), (ad.get("description") or {}).get("text")
-        ]))
+        text = ad_text(ad)
         skill_sets.append({name for name, matcher in SKILL_MATCHERS.items() if matcher.search(text)})
         remote_flags.append(bool(REMOTE_HYBRID_PATTERN.search(text)))
     return skill_sets, remote_flags
+
+
+def ad_text(ad):
+    return " ".join(filter(None, [ad.get("headline"), (ad.get("description") or {}).get("text")]))
+
+
+def build_live_hot_topics(ads, ad_skill_sets):
+    """hot_topics.json from every scanned Data/IT ad (see hot_topics.py), and a log of
+    the terms each topic matched, to check the patterns against real ads."""
+    city_of = {concept_id: city for city, concept_id in LOCATIONS.items() if concept_id}
+    terms = Counter()
+    rows = []
+    for ad, skills in zip(ads, ad_skill_sets):
+        text = ad_text(ad)
+        hot_topics.matched_terms(text, terms)
+        address = ad.get("workplace_address") or {}
+        rows.append({
+            "topics": hot_topics.topics_in(text),
+            "skills": skills,
+            "title": classify_title(ad.get("headline")),
+            "city": city_of.get(address.get("municipality_concept_id")),
+            "published": ad.get("publication_date"),
+            "headline": ad.get("headline"),
+            "employer": (ad.get("employer") or {}).get("name"),
+            "place": address.get("municipality") or address.get("region"),
+            "url": ad.get("webpage_url"),
+        })
+    result = hot_topics.build_hot_topics(rows, ALL_SKILLS, LOCATIONS)
+    print("🔥 Hot topics (share of scanned Data/IT ads, Sweden):")
+    for topic in result["topics"]:
+        print(f"   {topic['name']}: {topic['ads_by_location']['Sweden']} ads, {topic['percent_by_location']['Sweden']}%")
+    print("🔎 Terms matched per hot topic (ad mentions):")
+    hot_topics.print_matched_terms(terms)
+    return result
 
 
 def summarize_remote_work(ad_skill_sets, remote_flags):

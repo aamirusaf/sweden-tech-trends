@@ -59,7 +59,7 @@ const CV_OTHER_SKILLS = [
     ['Ansible', /\bansible\b/i], ['Jenkins', /\bjenkins\b/i], ['GitHub Actions', /\bgithub actions\b/i],
     ['Azure DevOps', /\bazure devops\b/i], ['Helm', /\bhelm\b/i], ['Prometheus', /\bprometheus\b/i], ['Grafana', /\bgrafana\b/i],
     ['PyTorch', /\bpytorch\b/i], ['TensorFlow', /\btensorflow\b/i], ['scikit-learn', /\bscikit[\s-]?learn\b|\bsklearn\b/i],
-    ['Pandas', /\bpandas\b/i], ['LLMs', /\bLLMs?\b|\blarge language models?\b/i],
+    ['Pandas', /\bpandas\b/i],
     ['SAP', /\bSAP\b/], ['Salesforce', /\bsalesforce\b/i], ['ServiceNow', /\bservicenow\b/i], ['Figma', /\bfigma\b/i]
 ];
 
@@ -93,9 +93,9 @@ let cvYearsOverride = null;
 let cvTitleGuess = null;
 let cvSourceName = '';
 let cvHasCv = false;
-let cvJobsShown = 0;
 let cvJobsFullOnly = false;
-const CV_JOBS_PAGE = 10;
+let cvHotTopics = [];       // Big Themes (hot-topics.js) the CV mentions; shown, not scored
+let cvText = '';
 
 function initCvCheck() {
     const fileInput = document.getElementById('cvFile');
@@ -356,12 +356,12 @@ function analyseCv(text, sourceName) {
     cvFoundSkills = findTrackedSkills(text);
     cvChosenSkills = new Set(cvFoundSkills);
     cvOtherSkills = findOtherSkills(text, cvFoundSkills);
+    cvText = text;
     cvExperience = estimateExperience(text);
     cvYearsOverride = null;
     cvTitleGuess = guessTitle(text);
     cvSourceName = sourceName;
     cvHasCv = true;
-    cvJobsShown = CV_JOBS_PAGE;
     const count = cvFoundSkills.size;
     setCvStatus(count
         ? `${sourceName}: found ${count} of the ${Object.keys(cvSkillMatchers).length} tracked skills. Untick any that are wrong, or tick ones it missed.`
@@ -537,6 +537,26 @@ function renderCvFound() {
             other.appendChild(chip);
         });
         container.appendChild(other);
+    }
+
+    cvHotTopics = typeof hotTopicsInText === 'function' ? hotTopicsInText(cvText) : [];
+    if (cvHotTopics.length) {
+        const hotHead = document.createElement('p');
+        hotHead.className = 'skill-category-label';
+        hotHead.textContent = 'Big Themes on your CV (not scored)';
+        container.appendChild(hotHead);
+        const hot = document.createElement('div');
+        hot.className = 'cv-other';
+        cvHotTopics.forEach(name => {
+            const chip = document.createElement('button');
+            chip.type = 'button';
+            chip.className = 'co-occurrence-chip hot-chip-link';
+            chip.textContent = name;
+            chip.title = `See ${name} in Big Themes`;
+            chip.addEventListener('click', () => selectHotTopic(name, { scroll: true }));
+            hot.appendChild(chip);
+        });
+        container.appendChild(hot);
     }
 
     const expHead = document.createElement('p');
@@ -820,7 +840,6 @@ function renderCvJobs() {
             button.disabled = fullOnly && !fullCount;
             button.addEventListener('click', () => {
                 cvJobsFullOnly = fullOnly;
-                cvJobsShown = CV_JOBS_PAGE;
                 renderCvJobs();
             });
             filter.appendChild(button);
@@ -829,7 +848,7 @@ function renderCvJobs() {
     card.appendChild(head);
 
     const list = el('ol', 'cv-jobs-list');
-    jobs.slice(0, cvJobsShown).forEach(job => {
+    jobs.forEach(job => {
         const item = el('li', 'cv-job');
         const title = job.id && cvAdData.url_base ? el('a', 'cv-job-title', job.headline || 'Untitled ad') : el('span', 'cv-job-title', job.headline || 'Untitled ad');
         if (title.tagName === 'A') {
@@ -850,13 +869,5 @@ function renderCvJobs() {
     });
     card.appendChild(list);
 
-    if (jobs.length > cvJobsShown) {
-        const more = el('button', 'location-pill show-more', `Show ${Math.min(CV_JOBS_PAGE, jobs.length - cvJobsShown)} more of ${jobs.length.toLocaleString('en-US')}`);
-        more.type = 'button';
-        more.addEventListener('click', () => {
-            cvJobsShown += CV_JOBS_PAGE;
-            renderCvJobs();
-        });
-        card.appendChild(more);
-    }
+    card.appendChild(el('p', 'cv-jobs-count', `${jobs.length.toLocaleString('en-US')} ads · scroll the list to see them all`));
 }

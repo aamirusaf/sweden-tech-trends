@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-11-09 21:31:00 UTC",
+    "last_updated": "2026-11-09 21:57:54 UTC",
     "postings": {
         "Python": {
             "Sweden": [
@@ -866,6 +866,13 @@
                     "published": "2026-09-10"
                 },
                 {
+                    "headline": "Fullstackutvecklare",
+                    "employer": "Sematic AB",
+                    "location": "Linköping",
+                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707204",
+                    "published": "2026-11-09"
+                },
+                {
                     "headline": "Technical SEO & AI Search Specialist",
                     "employer": "BeyoNord AB",
                     "location": "Upplands Väsby",
@@ -891,13 +898,6 @@
                     "employer": "Chas Visual Management AB",
                     "location": "Nacka",
                     "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697065",
-                    "published": "2026-11-06"
-                },
-                {
-                    "headline": "Erfaren systemutvecklare till Bostadsförmedlingen",
-                    "employer": "Bostadsförmedlingen i Stockholm AB",
-                    "location": "Stockholm",
-                    "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695671",
                     "published": "2026-11-06"
                 }
             ],

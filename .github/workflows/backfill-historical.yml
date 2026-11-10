@@ -4,7 +4,8 @@ name: Backfill historical data
 # files (one per year, ~0.1-1.5 GB each), counts monthly tech mentions in each
 # file in parallel, then merges the results into backend/data/historical_monthly.csv
 # and commits it to main. The same pass counts job-title families in Data/IT
-# headlines into backend/data/historical_titles_monthly.csv. If one file fails, use "Re-run failed jobs" and the merge
+# headlines into backend/data/historical_titles_monthly.csv, and hot topics (AI, LLMs,
+# cybersecurity...) in Data/IT ads into backend/data/historical_topics_monthly.csv. If one file fails, use "Re-run failed jobs" and the merge
 # step runs once they all succeed.
 
 on:
@@ -52,6 +53,7 @@ jobs:
           path: |
             partial/${{ matrix.file }}.csv
             partial/titles/${{ matrix.file }}.csv
+            partial/topics/${{ matrix.file }}.csv
           retention-days: 7
 
   merge:
@@ -80,11 +82,14 @@ jobs:
       - name: Merge into historical_titles_monthly.csv
         run: python backend/backfill_historical.py merge-titles partial/titles/*.csv --out backend/data/historical_titles_monthly.csv
 
+      - name: Merge into historical_topics_monthly.csv
+        run: python backend/backfill_historical.py merge-topics partial/topics/*.csv --out backend/data/historical_topics_monthly.csv
+
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add backend/data/historical_monthly.csv backend/data/historical_titles_monthly.csv
+          git add backend/data/historical_monthly.csv backend/data/historical_titles_monthly.csv backend/data/historical_topics_monthly.csv
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0

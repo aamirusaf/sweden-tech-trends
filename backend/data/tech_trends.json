@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-11-09 21:31:00 UTC",
+    "last_updated": "2026-11-09 21:57:54 UTC",
     "data": {
         "Languages": [
             {
@@ -55,16 +55,16 @@
             },
             {
                 "name": "C++",
-                "value": 281,
+                "value": 282,
                 "by_location": {
-                    "Sweden": 281,
+                    "Sweden": 282,
                     "Stockholm": 53,
                     "Göteborg": 77,
                     "Malmö": 8
                 },
-                "it_value": 226,
+                "it_value": 227,
                 "it_by_location": {
-                    "Sweden": 226,
+                    "Sweden": 227,
                     "Stockholm": 50,
                     "Göteborg": 65,
                     "Malmö": 8
@@ -89,16 +89,16 @@
             },
             {
                 "name": "JavaScript",
-                "value": 154,
+                "value": 155,
                 "by_location": {
-                    "Sweden": 154,
+                    "Sweden": 155,
                     "Stockholm": 57,
                     "Göteborg": 20,
                     "Malmö": 6
                 },
-                "it_value": 136,
+                "it_value": 137,
                 "it_by_location": {
-                    "Sweden": 136,
+                    "Sweden": 137,
                     "Stockholm": 53,
                     "Göteborg": 19,
                     "Malmö": 6
@@ -349,7 +349,7 @@
         ]
     },
     "it_totals": {
-        "Sweden": 2758,
+        "Sweden": 2759,
         "Stockholm": 921,
         "Göteborg": 464,
         "Malmö": 124

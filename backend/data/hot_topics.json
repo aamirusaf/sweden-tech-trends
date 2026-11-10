@@ -1,0 +1,2195 @@
+{
+    "total_ads": 2759,
+    "totals_by_location": {
+        "Sweden": 2759,
+        "Stockholm": 913,
+        "Göteborg": 454,
+        "Malmö": 118
+    },
+    "topics": [
+        {
+            "name": "AI",
+            "description": "Any mention of artificial intelligence, including machine learning and generative AI.",
+            "ads_by_location": {
+                "Sweden": 731,
+                "Stockholm": 310,
+                "Göteborg": 123,
+                "Malmö": 33
+            },
+            "percent_by_location": {
+                "Sweden": 26.5,
+                "Stockholm": 34.0,
+                "Göteborg": 27.1,
+                "Malmö": 28.0
+            },
+            "skills": [
+                {
+                    "name": "Python",
+                    "percent": 32
+                },
+                {
+                    "name": "Azure",
+                    "percent": 23
+                },
+                {
+                    "name": "Git",
+                    "percent": 21
+                },
+                {
+                    "name": "SQL",
+                    "percent": 18
+                },
+                {
+                    "name": "TypeScript",
+                    "percent": 17
+                },
+                {
+                    "name": "AWS",
+                    "percent": 17
+                },
+                {
+                    "name": "React",
+                    "percent": 16
+                },
+                {
+                    "name": "Kubernetes",
+                    "percent": 15
+                }
+            ],
+            "skill_shares": {
+                "Python": 32,
+                "Java": 13,
+                "C#": 14,
+                "C++": 10,
+                "C": 5,
+                "JavaScript": 9,
+                "TypeScript": 17,
+                "Azure": 23,
+                "AWS": 17,
+                "GCP": 11,
+                "Kubernetes": 15,
+                "Docker": 12,
+                "Terraform": 6,
+                "Linux": 11,
+                "Git": 21,
+                "SQL": 18,
+                ".NET": 10,
+                "React": 16,
+                "Microsoft 365": 5,
+                "Active Directory": 3
+            },
+            "titles": [
+                {
+                    "name": "Software Developer",
+                    "percent": 25
+                },
+                {
+                    "name": "AI Engineer",
+                    "percent": 7
+                },
+                {
+                    "name": "Fullstack Developer",
+                    "percent": 7
+                },
+                {
+                    "name": "Project & Product Manager",
+                    "percent": 5
+                }
+            ],
+            "samples": {
+                "Sweden": [
+                    {
+                        "headline": "Project Manager – Information Technology",
+                        "employer": "SilverByte AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707183",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemtekniker inom analys och BI-plattformar",
+                        "employer": "Trafikverket",
+                        "location": "Borlänge",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707154",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Product Manager/Product Owner",
+                        "employer": "EPAM Systems (Nordic) AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707055",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Data Analyst (Solna)",
+                        "employer": "Soros Consulting AB",
+                        "location": "Solna",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706726",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "CS Operations Specialist",
+                        "employer": "Visma Spiris AB",
+                        "location": "Växjö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706633",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "QA Engineer / mjukvarutestare – SW Configurator",
+                        "employer": "Agile Resources AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706570",
+                        "published": "2026-11-09"
+                    }
+                ],
+                "Stockholm": [
+                    {
+                        "headline": "Project Manager – Information Technology",
+                        "employer": "SilverByte AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707183",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Data Scientist / Data Engineer  MLOps & GCP - 20702",
+                        "employer": "Veritaz AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706430",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Apptestare",
+                        "employer": "Randstad AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706234",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "AI-Engineer till Ledande Tjänsteföretag",
+                        "employer": "Friday Väst AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706232",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Experienced embedded C developer in Stockholm",
+                        "employer": "Axis Communications Aktiebolag",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706063",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Backend Utvecklare PL/SQL",
+                        "employer": "Aktiebolaget Trav och Galopp",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706050",
+                        "published": "2026-11-09"
+                    }
+                ],
+                "Göteborg": [
+                    {
+                        "headline": "Product Manager/Product Owner",
+                        "employer": "EPAM Systems (Nordic) AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707055",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "QA Engineer / mjukvarutestare – SW Configurator",
+                        "employer": "Agile Resources AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706570",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemutvecklare till Göteborg - Intenso Interim",
+                        "employer": "Intensogruppen AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705971",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Test Automation Engineer ",
+                        "employer": "Tata Technologies Nordics AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700974",
+                        "published": "2026-11-08"
+                    },
+                    {
+                        "headline": "Senior Software Developer – sensorsimulering",
+                        "employer": "Agile Resources AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698968",
+                        "published": "2026-11-06"
+                    },
+                    {
+                        "headline": "Senior Data Scientist, Göteborg",
+                        "employer": "Soros Consulting AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698515",
+                        "published": "2026-11-06"
+                    }
+                ],
+                "Malmö": [
+                    {
+                        "headline": "Senior Software Engineer  AI-Native (Malmö)",
+                        "employer": "Soros Consulting AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705814",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Senior Android Engineer Mobile Banking",
+                        "employer": "Ikano Bank AB (publ)",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705794",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Full Stack Developer (TypeScript/React)",
+                        "employer": "Conrec Infinity AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700619",
+                        "published": "2026-11-08"
+                    },
+                    {
+                        "headline": "Software Engineer",
+                        "employer": "IKEA of Sweden AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31688015",
+                        "published": "2026-11-05"
+                    },
+                    {
+                        "headline": "Project Lead",
+                        "employer": "Cognizant Technology Solutions Sweden AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31683407",
+                        "published": "2026-11-04"
+                    },
+                    {
+                        "headline": "Data Engineer  AWS, Python & Data Pipelines - 206022",
+                        "employer": "Veritaz AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31677546",
+                        "published": "2026-11-03"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "GenAI & LLMs",
+            "description": "Generative AI, large language models, AI agents and copilots.",
+            "ads_by_location": {
+                "Sweden": 240,
+                "Stockholm": 124,
+                "Göteborg": 37,
+                "Malmö": 15
+            },
+            "percent_by_location": {
+                "Sweden": 8.7,
+                "Stockholm": 13.6,
+                "Göteborg": 8.1,
+                "Malmö": 12.7
+            },
+            "skills": [
+                {
+                    "name": "Python",
+                    "percent": 42
+                },
+                {
+                    "name": "Azure",
+                    "percent": 36
+                },
+                {
+                    "name": "Git",
+                    "percent": 32
+                },
+                {
+                    "name": "TypeScript",
+                    "percent": 27
+                },
+                {
+                    "name": "AWS",
+                    "percent": 23
+                },
+                {
+                    "name": "SQL",
+                    "percent": 22
+                },
+                {
+                    "name": "React",
+                    "percent": 22
+                },
+                {
+                    "name": "GCP",
+                    "percent": 19
+                }
+            ],
+            "skill_shares": {
+                "Python": 42,
+                "Java": 13,
+                "C#": 14,
+                "C++": 5,
+                "C": 1,
+                "JavaScript": 12,
+                "TypeScript": 27,
+                "Azure": 36,
+                "AWS": 23,
+                "GCP": 19,
+                "Kubernetes": 15,
+                "Docker": 13,
+                "Terraform": 10,
+                "Linux": 5,
+                "Git": 32,
+                "SQL": 22,
+                ".NET": 10,
+                "React": 22,
+                "Microsoft 365": 9,
+                "Active Directory": 5
+            },
+            "titles": [
+                {
+                    "name": "Software Developer",
+                    "percent": 20
+                },
+                {
+                    "name": "AI Engineer",
+                    "percent": 19
+                },
+                {
+                    "name": "Fullstack Developer",
+                    "percent": 8
+                },
+                {
+                    "name": "Project & Product Manager",
+                    "percent": 5
+                }
+            ],
+            "samples": {
+                "Sweden": [
+                    {
+                        "headline": "Project Manager – Information Technology",
+                        "employer": "SilverByte AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707183",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Product Manager/Product Owner",
+                        "employer": "EPAM Systems (Nordic) AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707055",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "AI-Engineer till Ledande Tjänsteföretag",
+                        "employer": "Friday Väst AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706232",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Experienced embedded C developer in Stockholm",
+                        "employer": "Axis Communications Aktiebolag",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706063",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemutvecklare till Göteborg - Intenso Interim",
+                        "employer": "Intensogruppen AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705971",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "AI-Ingenjör till Satellite Group AB",
+                        "employer": "Professionals Nord Stockholm AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705868",
+                        "published": "2026-11-09"
+                    }
+                ],
+                "Stockholm": [
+                    {
+                        "headline": "Project Manager – Information Technology",
+                        "employer": "SilverByte AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707183",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "AI-Engineer till Ledande Tjänsteföretag",
+                        "employer": "Friday Väst AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706232",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Experienced embedded C developer in Stockholm",
+                        "employer": "Axis Communications Aktiebolag",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706063",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "AI-Ingenjör till Satellite Group AB",
+                        "employer": "Professionals Nord Stockholm AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705868",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Senior Fullstackutvecklare",
+                        "employer": "Asta Agency AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705137",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Senior Fullstackutvecklare med fokus på Next.js",
+                        "employer": "Kumpan Sweden AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31704053",
+                        "published": "2026-11-09"
+                    }
+                ],
+                "Göteborg": [
+                    {
+                        "headline": "Product Manager/Product Owner",
+                        "employer": "EPAM Systems (Nordic) AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707055",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemutvecklare till Göteborg - Intenso Interim",
+                        "employer": "Intensogruppen AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705971",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Senior Data Scientist, Göteborg",
+                        "employer": "Soros Consulting AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698515",
+                        "published": "2026-11-06"
+                    },
+                    {
+                        "headline": "Systemutvecklare IT med inriktning mot Arbetsflöden",
+                        "employer": "Trafikverket",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697798",
+                        "published": "2026-11-06"
+                    },
+                    {
+                        "headline": "Senior Data Scientist - Advanced Analytics & AI - 20629",
+                        "employer": "Veritaz AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696286",
+                        "published": "2026-11-06"
+                    },
+                    {
+                        "headline": "AI Adoption & Artificial Intelligence Specialist  Defense",
+                        "employer": "Hykmann Global Business Solutions AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31693673",
+                        "published": "2026-11-06"
+                    }
+                ],
+                "Malmö": [
+                    {
+                        "headline": "Senior Software Engineer  AI-Native (Malmö)",
+                        "employer": "Soros Consulting AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705814",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Full Stack Developer (TypeScript/React)",
+                        "employer": "Conrec Infinity AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700619",
+                        "published": "2026-11-08"
+                    },
+                    {
+                        "headline": "Onsite IT-tekniker till Malmö!",
+                        "employer": "Academic Work Sweden AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31677914",
+                        "published": "2026-11-03"
+                    },
+                    {
+                        "headline": "Software Engineer – .NET & AI-first utveckling, Malmö",
+                        "employer": "Qronos AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31638297",
+                        "published": "2026-10-23"
+                    },
+                    {
+                        "headline": "AI- & Digitaliseringsspecialist",
+                        "employer": "Framtiden i Sverige AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31608068",
+                        "published": "2026-10-16"
+                    },
+                    {
+                        "headline": "ML Engineer  Machine Learning & Geospatial Data - 20093",
+                        "employer": "Veritaz AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31599856",
+                        "published": "2026-10-15"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Machine learning",
+            "description": "Machine learning, deep learning, computer vision and MLOps.",
+            "ads_by_location": {
+                "Sweden": 174,
+                "Stockholm": 81,
+                "Göteborg": 27,
+                "Malmö": 5
+            },
+            "percent_by_location": {
+                "Sweden": 6.3,
+                "Stockholm": 8.9,
+                "Göteborg": 5.9,
+                "Malmö": 4.2
+            },
+            "skills": [
+                {
+                    "name": "Python",
+                    "percent": 66
+                },
+                {
+                    "name": "Azure",
+                    "percent": 32
+                },
+                {
+                    "name": "SQL",
+                    "percent": 28
+                },
+                {
+                    "name": "AWS",
+                    "percent": 24
+                },
+                {
+                    "name": "Git",
+                    "percent": 22
+                },
+                {
+                    "name": "C++",
+                    "percent": 20
+                },
+                {
+                    "name": "GCP",
+                    "percent": 17
+                },
+                {
+                    "name": "Docker",
+                    "percent": 16
+                }
+            ],
+            "skill_shares": {
+                "Python": 66,
+                "Java": 13,
+                "C#": 11,
+                "C++": 20,
+                "C": 9,
+                "JavaScript": 5,
+                "TypeScript": 12,
+                "Azure": 32,
+                "AWS": 24,
+                "GCP": 17,
+                "Kubernetes": 14,
+                "Docker": 16,
+                "Terraform": 7,
+                "Linux": 11,
+                "Git": 22,
+                "SQL": 28,
+                ".NET": 6,
+                "React": 9,
+                "Microsoft 365": 0,
+                "Active Directory": 1
+            },
+            "titles": [
+                {
+                    "name": "Software Developer",
+                    "percent": 25
+                },
+                {
+                    "name": "AI Engineer",
+                    "percent": 19
+                },
+                {
+                    "name": "Data Engineer",
+                    "percent": 10
+                },
+                {
+                    "name": "ML Engineer",
+                    "percent": 7
+                }
+            ],
+            "samples": {
+                "Sweden": [
+                    {
+                        "headline": "Project Manager – Information Technology",
+                        "employer": "SilverByte AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707183",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Data Scientist / Data Engineer  MLOps & GCP - 20702",
+                        "employer": "Veritaz AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706430",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemutvecklare inom Computer Vision, AI och bildbehandling",
+                        "employer": "Combitech Aktiebolag",
+                        "location": "Linköping",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706178",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemutvecklare till Göteborg - Intenso Interim",
+                        "employer": "Intensogruppen AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705971",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "AI-Ingenjör till Satellite Group AB",
+                        "employer": "Professionals Nord Stockholm AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705868",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Data Engineer till Green Cargo i Stockholm",
+                        "employer": "TNG Group AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31704631",
+                        "published": "2026-11-09"
+                    }
+                ],
+                "Stockholm": [
+                    {
+                        "headline": "Project Manager – Information Technology",
+                        "employer": "SilverByte AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707183",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Data Scientist / Data Engineer  MLOps & GCP - 20702",
+                        "employer": "Veritaz AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706430",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "AI-Ingenjör till Satellite Group AB",
+                        "employer": "Professionals Nord Stockholm AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705868",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Data Engineer till Green Cargo i Stockholm",
+                        "employer": "TNG Group AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31704631",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Telecom Data Scientist | Early Career Program",
+                        "employer": "Ericsson AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703620",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Machine Learning Engineer",
+                        "employer": "Sellhelp AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698987",
+                        "published": "2026-11-06"
+                    }
+                ],
+                "Göteborg": [
+                    {
+                        "headline": "Systemutvecklare till Göteborg - Intenso Interim",
+                        "employer": "Intensogruppen AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705971",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemutvecklare IT med inriktning mot Arbetsflöden",
+                        "employer": "Trafikverket",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31697798",
+                        "published": "2026-11-06"
+                    },
+                    {
+                        "headline": "Utvecklare på praktik: systemintegration och automation",
+                        "employer": "Kapita Investment Group AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31685035",
+                        "published": "2026-11-04"
+                    },
+                    {
+                        "headline": "Computer Vision Engineer-C++ | Camera & LiDAR | Autonomous Driving",
+                        "employer": "Hykmann Global Business Solutions AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31681605",
+                        "published": "2026-11-03"
+                    },
+                    {
+                        "headline": "Data Engineer",
+                        "employer": "Eccera Professionals AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31679542",
+                        "published": "2026-11-03"
+                    },
+                    {
+                        "headline": "Senior mjukvaruutvecklare: Java eller embedded, med agentisk AI",
+                        "employer": "CaptureInnovation AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31672376",
+                        "published": "2026-11-02"
+                    }
+                ],
+                "Malmö": [
+                    {
+                        "headline": "ML Engineer  Machine Learning & Geospatial Data - 20093",
+                        "employer": "Veritaz AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31599856",
+                        "published": "2026-10-15"
+                    },
+                    {
+                        "headline": "Senior AI Engineer",
+                        "employer": "Iver Accelerate AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31588387",
+                        "published": "2026-10-13"
+                    },
+                    {
+                        "headline": "Data Platform Engineer - 20055",
+                        "employer": "Veritaz AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31587297",
+                        "published": "2026-10-13"
+                    },
+                    {
+                        "headline": "Software Engineer",
+                        "employer": "ICT Additude AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31363563",
+                        "published": "2026-08-18"
+                    },
+                    {
+                        "headline": "Data Scientist",
+                        "employer": "Softhouse Nordic AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31235524",
+                        "published": "2026-07-01"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Cybersecurity",
+            "description": "Cyber and information security: security roles, pentesting, SOC, ISO 27001, NIS2.",
+            "ads_by_location": {
+                "Sweden": 621,
+                "Stockholm": 203,
+                "Göteborg": 114,
+                "Malmö": 19
+            },
+            "percent_by_location": {
+                "Sweden": 22.5,
+                "Stockholm": 22.2,
+                "Göteborg": 25.1,
+                "Malmö": 16.1
+            },
+            "skills": [
+                {
+                    "name": "Azure",
+                    "percent": 21
+                },
+                {
+                    "name": "Linux",
+                    "percent": 20
+                },
+                {
+                    "name": "Python",
+                    "percent": 20
+                },
+                {
+                    "name": "Kubernetes",
+                    "percent": 16
+                },
+                {
+                    "name": "Git",
+                    "percent": 14
+                },
+                {
+                    "name": "AWS",
+                    "percent": 12
+                },
+                {
+                    "name": "Active Directory",
+                    "percent": 11
+                },
+                {
+                    "name": "Docker",
+                    "percent": 10
+                }
+            ],
+            "skill_shares": {
+                "Python": 20,
+                "Java": 9,
+                "C#": 6,
+                "C++": 6,
+                "C": 4,
+                "JavaScript": 4,
+                "TypeScript": 4,
+                "Azure": 21,
+                "AWS": 12,
+                "GCP": 8,
+                "Kubernetes": 16,
+                "Docker": 10,
+                "Terraform": 9,
+                "Linux": 20,
+                "Git": 14,
+                "SQL": 7,
+                ".NET": 6,
+                "React": 5,
+                "Microsoft 365": 9,
+                "Active Directory": 11
+            },
+            "titles": [
+                {
+                    "name": "Security",
+                    "percent": 22
+                },
+                {
+                    "name": "Network & Infrastructure",
+                    "percent": 12
+                },
+                {
+                    "name": "Software Developer",
+                    "percent": 12
+                },
+                {
+                    "name": "DevOps & Platform",
+                    "percent": 9
+                }
+            ],
+            "samples": {
+                "Sweden": [
+                    {
+                        "headline": "Project Manager – Information Technology",
+                        "employer": "SilverByte AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707183",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "IT-Security specialist",
+                        "employer": "SAAB Aktiebolag",
+                        "location": "Linköping",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707037",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Security Awareness Koordinator",
+                        "employer": "Academic Work Sweden AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706772",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Teknisk specialist - säker åtkomst",
+                        "employer": "VÄSTRA GÖTALANDSREGIONEN",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706631",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemadministratör/systemutvecklare till IT-avdelning!",
+                        "employer": "Gamla Uppsala Buss Aktiebolag",
+                        "location": "Uppsala",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706526",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Förvaltningsledare till Regionarkivet i Göteborg",
+                        "employer": "GÖTEBORGS KOMMUN",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706377",
+                        "published": "2026-11-09"
+                    }
+                ],
+                "Stockholm": [
+                    {
+                        "headline": "Project Manager – Information Technology",
+                        "employer": "SilverByte AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707183",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Security Awareness Koordinator",
+                        "employer": "Academic Work Sweden AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706772",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Apptestare",
+                        "employer": "Randstad AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706234",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Tech Support Specialist",
+                        "employer": "Stift Stockholm International School",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705464",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Senior Software Engineer",
+                        "employer": "Riverty Group Sweden AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31704942",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "IT Operations engineer",
+                        "employer": "Active Search & HR Consulting in Europé AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31704849",
+                        "published": "2026-11-09"
+                    }
+                ],
+                "Göteborg": [
+                    {
+                        "headline": "Teknisk specialist - säker åtkomst",
+                        "employer": "VÄSTRA GÖTALANDSREGIONEN",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706631",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Förvaltningsledare till Regionarkivet i Göteborg",
+                        "employer": "GÖTEBORGS KOMMUN",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706377",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Senior IAM Business Consultant",
+                        "employer": "Agile Resources AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706146",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemutvecklare till Göteborg - Intenso Interim",
+                        "employer": "Intensogruppen AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705971",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "IAM-ansvarig till fordonskund!",
+                        "employer": "Poolia AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705282",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Senior Nätverkstekniker till Capio Göteborg",
+                        "employer": "Capio Sverige AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31704286",
+                        "published": "2026-11-09"
+                    }
+                ],
+                "Malmö": [
+                    {
+                        "headline": "Senior Android Engineer Mobile Banking",
+                        "employer": "Ikano Bank AB (publ)",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705794",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "OT Security Engineer",
+                        "employer": "AFRY AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703132",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemförvaltare till Fastighets- och gatukontoret",
+                        "employer": "Malmö kommun",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696935",
+                        "published": "2026-11-06"
+                    },
+                    {
+                        "headline": "Senior Embedded Developer till Advenica",
+                        "employer": "Cabeza rekrytering och konsulting AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31682898",
+                        "published": "2026-11-04"
+                    },
+                    {
+                        "headline": "Nätverkstekniker - Se hit!",
+                        "employer": "Gigstep AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31682379",
+                        "published": "2026-11-04"
+                    },
+                    {
+                        "headline": "Technical Lead – IoT to Alfa Laval!",
+                        "employer": "Academic Work Sweden AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31679733",
+                        "published": "2026-11-03"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Data & analytics",
+            "description": "Data engineering, data science, BI, data warehouses and data platforms.",
+            "ads_by_location": {
+                "Sweden": 304,
+                "Stockholm": 115,
+                "Göteborg": 50,
+                "Malmö": 17
+            },
+            "percent_by_location": {
+                "Sweden": 11.0,
+                "Stockholm": 12.6,
+                "Göteborg": 11.0,
+                "Malmö": 14.4
+            },
+            "skills": [
+                {
+                    "name": "Python",
+                    "percent": 41
+                },
+                {
+                    "name": "SQL",
+                    "percent": 39
+                },
+                {
+                    "name": "Azure",
+                    "percent": 35
+                },
+                {
+                    "name": "Git",
+                    "percent": 20
+                },
+                {
+                    "name": "GCP",
+                    "percent": 17
+                },
+                {
+                    "name": "AWS",
+                    "percent": 15
+                },
+                {
+                    "name": "Kubernetes",
+                    "percent": 13
+                },
+                {
+                    "name": "Docker",
+                    "percent": 12
+                }
+            ],
+            "skill_shares": {
+                "Python": 41,
+                "Java": 11,
+                "C#": 9,
+                "C++": 5,
+                "C": 2,
+                "JavaScript": 4,
+                "TypeScript": 9,
+                "Azure": 35,
+                "AWS": 15,
+                "GCP": 17,
+                "Kubernetes": 13,
+                "Docker": 12,
+                "Terraform": 8,
+                "Linux": 5,
+                "Git": 20,
+                "SQL": 39,
+                ".NET": 6,
+                "React": 7,
+                "Microsoft 365": 4,
+                "Active Directory": 2
+            },
+            "titles": [
+                {
+                    "name": "Data Engineer",
+                    "percent": 15
+                },
+                {
+                    "name": "Software Developer",
+                    "percent": 13
+                },
+                {
+                    "name": "AI Engineer",
+                    "percent": 10
+                },
+                {
+                    "name": "Data Analyst & BI",
+                    "percent": 9
+                }
+            ],
+            "samples": {
+                "Sweden": [
+                    {
+                        "headline": "Project Manager – Information Technology",
+                        "employer": "SilverByte AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707183",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemtekniker inom analys och BI-plattformar",
+                        "employer": "Trafikverket",
+                        "location": "Borlänge",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707154",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Product Manager/Product Owner",
+                        "employer": "EPAM Systems (Nordic) AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707055",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Data Analyst (Solna)",
+                        "employer": "Soros Consulting AB",
+                        "location": "Solna",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706726",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemadministratör/systemutvecklare till IT-avdelning!",
+                        "employer": "Gamla Uppsala Buss Aktiebolag",
+                        "location": "Uppsala",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706526",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Data Scientist / Data Engineer  MLOps & GCP - 20702",
+                        "employer": "Veritaz AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706430",
+                        "published": "2026-11-09"
+                    }
+                ],
+                "Stockholm": [
+                    {
+                        "headline": "Project Manager – Information Technology",
+                        "employer": "SilverByte AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707183",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Data Scientist / Data Engineer  MLOps & GCP - 20702",
+                        "employer": "Veritaz AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706430",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Data Engineer",
+                        "employer": "Gears of Leo AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706295",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "AI-Ingenjör till Satellite Group AB",
+                        "employer": "Professionals Nord Stockholm AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705868",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Data Engineer till Green Cargo i Stockholm",
+                        "employer": "TNG Group AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31704631",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Data Engineer  TypeScript, Node.js & SQL - 20735",
+                        "employer": "Veritaz AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31704292",
+                        "published": "2026-11-09"
+                    }
+                ],
+                "Göteborg": [
+                    {
+                        "headline": "Product Manager/Product Owner",
+                        "employer": "EPAM Systems (Nordic) AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707055",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemutvecklare inom IBMi/RPG till spännande uppdrag",
+                        "employer": "Quattro Bemanning & Rekrytering AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31702925",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Senior Data Scientist, Göteborg",
+                        "employer": "Soros Consulting AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698515",
+                        "published": "2026-11-06"
+                    },
+                    {
+                        "headline": "CI Engineer",
+                        "employer": "Alten Sverige Aktiebolag",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698233",
+                        "published": "2026-11-06"
+                    },
+                    {
+                        "headline": "Power BI Developer - Temporary Cover",
+                        "employer": "Toyota Material Handling Europe AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696887",
+                        "published": "2026-11-06"
+                    },
+                    {
+                        "headline": "Senior Data Scientist - Advanced Analytics & AI - 20629",
+                        "employer": "Veritaz AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696286",
+                        "published": "2026-11-06"
+                    }
+                ],
+                "Malmö": [
+                    {
+                        "headline": "Integration Developer",
+                        "employer": "Epical Sweden AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31679417",
+                        "published": "2026-11-03"
+                    },
+                    {
+                        "headline": "Data Engineer  AWS, Python & Data Pipelines - 206022",
+                        "employer": "Veritaz AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31677546",
+                        "published": "2026-11-03"
+                    },
+                    {
+                        "headline": "Senior BI Konsult",
+                        "employer": "NXT Interim Malmö AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31670781",
+                        "published": "2026-11-02"
+                    },
+                    {
+                        "headline": "Backend Engineer  Geospatial Data & Distributed Systems - 20094",
+                        "employer": "Veritaz AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31628835",
+                        "published": "2026-10-21"
+                    },
+                    {
+                        "headline": "Data Engineer inom Microsoft Fabric och Data & AI",
+                        "employer": "Academic Work Sweden AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31613852",
+                        "published": "2026-10-19"
+                    },
+                    {
+                        "headline": "Backend Engineer (Scala, Java, C++)",
+                        "employer": "Hykmann Global Business Solutions AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31610330",
+                        "published": "2026-10-18"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Cloud-native & DevOps",
+            "description": "DevOps, CI/CD, microservices, infrastructure as code and platform engineering.",
+            "ads_by_location": {
+                "Sweden": 756,
+                "Stockholm": 282,
+                "Göteborg": 180,
+                "Malmö": 38
+            },
+            "percent_by_location": {
+                "Sweden": 27.4,
+                "Stockholm": 30.9,
+                "Göteborg": 39.6,
+                "Malmö": 32.2
+            },
+            "skills": [
+                {
+                    "name": "Azure",
+                    "percent": 41
+                },
+                {
+                    "name": "Python",
+                    "percent": 38
+                },
+                {
+                    "name": "Git",
+                    "percent": 38
+                },
+                {
+                    "name": "Kubernetes",
+                    "percent": 35
+                },
+                {
+                    "name": "Docker",
+                    "percent": 26
+                },
+                {
+                    "name": "AWS",
+                    "percent": 25
+                },
+                {
+                    "name": "Java",
+                    "percent": 24
+                },
+                {
+                    "name": "Linux",
+                    "percent": 22
+                }
+            ],
+            "skill_shares": {
+                "Python": 38,
+                "Java": 24,
+                "C#": 17,
+                "C++": 11,
+                "C": 7,
+                "JavaScript": 9,
+                "TypeScript": 15,
+                "Azure": 41,
+                "AWS": 25,
+                "GCP": 14,
+                "Kubernetes": 35,
+                "Docker": 26,
+                "Terraform": 17,
+                "Linux": 22,
+                "Git": 38,
+                "SQL": 19,
+                ".NET": 15,
+                "React": 16,
+                "Microsoft 365": 1,
+                "Active Directory": 4
+            },
+            "titles": [
+                {
+                    "name": "Software Developer",
+                    "percent": 25
+                },
+                {
+                    "name": "DevOps & Platform",
+                    "percent": 17
+                },
+                {
+                    "name": "Test & QA",
+                    "percent": 7
+                },
+                {
+                    "name": "Fullstack Developer",
+                    "percent": 6
+                }
+            ],
+            "samples": {
+                "Sweden": [
+                    {
+                        "headline": "Product Manager/Product Owner",
+                        "employer": "EPAM Systems (Nordic) AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707055",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "C developer with Transmision knowledge",
+                        "employer": "Mpya Sci & Tech AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706930",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "DevOps Engineer – AWS & Terraform",
+                        "employer": "Recruitive AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706863",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Teknisk testare (Stockholm)",
+                        "employer": "Soros Consulting AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706842",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "QA Engineer / mjukvarutestare – SW Configurator",
+                        "employer": "Agile Resources AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706570",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Data Scientist / Data Engineer  MLOps & GCP - 20702",
+                        "employer": "Veritaz AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706430",
+                        "published": "2026-11-09"
+                    }
+                ],
+                "Stockholm": [
+                    {
+                        "headline": "DevOps Engineer – AWS & Terraform",
+                        "employer": "Recruitive AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706863",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Teknisk testare (Stockholm)",
+                        "employer": "Soros Consulting AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706842",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Data Scientist / Data Engineer  MLOps & GCP - 20702",
+                        "employer": "Veritaz AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706430",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Senior Active Directory Specialist",
+                        "employer": "Eccera Professionals AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706331",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Data Engineer",
+                        "employer": "Gears of Leo AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706295",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Apptestare",
+                        "employer": "Randstad AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706234",
+                        "published": "2026-11-09"
+                    }
+                ],
+                "Göteborg": [
+                    {
+                        "headline": "Product Manager/Product Owner",
+                        "employer": "EPAM Systems (Nordic) AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31707055",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "C developer with Transmision knowledge",
+                        "employer": "Mpya Sci & Tech AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706930",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "QA Engineer / mjukvarutestare – SW Configurator",
+                        "employer": "Agile Resources AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706570",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Erfaren Linuxutvecklare",
+                        "employer": "Eccera Professionals AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705494",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "CloudOps Engineer till Capio Göteborg",
+                        "employer": "Capio Sverige AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31704239",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemutvecklare inom IBMi/RPG till spännande uppdrag",
+                        "employer": "Quattro Bemanning & Rekrytering AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31702925",
+                        "published": "2026-11-09"
+                    }
+                ],
+                "Malmö": [
+                    {
+                        "headline": "Senior Android Engineer Mobile Banking",
+                        "employer": "Ikano Bank AB (publ)",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705794",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Tech Consultant",
+                        "employer": "Mpya Digital AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31704061",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "OT Security Engineer",
+                        "employer": "AFRY AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703132",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Full Stack Developer (TypeScript/React)",
+                        "employer": "Conrec Infinity AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700619",
+                        "published": "2026-11-08"
+                    },
+                    {
+                        "headline": "Linuxutvecklare",
+                        "employer": "NXT Interim Malmö AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698026",
+                        "published": "2026-11-06"
+                    },
+                    {
+                        "headline": "Software Engineer",
+                        "employer": "IKEA of Sweden AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31695796",
+                        "published": "2026-11-06"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "IoT & embedded",
+            "description": "Internet of things, embedded systems, firmware and microcontrollers.",
+            "ads_by_location": {
+                "Sweden": 319,
+                "Stockholm": 64,
+                "Göteborg": 109,
+                "Malmö": 12
+            },
+            "percent_by_location": {
+                "Sweden": 11.6,
+                "Stockholm": 7.0,
+                "Göteborg": 24.0,
+                "Malmö": 10.2
+            },
+            "skills": [
+                {
+                    "name": "C++",
+                    "percent": 44
+                },
+                {
+                    "name": "Python",
+                    "percent": 41
+                },
+                {
+                    "name": "C",
+                    "percent": 34
+                },
+                {
+                    "name": "Linux",
+                    "percent": 33
+                },
+                {
+                    "name": "Git",
+                    "percent": 18
+                },
+                {
+                    "name": "Java",
+                    "percent": 16
+                },
+                {
+                    "name": "Azure",
+                    "percent": 13
+                },
+                {
+                    "name": "C#",
+                    "percent": 12
+                }
+            ],
+            "skill_shares": {
+                "Python": 41,
+                "Java": 16,
+                "C#": 12,
+                "C++": 44,
+                "C": 34,
+                "JavaScript": 3,
+                "TypeScript": 4,
+                "Azure": 13,
+                "AWS": 10,
+                "GCP": 5,
+                "Kubernetes": 7,
+                "Docker": 10,
+                "Terraform": 3,
+                "Linux": 33,
+                "Git": 18,
+                "SQL": 6,
+                ".NET": 7,
+                "React": 7,
+                "Microsoft 365": 0,
+                "Active Directory": 0
+            },
+            "titles": [
+                {
+                    "name": "Embedded Developer",
+                    "percent": 30
+                },
+                {
+                    "name": "Software Developer",
+                    "percent": 28
+                },
+                {
+                    "name": "Test & QA",
+                    "percent": 9
+                },
+                {
+                    "name": "Security",
+                    "percent": 4
+                }
+            ],
+            "samples": {
+                "Sweden": [
+                    {
+                        "headline": "C developer with Transmision knowledge",
+                        "employer": "Mpya Sci & Tech AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706930",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Senior mjukvaruutvecklare – elektrisk motorstyrning",
+                        "employer": "Agile Resources AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706548",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Experienced embedded C developer in Stockholm",
+                        "employer": "Axis Communications Aktiebolag",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706063",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemutvecklare till Göteborg - Intenso Interim",
+                        "employer": "Intensogruppen AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705971",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Senior System Verification Engineer Connectivity",
+                        "employer": "Volvo Business Services Aktiebolag",
+                        "location": "Eskilstuna",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31704659",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Firmware- och FPGA-utvecklare för radiostörning ",
+                        "employer": "Totalförsvarets Forskningsinstitut, Foi",
+                        "location": "Linköping",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703282",
+                        "published": "2026-11-09"
+                    }
+                ],
+                "Stockholm": [
+                    {
+                        "headline": "Experienced embedded C developer in Stockholm",
+                        "employer": "Axis Communications Aktiebolag",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706063",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "System Tester",
+                        "employer": "ASSA ABLOY AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696331",
+                        "published": "2026-11-06"
+                    },
+                    {
+                        "headline": "Testare - testautomatisering",
+                        "employer": "Techrytera AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696180",
+                        "published": "2026-11-06"
+                    },
+                    {
+                        "headline": "Senior mjukvaruutvecklare Embedded",
+                        "employer": "AFRY AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31696113",
+                        "published": "2026-11-06"
+                    },
+                    {
+                        "headline": "Testare",
+                        "employer": "Deploja AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31694021",
+                        "published": "2026-11-06"
+                    },
+                    {
+                        "headline": "Senior Software Engineer - Site Tech",
+                        "employer": "H & M Hennes & Mauritz GBC AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31693177",
+                        "published": "2026-11-05"
+                    }
+                ],
+                "Göteborg": [
+                    {
+                        "headline": "C developer with Transmision knowledge",
+                        "employer": "Mpya Sci & Tech AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706930",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Senior mjukvaruutvecklare – elektrisk motorstyrning",
+                        "employer": "Agile Resources AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31706548",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Systemutvecklare till Göteborg - Intenso Interim",
+                        "employer": "Intensogruppen AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31705971",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Test Automation Engineer ",
+                        "employer": "Tata Technologies Nordics AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700974",
+                        "published": "2026-11-08"
+                    },
+                    {
+                        "headline": "Verifieringsingenjör – inbyggd plattformsmjukvara",
+                        "employer": "Agile Resources AB",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31700731",
+                        "published": "2026-11-08"
+                    },
+                    {
+                        "headline": "CI Engineer",
+                        "employer": "Alten Sverige Aktiebolag",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31698233",
+                        "published": "2026-11-06"
+                    }
+                ],
+                "Malmö": [
+                    {
+                        "headline": "OT Security Engineer",
+                        "employer": "AFRY AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31703132",
+                        "published": "2026-11-09"
+                    },
+                    {
+                        "headline": "Senior Embedded Developer till Advenica",
+                        "employer": "Cabeza rekrytering och konsulting AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31682898",
+                        "published": "2026-11-04"
+                    },
+                    {
+                        "headline": "SW Test automation - C# and Gherkin - midsenior",
+                        "employer": "AFRY AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31680482",
+                        "published": "2026-11-03"
+                    },
+                    {
+                        "headline": "Technical Lead – IoT to Alfa Laval!",
+                        "employer": "Academic Work Sweden AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31679733",
+                        "published": "2026-11-03"
+                    },
+                    {
+                        "headline": "Embedded Software Engineer för kommande uppdrag",
+                        "employer": "NXT Interim Malmö AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31662976",
+                        "published": "2026-10-29"
+                    },
+                    {
+                        "headline": "Systems Engineer",
+                        "employer": "Telavox AB",
+                        "location": "Malmö",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31635882",
+                        "published": "2026-10-23"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Blockchain & Web3",
+            "description": "Blockchain, smart contracts, Web3 and crypto-assets.",
+            "ads_by_location": {
+                "Sweden": 5,
+                "Stockholm": 3,
+                "Göteborg": 1,
+                "Malmö": 0
+            },
+            "percent_by_location": {
+                "Sweden": 0.2,
+                "Stockholm": 0.3,
+                "Göteborg": 0.2,
+                "Malmö": 0.0
+            },
+            "skills": [
+                {
+                    "name": "Python",
+                    "percent": 20
+                },
+                {
+                    "name": "JavaScript",
+                    "percent": 20
+                },
+                {
+                    "name": "TypeScript",
+                    "percent": 20
+                },
+                {
+                    "name": "AWS",
+                    "percent": 20
+                },
+                {
+                    "name": "Kubernetes",
+                    "percent": 20
+                },
+                {
+                    "name": "Docker",
+                    "percent": 20
+                },
+                {
+                    "name": "Linux",
+                    "percent": 20
+                },
+                {
+                    "name": "React",
+                    "percent": 20
+                }
+            ],
+            "skill_shares": {
+                "Python": 20,
+                "Java": 0,
+                "C#": 0,
+                "C++": 0,
+                "C": 0,
+                "JavaScript": 20,
+                "TypeScript": 20,
+                "Azure": 0,
+                "AWS": 20,
+                "GCP": 0,
+                "Kubernetes": 20,
+                "Docker": 20,
+                "Terraform": 0,
+                "Linux": 20,
+                "Git": 0,
+                "SQL": 0,
+                ".NET": 0,
+                "React": 20,
+                "Microsoft 365": 0,
+                "Active Directory": 0
+            },
+            "titles": [
+                {
+                    "name": "Project & Product Manager",
+                    "percent": 40
+                },
+                {
+                    "name": "Architect",
+                    "percent": 40
+                }
+            ],
+            "samples": {
+                "Sweden": [
+                    {
+                        "headline": "Samordnare IT",
+                        "employer": "Polismyndigheten",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31690290",
+                        "published": "2026-11-05"
+                    },
+                    {
+                        "headline": "Senior Software Engineer / Software Architect",
+                        "employer": "Primendro AB",
+                        "location": "Ale",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31514707",
+                        "published": "2026-10-28"
+                    },
+                    {
+                        "headline": "Senior Industry Principal/Industry Principal/SAP Data Strategist",
+                        "employer": "Infosys Technologies (Sweden) AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31597923",
+                        "published": "2026-10-14"
+                    },
+                    {
+                        "headline": "Principal - Enterprise Applications",
+                        "employer": "Infosys Technologies (Sweden) AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31597907",
+                        "published": "2026-10-14"
+                    },
+                    {
+                        "headline": "SAP Program Manager",
+                        "employer": "Infosys Technologies (Sweden) AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31597905",
+                        "published": "2026-10-14"
+                    }
+                ],
+                "Stockholm": [
+                    {
+                        "headline": "Senior Industry Principal/Industry Principal/SAP Data Strategist",
+                        "employer": "Infosys Technologies (Sweden) AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31597923",
+                        "published": "2026-10-14"
+                    },
+                    {
+                        "headline": "Principal - Enterprise Applications",
+                        "employer": "Infosys Technologies (Sweden) AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31597907",
+                        "published": "2026-10-14"
+                    },
+                    {
+                        "headline": "SAP Program Manager",
+                        "employer": "Infosys Technologies (Sweden) AB",
+                        "location": "Stockholm",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31597905",
+                        "published": "2026-10-14"
+                    }
+                ],
+                "Göteborg": [
+                    {
+                        "headline": "Samordnare IT",
+                        "employer": "Polismyndigheten",
+                        "location": "Göteborg",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31690290",
+                        "published": "2026-11-05"
+                    }
+                ],
+                "Malmö": []
+            }
+        },
+        {
+            "name": "Quantum computing",
+            "description": "Quantum computers, quantum algorithms and quantum-safe cryptography.",
+            "ads_by_location": {
+                "Sweden": 1,
+                "Stockholm": 0,
+                "Göteborg": 0,
+                "Malmö": 0
+            },
+            "percent_by_location": {
+                "Sweden": 0.0,
+                "Stockholm": 0.0,
+                "Göteborg": 0.0,
+                "Malmö": 0.0
+            },
+            "skills": [
+                {
+                    "name": "Python",
+                    "percent": 100
+                },
+                {
+                    "name": "C++",
+                    "percent": 100
+                },
+                {
+                    "name": "C",
+                    "percent": 100
+                },
+                {
+                    "name": "Linux",
+                    "percent": 100
+                },
+                {
+                    "name": "Git",
+                    "percent": 100
+                }
+            ],
+            "skill_shares": {
+                "Python": 100,
+                "Java": 0,
+                "C#": 0,
+                "C++": 100,
+                "C": 100,
+                "JavaScript": 0,
+                "TypeScript": 0,
+                "Azure": 0,
+                "AWS": 0,
+                "GCP": 0,
+                "Kubernetes": 0,
+                "Docker": 0,
+                "Terraform": 0,
+                "Linux": 100,
+                "Git": 100,
+                "SQL": 0,
+                ".NET": 0,
+                "React": 0,
+                "Microsoft 365": 0,
+                "Active Directory": 0
+            },
+            "titles": [
+                {
+                    "name": "Architect",
+                    "percent": 100
+                }
+            ],
+            "samples": {
+                "Sweden": [
+                    {
+                        "headline": "Senior Embedded Software Engineer / Software Architect",
+                        "employer": "Deep Light Vision AB",
+                        "location": "Lund",
+                        "url": "https://arbetsformedlingen.se/platsbanken/annonser/31661100",
+                        "published": "2026-10-29"
+                    }
+                ],
+                "Stockholm": [],
+                "Göteborg": [],
+                "Malmö": []
+            }
+        }
+    ],
+    "patterns": {
+        "AI": [
+            {
+                "source": "\\bAI\\b|\\bGenAI\\b|\\bLLMs?\\b|\\bML\\b",
+                "flags": ""
+            },
+            {
+                "source": "\\bartificiell\\w* intelligens|\\bartificial intelligence|\\bmachine learning|\\bmaskininlärning|\\bdeep learning|\\bdjupinlärning|\\bgenerativ\\w* AI\\b|\\blarge language models?\\b|\\bspråkmodell",
+                "flags": "i"
+            }
+        ],
+        "GenAI & LLMs": [
+            {
+                "source": "\\bLLMs?\\b|\\bGenAI\\b|\\bGPT(?:-?\\d)?\\b",
+                "flags": ""
+            },
+            {
+                "source": "\\bgenerativ\\w* AI\\b|\\bgen[- ]AI\\b|\\blarge language models?\\b|\\bspråkmodell|\\bChatGPT\\b|\\bOpenAI\\b|\\bLangChain\\b|\\bLlamaIndex\\b|\\bprompt engineering\\b|\\bretrieval[- ]augmented\\b|\\bAI[- ]agent|\\bagentic\\b|\\bcopilot\\b|\\bfoundation models?\\b|\\bHugging ?Face\\b",
+                "flags": "i"
+            }
+        ],
+        "Machine learning": [
+            {
+                "source": "\\bML\\b",
+                "flags": ""
+            },
+            {
+                "source": "\\bmachine learning|\\bmaskininlärning|\\bdeep learning|\\bdjupinlärning|\\bneural\\w* (?:networks?|nätverk)|\\bcomputer vision\\b|\\bdatorseende\\b|\\bMLOps\\b|\\bPyTorch\\b|\\bTensorFlow\\b|\\bscikit[- ]?learn\\b|\\bKeras\\b",
+                "flags": "i"
+            }
+        ],
+        "Cybersecurity": [
+            {
+                "source": "\\bcyber[- ]?security|\\bcyber[- ]?säkerhet|\\bcybersäkerhet|\\binformationssäkerhet|\\binformation security|\\bIT[- ]?säkerhet|\\bIT[- ]security|\\binfosec\\b|\\bapplication security|\\bapplikationssäkerhet|\\bcloud security|\\bmolnsäkerhet|\\bnetwork security|\\bnätverkssäkerhet|\\bpenetrationstest|\\bpentest|\\bethical hack|\\bzero trust\\b|\\bsäkerhetsarkitekt|\\bsäkerhetsanalytiker|\\bsäkerhetsspecialist|\\bsecurity (?:engineer|analyst|architect|specialist|operations|officer|consultant)|\\bSOC[- ]?(?:analyst|analytiker|team)|\\bSIEM\\b|\\bthreat (?:intelligence|hunting)|\\bvulnerabilit|\\bsårbarhet|\\bISO ?27001\\b|\\bNIS ?2\\b|\\bCISSP\\b|\\bCISM\\b|\\bOSCP\\b|\\bDevSecOps\\b",
+                "flags": "i"
+            }
+        ],
+        "Data & analytics": [
+            {
+                "source": "\\bBI\\b",
+                "flags": ""
+            },
+            {
+                "source": "\\bdata ?engineer|\\bdataingenjör|\\bdata science|\\bdata scientist|\\bdataanalys|\\bdata ?analyst|\\bdataanalytiker|\\bbusiness intelligence|\\bpower ?BI\\b|\\bTableau\\b|\\bQlik|\\bdata ?warehous|\\bdatalager|\\bdata ?lake|\\blakehouse|\\bDatabricks\\b|\\bSnowflake\\b|\\bbig data\\b|\\bETL\\b|\\banalytics engineer|\\bdata ?platform|\\bdataplattform|\\bdata ?pipeline|\\bApache Spark\\b|\\bdbt\\b",
+                "flags": "i"
+            }
+        ],
+        "Cloud-native & DevOps": [
+            {
+                "source": "\\bSRE\\b|\\bIaC\\b",
+                "flags": ""
+            },
+            {
+                "source": "\\bdev ?ops\\b|\\bDevSecOps\\b|\\bCI ?/ ?CD\\b|\\bcontinuous (?:integration|delivery|deployment)|\\bcloud[- ]native|\\bmicro ?services?\\b|\\bmikrotjänst|\\binfrastructure as code|\\bsite reliability|\\bplatform engineer|\\bGitOps\\b|\\bserverless\\b|\\bcontaineri[sz]",
+                "flags": "i"
+            }
+        ],
+        "IoT & embedded": [
+            {
+                "source": "\\bIoT\\b|\\bRTOS\\b",
+                "flags": ""
+            },
+            {
+                "source": "\\binternet of things\\b|\\bsakernas internet\\b|\\bembedded\\b|\\binbyggda system|\\binbyggd (?:mjukvara|programvara|elektronik)|\\bfirmware\\b|\\bmikrokontroller|\\bmicrocontroller|\\bFreeRTOS\\b|\\bZephyr\\b|\\bedge computing\\b",
+                "flags": "i"
+            }
+        ],
+        "Blockchain & Web3": [
+            {
+                "source": "\\bblockchain|\\bblock chain\\b|\\bblockkedj|\\bweb ?3\\b|\\bsmart contracts?\\b|\\bSolidity\\b|\\bEthereum\\b|\\bcrypto ?currenc|\\bkryptovalut|\\bcrypto[- ]assets?\\b|\\bkryptotillgång|\\bDeFi\\b|\\bdistributed ledger",
+                "flags": "i"
+            }
+        ],
+        "Quantum computing": [
+            {
+                "source": "\\bquantum (?:computing|computers?|technolog|algorithms?|software|information|sensing|safe|resistant)|\\bpost[- ]quantum\\b|\\bkvantdator|\\bkvantteknik|\\bkvantberäkning|\\bkvantalgoritm|\\bkvantsäker|\\bqubits?\\b|\\bQiskit\\b",
+                "flags": "i"
+            }
+        ]
+    },
+    "last_updated": "2026-11-09 21:57:54 UTC"
+}

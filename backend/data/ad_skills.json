@@ -1,5 +1,5 @@
 {
-    "total_ads": 2758,
+    "total_ads": 2759,
     "skills": [
         "Python",
         "Java",
@@ -62,7 +62,7 @@
         "experience_required"
     ],
     "url_base": "https://arbetsformedlingen.se/platsbanken/annonser/",
-    "last_updated": "2026-11-09 21:31:00 UTC",
+    "last_updated": "2026-11-09 21:57:54 UTC",
     "skill_patterns": {
         "Python": {
             "source": "\\bPython\\b",
@@ -282,6 +282,7 @@
         }
     ],
     "ads": [
+        [32808,16,-1,0,1],
         [33665,0,0,0,1],
         [35840,6,-1,0,1],
         [0,20,-1,2,1],
@@ -2381,7 +2382,6 @@
         [807040,8,2,0,1],
         [22017,7,0,0,1],
         [16384,24,0,2,1],
-        [0,18,-1,0,1],
         [0,-1,-1,0,1],
         [8591,18,-1,0,1],
         [9217,20,0,0,1],
@@ -3039,9 +3039,11 @@
         [0,8,-1,0,1],
         [524288,21,-1,0,1],
         [524288,21,0,0,1],
-        [85892,17,0,0,1]
+        [85892,17,0,0,1],
+        [0,18,-1,0,1]
     ],
     "listings": [
+        ["31707204","Fullstackutvecklare","Sematic AB","Linköping","2026-11-09"],
         ["31707183","Project Manager – Information Technology","SilverByte AB","Stockholm","2026-11-09"],
         ["31707154","Systemtekniker inom analys och BI-plattformar","Trafikverket","Borlänge","2026-11-09"],
         ["31707096","Senior konsult inom IT-drift och Service Management","Nåvi AB","Jönköping","2026-11-09"],
@@ -5141,7 +5143,6 @@
         ["31579609","Microsoft Cloud & Identity Consultant","Iver Accelerate AB","Malmö","2026-10-09"],
         ["31579579","Platform Engineer","Volumental AB","Stockholm","2026-10-09"],
         ["31579527","Senior FME and GIT consultant","Rasulson Consulting AB","Stockholm","2026-10-09"],
-        ["31579521","System & Software Developer – avancerad fordonsutveckling","Framtiden i Sverige AB","Södertälje","2026-10-09"],
         ["30523189","PLM Teamcenter","ITMOTIVE in Sweden Aktiebolag","","2026-01-27"],
         ["31035014","Software Engineer","Knightec Group Software and Cloud AB","Västerås","2026-05-13"],
         ["31049950","Infrastructure Engineer to T-Unit","Ants Akademiskt Nätverk av Tekniska Studenter AB","Stockholm","2026-05-18"],
@@ -5799,6 +5800,7 @@
         ["31579059","IT-säkerhetsarkitekt","AFRY AB","Solna","2026-10-09"],
         ["31579350","It-tekniker med fokus på Active Directory till Linköping","Säkerhetspolisen","Linköping","2026-10-09"],
         ["31579361","It-tekniker med fokus på Active Directory till Stockholm","Säkerhetspolisen","Stockholm","2026-10-09"],
-        ["31579462","Systemutvecklare Backend","Rasulson Consulting AB","Stockholm","2026-10-09"]
+        ["31579462","Systemutvecklare Backend","Rasulson Consulting AB","Stockholm","2026-10-09"],
+        ["31579521","System & Software Developer – avancerad fordonsutveckling","Framtiden i Sverige AB","Södertälje","2026-10-09"]
     ]
 }
