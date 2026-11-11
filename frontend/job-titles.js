@@ -14,7 +14,7 @@ const TYPICAL_SKILLS_MAX = 6;
 // Titles with fewer live ads than this are left out of the heatmap and skill lists.
 const MIN_TITLE_ADS = 10;
 const TITLES_SHOWN = 12;
-const HEATMAP_ROWS = 15;
+const HEATMAP_ROWS = 30; // every title with enough ads; AI and data roles are small but asked about most
 
 let jobTitles = null;         // job_titles.json
 let titleHistory = {};        // { title: { year: share% } }
